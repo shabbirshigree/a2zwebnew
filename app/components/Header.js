@@ -198,12 +198,10 @@ export function HeroSlider() {
     <div className="relative w-full h-[320px] md:h-[520px] overflow-hidden shadow-2xl border-b-4 border-[#D4AF37]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       {slides.map((s, i) => (
         <div key={i} className={`absolute inset-0 ${i === current ? 'opacity-100 z-20 crossfade' : 'opacity-0 z-10'} transition-opacity duration-1000 ease-in-out`}>
-          {/* Masha Allah above image, centered, small, no ribbon */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30">
-            <span className="block text-center text-[#D4AF37] text-xs md:text-sm font-bold tracking-widest select-none" style={{ fontFamily: 'Amiri, serif', letterSpacing: '0.1em' }} lang="ar">
-              مَا شَاءَ اللّٰهُ لا قُوَّةَ إِلَّا بِاللّٰه
-            </span>
-          </div>
+          {/* Masha Allah directly over image, no background */}
+          <span className="absolute top-2 left-1/2 -translate-x-1/2 z-30 text-[#D4AF37] text-xs md:text-sm font-bold tracking-widest select-none" style={{ fontFamily: 'Amiri, serif', letterSpacing: '0.1em', textShadow: '0 1px 6px #222' }} lang="ar">
+            مَا شَاءَ اللّٰهُ لا قُوَّةَ إِلَّا بِاللّٰه
+          </span>
           <div className="absolute inset-0 overflow-hidden">
             <img src={s.img} alt={s.title} className="w-full h-full object-contain object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0f2d45]/85 to-transparent mix-blend-overlay pointer-events-none"></div>
