@@ -36,18 +36,7 @@ export function Navbar() {
   };
 
   return (
-    <>
-      {/* Masha Allah above header */}
-      <div className="w-full flex justify-center items-center bg-transparent pt-2">
-        <span
-          className="block text-center text-[#D4AF37] text-xs md:text-sm font-bold tracking-widest select-none"
-          style={{ fontFamily: 'Amiri, serif', letterSpacing: '0.1em' }}
-          lang="ar"
-        >
-          مَا شَاءَ اللّٰهُ
-        </span>
-      </div>
-      <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50">
         <div className="backdrop-blur-md bg-[#0f4c75]/85 border-b-4 border-[#D4AF37] shadow-2xl">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-14">
