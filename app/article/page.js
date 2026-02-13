@@ -1,8 +1,10 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaArrowLeft, FaShare, FaCalendar, FaNewspaper, FaSearch, FaEye, FaBookOpen } from 'react-icons/fa';
+import { FaArrowLeft, FaCalendar, FaNewspaper, FaEye } from 'react-icons/fa';
+// 👇 ہیڈر یہاں امپورٹ ہونا چاہیے
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
+// 👇 ڈیٹا اسی فولڈر میں ہے، اس لیے یہ یہاں کام کرے گا
 import { articlesData } from './articlesData'; 
 
 export default function ArticlesPage() {
@@ -35,103 +37,73 @@ export default function ArticlesPage() {
       <Navbar />
       <HeroSlider />
       
-      {/* ہیڈر سیکشن */}
-      <div className="bg-[#0f4c75] border-y-4 border-[#D4AF37] py-10 text-center mt-10 shadow-2xl">
-        <h1 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: '#D4AF37', fontFamily: "'Jameel Noori Nastaleeq', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>Haji Shabbir Ahmed Shigri</h1>
-        <p className="text-white text-lg font-light tracking-wide">Senior Journalist | Founder Noor-ul-Quran Project</p>
-      </div>
-
       <div style={{ maxWidth: '1200px', margin: '40px auto', padding: '0 20px' }}>
         {!selectedArticle ? (
           <>
-            {/* کنٹرول پینل: سرچ اور گولڈن بٹن */}
-            <div style={{ background: 'white', padding: '30px', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', marginBottom: '40px', border: '1px solid #eef2f3' }}>
-              <div style={{ position: 'relative', maxWidth: '500px', margin: '0 auto 25px auto' }}>
-                <input type="text" placeholder="تحریر تلاش کریں..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-                  style={{ width: '100%', padding: '12px 20px', borderRadius: '12px', border: '2px solid #0f4c75', textAlign: 'right', fontSize: '1.1rem', outline: 'none' }} />
-                <FaSearch style={{ position: 'absolute', left: '15px', top: '15px', color: '#0f4c75' }} />
-              </div>
-
-              {/* ✨ خوبصورت گولڈن بٹن ایفیکٹ کے ساتھ ✨ */}
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {/* سرچ بار */}
+            <div className="bg-white p-5 rounded-xl shadow-sm mb-8 text-center border border-gray-200">
+              <input 
+                type="text" 
+                placeholder="مضمون تلاش کریں..." 
+                value={searchTerm} 
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full max-w-lg p-3 rounded-lg border border-[#0f4c75] mb-4 text-right outline-none focus:ring-2 focus:ring-[#D4AF37]"
+              />
+              <div className="flex gap-2 flex-wrap justify-center">
                 {categories.map(cat => (
-                  <button 
-                    key={cat.id} 
-                    onClick={() => setFilterCategory(cat.id)}
+                  <button key={cat.id} onClick={() => setFilterCategory(cat.id)}
                     style={{ 
-                      padding: '10px 24px', 
-                      background: filterCategory === cat.id ? 'linear-gradient(145deg, #0f4c75, #0a2e47)' : 'linear-gradient(145deg, #D4AF37, #B8860B)', 
-                      color: filterCategory === cat.id ? '#D4AF37' : '#fff', 
-                      border: 'none',
+                      padding: '8px 16px', 
+                      background: filterCategory === cat.id ? '#0f4c75' : '#fff', 
+                      color: filterCategory === cat.id ? '#D4AF37' : '#0f4c75', 
+                      border: '1px solid #0f4c75', 
                       borderRadius: '50px', 
                       cursor: 'pointer', 
                       fontWeight: 'bold',
-                      fontSize: '1rem',
-                      boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                      transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                      transform: filterCategory === cat.id ? 'scale(1.05)' : 'scale(1)',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.transform = 'translateY(-5px)';
-                      e.target.style.boxShadow = '0 8px 20px rgba(184, 134, 11, 0.4)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.transform = filterCategory === cat.id ? 'scale(1.05)' : 'scale(1)';
-                      e.target.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
-                    }}
-                  >
+                      transition: '0.3s'
+                    }}>
                     {cat.label}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* تحریروں کا گرڈ */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '25px' }}>
+            {/* آرٹیکلز گرڈ */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
               {filteredArticles.map(article => (
-                <div key={article.id} onClick={() => setSelectedArticle(article)} 
-                  className="article-card"
-                  style={{ background: 'white', borderRadius: '18px', overflow: 'hidden', cursor: 'pointer', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', border: '1px solid #eee', transition: '0.3s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.borderColor = '#D4AF37'}
-                  onMouseLeave={(e) => e.currentTarget.style.borderColor = '#eee'}
-                >
-                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
-                    <img src={article.image} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => e.target.src='https://via.placeholder.com/400x250?text=Article'} />
-                    <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'rgba(15, 76, 117, 0.8)', color: '#D4AF37', padding: '4px 12px', borderRadius: '10px', fontSize: '0.7rem', fontWeight: 'bold', backdropFilter: 'blur(5px)' }}>
-                       {categories.find(c => c.id === article.category)?.label.split(' ')[1]}
-                    </div>
+<div key={article.id || Math.random()} onClick={() => setSelectedArticle(article)}
+                  className="bg-white rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                  <div className="h-48 overflow-hidden bg-gray-200">
+                    <img src={article.image} alt={article.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onError={(e) => e.target.src='https://via.placeholder.com/300x200?text=No+Image'} />
                   </div>
-                  <div style={{ padding: '20px', textAlign: 'right' }}>
-                    <h3 style={{ fontSize: '1.2rem', color: '#0f4c75', marginBottom: '12px', fontFamily: "'Jameel Noori Nastaleeq', serif", height: '2.8rem', overflow: 'hidden' }}>{article.title}</h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.85rem', color: '#777', borderTop: '1px solid #f9f9f9', paddingTop: '15px' }}>
-                       <span><FaCalendar style={{ marginLeft: '5px', color: '#D4AF37' }} /> {article.date}</span>
-                       <span style={{ color: '#0f4c75', fontWeight: 'bold', display: 'flex', alignItems: 'center' }}>مطالعہ کریں <FaBookOpen style={{ marginRight: '8px' }} /></span>
+                  <div className="p-4 text-right">
+                    <h3 className="text-lg font-bold text-[#0f4c75] mb-2 h-14 overflow-hidden font-serif leading-tight">{article.title}</h3>
+                    <div className="flex justify-between text-xs text-gray-500 mt-2 border-t pt-2">
+                       <span>{article.date}</span>
+                       <span className="text-[#0f4c75] font-bold flex items-center gap-1">پڑھیں <FaEye /></span>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+            {filteredArticles.length === 0 && ( <div className="text-center text-gray-500 mt-10">کوئی مضمون نہیں ملا۔</div> )}
           </>
         ) : (
-          /* تحریر کا مکمل ویو */
-          <div className="article-card" style={{ background: 'white', padding: '40px', borderRadius: '25px', boxShadow: '0 20px 60px rgba(0,0,0,0.1)', border: '1px solid #eef2f3' }}>
-            <button onClick={() => setSelectedArticle(null)} 
-              style={{ background: '#0f4c75', color: '#D4AF37', padding: '12px 25px', borderRadius: '12px', border: 'none', cursor: 'pointer', marginBottom: '30px', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: 'bold', boxShadow: '0 4px 12px rgba(15, 76, 117, 0.2)' }}> 
-              <FaArrowLeft /> فہرست میں واپس جائیں 
+          /* سنگل آرٹیکل ویو */
+          <div className="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-gray-100">
+            <button onClick={() => setSelectedArticle(null)} className="bg-[#0f4c75] text-white px-4 py-2 rounded-lg mb-6 flex items-center gap-2 hover:bg-[#0a2e47]"> 
+              <FaArrowLeft /> واپسی 
             </button>
-            <div style={{ textAlign: 'right', direction: 'rtl' }}>
-              <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', color: '#0f4c75', marginBottom: '15px', fontFamily: "'Jameel Noori Nastaleeq', serif", lineHeight: '1.4' }}>{selectedArticle.title}</h1>
-              <div style={{ display: 'flex', gap: '20px', color: '#666', marginBottom: '30px', fontSize: '0.95rem' }}>
-                <span><FaCalendar style={{ color: '#D4AF37' }} /> {selectedArticle.date}</span>
-                <span><FaNewspaper style={{ color: '#D4AF37' }} /> {selectedArticle.paper}</span>
+            <div className="text-right" dir="rtl">
+              <h1 className="text-2xl md:text-4xl text-[#0f4c75] mb-4 font-serif font-bold leading-relaxed">{selectedArticle.title}</h1>
+              <p className="text-gray-500 mb-6 flex items-center gap-4 text-sm">
+                <span className="flex items-center gap-1"><FaCalendar className="text-[#D4AF37]"/> {selectedArticle.date}</span> 
+                <span className="flex items-center gap-1"><FaNewspaper className="text-[#D4AF37]"/> {selectedArticle.paper}</span>
+              </p>
+              <div className="w-full mb-8 rounded-lg overflow-hidden shadow-md">
+                 <img src={selectedArticle.image} alt={selectedArticle.title} className="w-full h-auto max-h-[600px] object-contain bg-gray-50" />
               </div>
-              <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                <img src={selectedArticle.image} style={{ width: '100%', maxWidth: '800px', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
-              </div>
-              <div 
-                style={{ fontSize: '1.4rem', lineHeight: '2.2', color: '#333', fontFamily: "'Jameel Noori Nastaleeq', serif", textAlign: 'justify' }} 
-                dangerouslySetInnerHTML={{ __html: selectedArticle.content }} 
-              />
+              <div className="text-lg md:text-xl leading-loose text-gray-800 font-serif text-justify" dangerouslySetInnerHTML={{ __html: selectedArticle.content }} />
             </div>
           </div>
         )}

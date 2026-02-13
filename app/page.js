@@ -9,51 +9,23 @@ import Footer from './components/Footer';
 // Global Styles for Animations
 const globalStyles = `
   @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
   @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
   }
-
   @keyframes glow {
     0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
     50% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
   }
-
-  .animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  .animate-slideInRight {
-    animation: slideInRight 0.8s ease-out forwards;
-  }
-
-  .animate-glow {
-    animation: glow 3s ease-in-out infinite;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-
+  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+  .animate-slideInRight { animation: slideInRight 0.8s ease-out forwards; }
+  .animate-glow { animation: glow 3s ease-in-out infinite; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
   .islamic-pattern {
-    background: 
-      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212,175,55,.05) 35px, rgba(212,175,55,.05) 70px);
+    background: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212,175,55,.05) 35px, rgba(212,175,55,.05) 70px);
   }
 `;
 
@@ -69,8 +41,6 @@ if (typeof window !== 'undefined') {
 export default function Home() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [showScroll, setShowScroll] = useState(false);
-  const [animatedElements, setAnimatedElements] = useState({});
-  
   const legendScrollRef = useRef(null);
   const bookScrollRef = useRef(null);
 
@@ -88,21 +58,12 @@ export default function Home() {
 
   useEffect(() => {
     const checkScrollTop = () => {
-      if (!showScroll && window.pageYOffset > 400){
-        setShowScroll(true)
-      } else if (showScroll && window.pageYOffset <= 400){
-        setShowScroll(false)
-      }
+      if (!showScroll && window.pageYOffset > 400){ setShowScroll(true) } 
+      else if (showScroll && window.pageYOffset <= 400){ setShowScroll(false) }
     };
     window.addEventListener('scroll', checkScrollTop)
-    return () => {
-      window.removeEventListener('scroll', checkScrollTop)
-    }
+    return () => { window.removeEventListener('scroll', checkScrollTop) }
   }, [showScroll]);
-
-  const scrollTop = () =>{
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  };
 
   // --- DATA ARRAYS ---
   const books = [
@@ -116,16 +77,12 @@ export default function Home() {
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "مدینۃ الاہلبیتؑ", year: "2021" } 
   ];
 
-  // --- LEGENDS ---
   const legends = [
     { img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.jpg", video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.mp4", name: "Mian Manzoor Watoo", role: "Ex-Chief Minister" },
     { img: "https://img.youtube.com/vi/OXyJA7IoUwY/hqdefault.jpg", video: "https://youtu.be/OXyJA7IoUwY", name: "Pir Usman Shah Noori", role: "Peace Committee" },
     { img: "https://img.youtube.com/vi/l1qwlEN1gQo/hqdefault.jpg", video: "https://youtu.be/l1qwlEN1gQo", name: "Pir Burhanuddin Usmani", role: "Usmani Foundation" },
     { img: "https://img.youtube.com/vi/6O5tyMv4Ahg/hqdefault.jpg", video: "https://youtu.be/6O5tyMv4Ahg", name: "Dr. M. Sadaqat Ali", role: "Religious Scholar" },
-    
-    // CENTER
     { img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg", video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.mp4", name: "Pir Maoom H. Naqvi", role: "Senior Scholar" },
-
     { img: "https://img.youtube.com/vi/fW648rFweyM/hqdefault.jpg", video: "https://youtu.be/fW648rFweyM", name: "Sardar Sikandar Singh", role: "Sikh Leader" },
     { img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg", video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.mp4", name: "Hafiz A.G. Roparhi", role: "Jamia Ahle Hadith" },
     { img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg", video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.mp4", name: "Molana M. Khan Laghari", role: "Ahle Sunnat Scholar" },
@@ -134,7 +91,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 text-gray-800 font-sans relative overflow-hidden">
-      {/* Decorative Background Elements */}
+      
+      {/* بیک گراؤنڈ ایفیکٹس */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 right-10 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute bottom-40 left-20 w-80 h-80 bg-amber-100/30 rounded-full blur-3xl opacity-30"></div>
@@ -142,19 +100,13 @@ export default function Home() {
 
       <Navbar />
 
-      {/* Video Popup */}
+      {/* ویڈیو پاپ اپ */}
       {activeVideo && (
         <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-md animate-fadeInUp">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 z-50 transition duration-300 hover:scale-110"><FaTimes /></button>
           <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.5)] border-4 border-[#D4AF37] animate-slideInRight">
             {activeVideo.includes('youtu') ? (
-               <iframe 
-                 className="w-full h-[50vh] md:h-[70vh]" 
-                 src={`https://www.youtube.com/embed/${activeVideo.split('/').pop().split('?')[0]}?autoplay=1`} 
-                 frameBorder="0" 
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                 allowFullScreen
-               ></iframe>
+               <iframe className="w-full h-[50vh] md:h-[70vh]" src={`https://www.youtube.com/embed/${activeVideo.split('/').pop().split('?')[0]}?autoplay=1`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             ) : (
                <video controls autoPlay className="w-full h-auto max-h-[85vh]"><source src={activeVideo} type="video/mp4" /></video>
             )}
@@ -164,27 +116,8 @@ export default function Home() {
 
       <HeroSlider />
 
-      {/* --- نام اور ٹائٹل (Modernized) --- */}
-      <div className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] border-y-4 border-[#D4AF37] py-12 text-center shadow-2xl relative z-20 mt-10 overflow-hidden">
-        {/* Animated Background Pattern */}
-        <div className="absolute inset-0 islamic-pattern opacity-10"></div>
-        
-        <div className="relative z-10">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#D4AF37] mb-2 font-serif drop-shadow-lg animate-glow tracking-wide">Haji Shabbir Ahmed Shigri</h1>
-          <p className="text-xs md:text-lg text-white font-medium px-2 tracking-widest md:tracking-wide">Senior Journalist | Cultural Expert | Founder Noor-ul-Quran Project</p>
-        </div>
-      </div>
-
-      {/* --- سوشل میڈیا پٹی (Enhanced) --- */}
-      <div className="bg-gradient-to-r from-[#0a2a42] via-[#0f4c75] to-[#0a2a42] text-white py-5 shadow-xl relative z-30 border-b-2 border-[#D4AF37]">
-        <div className="container mx-auto px-4 flex justify-center gap-8 text-xl md:text-2xl">
-           <a href="https://wa.me/923334491715" target="_blank" className="hover:text-[#25D366] transition transform hover:scale-125 duration-300"><FaWhatsapp /></a>
-           <a href="https://www.tiktok.com/@noorproductions786" target="_blank" className="hover:text-[#ff0050] transition transform hover:scale-125 duration-300"><FaTiktok /></a>
-           <a href="https://youtube.com/@noorproduction" target="_blank" className="hover:text-[#FF0000] transition transform hover:scale-125 duration-300"><FaYoutube /></a>
-           <a href="https://x.com/shigri41215" target="_blank" className="hover:text-white transition transform hover:scale-125 duration-300"><FaXTwitter /></a>
-           <a href="https://www.facebook.com/share/1GkBRptjDz/" target="_blank" className="hover:text-[#1877F2] transition transform hover:scale-125 duration-300"><FaFacebookF /></a>
-        </div>
-      </div>
+      {/* ❌ میں نے یہاں سے 'نام' اور 'سوشل میڈیا' والے سیکشن نکال دیے ہیں کیونکہ وہ اب ہیڈر میں ہیں ❌ */}
+      {/* اس سے آپ کا ڈبل نام والا مسئلہ حل ہو گیا ہے اور باقی خوبصورتی برقرار ہے */}
 
       {/* خوش آمدید (Enhanced Welcome Section) */}
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -205,7 +138,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* نیویگیشن (Enhanced Quick Navigation) */}
+      {/* نیویگیشن (Quick Navigation) */}
       <section className="container mx-auto px-4 py-12 relative z-10">
         <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-3 px-8 rounded-lg font-serif tracking-widest animate-fadeInUp">Quick Navigation</h2>
@@ -218,7 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* نور القرآن ہائی لائٹ (Enhanced) */}
+      {/* نور القرآن ہائی لائٹ */}
       <section className="container mx-auto px-4 py-12 relative z-10">
         <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-2 shadow-2xl border-2 border-[#D4AF37] hover:shadow-[0_20px_60px_rgba(212,175,55,0.3)] transition duration-500 animate-fadeInUp">
           <div className="bg-white rounded-2xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -236,7 +169,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* اعزازات (Enhanced Honors Section) */}
+      {/* اعزازات (Honors) */}
       <section className="container mx-auto px-4 py-16 relative z-10">
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-[#0f4c75] font-serif animate-fadeInUp">Distinguished Honors</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
@@ -259,18 +192,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- LEGENDS (Enhanced) --- */}
+      {/* --- LEGENDS (Videos) --- */}
       <section className="bg-gradient-to-r from-black via-slate-900 to-black py-16 relative overflow-hidden">
-        {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-12 bg-repeat-x border-b-4 border-[#D4AF37]/30" style={{backgroundImage: 'linear-gradient(to right, #000 50%, #333 50%)', backgroundSize: '20px 100%'}}></div>
         <div className="absolute bottom-0 left-0 w-full h-12 bg-repeat-x border-t-4 border-[#D4AF37]/30" style={{backgroundImage: 'linear-gradient(to right, #000 50%, #333 50%)', backgroundSize: '20px 100%'}}></div>
 
         <div className="container mx-auto px-4 relative z-10 my-8">
           <div className="text-center mb-16">
              <h2 className="text-4xl md:text-5xl font-bold text-[#D4AF37] font-serif tracking-widest inline-block border-b-4 border-[#D4AF37] pb-4 drop-shadow-lg animate-fadeInUp">
-                نامور شخصیات کے تأثرات
+               نامور شخصیات کے تأثرات
              </h2>
-             <p className="text-gray-400 mt-4 text-base italic">Impressions of Renowned Personalities | شہرہ آفاق اشخاصیت</p>
+             <p className="text-gray-400 mt-4 text-base italic">Impressions of Renowned Personalities | شہرہ آفاق شخصیات</p>
           </div>
           
           <div className="relative max-w-[98%] mx-auto">
@@ -286,24 +218,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- BOOKS (Enhanced) --- */}
+      {/* --- BOOKS --- */}
       <section className="container mx-auto px-4 py-16 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-4 px-8 font-serif animate-fadeInUp">Featured Books</h2>
-          <p className="text-gray-600 mt-3 text-base">Explore 8+ Published Works | قابلِ قابل مطالعہ کتب</p>
+          <p className="text-gray-600 mt-3 text-base">Explore 8+ Published Works | قابلِ مطالعہ کتب</p>
         </div>
         <div className="bg-gradient-to-r from-[#fffbf0] via-white to-[#fffbf0] p-10 rounded-3xl shadow-xl border-2 border-[#D4AF37] relative group hover:shadow-2xl transition duration-500">
            <button onClick={() => scrollContainer(bookScrollRef, 'left')} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-[#D4AF37] hover:bg-[#B8860B] text-white p-3 rounded-full shadow-lg transition hover:shadow-xl hover:scale-110"><FaChevronLeft size={20} /></button>
            <button onClick={() => scrollContainer(bookScrollRef, 'right')} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-[#D4AF37] hover:bg-[#B8860B] text-white p-3 rounded-full shadow-lg transition hover:shadow-xl hover:scale-110"><FaChevronRight size={20} /></button>
            <div ref={bookScrollRef} className="flex overflow-x-auto gap-8 scrollbar-hide px-12 py-4 snap-x scroll-smooth">
-                {books.map((item, i) => (
-                    <BookCinematicCard key={i} img={item.img} title={item.title} year={item.year} />
-                ))}
+               {books.map((item, i) => (
+                   <BookCinematicCard key={i} img={item.img} title={item.title} year={item.year} />
+               ))}
            </div>
         </div>
       </section>
 
-      {/* سفر (Professional Journey - Enhanced) */}
+      {/* سفر (Professional Journey) */}
       <section className="bg-gradient-to-b from-white via-slate-50 to-white py-16 border-t-2 border-b-2 border-[#D4AF37] relative z-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
@@ -327,22 +259,14 @@ export default function Home() {
   );
 }
 
-// --- Cinematic Card (Legend Video Cards) ---
+// --- Components (یہ بھی ساتھ ہیں) ---
 function CinematicCard({ img, video, name, role, setVideo }) {
     return (
-      <div 
-        style={{ minWidth: '280px', width: '280px', height: '180px' }}
-        className="flex-shrink-0 relative rounded-xl overflow-hidden cursor-pointer transition-all duration-500 transform hover:scale-110 hover:z-50 hover:shadow-[0_0_40px_rgba(212,175,55,0.8)] group border-4 border-[#D4AF37]/50 hover:border-[#D4AF37] snap-center bg-black"
-        onClick={() => setVideo(video)}
-      >
+      <div style={{ minWidth: '280px', width: '280px', height: '180px' }} className="flex-shrink-0 relative rounded-xl overflow-hidden cursor-pointer transition-all duration-500 transform hover:scale-110 hover:z-50 hover:shadow-[0_0_40px_rgba(212,175,55,0.8)] group border-4 border-[#D4AF37]/50 hover:border-[#D4AF37] snap-center bg-black" onClick={() => setVideo(video)}>
         <img src={img} alt={name} className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition duration-500 scale-100 group-hover:scale-110" />
-        
-        {/* Play Icon */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-10 bg-black/30">
             <div className="bg-[#D4AF37] text-black rounded-full p-4 shadow-2xl group-hover:scale-125 transition duration-500"><FaPlay size={20} /></div>
         </div>
-
-        {/* Text Overlay */}
         <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent pt-8 pb-3 px-2 text-center z-20">
             <h3 className="text-[#D4AF37] font-bold text-xs md:text-sm drop-shadow-[0_2px_3px_rgba(0,0,0,1)] tracking-wide leading-tight">{name}</h3>
             <p className="text-gray-300 text-[10px] mt-1 font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,1)] uppercase tracking-wider">{role}</p>
@@ -351,7 +275,6 @@ function CinematicCard({ img, video, name, role, setVideo }) {
     );
 }
 
-// --- Book Cinematic Card ---
 function BookCinematicCard({ img, title, year }) {
     return (
       <div className="min-w-[150px] h-[240px] relative rounded-xl overflow-hidden cursor-pointer transition-all duration-500 transform hover:scale-110 hover:z-50 hover:shadow-2xl group border-3 border-[#D4AF37] snap-center bg-white hover:border-[#B8860B]">
@@ -365,13 +288,9 @@ function BookCinematicCard({ img, title, year }) {
     );
 }
 
-// --- Navigation Card ---
 function NavCard({ icon, title, desc, delay }) {
   return (
-    <div 
-      style={{ animationDelay: delay }}
-      className="bg-white border-3 border-[#D4AF37] p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition duration-500 cursor-pointer group hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B]"
-    >
+    <div style={{ animationDelay: delay }} className="bg-white border-3 border-[#D4AF37] p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition duration-500 cursor-pointer group hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B]">
       <div className="text-4xl text-[#D4AF37] mb-3 group-hover:scale-125 transition duration-500 group-hover:text-white drop-shadow-md">{icon}</div>
       <h3 className="font-bold text-gray-800 group-hover:text-white transition text-sm md:text-base">{title}</h3>
       <span className="text-xs text-gray-500 mt-2 group-hover:text-white/80 font-medium">{desc}</span>
@@ -379,13 +298,9 @@ function NavCard({ icon, title, desc, delay }) {
   );
 }
 
-// --- Journey Card ---
 function JourneyCard({ icon, title, desc, delay }) {
   return (
-    <div 
-      style={{ animationDelay: delay }}
-      className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-500 border-3 border-[#D4AF37] group hover:border-[#0f4c75] animate-fadeInUp"
-    >
+    <div style={{ animationDelay: delay }} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-500 border-3 border-[#D4AF37] group hover:border-[#0f4c75] animate-fadeInUp">
       <div className="bg-gradient-to-r from-[#f0f4f8] to-white p-6 flex items-center gap-4 border-b-2 border-[#D4AF37] group-hover:border-[#0f4c75] transition">
         <div className="bg-gradient-to-br from-[#D4AF37] to-[#B8860B] text-white p-3 rounded-full shadow-md group-hover:scale-110 transition duration-500">{icon}</div>
         <h3 className="font-bold text-[#0f4c75] text-base md:text-lg">{title}</h3>
