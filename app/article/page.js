@@ -16,7 +16,8 @@ export default function ArticlesPage() {
   useEffect(() => { setMounted(true); }, []);
   if (!mounted) return null;
 
-  const Articles = (articlesData || []).filter(article => {
+  // 🟢 نوری نے یہاں نام درست کر دیا ہے (Articles کی جگہ filteredArticles کر دیا ہے)
+  const filteredArticles = (articlesData || []).filter(article => {
     const title = article.title ? article.title.toLowerCase() : '';
     const matchesSearch = title.includes(searchTerm.toLowerCase());
     const matchesCategory = filterCategory === 'all' || article.category === filterCategory;
@@ -71,7 +72,7 @@ export default function ArticlesPage() {
             {/* آرٹیکلز گرڈ */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
               {filteredArticles.map(article => (
-<div key={article.id || Math.random()} onClick={() => setSelectedArticle(article)}
+                <div key={article.id || Math.random()} onClick={() => setSelectedArticle(article)}
                   className="bg-white rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                   <div className="h-48 overflow-hidden bg-gray-200">
                     <img src={article.image} alt={article.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onError={(e) => e.target.src='https://via.placeholder.com/300x200?text=No+Image'} />
