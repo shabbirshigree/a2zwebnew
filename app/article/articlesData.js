@@ -1,67 +1,24 @@
+// اس فائل میں صرف کالمز کا ڈیٹا ہوگا
 export const articlesData = [
-{
-        id: 20250827,
-        category: "column",
-        title: "کے ٹو کی وادی: سیاحت اور بقا کی جنگ",
-        date: "27 اگست 2025",
-        paper: "ایمرا / سیاسیات / 5CN",
-        
-        // 👇 یہ مین تصویر (Main Image)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770153534/538234557_814653120909974_2846084898460695271_n.jpg_ma1hyc.jpg",
-        
-        excerpt: "کے ٹو کی وادی جو مشکلات کی جنگ لڑ رہی ہے اس تحریر میں اسے بڑی خوبصورت سے نمایا کیا گیا ہے۔",
-        
-        content: `
-            <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
-                <p><strong>تحریر: شبیر احمد شگری</strong></p>
-                
-                <p>یہاں آپ اپنی تحریر کا پہلا پیراگراف لکھیں...</p>
-                <br>
-                <p>یہاں دوسرا پیراگراف لکھیں...</p>
-                <br>
 
-                <div style="text-align:center; margin: 20px 0;">
-                    <h5 style="color:#0f4c75; margin-bottom:10px;">اخبارات کی تراشے اور تصاویر:</h5>
-                    
-                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1770153962/625993708_939696251738993_206394079230601803_n.jpg_dg3tdk.jpg" 
-                         style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" alt="K2 Image 2">
-                    
-                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1770153971/624608425_939696278405657_522490808322737640_n.jpg_g1arza.jpg" 
-                         style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" alt="K2 Image 3">
-
-                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1770153559/538699010_814653107576642_1375656315337073653_n.jpg_sdwzcn.jpg" 
-                         style="width: 100%; max-width: 500px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" alt="K2 Image 4">
-                </div>
-                <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
-                    <h4 style="color:var(--primary-color);">آن لائن لنکس:</h4>
-                    <ul style="list-style:none; padding:0;">
-                        
-                        <li style="margin-bottom:15px;">
-                            <strong>سیاسیات:</strong><br>
-                            <a href="https://siasiyat.com/?p=30237" target="_blank" style="color:#0f4c75; text-decoration: underline;">
-                                https://siasiyat.com/?p=30237
-                            </a>
-                        </li>
-
-                        <li style="margin-bottom:15px;">
-                            <strong>5CN TV:</strong><br>
-                            <a href="https://5cntv.com/column-in-urdu-valley-of-k-2/" target="_blank" style="color:#0f4c75; text-decoration: underline;">
-                                https://5cntv.com/column-in-urdu-valley-of-k-2/
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        `
-    }, // 👈 کوما نہیں بھولنا! // 👈 یہ آخری کوما بہت ضروری ہے!
+    // 👇 یہاں اپنا سارا ڈیٹا (جو برالدو، رمضان وغیرہ والا ہے) پیسٹ کریں
+    {
+        id: 16,
+        category: "punjabi",
+        title: "پاکستان تے دُنیا دا اہم ترین علاقہ برالدو",
+        date: "18 Nov 2020",
+        paper: "روزنامہ بھلیکا (پنجابی)",
+        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1769706729/535772079_122214217538167176_3320548276512249013_n_cgukyl.jpg",
+        excerpt: "دنیا دے بلند ترین پہاڑاں...",
+        content: `<p>تحریر یہاں آئے گی...</p>`
+    },
 
         // ====================================================================
         //  حصہ اول: پنجابی آرٹیکلز (PUNJABI PORTION) - Fresh Content on Top
         // ====================================================================
 
         {
-            id: 20241118,
+            id: 16,
             category: "punjabi",
             title: "پاکستان تے دُنیا دا اہم ترین علاقہ برالدو",
             date: "18 Nov 2020",
@@ -100,7 +57,7 @@ export const articlesData = [
             `
         },
         {
-            id: 20241115,
+            id: 11,
             category: "punjabi", 
             title: "برکات رمضان تے قرآن و اہلبیت پیغمبرﷺ",
             date: "29 April 2022",
@@ -115,7 +72,7 @@ export const articlesData = [
             `
         },
         {
-            id: 20241117, 
+            id: 13, 
             category: "punjabi", 
             title: "یوم شہادت حضرت علی علیہ السلام",
             date: "21 April 2022",
@@ -130,7 +87,7 @@ export const articlesData = [
         },
         
         {
-            id: 20250619, 
+            id: 24, 
             category: "punjabi", 
             title: "جنت ارضی سکردو بلتستان", 
             date: "19 جون 2021",
@@ -206,7 +163,7 @@ export const articlesData = [
             `
         },
         {
-    id: 20210202, 
+    id: 42, 
     category: "punjabi", 
     title: "انقلاب اسلامی ایران توں پہلے تے بعد دا ایرانی سینما", 
     date: "02 Feb 2021", 
@@ -252,7 +209,7 @@ export const articlesData = [
 },
 
 {
-            id: 20241114, 
+            id: 26, 
             category: "punjabi", 
             title: "امام خمینیؒ ایک تاریخ ساز شخصیت", 
             date: "05 جون 2021",
@@ -296,7 +253,7 @@ export const articlesData = [
 
         
         {
-            id: 20210319, 
+            id: 27, 
             category: "punjabi", 
             title: "3000 سالہ قدیمی تہوار نوروز", 
             date: "19 مارچ 2021",
@@ -338,7 +295,7 @@ export const articlesData = [
             `
         },
         {
-            id: 20241113, 
+            id: 25, 
             category: "punjabi", 
             title: "انقلاب اسلامی ایران دے ثمرات",
             date: "11 فروری 2022",
@@ -379,7 +336,7 @@ export const articlesData = [
             `
         },
          {
-id: 20211220,
+id: 38,
             category: "punjabi",
             title: "قدیم ثقافتی تہوار شب یلد",
             date: "20 دسمبر 2021",
@@ -424,7 +381,7 @@ id: 20211220,
             `
         },
         {
-    id: 20210809, 
+    id: 41, 
     category: "punjabi", 
     title: "سید ابراہیم رئیسی دی حیاتی", 
     date: "09 Aug 2021", 
@@ -481,7 +438,7 @@ id: 20211220,
 },
 
 {
-    id: 20220523, 
+    id: 78, 
     category: "punjabi", 
     title: "پاک ایران سانجھی تجارت وچ وڈا قدم", 
     date: "23 May 2022", 
@@ -516,7 +473,7 @@ id: 20211220,
         // ====================================================================
 
         {
-            id: 20220216,
+            id: 1,
             category: "special", 
             title: "جشنِ مولودِ کعبہ: حضرت علی علیہ السلام کی حیاتِ طیبہ",
             date: "16 Feb 2022",
@@ -529,7 +486,7 @@ id: 20211220,
             `
         },
         {
-            id: 20230405, 
+            id: 7, 
             category: "special", 
             title: "حضرت خدیجہ سلام اللہ علیہا سے محبت و عقیدت",
             date: "05 April 2023",
@@ -541,7 +498,7 @@ id: 20211220,
             `
         },
         {
-            id: 20230116, 
+            id: 8, 
             category: "special", 
             title: "سیرتِ حضرت زہراء سلام اللہ علیہا",
             date: "16 Jan 2023",
@@ -554,7 +511,7 @@ id: 20211220,
             `
         },
         {
-            id: 20220307, 
+            id: 15, 
             category: "special", 
             title: "حسینؑ ہدایت کا چراغ",
             date: "07 March 2022",
@@ -567,7 +524,7 @@ id: 20211220,
             `
         },
         {
-    id: 20170618, 
+    id: 43, 
     category: "special", 
     title: "روضہ مبارک امام علی ابن موسیٰ الرضاؑ", 
     date: "18 June 2017", 
@@ -662,7 +619,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160918, 
+    id: 55, 
     category: "special", 
     title: "مشہد: ایک تاریخی شہر", 
     date: "18 Sep 2016", 
@@ -693,7 +650,7 @@ id: 20211220,
     `
 },
 {
-    id: 20161128, 
+    id: 57, 
     category: "special", 
     title: "قم: ایران کا علمی و ثقافتی دارالخلافہ", 
     date: "05 Nov 2016", 
@@ -730,7 +687,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160917, 
+    id: 56, 
     category: "special", 
     title: "شیراز: انتہائی قدیمی اور تاریخی شہر", 
     date: "01 Oct 2016", 
@@ -774,7 +731,7 @@ id: 20211220,
 },
 
 {
-    id: 20161127, 
+    id: 52, 
     category: "special", 
     title: "اصفہان نصف جہاں (سفرنامہ و ڈاکومنٹری)", 
     date: "27 Nov 2016", 
@@ -935,7 +892,7 @@ id: 20211220,
     `
 },
        {
-            id: 20161131,
+            id: 17,
             category: "special", 
             title: "ایران کا پہلازیارتی، سیاحتی و ثقافتی سفر (حصہ اول)",
             date: "16 ستمبر 2023",
@@ -948,7 +905,7 @@ id: 20211220,
             `
         },
         {
-            id: 20161130,
+            id: 18,
             category: "special", 
             title: "ایران کا پہلازیارتی، سیاحتی و ثقافتی سفر (حصہ دوم)",
             date: "17 ستمبر 2023",
@@ -961,7 +918,7 @@ id: 20211220,
             `
         },
         {
-    id: 20160912, 
+    id: 58, 
     category: "special", 
     title: "ایران کا اسلامی انقلاب: افکار اقبالؒ کا زندہ معجزہ", 
     date: "25 Aug 2017", 
@@ -1012,7 +969,7 @@ id: 20211220,
             `
         },
         {
-    id: 20160914.2,
+    id: 59, 
     category: "special", 
     title: "ہمدان: ایران کا تاریخی شہر", 
     date: "08 Jan 2017", 
@@ -1069,7 +1026,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160913, 
+    id: 61, 
     category: "special", 
     title: "حضرت امام علی ابن موسٰی الرضا علیہ السلام کی مبارک شخصیت", 
     date: "18 Aug 2016", 
@@ -1149,7 +1106,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160914, 
+    id: 64, 
     category: "special", 
     title: "امام رضا علیہ السلام کی حیات مبارکہ", 
     date: "01 Sep 2016", 
@@ -1199,7 +1156,7 @@ id: 20211220,
     `
 },
 {
-    id: 20161129, 
+    id: 66, 
     category: "special", 
     title: "امام مہدی علیہ السلام کی خصوصیات", 
     date: "23 May 2016", 
@@ -1285,7 +1242,7 @@ id: 20211220,
         },
             
     {
-    id: 20160915, 
+    id: 67, 
     category: "special", 
     title: "فضائل جناب سیدہ سلام اللہ علیہا", 
     date: "17 Apr 2015", 
@@ -1360,7 +1317,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160916, 
+    id: 70, 
     category: "special", 
     title: "حضرت علی علیہ السلام کے فضائل", 
     date: "20 Apr 2016", 
@@ -2025,7 +1982,7 @@ id: 20211220,
     `
 },
 {
-    id: 20160911, 
+    id: 49, 
     category: "special", 
     title: "حافظ شمس الدین شیرازی", 
     date: "06 Dec 2016", 
@@ -2327,7 +2284,7 @@ id: 20211220,
         //  حصہ سوم: اردو آرٹیکلز (column) - یہاں اپنا مکمل متن پیسٹ کریں
         // ====================================================================
 {
-    id: 20260126, 
+    id: 79, 
     category: "column", 
     title: "محسنِ شمال: آغا سید احمد علی شاہ (تحریری کالم + گوگل تجزیہ)", 
     date: "26 جنوری 2026", 
@@ -2468,7 +2425,7 @@ id: 20211220,
 },
 
 {
-    id: 20251225, 
+    id: 82, 
     category: "column", 
     title: "عظیم روحانی پیشوا: حضرت آغا سید علی الحسینی سبزواریؒ (شگری کی ڈائری)", 
     date: "25 دسمبر 2025", 
@@ -2525,7 +2482,7 @@ id: 20211220,
     `
 },
 {
-    id: 20251216, 
+    id: 83, 
     category: "column", 
     title: "جرمِ سیاست کا عہد تمام ہوا: میاں منظور احمد وٹو مرحوم کی یاد میں", 
     date: "16 دسمبر 2025", 
@@ -2597,7 +2554,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
 },
 
 {
-    id: 20251206, 
+    id: 84, 
     category: "column", 
     title: "سہیل مجتبیٰ کی جدائی کا زخم، جو کبھی نہیں بھرے گا", 
     date: "06 دسمبر 2025", 
@@ -2691,7 +2648,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
 },
 
 {
-    id: 20251012, 
+    id: 85, 
     category: "column", 
     title: "سوشل میڈیا: رحمت ہے یا زحمت؟ (رہبر معظم اور قرآنی تعلیمات کی روشنی میں)", 
     date: "12 اکتوبر 2025", 
@@ -2778,7 +2735,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
 },
 
 {
-    id: 20250910.2,
+    id: 86, 
     category: "column", 
     title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ", 
     date: "10 ستمبر 2025", 
@@ -2851,7 +2808,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
     `
 },
 {
-    id: 20250813, 
+    id: 81, 
     category: "column", 
     title: "مثالی سول سرونٹ کو خراج تحسین: جی ایم سکندر مرحوم کی یاد میں", 
     date: "13 اگست 2025", 
@@ -2994,7 +2951,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
     `
 },
         {
-            id: 20230916,
+            id: 20,
             category: "column",   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
             title: " جڑانوالہ واقعہ ہماری زندگی کا ایک سیاہ دن",
             date: "16 ستمبر 2023",
@@ -3013,7 +2970,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
             `
         },
         {
-    id: 20160214, 
+    id: 54, 
     category: "special", 
     title: "انقلاب اسلامی ایران، شاعر مشرق حضرت اقبالؒ کا خواب", 
     date: "14 Feb 2016", 
@@ -3044,7 +3001,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
     `
 },
         {
-    id: 20110915, 
+    id: 53, 
     category: "special", 
     title: "ایرانی فلمیں ہالی وڈ کی منڈی میں", 
     date: "15 Sep 2011", 
@@ -3080,7 +3037,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
         // ====================================================================
 
         {
-    id: 20150412, 
+    id: 105, 
     category: "english", 
     title: "Lady of Paradise in Iqbal’s poetry", 
     date: "12 April 2015", 
@@ -3208,7 +3165,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
     `
 },
         {
-            id: 20180603, 
+            id: 101, 
             category: "english", 
             title: "Ayatullah Sayed Roohullah Khumieni r.a", 
             date: "03 June 2018", 
@@ -3249,7 +3206,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
         },
         
         {
-            id: 20210506, 
+            id: 102, 
             category: "english", 
             title: "Quds Day is only effective measure for liberation of Quds", 
             date: "06 May 2021", 
@@ -3358,7 +3315,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
         },
 
         {
-            id: 20210512, 
+            id: 103, 
             category: "english", 
             title: "International Quds Day: A Call for Justice", 
             date: "12 May 2021", 
@@ -3427,7 +3384,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
         },
 
         {
-            id: 20220522, 
+            id: 104, 
             category: "english", 
             title: "Significant progress in Pak-Iran joint trade", 
             date: "22 May 2022", 
@@ -3554,7 +3511,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
         // ====================================================================
 
 {
-    id: 20250910, 
+    id: 87, 
     category: "international", 
     title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ", 
     date: "10 ستمبر 2025", 
@@ -3690,7 +3647,7 @@ excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرین
 `
 },
 {
-    id: 20250814, 
+    id: 80, 
     category: "international", 
     title: "عاشق امام حسینؑ: محمود فرشچیان — فن، عشق اور خدمت کا ابدی سفر", 
     date: "14 اگست 2025", 
@@ -3872,8 +3829,8 @@ ________________________________________
                     </li>
 
                 </ul>
-            </div>
+</div>
     `
-},
+}, // آخری کالم یہاں ختم ہوا
 
-    ]; // LIST END
+]; // پوری لسٹ یہاں ختم ہوئی (صرف یہ ایک بار ہونا چاہیے)

@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { FaShareAlt, FaBook, FaPlayCircle, FaHeadphones, FaFilm, FaMicrophone, FaSearch, FaGlobe } from 'react-icons/fa';
-import { FaTiktok, FaTwitter, FaInstagram, FaTelegram, FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+// فالتو امپورٹس ہٹا دی ہیں کیونکہ اب ہم فوٹر استعمال کر رہے ہیں
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -130,7 +130,6 @@ const SLIDER_BOOKS = [
   { name: 'کنجی بہشت', image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png', id: 'book-kunji' },
   { name: 'مجلہ فرھنگستان', image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png', id: 'book-farhang' },
 ];
-
 export default function LibraryPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [bookModalOpen, setBookModalOpen] = useState(false);
@@ -139,7 +138,6 @@ export default function LibraryPage() {
   const [videoUrl, setVideoUrl] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [langTab, setLangTab] = useState('ur');
-  const [headerImage, setHeaderImage] = useState(0);
 
   const filteredBooks = BOOKS_DATA.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -152,13 +150,6 @@ export default function LibraryPage() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHeaderImage(prev => (prev + 1) % 2);
-    }, 5000);
-    return () => clearInterval(interval);
   }, []);
 
   const handlePlayVideo = (url) => {
@@ -214,26 +205,17 @@ export default function LibraryPage() {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
       <Navbar />
       
-      {/* Header Images */}
-      <div className="relative w-full h-64 md:h-80 bg-gradient-to-r from-yellow-100 to-yellow-50 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-center z-10 bg-gradient-to-bottom from-black/70 to-transparent">
-          <p className="text-[#ffd700] text-xl md:text-2xl font-serif tracking-wider">ما شاء اللہ - لا قوة الا بالله</p>
-        </div>
-        <img
-          src={headerImage === 0 ? 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/2_sn9tyl.png' : 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/4_xaylj9.png'}
-          alt="Header"
-          className="w-full h-full object-cover transition-opacity duration-1500"
-        />
-      </div>
+      {/* اصلی والا HeroSlider اب یہاں لگا دیا ہے */}
+      <HeroSlider />
 
-      {/* Title Section */}
-      <section className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] py-8 text-center border-b-4 border-[#D4AF37]">
+      {/* Title Section - تھوڑی پیڈنگ بڑھا دی ہے تاکہ ہیڈر کے نیچے نہ چھپے */}
+      <section className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] py-8 pt-16 text-center border-b-4 border-[#D4AF37] relative z-10">
         <h1 className="text-3xl md:text-5xl font-bold text-[#D4AF37] font-serif mb-2">خزانہِ علم و دانش</h1>
         <p className="text-white text-lg md:text-xl">تصنیفات و تالیفات: حاجی شبیر احمد شگری</p>
       </section>
 
       {/* Search Bar */}
-      <section className="container mx-auto px-4 py-8">
+      <section className="container mx-auto px-4 py-8 relative z-20">
         <div className="max-w-2xl mx-auto relative">
           <div className="flex items-center bg-white border-2 border-[#D4AF37] rounded-full px-6 py-3 shadow-lg">
             <FaSearch className="text-[#0f4c75] mr-4 text-xl" />
@@ -248,8 +230,8 @@ export default function LibraryPage() {
         </div>
       </section>
 
-      {/* Book Slider */}
-      <section className="bg-yellow-50 border-b-4 border-[#0f4c75] py-8 overflow-x-auto">
+      {/* Book Slider (Horizontal) */}
+      <section className="bg-yellow-50 border-b-4 border-[#0f4c75] py-8 overflow-x-auto relative z-10">
         <div className="flex gap-6 px-4 animate-scroll">
           {SLIDER_BOOKS.map((book, idx) => (
             <a key={idx} href={`#${book.id}`} className="flex-shrink-0 w-40 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition group border border-gray-200">
@@ -261,15 +243,15 @@ export default function LibraryPage() {
       </section>
 
       {/* Intro Banner */}
-      <section className="max-w-3xl mx-auto px-4 py-12">
+      <section className="max-w-3xl mx-auto px-4 py-12 relative z-10">
         <div className="bg-gradient-to-r from-[#0f4c75] to-[#0a2e47] border-4 border-[#D4AF37] rounded-2xl p-8 text-center text-white shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4">حاجی شبیر احمد شگری کی تصانیف پر ویڈیو تجذیے اور آڈیو پوڈ کاسٹس</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4">حاجی شبیر احمد شگری کی تصانیف پر گوگل کے ویڈیو تجذیے اور آڈیو پوڈ کاسٹس</h2>
           <p className="text-lg text-gray-100">بے لاگ تبصرے اور بولتی کتابیں</p>
         </div>
       </section>
 
       {/* Books Container */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-4 py-12 relative z-10">
         {filteredBooks.map((book) => (
           <div key={book.id} id={book.id} className="mb-16 flex flex-col lg:flex-row gap-8 bg-gradient-to-br from-white to-yellow-50 border border-[#D4AF37]/50 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition">
             {/* Left: Image & Actions */}
@@ -327,14 +309,14 @@ export default function LibraryPage() {
               </div>
 
               {langTab === 'ur' ? (
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4 pb-3 border-b-2 border-gray-200 text-right">{book.title}</h2>
-                  <p className="text-gray-700 text-lg leading-loose text-justify whitespace-pre-line">{book.descUrdu}</p>
+                <div dir="rtl">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4 pb-3 border-b-2 border-gray-200 text-right font-serif">{book.title}</h2>
+                  <p className="text-gray-700 text-lg leading-loose text-justify whitespace-pre-line font-serif">{book.descUrdu}</p>
                 </div>
               ) : (
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4 pb-3 border-b-2 border-gray-200">{book.titleEn || book.title}</h2>
-                  <p className="text-gray-700 text-lg leading-loose text-justify">{book.descEn || book.descUrdu}</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4 pb-3 border-b-2 border-gray-200 font-serif">{book.titleEn || book.title}</h2>
+                  <p className="text-gray-700 text-lg leading-loose text-justify font-serif">{book.descEn || book.descUrdu}</p>
                 </div>
               )}
             </div>

@@ -201,7 +201,7 @@ export default function GalleryPage() {
 
       <section className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] py-16 text-center relative z-10">
         <h1 className="text-4xl md:text-5xl font-bold text-[#D4AF37] font-serif mb-2">گیلری</h1>
-        <p className="text-white text-lg md:text-xl">یادوں کا ایک خوبصورت سفر</p>
+        <p className="text-white text-lg md:text-xl">یادوں کے جھروکوں سے</p>
       </section>
 
       <section className="container mx-auto px-4 py-8 relative z-10">
