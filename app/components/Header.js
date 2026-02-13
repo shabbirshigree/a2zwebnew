@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { 
-  FaBars, FaSearch, FaHome, FaBookOpen, 
+  FaBars, FaSearch, FaHome, FaBookOpen, FaTimes,
   FaPhoneAlt, FaUserAlt, FaImages, FaNewspaper, FaTv, FaBriefcase 
 } from 'react-icons/fa';
 import Link from 'next/link';
@@ -12,7 +12,6 @@ export function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const pathname = usePathname();
 
-  // مینو آئٹمز - آپ کی ہدایات کے مطابق لاک کر دیے گئے ہیں
   const menuItems = [
     { name: "گھر", link: "/", icon: <FaHome /> },
     { name: "نور القرآن", link: "/project", icon: <FaBookOpen /> },
@@ -28,17 +27,22 @@ export function Navbar() {
   const isActive = (link) => pathname === link;
 
   return (
-    <header className="sticky top-0 z-50 shadow-2xl">
-      {/* 1. بابرکت آیتِ مبارکہ - لاکڈ */}
-      <div className="bg-[#0b314d] text-[#D4AF37] text-center py-1.5 text-[10px] md:text-sm font-serif italic tracking-widest border-b border-[#D4AF37]/30">
+    <header className="sticky top-0 z-[100] shadow-2xl">
+      {/* 1. بابرکت آیتِ مبارکہ */}
+      <div className="bg-[#0b314d] text-[#D4AF37] text-center py-1.5 text-[9px] md:text-sm font-serif italic tracking-widest border-b border-[#D4AF37]/30 px-2">
         مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ الْعَلِیِّ الْعَظِیْمِ
       </div>
 
       <div className="backdrop-blur-md bg-[#0f4c75]/95 border-b-2 border-[#D4AF37]">
         <div className="container mx-auto px-4 h-16 flex justify-between items-center relative">
           
-          {/* 2. سرچ باکس - بائیں طرف لاکڈ */}
-          <div className="flex items-center gap-2 order-first min-w-[120px]">
+          {/* موبائل مینو بٹن (بائیں طرف) */}
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white p-2 order-first">
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+
+          {/* 2. سرچ باکس */}
+          <div className="flex items-center gap-2 md:order-first">
             <button 
               onClick={() => setShowSearch(!showSearch)} 
               className="text-white hover:text-[#D4AF37] p-2 transition-colors"
@@ -49,13 +53,13 @@ export function Navbar() {
               <input 
                 type="text" 
                 autoFocus
-                placeholder="تلاش کریں..." 
-                className="bg-white/10 border border-[#D4AF37] text-white text-xs px-2 py-1 rounded outline-none w-24 md:w-40 animate-in fade-in slide-in-from-left-2 duration-300"
+                placeholder="تلاش..." 
+                className="bg-white/10 border border-[#D4AF37] text-white text-xs px-2 py-1 rounded outline-none w-20 md:w-40"
               />
             )}
           </div>
 
-          {/* 3. مینو لنکس - دائیں طرف اور زوم ایفیکٹ کے ساتھ لاکڈ */}
+          {/* 3. پی سی مینو (ڈیسک ٹاپ) */}
           <nav className="hidden md:flex gap-1 items-center justify-end flex-1" dir="rtl">
             {menuItems.map((item, idx) => (
               <Link 
@@ -65,7 +69,7 @@ export function Navbar() {
                   isActive(item.link) ? 'bg-[#D4AF37] text-[#0f4c75]' : 'text-white hover:text-[#D4AF37]'
                 }`}
               >
-                <span className="text-xl transition-all duration-500 group-hover:scale-150 group-hover:rotate-[10deg] group-hover:brightness-125">
+                <span className="text-xl transition-all duration-500 group-hover:scale-150 group-hover:rotate-[10deg]">
                   {item.icon}
                 </span>
                 <span className="text-[10px] lg:text-[11px] font-bold whitespace-nowrap">{item.name}</span>
@@ -73,10 +77,38 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* موبائل مینو بٹن */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white p-2">
-            <FaBars size={22} />
-          </button>
+          {/* لوگو یا نام (موبائل پر نظر آئے گا) */}
+          <div className="md:hidden text-[#D4AF37] font-bold text-sm font-serif">
+             H.A. SHIGRI
+          </div>
+        </div>
+      </div>
+
+      {/* 4. موبائل مینو (Side Drawer) */}
+      <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} onClick={() => setIsOpen(false)}>
+        <div 
+          className={`fixed right-0 top-0 h-full w-64 bg-[#0f4c75] shadow-2xl border-l-4 border-[#D4AF37] transition-transform duration-300 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="p-5 flex flex-col gap-4" dir="rtl">
+            <div className="flex justify-between items-center border-b border-[#D4AF37]/30 pb-4 mb-2">
+              <span className="text-[#D4AF37] font-bold">مینو</span>
+              <button onClick={() => setIsOpen(false)} className="text-white"><FaTimes size={20}/></button>
+            </div>
+            {menuItems.map((item, idx) => (
+              <Link 
+                key={idx} 
+                href={item.link} 
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center gap-4 p-3 rounded-lg transition-all ${
+                  isActive(item.link) ? 'bg-[#D4AF37] text-[#0f4c75]' : 'text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-xl">{item.icon}</span>
+                <span className="text-sm font-bold">{item.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </header>
@@ -103,17 +135,17 @@ export function HeroSlider() {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full h-[300px] md:h-[450px] overflow-hidden bg-black border-b-4 border-[#D4AF37]">
+    <div className="relative w-full h-[220px] md:h-[450px] overflow-hidden bg-black border-b-4 border-[#D4AF37]">
       {slides.map((s, i) => (
         <div 
           key={i} 
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === current ? 'opacity-100' : 'opacity-0'}`}
         >
           <img src={s.img} alt={s.title} className="w-full h-full object-contain mx-auto" />
-          <div className="absolute inset-0 bg-black/30 flex items-end justify-center pb-10 px-4">
-            <div className="text-white text-center bg-[#0f4c75]/70 px-6 py-4 rounded-xl backdrop-blur-md border-t-2 border-[#D4AF37]">
-              <h2 className="text-2xl md:text-5xl font-bold mb-1 drop-shadow-2xl">{s.title}</h2>
-              <p className="text-xs md:text-xl opacity-90 tracking-widest">{s.subtitle}</p>
+          <div className="absolute inset-0 bg-black/30 flex items-end justify-center pb-6 md:pb-10 px-4">
+            <div className="text-white text-center bg-[#0f4c75]/70 px-4 py-2 md:px-6 md:py-4 rounded-xl backdrop-blur-md border-t-2 border-[#D4AF37]">
+              <h2 className="text-lg md:text-5xl font-bold mb-1 drop-shadow-2xl">{s.title}</h2>
+              <p className="text-[10px] md:text-xl opacity-90 tracking-widest">{s.subtitle}</p>
             </div>
           </div>
         </div>
