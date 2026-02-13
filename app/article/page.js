@@ -16,7 +16,7 @@ export default function ArticlesPage() {
   useEffect(() => { setMounted(true); }, []);
   if (!mounted) return null;
 
-  const filteredArticles = (articlesData || []).filter(article => {
+  const Articles = (articlesData || []).filter(article => {
     const title = article.title ? article.title.toLowerCase() : '';
     const matchesSearch = title.includes(searchTerm.toLowerCase());
     const matchesCategory = filterCategory === 'all' || article.category === filterCategory;
@@ -86,7 +86,6 @@ export default function ArticlesPage() {
                 </div>
               ))}
             </div>
-            {filteredArticles.length === 0 && ( <div className="text-center text-gray-500 mt-10">کوئی مضمون نہیں ملا۔</div> )}
           </>
         ) : (
           /* سنگل آرٹیکل ویو */
