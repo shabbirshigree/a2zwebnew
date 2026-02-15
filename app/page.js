@@ -1,17 +1,17 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaHandPointLeft, FaMosque } from "react-icons/fa";
+import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaMosque } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
 import { booksData, legendsData } from './homeData'; 
 
-// 🎨 گلوبل اسٹائلز (اینیمیشن اور فونٹس)
+// 🎨 گلوبل اسٹائلز
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
   .font-amiri { font-family: 'Amiri', serif; }
   
-  /* بٹن پر نور کی لہر (Shine Effect) */
+  /* شائن ایفیکٹ */
   @keyframes shine {
     0% { left: -100%; }
     100% { left: 200%; }
@@ -27,18 +27,19 @@ const globalStyles = `
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
     transform: skewX(-20deg);
     animation: shine 3s infinite;
   }
 
-  /* ہلتا ہوا ہاتھ (Pointing Finger Animation) */
-  @keyframes point {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-5px); }
+  /* 🔥 نیا تیز ایفیکٹ: دھڑکتا ہوا نور (Pulse Glow) */
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); transform: scale(1); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); transform: scale(1.05); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); transform: scale(1); }
   }
-  .animate-point {
-    animation: point 1.5s ease-in-out infinite;
+  .animate-pulse-glow {
+    animation: pulseGlow 2s infinite;
   }
 
   /* باقی اسٹائلز */
@@ -85,42 +86,6 @@ export default function Home() {
       {/* 🔴 1. سلائیڈر سیکشن */}
       <div className="block w-full p-0 m-0 border-none outline-none overflow-hidden relative">
         <HeroSlider />
-        
-        {/* 🔥 بٹنوں کا نیا "میگنیٹک" سیکشن (سلائیڈر کے اوپر) */}
-        <div className="absolute bottom-10 left-0 w-full z-20 flex flex-col items-center justify-center space-y-4 px-4">
-           
-           <h2 className="text-white text-xl md:text-2xl font-bold font-amiri drop-shadow-md bg-black/40 px-6 py-2 rounded-full border border-[#D4AF37]/50 backdrop-blur-sm mb-2">
-             👇 زیارت و خدمات کا انتخاب کریں 👇
-           </h2>
-
-           <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto justify-center">
-             
-             {/* 🕌 بٹن 1: خادم امام رضاؑ (گولڈن + شائن) */}
-             <Link href="/imam-reza" className="w-full md:w-auto group">
-               <button className="relative animate-shine flex items-center justify-center gap-4 w-full md:w-auto bg-gradient-to-b from-[#FBF5B7] via-[#BF953F] to-[#AA771C] text-black px-8 py-4 rounded-full hover:scale-110 transition-transform duration-300 font-bold text-xl shadow-[0_0_40px_rgba(212,175,55,0.8)] border-2 border-[#fff]">
-                 <span className="bg-white/20 p-2 rounded-full"><FaMosque size={24}/></span>
-                 <div className="text-right">
-                    <span className="block text-xs font-normal opacity-80">شاہِ خراسان</span>
-                    <span className="font-bold font-amiri text-2xl">خادمِ امام رضاؑ</span>
-                 </div>
-                 <FaHandPointLeft className="animate-point text-2xl text-white drop-shadow-md" />
-               </button>
-             </Link>
-
-             {/* 🚩 بٹن 2: خادم غازی عباسؑ (سلور + شائن) */}
-             <Link href="#" className="w-full md:w-auto group">
-               <button className="relative animate-shine flex items-center justify-center gap-4 w-full md:w-auto bg-gradient-to-b from-[#E0E0E0] via-[#9E9E9E] to-[#616161] text-white px-8 py-4 rounded-full hover:scale-110 transition-transform duration-300 font-bold text-xl shadow-[0_0_40px_rgba(192,192,192,0.6)] border-2 border-[#fff]">
-                 <span className="bg-black/20 p-2 rounded-full"><FaTrophy size={24}/></span>
-                 <div className="text-right">
-                    <span className="block text-xs font-normal opacity-90">وفا کے پیکر</span>
-                    <span className="font-bold font-amiri text-2xl">خادمِ غازی عباسؑ</span>
-                 </div>
-                 <FaHandPointLeft className="animate-point text-2xl text-black/50 drop-shadow-md" />
-               </button>
-             </Link>
-
-           </div>
-        </div>
       </div>
 
       {/* 🔴 2. خوش آمدید سیکشن */}
@@ -174,19 +139,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔴 5. اعزازات */}
-      <section className="container mx-auto px-3 md:px-4 py-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-            <Link href="/imam-reza" className="block transform transition-transform duration-300 hover:scale-105">
-               <HonorsCard icon={<FaMedal/>} title="Khadim-e-Imam Reza (A.S)" desc="Honorary Servant at Holy Shrine, Mashhad" />
+      {/* 🔴 5. اعزازات (نفیس ڈیزائن: تصاویر درمیان میں آمنے سامنے) */}
+      <section className="container mx-auto px-3 md:px-4 py-8 relative z-10">
+        <h2 className="text-xl md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-10 border-b-2 border-[#D4AF37]/30 pb-3 inline-block mx-auto">
+          ✨ زندگی کا حاصل: اہم اعزازات ✨
+        </h2>
+        
+        <div className="flex flex-col md:flex-row justify-center gap-5 max-w-5xl mx-auto">
+            
+            {/* 🕌 بٹن 1: خادم امام رضاؑ (تصویر بائیں طرف - اندر کی جانب) */}
+            <Link href="/imam-reza" className="w-full md:w-auto flex-1 group">
+               <button className="relative w-full overflow-hidden bg-gradient-to-r from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black py-3 px-5 rounded-full shadow-lg flex items-center justify-between gap-4 transition-all duration-500 hover:scale-[1.02] border border-[#fff]/40">
+                  {/* شائن ایفیکٹ */}
+                  <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] animate-shine"></div>
+                  
+                  {/* تصویر (بائیں طرف) */}
+                  <div className="relative h-14 w-14 rounded-full border-2 border-white shadow-md animate-pulse-glow z-10">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771114002/1_q1gdcd.png" alt="Imam Reza" className="w-full h-full object-cover rounded-full" />
+                  </div>
+
+                  {/* ٹیکسٹ */}
+                  <div className="flex-1 text-right">
+                     <h3 className="text-lg md:text-xl font-bold font-amiri drop-shadow-sm">خادم امام رضا علیہ السلام کا اعزاز</h3>
+                  </div>
+               </button>
             </Link>
-            <div className="block cursor-pointer transform transition-transform duration-300 hover:scale-105">
-               <HonorsCard icon={<FaTrophy/>} title="Khadim-e-Ghazi Abbas (A.S)" desc="Honorary Servant at Holy Shrine, Karbala" />
+            
+            {/* 🚩 بٹن 2: خادم عباسؑ (تصویر دائیں طرف - اندر کی جانب) */}
+            <div className="w-full md:w-auto flex-1 group cursor-pointer">
+               <button className="relative w-full overflow-hidden bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black py-3 px-5 rounded-full shadow-lg flex items-center flex-row-reverse justify-between gap-4 transition-all duration-500 hover:scale-[1.02] border border-[#fff]/40">
+                  {/* شائن ایفیکٹ */}
+                  <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] animate-shine"></div>
+                  
+                  {/* تصویر (دائیں طرف) */}
+                  <div className="relative h-14 w-14 rounded-full border-2 border-white shadow-md animate-pulse-glow z-10">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771152482/IMG_20240226_060710_Copy_pcfrxg_lcfhcr.jpg" alt="Ghazi Abbas" className="w-full h-full object-cover rounded-full" />
+                  </div>
+
+                  {/* ٹیکسٹ */}
+                  <div className="flex-1 text-right">
+                     <h3 className="text-lg md:text-xl font-bold font-amiri drop-shadow-sm">خادم عباس علیہ السلام کا اعزاز</h3>
+                  </div>
+               </button>
             </div>
+
         </div>
       </section>
 
-      {/* 🔴 6. ٹیسٹیمونیلز & کتب & سفر (باقی کوڈ وہی ہے) */}
+      {/* 🔴 6. ٹیسٹیمونیلز & کتب & سفر */}
       <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
         <div className="container mx-auto px-2 relative z-10">
           <h2 className="text-lg md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto">نامور شخصیات کا میرے بارے اظہار خیال</h2>
@@ -244,14 +244,6 @@ export default function Home() {
 }
 
 // 🔴 ہیلپر کمپوننٹس
-function HonorsCard({ icon, title, desc }) {
-  return (
-    <div className="bg-gradient-to-br from-[#D4AF37] to-[#996D00] text-white p-6 rounded-2xl shadow-lg flex items-center gap-5 transition-all duration-500 hover:scale-105 hover:brightness-110 group border-2 border-white/20 h-full">
-      <div className="text-5xl opacity-80 group-hover:rotate-[360deg] transition-transform duration-1000">{icon}</div>
-      <div><h3 className="text-lg md:text-2xl font-bold">{title}</h3><p className="text-xs md:text-sm font-medium opacity-90">{desc}</p></div>
-    </div>
-  );
-}
 function CinematicCard({ img, video, name, setVideo }) {
     return (
       <div className="min-w-[200px] md:min-w-[260px] h-[150px] relative rounded-xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/60 bg-black group shadow-lg" onClick={() => setVideo(video)}>

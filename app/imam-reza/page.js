@@ -362,7 +362,3 @@ export default function ImamRezaNetflixStyle() {
   );
 }
 
-// Final Gold Update
-git add .
-git commit -m "Force Gold Update"
-git push origin main
