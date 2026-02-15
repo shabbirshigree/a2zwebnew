@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaMosque } from "react-icons/fa";
+import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaHandPointLeft, FaMosque } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
@@ -11,7 +11,6 @@ const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
   .font-amiri { font-family: 'Amiri', serif; }
   
-  /* شائن ایفیکٹ */
   @keyframes shine {
     0% { left: -100%; }
     100% { left: 200%; }
@@ -32,33 +31,38 @@ const globalStyles = `
     animation: shine 3s infinite;
   }
 
-  /* 🔥 نیا تیز ایفیکٹ: دھڑکتا ہوا نور (Pulse Glow) */
-  @keyframes pulseGlow {
-    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); transform: scale(1); }
-    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); transform: scale(1.05); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); transform: scale(1); }
+  /* 🔥 پانی کی لہروں کا ایفیکٹ (اب 3 تہیں ہیں) */
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8),
+                  0 0 0 0 rgba(255, 255, 255, 0.6),
+                  0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0),
+                  0 0 0 30px rgba(255, 255, 255, 0),
+                  0 0 0 45px rgba(255, 255, 255, 0);
+    }
   }
-  .animate-pulse-glow {
-    animation: pulseGlow 2s infinite;
+  .animate-ripple {
+    animation: ripple 2s infinite linear;
+    border-radius: 50%; /* دائرہ یقینی بنانے کے لیے */
   }
 
-  /* باقی اسٹائلز */
   @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
   .islamic-pattern { 
     background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.25) 20px, rgba(212, 175, 55, 0.25) 40px);
     animation: patternMove 20s linear infinite; 
   }
-  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
-  .scrollbar-hide::-webkit-scrollbar { display: none; }
-  @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-  .animate-scroll-left { animation: scrollLeft 150s linear infinite; }
-  .animate-scroll-right { animation: scrollRight 150s linear infinite; }
-  .pause-on-hover:hover { animation-play-state: paused; }
-  .quran-glow:hover { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.8)); transform: scale(1.05) rotate(2deg); transition: all 0.5s ease; }
   .card-lift { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
   .card-lift:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+  .animate-scroll-left { animation: scrollLeft 150s linear infinite; }
+  .animate-scroll-right { animation: scrollRight 150s linear infinite; }
+  @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+  .pause-on-hover:hover { animation-play-state: paused; }
+  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 `;
 
 export default function Home() {
@@ -88,20 +92,66 @@ export default function Home() {
         <HeroSlider />
       </div>
 
-      {/* 🔴 2. خوش آمدید سیکشن */}
+      {/* 🔴 2. خوش آمدید + اعزازات (بٹن) */}
       <div className="container mx-auto px-3 md:px-4 py-8 relative z-10">
         <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
-          <div className="space-y-5 relative z-10">
-            <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-bold tracking-wider opacity-90">بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</h2>
-            <p className="text-sm md:text-lg font-bold text-[#0b314d] text-justify md:text-center urdu-text leading-loose tracking-wide" dir="rtl">
-              <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">السلام علیکم!</span> 
-              میں آپ کو اپنی آفیشل ویب سائٹ پر خوش آمدید کہتا ہوں۔ یہ ویب سائٹ میری 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا ایک عاجزانہ عکس ہے۔
-            </p>
-            <div className="text-center pt-2">
-               <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-bold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
-                 حاجی شبیر احمد شگری
-               </span>
+          <div className="space-y-6 relative z-10">
+            
+            {/* بسم اللہ اور ویلکم نوٹ (ایکسٹرا بولڈ) */}
+            <div>
+              <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-extrabold tracking-wider opacity-90">بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</h2>
+              
+              <p className="text-sm md:text-lg font-extrabold text-[#0b314d] text-justify md:text-center urdu-text leading-loose tracking-wide mt-3" dir="rtl">
+                <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">السلام علیکم!</span> 
+                میں آپ کو اپنی آفیشل ویب سائٹ پر خوش آمدید کہتا ہوں۔ یہ ویب سائٹ میری 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا ایک عاجزانہ عکس ہے۔ یہاں آپ کو میرے <span className="text-[#D4AF37] border-b-2 border-[#D4AF37]">'نور القرآن ویژول'</span> جیسے عظیم پروجیکٹ کی تفصیلات کے ساتھ میرے کالمز، مضامین، سفرنامے، ڈاکومنٹریز، اور دیگر خدمات کا مجموعہ ملے گا۔ بالخصوص میری تحاریر پر گوگل کے خصوصی اور دلچسپ تجزیے آڈیو پوڈکاسٹ اور ویڈیو کی شکل میں سن اور دیکھ سکتے ہیں۔
+              </p>
+              
+              <div className="text-center pt-3">
+                 <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-extrabold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
+                   حاجی شبیر احمد شگری
+                 </span>
+              </div>
             </div>
+
+            {/* 🔥 اہم اعزازات (بٹن) - ویلکم نوٹ کے فوراً نیچے */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6 w-full border-t-2 border-[#D4AF37]/20 pt-6">
+                 
+                 {/* 🕌 بٹن 1: خادم امام رضاؑ */}
+                 <div className="w-full md:w-auto flex justify-center">
+                    <Link href="/imam-reza" className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pr-2 pl-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">
+                        
+                        {/* GIF (بائیں طرف) - 3 لہروں کے ساتھ */}
+                        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
+                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-full h-full object-cover" />
+                        </div>
+
+                        {/* Text */}
+                        <div className="flex-1 text-left flex flex-col justify-center">
+                           <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ امام رضاؑ</span>
+                           <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
+                        </div>
+                    </Link>
+                 </div>
+
+                 {/* 🚩 بٹن 2: خادم غازی عباسؑ */}
+                 <div className="w-full md:w-auto flex justify-center">
+                    <Link href="#" className="group relative inline-flex items-center flex-row-reverse gap-3 bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pl-2 pr-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">
+                        
+                        {/* GIF (دائیں طرف) - 3 لہروں کے ساتھ */}
+                        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
+                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover" />
+                        </div>
+
+                        {/* Text */}
+                        <div className="flex-1 text-right flex flex-col justify-center">
+                           <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ غازی عباسؑ</span>
+                           <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
+                        </div>
+                    </Link>
+                 </div>
+
+            </div>
+
           </div>
         </div>
       </div>
@@ -139,54 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔴 5. اعزازات (نفیس ڈیزائن: تصاویر درمیان میں آمنے سامنے) */}
-      <section className="container mx-auto px-3 md:px-4 py-8 relative z-10">
-        <h2 className="text-xl md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-10 border-b-2 border-[#D4AF37]/30 pb-3 inline-block mx-auto">
-          ✨ زندگی کا حاصل: اہم اعزازات ✨
-        </h2>
-        
-        <div className="flex flex-col md:flex-row justify-center gap-5 max-w-5xl mx-auto">
-            
-            {/* 🕌 بٹن 1: خادم امام رضاؑ (تصویر بائیں طرف - اندر کی جانب) */}
-            <Link href="/imam-reza" className="w-full md:w-auto flex-1 group">
-               <button className="relative w-full overflow-hidden bg-gradient-to-r from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black py-3 px-5 rounded-full shadow-lg flex items-center justify-between gap-4 transition-all duration-500 hover:scale-[1.02] border border-[#fff]/40">
-                  {/* شائن ایفیکٹ */}
-                  <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] animate-shine"></div>
-                  
-                  {/* تصویر (بائیں طرف) */}
-                  <div className="relative h-14 w-14 rounded-full border-2 border-white shadow-md animate-pulse-glow z-10">
-                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771114002/1_q1gdcd.png" alt="Imam Reza" className="w-full h-full object-cover rounded-full" />
-                  </div>
-
-                  {/* ٹیکسٹ */}
-                  <div className="flex-1 text-right">
-                     <h3 className="text-lg md:text-xl font-bold font-amiri drop-shadow-sm">خادم امام رضا علیہ السلام کا اعزاز</h3>
-                  </div>
-               </button>
-            </Link>
-            
-            {/* 🚩 بٹن 2: خادم عباسؑ (تصویر دائیں طرف - اندر کی جانب) */}
-            <div className="w-full md:w-auto flex-1 group cursor-pointer">
-               <button className="relative w-full overflow-hidden bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black py-3 px-5 rounded-full shadow-lg flex items-center flex-row-reverse justify-between gap-4 transition-all duration-500 hover:scale-[1.02] border border-[#fff]/40">
-                  {/* شائن ایفیکٹ */}
-                  <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] animate-shine"></div>
-                  
-                  {/* تصویر (دائیں طرف) */}
-                  <div className="relative h-14 w-14 rounded-full border-2 border-white shadow-md animate-pulse-glow z-10">
-                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771152482/IMG_20240226_060710_Copy_pcfrxg_lcfhcr.jpg" alt="Ghazi Abbas" className="w-full h-full object-cover rounded-full" />
-                  </div>
-
-                  {/* ٹیکسٹ */}
-                  <div className="flex-1 text-right">
-                     <h3 className="text-lg md:text-xl font-bold font-amiri drop-shadow-sm">خادم عباس علیہ السلام کا اعزاز</h3>
-                  </div>
-               </button>
-            </div>
-
-        </div>
-      </section>
-
-      {/* 🔴 6. ٹیسٹیمونیلز & کتب & سفر */}
+      {/* 🔴 5. ٹیسٹیمونیلز & کتب & سفر */}
       <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
         <div className="container mx-auto px-2 relative z-10">
           <h2 className="text-lg md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto">نامور شخصیات کا میرے بارے اظہار خیال</h2>
