@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane } from "react-icons/fa";
+import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft } from "react-icons/fa";
+import Link from 'next/link'; // 🔴 لنک امپورٹ کر لیا ہے
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
 import { booksData, legendsData } from './homeData'; 
@@ -9,14 +10,12 @@ const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
   .font-amiri { font-family: 'Amiri', serif; }
   
-  /* 🔴 تبدیلی: اب یہ دائیں سے بائیں چلے گا تاکہ "کٹ" نظر نہ آئے */
   @keyframes patternMove {
     0% { background-position: 0 0; }
-    100% { background-position: -60px 0; } /* Horizontal movement */
+    100% { background-position: -60px 0; }
   }
 
   .islamic-pattern { 
-    /* تیز اور واضح گولڈن شیڈ (Opacity 0.25) */
     background: repeating-linear-gradient(
       45deg, 
       transparent, 
@@ -24,7 +23,6 @@ const globalStyles = `
       rgba(212, 175, 55, 0.25) 20px, 
       rgba(212, 175, 55, 0.25) 40px
     );
-    /* اینیمیشن: 20 سیکنڈ میں دائیں سے بائیں */
     animation: patternMove 20s linear infinite; 
   }
   
@@ -75,18 +73,18 @@ export default function Home() {
         <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
           <div className="space-y-5 relative z-10">
             
-            {/* بسم اللہ (چھوٹی اور نفیس) */}
+            {/* بسم اللہ */}
             <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-bold tracking-wider opacity-90">
               بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ
             </h2>
             
-            {/* ویلکم ٹیکسٹ (بولڈ) */}
+            {/* ویلکم ٹیکسٹ */}
             <p className="text-sm md:text-lg font-bold text-[#0b314d] text-justify md:text-center urdu-text leading-loose tracking-wide" dir="rtl">
               <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">السلام علیکم!</span> 
               میں آپ کو اپنی آفیشل ویب سائٹ پر خوش آمدید کہتا ہوں۔ یہ ویب سائٹ میری 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا ایک عاجزانہ عکس ہے۔ یہاں آپ کو میرے 'نور القرآن ویژول' جیسے عظیم پروجیکٹ کی تفصیلات کے ساتھ میرے کالمز، مضامین، سفرنامے، ڈاکومنٹریز، اور دیگر خدمات کا مجموعہ ملے گا۔ بالخصوص میری تحاریر پر گوگل کے خصوصی اور دلچسپ تجزیے آڈیو پوڈکاسٹ اور ویڈیو کی شکل میں سن اور دیکھ کر سکتے ہیں۔
             </p>
             
-            {/* نام (فاصلہ کم، pt-2) */}
+            {/* نام */}
             <div className="text-center pt-2">
                <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-bold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
                  حاجی شبیر احمد شگری
@@ -99,14 +97,17 @@ export default function Home() {
       {/* نیویگیشن کارڈز */}
       <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          <NavCard icon={<FaBookOpen/>} title="نور القرآن" />
+          {/* 🔴 یہاں بھی لنک لگا دیا ہے تاکہ چھوٹا کارڈ بھی کام کرے */}
+          <Link href="/project">
+             <NavCard icon={<FaBookOpen/>} title="نور القرآن" />
+          </Link>
           <NavCard icon={<FaYoutube/>} title="نور پروڈکشنز" />
           <NavCard icon={<FaHandshake/>} title="پاک ایران دوستی" />
           <NavCard icon={<FaGlobe/>} title="ویب سائٹ" />
         </div>
       </section>
 
-      {/* نور القرآن پروجیکٹ */}
+      {/* 🔴 نور القرآن پروجیکٹ سیکشن (بٹن کے ساتھ) */}
       <section className="container mx-auto px-3 md:px-4 py-6 relative z-10">
         <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-1 shadow-xl border-2 border-[#D4AF37] hover:shadow-[0_0_50px_rgba(15,76,117,0.3)] transition-all duration-500">
           <div className="bg-white rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-8">
@@ -117,11 +118,20 @@ export default function Home() {
                 " قرآن مجید کو چوم کر اونچے طاق میں رکھ دینا اس کا مکمل احترام نہیں ہے بلکہ اسے سمجھ کر اس پر عمل کرنا ہی اس کا اصل احترام ہے۔ "
               </p>
               
-              <div className="bg-blue-50 p-4 rounded-xl border border-[#D4AF37]/30 shadow-inner group transition-all">
+              <div className="bg-blue-50 p-4 rounded-xl border border-[#D4AF37]/30 shadow-inner group transition-all mb-4">
                 <p className="text-[#0f4c75] font-bold text-sm md:text-lg urdu-text group-hover:scale-[1.01] transition-transform leading-relaxed" dir="rtl">
                   نورالقرآن ویژول کا مقصد قرآن مجیدکی آیات کو بصری انداز میں پیش کرنا ہے تا کہ سن کر اور دیکھ کر کلام الٰہی کو آسانی کے ساتھ سمجھا جاسکے۔
                 </p>
               </div>
+
+              {/* 🔴 نیا اسٹائلش بٹن */}
+              <div className="flex justify-center md:justify-end mt-5">
+                <Link href="/project" className="group relative inline-flex items-center gap-3 px-8 py-2 rounded-full border-2 border-[#D4AF37] text-[#0f4c75] text-lg font-bold overflow-hidden transition-all duration-300 hover:text-white hover:bg-[#D4AF37] shadow-md hover:shadow-lg hover:-translate-y-1">
+                  <span className="urdu-text relative z-10">تفصیلات دیکھیں</span>
+                  <FaArrowLeft className="relative z-10 group-hover:-translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
             </div>
             <img 
               src="https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png" 
@@ -132,11 +142,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* اعزازات */}
+      {/* اعزازات (لنکس کے ساتھ) */}
       <section className="container mx-auto px-3 md:px-4 py-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-            <HonorsCard icon={<FaMedal/>} title="Khadim-e-Imam Reza (A.S)" desc="Honorary Servant at Holy Shrine, Mashhad" />
-            <HonorsCard icon={<FaTrophy/>} title="Khadim-e-Ghazi Abbas (A.S)" desc="Honorary Servant at Holy Shrine, Karbala" />
+            {/* امام رضاؑ پیج کا لنک */}
+            <Link href="/imam-reza" className="block transform transition-transform duration-300 hover:scale-105">
+               <HonorsCard icon={<FaMedal/>} title="Khadim-e-Imam Reza (A.S)" desc="Honorary Servant at Holy Shrine, Mashhad" />
+            </Link>
+            
+            {/* غازی عباسؑ پیج کا لنک (ابھی نہیں بنا) */}
+            <div className="block cursor-pointer transform transition-transform duration-300 hover:scale-105">
+               <HonorsCard icon={<FaTrophy/>} title="Khadim-e-Ghazi Abbas (A.S)" desc="Honorary Servant at Holy Shrine, Karbala" />
+            </div>
         </div>
       </section>
 
@@ -199,10 +216,10 @@ export default function Home() {
   );
 }
 
-// کمپوننٹس
+// کمپوننٹس (وہی پرانے، بس معمولی سٹائلنگ اپڈیٹ)
 function HonorsCard({ icon, title, desc }) {
   return (
-    <div className="bg-gradient-to-br from-[#D4AF37] to-[#996D00] text-white p-6 rounded-2xl shadow-lg flex items-center gap-5 transition-all duration-500 hover:scale-105 hover:brightness-110 group border-2 border-white/20">
+    <div className="bg-gradient-to-br from-[#D4AF37] to-[#996D00] text-white p-6 rounded-2xl shadow-lg flex items-center gap-5 transition-all duration-500 hover:scale-105 hover:brightness-110 group border-2 border-white/20 h-full">
       <div className="text-5xl opacity-80 group-hover:rotate-[360deg] transition-transform duration-1000">{icon}</div>
       <div><h3 className="text-lg md:text-2xl font-bold">{title}</h3><p className="text-xs md:text-sm font-medium opacity-90">{desc}</p></div>
     </div>
@@ -234,7 +251,7 @@ function BookCinematicCard({ img, title }) {
 
 function NavCard({ icon, title }) {
   return (
-    <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+    <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
       <div className="text-3xl text-[#D4AF37] mb-3 group-hover:scale-125 transition-transform drop-shadow-sm">{icon}</div>
       <h3 className="text-gray-800 text-sm md:text-lg urdu-text font-bold group-hover:text-[#0f4c75]">{title}</h3>
     </div>
