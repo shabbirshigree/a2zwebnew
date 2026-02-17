@@ -1,31 +1,29 @@
 "use client";
 import { useState, useEffect } from 'react';
+// 👇 تمام امپورٹس مکمل (FaBookOpen سمیت)
 import { 
-  FaArrowLeft, FaPlay, FaTimes, FaHome, FaImages, FaHandHoldingHeart, 
-  FaMosque, FaGift, FaVideo, FaFilm, FaCalendarAlt, FaMicrophone, FaPenNib, 
-  FaBook, FaYoutube, FaChevronRight, FaChevronLeft, FaBookOpen, FaLaptop, FaClock, FaCalendarCheck 
+  FaArrowLeft, FaPlay, FaTimes, FaHome, FaImages, FaVideo, FaGift, FaFilm, 
+  FaCalendarAlt, FaMicrophone, FaPenNib, FaBook, FaYoutube, FaChevronRight, 
+  FaChevronLeft, FaLaptop, FaClock, FaCalendarCheck, FaFacebook, FaShoppingBag, 
+  FaBookOpen 
 } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar } from '../components/Header';
 import Footer from '../components/Footer';
 
-// 👇 اہم: یہاں ہم آپ کی بنائی ہوئی data.js فائل سے سب کچھ منگوا رہے ہیں
-// اب یہ کوڈ 100 فیصد آپ کے سیٹ کیے ہوئے ڈیٹا کو فالو کرے گا۔
-import { imamRezaImages, allData, boxes } from './data'; 
+// 👇 ڈیٹا امپورٹ 
+import { imamRezaImages, allData, boxes, rezaviData } from './data'; 
 
-// 🎨 ڈیزائن 
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
   .font-amiri { font-family: 'Amiri', serif; }
   @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
   .animate-float { animation: float 3s ease-in-out infinite; }
-  
   @keyframes ripple { 
     0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.9), 0 0 0 0 rgba(212, 175, 55, 0.6); } 
     100% { box-shadow: 0 0 0 60px rgba(212, 175, 55, 0), 0 0 0 120px rgba(212, 175, 55, 0); } 
   }
   .animate-ripple { animation: ripple 2s infinite linear; border-radius: 50%; }
-  
   html { scroll-behavior: smooth; }
   .font-extra-bold { font-weight: 800 !important; }
 `;
@@ -35,8 +33,11 @@ export default function ImamRezaPage() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedArticle, setSelectedArticle] = useState(null);
+  
+  // 🛍️ رضوی آنلائن سلائیڈر
+  const [rezaviSlide, setRezaviSlide] = useState(0);
 
-  // 🚀 ڈیٹا سیدھا فائل سے (کوئی ڈبلنگ نہیں، کوئی اپنی طرف سے ایڈیشن نہیں)
+  // 🚀 ڈیٹا 
   const displayArticles = allData?.articles || [];
   const programVideos = allData?.programs || [];
   const manqabatVideos = allData?.manqabats || [];
@@ -44,31 +45,21 @@ export default function ImamRezaPage() {
   const documentaryVideos = allData?.documentaries || [];
   const bookList = allData?.books || [];
 
-  // 🛠️ ویڈیو پلیئر (یہ یوٹیوب اور کلاؤڈنری دونوں کو پہچانتا ہے)
+  // 🛠️ ویڈیو پلیئر
   const renderVideoPlayer = () => {
     if (!activeVideo) return null;
-
-    // اگر یوٹیوب کا لنک ہو
     if (activeVideo.includes('youtube.com') || activeVideo.includes('youtu.be')) {
         let videoId = activeVideo.split('v=')[1];
         const ampersandPosition = videoId ? videoId.indexOf('&') : -1;
-        if (ampersandPosition !== -1) {
-          videoId = videoId.substring(0, ampersandPosition);
-        }
-        if (!videoId && activeVideo.includes('youtu.be')) {
-            videoId = activeVideo.split('/').pop();
-        }
-
+        if (ampersandPosition !== -1) { videoId = videoId.substring(0, ampersandPosition); }
+        if (!videoId && activeVideo.includes('youtu.be')) { videoId = activeVideo.split('/').pop(); }
         return (
             <div className="relative pt-[56.25%]">
                 <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameBorder="0" allowFullScreen></iframe>
             </div>
         );
     } else {
-        // اگر کلاؤڈنری (MP4) ہو
-        return (
-            <video className="w-full max-h-[80vh] object-contain" src={activeVideo} controls autoPlay></video>
-        );
+        return <video className="w-full max-h-[80vh] object-contain" src={activeVideo} controls autoPlay></video>;
     }
   };
 
@@ -78,6 +69,16 @@ export default function ImamRezaPage() {
       style.id = 'custom-animations';
       style.textContent = globalStyles;
       document.head.appendChild(style);
+    }
+  }, []);
+
+  // 🛍️ آٹو سلائیڈر
+  useEffect(() => {
+    if (rezaviData?.images?.length > 0) {
+        const interval = setInterval(() => {
+            setRezaviSlide((prev) => (prev === rezaviData.images.length - 1 ? 0 : prev + 1));
+        }, 3000); 
+        return () => clearInterval(interval);
     }
   }, []);
 
@@ -98,11 +99,8 @@ export default function ImamRezaPage() {
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden font-amiri">
       <Navbar />
-
-      <div className="fixed inset-0 z-0 opacity-10">
-        <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" />
-      </div>
-
+      <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
+      
       {/* 🔙 نیویگیشن */}
       <div className="absolute top-4 left-4 z-50 flex gap-3">
          <Link href="/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
@@ -123,15 +121,12 @@ export default function ImamRezaPage() {
            <div className="text-gray-900 text-sm md:text-xl leading-loose text-justify md:text-center max-w-4xl mx-auto space-y-4 font-extra-bold" dir="rtl">
              <p className="font-extrabold text-[#0f4c75] text-lg md:text-2xl">"جس در پہ جھکتے ہیں بادشاہ، یہ وہ دربار ہے..."</p>
              <p>میری زندگی کا حاصل، میرا کل سرمایہ اور میری بخشش کا سب سے بڑا آسرا، وہ نسبت ہے جو مجھے شاہِ خراسان، امام علی رضا علیہ السلام کے دربار سے ملی ہے۔</p>
-             <p className="bg-[#f8f9fa] p-4 rounded-xl border-r-4 border-[#D4AF37] shadow-sm">
-               <strong className="text-[#0f4c75] text-lg">نور کی پہلی کرن: "ضریحِ نور" (2002)</strong><br/>
-               قدرت نے مجھے نور پھیلانے کے لیے منتخب کیا تو سب سے پہلا کام بھی اسی "منبعِ نور" کا سونپا۔ 2002ء میں، جب امام رضاؑ کی موجودہ ضریح مبارک کی تعمیر کے لمحات کو ڈاکومنٹری فلم "ضریح نور" میں محفوظ کیا۔ الحمداللہ 2011 میں آستان قدس رضوی کی جانب سے <strong className="text-[#D4AF37]">"خادم امام رضا علیہ السلام"</strong> کا خطاب عطا ہوا۔
-             </p>
+             <p className="bg-[#f8f9fa] p-4 rounded-xl border-r-4 border-[#D4AF37] shadow-sm"><strong className="text-[#0f4c75] text-lg">نور کی پہلی کرن: "ضریحِ نور" (2002)</strong><br/>قدرت نے مجھے نور پھیلانے کے لیے منتخب کیا تو سب سے پہلا کام بھی اسی "منبعِ نور" کا سونپا۔ 2002ء میں، جب امام رضاؑ کی موجودہ ضریح مبارک کی تعمیر کے لمحات کو ڈاکومنٹری فلم "ضریح نور" میں محفوظ کیا۔ الحمداللہ 2011 میں آستان قدس رضوی کی جانب سے <strong className="text-[#D4AF37]">"خادم امام رضا علیہ السلام"</strong> کا خطاب عطا ہوا۔</p>
            </div>
         </div>
       </div>
 
-      {/* ✨ 10 بٹنز (آپ کی data.js فائل والے بٹنز استعمال ہو رہے ہیں) */}
+      {/* ✨ 10 بٹنز */}
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-7xl mx-auto" dir="rtl">
            {boxes?.map((item, index) => (
@@ -170,7 +165,7 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 🕌 پروگرامز (اب data.js سے آ رہے ہیں) */}
+      {/* 🕌 پروگرامز */}
       <div id="programs" className="relative z-10 container mx-auto px-4 py-10">
          <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">حرم کے پروگرامز اور لائیو زیارت</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-4" dir="rtl">
@@ -183,7 +178,7 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 🎤 منقبت (اب data.js سے آ رہے ہیں) */}
+      {/* 🎤 منقبت */}
       <div id="manqabat" className="relative z-10 container mx-auto px-4 py-10">
          <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">منقبت اور قصائد</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4" dir="rtl">
@@ -219,7 +214,7 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* ✍️ مضامین (5 مضامین، بشمول ایران کا سفر) */}
+      {/* ✍️ مضامین */}
       <div id="articles" className="relative z-10 container mx-auto px-4 py-10 bg-[#fdfdfd]">
          <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">اسپیشل ایڈیشنز / مضامین</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="rtl">
@@ -251,36 +246,69 @@ export default function ImamRezaPage() {
                <h3 className="text-2xl font-extrabold text-[#0f4c75] leading-tight">راہِ حسینیت اور 12 روزہ معرکہ حق و باطل</h3>
                <p className="text-gray-600 font-bold border-b pb-2">حرم امام رضا علیہ السلام کے ادارے "آستان قدس رضوی" اور "نورپروڈکشنز" کے تعاون سے خصوصی نشست۔</p>
                <div className="space-y-3 mt-2">
-                  <div className="flex items-center gap-3 text-gray-700">
-                     <FaCalendarCheck className="text-[#D4AF37] text-xl" />
-                     <span className="font-bold">تاریخ: بدھ، 30 جولائی 2025</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                     <FaClock className="text-[#D4AF37] text-xl" />
-                     <span className="font-bold">وقت: سہ پہر 15:30 تا 16:30</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-700">
-                     <FaLaptop className="text-[#D4AF37] text-xl" />
-                     <span className="font-bold">مقام: آنلائن (ویڈیو لنک)</span>
-                  </div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaCalendarCheck className="text-[#D4AF37] text-xl" /><span className="font-bold">تاریخ: بدھ، 30 جولائی 2025</span></div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaClock className="text-[#D4AF37] text-xl" /><span className="font-bold">وقت: سہ پہر 15:30 تا 16:30</span></div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaLaptop className="text-[#D4AF37] text-xl" /><span className="font-bold">مقام: آنلائن (ویڈیو لنک)</span></div>
                </div>
             </div>
          </div>
       </div>
 
+      {/* 🛍️ رضوی آنلائن سیکشن (اب یہاں سب سے نیچے ہے) */}
+      {rezaviData && (
+        <div id="rezavi" className="relative z-10 container mx-auto px-4 py-12 bg-white border-y-4 border-[#D4AF37] mt-8 mb-8">
+            <div className="text-center mb-10">
+                <h2 className="text-2xl md:text-4xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">{rezaviData.title}</h2>
+            </div>
+            
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center" dir="rtl">
+                {/* 🖼️ سلائیڈر */}
+                <div className="w-full md:w-1/2 h-80 md:h-[500px] relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#D4AF37] bg-gray-50">
+                    {rezaviData.images?.map((img, index) => (
+                        <img 
+                            key={index} 
+                            src={img} 
+                            alt="Rezavi Product" 
+                            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${index === rezaviSlide ? "opacity-100" : "opacity-0"}`} 
+                        />
+                    ))}
+                    <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-1 rounded-full text-xs font-bold">متبرک اشیاء</div>
+                </div>
+
+                {/* 📝 متن اور لنکس */}
+                <div className="w-full md:w-1/2 space-y-6 text-justify">
+                    <div className="text-lg md:text-xl leading-loose font-bold text-gray-800 whitespace-pre-line">
+                        {rezaviData.desc}
+                    </div>
+                    <div className="bg-[#f8f9fa] p-4 rounded-xl border-r-4 border-[#D4AF37] shadow-sm">
+                        <strong className="text-[#0f4c75] text-lg md:text-xl block text-center animate-pulse">{rezaviData.punchline}</strong>
+                    </div>
+                    
+                    {/* لنکس */}
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        {rezaviData.youtube && (
+                            <a href={rezaviData.youtube} target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white py-3 rounded-xl shadow-lg hover:bg-red-700 transition-all flex items-center justify-center gap-2 font-bold text-lg">
+                                <FaYoutube size={28} /> یوٹیوب (Subscribe)
+                            </a>
+                        )}
+                        {rezaviData.facebook && (
+                            <a href={rezaviData.facebook} target="_blank" rel="noopener noreferrer" className="flex-1 bg-blue-600 text-white py-3 rounded-xl shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-bold text-lg">
+                                <FaFacebook size={28} /> فیس بک پیج
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+      )}
+
       {/* 👇 آخری 3 اہم بٹن */}
       <div className="relative z-10 container mx-auto px-4 py-12 text-center bg-[#f8f9fa] mt-10 border-t-2 border-[#D4AF37]/30">
          <h2 className="text-2xl font-bold text-[#0f4c75] mb-8 border-b-2 border-[#D4AF37] inline-block pb-2">مزید دیکھیے اور پڑھیے</h2>
          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-5xl mx-auto">
-            <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
-               <FaYoutube size={28} /> امام رضاؑ کی دیگر ویڈیوز (پلے لسٹ)
-            </a>
-            <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
-               <FaVideo size={28} /> آفیشل چینل (نور پروڈکشن)
-            </a>
-            <a href="https://shabbirshigri.vercel.app/article" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
-               <FaPenNib size={28} /> میری تمام تحریریں اور کالمز
-            </a>
+            <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaYoutube size={28} /> امام رضاؑ کی دیگر ویڈیوز (پلے لسٹ)</a>
+            <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaVideo size={28} /> آفیشل چینل (نور پروڈکشن)</a>
+            <a href="https://shabbirshigri.vercel.app/article" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaPenNib size={28} /> میری تمام تحریریں اور کالمز</a>
          </div>
       </div>
 
