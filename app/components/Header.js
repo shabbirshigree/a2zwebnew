@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import { 
   FaHome, FaBookOpen, FaPhoneAlt, FaUserAlt, 
   FaImages, FaNewspaper, FaTv, FaBriefcase,
-  FaYoutube, FaFacebook, FaWhatsapp, FaInstagram, FaTwitter,
-  FaSearch
+  FaYoutube, FaFacebook, FaWhatsapp, FaTwitter, FaTiktok, // 🔴 FaTiktok شامل کر دیا گیا ہے
+  FaSearch, FaGlobe 
 } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// 🔴 1. ٹاپ بار (باریک پٹی، 3 بٹن اور چھوٹی سرچ بار کے ساتھ)
+// 🔴 1. ٹاپ بار 
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [language, setLanguage] = useState('ur');
@@ -61,7 +61,7 @@ export function Navbar() {
   );
 }
 
-// 🔴 2. مین ہیڈر اور سلائیڈر (یہ بالکل آپ کے پرانے ڈیزائن پر ہے تاکہ پیج نیچے نہ جائے)
+// 🔴 2. مین ہیڈر اور سلائیڈر
 export function HeroSlider() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(0);
@@ -87,11 +87,12 @@ export function HeroSlider() {
     { name: "رابطہ", link: "/contact", icon: <FaPhoneAlt /> }
   ];
 
+  // 🔴 یہاں انسٹاگرام کی جگہ ٹک ٹاک لگا دیا گیا ہے
   const socialLinks = [
     { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
     { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
     { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
-    { icon: <FaInstagram />, link: "#", color: "hover:text-pink-500" },
+    { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
     { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
   ];
 
