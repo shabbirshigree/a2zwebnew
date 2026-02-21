@@ -133,27 +133,23 @@ export default function Home() {
                     </Link>
                  </div>
 
-                 {/* 🚩 بٹن 2: خادم غازی عباسؑ */}
-                 <div className="w-full md:w-auto flex justify-center">
-<Link href="/ghazi-abbas" className="group relative inline-flex items-center flex-row-reverse gap-3 bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pl-2 pr-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">                        
-                        {/* GIF (دائیں طرف) - 3 لہروں کے ساتھ */}
-                        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
-                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover" />
-                        </div>
-
-                        {/* Text */}
-                        <div className="flex-1 text-right flex flex-col justify-center">
-                           <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ غازی عباسؑ</span>
-                           <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
-                        </div>
-                    </Link>
-                 </div>
-
-            </div>
-
-          </div>
+{/* 🚩 بٹن 2: خادم غازی عباسؑ */}
+<div className="w-full md:w-auto flex justify-center">
+    <Link href="/ghazi-abbas" className="group relative inline-flex items-center flex-row-reverse gap-3 bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pl-2 pr-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">
+        
+        {/* GIF (دائیں طرف) */}
+        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
+            <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover" />
         </div>
-      </div>
+
+        {/* Text */}
+        <div className="flex-1 text-right flex flex-col justify-center">
+            <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ غازی عباسؑ</span>
+            <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
+        </div>
+
+    </Link>
+</div>
 
       {/* 🔴 3. نیویگیشن کارڈز */}
       <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
