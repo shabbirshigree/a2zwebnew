@@ -3,20 +3,65 @@ import { useState, useEffect } from 'react';
 import { 
   FaHome, FaBookOpen, FaPhoneAlt, FaUserAlt, 
   FaImages, FaNewspaper, FaTv, FaBriefcase,
-  FaYoutube, FaFacebook, FaWhatsapp, FaInstagram, FaTwitter
+  FaYoutube, FaFacebook, FaWhatsapp, FaInstagram, FaTwitter,
+  FaSearch
 } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+// 🔴 1. ٹاپ بار (باریک پٹی، 3 بٹن اور چھوٹی سرچ بار کے ساتھ)
 export function Navbar() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [language, setLanguage] = useState('ur');
+
   return (
-    <div className="bg-[#0b314d] text-[#D4AF37] text-center py-1 text-[10px] md:text-sm arabic-text tracking-widest border-b border-[#D4AF37]/30 relative z-50 overflow-hidden group">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer"></div>
-      <span className="relative z-10 font-bold group-hover:text-white transition-colors duration-300">مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ الْعَلِیِّ الْعَظِیْمِ</span>
+    <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-4 border-b border-[#D4AF37]/30 relative z-50 flex flex-row items-center justify-between h-[28px] md:h-[34px] overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer pointer-events-none"></div>
+      
+      {/* بائیں طرف (Left): چھوٹی سرچ بار */}
+      <div className="relative flex items-center w-[75px] md:w-[120px] z-10">
+        <input 
+          type="text" 
+          placeholder="تلاش..." 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full bg-white/10 text-white placeholder-gray-400 text-[8px] md:text-[10px] rounded-full py-0.5 pr-5 pl-2 border border-[#D4AF37]/30 focus:outline-none focus:border-[#D4AF37] transition-all h-[18px] md:h-[22px]"
+          dir="rtl"
+        />
+        <FaSearch className="absolute right-1.5 text-[#D4AF37] text-[8px] md:text-[10px] pointer-events-none" />
+      </div>
+
+      {/* درمیان (Center): عربی ٹیکسٹ */}
+      <div className="flex-1 text-center px-1 z-10 flex items-center justify-center">
+        <span className="text-[9px] md:text-[13px] font-bold arabic-text tracking-widest whitespace-nowrap hover:text-white transition-colors mt-0.5">
+          مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ الْعَلِیِّ الْعَظِیْمِ
+        </span>
+      </div>
+
+      {/* دائیں طرف (Right): 3 لینگویج بٹن */}
+      <div className="flex items-center gap-0.5 md:gap-1 z-10" dir="ltr">
+        <button 
+          onClick={() => setLanguage('en')} 
+          className={`text-[8px] md:text-[10px] px-1.5 py-[2px] rounded border border-[#D4AF37]/30 font-bold transition-all ${language === 'en' ? 'bg-[#D4AF37] text-[#0b314d]' : 'bg-transparent text-[#D4AF37] hover:bg-[#D4AF37]/20'}`}>
+          ENG
+        </button>
+        <button 
+          onClick={() => setLanguage('fa')} 
+          className={`text-[8px] md:text-[10px] px-1.5 py-[2px] rounded border border-[#D4AF37]/30 font-bold urdu-text transition-all ${language === 'fa' ? 'bg-[#D4AF37] text-[#0b314d]' : 'bg-transparent text-[#D4AF37] hover:bg-[#D4AF37]/20'}`}>
+          فارسی
+        </button>
+        <button 
+          onClick={() => setLanguage('ur')} 
+          className={`text-[8px] md:text-[10px] px-1.5 py-[2px] rounded border border-[#D4AF37]/30 font-bold urdu-text transition-all ${language === 'ur' ? 'bg-[#D4AF37] text-[#0b314d]' : 'bg-transparent text-[#D4AF37] hover:bg-[#D4AF37]/20'}`}>
+          اردو
+        </button>
+      </div>
+
     </div>
   );
 }
 
+// 🔴 2. مین ہیڈر اور سلائیڈر (یہ بالکل آپ کے پرانے ڈیزائن پر ہے تاکہ پیج نیچے نہ جائے)
 export function HeroSlider() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(0);
@@ -76,42 +121,33 @@ export function HeroSlider() {
         ))}
       </div>
 
-      {/* 🔴 مرکزی سیکشن (ہیڈر کے نیچے) */}
+      {/* مرکزی سیکشن (ہیڈر کے نیچے) */}
       <div className="bg-[#0f4c75] py-2 px-2 text-center border-t border-[#D4AF37]/40 relative z-40 flex flex-col items-center justify-center gap-1 overflow-hidden shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]">
         
-        {/* نور کا ایفیکٹ */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent pointer-events-none animate-pulse-slow"></div>
 
-        {/* 1. کتاب (بڑی سے چھوٹی + دھڑکن) */}
-        {/* 'animate-shrink-enter' اسے بڑی سے چھوٹی کرے گا */}
         <div className="relative z-10 mt-1 animate-shrink-enter">
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#D4AF37] blur-[30px] opacity-30 animate-pulse"></div>
-           
-           {/* 'animate-breath' اسے مسلسل زوم ان/آؤٹ (دھڑکن) دے گا */}
            <div className="relative text-[#D4AF37] text-4xl md:text-5xl drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] animate-breath">
              <FaBookOpen />
            </div>
         </div>
 
-        {/* 2. آیت مبارکہ (بہت چھوٹی اور عربی فونٹ) */}
         <div className="relative z-10 -mt-0.5">
           <p className="font-amiri text-white text-[10px] md:text-xs font-bold tracking-wide drop-shadow-md opacity-80 pt-1">
             اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ
           </p>
         </div>
 
-        {/* 3. نام اور ٹائٹل */}
         <div className="flex flex-col items-center z-10 mt-1">
           <h1 className="text-lg md:text-2xl font-bold text-[#D4AF37] tracking-wider uppercase drop-shadow-lg leading-tight">
             Haji Shabbir Ahmed Shigri
           </h1>
-          
           <p className="text-white/70 text-[9px] md:text-xs tracking-[0.2em] font-light uppercase border-b border-[#D4AF37]/30 pb-1 mt-1">
              CEO Noor Productions | Senior Journalist
           </p>
         </div>
 
-        {/* 4. سوشل میڈیا لنکس */}
         <div className="flex gap-4 mt-2 justify-center z-50">
           {socialLinks.map((s, i) => (
             <Link key={i} href={s.link} target="_blank" className="text-white transition-all duration-500 hover:rotate-[360deg] hover:scale-125">
@@ -138,13 +174,11 @@ export function HeroSlider() {
         </nav>
       </div>
 
-      {/* اسٹائلز اور اینیمیشنز */}
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
 
         .font-amiri { font-family: 'Amiri', serif; }
 
-        /* 1. بڑی سے چھوٹی ہونے والی اینیمیشن (صرف شروع میں چلے گی) */
         @keyframes shrink-enter {
           0% { transform: scale(3); opacity: 0; }
           100% { transform: scale(1); opacity: 1; }
@@ -153,10 +187,9 @@ export function HeroSlider() {
           animation: shrink-enter 1.5s ease-out forwards;
         }
 
-        /* 2. سانس لینے والی / ہلتی ہوئی اینیمیشن (مسلسل چلے گی) */
         @keyframes breath {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.15); } /* ہلکا سا زوم */
+          50% { transform: scale(1.15); } 
         }
         .animate-breath {
           animation: breath 3s infinite ease-in-out;

@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaSearch, FaLanguage } from "react-icons/fa";
+import { FaTimes, FaArrowLeft, FaPlay } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
-import { booksData, legendsData } from './homeData'; 
+
+// 🔴 تمام ٹیکسٹ اور مواد اب ڈیٹا پیج سے آ رہا ہے
+import { welcomeData, honorsData, navCardsData, projectSectionData, booksData, legendsData, journeyData } from './homeData'; 
 
 const getYouTubeId = (url) => {
   if (!url) return '';
@@ -18,43 +20,19 @@ const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
   .font-amiri { font-family: 'Amiri', serif; }
   
-  @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 200%; }
-  }
-  .animate-shine {
-    position: relative;
-    overflow: hidden;
-  }
+  @keyframes shine { 0% { left: -100%; } 100% { left: 200%; } }
+  .animate-shine { position: relative; overflow: hidden; }
   .animate-shine::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
+    content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
     background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-    transform: skewX(-20deg);
-    animation: shine 3s infinite;
+    transform: skewX(-20deg); animation: shine 3s infinite;
   }
 
-  /* 🔥 پانی کی لہروں کا ایفیکٹ */
   @keyframes ripple {
-    0% {
-      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.8),
-                  0 0 0 0 rgba(212, 175, 55, 0.6),
-                  0 0 0 0 rgba(212, 175, 55, 0.4);
-    }
-    100% {
-      box-shadow: 0 0 0 15px rgba(212, 175, 55, 0),
-                  0 0 0 30px rgba(212, 175, 55, 0),
-                  0 0 0 45px rgba(212, 175, 55, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.8), 0 0 0 0 rgba(212, 175, 55, 0.6), 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    100% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0), 0 0 0 30px rgba(212, 175, 55, 0), 0 0 0 45px rgba(212, 175, 55, 0); }
   }
-  .animate-ripple {
-    animation: ripple 2.5s infinite linear;
-    border-radius: 50%; 
-  }
+  .animate-ripple { animation: ripple 2.5s infinite linear; border-radius: 50%; }
 
   @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
   .islamic-pattern { 
@@ -85,10 +63,8 @@ export default function Home() {
   }, []);
 
   const repeatCount = 8; 
-  const safeLegends = legendsData || [];
-  const safeBooks = booksData || [];
-  const infiniteLegends = Array(repeatCount).fill(safeLegends).flat();
-  const infiniteBooks = Array(repeatCount).fill(safeBooks).flat();
+  const infiniteLegends = Array(repeatCount).fill(legendsData || []).flat();
+  const infiniteBooks = Array(repeatCount).fill(booksData || []).flat();
 
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden">      
@@ -99,64 +75,40 @@ export default function Home() {
         <HeroSlider />
       </div>
 
-      {/* 🔴 جدید فیچر: سرچ اور زبان (ڈیزائن خراب کیے بغیر) */}
-      <div className="container mx-auto px-4 -mt-6 relative z-30">
-        <div className="bg-white rounded-2xl shadow-xl p-3 flex flex-wrap items-center justify-between gap-4 border border-[#D4AF37]/20">
-           <div className="relative flex-1 min-w-[200px]">
-              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]" />
-              <input type="text" placeholder="تلاش کریں..." className="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-100 focus:border-[#D4AF37] outline-none text-sm urdu-text" />
-           </div>
-           <button className="flex items-center gap-2 px-4 py-2 bg-[#0f4c75] text-white rounded-xl hover:bg-[#D4AF37] transition-all text-sm">
-             <FaLanguage /> <span>English</span>
-           </button>
-        </div>
-      </div>
-
       {/* 🔴 2. خوش آمدید + اعزازات (بٹن) */}
       <div className="container mx-auto px-3 md:px-4 py-8 relative z-10">
         <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
           <div className="space-y-6 relative z-10">
             
-            {/* بسم اللہ اور ویلکم نوٹ */}
+            {/* ڈائنیمک ویلکم ٹیکسٹ */}
             <div>
-              <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-extrabold tracking-wider opacity-90">بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</h2>
-              
+              <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-extrabold tracking-wider opacity-90">{welcomeData.bismillah}</h2>
               <p className="text-sm md:text-lg font-extrabold text-[#0b314d] text-justify md:text-center urdu-text leading-loose tracking-wide mt-3" dir="rtl">
-                <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">السلام علیکم!</span> 
-                میں آپ کو اپنی آفیشل ویب سائٹ پر خوش آمدید کہتا ہوں۔ یہ ویب سائٹ میری 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا ایک عاجزانہ عکس ہے۔ یہاں آپ کو میرے <span className="text-[#D4AF37] border-b-2 border-[#D4AF37]">'نور القرآن ویژول'</span> جیسے عظیم پروجیکٹ کی تفصیلات کے ساتھ میرے کالمز، مضامین، سفرنامے، ڈاکومنٹریز، اور دیگر خدمات کا مجموعہ ملے گا۔ بالخصوص میری تحاریر پر گوگل کے خصوصی اور دلچسپ تجزیے آڈیو پوڈکاسٹ اور ویڈیو کی شکل میں سن اور دیکھ سکتے ہیں۔
+                <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">{welcomeData.greeting}</span> 
+                {welcomeData.description}
               </p>
-              
               <div className="text-center pt-3">
                  <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-extrabold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
-                    حاجی شبیر احمد شگری
+                   {welcomeData.name}
                  </span>
               </div>
             </div>
 
-            {/* 🔥 اہم اعزازات */}
+            {/* ڈائنیمک اعزازات بٹنز */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6 w-full border-t-2 border-[#D4AF37]/20 pt-8">
-                 <div className="w-full md:w-auto flex justify-center">
-                    <Link href="/imam-reza" className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] pr-2 pl-4 py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]">
-                        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
-                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-full h-full object-cover rounded-full" />
-                        </div>
-                        <div className="flex-1 text-center flex flex-col justify-center">
-                           <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">خادمِ امام رضاؑ</span>
-                           <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
-                        </div>
-                    </Link>
-                 </div>
-                 <div className="w-full md:w-auto flex justify-center">
-                    <Link href="/ghazi-abbas" className="group relative inline-flex items-center flex-row-reverse gap-2 bg-gradient-to-l from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] pl-2 pr-4 py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]">
-                        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
-                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover rounded-full" />
-                        </div>
-                        <div className="flex-1 text-center flex flex-col justify-center">
-                           <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">خادمِ غازی عباسؑ</span>
-                           <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
-                        </div>
-                    </Link>
-                 </div>
+                 {honorsData.map((btn, i) => (
+                   <div key={i} className="w-full md:w-auto flex justify-center">
+                      <Link href={btn.link} className={`group relative inline-flex items-center ${btn.direction === 'left' ? 'flex-row-reverse pl-2 pr-4' : 'pr-2 pl-4'} gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]`}>
+                          <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
+                            <img src={btn.gif} alt={btn.title} className="w-full h-full object-cover rounded-full" />
+                          </div>
+                          <div className="flex-1 text-center flex flex-col justify-center">
+                             <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">{btn.title}</span>
+                             <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
+                          </div>
+                      </Link>
+                   </div>
+                 ))}
             </div>
           </div>
         </div>
@@ -165,10 +117,13 @@ export default function Home() {
       {/* 🔴 3. نیویگیشن کارڈز */}
       <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          <Link href="/project"><NavCard icon={<FaBookOpen/>} title="نور القرآن" /></Link>
-          <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><NavCard icon={<FaYoutube/>} title="نور پروڈکشنز" /></a>
-          <a href="https://pakiiranassociation.wixsite.com/pira" target="_blank" rel="noopener noreferrer"><NavCard icon={<FaHandshake/>} title="پاک ایران دوستی" /></a>
-          <Link href="/"><NavCard icon={<FaGlobe/>} title="ویب سائٹ" /></Link>
+          {navCardsData.map((card, i) => (
+             card.target === "_blank" ? (
+               <a key={i} href={card.link} target="_blank" rel="noopener noreferrer"><NavCard icon={card.icon} title={card.title} /></a>
+             ) : (
+               <Link key={i} href={card.link}><NavCard icon={card.icon} title={card.title} /></Link>
+             )
+          ))}
         </div>
       </section>
 
@@ -177,20 +132,20 @@ export default function Home() {
         <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-1 shadow-xl border-2 border-[#D4AF37] hover:shadow-[0_0_50px_rgba(15,76,117,0.3)] transition-all duration-500">
           <div className="bg-white rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 text-center md:text-right order-2 md:order-1">
-              <h3 className="text-xl md:text-3xl font-bold text-[#0f4c75] mb-3 font-serif">📖 Noor-ul-Quran Project</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-[#0f4c75] mb-3 font-serif">{projectSectionData.title}</h3>
               <div className="bg-blue-50 p-4 rounded-xl border border-[#D4AF37]/30 shadow-inner group transition-all mb-4">
                 <p className="text-[#0f4c75] font-bold text-sm md:text-lg urdu-text group-hover:scale-[1.01] transition-transform leading-relaxed" dir="rtl">
-                  نورالقرآن ویژول کا مقصد قرآن مجیدکی آیات کو بصری انداز میں پیش کرنا ہے۔
+                  {projectSectionData.description}
                 </p>
               </div>
               <div className="flex justify-center md:justify-end mt-5">
-                <Link href="/project" className="group relative inline-flex items-center gap-3 px-8 py-2 rounded-full border-2 border-[#D4AF37] text-[#0f4c75] text-lg font-bold overflow-hidden transition-all duration-300 hover:text-white hover:bg-[#D4AF37] shadow-md hover:shadow-lg hover:-translate-y-1">
-                  <span className="urdu-text relative z-10">تفصیلات دیکھیں</span>
+                <Link href={projectSectionData.link} className="group relative inline-flex items-center gap-3 px-8 py-2 rounded-full border-2 border-[#D4AF37] text-[#0f4c75] text-lg font-bold overflow-hidden transition-all duration-300 hover:text-white hover:bg-[#D4AF37] shadow-md hover:shadow-lg hover:-translate-y-1">
+                  <span className="urdu-text relative z-10">{projectSectionData.btnText}</span>
                   <FaArrowLeft className="relative z-10 group-hover:-translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
-            <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png" alt="Quran Logo" className="w-32 md:w-48 rounded-2xl shadow-lg border-4 border-[#D4AF37] order-1 md:order-2 quran-glow" />
+            <img src={projectSectionData.image} alt="Project Logo" className="w-32 md:w-48 rounded-2xl shadow-lg border-4 border-[#D4AF37] order-1 md:order-2 quran-glow" />
           </div>
         </div>
       </section>
@@ -224,30 +179,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔴 خدمت کے 45 سال (درست ڈاٹس کے ساتھ) */}
+      {/* 🔴 45 سالہ خدمات (اب مکمل انگلش LTR فارمیٹ میں) */}
       <section className="bg-white py-10 border-t border-[#D4AF37]/20 relative z-10 shadow-inner">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] text-center urdu-text mb-10 underline decoration-[#D4AF37] underline-offset-8">خدمت کے 45 سال</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             <JourneyCard icon={<FaMicrophone/>} title="Radio Pakistan" desc="Start of Career at Radio Pakistan Skardu." />
-             <JourneyCard icon={<FaNewspaper/>} title="Journalism (45 Years)" desc="Deputy Editor: Daily Havi, Akath & Prachar." />
-             <JourneyCard icon={<FaTv/>} title="TV Talk Shows" desc="Host & Guest on National & International TV." />
-             <JourneyCard icon={<FaHandshake/>} title="Cultural Diplomacy" desc="Ex-PRO & In-charge at Khana Farhang Iran." />
-             <JourneyCard icon={<FaBookOpen/>} title="Books & Author" desc="Author of 9+ books including 'Booy-e-Bahisht'." />
-             <JourneyCard icon={<FaPlane/>} title="Tourism Pioneer" desc="Launched First Cultural Tourism to Iran." />
+             {journeyData.map((item, i) => (
+                <JourneyCard key={i} icon={item.icon} title={item.title} desc={item.desc} />
+             ))}
           </div>
         </div>
       </section>
 
-      {/* 🔴 فوٹر جس میں سال 2026 کر دیا گیا ہے */}
+      {/* 🔴 فوٹر کو 2026 کر دیا گیا ہے */}
       <Footer year="2026" />
       
-      {/* 🔴 ویڈیو ماڈل */}
+      {/* 🔴 ویڈیو ماڈل (آٹو پلے کے ساتھ) */}
       {activeVideo && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
           <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37] animate-fadeInUp">
-            <iframe className="w-full h-[50vh] md:h-[70vh]" src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} frameBorder="0" allowFullScreen></iframe>
+            
+            {activeVideo.includes('youtu') ? (
+              <iframe 
+                 className="w-full h-[50vh] md:h-[70vh]" 
+                 src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} 
+                 frameBorder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                 allowFullScreen>
+              </iframe>
+            ) : (
+              <video 
+                 className="w-full h-[50vh] md:h-[70vh] bg-black" 
+                 src={activeVideo} 
+                 controls 
+                 autoPlay 
+                 playsInline>
+              </video>
+            )}
+
           </div>
         </div>
       )}
@@ -255,7 +225,7 @@ export default function Home() {
   );
 }
 
-// 🔴 ہیلپر کمپوننٹس
+// 🔴 ہیلپر کمپوننٹس (اب یہ بالکل اپنی درست جگہ پر ہیں)
 function CinematicCard({ img, video, name, setVideo }) {
     return (
       <div className="min-w-[200px] md:min-w-[260px] h-[150px] relative rounded-xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/60 bg-black group shadow-lg" onClick={() => setVideo(video)}>
@@ -294,12 +264,12 @@ function NavCard({ icon, title }) {
 
 function JourneyCard({ icon, title, desc }) {
   return (
-    <div className="bg-slate-50 rounded-2xl shadow-sm p-6 border border-gray-200 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg group">
-      <div className="flex items-center gap-4 mb-3">
+    <div className="bg-slate-50 rounded-2xl shadow-sm p-6 border border-gray-200 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg group text-left" dir="ltr">
+      <div className="flex items-center justify-start gap-4 mb-3" dir="ltr">
         <div className="text-[#D4AF37] p-3 bg-white rounded-xl border border-gray-100 group-hover:scale-110 transition-all shadow-sm">{icon}</div>
         <h3 className="font-bold text-[#0f4c75] text-xl">{title}</h3>
       </div>
-      <p className="text-gray-600 text-sm leading-relaxed font-medium" dir="ltr">{desc}</p>
+      <p className="text-gray-600 text-sm leading-relaxed font-medium">{desc}</p>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -12,26 +12,43 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-[#0f4c75] via-[#0a3552] to-[#0f4c75] text-white pt-16 pb-10 border-t-4 border-[#D4AF37] relative z-10 mt-20">
+    <footer className="bg-gradient-to-r from-[#0f4c75] via-[#0a3552] to-[#0f4c75] text-white pt-10 pb-6 border-t-4 border-[#D4AF37] relative z-10 mt-20">
       <div className="container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center gap-3 mb-3">
-          <p className="text-base flex items-center gap-1" dir="ltr">+923334491715</p>
-          <FaWhatsapp size={20} className="text-[#D4AF37]" />
+        
+        {/* 🔴 نیوز لیٹر سبسکرپشن (اب ایک ہی لائن میں اور بہت سمارٹ ہے) */}
+        <div className="max-w-2xl mx-auto mb-8 bg-[#0a3552]/40 p-2 md:p-3 rounded-full border border-[#D4AF37]/50 shadow-sm flex flex-col md:flex-row items-center justify-center gap-3 backdrop-blur-sm">
+          <h3 className="text-xs md:text-sm font-bold text-[#D4AF37] whitespace-nowrap urdu-text">تازہ ترین اپڈیٹس:</h3>
+          <div className="flex w-full md:w-auto flex-1 gap-2" dir="ltr">
+            <input 
+              type="email" 
+              placeholder="Enter email..." 
+              className="w-full px-3 py-1.5 text-xs rounded-full bg-white text-gray-900 placeholder-gray-500 border border-transparent focus:outline-none focus:border-[#D4AF37] transition-all"
+            />
+            <button className="bg-[#D4AF37] text-[#0f4c75] px-4 py-1.5 text-xs rounded-full font-bold hover:bg-white transition-all shadow-md whitespace-nowrap">
+              Subscribe
+            </button>
+          </div>
         </div>
-        <div className="flex items-center justify-center gap-3 mb-12">
-          <p className="text-base">shigri51214@gmail.com</p>
-          <FaEnvelope size={20} className="text-[#D4AF37]" />
+
+        {/* رابطہ کی معلومات */}
+        <div className="flex items-center justify-center gap-2 mb-2">
+          <p className="text-sm flex items-center gap-1 font-sans tracking-wider" dir="ltr">+92 333 4491715</p>
+          <FaWhatsapp size={16} className="text-[#D4AF37]" />
+        </div>
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <p className="text-sm font-sans tracking-wide" dir="ltr">shigri51214@gmail.com</p>
+          <FaEnvelope size={16} className="text-[#D4AF37]" />
         </div>
         
-        {/* Social Icons in Footer */}
-        <div className="flex justify-center gap-4 mb-8 pb-8 border-b border-blue-700/50">
+        {/* سوشل میڈیا آئیکنز */}
+        <div className="flex justify-center gap-5 mb-5 pb-5 border-b border-blue-700/50">
           {socialLinks.map((social, i) => (
             <a 
               key={i}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-2xl text-[#D4AF37] transition duration-300 hover:scale-125 ${social.color} drop-shadow-lg`}
+              className={`text-xl text-[#D4AF37] transition duration-300 hover:scale-125 hover:-translate-y-1 ${social.color} drop-shadow-md`}
               title={social.name}
             >
               {social.icon}
@@ -39,9 +56,10 @@ export default function Footer() {
           ))}
         </div>
         
-        <div className="text-center text-sm opacity-75">
-          <p>© 2025 Haji Shabbir Ahmed Shigri. All Rights Reserved.</p>
-          <p className="mt-2 text-[#D4AF37] text-xs font-medium">Developed with ❤️ by Noor Productions</p>
+        {/* کاپی رائٹ */}
+        <div className="text-center flex flex-col items-center">
+          <p dir="ltr" className="text-xs text-gray-300 font-sans tracking-wide">© 2026 Haji Shabbir Ahmed Shigri. All Rights Reserved.</p>
+          <p className="mt-1 text-[#D4AF37] text-[10px] font-medium tracking-widest uppercase">Developed with ❤️ by Noor Productions</p>
         </div>
       </div>
     </footer>
