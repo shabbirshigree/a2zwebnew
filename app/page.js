@@ -1,10 +1,17 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaHandPointLeft, FaMosque } from "react-icons/fa";
+import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMicrophone, FaNewspaper, FaTv, FaPlay, FaTimes, FaPlane, FaArrowLeft, FaSearch, FaLanguage } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
 import { booksData, legendsData } from './homeData'; 
+
+const getYouTubeId = (url) => {
+  if (!url) return '';
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
 
 // 🎨 گلوبل اسٹائلز
 const globalStyles = `
@@ -31,22 +38,22 @@ const globalStyles = `
     animation: shine 3s infinite;
   }
 
-  /* 🔥 پانی کی لہروں کا ایفیکٹ (اب 3 تہیں ہیں) */
+  /* 🔥 پانی کی لہروں کا ایفیکٹ */
   @keyframes ripple {
     0% {
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8),
-                  0 0 0 0 rgba(255, 255, 255, 0.6),
-                  0 0 0 0 rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.8),
+                  0 0 0 0 rgba(212, 175, 55, 0.6),
+                  0 0 0 0 rgba(212, 175, 55, 0.4);
     }
     100% {
-      box-shadow: 0 0 0 15px rgba(255, 255, 255, 0),
-                  0 0 0 30px rgba(255, 255, 255, 0),
-                  0 0 0 45px rgba(255, 255, 255, 0);
+      box-shadow: 0 0 0 15px rgba(212, 175, 55, 0),
+                  0 0 0 30px rgba(212, 175, 55, 0),
+                  0 0 0 45px rgba(212, 175, 55, 0);
     }
   }
   .animate-ripple {
-    animation: ripple 2s infinite linear;
-    border-radius: 50%; /* دائرہ یقینی بنانے کے لیے */
+    animation: ripple 2.5s infinite linear;
+    border-radius: 50%; 
   }
 
   @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
@@ -92,12 +99,25 @@ export default function Home() {
         <HeroSlider />
       </div>
 
+      {/* 🔴 جدید فیچر: سرچ اور زبان (ڈیزائن خراب کیے بغیر) */}
+      <div className="container mx-auto px-4 -mt-6 relative z-30">
+        <div className="bg-white rounded-2xl shadow-xl p-3 flex flex-wrap items-center justify-between gap-4 border border-[#D4AF37]/20">
+           <div className="relative flex-1 min-w-[200px]">
+              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]" />
+              <input type="text" placeholder="تلاش کریں..." className="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-100 focus:border-[#D4AF37] outline-none text-sm urdu-text" />
+           </div>
+           <button className="flex items-center gap-2 px-4 py-2 bg-[#0f4c75] text-white rounded-xl hover:bg-[#D4AF37] transition-all text-sm">
+             <FaLanguage /> <span>English</span>
+           </button>
+        </div>
+      </div>
+
       {/* 🔴 2. خوش آمدید + اعزازات (بٹن) */}
       <div className="container mx-auto px-3 md:px-4 py-8 relative z-10">
         <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
           <div className="space-y-6 relative z-10">
             
-            {/* بسم اللہ اور ویلکم نوٹ (ایکسٹرا بولڈ) */}
+            {/* بسم اللہ اور ویلکم نوٹ */}
             <div>
               <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-extrabold tracking-wider opacity-90">بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ</h2>
               
@@ -108,49 +128,36 @@ export default function Home() {
               
               <div className="text-center pt-3">
                  <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-extrabold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
-                   حاجی شبیر احمد شگری
+                    حاجی شبیر احمد شگری
                  </span>
               </div>
             </div>
 
-            {/* 🔥 اہم اعزازات (بٹن) - ویلکم نوٹ کے فوراً نیچے */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6 w-full border-t-2 border-[#D4AF37]/20 pt-6">
-                 
-                 {/* 🕌 بٹن 1: خادم امام رضاؑ */}
+            {/* 🔥 اہم اعزازات */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6 w-full border-t-2 border-[#D4AF37]/20 pt-8">
                  <div className="w-full md:w-auto flex justify-center">
-                    <Link href="/imam-reza" className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pr-2 pl-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">
-                        
-                        {/* GIF (بائیں طرف) - 3 لہروں کے ساتھ */}
-                        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
-                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-full h-full object-cover" />
+                    <Link href="/imam-reza" className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] pr-2 pl-4 py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]">
+                        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
+                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-full h-full object-cover rounded-full" />
                         </div>
-
-                        {/* Text */}
-                        <div className="flex-1 text-left flex flex-col justify-center">
-                           <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ امام رضاؑ</span>
-                           <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
+                        <div className="flex-1 text-center flex flex-col justify-center">
+                           <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">خادمِ امام رضاؑ</span>
+                           <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
                         </div>
                     </Link>
                  </div>
-
-                 {/* 🚩 بٹن 2: خادم غازی عباسؑ */}
                  <div className="w-full md:w-auto flex justify-center">
-<Link href="/ghazi-abbas" className="group relative inline-flex items-center flex-row-reverse gap-3 bg-gradient-to-l from-[#AA771C] via-[#BF953F] to-[#FBF5B7] text-black pl-2 pr-6 py-2 rounded-full shadow-lg border border-white/60 hover:scale-[1.02] transition-transform w-full md:w-[320px]">                        
-                        {/* GIF (دائیں طرف) - 3 لہروں کے ساتھ */}
-                        <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10">
-                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover" />
+                    <Link href="/ghazi-abbas" className="group relative inline-flex items-center flex-row-reverse gap-2 bg-gradient-to-l from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] pl-2 pr-4 py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]">
+                        <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
+                          <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="Abbas" className="w-full h-full object-cover rounded-full" />
                         </div>
-
-                        {/* Text */}
-                        <div className="flex-1 text-right flex flex-col justify-center">
-                           <span className="block text-sm md:text-lg font-bold font-amiri leading-none text-black whitespace-nowrap">خادمِ غازی عباسؑ</span>
-                           <span className="block text-[10px] md:text-xs text-black/90 font-bold mt-1">تفصیلات کے لیے کلک کریں</span>
+                        <div className="flex-1 text-center flex flex-col justify-center">
+                           <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">خادمِ غازی عباسؑ</span>
+                           <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
                         </div>
                     </Link>
                  </div>
-
             </div>
-
           </div>
         </div>
       </div>
@@ -159,9 +166,9 @@ export default function Home() {
       <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           <Link href="/project"><NavCard icon={<FaBookOpen/>} title="نور القرآن" /></Link>
-          <NavCard icon={<FaYoutube/>} title="نور پروڈکشنز" />
-          <NavCard icon={<FaHandshake/>} title="پاک ایران دوستی" />
-          <NavCard icon={<FaGlobe/>} title="ویب سائٹ" />
+          <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><NavCard icon={<FaYoutube/>} title="نور پروڈکشنز" /></a>
+          <a href="https://pakiiranassociation.wixsite.com/pira" target="_blank" rel="noopener noreferrer"><NavCard icon={<FaHandshake/>} title="پاک ایران دوستی" /></a>
+          <Link href="/"><NavCard icon={<FaGlobe/>} title="ویب سائٹ" /></Link>
         </div>
       </section>
 
@@ -188,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔴 5. ٹیسٹیمونیلز & کتب & سفر */}
+      {/* 🔴 5. ٹیسٹیمونیلز & کتب */}
       <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
         <div className="container mx-auto px-2 relative z-10">
           <h2 className="text-lg md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto">نامور شخصیات کا میرے بارے اظہار خیال</h2>
@@ -210,13 +217,14 @@ export default function Home() {
              <div className="flex gap-8 w-max animate-scroll-right pause-on-hover px-4">
                  {infiniteBooks.map((item, i) => (
                      <div key={i} className="card-lift">
-                        <BookCinematicCard img={item.img} title={item.title} />
+                        <BookCinematicCard img={item.img} title={item.title} link={item.link} />
                      </div>
                  ))}
              </div>
         </div>
       </section>
 
+      {/* 🔴 خدمت کے 45 سال (درست ڈاٹس کے ساتھ) */}
       <section className="bg-white py-10 border-t border-[#D4AF37]/20 relative z-10 shadow-inner">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] text-center urdu-text mb-10 underline decoration-[#D4AF37] underline-offset-8">خدمت کے 45 سال</h2>
@@ -231,13 +239,15 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      {/* 🔴 فوٹر جس میں سال 2026 کر دیا گیا ہے */}
+      <Footer year="2026" />
       
+      {/* 🔴 ویڈیو ماڈل */}
       {activeVideo && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
           <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37] animate-fadeInUp">
-            <iframe className="w-full h-[50vh] md:h-[70vh]" src={`https://www.youtube.com/embed/${activeVideo.split('/').pop()}?autoplay=1`} frameBorder="0" allowFullScreen></iframe>
+            <iframe className="w-full h-[50vh] md:h-[70vh]" src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} frameBorder="0" allowFullScreen></iframe>
           </div>
         </div>
       )}
@@ -259,14 +269,20 @@ function CinematicCard({ img, video, name, setVideo }) {
       </div>
     );
 }
-function BookCinematicCard({ img, title }) {
+
+function BookCinematicCard({ img, title, link }) {
     return (
-      <div className="min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border border-[#D4AF37]/30 bg-white shadow-md group">
-         <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-         <div className="absolute bottom-0 w-full bg-[#0f4c75]/95 p-3 text-center text-sm text-white urdu-text font-bold translate-y-full group-hover:translate-y-0 transition-transform duration-300">{title}</div>
-      </div>
+      <a href={link || "#"} target="_blank" rel="noopener noreferrer" className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
+         <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
+         <div className="absolute bottom-0 w-full p-4 text-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+            <div className="text-sm md:text-base text-[#D4AF37] urdu-text font-bold drop-shadow-md leading-tight">{title}</div>
+            <div className="text-[10px] md:text-xs text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">پڑھنے کے لیے کلک کریں</div>
+         </div>
+      </a>
     );
 }
+
 function NavCard({ icon, title }) {
   return (
     <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
@@ -275,6 +291,7 @@ function NavCard({ icon, title }) {
     </div>
   );
 }
+
 function JourneyCard({ icon, title, desc }) {
   return (
     <div className="bg-slate-50 rounded-2xl shadow-sm p-6 border border-gray-200 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg group">
@@ -282,7 +299,7 @@ function JourneyCard({ icon, title, desc }) {
         <div className="text-[#D4AF37] p-3 bg-white rounded-xl border border-gray-100 group-hover:scale-110 transition-all shadow-sm">{icon}</div>
         <h3 className="font-bold text-[#0f4c75] text-xl">{title}</h3>
       </div>
-      <p className="text-gray-600 text-sm leading-relaxed font-medium">{desc}</p>
+      <p className="text-gray-600 text-sm leading-relaxed font-medium" dir="ltr">{desc}</p>
     </div>
   );
 }

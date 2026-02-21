@@ -1,12 +1,60 @@
 export const booksData = [
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016596/sakoon.ki.talash_nmlugh.png", title: "سکون کی تلاش", year: "2015" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png", title: "بوئے بہشت", year: "2018" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768062537/front_page_jce6fj.png", title: "روح کی معراج", year: "2012" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png", title: "کنجی بہشت", year: "2019" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png", title: "سیاحت ایران", year: "2016" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp", title: "خراسان رضوی", year: "2020" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", title: "مجلہ فرھنگستان", year: "2017" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "مدینۃ الاہلبیتؑ", year: "2021" } 
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016596/sakoon.ki.talash_nmlugh.png", 
+    title: "سکون کی تلاش", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2015", 
+    link: "/library#book-sakoon" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png", 
+    title: "بوئے بہشت", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2018", 
+    link: "/library#book-booy" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768062537/front_page_jce6fj.png", 
+    title: "روح کی معراج", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2012", 
+    link: "/library#book-rooh" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png", 
+    title: "کنجی بہشت", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2019", 
+    link: "/library#book-kunji" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png", 
+    title: "سیاحت ایران", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2016", 
+    link: "/library#book-iran" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp", 
+    title: "انیس النفوس", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2020", 
+    link: "/library#book-anees" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", 
+    title: "مجلہ فرھنگستان", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2017", 
+    link: "/library#book-farhang" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", 
+    title: "نورالقرآن", 
+    author: "حاجی شبیر احمد شگری",
+    year: "2021", 
+    link: "/library#book-noor" 
+  } 
 ];
 
 export const legendsData = [
