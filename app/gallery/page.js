@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaSearch, FaPlay } from 'react-icons/fa';
+import { FaSearch, FaPlay, FaChevronLeft, FaChevronRight, FaExpand, FaVideo } from 'react-icons/fa';
 import { FaXmark } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
-import { GALLERY_ITEMS, CATEGORIES } from './galleryData'; // 🟢 ڈیٹا دوسری فائل سے آ رہا ہے
+import { GALLERY_ITEMS, CATEGORIES } from './galleryData';
 
-export default function GalleryPage() {
+export default function ModernGallery() {
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filtered, setFiltered] = useState(GALLERY_ITEMS);
@@ -40,50 +40,47 @@ export default function GalleryPage() {
     if (selectedIndex !== null) setSelectedIndex(selectedIndex === 0 ? filtered.length - 1 : selectedIndex - 1);
   };
 
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (!currentItem) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') goNext();
-      if (e.key === 'ArrowLeft') goPrev();
-    };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [selectedIndex, currentItem, filtered.length]);
-
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-x-hidden">
+    <main className="min-h-screen bg-[#f4f7f9] overflow-x-hidden font-sans">
       <Navbar />
       <HeroSlider />
 
-      <section className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] py-12 md:py-16 text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#D4AF37] font-serif mb-2 urdu-text">گیلری</h1>
-        <p className="text-white text-lg md:text-xl urdu-text">یادوں کے جھروکوں سے</p>
+      {/* 🎨 جدید ہیڈر */}
+      <section className="bg-[#0b314d] py-16 md:py-24 text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0b314d]/50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-2xl">تصویری دستاویزی سفر</h1>
+          <p className="text-white/80 text-xl md:text-2xl urdu-text font-light tracking-widest">یادوں کے جھروکوں سے 45 سالہ خدمات کی ایک جھلک</p>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-8 rounded-full"></div>
+        </div>
       </section>
 
-      <section className="container mx-auto px-4 py-8 relative z-10">
-        <div className="flex items-center bg-white border-2 border-[#D4AF37] rounded-full px-4 md:px-6 py-2 md:py-3 shadow-lg max-w-2xl mx-auto">
-          <FaSearch size={18} className="text-[#0f4c75] ml-2 md:ml-4" />
+      {/* 🔍 اسمارٹ سرچ بار */}
+      <section className="container mx-auto px-4 -mt-10 relative z-20">
+        <div className="flex items-center bg-white border-b-4 border-[#D4AF37] rounded-2xl px-6 py-4 shadow-2xl max-w-3xl mx-auto backdrop-blur-md bg-white/90">
+          <FaSearch size={22} className="text-[#0b314d] mr-4 opacity-50" />
           <input
             type="text"
-            placeholder="تصویریں تلاش کریں..."
+            placeholder="یادوں میں تلاش کریں..."
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="flex-1 outline-none text-gray-800 bg-transparent text-right urdu-text text-sm md:text-base"
+            className="flex-1 outline-none text-gray-800 bg-transparent text-right urdu-text text-lg md:text-xl placeholder:text-gray-400"
           />
         </div>
       </section>
 
-      <section className="container mx-auto px-2 md:px-4 py-6 relative z-10">
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+      {/* 🏷️ فلٹرز (Categorization) */}
+      <section className="container mx-auto px-4 py-12 relative z-10">
+        <div className="flex flex-wrap justify-center gap-3">
           {CATEGORIES.map(cat => (
             <button
               key={cat.value}
               onClick={() => setActiveCategory(cat.value)}
-              className={`px-3 md:px-5 py-2 rounded-full font-bold transition duration-300 whitespace-nowrap urdu-text text-sm md:text-base ${
+              className={`px-6 py-2.5 rounded-xl font-bold transition-all duration-500 urdu-text text-base md:text-lg border-2 ${
                 activeCategory === cat.value
-                  ? 'bg-gradient-to-r from-[#0f4c75] to-[#1a6a96] text-white shadow-lg'
-                  : 'bg-gradient-to-r from-[#D4AF37] to-[#c8a165] text-[#0f4c75] hover:shadow-lg hover:-translate-y-1'
+                  ? 'bg-[#0b314d] text-[#D4AF37] border-[#0b314d] shadow-[0_10px_20px_rgba(11,49,77,0.3)] scale-105'
+                  : 'bg-white text-[#0b314d] border-gray-200 hover:border-[#D4AF37] hover:shadow-lg'
               }`}
             >
               {cat.label}
@@ -92,80 +89,76 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-8 md:py-12 relative z-10">
-        {filtered.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-            {filtered.map((item, i) => (
-              <div
-                key={i}
-                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-2 border-[#D4AF37]/30 hover:border-[#D4AF37] cursor-pointer"
-                onClick={() => openLightbox(i)}
-              >
-                {item.type === 'video' ? (
-                  <div className="relative w-full bg-black aspect-video">
-                    <video poster={item.poster} className="w-full h-full object-cover" onClick={e => e.stopPropagation()}>
-                      <source src={item.src} type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                      <FaPlay size={30} className="text-white drop-shadow-lg" />
+      {/* 🖼️ گیلری گرڈ (Modern Masonry Style) */}
+      <section className="container mx-auto px-4 py-8 relative z-10">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {filtered.map((item, i) => (
+            <div
+              key={i}
+              className="break-inside-avoid group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 cursor-pointer border border-gray-100"
+              onClick={() => openLightbox(i)}
+            >
+              <div className="relative overflow-hidden">
+                {item.type === 'video' || item.type === 'yt' ? (
+                  <div className="aspect-video bg-black flex items-center justify-center">
+                    <img src={item.poster || `https://img.youtube.com/vi/${item.id}/hqdefault.jpg`} className="w-full h-full object-cover opacity-60" alt="" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-[#D4AF37] p-5 rounded-full shadow-2xl group-hover:scale-125 transition-transform duration-500">
+                        <FaPlay size={25} className="text-[#0b314d] ml-1" />
+                      </div>
                     </div>
                   </div>
-                ) : item.type === 'yt' ? (
-                  <div className="relative w-full bg-black aspect-video flex items-center justify-center">
-                    <FaPlay size={30} className="text-white absolute z-10 drop-shadow-lg" />
-                    <iframe src={`https://www.youtube.com/embed/${item.id}`} className="w-full h-full rounded" allowFullScreen />
-                  </div>
                 ) : (
-                  <img src={item.src} alt={item.desc} className="w-full h-48 md:h-64 object-cover group-hover:scale-110 transition duration-500" />
+                  <img src={item.src} alt={item.desc} className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700" />
                 )}
                 
-                <div className="p-4 text-right" dir="rtl">
-                  <span className="inline-block bg-[#0f4c75] text-white px-3 py-1 rounded-full text-xs font-bold mb-2 urdu-text shadow-sm">
-                    {item.tag}
-                  </span>
-                  <p className="text-[#0f4c75] font-semibold text-sm md:text-base line-clamp-2 urdu-text leading-snug">{item.desc}</p>
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex flex-col justify-end p-6">
+                   <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <span className="bg-[#D4AF37] text-[#0b314d] px-3 py-1 rounded-md text-xs font-bold mb-2 inline-block shadow-lg">{item.tag}</span>
+                      <p className="text-white font-bold text-lg urdu-text leading-tight">{item.desc}</p>
+                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-20">
-            <p className="text-xl md:text-2xl text-gray-600 urdu-text">کوئی تصویر نہیں ملی</p>
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* Lightbox Modal */}
-      {currentItem && selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center p-2 md:p-4" onClick={closeLightbox}>
-          <button onClick={closeLightbox} className="absolute top-4 right-4 text-white hover:text-[#D4AF37] transition z-[60]">
-            <FaXmark size={30} className="md:w-10 md:h-10" />
+      {/* 🌌 لائٹ باکس (Full Screen Experience) */}
+      {currentItem && (
+        <div className="fixed inset-0 z-[100] bg-[#0b314d]/98 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 animate-in fade-in" onClick={closeLightbox}>
+          
+          <button className="absolute top-6 right-6 text-white/50 hover:text-[#D4AF37] transition-all p-2 hover:rotate-90 duration-500" onClick={closeLightbox}>
+            <FaXmark size={40} />
           </button>
 
-          <button onClick={goPrev} className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white bg-gradient-to-r from-[#0f4c75] to-[#1a6a96] hover:from-[#D4AF37] hover:to-[#c8a165] hover:text-[#0f4c75] p-3 md:p-6 rounded-full z-[60] text-3xl md:text-5xl font-bold shadow-2xl transform hover:scale-110 transition-all duration-300">
-            ‹
+          {/* Navigation Arrows */}
+          <button onClick={goPrev} className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-4 z-50">
+            <FaChevronLeft size={50} />
+          </button>
+          <button onClick={goNext} className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-4 z-50">
+            <FaChevronRight size={50} />
           </button>
 
-          <button onClick={goNext} className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white bg-gradient-to-r from-[#0f4c75] to-[#1a6a96] hover:from-[#D4AF37] hover:to-[#c8a165] hover:text-[#0f4c75] p-3 md:p-6 rounded-full z-[60] text-3xl md:text-5xl font-bold shadow-2xl transform hover:scale-110 transition-all duration-300">
-            ›
-          </button>
-
-          <div className="flex-1 flex items-center justify-center w-full max-w-5xl mt-8 md:mt-0">
+          {/* Image/Video Display */}
+          <div className="w-full max-w-6xl h-[70vh] flex items-center justify-center p-4" onClick={e => e.stopPropagation()}>
             {currentItem.type === 'img' && (
-              <img src={currentItem.src} alt={currentItem.desc} className="max-h-[60vh] md:max-h-[75vh] max-w-full rounded-lg border-2 md:border-4 border-[#D4AF37] shadow-2xl" onClick={e => e.stopPropagation()} />
+              <img src={currentItem.src} className="max-h-full max-w-full rounded-xl shadow-[0_0_50px_rgba(212,175,55,0.4)] border-4 border-white/10" />
             )}
             {currentItem.type === 'video' && (
-              <video autoPlay controls src={currentItem.src} className="max-h-[60vh] md:max-h-[75vh] w-full rounded-lg border-2 md:border-4 border-[#D4AF37] shadow-2xl" onClick={e => e.stopPropagation()} />
+              <video autoPlay controls src={currentItem.src} className="max-h-full w-full rounded-xl shadow-2xl" />
             )}
             {currentItem.type === 'yt' && (
-              <iframe src={`https://www.youtube.com/embed/${currentItem.id}?autoplay=1`} className="w-full max-w-5xl aspect-video rounded-lg border-2 md:border-4 border-[#D4AF37] shadow-2xl" allowFullScreen />
+              <iframe src={`https://www.youtube.com/embed/${currentItem.id}?autoplay=1`} className="w-full h-full rounded-xl shadow-2xl" allowFullScreen />
             )}
           </div>
 
-          <div className="mt-4 md:mt-6 text-center text-white w-full px-12">
-            <div className="text-[#D4AF37] font-bold urdu-text text-base md:text-xl">{currentItem.tag}</div>
-            <div className="mt-1 md:mt-2 urdu-text text-sm md:text-lg" dir="rtl">{currentItem.desc}</div>
-            <div className="text-xs md:text-sm mt-2 text-white/70 font-sans">{selectedIndex + 1} of {filtered.length}</div>
+          {/* Info Text */}
+          <div className="mt-8 text-center text-white px-10 max-w-3xl">
+            <h3 className="text-[#D4AF37] font-bold text-2xl md:text-3xl urdu-text mb-2">{currentItem.tag}</h3>
+            <p className="text-white/80 text-lg md:text-xl urdu-text leading-relaxed">{currentItem.desc}</p>
+            <p className="mt-4 text-white/30 font-mono text-sm">{selectedIndex + 1} / {filtered.length}</p>
           </div>
         </div>
       )}

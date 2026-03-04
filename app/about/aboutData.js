@@ -13,11 +13,23 @@ export const founderItems = [
 ];
 
 export const mediaRoles = [
-  { icon: <FaMicrophone />, title: "Radio Host", desc: "ریڈیو پاکستان سکردو (FM 93)" },
+  { icon: <FaMicrophone />, title: "Radio Host", desc: "ریڈیو پاکستان سکردو (بھائی جان)" },
   { icon: <FaTv />, title: "TV Anchor", desc: "سٹار ایشیا (پروگرام رہنما)" },
-  { icon: <FaVideo />, title: "Producer", desc: "ڈاکومنٹریز و علامہ اقبال سیریل" },
+  { icon: <FaVideo />, title: "Producer", desc: "2000+ ڈاکومنٹریز و ویڈیوز" },
   { icon: <FaNewspaper />, title: "Journalist", desc: "45 سالہ صحافتی تجربہ" }
 ];
+
+// 🔴 ریڈیو پاکستان کا خصوصی مواد
+export const radioHistory = {
+  title: "ریڈیو پاکستان: میرا پہلا مکتب",
+  image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771722020/pbcs_Copy_xlljiu.png",
+  quote: "شعور اور آگہی کا پہلا باقاعدہ دروازہ ریڈیو پاکستان کے ذریعے کھلا۔",
+  text: [
+    "مجھے آج بھی اچھی طرح یاد ہے جب میں محض آٹھ یا نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو (Medium Wave) آزمائشی نشریات کا آغاز ہوا۔ اس دور میں جب ٹی وی اور انٹرنیٹ کا تصور بھی محال تھا، ریڈیو ہی دنیا سے رابطے کا واحد ذریعہ ہوا کرتا تھا۔",
+    "میں سکردو کے ان چند خوش نصیب بچوں میں شامل تھا جنہیں 'چاند تارے' پروگرام میں شرکت کا موقع ملا۔ جلد ہی میں نے 'بھائی جان' کے روپ میں میزبانی شروع کر دی۔ ریڈیو کے سخت اصول 'اسکرپٹ کے بغیر نہیں بولنا' نے مجھے پختہ تحریر کا عادی بنا دیا۔",
+    "وقت کے ساتھ ساتھ میں نے 'عزمِ جواں' کی کمپیئرنگ سنبھالی اور بلتی زبان میں دو گھنٹے کی طویل براہِ راست نشریات کرنے لگا۔ سکردو میں صبح کی آزمائشی نشریات کا آغاز بھی میرے ہاتھوں ہوا۔ 1989-90 میں 750 روپے کا وہ چیک میری پہلی کمائی نہیں بلکہ اس عزت کا اعتراف تھا جو مائیکروفون نے مجھے دی تھی۔"
+  ]
+};
 
 export const services = [
   {
@@ -25,8 +37,8 @@ export const services = [
     title: 'Media "One Man Army"',
     items: [
       "45 Years Experience: Scripting, Filming, Editing expert.",
-      "Start: Journey began at age 8 with Kids Magazine & Radio Pakistan.",
-      "Skillset: Mastered traditional media to modern AI Technology."
+      "Start: Age 8 with Radio Pakistan Skardu (Voice Artist).",
+      "Sub-Editor: Expertise in Daily Newspapers & Magazines."
     ]
   },
   {
@@ -35,36 +47,16 @@ export const services = [
     items: [
       "300+ Articles & 80+ Editions: Published internationally.",
       "Editor: Deputy Editor of Daily Havi, Parchar, Akath.",
-      "Author of Books: مدینۃ الاہلبیتؑ، انیس النفوس، بوئے بہشت، سکون کی تلاش"
+      "Author: مدینۃ الاہلبیتؑ، انیس النفوس، بوئے بہشت"
     ]
-  },
-  {
-    icon: <FaLandmark />,
-    title: "Cultural Diplomat",
-    items: [
-      "Retired as PRO: Cultural Center of Iran (Lahore) - 25 Years.",
-      "Head of Depts: IT, Website, Audio/Visual & Public Relations.",
-      "Editor: Magazines 'Shakh-e-Nabat' & 'Iran Shanasi'."
-    ]
-  },
-  {
-    icon: <FaBriefcase />,
-    title: "Corporate Strategist",
-    items: [
-      "Sales Executive: Private Sector Leadership.",
-      "Marketing Guru: Practical experience in 40+ Cities.",
-      "Event Organizer: Managed Int'l Seminars & Exhibitions."
-    ],
-    color: "green"
   },
   {
     icon: <FaMedal />,
     title: "Awards & Titles",
     items: [
       "Gold Medal: For Cultural & Literary Services.",
-      "Peace Ambassador: (امن کا سفیر) & Harmony Promoter.",
-      "Representative: First Rep of Astan Quds Razavi in Pakistan.",
-      "Media Excellence Award: 2025 (Lahore)."
+      "Peace Ambassador: Promoting Inter-faith Harmony.",
+      "Visual Quran: Pioneer of Visual Quran Methodology."
     ],
     color: "red"
   }

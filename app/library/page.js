@@ -1,154 +1,209 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { FaShareAlt, FaBook, FaPlayCircle, FaHeadphones, FaFilm, FaMicrophone, FaSearch, FaGlobe } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaShareAlt, FaBook, FaPlayCircle, FaHeadphones, FaFilm, FaSearch, FaTimes } from 'react-icons/fa';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
-import { BOOKS_DATA, SLIDER_BOOKS } from './libraryData'; // 🟢 ڈیٹا دوسری فائل سے آ رہا ہے
+import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData'; 
+import dynamic from 'next/dynamic';
+
+// فلپ بک کو متحرک طور پر لوڈ کرنا (تاکہ ویب سائٹ بھاری نہ ہو)
+const UrduFlipBook = dynamic(() => import('./UrduFlipBook'), { 
+  ssr: false,
+  loading: () => <div className="text-[#D4AF37] urdu-text text-center p-20">لوڈنگ...</div>
+});
 
 export default function LibraryPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [bookModalOpen, setBookModalOpen] = useState(false);
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  
   const [bookUrl, setBookUrl] = useState('');
-  const [videoUrl, setVideoUrl] = useState('');
-  const [langTab, setLangTab] = useState('ur');
+  const [bookOrientation, setBookOrientation] = useState('portrait'); 
+  const [mediaUrl, setMediaUrl] = useState('');
+  const [activeBookTitle, setActiveBookTitle] = useState('');
 
+  // سرچنگ فلٹر - جو آپ نے سیٹ کیا تھا
   const filteredBooks = BOOKS_DATA.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     book.descUrdu.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handlePlayVideo = (url) => { setVideoUrl(url); setVideoModalOpen(true); };
-  const handleOpenBook = (url) => { if (url) { setBookUrl(url); setBookModalOpen(true); } };
+  const handlePlayMedia = (url) => { 
+    if(url) { 
+      setMediaUrl(url); 
+      setVideoModalOpen(true); 
+    } else {
+      alert("اس کتاب کا میڈیا دستیاب نہیں ہے۔");
+    }
+  };
+  
+  const handleOpenBook = (url, title, orientation) => { 
+    if (url) { 
+      setBookUrl(url); 
+      setBookOrientation(orientation || 'portrait');
+      setActiveBookTitle(title);
+      setBookModalOpen(true); 
+    } 
+  };
 
   const handleShare = (title, bookId) => {
     const url = `${typeof window !== 'undefined' ? window.location.origin : ''}/library#${bookId}`;
-    if (navigator.share) {
-      navigator.share({ title: title, url: url }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(url);
-      alert('Link copied to clipboard');
-    }
+    navigator.clipboard.writeText(url);
+    alert('لنک کاپی ہو گیا ہے: ' + title);
   };
 
-  const getIconComponent = (iconName) => {
-    const iconMap = {
-      book: <FaBook className="ml-2" />,
-      play: <FaPlayCircle className="ml-2" />,
-      headphones: <FaHeadphones className="ml-2" />,
-      film: <FaFilm className="ml-2" />,
-      microphone: <FaMicrophone className="ml-2" />,
-      globe: <FaGlobe className="ml-2" />,
-    };
-    return iconMap[iconName];
-  };
-
-  const getColorClasses = (colorTheme) => {
+  // بٹنز کے رنگوں کی سیٹنگ
+  const getColorClasses = (colorTheme, disabled) => {
+    if (disabled) return { btn: 'bg-gray-800 text-gray-400 opacity-50 cursor-not-allowed border border-gray-700', share: 'bg-gray-800 text-gray-500' };
     const themes = {
-      'theme-read': { btn: 'bg-[#0f4c75] text-white hover:bg-[#0a2e47]', share: 'bg-[#0f4c75] text-white' },
-      'theme-urdu-vid': { btn: 'bg-gradient-to-r from-[#b8860b] to-[#ffd700] text-black shadow-md', share: 'bg-gradient-to-r from-[#b8860b] to-[#ffd700] text-black' },
-      'theme-urdu-aud': { btn: 'bg-[#f0f0f0] text-gray-800 border border-[#ccc]', share: 'bg-[#f0f0f0] text-gray-800 border border-[#ccc]' },
-      'theme-eng-vid': { btn: 'bg-gray-800 text-white', share: 'bg-gray-800 text-white' },
-      'theme-eng-aud': { btn: 'bg-gray-600 text-white', share: 'bg-gray-600 text-white' },
+      'theme-read': { btn: 'bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-all', share: 'bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:text-white' },
+      'theme-urdu-vid': { btn: 'bg-gradient-to-r from-red-700 to-red-900 text-white shadow-sm hover:scale-[1.02] transition-all', share: 'bg-red-800 text-white hover:text-black' },
+      'theme-urdu-aud': { btn: 'bg-gradient-to-r from-[#D4AF37] to-[#b8860b] text-[#0b314d] shadow-sm hover:scale-[1.02] transition-all', share: 'bg-[#D4AF37] text-[#0b314d] hover:text-white' },
     };
-    return themes[colorTheme];
+    return themes[colorTheme] || themes['theme-read'];
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+    <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden font-sans">
       <Navbar />
       <HeroSlider />
 
-      <section className="bg-gradient-to-r from-[#0f4c75] via-[#1a6a96] to-[#0f4c75] py-12 md:py-16 text-center border-b-4 border-[#D4AF37] relative z-10 px-4">
-        <h1 className="text-3xl md:text-5xl font-bold text-[#D4AF37] urdu-text mb-2">خزانہِ علم و دانش</h1>
-        <p className="text-white text-lg md:text-xl urdu-text">تصنیفات و تالیفات: حاجی شبیر احمد شگری</p>
-      </section>
-
-      {/* Search & Slider */}
-      <section className="container mx-auto px-4 py-8 relative z-20">
-        <div className="max-w-2xl mx-auto flex items-center bg-white border-2 border-[#D4AF37] rounded-full px-6 py-2 shadow-lg mb-10">
-          <FaSearch className="text-[#0f4c75] mr-3" />
-          <input type="text" placeholder="کتاب کا نام تلاش کریں..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="flex-1 outline-none text-right urdu-text" />
-        </div>
-
-        <div className="bg-white rounded-3xl shadow-md border border-[#D4AF37]/30 p-4 md:p-6 overflow-x-auto flex gap-4 no-scrollbar">
-          {SLIDER_BOOKS.map((book, idx) => (
-            <a key={idx} href={`#${book.id}`} className="flex-shrink-0 w-28 md:w-36 bg-gray-50 rounded-xl p-2 border hover:border-[#D4AF37] transition transform hover:-translate-y-1">
-              <img src={book.image} alt={book.name} className="h-32 md:h-44 object-contain mx-auto" />
-              <p className="text-center text-[10px] md:text-xs font-bold mt-2 urdu-text line-clamp-1">{book.name}</p>
-            </a>
-          ))}
+      {/* ہیڈر اور سرچ بار */}
+      <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a1005] via-[#050505] to-[#000000] py-16 text-center border-b border-[#D4AF37]/30">
+        <div className="container mx-auto px-4 relative z-10">
+           <h1 className="text-4xl md:text-5xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-md">خزانہِ علم و دانش</h1>
+           <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full shadow-lg"></div>
+           
+           {/* سرچ بار ڈیزائن */}
+           <div className="max-w-md mx-auto relative group">
+              <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]/50 group-focus-within:text-[#D4AF37] transition-colors" />
+              <input 
+                type="text" 
+                placeholder="کتاب یا موضوع تلاش کریں..." 
+                className="w-full bg-[#111] border border-[#D4AF37]/20 rounded-full py-3 px-12 text-right urdu-text focus:outline-none focus:border-[#D4AF37] transition-all"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+           </div>
         </div>
       </section>
 
-      {/* Banner */}
-      <section className="max-w-4xl mx-auto px-4 py-6">
-        <div className="bg-[#0f4c75] rounded-2xl p-6 md:p-8 text-center border-2 border-[#D4AF37] shadow-xl">
-          <h2 className="text-xl md:text-2xl font-bold text-[#D4AF37] urdu-text">حاجی شبیر احمد شگری کی تصانیف پر گوگل کے ویڈیو تجزیے اور آڈیو پوڈ کاسٹس</h2>
-        </div>
+      {/* مصنف کا تجزیہ (Author Review) */}
+      <section className="container mx-auto px-4 mt-12 mb-6 text-right" dir="rtl">
+         <div className="bg-[#0a0a0a] rounded-3xl p-6 shadow-2xl border border-[#D4AF37]/30 max-w-4xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
+            <div className="relative w-32 h-32 flex-shrink-0">
+                <div className="absolute inset-0 bg-[#D4AF37] rounded-full animate-ping opacity-20"></div>
+                <img src={AUTHOR_REVIEW.image} className="w-full h-full rounded-full object-cover relative z-10 border-4 border-[#D4AF37]" alt="Author" />
+            </div>
+            <div className="flex-1 text-center md:text-right">
+                <h2 className="text-xl md:text-2xl font-bold text-[#D4AF37] urdu-text mb-3">{AUTHOR_REVIEW.title}</h2>
+                <p className="text-gray-400 text-sm mb-6 urdu-text leading-relaxed">{AUTHOR_REVIEW.desc}</p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-3">
+                   <button onClick={() => handlePlayMedia(AUTHOR_REVIEW.videoUrl)} className="flex items-center gap-2 bg-red-700 text-white px-6 py-2 rounded-full font-bold urdu-text text-xs hover:bg-red-600 transition-all"><FaFilm /> ویڈیو دیکھیں</button>
+                   <button onClick={() => handlePlayMedia(AUTHOR_REVIEW.audioUrl)} className="flex items-center gap-2 bg-[#D4AF37] text-black px-6 py-2 rounded-full font-bold urdu-text text-xs hover:bg-yellow-500 transition-all"><FaHeadphones /> آڈیو سنیں</button>
+                </div>
+            </div>
+         </div>
       </section>
 
-      {/* Books List */}
+      {/* کتابوں کی فہرست */}
       <section className="container mx-auto px-4 py-12">
-        {filteredBooks.map((book) => (
-          <div key={book.id} id={book.id} className="mb-12 flex flex-col lg:flex-row gap-8 bg-white border border-[#D4AF37]/20 rounded-[2rem] p-6 md:p-10 shadow-lg hover:shadow-xl transition">
-            <div className="lg:w-72 flex-shrink-0 flex flex-col gap-6">
-              <img src={book.image} alt={book.title} className="w-full rounded-2xl shadow-lg border-2 border-[#D4AF37]/20" />
-              <div className="space-y-3">
-                {book.actions.map((action, idx) => {
-                  const themes = getColorClasses(action.color);
-                  return (
-                    <div key={idx} className="flex rounded-xl overflow-hidden shadow-sm border border-gray-100">
-                      <button onClick={() => action.type === 'read' ? handleOpenBook(action.url) : action.type === 'project' ? window.location.href = action.link : handlePlayVideo(action.url)} disabled={action.disabled} className={`flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text ${themes.btn} ${action.disabled ? 'opacity-50' : ''}`}>
-                        {getIconComponent(action.icon)} {action.label}
-                      </button>
-                      <button onClick={() => handleShare(book.title, book.id)} className={`px-4 flex items-center justify-center ${themes.share} border-r border-white/20`}><FaShareAlt size={14}/></button>
-                    </div>
-                  );
-                })}
+        {filteredBooks.length > 0 ? (
+          filteredBooks.map((book) => (
+            <div key={book.id} id={book.id} dir="rtl" className="mb-12 flex flex-col md:flex-row items-stretch gap-8 bg-[#0a0a0a] border border-gray-800 hover:border-[#D4AF37]/40 rounded-[2rem] p-6 md:p-8 shadow-2xl transition-all duration-500">
+              
+              {/* کتاب کا کور اور بٹنز */}
+              <div className="w-full md:w-56 flex-shrink-0 flex flex-col gap-4">
+                <div className="relative group overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
+                  <img src={book.image} alt={book.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="text-white urdu-text text-sm bg-[#D4AF37]/80 px-4 py-1 rounded-full">تفصیل دیکھیں</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  {book.actions.map((action, idx) => {
+                    const themes = getColorClasses(action.color, action.disabled);
+                    const Icon = action.type === 'read' ? FaBook : action.type === 'video' ? FaFilm : FaHeadphones;
+                    return (
+                      <div key={idx} className="flex rounded-xl overflow-hidden shadow-lg border border-white/5">
+                        <button 
+                          onClick={() => {
+                            if(action.disabled) return;
+                            if (action.type === 'read') handleOpenBook(action.url, book.title + " - " + action.label, book.orientation);
+                            else handlePlayMedia(action.url);
+                          }} 
+                          disabled={action.disabled} 
+                          className={`flex-1 py-3 px-2 font-bold flex items-center justify-center gap-2 text-[11px] urdu-text ${themes.btn}`}
+                        >
+                          <Icon /> <span>{action.label}</span>
+                        </button>
+                        <button 
+                          onClick={() => !action.disabled && handleShare(book.title, book.id)} 
+                          className={`px-4 flex items-center justify-center ${themes.share} border-r border-black/20`}
+                          title="لنک کاپی کریں"
+                        >
+                          <FaShareAlt size={14}/>
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* کتاب کی تحریر */}
+              <div className="flex-1 text-right flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-1 rounded-full text-[10px] font-bold tracking-widest border border-[#D4AF37]/30 uppercase">{book.badge}</span>
+                </div>
+                <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 urdu-text leading-tight">{book.title}</h2>
+                <div className="w-20 h-1 bg-[#D4AF37]/50 mb-6 rounded-full"></div>
+                <p className="text-gray-300 text-sm md:text-lg leading-[2.2] text-justify urdu-text font-light">{book.descUrdu}</p>
               </div>
             </div>
-
-            <div className="flex-1 text-right" dir="rtl">
-              <div className="flex justify-between items-center mb-6 gap-4">
-                <div className="flex gap-2">
-                  <button onClick={() => setLangTab('ur')} className={`px-4 py-1 rounded-full text-sm font-bold transition ${langTab === 'ur' ? 'bg-[#0f4c75] text-white' : 'border border-[#0f4c75] text-[#0f4c75]'}`}>اردو</button>
-                  <button onClick={() => setLangTab('en')} className={`px-4 py-1 rounded-full text-sm font-bold transition ${langTab === 'en' ? 'bg-[#0f4c75] text-white' : 'border border-[#0f4c75] text-[#0f4c75]'}`}>English</button>
-                </div>
-                <span className="bg-[#0f4c75] text-[#D4AF37] px-3 py-1 rounded-lg text-[10px] md:text-xs font-bold font-sans uppercase tracking-widest border border-[#D4AF37]/30">{book.badge}</span>
-              </div>
-
-              {langTab === 'ur' ? (
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0f4c75] mb-4 urdu-text">{book.title}</h2>
-                  <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify urdu-text whitespace-pre-line">{book.descUrdu}</p>
-                </div>
-              ) : (
-                <div className="font-sans text-left" dir="ltr">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#0f4c75] mb-4">{book.titleEn || book.title}</h2>
-                  <p className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">{book.descEn || book.descUrdu}</p>
-                </div>
-              )}
-            </div>
+          ))
+        ) : (
+          <div className="text-center py-20">
+            <h3 className="text-[#D4AF37] urdu-text text-2xl">معذرت! آپ کی تلاش کے مطابق کوئی کتاب نہیں ملی۔</h3>
           </div>
-        ))}
+        )}
       </section>
 
-      {/* Modals */}
+      {/* 📖 فلپ بک موڈل (Flipbook Modal) */}
       {bookModalOpen && (
-        <div className="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center p-2" onClick={() => setBookModalOpen(false)}>
-          <div className="w-full max-w-5xl h-[90vh] bg-white rounded-xl overflow-hidden relative" onClick={e => e.stopPropagation()}>
-             <button className="absolute top-2 right-4 text-black text-3xl font-bold z-10" onClick={() => setBookModalOpen(false)}>×</button>
-             <iframe src={bookUrl} className="w-full h-full border-none" />
+        <div className="fixed inset-0 bg-black/98 z-[100] flex items-center justify-center p-2 md:p-6 backdrop-blur-md" onClick={() => setBookModalOpen(false)}>
+          <div className="w-full max-w-6xl h-full flex flex-col relative" onClick={e => e.stopPropagation()}>
+             <UrduFlipBook 
+               pdfUrl={bookUrl} 
+               title={activeBookTitle} 
+               onClose={() => setBookModalOpen(false)} 
+               isLandscape={bookOrientation === 'landscape'} 
+             />
           </div>
         </div>
       )}
 
+      {/* آڈیو/ویڈیو پوڈکاسٹ موڈل */}
       {videoModalOpen && (
-        <div className="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center p-4" onClick={() => setVideoModalOpen(false)}>
-           <div className="w-full max-w-4xl relative" onClick={e => e.stopPropagation()}>
-              <button className="absolute -top-10 right-0 text-white text-4xl" onClick={() => setVideoModalOpen(false)}>×</button>
-              <video src={videoUrl} controls autoPlay className="w-full rounded-xl border-2 border-[#D4AF37]" />
+        <div className="fixed inset-0 bg-black/95 z-[100] flex flex-col items-center justify-center p-4 backdrop-blur-sm" onClick={() => setVideoModalOpen(false)}>
+           <div className="w-full max-w-3xl relative" onClick={e => e.stopPropagation()}>
+              <button className="absolute -top-14 right-0 bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full flex items-center gap-2 text-sm font-bold z-50 urdu-text shadow-xl" onClick={() => setVideoModalOpen(false)}>
+                <FaTimes /> بند کریں
+              </button>
+              
+              <div className="rounded-3xl border-4 border-[#D4AF37]/50 overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.3)] bg-black">
+                {mediaUrl.includes('.mp3') || mediaUrl.includes('podcast') ? (
+                   <div className="p-12 md:p-20 flex flex-col items-center text-center">
+                      <div className="w-24 h-24 bg-[#D4AF37]/20 rounded-full flex items-center justify-center mb-8">
+                        <FaHeadphones className="text-5xl text-[#D4AF37] animate-bounce" />
+                      </div>
+                      <h3 className="text-white urdu-text text-2xl mb-8">آڈیو تجزیہ چل رہا ہے...</h3>
+                      <audio src={mediaUrl} controls autoPlay className="w-full custom-audio-player" />
+                   </div>
+                ) : (
+                   <video src={mediaUrl} controls autoPlay className="w-full h-auto aspect-video" />
+                )}
+              </div>
            </div>
         </div>
       )}
