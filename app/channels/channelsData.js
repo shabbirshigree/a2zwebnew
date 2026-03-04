@@ -1,16 +1,17 @@
-'use client';
-import React from 'react';
+// ✅ app/channels/channelsData.js
+import { FaYoutube, FaWhatsapp, FaFacebook, FaTelegram, FaTiktok } from 'react-icons/fa';
 
-export default function BoeyPage() {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: '#fdfbf7', minHeight: '100vh', padding: '20px' }}>
-      <h1 style={{ color: '#333', marginBottom: '20px', fontSize: '2.5rem' }}>بوئے بہشت</h1>
-      <div style={{ width: '100%', maxWidth: '850px', border: '1px solid gray', borderRadius: '10px', overflow: 'hidden' }}>
-        <iframe 
-          src="https://heyzine.com/flip-book/4e3fc869cf.html" 
-          style={{ width: '100%', height: '500px', border: 'none' }} 
-        />
-      </div>
-    </div>
-  );
-}
+// Shuru mein 'export' likhna ZAROORI hai taake page.js isay dhoond sakay
+export const CHANNELS = [
+  {
+    title: "Noor Production",
+    handle: "@noorproduction",
+    desc: "Aapka description yahan...",
+    img: "https://res.cloudinary.com/...", // Aapka naya cloudinary link
+    icon: <FaYoutube size={30} />,
+    color: "from-red-500 to-red-700",
+    href: "https://youtube.com/...",
+    button: "سبسکرائب کریں"
+  },
+  // Baaki channels bhi isi tarah...
+];
