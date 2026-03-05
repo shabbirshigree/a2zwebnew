@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import { 
   FaHome, FaBookOpen, FaPhoneAlt, FaUserAlt, 
   FaImages, FaNewspaper, FaTv, FaBriefcase,
-  FaYoutube, FaFacebook, FaWhatsapp, FaTwitter, FaTiktok, // 🔴 FaTiktok شامل کر دیا گیا ہے
-  FaSearch, FaGlobe 
+  FaYoutube, FaFacebook, FaWhatsapp, FaTwitter, FaTiktok, 
+  FaSearch, FaGlobe, 
+  FaHandshake, FaLandmark, FaUsers, FaPalette, FaMicrophone 
 } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -75,11 +76,17 @@ export function HeroSlider() {
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/4_xaylj9.png" }
   ];
 
+  // 🔴 یہاں لنکس کے نام اپ ڈیٹ کر دیے گئے ہیں
   const menuItems = [
     { name: "ہوم", link: "/", icon: <FaHome /> },
     { name: "نور القرآن", link: "/project", icon: <FaBookOpen /> },
     { name: "تعارف", link: "/about", icon: <FaUserAlt /> }, 
+    { name: "سفارتی خدمات", link: "/diplomatic-services", icon: <FaHandshake /> },
+    { name: "ثقافتی خدمات", link: "/cultural", icon: <FaLandmark /> }, // اپ ڈیٹڈ
+    { name: "اتحادِ امت", link: "/unity", icon: <FaUsers /> },
+    { name: "آرٹ و ہنر", link: "/design", icon: <FaPalette /> }, // اپ ڈیٹڈ
     { name: "چینلز", link: "/channels", icon: <FaTv /> },
+    { name: "ٹاک شوز", link: "/talkshows", icon: <FaMicrophone /> }, // اپ ڈیٹڈ
     { name: "گیلری", link: "/gallery", icon: <FaImages /> },
     { name: "لائبریری", link: "/library", icon: <FaBookOpen /> },
     { name: "کالمز", link: "/article", icon: <FaNewspaper /> },
@@ -87,7 +94,6 @@ export function HeroSlider() {
     { name: "رابطہ", link: "/contact", icon: <FaPhoneAlt /> }
   ];
 
-  // 🔴 یہاں انسٹاگرام کی جگہ ٹک ٹاک لگا دیا گیا ہے
   const socialLinks = [
     { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
     { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },

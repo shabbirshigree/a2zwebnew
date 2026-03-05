@@ -78,3 +78,19 @@
   background: linear-gradient(white, white) padding-box,
               linear-gradient(45deg, #D4AF37, #F7E7CE, #B8860B) border-box;
 }
+
+/* --- 4. فیڈ ان اور اپ اینیمیشن (Fade-In Up Effect) --- */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}

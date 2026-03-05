@@ -1,275 +1,259 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { FaTimes, FaArrowLeft, FaPlay } from "react-icons/fa";
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Navbar, HeroSlider } from './components/Header';
-import Footer from './components/Footer';
 
-// 🔴 تمام ٹیکسٹ اور مواد اب ڈیٹا پیج سے آ رہا ہے
-import { welcomeData, honorsData, navCardsData, projectSectionData, booksData, legendsData, journeyData } from './homeData'; 
+export default function NizamEIlmiLanding() {
+  const [appState, setAppState] = useState('START');
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-const getYouTubeId = (url) => {
-  if (!url) return '';
-  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-  const match = url.match(regExp);
-  return (match && match[2].length === 11) ? match[2] : null;
-};
+  const [rotation, setRotation] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [windowSize, setWindowSize] = useState({ w: 1000, h: 800 });
+  const [particles, setParticles] = useState([]);
 
-// 🎨 گلوبل اسٹائلز
-const globalStyles = `
-  @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-  .font-amiri { font-family: 'Amiri', serif; }
-  
-  @keyframes shine { 0% { left: -100%; } 100% { left: 200%; } }
-  .animate-shine { position: relative; overflow: hidden; }
-  .animate-shine::after {
-    content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-    transform: skewX(-20deg); animation: shine 3s infinite;
-  }
+  const welcomeAudioRef = useRef(null);
+  const hoverAudioRef = useRef(null);
+  const animationRef = useRef(null);
 
-  @keyframes ripple {
-    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.8), 0 0 0 0 rgba(212, 175, 55, 0.6), 0 0 0 0 rgba(212, 175, 55, 0.4); }
-    100% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0), 0 0 0 30px rgba(212, 175, 55, 0), 0 0 0 45px rgba(212, 175, 55, 0); }
-  }
-  .animate-ripple { animation: ripple 2.5s infinite linear; border-radius: 50%; }
-
-  @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
-  .islamic-pattern { 
-    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.25) 20px, rgba(212, 175, 55, 0.25) 40px);
-    animation: patternMove 20s linear infinite; 
-  }
-  .card-lift { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-  .card-lift:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
-  .animate-scroll-left { animation: scrollLeft 150s linear infinite; }
-  .animate-scroll-right { animation: scrollRight 150s linear infinite; }
-  @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-  .pause-on-hover:hover { animation-play-state: paused; }
-  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
-  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-`;
-
-export default function Home() {
-  const [activeVideo, setActiveVideo] = useState(null);
+  const gridItems = [
+    { title: "نور القرآن", desc: "قرآن پاک کی بصری تفسیر اور آیاتِ الٰہی کا نورانی سفر", link: "/project", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1770705133/NoorulQuran_normal_jpeg_eq5n6u.jpg", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964333/Noor_ul_Quran_mcl9nr.mp3" },
+    { title: "سفارتی خدمات", desc: "پاک ایران دوستی، سیاحت اور 45 سالہ سفارتی جدوجہد", link: "/services", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771967182/97969070-b550-4706-9afa-7ffe8ad8d8d1.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964333/Safarati_khidmaat_z7qish.mp3" },
+    { title: "وحدتِ امت", desc: "بین المذاہب و بین المسالک ہم آہنگی کے لیے میری خدمات", link: "/unity", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771967725/90ed66c3-21a7-441b-9f52-833a4b93fbc3.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964334/wahdat_e_umat_xh9eiw.mp3" },
+    { title: "صحافت و ابلاغ", desc: "ریڈیو پاکستان سے انٹرنیشنل کالم نگاری تک کا سفر", link: "/article", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771967123/884f7f35-560c-4343-a7c4-d795a712902a.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964332/sahafat_o_iblagh_ziwj9f.mp3" },
+    { title: "ثقافت و آرٹ", desc: "بین الاقوامی نمائشیں اور دنیا بھر میں پاکستان کی ثقافت کا فروغ", link: "/culture", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771967632/88b96e93-84c6-4429-8708-c0cc68894a49.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771965497/saqafati_w_hunari_pxiibg.mp3" },
+    { title: "اعزازات", desc: "خدمات کے اعتراف میں ملنے والے گولڈ میڈلز اور عالمی ایوارڈز", link: "/awards", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771811020/11401574_859776040766320_758770002635701209_n_xoqmge.jpg", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964330/ezazaat_w0b2lp.mp3" },
+    { title: "تصنیف و تالیف", desc: "علم کو سمیٹتی ہوئی میری تحریریں، کتابیں اور سفرنامے", link: "/library", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1770707458/487493285_9544644078946096_10991846377360083_n_cs9b50.jpg", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964332/tasaneef_jasbjd.mp3" },
+    { title: "تعارف", desc: "ایک ننھے لکھاری سے انٹرنیشنل صحافی تک کا مکمل سوانحی سفر", link: "/about", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771967008/0cd9a104-d5d2-4d30-b631-65f917fbc44a.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771965497/merey_barey_men_bdrf2g.mp3" },
+    { title: "گیلری", desc: "اہم شخصیات کے ساتھ تاریخی ملاقاتیں اور یادگار لمحات", link: "/gallery", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771968004/f7954abc-75f6-4298-8a6e-7248d39ab950.png", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964343/gallery_og7tbk.mp3" },
+    { title: "رابطہ", desc: "میرے پروجیکٹس کا حصہ بننے کے لیے مجھ سے جڑیے", link: "/contact", img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1767584262/1000036860.png_mte3cw.jpg", audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1771964335/rabtaa_qq98dj.mp3" }
+  ];
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && !document.getElementById('custom-animations')) {
-      const style = document.createElement('style');
-      style.id = 'custom-animations';
-      style.textContent = globalStyles;
-      document.head.appendChild(style);
+    setIsMounted(true); 
+    setWindowSize({ w: window.innerWidth, h: window.innerHeight });
+    const handleResize = () => setWindowSize({ w: window.innerWidth, h: window.innerHeight });
+    window.addEventListener('resize', handleResize);
+
+    const generatedParticles = Array.from({ length: 80 }).map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${10 + Math.random() * 20}s`,
+      opacity: 0.2 + Math.random() * 0.8,
+      size: Math.random() > 0.8 ? '3px' : '1.5px'
+    }));
+    setParticles(generatedParticles);
+    setTimeout(() => setFontsLoaded(true), 300);
+
+    if (typeof window !== "undefined") {
+      welcomeAudioRef.current = new Audio("https://res.cloudinary.com/dtqrziupt/video/upload/v1771964858/khush_amdeed_rhdcfr.mp3");
+      hoverAudioRef.current = new Audio();
     }
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const repeatCount = 8; 
-  const infiniteLegends = Array(repeatCount).fill(legendsData || []).flat();
-  const infiniteBooks = Array(repeatCount).fill(booksData || []).flat();
+  useEffect(() => {
+    if (appState !== 'MAIN' || !isMounted) return;
+    const animateOrbit = () => {
+      if (hoveredIndex === null) {
+        setRotation(prev => prev + 0.0025); 
+      }
+      animationRef.current = requestAnimationFrame(animateOrbit);
+    };
+    animationRef.current = requestAnimationFrame(animateOrbit);
+    return () => cancelAnimationFrame(animationRef.current);
+  }, [appState, hoveredIndex, isMounted]);
+
+  const handleEnterClick = () => {
+    setAppState('MAIN');
+    if (welcomeAudioRef.current) {
+      welcomeAudioRef.current.currentTime = 0;
+      welcomeAudioRef.current.play().catch(e => console.log("Audio Play Error:", e));
+    }
+  };
+
+  const handlePlanetHover = (indexOrKey, audioUrl) => {
+    setHoveredIndex(indexOrKey);
+    if (hoverAudioRef.current && audioUrl) {
+      hoverAudioRef.current.pause();
+      hoverAudioRef.current.src = audioUrl;
+      hoverAudioRef.current.load();
+      hoverAudioRef.current.play().catch(e => console.log("Hover Audio Error:", e));
+    }
+  };
+
+  const handlePlanetLeave = () => {
+    setHoveredIndex(null);
+    if (hoverAudioRef.current) {
+      hoverAudioRef.current.pause();
+      hoverAudioRef.current.currentTime = 0;
+    }
+  };
+
+  const getRingParams = (ringIndex, isMobile) => {
+    const baseRx = isMobile ? windowSize.w * 0.28 : windowSize.w * 0.16;
+    const baseRy = isMobile ? windowSize.h * 0.15 : windowSize.h * 0.12;
+    const stepX = isMobile ? 35 : 100;
+    const stepY = isMobile ? 25 : 65;
+    return { rx: baseRx + ringIndex * stepX, ry: baseRy + ringIndex * stepY };
+  };
+
+  const getPlanetPos = (index) => {
+    const ringIndex = index % 3; 
+    const isMobile = windowSize.w < 768;
+    const { rx, ry } = getRingParams(ringIndex, isMobile);
+
+    const angleOffset = index * ((Math.PI * 2) / gridItems.length);
+    const angle = rotation + angleOffset;
+
+    const x = Math.cos(angle) * rx;
+    const y = Math.sin(angle) * ry;
+    const depth = Math.sin(angle); 
+    
+    return { x, y, depth, ringIndex };
+  };
 
   return (
-    <main className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden">      
-      <Navbar />
-      
-      {/* 🔴 1. سلائیڈر سیکشن */}
-      <div className="block w-full p-0 m-0 border-none outline-none overflow-hidden relative">
-        <HeroSlider />
+    <div className={`relative min-h-screen bg-[#020205] overflow-hidden text-white transition-opacity duration-1000 ${fontsLoaded ? 'opacity-100' : 'opacity-0'}`}>
+
+      {/* مَا شَاءَ اللَّهُ (برکت کے لیے سب سے اوپر فکسڈ) */}
+      <div className="fixed top-2 left-0 w-full text-center z-[500] pointer-events-none">
+        <span className="text-[#D4AF37] text-[10px] md:text-sm font-bold urdu-text opacity-70">مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ</span>
       </div>
 
-      {/* 🔴 2. خوش آمدید + اعزازات (بٹن) */}
-      <div className="container mx-auto px-3 md:px-4 py-8 relative z-10">
-        <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
-          <div className="space-y-6 relative z-10">
-            
-            {/* ڈائنیمک ویلکم ٹیکسٹ */}
-            <div>
-              <h2 className="font-amiri text-[#0f4c75] text-lg md:text-xl font-extrabold tracking-wider opacity-90">{welcomeData.bismillah}</h2>
-              <p className="text-sm md:text-lg font-extrabold text-[#0b314d] text-justify md:text-center urdu-text leading-loose tracking-wide mt-3" dir="rtl">
-                <span className="text-[#D4AF37] text-xl md:text-2xl ml-2 font-extrabold drop-shadow-sm">{welcomeData.greeting}</span> 
-                {welcomeData.description}
-              </p>
-              <div className="text-center pt-3">
-                 <span className="text-[#0f4c75] text-xl md:text-3xl border-b-4 border-[#D4AF37] pb-1 px-8 urdu-text font-extrabold hover:text-[#D4AF37] transition-colors cursor-default inline-block">
-                   {welcomeData.name}
-                 </span>
-              </div>
-            </div>
+      {/* 🌌 کائنات کا بیک گراؤنڈ */}
+      <div className={`fixed inset-0 z-0 overflow-hidden pointer-events-none transition-all duration-[2000ms] ${appState === 'START' ? 'opacity-100' : 'opacity-40'}`}>
+        {/* چاند/دنیا کی سائیڈ پوزیشن */}
+        <img 
+          src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=2000&auto=format&fit=crop" 
+          alt="Solar System Background" 
+          className={`absolute inset-0 w-full h-full object-cover animate-slow-drift scale-110 mix-blend-screen transition-transform duration-[3000ms] ${appState === 'START' ? 'translate-x-[25%] scale-150' : 'translate-x-0'}`}
+        />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
+        {particles.map((p, i) => (
+          <div key={i} className="absolute bg-white rounded-full shadow-[0_0_8px_#fff]" style={{ left: p.left, top: p.top, width: p.size, height: p.size, animation: `twinkle ${p.animationDuration} infinite linear` }}></div>
+        ))}
+      </div>
 
-            {/* ڈائنیمک اعزازات بٹنز */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-6 w-full border-t-2 border-[#D4AF37]/20 pt-8">
-                 {honorsData.map((btn, i) => (
-                   <div key={i} className="w-full md:w-auto flex justify-center">
-                      <Link href={btn.link} className={`group relative inline-flex items-center ${btn.direction === 'left' ? 'flex-row-reverse pl-2 pr-4' : 'pr-2 pl-4'} gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-2 md:py-3 rounded-full shadow-xl border-2 border-white hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(212,175,55,0.8)] transition-all duration-300 w-full md:w-[340px]`}>
-                          <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
-                            <img src={btn.gif} alt={btn.title} className="w-full h-full object-cover rounded-full" />
-                          </div>
-                          <div className="flex-1 text-center flex flex-col justify-center">
-                             <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">{btn.title}</span>
-                             <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
-                          </div>
-                      </Link>
-                   </div>
-                 ))}
-            </div>
-          </div>
+      {/* ================== START SCREEN ================== */}
+      <div className={`absolute inset-0 z-[50] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${appState === 'START' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none scale-110 blur-sm'}`}>
+        <div className="relative text-center flex flex-col items-center max-w-2xl px-4 md:mr-[30%] transition-all duration-1000">
+          <h1 className="text-xl md:text-2xl text-[#D4AF37] mb-3 tracking-wider drop-shadow-lg urdu-text" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h1>
+          <h2 className="text-2xl md:text-4xl text-[#fff7cc] font-bold mb-3 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] urdu-text" dir="rtl">وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ</h2>
+          <p className="text-[#fde68a]/90 text-sm md:text-lg mb-10 font-light tracking-wide drop-shadow-md urdu-text" dir="rtl">
+            "اور (اے اللہ) تو جسے چاہے عزت دے اور جسے چاہے ذلت دے"
+          </p>
+          <button 
+            onClick={handleEnterClick} 
+            className="group px-10 py-3 border border-[#D4AF37]/50 text-[#D4AF37] text-sm md:text-base rounded-full hover:bg-[#D4AF37] hover:text-black transition-all duration-500 shadow-[0_0_20px_rgba(212,175,55,0.3)] backdrop-blur-sm"
+          >
+            <span className="font-bold urdu-text">میری خدمات کی دنیا میں داخلے کے لیے کلک کریں</span>
+          </button>
         </div>
       </div>
 
-      {/* 🔴 3. نیویگیشن کارڈز */}
-      <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          {navCardsData.map((card, i) => (
-             card.target === "_blank" ? (
-               <a key={i} href={card.link} target="_blank" rel="noopener noreferrer"><NavCard icon={card.icon} title={card.title} /></a>
-             ) : (
-               <Link key={i} href={card.link}><NavCard icon={card.icon} title={card.title} /></Link>
-             )
-          ))}
-        </div>
-      </section>
-
-      {/* 🔴 4. نور القرآن پروجیکٹ سیکشن */}
-      <section className="container mx-auto px-3 md:px-4 py-6 relative z-10">
-        <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-1 shadow-xl border-2 border-[#D4AF37] hover:shadow-[0_0_50px_rgba(15,76,117,0.3)] transition-all duration-500">
-          <div className="bg-white rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1 text-center md:text-right order-2 md:order-1">
-              <h3 className="text-xl md:text-3xl font-bold text-[#0f4c75] mb-3 font-serif">{projectSectionData.title}</h3>
-              <div className="bg-blue-50 p-4 rounded-xl border border-[#D4AF37]/30 shadow-inner group transition-all mb-4">
-                <p className="text-[#0f4c75] font-bold text-sm md:text-lg urdu-text group-hover:scale-[1.01] transition-transform leading-relaxed" dir="rtl">
-                  {projectSectionData.description}
-                </p>
-              </div>
-              <div className="flex justify-center md:justify-end mt-5">
-                <Link href={projectSectionData.link} className="group relative inline-flex items-center gap-3 px-8 py-2 rounded-full border-2 border-[#D4AF37] text-[#0f4c75] text-lg font-bold overflow-hidden transition-all duration-300 hover:text-white hover:bg-[#D4AF37] shadow-md hover:shadow-lg hover:-translate-y-1">
-                  <span className="urdu-text relative z-10">{projectSectionData.btnText}</span>
-                  <FaArrowLeft className="relative z-10 group-hover:-translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-            <img src={projectSectionData.image} alt="Project Logo" className="w-32 md:w-48 rounded-2xl shadow-lg border-4 border-[#D4AF37] order-1 md:order-2 quran-glow" />
+      {/* ================== MAIN CONTENT ================== */}
+      <div className={`absolute inset-0 z-[100] transition-opacity duration-[2000ms] delay-300 ${appState === 'MAIN' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        
+        <div className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 z-[300] w-full text-center pointer-events-none animate-fade-in-up">
+          <div className="bg-black/40 backdrop-blur-md border border-[#D4AF37]/30 inline-block px-4 py-2 md:px-8 md:py-3 rounded-full shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+            <h2 className="text-[#D4AF37] font-bold text-xs md:text-lg urdu-text tracking-wide mb-1" dir="rtl">
+              السلام علیکم۔ شبیر احمد شِگری کے ڈیجیٹل پیج پر خوش آمدید
+            </h2>
+            <p className="text-[#fff7cc] text-[10px] md:text-sm font-light urdu-text tracking-wider" dir="rtl">
+              براہ کرم اپنے پسندیدہ موضوع والے سیارے پر کلک کریں
+            </p>
           </div>
         </div>
-      </section>
 
-      {/* 🔴 5. ٹیسٹیمونیلز & کتب */}
-      <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
-        <div className="container mx-auto px-2 relative z-10">
-          <h2 className="text-lg md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto">نامور شخصیات کا میرے بارے اظہار خیال</h2>
-          <div className="relative w-full overflow-hidden" dir="ltr">
-            <div className="flex gap-6 w-max animate-scroll-left pause-on-hover px-4">
-                {infiniteLegends.map((item, i) => (
-                    <div key={i} className="card-lift">
-                      <CinematicCard img={item.img} video={item.video} name={item.name} setVideo={setActiveVideo} />
+        <div className="relative w-full h-full flex items-center justify-center">
+          
+          {/* 🪐 مدار کی لائنیں */}
+          {isMounted && [0, 1, 2].map((ringIndex) => {
+            const isMobile = windowSize.w < 768;
+            const { rx, ry } = getRingParams(ringIndex, isMobile);
+            return (
+              <div key={ringIndex} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 rounded-[50%] pointer-events-none" style={{ width: `${rx * 2}px`, height: `${ry * 2}px` }}></div>
+            );
+          })}
+
+          {/* ☀️ مرکز (ہوم پیج آڈیو اور واٹر ریپل کے ساتھ) */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[150] flex flex-col items-center justify-center pointer-events-auto">
+            <Link href="/home" onMouseEnter={() => handlePlanetHover('home', 'https://res.cloudinary.com/dtqrziupt/video/upload/v1771964337/hompage_dcscup.wav')} onMouseLeave={() => setHoveredIndex(null)}>
+                <div className="relative w-24 h-24 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-[#fde68a] shadow-[0_0_40px_rgba(212,175,55,0.8)] z-20 group transition-all duration-500 hover:scale-110">
+                    <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1770705045/channels4_profile_fz4ga1.jpg" alt="Profile" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-[#D4AF37]/20 opacity-0 group-hover:opacity-100 transition-opacity animate-ripple"></div>
+                </div>
+                <div className="absolute inset-0 bg-[#D4AF37] w-36 h-36 md:w-56 md:h-56 -translate-x-6 md:-translate-x-10 -translate-y-6 md:-translate-y-10 rounded-full blur-[60px] opacity-40 animate-pulse-slow z-10"></div>
+            </Link>
+          </div>
+
+          {/* 🌍 مکھن جیسے ہموار سیارے */}
+          <div className="absolute inset-0 z-[200] pointer-events-none">
+            {gridItems.map((item, index) => {
+              const { x, y, depth } = getPlanetPos(index);
+              const isH = hoveredIndex === index;
+              const scale = isH ? 1.4 : 0.8 + (depth * 0.2); 
+
+              return (
+                <div 
+                  key={index}
+                  className="absolute left-1/2 top-1/2 pointer-events-auto flex flex-col items-center justify-center transition-all duration-500 ease-out"
+                  style={{
+                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${scale})`,
+                    zIndex: isH ? 999 : Math.floor(depth * 100) + 150,
+                    opacity: isH ? 1 : (depth < -0.4 ? 0.4 : 1),
+                    willChange: 'transform'
+                  }}
+                  onMouseEnter={() => handlePlanetHover(index, item.audio)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <Link href={item.link} className="relative group block">
+                    <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border transition-all duration-300 ${isH ? 'border-[#fde68a] shadow-[0_0_30px_#D4AF37]' : 'border-white/30 shadow-lg'}`}>
+                       <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                       <div className="absolute inset-0 rounded-full shadow-[inset_-8px_-8px_15px_rgba(0,0,0,0.6)]"></div>
                     </div>
-                ))}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 📝 معلومات کا ٹیکسٹ ایریا */}
+        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-[300] w-[90%] text-center min-h-[80px] flex items-center justify-center pointer-events-none">
+          {hoveredIndex === 'home' ? (
+            <div className="animate-fade-in-up bg-black/60 px-8 py-3 rounded-2xl border border-[#D4AF37]/40 shadow-xl" dir="rtl">
+               <h2 className="text-xl md:text-3xl font-extrabold text-[#D4AF37] urdu-text mb-1 drop-shadow-md">مرکزی ہوم پیج</h2>
+               <p className="text-[#fff7cc] text-sm md:text-lg urdu-text font-bold">ہوم پیج کے لئے یہاں کلک کریں</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-2 py-10 relative z-10">
-        <h2 className="text-xl md:text-3xl font-bold text-[#0f4c75] text-center urdu-text mb-8 border-b-2 border-[#D4AF37]/30 pb-2 inline-block mx-auto w-full">حاجی شبیر احمد شگری کی تصانیف</h2>
-        <div className="bg-white p-6 rounded-[2rem] shadow-xl border border-[#D4AF37]/20 overflow-hidden" dir="ltr">
-             <div className="flex gap-8 w-max animate-scroll-right pause-on-hover px-4">
-                 {infiniteBooks.map((item, i) => (
-                     <div key={i} className="card-lift">
-                        <BookCinematicCard img={item.img} title={item.title} link={item.link} />
-                     </div>
-                 ))}
-             </div>
-        </div>
-      </section>
-
-      {/* 🔴 45 سالہ خدمات (اب مکمل انگلش LTR فارمیٹ میں) */}
-      <section className="bg-white py-10 border-t border-[#D4AF37]/20 relative z-10 shadow-inner">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] text-center urdu-text mb-10 underline decoration-[#D4AF37] underline-offset-8">خدمت کے 45 سال</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-             {journeyData.map((item, i) => (
-                <JourneyCard key={i} icon={item.icon} title={item.title} desc={item.desc} />
-             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 🔴 فوٹر کو 2026 کر دیا گیا ہے */}
-      <Footer year="2026" />
-      
-      {/* 🔴 ویڈیو ماڈل (آٹو پلے کے ساتھ) */}
-      {activeVideo && (
-        <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
-          <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
-          <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37] animate-fadeInUp">
-            
-            {activeVideo.includes('youtu') ? (
-              <iframe 
-                 className="w-full h-[50vh] md:h-[70vh]" 
-                 src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} 
-                 frameBorder="0" 
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                 allowFullScreen>
-              </iframe>
-            ) : (
-              <video 
-                 className="w-full h-[50vh] md:h-[70vh] bg-black" 
-                 src={activeVideo} 
-                 controls 
-                 autoPlay 
-                 playsInline>
-              </video>
-            )}
-
-          </div>
-        </div>
-      )}
-    </main>
-  );
-}
-
-// 🔴 ہیلپر کمپوننٹس (اب یہ بالکل اپنی درست جگہ پر ہیں)
-function CinematicCard({ img, video, name, setVideo }) {
-    return (
-      <div className="min-w-[200px] md:min-w-[260px] h-[150px] relative rounded-xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/60 bg-black group shadow-lg" onClick={() => setVideo(video)}>
-        <img src={img} alt={name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-transparent transition-all">
-            <div className="bg-[#D4AF37]/80 p-3 rounded-full border-2 border-white group-hover:scale-125 transition-all shadow-[0_0_20px_rgba(212,175,55,0.6)]">
-              <FaPlay size={18} className="text-white pl-1" />
+          ) : hoveredIndex !== null && (
+            <div className="animate-fade-in-up bg-black/60 px-8 py-3 rounded-2xl border border-[#D4AF37]/20 shadow-xl" dir="rtl">
+              <h2 className="text-xl md:text-3xl font-extrabold text-[#D4AF37] urdu-text mb-1 tracking-wide">{gridItems[hoveredIndex].title}</h2>
+              <p className="text-[#fff7cc] text-xs md:text-base urdu-text font-medium max-w-2xl mx-auto">{gridItems[hoveredIndex].desc}</p>
             </div>
+          )}
         </div>
-        <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/90 to-transparent p-3 text-center text-sm text-[#D4AF37] urdu-text font-bold tracking-wide">{name}</div>
       </div>
-    );
-}
 
-function BookCinematicCard({ img, title, link }) {
-    return (
-      <a href={link || "#"} target="_blank" rel="noopener noreferrer" className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
-         <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
-         <div className="absolute bottom-0 w-full p-4 text-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
-            <div className="text-sm md:text-base text-[#D4AF37] urdu-text font-bold drop-shadow-md leading-tight">{title}</div>
-            <div className="text-[10px] md:text-xs text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">پڑھنے کے لیے کلک کریں</div>
-         </div>
-      </a>
-    );
-}
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+        body { background: #000; margin: 0; padding: 0; overflow: hidden; }
+        .urdu-text { font-family: 'Noto Naskh Arabic', serif; }
 
-function NavCard({ icon, title }) {
-  return (
-    <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
-      <div className="text-3xl text-[#D4AF37] mb-3 group-hover:scale-125 transition-transform drop-shadow-sm">{icon}</div>
-      <h3 className="text-gray-800 text-sm md:text-lg urdu-text font-bold group-hover:text-[#0f4c75]">{title}</h3>
-    </div>
-  );
-}
+        @keyframes ripple { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.6); opacity: 0; } }
+        .animate-ripple { animation: ripple 2s infinite ease-out; }
 
-function JourneyCard({ icon, title, desc }) {
-  return (
-    <div className="bg-slate-50 rounded-2xl shadow-sm p-6 border border-gray-200 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg group text-left" dir="ltr">
-      <div className="flex items-center justify-start gap-4 mb-3" dir="ltr">
-        <div className="text-[#D4AF37] p-3 bg-white rounded-xl border border-gray-100 group-hover:scale-110 transition-all shadow-sm">{icon}</div>
-        <h3 className="font-bold text-[#0f4c75] text-xl">{title}</h3>
-      </div>
-      <p className="text-gray-600 text-sm leading-relaxed font-medium">{desc}</p>
+        @keyframes twinkle { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+        .animate-slow-drift { animation: drift 150s infinite linear; }
+        @keyframes drift { 0% { object-position: 0% 50%; } 100% { object-position: 100% 50%; } }
+        .animate-pulse-slow { animation: pulse 4s infinite ease-in-out; }
+        @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+        .animate-fade-in-up { animation: fade-in-up 0.4s ease-out forwards; }
+        @keyframes fade-in-up { from { opacity: 0; transform: translate(-50%, 15px); } to { opacity: 1; transform: translate(-50%, 0); } }
+      `}</style>
     </div>
   );
 }
