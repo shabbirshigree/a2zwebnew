@@ -16,7 +16,7 @@ export const planetItems = [
   { 
     title: "سفارتی خدمات", 
     desc: "بین الاقوامی سفارتی تعلقات اور پاکستان کی نمائندگی", 
-    link: "/diplomatic", 
+    link: "/diplomatic-services", 
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772755126/168c167c-48d8-467d-957b-1d2753b8b997.png", 
     audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772757723/safarati_khidmaat_bcnpdq.mp3" 
   },
@@ -27,7 +27,7 @@ export const planetItems = [
   { 
     title: "آرٹ اور ہنر", 
     desc: "تخلیقی صلاحیتیں اور فنی مہارتوں کا اظہار", 
-    link: "/art", 
+    link: "/design", 
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772756589/4af1c006-a6af-41eb-9ffd-b1ad378bfd62.png", 
     audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772757722/art_or_hunar_i2volf.mp3" 
   },
