@@ -76,14 +76,14 @@ export default function LandingPage() {
     <div className={`relative min-h-screen bg-black overflow-hidden text-white transition-opacity duration-1000 ${fontsLoaded ? 'opacity-100' : 'opacity-0'}`}>
 
       {/* ماشاءاللہ */}
-      <div className="fixed top-4 w-full text-center z-[200] opacity-40 pointer-events-none">
+      <div className="fixed top-4 w-full text-center z-[150] opacity-40 pointer-events-none">
         <p className="text-[#D4AF37] text-[10px] md:text-xs arabic-text tracking-widest">
           مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّه
         </p>
       </div>
 
-      {/* 🔴 تبدیلی: ستارے اب لائنوں کے اوپر (Z-index: 50) نظر آئیں گے */}
-      <div className="fixed inset-0 z-[50] pointer-events-none">
+      {/* ستارے */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
         {isMounted && particles.map((p, i) => (
           <div key={i} className="absolute bg-white rounded-full animate-twinkle" 
                style={{ 
@@ -105,7 +105,7 @@ export default function LandingPage() {
         </div>
       )}
 
-      {/* زمین (گلوب) */}
+      {/* 🌍 زمین (گلوب) - دوبارہ شامل کر دیا گیا */}
       <div className="fixed -right-40 md:-right-60 top-1/2 -translate-y-1/2 z-10 pointer-events-none opacity-20">
         <div className="relative w-[450px] h-[450px] md:w-[700px] md:h-[700px]">
           <div className="w-full h-full rounded-full bg-cover bg-center animate-spin-slow shadow-[inset_-40px_0_120px_rgba(0,0,0,1)] border border-white/10"
@@ -115,7 +115,7 @@ export default function LandingPage() {
       </div>
 
       {/* START SCREEN */}
-      <div className={`absolute inset-0 z-[250] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
+      <div className={`absolute inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <div className="text-center max-w-2xl px-8 flex flex-col items-center">
           <h1 className="text-sm md:text-lg text-[#D4AF37] font-bold mb-5 arabic-text tracking-[0.3em]">{landingData.bismillah}</h1>
           <h2 className="text-base md:text-2xl text-white/95 font-medium arabic-text mb-6 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
@@ -127,37 +127,34 @@ export default function LandingPage() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className={`absolute inset-0 z-[100] transition-opacity duration-[2000ms] ${appState === 'MAIN' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+      <div className={`absolute inset-0 z-[50] transition-opacity duration-[2000ms] ${appState === 'MAIN' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         
-        {/* 🔴 تبدیلی: خوش آمدید والا متن اب بٹن سے باہر اور تھوڑا نیچے ہے */}
-        <div className="absolute top-16 left-1/2 -translate-x-1/2 z-[300] w-full text-center pointer-events-none px-4">
-            <h2 className="text-[#D4AF37] font-bold text-lg md:text-2xl urdu-nastaliq mb-1 drop-shadow-lg" dir="rtl">
-              {landingData.welcomeTitle}
-            </h2>
-            <p className="text-[#fff7cc] text-xs md:text-base urdu-nastaliq opacity-80" dir="rtl">
-              {landingData.welcomeSubtitle}
-            </p>
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
+          <div className="bg-black/40 backdrop-blur-md border border-[#D4AF37]/30 flex flex-col items-center px-8 py-2 rounded-full">
+            <h2 className="text-[#D4AF37] font-bold text-base md:text-xl urdu-nastaliq mb-1" dir="rtl">{landingData.welcomeTitle}</h2>
+            <p className="text-[#fff7cc] text-xs md:text-sm urdu-nastaliq" dir="rtl">{landingData.welcomeSubtitle}</p>
+          </div>
         </div>
 
         <div className="relative w-full h-full flex items-center justify-center">
           
-          {/* 🔴 تبدیلی: بنفشی کہکشاں کو مزید پھیلا دیا گیا ہے اور مرکز میں ہے */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[850px] md:h-[850px] opacity-60 z-[10] pointer-events-none animate-spin-super-slow">
-            <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.4)_0%,rgba(0,0,0,0)_70%)] blur-[60px]"></div>
+          {/* بنفشی کہکشاں کا ہالہ */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[750px] md:h-[750px] opacity-40 z-[10] pointer-events-none animate-spin-super-slow">
+            <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover rounded-full blur-[40px]" alt="Galaxy" />
           </div>
 
-          {/* مدار کی لائنیں (Z-index: 20) */}
+          {/* 🔴 تبدیلی: مدار کی لائنوں کو سفید اور زیادہ واضح کر دیا گیا ہے */}
           {isMounted && [0, 1, 2].map((ring) => {
              const isMob = windowSize.w < 768;
              const rx = (isMob ? windowSize.w * 0.30 : windowSize.w * 0.20) + (ring * (isMob ? 30 : 70));
              const ry = (isMob ? windowSize.h * 0.15 : windowSize.h * 0.12) + (ring * (isMob ? 25 : 45));
-             return <div key={ring} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/20 rounded-[50%] pointer-events-none z-[20]" style={{ width: rx * 2, height: ry * 2 }}></div>
+             return <div key={ring} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/25 rounded-[50%] pointer-events-none z-[20]" style={{ width: rx * 2, height: ry * 2 }}></div>
           })}
 
           {/* مرکزی تصویر */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[150] group">
             <Link href="/home" onMouseEnter={() => handlePlanetHover('home', landingData.homeAudio)} onMouseLeave={() => setHoveredIndex(null)}>
-                <div className="relative w-24 h-24 md:w-36 md:h-36 rounded-full border-2 border-[#fde68a] shadow-[0_0_50px_15px_rgba(139,92,246,0.4)] transition-all duration-700 group-hover:scale-105">
+                <div className="relative w-24 h-24 md:w-36 md:h-36 rounded-full border-2 border-[#fde68a] shadow-[0_0_40px_10px_rgba(139,92,246,0.5)] transition-all duration-700 group-hover:scale-105">
                     <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1770705045/channels4_profile_fz4ga1.jpg" className="w-full h-full object-cover rounded-full" alt="Main" />
                 </div>
             </Link>
