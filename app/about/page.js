@@ -1,18 +1,18 @@
 "use client";
 import { useState } from 'react';
-import { 
-  FaHeart, FaMicrophone, FaAward, FaQuran, FaLandmark, 
-  FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild, 
-  FaStar, FaArrowRight, FaBookOpen, FaPlay, FaTimes, FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper, FaBriefcase, FaUser 
+import {
+  FaHeart, FaMicrophone, FaAward, FaQuran, FaLandmark,
+  FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild,
+  FaStar, FaArrowRight, FaBookOpen, FaPlay, FaTimes, FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper, FaBriefcase, FaUser
 } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 
 // 🔴 ڈیٹا امپورٹس
-import { founderItems, mediaRoles, services } from './aboutData'; 
-import { legendsData } from '../homeData'; 
-import { BOOKS_DATA } from '../library/libraryData'; 
+import { founderItems, mediaRoles, services } from './aboutData';
+import { legendsData } from '../homeData';
+import { BOOKS_DATA } from '../library/libraryData';
 
 export default function UltimateAboutPage() {
   const [activeVideo, setActiveVideo] = useState(null);
@@ -31,7 +31,7 @@ export default function UltimateAboutPage() {
     if (title.includes("انجمن دوستی")) return "https://pakiiranassociation.wixsite.com/pira";
     if (title.includes("ویب سائٹ")) return "https://pakiiranassociation.wixsite.com/pira";
     if (title.includes("ٹریڈ اینڈ کلچر")) return "https://pakiranfriendship.com";
-    if (title.includes("ٹورزم")) return "https://pakiranfriendship.com"; 
+    if (title.includes("ٹورزم")) return "https://pakiranfriendship.com";
     if (title.includes("آپارات")) return "https://www.aparat.com/noorproduction";
     if (title.includes("طفلانِ نور")) return "https://www.youtube.com/@TiflaneNoor";
     return "#";
@@ -53,7 +53,7 @@ export default function UltimateAboutPage() {
 
   return (
     <main className="min-h-screen bg-[#f8f9fa] overflow-x-hidden font-sans">
-      
+
       {/* 🎨 کسٹم اینیمیشنز */}
       <style>{`
         @keyframes ripple {
@@ -90,8 +90,8 @@ export default function UltimateAboutPage() {
         <div className="relative z-10 px-4">
           <div className="relative inline-block mb-8 mt-4">
             <div className="animate-ripple bg-white p-1 rounded-full">
-              <img 
-                src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768008780/757657567_xgnsri.png" 
+              <img
+                src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768008780/757657567_xgnsri.png"
                 alt="Haji Shabbir Ahmed Shigri"
                 className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#D4AF37] object-cover"
               />
@@ -106,7 +106,7 @@ export default function UltimateAboutPage() {
       <section className="container mx-auto px-4 py-12 relative z-20 -mt-8" dir="rtl">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] mb-8 urdu-text">زندگی کا کل سرمایہ اور عظیم ترین اعزازات</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          
+
           {/* خادم امام رضاؑ */}
           <Link href="/imam-reza" className="group">
             <div className="animate-shine bg-gradient-to-bl from-emerald-900 to-emerald-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
@@ -120,7 +120,7 @@ export default function UltimateAboutPage() {
           </Link>
 
           {/* خادم غازی عباسؑ */}
-          <Link href="/saday-e-ghazi" className="group">
+          <Link href="/ghazi-abbas" className="group">
             <div className="animate-shine bg-gradient-to-bl from-red-900 to-red-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="Ghazi Abbas" />
@@ -161,18 +161,18 @@ export default function UltimateAboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-10 urdu-text">میڈیا اور الیکٹرانک جرنلزم</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {mediaRoles.map((role, i) => {
-               const mediaLink = getMediaLink(role.title);
-               const isExternal = mediaLink.startsWith("http");
+              const mediaLink = getMediaLink(role.title);
+              const isExternal = mediaLink.startsWith("http");
 
-               return (
-                  <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                    <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer">
-                      <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{role.icon}</div>
-                      <h3 className="text-white group-hover:text-[#0a1f30] font-bold text-lg mb-2 font-sans">{role.title}</h3>
-                      <p className="text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text">{role.desc}</p>
-                    </div>
-                  </Link>
-               );
+              return (
+                <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
+                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer">
+                    <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{role.icon}</div>
+                    <h3 className="text-white group-hover:text-[#0a1f30] font-bold text-lg mb-2 font-sans">{role.title}</h3>
+                    <p className="text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text">{role.desc}</p>
+                  </div>
+                </Link>
+              );
             })}
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function UltimateAboutPage() {
           </div>
 
           <div className="prose max-w-none urdu-text text-gray-800 text-xl md:text-2xl leading-[2.6] text-justify space-y-12">
-            
+
             <div className="bg-blue-50/70 p-8 rounded-3xl border-r-8 border-[#D4AF37]">
               <h3 className="text-3xl font-bold text-[#0b314d] mb-4">پیش لفظ: حیات، جہدِ مسلسل کا استعارہ</h3>
               <p>زندگی محض سانسوں کی آمد و رفت یا دنوں کے بیت جانے کا نام نہیں، بلکہ یہ تو ایک ایسا طویل، صبر آزما اور پُر مشقت سفر ہے جو انسان کو کچے راستوں کی دھول سے اٹھا کر تجربات کی بھٹی میں کندن بنا دیتا ہے۔ میری پیشہ ورانہ زندگی کا یہ سفر نصف صدی کے وسیع و عریض محیط پر پھیلا ہوا ہے۔ یہ پچاس برس محض ہندسوں کی کہانی نہیں ہے، بلکہ یہ لمحہ بہ لمحہ کی وہ ریاضتیں ہیں جس میں، میں نے اپنی ذات کو فراموش کر کے خود کو دین، دنیا اور مخلوقِ خدا کی بھلائی کے لیے وقف کر رکھا ہے۔ انسان کی تخلیق کا مقصد ہی خدمت اور اطاعت ہے، اور میں نے اپنی کمزور ناتواں کوششوں سے اسی مقصد کو پانے کی سعی کی ہے۔</p>
@@ -230,7 +230,7 @@ export default function UltimateAboutPage() {
             </div>
 
             <div className="bg-emerald-50 p-8 rounded-3xl border-r-8 border-emerald-700">
-              <h3 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-4 flex items-center gap-3"><FaLandmark className="text-emerald-600"/> بابِ پنجم: خانہ فرہنگ ایران اور ثقافتی سفارت کاری کا عروج</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-4 flex items-center gap-3"><FaLandmark className="text-emerald-600" /> بابِ پنجم: خانہ فرہنگ ایران اور ثقافتی سفارت کاری کا عروج</h3>
               <p>اکیسویں صدی کا سورج طلوع ہو رہا تھا اور میری زندگی بھی ایک نئے دور میں داخل ہو رہی تھی۔ شادی کے بعد میں نے "خانہ فرہنگ قونصلیٹ اسلامی جمہوریہ ایران، لاہور" میں ملازمت اختیار کی۔ یہ میرے کیریئر کا سب سے اہم، یادگار اور طویل باب ہے۔</p>
               <p className="mt-4 font-bold text-emerald-800">شعبہ سمعی و بصری کی تجدید:</p>
               <p>ابتدا میں، یہاں میں نے سمعی و بصری (Audio/Visual) شعبے کی ذمہ داری سنبھالی۔ یہ وہ دور تھا جب V.H.S کیسٹس اور ریلوں کا رواج تھا۔ میں نے خانہ فرہنگ میں موجود نصف صدی کے قیمتی تاریخی ریکارڈ کو جدید ٹیکنالوجی سے ہم آہنگ کر کے ڈیجیٹل فارمیٹ میں محفوظ کیا، جو بذاتِ خود ایک تاریخی کارنامہ ہے۔ یہ کام محض ڈیوٹی نہیں تھی، بلکہ تاریخ کو محفوظ کرنے کا مشن تھا۔</p>
@@ -274,7 +274,7 @@ export default function UltimateAboutPage() {
 
             <div className="bg-[#0b314d] text-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4AF37] rounded-full blur-[80px] opacity-30"></div>
-              <h3 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 relative z-10"><FaTv className="text-white"/> بابِ ہشتم: نور پروڈکشن اور اسلامی میڈیا کا انقلاب</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 relative z-10"><FaTv className="text-white" /> بابِ ہشتم: نور پروڈکشن اور اسلامی میڈیا کا انقلاب</h3>
               <p className="relative z-10"><strong>"نور پروڈکشن" اور زندگی کا رخ بدل دینے والا لمحہ:</strong> میڈیا کی چکا چوند میں میری سمت کا تعین میرے شفیق استاد ماسٹر بشیر صاحب (سکردو) کی ایک نصیحت نے کیا۔ جب میری دکان پر گانوں کی کیسٹس موجود تھیں تو انہوں نے بڑے پیار سے سمجھایا: "بیٹے! اگر تم ان گانوں کی جگہ تلاوت اور اسلامی کیسٹس رکھتے تو کیا ہی اچھا ہوتا۔" یہ جملہ میرے دل کی گہرائیوں میں اتر گیا اور یہیں سے "اسلامک میڈیا" کا سفر شروع ہوا۔ میں نے "نور پروڈکشن پاکستان" کی بنیاد رکھی۔ میرا مقصد میڈیا کو ہتھیار بنا کر دین کی خدمت کرنا تھا۔</p>
               <ul className="list-disc list-inside mt-4 space-y-2 text-xl relative z-10 mr-6">
                 <li><strong>ضریحِ نور (2002):</strong> میری پہلی ڈاکومنٹری جو امام رضاؑ کی ضریح کی تعمیر پر تھی۔</li>
@@ -296,7 +296,7 @@ export default function UltimateAboutPage() {
               <p className="font-bold text-2xl mb-2">نور القرآن پراجیکٹ (The Visual Quran):</p>
               <p>یہ میری زندگی کا سب سے بڑا سرمایہ، میری محنت کا حاصل اور میری آخرت کا توشہ ہے۔ "نور القرآن" دنیا کا پہلا منفرد ویژول قرآن (Visual Quran) پراجیکٹ ہے۔ اس پراجیکٹ کی خاص بات یہ ہے کہ اس میں قرآنِ مجید کو روایتی انداز سے ہٹ کر جدید بصری (Visual) ٹیکنالوجی، اینیمیشن اور منظر کشی کے ذریعے پیش کیا جا رہا ہے تاکہ دیکھنے والا آیت کے مفہوم کو آنکھوں سے دیکھے اور دل میں اتارے۔ اس میں ایک عام شخص تلاوت کو اردو میں سنتے ہوئے اس کا منظر بھی اپنے موبائل یا کمپیوٹر سکرین پر ساتھ ساتھ دیکھ سکے گا۔</p>
               <p className="mt-4 italic font-bold">"قرآن کو چوم کر اونچے طاق میں رکھ دینا اس کا احترام نہیں، بلکہ اسے سمجھ کر، اس پر عمل کرنا ہی اس کا حقیقی احترام ہے۔"</p>
-              
+
               <p className="mt-4 font-bold text-2xl">پراجیکٹ کے مراحل:</p>
               <ul className="list-disc list-inside mt-2 space-y-2 text-xl mr-6">
                 <li><strong>قرآن مجید کے 30 سپارے ویڈیو شکل میں (عربی/اردو):</strong> پہلے مرحلے میں مکمل قرآن مجید کو جدید انداز میں تیار کیا گیا۔ اس میں استاد پرہیزگار کی تلاوت، شیخ محسن علی نجفیؒ کا مستند اردو ترجمہ، اور میری (شبیر احمد شگری) کی آواز (Voiceover) ہے۔</li>
@@ -309,7 +309,7 @@ export default function UltimateAboutPage() {
             </div>
 
             <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-lg border-2 border-[#D4AF37]/30">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-6 flex items-center gap-3"><FaMedal className="text-[#D4AF37]"/> بابِ دہم: اعزازات اور حاصلِ زیست</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-6 flex items-center gap-3"><FaMedal className="text-[#D4AF37]" /> بابِ دہم: اعزازات اور حاصلِ زیست</h3>
               <p>دنیاوی ایوارڈز اور عہدے اپنی جگہ، لیکن میری روح کی تسکین ان دو روحانی اعزازات میں ہے:</p>
               <ul className="list-disc list-inside mt-4 space-y-3 text-xl mr-6 text-[#0b314d]">
                 <li><strong>خادمِ امام رضا علیہ السلام (2011):</strong> اسلامی فرہنگی خدمات پر خادم امام رضا علیہ السلام منتخب ہونے کا شرف ملا۔</li>
@@ -322,7 +322,7 @@ export default function UltimateAboutPage() {
 
               <h4 className="mt-8 font-bold text-2xl text-blue-700">جیمینائی (گوگل) کا خراج تحسین (Certificate of Excellence):</h4>
               <p className="italic bg-blue-50 p-4 rounded-xl border-l-4 border-blue-500 mt-2">"نور القرآن پراجیکٹ دورِ جدید میں تبلیغ قرآن کا ایک شاہکار ہے۔ جیمینائی (Gemini AI) اس عالمی معیار کی منفرد کاوش کو سلام پیش کرتا ہے۔" — Google Gemini (January 2026)</p>
-              
+
               <h4 className="mt-6 font-bold text-2xl text-emerald-700">چیٹ جی پی ٹی کی تعریفی سند:</h4>
               <p className="italic bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-500 mt-2">"یہ اعزاز صرف پاکستان کو حاصل ہے کہ دنیا میں سب سے پہلے قرآن کے اس تاریخی ویژول پراجیکٹ کا آغاز ایک پاکستانی (شبیر احمد شگری) نے کیا ہے۔" — ChatGPT (September 03, 2025)</p>
 
@@ -331,9 +331,9 @@ export default function UltimateAboutPage() {
             </div>
 
             <div className="border-t-4 border-[#D4AF37] pt-10 text-center">
-               <p className="text-3xl md:text-4xl font-bold text-[#0b314d]">حرفِ آخر</p>
-               <p className="italic mt-4 leading-relaxed text-2xl">"میں خود کو ایک درویش صفت انسان سمجھتا ہوں۔ آج اگر میں کسی مقام پر ہوں تو یہ میرے والدین کی دعاؤں اور میرے اساتذہ کی شفقت کا نتیجہ ہے۔ میری زندگی کا مقصد صرف یہ ہے کہ اپنی صلاحیتوں، اپنے قلم اور اپنے کیمرے کو دینِ اسلام، اتحادِ امت اور انسانیت کی بھلائی کے لیے استعمال کروں اور "نور القرآن" کا نور ہر دل تک پہنچاؤں۔"</p>
-               <p className="mt-6 text-[#D4AF37] font-bold text-2xl">— حاجی شبیر احمد شگری (خادمِ ثقلین) — ❤️</p>
+              <p className="text-3xl md:text-4xl font-bold text-[#0b314d]">حرفِ آخر</p>
+              <p className="italic mt-4 leading-relaxed text-2xl">"میں خود کو ایک درویش صفت انسان سمجھتا ہوں۔ آج اگر میں کسی مقام پر ہوں تو یہ میرے والدین کی دعاؤں اور میرے اساتذہ کی شفقت کا نتیجہ ہے۔ میری زندگی کا مقصد صرف یہ ہے کہ اپنی صلاحیتوں، اپنے قلم اور اپنے کیمرے کو دینِ اسلام، اتحادِ امت اور انسانیت کی بھلائی کے لیے استعمال کروں اور "نور القرآن" کا نور ہر دل تک پہنچاؤں۔"</p>
+              <p className="mt-6 text-[#D4AF37] font-bold text-2xl">— حاجی شبیر احمد شگری (خادمِ ثقلین) — ❤️</p>
             </div>
 
           </div>
@@ -391,11 +391,11 @@ export default function UltimateAboutPage() {
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
           <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
             {activeVideo.includes('youtu') ? (
-              <iframe 
-                className="w-full h-[50vh] md:h-[70vh]" 
-                src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                className="w-full h-[50vh] md:h-[70vh]"
+                src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
               </iframe>
             ) : (
