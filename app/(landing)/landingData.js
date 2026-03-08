@@ -36,7 +36,7 @@ export const planetItems = [
   { 
     title: "چینلز", 
     desc: "ہمارے چینلز کے بارے میں جانیے", 
-    link: "/art", 
+    link: "/channels",
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772777738/f1df171f-d70a-4d66-9c61-1c4c17911b71.png", 
     audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772778316/download_2_ikw4tp.wav" 
   },
@@ -44,7 +44,7 @@ export const planetItems = [
 { 
     title: "خدمات", 
     desc: "میری خدمات دیکھنے کےلئے کلک کریں", 
-    link: "/art", 
+    link: "/services",
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772779334/b29b6267-6a32-4660-bbb4-8ff19d59b92f.png", 
     audio: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772778518/%D9%85%DB%8C%D8%B1%DB%8C_%D8%AE%D8%AF%D9%85%D8%A7%D8%AA_rfp7pm.wav" 
   },
