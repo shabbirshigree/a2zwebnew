@@ -1,14 +1,17 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
-import { 
-  FaYoutube, FaFacebookF, FaWhatsapp, FaBookOpen, FaHandshake, FaGlobe, 
-  FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay, 
-  FaEnvelope, FaMapMarkerAlt, FaTimes, FaBars, FaPlane, FaChevronLeft, FaChevronRight 
+import {
+  FaYoutube, FaFacebookF, FaWhatsapp, FaBookOpen, FaHandshake, FaGlobe,
+  FaMedal, FaTrophy, FaMicrophone, FaNewspaper, FaTv, FaPlay,
+  FaEnvelope, FaMapMarkerAlt, FaTimes, FaBars, FaPlane, FaChevronLeft, FaChevronRight
 } from "react-icons/fa";
-import { FaTiktok, FaXTwitter } from "react-icons/fa6"; 
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { BiSolidMoviePlay } from "react-icons/bi";
 import { Navbar, HeroSlider } from './components/Header';
 import Footer from './components/Footer';
+
+// 🔴 آپ کا تیز رفتار امیج کمپوننٹ ہوم پیج پر بھی آ گیا
+import Image from './components/CldImage';
 
 export default function Home() {
   const [activeVideo, setActiveVideo] = useState(null);
@@ -47,7 +50,7 @@ export default function Home() {
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png", title: "سیاحت ایران", year: "2016" },
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp", title: "خراسان رضوی", year: "2020" },
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", title: "مجلہ فرھنگستان", year: "2017" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "مدینۃ الاہلبیتؑ", year: "2021" } 
+    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "مدینۃ الاہلبیتؑ", year: "2021" }
   ];
 
   const legends = [
@@ -77,9 +80,9 @@ export default function Home() {
       {/* سوشل میڈیا */}
       <div className="bg-[#0a2a42] text-white py-5 shadow-xl border-b-2 border-[#D4AF37]">
         <div className="container mx-auto flex justify-center gap-8 text-2xl">
-           <a href="https://wa.me/923334491715" target="_blank" className="hover:text-[#25D366] transition transform hover:scale-125"><FaWhatsapp /></a>
-           <a href="https://youtube.com/@noorproduction" target="_blank" className="hover:text-[#FF0000] transition transform hover:scale-125"><FaYoutube /></a>
-           <a href="https://www.facebook.com/share/1GkBRptjDz/" target="_blank" className="hover:text-[#1877F2] transition transform hover:scale-125"><FaFacebookF /></a>
+          <a href="https://wa.me/923334491715" target="_blank" className="hover:text-[#25D366] transition transform hover:scale-125"><FaWhatsapp /></a>
+          <a href="https://youtube.com/@noorproduction" target="_blank" className="hover:text-[#FF0000] transition transform hover:scale-125"><FaYoutube /></a>
+          <a href="https://www.facebook.com/share/1GkBRptjDz/" target="_blank" className="hover:text-[#1877F2] transition transform hover:scale-125"><FaFacebookF /></a>
         </div>
       </div>
 
@@ -100,7 +103,8 @@ export default function Home() {
           <div className="flex overflow-x-auto gap-6 scrollbar-hide py-4" ref={legendScrollRef}>
             {legends.map((item, i) => (
               <div key={i} className="min-w-[280px] bg-black rounded-xl border-2 border-[#D4AF37] cursor-pointer" onClick={() => setActiveVideo(item.video)}>
-                <img src={item.img} className="w-full h-40 object-cover" />
+                {/* 🔴 پرانے img ٹیگ کی جگہ نیا Image ٹیگ لگا دیا گیا ہے */}
+                <Image src={item.img} alt={item.name} width={300} height={200} className="w-full h-40 object-cover" />
                 <div className="p-3 text-center"><h3 className="text-[#D4AF37] text-sm">{item.name}</h3></div>
               </div>
             ))}

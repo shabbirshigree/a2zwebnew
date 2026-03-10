@@ -1,29 +1,43 @@
 @import "tailwindcss";
 
+/* 🔴 پوری ویب سائٹ پر ٹیکسٹ سلیکٹ (Highlight) کرنے پر پابندی 🔴 */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 /* ==================================================================== */
 /* 👇 جمیل نوری نستعلیق فانٹ (نوری کا دیا ہوا تحفہ) 👇                */
 /* ==================================================================== */
 @font-face {
   font-family: 'Jameel Noori Nastaleeq';
   src: url('https://cdn.jsdelivr.net/gh/rastikerdar/urdu-fonts@master/fonts/JameelNooriNastaleeq/JameelNooriNastaleeq.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/rastikerdar/urdu-fonts@master/fonts/JameelNooriNastaleeq/JameelNooriNastaleeq.ttf') format('truetype');
+    url('https://cdn.jsdelivr.net/gh/rastikerdar/urdu-fonts@master/fonts/JameelNooriNastaleeq/JameelNooriNastaleeq.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap; 
+  font-display: swap;
 }
 
 /* اس کلاس کو جہاں بھی لگائیں گے، تحریر اخبار جیسی خوبصورت ہو جائے گی */
 .urdu-text {
   font-family: 'Jameel Noori Nastaleeq', serif !important;
-  line-height: 2.2 !important; 
+  line-height: 2.2 !important;
 }
+
 /* ==================================================================== */
 
 
 /* --- 1. ٹیکسٹ ٹکر (Text Ticker) --- */
 @keyframes scroll-ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); } /* RTL کے لیے دائیں طرف */
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+
+  /* RTL کے لیے دائیں طرف */
 }
 
 .animate-marquee-instant {
@@ -35,14 +49,24 @@
 /* --- 2. کارڈز اسکرولنگ (Infinity Scroll - No Waiting) --- */
 /* لیفٹ اسکرول (کتابوں کے لیے) */
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* رائٹ اسکرول (لیجنڈز کے لیے) */
 @keyframes scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .animate-scroll-left {
@@ -58,25 +82,26 @@
 }
 
 /* ماؤس اوپر لانے پر رک جائے */
-.animate-scroll-left:hover, 
+.animate-scroll-left:hover,
 .animate-scroll-right:hover {
   animation-play-state: paused;
 }
 
 /* --- 3. دیگر سیٹنگز --- */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
+
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* گولڈن گریڈینٹ بارڈر کے لیے */
 .gold-border-gradient {
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(45deg, #D4AF37, #F7E7CE, #B8860B) border-box;
+    linear-gradient(45deg, #D4AF37, #F7E7CE, #B8860B) border-box;
 }
 
 /* --- 4. فیڈ ان اور اپ اینیمیشن (Fade-In Up Effect) --- */
@@ -85,6 +110,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);

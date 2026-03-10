@@ -27,22 +27,24 @@ export default function FloatingButtons() {
       {/* Left - WhatsApp Button */}
       <button
         onClick={handleWhatsapp}
-        className="fixed left-6 bottom-20 z-40 bg-green-500 text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-green-600"
+        // تبدیلیاں: موبائل پر سائز تھوڑا چھوٹا (p-3) اور شفافیت (opacity-80) تاکہ تحریر نظر آئے
+        className="fixed left-4 bottom-6 md:left-8 md:bottom-10 z-50 bg-green-500 text-white p-3 md:p-4 rounded-full shadow-lg opacity-80 hover:opacity-100 hover:shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-green-600 focus:outline-none"
         title="WhatsApp پر رابطہ کریں"
         aria-label="WhatsApp"
       >
-        <FaWhatsapp size={28} />
+        <FaWhatsapp className="text-xl md:text-2xl" />
       </button>
 
       {/* Right - Scroll to Top Button */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed right-6 bottom-20 z-40 bg-gradient-to-r from-[#0f4c75] to-[#1a6a96] text-[#D4AF37] p-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-all duration-300 animate-bounce"
+          // تبدیلیاں: موبائل پر پوزیشن اور سائز کو متوازن کیا گیا ہے
+          className="fixed right-4 bottom-6 md:right-8 md:bottom-10 z-50 bg-gradient-to-r from-[#0f4c75] to-[#1a6a96] text-[#D4AF37] p-3 md:p-4 rounded-full shadow-lg opacity-80 hover:opacity-100 hover:shadow-2xl hover:scale-110 transition-all duration-300 focus:outline-none"
           title="اوپر جائیں"
           aria-label="Scroll to top"
         >
-          <FaArrowUp size={28} />
+          <FaArrowUp className="text-xl md:text-2xl" />
         </button>
       )}
     </>
