@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaShareAlt, FaBook, FaHeadphones, FaFilm, FaSearch, FaTimes } from 'react-icons/fa';
+import { FaShareAlt, FaBook, FaHeadphones, FaFilm, FaSearch, FaTimes, FaWhatsapp, FaFacebook, FaTelegram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData'; 
@@ -19,8 +19,9 @@ export default function LibraryPage() {
   const [bookOrientation, setBookOrientation] = useState('portrait'); 
   const [mediaUrl, setMediaUrl] = useState('');
   const [activeBookTitle, setActiveBookTitle] = useState('');
+  const [shareModalOpen, setShareModalOpen] = useState(false);
+  const [selectedBook, setSelectedBook] = useState(null);
 
-  // 🔴 اسمارٹ سکرول: شیئر کردہ لنک سے کتاب پر پہنچنا
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -28,20 +29,15 @@ export default function LibraryPage() {
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          element.style.borderColor = "#D4AF37"; 
         }, 1000);
       }
     }
   }, []);
 
-  const filteredBooks = BOOKS_DATA.filter(book =>
-    book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    book.descUrdu.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   const handlePlayMedia = (e, url) => { 
     if(e) e.stopPropagation(); 
     if(url) { setMediaUrl(url); setVideoModalOpen(true); }
+    else { alert("اس کتاب کا میڈیا دستیاب نہیں ہے۔"); }
   };
   
   const handleOpenBook = (url, title, orientation) => { 
@@ -53,17 +49,27 @@ export default function LibraryPage() {
     } 
   };
 
-  const handleShare = (e, book) => {
-    e.preventDefault();
+  const openShareMenu = (e, book) => {
     e.stopPropagation();
-    const shareUrl = `${window.location.origin}${window.location.pathname}#${book.id}`;
-    const shareDetails = `*${book.title}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n\nکتاب پڑھنے کے لیے لنک پر کلک کریں 👇\n\n${shareUrl}`;
+    setSelectedBook(book);
+    setShareModalOpen(true);
+  };
 
-    if (navigator.share) {
-      navigator.share({ title: book.title, text: shareDetails }).catch(() => {});
-    } else {
-      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareDetails)}`, '_blank');
-    }
+  const getShareLink = (book) => `${window.location.origin}${window.location.pathname}#${book.id}`;
+
+  const shareSocial = (platform) => {
+    const link = getShareLink(selectedBook);
+    const text = `*${selectedBook.title}*\n✍️ مصنف: حاجی شبیر احمد شگری\n\nکتاب پڑھنے کے لیے لنک پر کلک کریں 👇\n${link}`;
+    
+    const urls = {
+      whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`,
+      telegram: `https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`,
+      twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
+    };
+    window.open(urls[platform], '_blank');
+    setShareModalOpen(false);
   };
 
   return (
@@ -88,60 +94,38 @@ export default function LibraryPage() {
       </section>
 
       <section className="container mx-auto px-4 py-12">
-        {filteredBooks.map((book) => (
-          <div 
-            key={book.id} 
-            id={book.id} 
-            dir="rtl"
-            onClick={() => {
-              const readAction = book.actions.find(a => a.type === 'read');
-              if(readAction) handleOpenBook(readAction.url, book.title, book.orientation);
-            }}
-            className="mb-12 cursor-pointer flex flex-col md:flex-row items-stretch gap-8 bg-[#0a0a0a] border border-gray-800 hover:border-[#D4AF37]/50 rounded-[2rem] p-6 md:p-8 shadow-2xl transition-all duration-300 group"
-          >
-            {/* تصویر کا حصہ */}
-            <div className="w-full md:w-56 flex-shrink-0 flex flex-col gap-4">
-              <div className="relative overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
-                <img src={book.image} alt={book.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
-              </div>
-              
-              {/* 🔴 "کتاب پڑھیں" اور شیئر کا بٹن اپنی جگہ پر */}
-              <div className="flex rounded-xl overflow-hidden border border-[#D4AF37]/30">
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    const readAction = book.actions.find(a => a.type === 'read');
-                    handleOpenBook(readAction.url, book.title, book.orientation);
-                  }}
-                  className="flex-1 bg-[#1a1a1a] text-[#D4AF37] py-3 text-xs font-bold urdu-text hover:bg-[#D4AF37] hover:text-black transition-all flex items-center justify-center gap-2"
-                >
-                  <FaBook /> کتاب پڑھیں
-                </button>
-                <button 
-                  onClick={(e) => handleShare(e, book)}
-                  className="px-4 bg-[#111] text-[#D4AF37] border-r border-[#D4AF37]/20 hover:text-white"
-                >
-                  <FaShareAlt size={14} />
-                </button>
-              </div>
+        {BOOKS_DATA.filter(b => b.title.includes(searchQuery)).map((book) => (
+          <div key={book.id} id={book.id} dir="rtl" className="mb-12 bg-[#0a0a0a] border border-gray-800 rounded-[2rem] p-6 md:p-8 shadow-2xl flex flex-col md:flex-row items-center gap-8">
+            <div className="w-full md:w-56 flex-shrink-0">
+              <img src={book.image} alt={book.title} className="w-full h-auto rounded-xl shadow-lg" />
             </div>
 
-            {/* تفصیلات کا حصہ */}
-            <div className="flex-1 text-right flex flex-col justify-center">
-              <div className="mb-4">
+            <div className="flex-1 text-right">
+              <div className="flex justify-between items-center mb-4">
                 <span className="bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-1 rounded-full text-[10px] font-bold border border-[#D4AF37]/30">{book.badge}</span>
+                <button onClick={(e) => openShareMenu(e, book)} className="text-[#D4AF37] hover:text-white p-2 border border-[#D4AF37]/30 rounded-full transition-all">
+                  <FaShareAlt size={20} />
+                </button>
               </div>
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 urdu-text">{book.title}</h2>
-              <p className="text-gray-300 text-sm md:text-lg leading-[2.2] urdu-text">{book.descUrdu}</p>
+              <p className="text-gray-300 text-sm md:text-lg leading-[2.2] urdu-text mb-8">{book.descUrdu}</p>
               
-              <div className="flex flex-wrap gap-3 mt-6">
-                {book.actions.filter(a => a.type !== 'read').map((action, idx) => (
+              {/* 🔴 بٹنز کی وہی پرانی خوبصورت لائن */}
+              <div className="flex flex-wrap gap-4">
+                {book.actions.map((action, idx) => (
                   <button 
                     key={idx}
-                    onClick={(e) => handlePlayMedia(e, action.url)}
-                    className="flex items-center gap-2 bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/30 px-6 py-2 rounded-full text-xs urdu-text hover:bg-[#D4AF37] hover:text-black transition-all"
+                    onClick={(e) => {
+                      if (action.type === 'read') handleOpenBook(action.url, book.title, book.orientation);
+                      else handlePlayMedia(e, action.url);
+                    }}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold urdu-text transition-all ${
+                      action.type === 'read' ? 'bg-[#D4AF37] text-black hover:bg-yellow-500' : 
+                      action.type === 'video' ? 'bg-red-700 text-white hover:bg-red-600' : 'bg-blue-800 text-white hover:bg-blue-700'
+                    }`}
                   >
-                    {action.type === 'video' ? <FaFilm /> : <FaHeadphones />} {action.label}
+                    {action.type === 'read' ? <FaBook /> : action.type === 'video' ? <FaFilm /> : <FaHeadphones />}
+                    {action.label}
                   </button>
                 ))}
               </div>
@@ -150,6 +134,24 @@ export default function LibraryPage() {
         ))}
       </section>
 
+      {/* 🔴 سوشل میڈیا شیئرنگ مینیو (واٹس ایپ، فیس بک، ٹیلی گرام وغیرہ) */}
+      {shareModalOpen && (
+        <div className="fixed inset-0 bg-black/80 z-[200] flex items-center justify-center p-4 backdrop-blur-sm" onClick={() => setShareModalOpen(false)}>
+          <div className="bg-[#111] border-2 border-[#D4AF37] rounded-3xl p-8 max-w-sm w-full text-center" onClick={e => e.stopPropagation()}>
+            <h3 className="text-[#D4AF37] urdu-text text-xl mb-6">دوستوں کے ساتھ شیئر کریں</h3>
+            <div className="grid grid-cols-3 gap-6">
+              <button onClick={() => shareSocial('whatsapp')} className="flex flex-col items-center gap-2 text-green-500 hover:scale-110 transition-transform"><FaWhatsapp size={40} /><span className="text-xs text-white">واٹس ایپ</span></button>
+              <button onClick={() => shareSocial('facebook')} className="flex flex-col items-center gap-2 text-blue-600 hover:scale-110 transition-transform"><FaFacebook size={40} /><span className="text-xs text-white">فیس بک</span></button>
+              <button onClick={() => shareSocial('telegram')} className="flex flex-col items-center gap-2 text-sky-500 hover:scale-110 transition-transform"><FaTelegram size={40} /><span className="text-xs text-white">ٹیلی گرام</span></button>
+              <button onClick={() => shareSocial('twitter')} className="flex flex-col items-center gap-2 text-gray-400 hover:scale-110 transition-transform"><FaTwitter size={40} /><span className="text-xs text-white">ٹویٹر (X)</span></button>
+              <button onClick={() => shareSocial('linkedin')} className="flex flex-col items-center gap-2 text-blue-400 hover:scale-110 transition-transform"><FaLinkedin size={40} /><span className="text-xs text-white">لنکڈ ان</span></button>
+            </div>
+            <button onClick={() => setShareModalOpen(false)} className="mt-8 text-red-500 urdu-text border border-red-500 px-6 py-2 rounded-full hover:bg-red-500 hover:text-white transition-all">بند کریں</button>
+          </div>
+        </div>
+      )}
+
+      {/* موڈلز (فلپ بک اور میڈیا) */}
       {bookModalOpen && (
         <div className="fixed inset-0 bg-black/98 z-[100] flex items-center justify-center p-2" onClick={() => setBookModalOpen(false)}>
           <div className="w-full max-w-6xl h-full flex flex-col" onClick={e => e.stopPropagation()}>
@@ -160,9 +162,9 @@ export default function LibraryPage() {
 
       {videoModalOpen && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setVideoModalOpen(false)}>
-           <div className="w-full max-w-3xl relative" onClick={e => e.stopPropagation()}>
+           <div className="w-full max-w-3xl relative">
               <button className="absolute -top-12 right-0 text-white bg-red-600 px-4 py-1 rounded-full" onClick={() => setVideoModalOpen(false)}>بند کریں</button>
-              <video src={mediaUrl} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37]" />
+              {mediaUrl.includes('.mp3') ? <audio src={mediaUrl} controls autoPlay className="w-full" /> : <video src={mediaUrl} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37]" />}
            </div>
         </div>
       )}
