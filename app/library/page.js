@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData';
 import dynamic from 'next/dynamic';
 
-// فلپ بک کو متحرک طور پر لوڈ کرنا (تاکہ ویب سائٹ بھاری نہ ہو)
 const UrduFlipBook = dynamic(() => import('./UrduFlipBook'), {
   ssr: false,
   loading: () => <div className="text-[#D4AF37] urdu-text text-center p-20">لوڈنگ...</div>
@@ -22,7 +21,6 @@ export default function LibraryPage() {
   const [mediaUrl, setMediaUrl] = useState('');
   const [activeBookTitle, setActiveBookTitle] = useState('');
 
-  // سرچنگ فلٹر 
   const filteredBooks = BOOKS_DATA.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     book.descUrdu.toLowerCase().includes(searchQuery.toLowerCase())
@@ -46,12 +44,24 @@ export default function LibraryPage() {
     }
   };
 
-  // 🔴 نیا اور جدید شیئرنگ فنکشن (نیلے لنک کے ساتھ)
-  const handleShare = async (book) => {
-    // یہ لنک خود بخود اس مخصوص کتاب پر سکرول (Scroll) کرے گا
-    const shareUrl = `${window.location.origin}${window.location.pathname}#${book.id}`;
+  // 🔴 نیا شیئرنگ فنکشن: جو چیز کلک ہوگی، وہی شیئر ہوگی (کتاب، آڈیو یا ویڈیو)
+  const handleShare = async (book, action) => {
+    let shareUrl = '';
+    let shareDetails = '';
 
-    const shareDetails = `*${book.title}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n(معروف کالم نگار، اینکر اور پروڈیوسر)\n\nیہ شاندار کتاب پڑھنے کے لیے درج ذیل لنک پر کلک کریں 👇\n\n${shareUrl}`;
+    if (action.type === 'read') {
+      // کتاب کے لیے ویب سائٹ کا مخصوص لنک
+      shareUrl = `${window.location.origin}${window.location.pathname}#${book.id}`;
+      shareDetails = `*${book.title}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n\nیہ شاندار کتاب پڑھنے کے لیے درج ذیل لنک پر کلک کریں 👇\n\n${shareUrl}`;
+    } else if (action.type === 'video') {
+      // ویڈیو کے لیے ڈائریکٹ ویڈیو لنک
+      shareUrl = action.url;
+      shareDetails = `*${book.title}*\n\nاس کتاب کا شاندار "ویڈیو تجزیہ" دیکھیں 👇\n\n${shareUrl}`;
+    } else if (action.type === 'audio') {
+      // آڈیو کے لیے ڈائریکٹ آڈیو لنک
+      shareUrl = action.url;
+      shareDetails = `*${book.title}*\n\nاس کتاب کا بہترین "آڈیو تجزیہ" سنیں 👇\n\n${shareUrl}`;
+    }
 
     if (navigator.share) {
       try {
@@ -68,7 +78,6 @@ export default function LibraryPage() {
     }
   };
 
-  // بٹنز کے رنگوں کی سیٹنگ
   const getColorClasses = (colorTheme, disabled) => {
     if (disabled) return { btn: 'bg-gray-800 text-gray-400 opacity-50 cursor-not-allowed border border-gray-700', share: 'bg-gray-800 text-gray-500' };
     const themes = {
@@ -84,13 +93,11 @@ export default function LibraryPage() {
       <Navbar />
       <HeroSlider />
 
-      {/* ہیڈر اور سرچ بار */}
       <section className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a1005] via-[#050505] to-[#000000] py-16 text-center border-b border-[#D4AF37]/30">
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-md">خزانہِ علم و دانش</h1>
           <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-8 rounded-full shadow-lg"></div>
 
-          {/* سرچ بار ڈیزائن */}
           <div className="max-w-md mx-auto relative group">
             <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-[#D4AF37]/50 group-focus-within:text-[#D4AF37] transition-colors" />
             <input
@@ -104,7 +111,6 @@ export default function LibraryPage() {
         </div>
       </section>
 
-      {/* مصنف کا تجزیہ (Author Review) */}
       <section className="container mx-auto px-4 mt-12 mb-6 text-right" dir="rtl">
         <div className="bg-[#0a0a0a] rounded-3xl p-6 shadow-2xl border border-[#D4AF37]/30 max-w-4xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
           <div className="relative w-32 h-32 flex-shrink-0">
@@ -122,13 +128,11 @@ export default function LibraryPage() {
         </div>
       </section>
 
-      {/* کتابوں کی فہرست */}
       <section className="container mx-auto px-4 py-12">
         {filteredBooks.length > 0 ? (
           filteredBooks.map((book) => (
             <div key={book.id} id={book.id} dir="rtl" className="mb-12 flex flex-col md:flex-row items-stretch gap-8 bg-[#0a0a0a] border border-gray-800 hover:border-[#D4AF37]/40 rounded-[2rem] p-6 md:p-8 shadow-2xl transition-all duration-500">
 
-              {/* کتاب کا کور اور بٹنز */}
               <div className="w-full md:w-56 flex-shrink-0 flex flex-col gap-4">
                 <div className="relative group overflow-hidden rounded-xl border border-gray-800 shadow-2xl">
                   <img src={book.image} alt={book.title} className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110" />
@@ -154,10 +158,12 @@ export default function LibraryPage() {
                         >
                           <Icon /> <span>{action.label}</span>
                         </button>
+
+                        {/* 🔴 اب یہ بٹن کتاب، آڈیو اور ویڈیو کو الگ الگ پہچان کر شیئر کرے گا */}
                         <button
-                          onClick={() => !action.disabled && handleShare(book)}
+                          onClick={() => !action.disabled && handleShare(book, action)}
                           className={`px-4 flex items-center justify-center ${themes.share} border-r border-black/20`}
-                          title="یہ کتاب شیئر کریں"
+                          title="شیئر کریں"
                         >
                           <FaShareAlt size={14} />
                         </button>
@@ -167,7 +173,6 @@ export default function LibraryPage() {
                 </div>
               </div>
 
-              {/* کتاب کی تحریر */}
               <div className="flex-1 text-right flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-[#D4AF37]/10 text-[#D4AF37] px-4 py-1 rounded-full text-[10px] font-bold tracking-widest border border-[#D4AF37]/30 uppercase">{book.badge}</span>
@@ -185,7 +190,6 @@ export default function LibraryPage() {
         )}
       </section>
 
-      {/* 📖 فلپ بک موڈل (Flipbook Modal) */}
       {bookModalOpen && (
         <div className="fixed inset-0 bg-black/98 z-[100] flex items-center justify-center p-2 md:p-6 backdrop-blur-md" onClick={() => setBookModalOpen(false)}>
           <div className="w-full max-w-6xl h-full flex flex-col relative" onClick={e => e.stopPropagation()}>
@@ -199,7 +203,6 @@ export default function LibraryPage() {
         </div>
       )}
 
-      {/* آڈیو/ویڈیو پوڈکاسٹ موڈل */}
       {videoModalOpen && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex flex-col items-center justify-center p-4 backdrop-blur-sm" onClick={() => setVideoModalOpen(false)}>
           <div className="w-full max-w-3xl relative" onClick={e => e.stopPropagation()}>
