@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData';
 import dynamic from 'next/dynamic';
 
-// فلپ بک کو متحرک طور پر لوڈ کرنا
 const UrduFlipBook = dynamic(() => import('./UrduFlipBook'), {
   ssr: false,
   loading: () => <div className="text-[#D4AF37] urdu-text text-center p-20">لوڈنگ...</div>
@@ -45,8 +44,8 @@ export default function LibraryPage() {
     }
   };
 
-  // 🔴 تیز رفتار اور سمارٹ شیئرنگ فنکشن
-  const handleShare = (book, action) => {
+  // 🔴 فائنل شیئرنگ فنکشن (جو ہر جگہ باکس کھولے گا)
+  const handleShare = async (book, action) => {
     let shareUrl = '';
     let shareDetails = '';
 
@@ -61,11 +60,15 @@ export default function LibraryPage() {
       shareDetails = `*${book.title}*\n\nاس کتاب کا بہترین "آڈیو تجزیہ" سنیں 👇\n\n${shareUrl}`;
     }
 
-    if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
-      navigator.share({
-        title: book.title,
-        text: shareDetails,
-      }).catch((err) => console.log('شیئرنگ کینسل: ', err));
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: book.title,
+          text: shareDetails,
+        });
+      } catch (error) {
+        console.log('شیئرنگ باکس کینسل ہو گیا');
+      }
     } else {
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareDetails)}`;
       window.open(whatsappUrl, '_blank');

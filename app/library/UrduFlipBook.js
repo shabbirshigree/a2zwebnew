@@ -30,16 +30,20 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
     }
   };
 
-  // 🔴 چور پکڑا گیا! یہ ہے نیا اور تیز رفتار شیئرنگ فنکشن
-  const handleShare = () => {
+  // 🔴 فائنل شیئرنگ فنکشن (جو ہر جگہ باکس کھولے گا)
+  const handleShare = async () => {
     const shareUrl = window.location.href;
     const shareDetails = `*${title || 'کتاب پڑھیں'}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n\nیہ کتاب آن لائن پڑھنے کے لیے درج ذیل لنک پر کلک کریں 👇\n\n${shareUrl}`;
 
-    if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
-      navigator.share({
-        title: title || 'کتاب پڑھیں',
-        text: shareDetails,
-      }).catch((err) => console.log('شیئرنگ کینسل: ', err));
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: title || 'کتاب پڑھیں',
+          text: shareDetails,
+        });
+      } catch (error) {
+        console.log('شیئرنگ باکس کینسل ہو گیا');
+      }
     } else {
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareDetails)}`;
       window.open(whatsappUrl, '_blank');
@@ -64,7 +68,6 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="drop-shadow-sm"><path d="M15 14l5-5-5-5" /><path d="M20 9H9.5A5.5 5.5 0 0 0 4 14.5v0A5.5 5.5 0 0 0 9.5 20H13" /></svg>
   );
 
-  // لوڈر کا مشترکہ ڈیزائن
   const CustomLoader = ({ message }) => (
     <div className="flex flex-col items-center justify-center w-full h-full bg-[#050505] text-[#D4AF37] p-6 text-center">
       <div className="relative w-16 h-16 mb-6">
@@ -79,7 +82,7 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
         <div className="h-full bg-[#D4AF37] animate-[loading_2s_ease-in-out_infinite] w-1/2 rounded-full"></div>
       </div>
       <p className="urdu-text text-xs mt-6 text-[#D4AF37]/60 tracking-[0.2em] font-light">
-        شکریہ: حاجی شبیر احمد شگری
+         شکریہ: حاجی شبیر احمد شگری
       </p>
       <style jsx>{`
         @keyframes loading {
@@ -92,8 +95,7 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
 
   return (
     <div ref={containerRef} className="flex flex-col w-full h-full bg-[#050505] overflow-hidden rounded-xl">
-
-      {/* ہیڈر */}
+      
       <div className="flex justify-between items-center px-4 py-2 bg-[#111] border-b border-[#D4AF37]/30 shrink-0">
         <div className="flex items-center gap-3">
           {onClose && (
@@ -112,7 +114,6 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
 
       {audioUrl && <audio ref={podcastRef} src={audioUrl} onEnded={() => setIsPlaying(false)} />}
 
-      {/* کتاب کا ایریا */}
       <div className="flex-1 flex flex-col items-center justify-center w-full px-2 overflow-hidden relative min-h-[400px]">
         {pdfUrl ? (
           <Document
@@ -122,14 +123,14 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
           >
             {numPages && (
               <HTMLFlipBook
-                width={bookWidth}
-                height={bookHeight}
-                size="fixed"
-                onFlip={playFlipSound}
-                direction="ltr"
-                showCover={true}
-                flippingTime={900}
-                useMouseEvents={true}
+                width={bookWidth} 
+                height={bookHeight} 
+                size="fixed" 
+                onFlip={playFlipSound} 
+                direction="ltr" 
+                showCover={true} 
+                flippingTime={900} 
+                useMouseEvents={true} 
                 ref={bookRef}
                 className="shadow-[0_0_40px_rgba(212,175,55,0.15)] bg-white rounded-md border border-[#D4AF37]/20 mx-auto"
               >
@@ -153,7 +154,6 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
         )}
       </div>
 
-      {/* فوٹر کنٹرولز */}
       <div className="flex justify-between items-center w-full px-4 py-3 bg-[#111] border-t border-[#D4AF37]/30 shrink-0">
         <button onClick={() => bookRef.current.pageFlip().flipPrev()} className="text-[#D4AF37] hover:text-white transition-all hover:-translate-x-1 active:scale-90" title="پچھلا صفحہ">
           <CurvedArrowRight />
