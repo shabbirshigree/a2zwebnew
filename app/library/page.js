@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData';
 import dynamic from 'next/dynamic';
 
+// فلپ بک کو متحرک طور پر لوڈ کرنا
 const UrduFlipBook = dynamic(() => import('./UrduFlipBook'), {
   ssr: false,
   loading: () => <div className="text-[#D4AF37] urdu-text text-center p-20">لوڈنگ...</div>
@@ -44,34 +45,27 @@ export default function LibraryPage() {
     }
   };
 
-  // 🔴 نیا شیئرنگ فنکشن: جو چیز کلک ہوگی، وہی شیئر ہوگی (کتاب، آڈیو یا ویڈیو)
-  const handleShare = async (book, action) => {
+  // 🔴 تیز رفتار اور سمارٹ شیئرنگ فنکشن
+  const handleShare = (book, action) => {
     let shareUrl = '';
     let shareDetails = '';
 
     if (action.type === 'read') {
-      // کتاب کے لیے ویب سائٹ کا مخصوص لنک
       shareUrl = `${window.location.origin}${window.location.pathname}#${book.id}`;
       shareDetails = `*${book.title}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n\nیہ شاندار کتاب پڑھنے کے لیے درج ذیل لنک پر کلک کریں 👇\n\n${shareUrl}`;
     } else if (action.type === 'video') {
-      // ویڈیو کے لیے ڈائریکٹ ویڈیو لنک
       shareUrl = action.url;
       shareDetails = `*${book.title}*\n\nاس کتاب کا شاندار "ویڈیو تجزیہ" دیکھیں 👇\n\n${shareUrl}`;
     } else if (action.type === 'audio') {
-      // آڈیو کے لیے ڈائریکٹ آڈیو لنک
       shareUrl = action.url;
       shareDetails = `*${book.title}*\n\nاس کتاب کا بہترین "آڈیو تجزیہ" سنیں 👇\n\n${shareUrl}`;
     }
 
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: book.title,
-          text: shareDetails,
-        });
-      } catch (error) {
-        console.log('شیئرنگ کینسل ہو گئی');
-      }
+    if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
+      navigator.share({
+        title: book.title,
+        text: shareDetails,
+      }).catch((err) => console.log('شیئرنگ کینسل: ', err));
     } else {
       const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareDetails)}`;
       window.open(whatsappUrl, '_blank');
@@ -158,8 +152,6 @@ export default function LibraryPage() {
                         >
                           <Icon /> <span>{action.label}</span>
                         </button>
-
-                        {/* 🔴 اب یہ بٹن کتاب، آڈیو اور ویڈیو کو الگ الگ پہچان کر شیئر کرے گا */}
                         <button
                           onClick={() => !action.disabled && handleShare(book, action)}
                           className={`px-4 flex items-center justify-center ${themes.share} border-r border-black/20`}

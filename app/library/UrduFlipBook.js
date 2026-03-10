@@ -30,13 +30,19 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
     }
   };
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try { await navigator.share({ title: title || 'کتاب پڑھیں', url: window.location.href }); }
-      catch (error) { console.log(error); }
+  // 🔴 چور پکڑا گیا! یہ ہے نیا اور تیز رفتار شیئرنگ فنکشن
+  const handleShare = () => {
+    const shareUrl = window.location.href;
+    const shareDetails = `*${title || 'کتاب پڑھیں'}*\n\n✍️ مصنف: حاجی شبیر احمد شگری\n\nیہ کتاب آن لائن پڑھنے کے لیے درج ذیل لنک پر کلک کریں 👇\n\n${shareUrl}`;
+
+    if (navigator.share && /mobile|android|iphone|ipad/i.test(navigator.userAgent)) {
+      navigator.share({
+        title: title || 'کتاب پڑھیں',
+        text: shareDetails,
+      }).catch((err) => console.log('شیئرنگ کینسل: ', err));
     } else {
-      navigator.clipboard.writeText(window.location.href);
-      alert("لنک کاپی ہو گیا ہے!");
+      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareDetails)}`;
+      window.open(whatsappUrl, '_blank');
     }
   };
 
@@ -62,7 +68,6 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
   const CustomLoader = ({ message }) => (
     <div className="flex flex-col items-center justify-center w-full h-full bg-[#050505] text-[#D4AF37] p-6 text-center">
       <div className="relative w-16 h-16 mb-6">
-        {/* گھومتا ہوا سنہری دائرہ */}
         <div className="absolute inset-0 border-4 border-[#D4AF37]/20 rounded-full"></div>
         <div className="absolute inset-0 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin shadow-[0_0_15px_rgba(212,175,55,0.4)]"></div>
       </div>
@@ -74,7 +79,7 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
         <div className="h-full bg-[#D4AF37] animate-[loading_2s_ease-in-out_infinite] w-1/2 rounded-full"></div>
       </div>
       <p className="urdu-text text-xs mt-6 text-[#D4AF37]/60 tracking-[0.2em] font-light">
-         شکریہ: حاجی شبیر احمد شگری
+        شکریہ: حاجی شبیر احمد شگری
       </p>
       <style jsx>{`
         @keyframes loading {
@@ -87,7 +92,7 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
 
   return (
     <div ref={containerRef} className="flex flex-col w-full h-full bg-[#050505] overflow-hidden rounded-xl">
-      
+
       {/* ہیڈر */}
       <div className="flex justify-between items-center px-4 py-2 bg-[#111] border-b border-[#D4AF37]/30 shrink-0">
         <div className="flex items-center gap-3">
@@ -100,7 +105,7 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
             <FaExpand size={14} />
           </button>
         </div>
-        <h2 className="text-[#D4AF37] text-lg md:text-xl font-bold urdu-text drop-shadow-md">
+        <h2 className="text-[#D4AF37] text-lg md:text-xl font-bold urdu-text drop-shadow-md flex-1 text-center">
           {title || "کتاب پڑھیں"}
         </h2>
       </div>
@@ -117,14 +122,14 @@ export default function UrduFlipBook({ pdfUrl, audioUrl, title, onClose, isLands
           >
             {numPages && (
               <HTMLFlipBook
-                width={bookWidth} 
-                height={bookHeight} 
-                size="fixed" 
-                onFlip={playFlipSound} 
-                direction="ltr" 
-                showCover={true} 
-                flippingTime={900} 
-                useMouseEvents={true} 
+                width={bookWidth}
+                height={bookHeight}
+                size="fixed"
+                onFlip={playFlipSound}
+                direction="ltr"
+                showCover={true}
+                flippingTime={900}
+                useMouseEvents={true}
                 ref={bookRef}
                 className="shadow-[0_0_40px_rgba(212,175,55,0.15)] bg-white rounded-md border border-[#D4AF37]/20 mx-auto"
               >
