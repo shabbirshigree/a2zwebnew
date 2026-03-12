@@ -54,12 +54,27 @@ export default function LandingPage() {
     welcomeAudioRef.current?.play().catch(e => console.log(e));
   };
 
+  // آڈیو چلانے کا فنکشن اپڈیٹ کیا گیا ہے
   const handlePlanetHover = (key, audioUrl) => {
     setHoveredIndex(key);
     if (hoverAudioRef.current && audioUrl) {
       hoverAudioRef.current.pause();
       hoverAudioRef.current.src = audioUrl;
-      hoverAudioRef.current.play().catch(e => console.log(e));
+      hoverAudioRef.current.currentTime = 0;
+      
+      const playPromise = hoverAudioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(e => console.log("Audio play interrupted:", e));
+      }
+    }
+  };
+
+  // آڈیو بند کرنے کا نیا فنکشن شامل کیا گیا ہے
+  const stopHoverAudio = () => {
+    setHoveredIndex(null);
+    if (hoverAudioRef.current) {
+      hoverAudioRef.current.pause();
+      hoverAudioRef.current.currentTime = 0; // آڈیو کو شروع سے ری سیٹ کریں
     }
   };
 
@@ -105,7 +120,7 @@ export default function LandingPage() {
         </div>
       )}
 
-      {/* 🌍 زمین (گلوب) - دوبارہ شامل کر دیا گیا */}
+      {/* 🌍 زمین (گلوب) */}
       <div className="fixed -right-40 md:-right-60 top-1/2 -translate-y-1/2 z-10 pointer-events-none opacity-20">
         <div className="relative w-[450px] h-[450px] md:w-[700px] md:h-[700px]">
           <div className="w-full h-full rounded-full bg-cover bg-center animate-spin-slow shadow-[inset_-40px_0_120px_rgba(0,0,0,1)] border border-white/10"
@@ -120,8 +135,10 @@ export default function LandingPage() {
           <h1 className="text-sm md:text-lg text-[#D4AF37] font-bold mb-5 arabic-text tracking-[0.3em]">{landingData.bismillah}</h1>
           <h2 className="text-base md:text-2xl text-white/95 font-medium arabic-text mb-6 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
           <p className="text-[#fde68a]/70 text-sm md:text-xl urdu-nastaliq px-10 leading-[2.1] mb-12" dir="rtl">"{landingData.translation}"</p>
-          <button onClick={handleEnterClick} className="px-10 py-2 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full text-base md:text-lg urdu-nastaliq hover:bg-[#D4AF37]/10 transition-all duration-700">
-            خدمات کی دنیا میں داخل ہوں
+          
+          {/* بٹن کا ٹیکسٹ اور موبائل پیڈنگ/فونٹ کو بہتر کیا گیا ہے */}
+          <button onClick={handleEnterClick} className="px-10 py-3 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full text-lg md:text-xl urdu-nastaliq hover:bg-[#D4AF37]/10 transition-all duration-700 leading-normal">
+            میری خدمات کی دنیا میں داخل ہوں
           </button>
         </div>
       </div>
@@ -143,7 +160,7 @@ export default function LandingPage() {
             <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover rounded-full blur-[40px]" alt="Galaxy" />
           </div>
 
-          {/* 🔴 تبدیلی: مدار کی لائنوں کو سفید اور زیادہ واضح کر دیا گیا ہے */}
+          {/* مدار کی لائنیں */}
           {isMounted && [0, 1, 2].map((ring) => {
              const isMob = windowSize.w < 768;
              const rx = (isMob ? windowSize.w * 0.30 : windowSize.w * 0.20) + (ring * (isMob ? 30 : 70));
@@ -151,16 +168,16 @@ export default function LandingPage() {
              return <div key={ring} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/25 rounded-[50%] pointer-events-none z-[20]" style={{ width: rx * 2, height: ry * 2 }}></div>
           })}
 
-          {/* مرکزی تصویر */}
+          {/* مرکزی تصویر - onMouseLeave پر stopHoverAudio لگا دیا گیا ہے */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[150] group">
-            <Link href="/home" onMouseEnter={() => handlePlanetHover('home', landingData.homeAudio)} onMouseLeave={() => setHoveredIndex(null)}>
+            <Link href="/home" onMouseEnter={() => handlePlanetHover('home', landingData.homeAudio)} onMouseLeave={stopHoverAudio}>
                 <div className="relative w-24 h-24 md:w-36 md:h-36 rounded-full border-2 border-[#fde68a] shadow-[0_0_40px_10px_rgba(139,92,246,0.5)] transition-all duration-700 group-hover:scale-105">
                     <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1770705045/channels4_profile_fz4ga1.jpg" className="w-full h-full object-cover rounded-full" alt="Main" />
                 </div>
             </Link>
           </div>
 
-          {/* سیارے */}
+          {/* سیارے - onMouseLeave پر stopHoverAudio لگا دیا گیا ہے */}
           <div className="absolute inset-0 z-[200] pointer-events-none">
             {isMounted && planetItems.map((item, index) => {
               const { x, y, depth } = getPlanetPos(index);
@@ -168,7 +185,7 @@ export default function LandingPage() {
               return (
                 <div key={index} className="absolute left-1/2 top-1/2 pointer-events-auto transition-all duration-700 ease-out" 
                   style={{ transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${isH ? 1.4 : 0.85 + (depth * 0.15)})`, zIndex: isH ? 999 : Math.floor(depth * 100) + 150, opacity: isH ? 1 : (depth < -0.4 ? 0.4 : 1) }}
-                  onMouseEnter={() => handlePlanetHover(index, item.audio)} onMouseLeave={() => setHoveredIndex(null)}>
+                  onMouseEnter={() => handlePlanetHover(index, item.audio)} onMouseLeave={stopHoverAudio}>
                   <Link href={item.link}>
                     <div className={`w-14 h-14 md:w-18 md:h-18 rounded-full overflow-hidden border-2 transition-all duration-500 ${isH ? 'border-white shadow-[0_0_30px_#D4AF37]' : 'border-white/30'}`}>
                        <img src={item.img} alt={item.title} className="w-full h-full object-cover" />

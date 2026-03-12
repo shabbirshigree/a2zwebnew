@@ -55,8 +55,9 @@ export function HeroSlider() {
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/4_xaylj9.png" }
   ];
 
+  // 🔴 تبدیلی: ہوم کا لنک / سے تبدیل کر کے /home کر دیا گیا ہے
   const menuItems = [
-    { name: "ہوم", link: "/", icon: <FaHome /> },
+    { name: "ہوم", link: "/home", icon: <FaHome /> },
     { name: "نورالقرآن", link: "/project", icon: <FaBookOpen /> },
     { name: "تعارف", link: "/about", icon: <FaUserAlt /> }, 
     { name: "سفارتی خدمات", link: "/diplomatic-services", icon: <FaHandshake /> },
@@ -142,7 +143,7 @@ export function HeroSlider() {
         </div>
       </div>
 
-      {/* 🧭 مینو بار - فاصلہ کم کر دیا گیا ہے */}
+      {/* 🧭 مینو بار */}
       <div className="bg-[#0b314d] py-3 px-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
         <nav className="flex flex-wrap justify-center gap-x-2 md:gap-x-3.5 gap-y-2.5 items-center" dir="rtl">
           {menuItems.map((item, idx) => (
