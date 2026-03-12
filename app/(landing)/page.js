@@ -42,7 +42,10 @@ export default function LandingPage() {
   useEffect(() => {
     if (appState !== 'MAIN' || !isMounted) return;
     const animateOrbit = () => {
-      if (hoveredIndex === null) setRotation(prev => prev + 0.0006); 
+      if (hoveredIndex === null) {
+        const speed = window.innerWidth < 768 ? 0.0030 : 0.0006;
+        setRotation(prev => prev + speed); 
+      }
       animationRef.current = requestAnimationFrame(animateOrbit);
     };
     animationRef.current = requestAnimationFrame(animateOrbit);
@@ -54,9 +57,13 @@ export default function LandingPage() {
     welcomeAudioRef.current?.play().catch(e => console.log(e));
   };
 
-  // آڈیو چلانے کا فنکشن اپڈیٹ کیا گیا ہے
   const handlePlanetHover = (key, audioUrl) => {
     setHoveredIndex(key);
+    
+    if (welcomeAudioRef.current) {
+      welcomeAudioRef.current.pause();
+    }
+
     if (hoverAudioRef.current && audioUrl) {
       hoverAudioRef.current.pause();
       hoverAudioRef.current.src = audioUrl;
@@ -69,12 +76,11 @@ export default function LandingPage() {
     }
   };
 
-  // آڈیو بند کرنے کا نیا فنکشن شامل کیا گیا ہے
   const stopHoverAudio = () => {
     setHoveredIndex(null);
     if (hoverAudioRef.current) {
       hoverAudioRef.current.pause();
-      hoverAudioRef.current.currentTime = 0; // آڈیو کو شروع سے ری سیٹ کریں
+      hoverAudioRef.current.currentTime = 0; 
     }
   };
 
@@ -111,7 +117,7 @@ export default function LandingPage() {
 
       {/* چاند */}
       {isMounted && (
-        <div className="fixed top-[8%] left-[8%] z-10 pointer-events-none animate-pulse-slow">
+        <div className="fixed top-[22%] md:top-[15%] left-[8%] z-10 pointer-events-none animate-pulse-slow">
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/600px-FullMoon2010.jpg" 
             alt="Full Moon" 
@@ -121,7 +127,7 @@ export default function LandingPage() {
       )}
 
       {/* 🌍 زمین (گلوب) */}
-      <div className="fixed -right-40 md:-right-60 top-1/2 -translate-y-1/2 z-10 pointer-events-none opacity-20">
+      <div className="fixed -right-40 md:-right-60 top-[65%] md:top-[60%] -translate-y-1/2 z-10 pointer-events-none opacity-20">
         <div className="relative w-[450px] h-[450px] md:w-[700px] md:h-[700px]">
           <div className="w-full h-full rounded-full bg-cover bg-center animate-spin-slow shadow-[inset_-40px_0_120px_rgba(0,0,0,1)] border border-white/10"
                style={{ backgroundImage: `url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/600px-The_Blue_Marble_%28remastered%29.jpg')` }}>
@@ -129,16 +135,34 @@ export default function LandingPage() {
         </div>
       </div>
 
+      {/* 🔴 🐻 دب اکبر (Ursa Major) - اب یہ چاند اور زمین کی طرح فکسڈ بیک گراؤنڈ کا حصہ بن گیا ہے */}
+      {isMounted && (
+        <div className="fixed bottom-[12%] left-[5%] md:bottom-[15%] md:left-[8%] z-10 w-24 md:w-28 opacity-70 pointer-events-none mix-blend-screen">
+          <img 
+            src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772733309/Ursa_Major_o9ywdk.gif" 
+            alt="Ursa Major Constellation" 
+            className="w-full h-full object-contain" 
+          />
+        </div>
+      )}
+
       {/* START SCREEN */}
       <div className={`absolute inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-        <div className="text-center max-w-2xl px-8 flex flex-col items-center">
-          <h1 className="text-sm md:text-lg text-[#D4AF37] font-bold mb-5 arabic-text tracking-[0.3em]">{landingData.bismillah}</h1>
-          <h2 className="text-base md:text-2xl text-white/95 font-medium arabic-text mb-6 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
-          <p className="text-[#fde68a]/70 text-sm md:text-xl urdu-nastaliq px-10 leading-[2.1] mb-12" dir="rtl">"{landingData.translation}"</p>
+        <div className="text-center max-w-2xl px-6 md:px-8 flex flex-col items-center">
+          <h1 className="text-sm md:text-lg text-[#D4AF37] font-bold mb-4 md:mb-5 arabic-text tracking-[0.3em]">{landingData.bismillah}</h1>
           
-          {/* بٹن کا ٹیکسٹ اور موبائل پیڈنگ/فونٹ کو بہتر کیا گیا ہے */}
-          <button onClick={handleEnterClick} className="px-10 py-3 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full text-lg md:text-xl urdu-nastaliq hover:bg-[#D4AF37]/10 transition-all duration-700 leading-normal">
-            میری خدمات کی دنیا میں داخل ہوں
+          <h2 className="text-base md:text-2xl text-white/95 font-medium arabic-text mb-4 md:mb-6 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
+          
+          <p className="text-[#fde68a]/70 text-sm md:text-xl urdu-nastaliq px-4 md:px-10 leading-[2.1] mb-8 md:mb-12" dir="rtl">"{landingData.translation}"</p>
+          
+          <button 
+            onClick={handleEnterClick} 
+            className="px-6 md:px-10 py-1.5 md:py-2 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full hover:bg-[#D4AF37]/10 transition-all duration-700 whitespace-nowrap"
+            style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
+          >
+            <span className="text-sm md:text-xl font-normal leading-normal">
+              میری خدمات کی دنیا میں داخل ہوں
+            </span>
           </button>
         </div>
       </div>
@@ -146,10 +170,23 @@ export default function LandingPage() {
       {/* MAIN CONTENT */}
       <div className={`absolute inset-0 z-[50] transition-opacity duration-[2000ms] ${appState === 'MAIN' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
-          <div className="bg-black/40 backdrop-blur-md border border-[#D4AF37]/30 flex flex-col items-center px-8 py-2 rounded-full">
-            <h2 className="text-[#D4AF37] font-bold text-base md:text-xl urdu-nastaliq mb-1" dir="rtl">{landingData.welcomeTitle}</h2>
-            <p className="text-[#fff7cc] text-xs md:text-sm urdu-nastaliq" dir="rtl">{landingData.welcomeSubtitle}</p>
+        {/* ویلکم ٹیکسٹ */}
+        <div className="absolute top-16 md:top-12 left-1/2 -translate-x-1/2 z-[300] w-[90%] md:w-auto flex justify-center pointer-events-none">
+          <div className="bg-black/40 backdrop-blur-md border border-[#D4AF37]/30 flex flex-col items-center px-4 md:px-8 py-2 md:py-3 rounded-full overflow-hidden max-w-full">
+            <h2 
+              className="text-[#D4AF37] font-bold text-[11px] sm:text-sm md:text-xl mb-2 md:mb-3 whitespace-nowrap" 
+              style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }} 
+              dir="rtl"
+            >
+              {landingData.welcomeTitle}
+            </h2>
+            <p 
+              className="text-[#fff7cc] text-[9px] sm:text-xs md:text-sm whitespace-nowrap" 
+              style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }} 
+              dir="rtl"
+            >
+              {landingData.welcomeSubtitle}
+            </p>
           </div>
         </div>
 
@@ -168,7 +205,7 @@ export default function LandingPage() {
              return <div key={ring} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/25 rounded-[50%] pointer-events-none z-[20]" style={{ width: rx * 2, height: ry * 2 }}></div>
           })}
 
-          {/* مرکزی تصویر - onMouseLeave پر stopHoverAudio لگا دیا گیا ہے */}
+          {/* مرکزی تصویر */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[150] group">
             <Link href="/home" onMouseEnter={() => handlePlanetHover('home', landingData.homeAudio)} onMouseLeave={stopHoverAudio}>
                 <div className="relative w-24 h-24 md:w-36 md:h-36 rounded-full border-2 border-[#fde68a] shadow-[0_0_40px_10px_rgba(139,92,246,0.5)] transition-all duration-700 group-hover:scale-105">
@@ -177,7 +214,7 @@ export default function LandingPage() {
             </Link>
           </div>
 
-          {/* سیارے - onMouseLeave پر stopHoverAudio لگا دیا گیا ہے */}
+          {/* سیارے */}
           <div className="absolute inset-0 z-[200] pointer-events-none">
             {isMounted && planetItems.map((item, index) => {
               const { x, y, depth } = getPlanetPos(index);
@@ -197,14 +234,20 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* معلومات */}
+        {/* معلومات کا ڈبہ */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
           {hoveredIndex !== null && (
             <div className="bg-black/80 backdrop-blur-md px-6 py-2 rounded-full border border-[#D4AF37]/40 flex flex-col md:flex-row items-center gap-2" dir="rtl">
-               <span className="text-sm md:text-base font-bold text-[#D4AF37] urdu-nastaliq">
+               <span 
+                 className="text-sm md:text-base font-bold text-[#D4AF37] whitespace-nowrap"
+                 style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
+               >
                  {hoveredIndex === 'home' ? "مرکزی ہوم پیج" : planetItems[hoveredIndex].title}
                </span>
-               <span className="text-[#fff7cc] text-xs md:text-sm urdu-nastaliq">
+               <span 
+                 className="text-[#fff7cc] text-xs md:text-sm whitespace-nowrap"
+                 style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
+               >
                  {hoveredIndex === 'home' ? "ہوم پیج کے لئے یہاں کلک کریں" : planetItems[hoveredIndex].desc}
                </span>
             </div>
