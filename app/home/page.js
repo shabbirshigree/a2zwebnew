@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaTimes, FaArrowLeft, FaPlay } from "react-icons/fa";
+import { FaTimes, FaArrowLeft, FaPlay, FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib, FaTv, FaMicrophone, FaTrophy, FaImages, FaHandHoldingHeart } from "react-icons/fa";
 import Link from 'next/link';
 
 import { Navbar, HeroSlider } from '../components/Header';
@@ -65,7 +65,19 @@ const booksData = [
     link: '/library#book-inqilab'
   }
 ];
-
+// 🏆 🔴 45 سالہ خدمات کا نیا اور اپڈیٹڈ ڈیٹا لنکس کے ساتھ 🔴 🏆
+const servicesData = [
+  { title: 'ڈپلومیٹک خدمات', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'بین الاقوامی سطح پر سفارتی اور تعمیری کردار کی تفصیلات۔' },
+  { title: 'کلچرل ڈپلومیسی', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'پاک ایران ثقافتی تعلقات اور ہم آہنگی کا فروغ۔' },
+  { title: 'وحدت امت', link: '/unity', icon: <FaUsers size={24} />, desc: 'مسلمانوں کے درمیان اتحاد اور بھائی چارے کی انتھک کوششیں۔' },
+  { title: 'تصانیف و کتب', link: '/library', icon: <FaBook size={24} />, desc: 'علمی، ادبی اور روحانی موضوعات پر شاندار کتب کا ذخیرہ۔' },
+  { title: 'جرنلزم و مضامین', link: '/article', icon: <FaPenNib size={24} />, desc: 'نصف صدی پر محیط صحافتی خدمات اور فکری مضامین۔' },
+  { title: 'ٹی وی چینلز', link: '/channels', icon: <FaTv size={24} />, desc: 'مختلف بین الاقوامی ٹی وی چینلز پر دینی و سماجی خدمات۔' },
+  { title: 'ٹالک شوز', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'اہم قومی و بین الاقوامی موضوعات پر فکر انگیز انٹرویوز۔' },
+  { title: 'اعزازات و ایوارڈز', link: '/awards', icon: <FaTrophy size={24} />, desc: 'قومی اور بین الاقوامی سطح پر ملنے والے اعلیٰ اعزازات۔' },
+  { title: 'پکچر گیلری', link: '/gallery', icon: <FaImages size={24} />, desc: 'یادگار لمحات، شخصیات اور اہم تقریبات کی تصویری جھلکیاں۔' },
+  { title: 'دیگر خدمات', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'سماجی، فلاحی اور دیگر اہم ملی و رفاہی خدمات۔' }
+];
 const getYouTubeId = (url) => {
   if (!url) return '';
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -251,12 +263,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-10 border-t border-[#D4AF37]/20 relative z-10 shadow-inner">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] text-center urdu-text mb-10 underline decoration-[#D4AF37] underline-offset-8">خدمت کے 45 سال</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {journeyData?.map((item, i) => (
-                   <JourneyCard key={i} icon={item.icon} title={item.title} desc={item.desc} />
+ {/* 🔴 45 سالہ خدمات (نیا اینیمیٹڈ اور خوبصورت سیکشن) */}
+       <section className="bg-gradient-to-b from-white to-[#f8f9fa] py-16 border-t-2 border-[#D4AF37]/20 relative z-10 shadow-inner">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="text-center mb-12">
+               <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f4c75] urdu-text mb-4">خدمت کے 45 سال</h2>
+               <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full"></div>
+            </div>
+            
+            {/* یہاں servicesData استعمال ہو رہا ہے جو ہم نے اوپر ایڈ کیا تھا */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {servicesData?.map((item, i) => (
+                   <JourneyCard key={i} icon={item.icon} title={item.title} desc={item.desc} link={item.link} />
                 ))}
             </div>
           </div>
@@ -318,7 +336,6 @@ function CinematicCard({ img, video, name, setVideo }) {
     );
 }
 
-// 🔴 یہاں ہم نے <a> ٹیگ کے بجائے Next.js کا <Link> استعمال کیا ہے تاکہ یہ آپ کے پروجیکٹ کے اندر موجود /library پیج پر آسانی سے راؤٹ ہو سکے۔
 function BookCinematicCard({ img, title, link }) {
     return (
       <Link href={link || "#"} className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
@@ -341,14 +358,34 @@ function NavCard({ icon, title }) {
   );
 }
 
-function JourneyCard({ icon, title, desc }) {
+// 🔴 نیا اور خوبصورت JourneyCard (لنک اور ہوور ایفیکٹ کے ساتھ)
+function JourneyCard({ icon, title, desc, link }) {
   return (
-    <div className="bg-slate-50 rounded-2xl shadow-sm p-6 border border-gray-200 transition-all duration-300 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg group text-left" dir="ltr">
-      <div className="flex items-center justify-start gap-4 mb-3" dir="ltr">
-        <div className="text-[#D4AF37] p-3 bg-white rounded-xl border border-gray-100 group-hover:scale-110 transition-all shadow-sm">{icon}</div>
-        <h3 className="font-bold text-[#0f4c75] text-xl">{title}</h3>
+    <Link href={link || "#"} className="block group h-full">
+      <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent hover:border-[#D4AF37] hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full text-right flex flex-col justify-between" dir="rtl">
+        
+        {/* بیک گراؤنڈ واٹر مارک آئیکون */}
+        <div className="absolute -bottom-6 -left-6 text-[#0f4c75] opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform scale-[3] pointer-events-none">
+          {icon}
+        </div>
+        
+        <div>
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-[#D4AF37] group-hover:to-[#B38728] transition-all duration-500">
+              {icon}
+            </div>
+            <h3 className="font-bold text-[#0f4c75] text-xl md:text-2xl font-amiri group-hover:text-[#D4AF37] transition-colors">{title}</h3>
+          </div>
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium group-hover:text-gray-900 transition-colors relative z-10">{desc}</p>
+        </div>
+        
+        {/* مزید دیکھیں کا اینیمیٹڈ بٹن */}
+        <div className="mt-6 flex items-center justify-end text-[#D4AF37] opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+           <span className="text-sm font-bold ml-2 urdu-text">مزید دیکھیں</span>
+           <FaArrowLeft size={14} />
+        </div>
+        
       </div>
-      <p className="text-gray-600 text-sm leading-relaxed font-medium">{desc}</p>
-    </div>
+    </Link>
   );
 }
