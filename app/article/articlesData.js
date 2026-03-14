@@ -1674,7 +1674,7 @@ export const articlesData = [
     },
     {
         id: 31,
-        category: "special",
+        category: ["special", "islamic_unity"],
         title: "انقلاب اسلامی ایران کے ثمرات", // ٹائٹل یہاں ٹھیک کر دیا
         date: "09 فروری 2022",
         paper: "سپیشل ایڈیشن (روزنامہ ایمرا)",
@@ -1845,7 +1845,7 @@ export const articlesData = [
 
     {
         id: 39,
-        category: "special",
+        category: ["special", "islamic_unity"],
         title: "انقلاب اسلامی ایران اور جہان اسلام کا استحکام",
         date: "11 فروری 2021",
         paper: "سپیشل ایڈیشن (روزنامہ افلاک)",
@@ -1860,7 +1860,7 @@ export const articlesData = [
     },
     {
         id: 46,
-        category: "special",
+        category: ["special", "islamic_unity"],
         title: "انقلاب اسلامی ایران کے اثرات",
         date: "10 Feb 2015",
         paper: "روزنامہ کشمیر لنک (خصوصی ایڈیشن)",
@@ -3237,7 +3237,7 @@ export const articlesData = [
     },
     {
         id: 20,
-        category: "column",   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
+        category: ["column", "islamic_unity"],   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
         title: " جڑانوالہ واقعہ ہماری زندگی کا ایک سیاہ دن",
         date: "16 ستمبر 2023",
         paper: "نوائے وقت۔ فیملی میگزین",

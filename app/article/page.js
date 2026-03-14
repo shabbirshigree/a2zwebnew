@@ -16,27 +16,28 @@ export default function ArticlesPage() {
   useEffect(() => { setMounted(true); }, []);
   if (!mounted) return null;
 
-  // 🔴 یہ وہ جادوئی کوڈ ہے جو ایک کالم کو کئی کیٹیگریز میں شو کروائے گا
-  const filteredArticles = (articlesData || []).filter(article => {
-    const title = article.title ? article.title.toLowerCase() : '';
-    const matchesSearch = title.includes(searchTerm.toLowerCase());
-    
-    // چیک کریں کہ کیٹیگری لسٹ (Array) ہے یا سنگل ورڈ
-    const isMultiCategory = Array.isArray(article.category);
-    const matchesCategory = filterCategory === 'all' || 
-                            (isMultiCategory 
-                              ? article.category.includes(filterCategory) 
-                              : article.category === filterCategory);
-                              
-    return matchesSearch && matchesCategory;
-  });
+  // 🔴 فلٹرنگ اور سورٹنگ (Sorting) کا مکمل کوڈ
+  const filteredArticles = (articlesData || [])
+    .filter(article => {
+      const title = article.title ? article.title.toLowerCase() : '';
+      const matchesSearch = title.includes(searchTerm.toLowerCase());
+      
+      const isMultiCategory = Array.isArray(article.category);
+      const matchesCategory = filterCategory === 'all' || 
+                              (isMultiCategory 
+                                ? article.category.includes(filterCategory) 
+                                : article.category === filterCategory);
+                                
+      return matchesSearch && matchesCategory;
+    })
+    .sort((a, b) => b.id - a.id); // 🌟 یہ وہ نئی لائن ہے جو سب سے نئے (بڑی ID والے) کالم کو اوپر لائے گی!
 
   const categories = [
     { id: 'column', label: '✍️ اردو' },
     { id: 'punjabi', label: '📖 پنجابی' },
     { id: 'english', label: '🅰️ English' },
     { id: 'special', label: '⭐ سپیشل ایڈیشن' },
-    { id: 'islamic_unity', label: '🤝 اسلامی وحدت' }, // <-- آپ کا نیا بٹن
+    { id: 'islamic_unity', label: '🤝 اسلامی وحدت' },
     { id: 'international', label: '🌍 انٹرنیشنل' },
     { id: 'all', label: '🔍 تمام' }
   ];
@@ -152,7 +153,6 @@ export default function ArticlesPage() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                         onError={(e) => e.target.src='https://via.placeholder.com/300x200?text=No+Image'} 
                       />
-                      {/* کارڈ کے اوپر بیج (Badge) دکھانے کا کوڈ */}
                       <div className="absolute top-3 right-3 bg-[#D4AF37] text-[#0b314d] text-xs font-bold px-3 py-1 rounded-full shadow-md">
                         {categories.find(c => c.id === (Array.isArray(article.category) ? article.category[0] : article.category))?.label.replace(/[^a-zA-Zآ-ی]/g, '').trim()}
                       </div>
