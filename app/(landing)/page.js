@@ -135,7 +135,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 🔴 🐻 دب اکبر (Ursa Major) - اب یہ چاند اور زمین کی طرح فکسڈ بیک گراؤنڈ کا حصہ بن گیا ہے */}
+      {/* 🔴 🐻 دب اکبر (Ursa Major) */}
       {isMounted && (
         <div className="fixed bottom-[12%] left-[5%] md:bottom-[15%] md:left-[8%] z-10 w-24 md:w-28 opacity-70 pointer-events-none mix-blend-screen">
           <img 
@@ -150,11 +150,8 @@ export default function LandingPage() {
       <div className={`absolute inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <div className="text-center max-w-2xl px-6 md:px-8 flex flex-col items-center">
           <h1 className="text-sm md:text-lg text-[#D4AF37] font-bold mb-4 md:mb-5 arabic-text tracking-[0.3em]">{landingData.bismillah}</h1>
-          
           <h2 className="text-base md:text-2xl text-white/95 font-medium arabic-text mb-4 md:mb-6 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
-          
           <p className="text-[#fde68a]/70 text-sm md:text-xl urdu-nastaliq px-4 md:px-10 leading-[2.1] mb-8 md:mb-12" dir="rtl">"{landingData.translation}"</p>
-          
           <button 
             onClick={handleEnterClick} 
             className="px-6 md:px-10 py-1.5 md:py-2 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full hover:bg-[#D4AF37]/10 transition-all duration-700 whitespace-nowrap"
@@ -234,22 +231,22 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* معلومات کا ڈبہ */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
+        {/* معلومات کا ڈبہ - موبائل کے لئے پوزیشن اوپر کر دی گئی ہے */}
+        <div className="absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
           {hoveredIndex !== null && (
             <div className="bg-black/80 backdrop-blur-md px-6 py-2 rounded-full border border-[#D4AF37]/40 flex flex-col md:flex-row items-center gap-2" dir="rtl">
-               <span 
-                 className="text-sm md:text-base font-bold text-[#D4AF37] whitespace-nowrap"
-                 style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
-               >
-                 {hoveredIndex === 'home' ? "مرکزی ہوم پیج" : planetItems[hoveredIndex].title}
-               </span>
-               <span 
-                 className="text-[#fff7cc] text-xs md:text-sm whitespace-nowrap"
-                 style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
-               >
-                 {hoveredIndex === 'home' ? "ہوم پیج کے لئے یہاں کلک کریں" : planetItems[hoveredIndex].desc}
-               </span>
+                <span 
+                  className="text-sm md:text-base font-bold text-[#D4AF37] whitespace-nowrap"
+                  style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
+                >
+                  {hoveredIndex === 'home' ? "مرکزی ہوم پیج" : planetItems[hoveredIndex].title}
+                </span>
+                <span 
+                  className="text-[#fff7cc] text-[10px] md:text-sm whitespace-nowrap"
+                  style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
+                >
+                  {hoveredIndex === 'home' ? "ہوم پیج کے لئے یہاں کلک کریں" : planetItems[hoveredIndex].desc}
+                </span>
             </div>
           )}
         </div>
