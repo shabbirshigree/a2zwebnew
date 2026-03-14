@@ -3021,7 +3021,7 @@ export const articlesData = [
 
     {
         id: 86,
-        category: "column",
+        category: ["column", "islamic_unity"],
         title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ",
         date: "10 ستمبر 2025",
         paper: "ملکی و غیر ملکی اخبارات",
