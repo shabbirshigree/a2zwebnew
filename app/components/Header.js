@@ -8,57 +8,80 @@ import {
   FaHandshake, FaLandmark, FaUsers, FaPalette, FaMicrophone 
 } from 'react-icons/fa';
 import Link from 'next/link';
-// 🔴 یہاں useRouter کا اضافہ کیا گیا ہے تاکہ سرچ کرنے پر پیج تبدیل ہو سکے
 import { usePathname, useRouter } from 'next/navigation';
 
-// 🔴 1. ٹاپ بار 
+// 🔴 1. ٹاپ بار (جس میں نیا متحرک سرچ بار شامل کیا گیا ہے)
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [language, setLanguage] = useState('ur');
-  const router = useRouter(); // 🔴 راؤٹر کو کال کیا گیا ہے
+  const router = useRouter(); 
 
-  // 🔴 سرچ کا فنکشن جو یوزر کو سرچ پیج پر لے جائے گا
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim() !== '') {
-      // یہ آپ کو /search پیج پر لے جائے گا اور ساتھ سرچ کا لفظ بھی بھیجے گا
       router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
     }
   };
 
   return (
-    <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-4 border-b border-[#D4AF37]/30 relative z-50 flex flex-row items-center justify-between h-[28px] overflow-hidden">
+    /* نوٹ: ٹاپ بار کی اونچائی (h-28px) کو تھوڑا سا بڑھا کر (h-[36px]) کیا گیا ہے تاکہ نیا سرچ بار خوبصورت نظر آئے */
+    <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-4 border-b border-[#D4AF37]/30 relative z-50 flex flex-row items-center justify-between h-[36px] overflow-hidden">
       
-      {/* 🔴 سرچ باکس کو form میں تبدیل کر دیا گیا ہے تاکہ Enter دبانے سے بھی کام کرے */}
-      <form onSubmit={handleSearch} className="relative flex items-center w-[75px] md:w-[115px] z-10">
+      {/* 🔴 سرچ بار کی لہر (Shimmer) کی اینیمیشن کا کوڈ */}
+      <style>{`
+        @keyframes shimmer {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+        .shimmer-effect::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.25), transparent);
+          animation: shimmer 2.5s infinite linear;
+          pointer-events: none;
+          z-index: 0;
+        }
+      `}</style>
+
+      {/* 🔴 نیا، متحرک اور پرکشش سرچ بار */}
+      <form 
+        onSubmit={handleSearch} 
+        className="relative flex items-center overflow-hidden rounded-full border border-[#D4AF37]/40 bg-[#0f4c75] shadow-[inset_0_0_5px_rgba(0,0,0,0.3)] transition-all duration-500 shimmer-effect w-[130px] focus-within:w-[190px] md:w-[220px] md:focus-within:w-[320px] h-[24px] md:h-[28px] z-10 group"
+        dir="rtl"
+      >
         <input 
           type="text" 
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="تلاش..." 
-          className="w-full bg-white/10 text-white placeholder-gray-400 text-[8px] md:text-[10px] rounded-full py-0.5 pr-4 h-[18px] md:h-[22px] focus:outline-none border border-[#D4AF37]/20"
-          dir="rtl"
+          placeholder="آپ کیا تلاش کرنا چاہتے ہیں؟" 
+          className="w-full bg-transparent text-white placeholder-gray-300/80 text-[9px] md:text-[11px] py-1 pr-7 pl-2 outline-none urdu-text z-10 relative transition-all"
         />
-        <button type="submit" className="absolute right-1.5 text-[#D4AF37] text-[8px] md:text-[10px]">
-          <FaSearch />
+        {/* سرچ کا آئیکن جو ماؤس لے جانے پر گھومے گا اور بڑا ہوگا */}
+        <button 
+          type="submit" 
+          title="تلاش کریں"
+          className="absolute right-1.5 z-20 text-[#D4AF37] group-hover:text-white group-hover:scale-125 group-hover:-rotate-12 transition-all duration-300"
+        >
+          <FaSearch className="text-[10px] md:text-[12px]" />
         </button>
       </form>
 
       <div className="flex-1 text-center z-10">
-        <span className="text-[10px] md:text-[13px] font-bold arabic-text whitespace-nowrap text-white/90">
+        <span className="text-[10px] md:text-[13px] font-bold arabic-text whitespace-nowrap text-white/90 drop-shadow-md">
           مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ الْعَلِیِّ الْعَظِیْمِ
         </span>
       </div>
 
       <div className="flex items-center gap-1 z-10" dir="ltr">
-        <button onClick={() => setLanguage('en')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37]">ENG</button>
-        <button onClick={() => setLanguage('ur')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37]">اردو</button>
+        <button onClick={() => setLanguage('en')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors">ENG</button>
+        <button onClick={() => setLanguage('ur')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors">اردو</button>
       </div>
     </div>
   );
 }
 
-// 🔴 2. مین ہیڈر اور سلائیڈر
+// 🔴 2. مین ہیڈر اور سلائیڈر (یہ بالکل ویسا ہی ہے جیسا آپ کا تھا)
 export function HeroSlider() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(0);

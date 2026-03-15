@@ -3,6 +3,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { FaSearch, FaArrowLeft, FaEye, FaFolderOpen } from 'react-icons/fa';
+import Fuse from 'fuse.js'; // 🔴 نئی سمارٹ سرچ لائبریری
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -28,9 +29,6 @@ function SearchResults() {
 
   useEffect(() => {
     if (query) {
-      const searchWord = query.toLowerCase();
-
-      // 🔴 انتہائی ایڈوانسڈ ڈیٹا ایکسٹریکٹر (جو ہر قسم کا چھپا ہوا ڈیٹا نکال لائے گا)
       const getSafeData = (data, url, name) => {
         if (!data) return [];
         let extractedArray = [];
@@ -38,28 +36,16 @@ function SearchResults() {
         if (Array.isArray(data)) {
           extractedArray = data;
         } else if (typeof data === 'object') {
-          // Object کی ہر ویلیو کو چیک کریں
           Object.values(data).forEach(val => {
             if (Array.isArray(val)) {
-              extractedArray = [...extractedArray, ...val]; // اگر اندر کوئی لسٹ ہے تو اسے نکال لیں
-            } else if (val && typeof val === 'object') {
-              extractedArray.push(val); // اگر اندر کوئی اور Object (جیسے کوئی کتاب یا ویڈیو) ہے تو اسے بھی ڈال لیں
+              extractedArray = [...extractedArray, ...val];
             }
           });
-          
-          // اگر یہ خود ہی ایک سنگل ڈیٹا ہے تو اسے بھی شامل کر لیں
-          if (extractedArray.length === 0 && (data.title || data.name || data.desc || data.description)) {
-             extractedArray.push(data);
-          }
         }
         
-        // صرف درست ڈیٹا آگے بھیجیں اور اس پر لنک لگا دیں
-        return extractedArray
-          .filter(item => item && typeof item === 'object' && !Array.isArray(item))
-          .map(item => ({ ...item, sectionUrl: url, sectionName: name }));
+        return extractedArray.map(item => ({ ...item, sectionUrl: url, sectionName: name }));
       };
 
-      // پوری ویب سائٹ کا ڈیٹا اکٹھا کریں
       const allWebsiteData = [
         ...getSafeData(articlesData, '/article', 'کالمز'),
         ...getSafeData(imamRezaImages, '/imam-reza', 'امام رضا'),
@@ -79,17 +65,26 @@ function SearchResults() {
         ...getSafeData(radioHistory, '/about', 'تعارف')
       ];
 
-      // سرچ کی فلٹریشن
-      const filtered = allWebsiteData.filter(item => {
-        // ڈیٹا کے تمام ٹیکسٹ کو ایک String بنا کر چیک کریں تاکہ کوئی لفظ مس نہ ہو
-        const allText = Object.values(item)
-          .map(val => (val && typeof val !== 'object' ? String(val).toLowerCase() : ''))
-          .join(' ');
-          
-        return allText.includes(searchWord);
-      });
+      // 🔴 Fuse.js کی سمارٹ سیٹنگز
+      const fuseOptions = {
+        includeScore: true,
+        threshold: 0.4, // یہ تھوڑی بہت سپیلنگ کی غلطیوں کو معاف کر دے گا
+        keys: [
+          { name: 'title', weight: 0.8 }, // ٹائٹل کو 80 فیصد اہمیت دی گئی ہے
+          { name: 'sectionName', weight: 0.5 }, // کیٹیگری کے نام کو 50 فیصد
+          { name: 'excerpt', weight: 0.2 }, // تفصیل کو صرف 20 فیصد
+          { name: 'desc', weight: 0.2 },
+          { name: 'description', weight: 0.2 }
+        ]
+      };
 
-      setResults(filtered);
+      const fuse = new Fuse(allWebsiteData, fuseOptions);
+      const searchResult = fuse.search(query);
+      
+      // Fuse.js رزلٹس کو ایک خاص فارمیٹ میں لاتا ہے، اسے واپس نارمل کر رہے ہیں
+      const finalResults = searchResult.map(result => result.item);
+
+      setResults(finalResults);
     }
   }, [query]);
 
@@ -106,36 +101,22 @@ function SearchResults() {
         </div>
         {results.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-right">
-            {results.map((item, index) => {
-              // امیج اور ٹائٹل کے لیے محفوظ طریقہ تاکہ کوئی چیز خالی نہ رہے
-              const displayTitle = item.title || item.name || item.heading || item.caption || item.bookName || 'بغیر عنوان';
-              const displayDesc = item.excerpt || item.desc || item.description || item.detail || item.text || item.content || '';
-              const displayImage = typeof item.image === 'string' ? item.image : (typeof item.img === 'string' ? item.img : (typeof item.thumbnail === 'string' ? item.thumbnail : (typeof item.cover === 'string' ? item.cover : 'https://via.placeholder.com/400x300?text=No+Image')));
-
-              return (
-                <Link href={item.sectionUrl} key={index} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 group flex flex-col h-full">
-                  <div className="h-48 overflow-hidden bg-gray-100 relative">
-                    <img src={displayImage} alt={displayTitle} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                    <div className="absolute top-3 right-3 bg-[#0b314d] text-[#D4AF37] text-[10px] font-bold px-3 py-1 rounded-full shadow-md border border-[#D4AF37]/30 urdu-text">
-                      <FaFolderOpen className="inline ml-1" /> {item.sectionName}
-                    </div>
-                  </div>
-                  <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="text-lg font-bold text-[#0b314d] mb-2 urdu-text line-clamp-2 leading-snug">{displayTitle}</h3>
-                    <p className="text-gray-600 text-sm urdu-text line-clamp-3 mb-4">{displayDesc}</p>
-                    <div className="mt-auto pt-3 border-t border-gray-100 text-left">
-                      <span className="text-[#0f4c75] font-bold text-xs flex items-center justify-end gap-1 urdu-text">مزید دیکھیں <FaEye /></span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+            {results.map((item, index) => (
+              <Link href={item.sectionUrl} key={index} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 group flex flex-col h-full">
+                <div className="h-48 overflow-hidden bg-gray-100 relative">
+                  <img src={item.image || 'https://via.placeholder.com/400x300?text=No+Image'} alt={item.title || 'تصویر'} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute top-3 right-3 bg-[#0b314d] text-[#D4AF37] text-[10px] font-bold px-3 py-1 rounded-full shadow-md border border-[#D4AF37]/30 urdu-text"><FaFolderOpen className="inline ml-1" /> {item.sectionName}</div>
+                </div>
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold text-[#0b314d] mb-2 urdu-text line-clamp-2 leading-snug">{item.title || 'بغیر عنوان'}</h3>
+                  <p className="text-gray-600 text-sm urdu-text line-clamp-3 mb-4">{item.excerpt || item.desc || item.description || ''}</p>
+                  <div className="mt-auto pt-3 border-t border-gray-100 text-left"><span className="text-[#0f4c75] font-bold text-xs flex items-center justify-end gap-1 urdu-text">مزید دیکھیں <FaEye /></span></div>
+                </div>
+              </Link>
+            ))}
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-2xl border border-gray-100">
-            <FaSearch className="text-6xl text-gray-300 mx-auto mb-4" />
-            <p className="text-2xl text-gray-500 urdu-text">کوئی نتیجہ نہیں ملا!</p>
-          </div>
+          <div className="text-center py-20 bg-white rounded-2xl border border-gray-100"><FaSearch className="text-6xl text-gray-300 mx-auto mb-4" /><p className="text-2xl text-gray-500 urdu-text">اس لفظ سے متعلق کوئی نتیجہ نہیں ملا!</p></div>
         )}
       </div>
     </div>
