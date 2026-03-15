@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 🔴 تصویروں کے لیے کلاؤڈنری کی اجازت یہاں شامل کی گئی ہے
+  // 🔴 تصاویر کے لیے کلاؤڈنری کی اجازت
   images: {
     remotePatterns: [
       {
@@ -10,31 +10,36 @@ const nextConfig = {
     ],
   },
 
-  /* سیکیورٹی ہیڈرز کا اضافہ یہاں کیا گیا ہے */
+  /* سیکیورٹی ہیڈرز کا اضافہ */
   async headers() {
     return [
       {
-        source: '/(.*)', // یہ تمام صفحات اور فائلز پر لاگو ہوگا
+        source: '/(.*)', 
         headers: [
           {
+            key: 'Content-Security-Policy',
+            // یہ ہیکرز کو غلط اسکرپٹس چلانے سے روکتا ہے
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: res.cloudinary.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://vitals.vercel-insights.com;",
+          },
+          {
             key: 'X-Frame-Options',
-            value: 'DENY', // کوئی آپ کی ویب سائٹ کو کسی اور فریم یا جعلی سائٹ میں نہیں کھول سکے گا
+            value: 'DENY', 
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff', // براؤزر کو مجبور کرے گا کہ وہ فائل کی ٹائپ کو تبدیل نہ کرے
+            value: 'nosniff', 
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block', // کراس سائٹ اسکرپٹنگ (XSS) حملوں سے بچاؤ
+            value: '1; mode=block', 
           },
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin', // ڈیٹا ٹرانسفر کو محفوظ بنائے گا
+            value: 'strict-origin-when-cross-origin', 
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()', // ویب سائٹ کو کیمرہ یا لوکیشن استعمال کرنے سے روکے گا
+            value: 'camera=(), microphone=(), geolocation=()', 
           }
         ],
       },
@@ -42,4 +47,5 @@ const nextConfig = {
   },
 };
 
+// Next.js کے نئے ورژن میں export default کا استعمال صحیح ہے
 export default nextConfig;

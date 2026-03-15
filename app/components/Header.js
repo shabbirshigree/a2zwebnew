@@ -5,16 +5,36 @@ import {
   FaImages, FaNewspaper, FaTv, FaBriefcase,
   FaYoutube, FaFacebook, FaWhatsapp, FaTwitter, FaTiktok, 
   FaSearch, FaGlobe, FaAward,
-  FaHandshake, FaLandmark, FaUsers, FaPalette, FaMicrophone 
+  FaHandshake, FaLandmark, FaUsers, FaPalette, FaMicrophone, FaStop 
 } from 'react-icons/fa';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
-// 🔴 1. ٹاپ بار (جس میں نیا متحرک سرچ بار شامل کیا گیا ہے)
+// 🔴 1. ٹاپ بار (سرچ، مائیک اور سینٹرڈ ماشاءاللہ)
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [language, setLanguage] = useState('ur');
+  const [isListening, setIsListening] = useState(false);
   const router = useRouter(); 
+
+  const startListening = () => {
+    // براؤزر کمپیٹیبلٹی چیک
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("معذرت، مائیک سپورٹڈ نہیں ہے۔ برائے مہربانی کروم یا ایج براؤزر استعمال کریں۔");
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'ur-PK';
+    recognition.onstart = () => setIsListening(true);
+    recognition.onend = () => setIsListening(false);
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      setSearchQuery(transcript);
+      router.push(`/search?q=${encodeURIComponent(transcript)}`);
+    };
+    recognition.start();
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -24,64 +44,72 @@ export function Navbar() {
   };
 
   return (
-    /* نوٹ: ٹاپ بار کی اونچائی (h-28px) کو تھوڑا سا بڑھا کر (h-[36px]) کیا گیا ہے تاکہ نیا سرچ بار خوبصورت نظر آئے */
-    <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-4 border-b border-[#D4AF37]/30 relative z-50 flex flex-row items-center justify-between h-[36px] overflow-hidden">
+    <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-6 border-b border-[#D4AF37]/30 relative z-50 flex items-center justify-between h-[45px] overflow-hidden">
       
-      {/* 🔴 سرچ بار کی لہر (Shimmer) کی اینیمیشن کا کوڈ */}
       <style>{`
-        @keyframes shimmer {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
-        }
+        @keyframes shimmer { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         .shimmer-effect::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0; width: 100%; height: 100%;
-          background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.25), transparent);
-          animation: shimmer 2.5s infinite linear;
-          pointer-events: none;
-          z-index: 0;
+          content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.15), transparent);
+          animation: shimmer 3s infinite linear; pointer-events: none; z-index: 0;
         }
+        @keyframes wave-grow { 0%, 100% { height: 4px; } 50% { height: 14px; } }
+        .wave-bar { width: 2px; background-color: #ef4444; margin: 0 1px; border-radius: 2px; animation: wave-grow 1s infinite ease-in-out; }
       `}</style>
 
-      {/* 🔴 نیا، متحرک اور پرکشش سرچ بار */}
-      <form 
-        onSubmit={handleSearch} 
-        className="relative flex items-center overflow-hidden rounded-full border border-[#D4AF37]/40 bg-[#0f4c75] shadow-[inset_0_0_5px_rgba(0,0,0,0.3)] transition-all duration-500 shimmer-effect w-[130px] focus-within:w-[190px] md:w-[220px] md:focus-within:w-[320px] h-[24px] md:h-[28px] z-10 group"
-        dir="rtl"
-      >
-        <input 
-          type="text" 
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="آپ کیا تلاش کرنا چاہتے ہیں؟" 
-          className="w-full bg-transparent text-white placeholder-gray-300/80 text-[9px] md:text-[11px] py-1 pr-7 pl-2 outline-none urdu-text z-10 relative transition-all"
-        />
-        {/* سرچ کا آئیکن جو ماؤس لے جانے پر گھومے گا اور بڑا ہوگا */}
-        <button 
-          type="submit" 
-          title="تلاش کریں"
-          className="absolute right-1.5 z-20 text-[#D4AF37] group-hover:text-white group-hover:scale-125 group-hover:-rotate-12 transition-all duration-300"
+      {/* 🔍 سرچ بار */}
+      <div className="flex items-center">
+        <form 
+          onSubmit={handleSearch} 
+          className="relative flex items-center overflow-hidden rounded-full border border-[#D4AF37]/40 bg-[#0f4c75]/50 shimmer-effect w-[100px] sm:w-[130px] md:w-[280px] h-[28px] md:h-[32px] transition-all duration-500"
+          dir="rtl"
         >
-          <FaSearch className="text-[10px] md:text-[12px]" />
-        </button>
-      </form>
+          <input 
+            type="text" 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={isListening ? "سن رہا ہوں..." : "تلاش..."} 
+            className="w-full bg-transparent text-white placeholder-gray-400 text-[10px] md:text-[13px] py-1 pr-7 pl-12 md:pl-16 outline-none urdu-text"
+          />
+          <button type="submit" aria-label="Search" className="absolute right-2 text-[#D4AF37] hover:scale-110">
+            <FaSearch className="text-[10px] md:text-[13px]" />
+          </button>
+          
+          <div className="absolute left-1 flex items-center h-full">
+            {isListening && (
+              <div className="flex items-center mr-1">
+                <div className="wave-bar"></div><div className="wave-bar" style={{animationDelay:'0.2s'}}></div>
+              </div>
+            )}
+            <button 
+              type="button" 
+              onClick={startListening} 
+              aria-label="Voice Search"
+              className={`p-1.5 rounded-full transition-all ${isListening ? 'text-red-500 bg-white/10' : 'text-[#D4AF37] hover:text-white'}`}
+            >
+              {isListening ? <FaStop className="text-[9px] md:text-[11px]" /> : <FaMicrophone className="text-[10px] md:text-[13px]" />}
+            </button>
+          </div>
+        </form>
+      </div>
 
-      <div className="flex-1 text-center z-10">
-        <span className="text-[10px] md:text-[13px] font-bold arabic-text whitespace-nowrap text-white/90 drop-shadow-md">
-          مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ الْعَلِیِّ الْعَظِیْمِ
+      {/* 🕋 ماشاءاللہ - مکمل سینٹر */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+        <span className="text-[11px] md:text-[18px] font-bold arabic-text text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-nowrap block">
+          مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ
         </span>
       </div>
 
-      <div className="flex items-center gap-1 z-10" dir="ltr">
-        <button onClick={() => setLanguage('en')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors">ENG</button>
-        <button onClick={() => setLanguage('ur')} className="text-[8px] md:text-[10px] px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-colors">اردو</button>
+      <div className="flex items-center gap-1">
+        <button className="text-[8px] md:text-[11px] font-bold px-2 py-[2px] rounded border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-all">
+          اردو
+        </button>
       </div>
     </div>
   );
 }
 
-// 🔴 2. مین ہیڈر اور سلائیڈر (یہ بالکل ویسا ہی ہے جیسا آپ کا تھا)
+// 🔴 2. ہیرو سلائیڈر اور مینو
 export function HeroSlider() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(0);
@@ -114,11 +142,11 @@ export function HeroSlider() {
   ];
 
   const socialLinks = [
-    { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
-    { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
-    { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
-    { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
-    { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
+    { name: "YouTube", icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
+    { name: "Facebook", icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
+    { name: "WhatsApp", icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
+    { name: "TikTok", icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
+    { name: "Twitter", icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
   ];
 
   useEffect(() => {
@@ -130,70 +158,38 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      
-      {/* 📸 سلائیڈر */}
       <div className="relative w-full aspect-[16/7] md:aspect-[16/6] lg:aspect-[16/5.5] overflow-hidden bg-[#0b314d]">
         {slides.map((s, i) => (
           <div key={i} className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${i === current ? 'opacity-100 z-20' : 'opacity-0 z-10'}`}>
-            <img src={s.img} alt="Slide" className="w-full h-full object-fill block" />
+            {/* Added alt tag and loading attribute for better performance */}
+            <img src={s.img} alt={`Slide ${i + 1}`} loading={i === 0 ? "eager" : "lazy"} className="w-full h-full object-fill block" />
           </div>
         ))}
       </div>
 
-      {/* 🔹 مرکزی سیکشن */}
       <div className="bg-[#0f4c75] py-2 px-2 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
-        
-        {/* قرآن لوگو اینیمیشن */}
-        <div className="relative z-10 mt-1 animate-shrink-enter">
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#D4AF37] blur-[30px] opacity-30 animate-pulse"></div>
-           <div className="relative text-[#D4AF37] text-2xl md:text-3xl drop-shadow-md animate-breath">
-             <FaBookOpen />
-           </div>
-        </div>
-
-        <div className="relative z-10">
-          <p className="font-amiri text-white text-[9px] md:text-[12px] font-bold tracking-wide mt-1">
-              اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ
-          </p>
-        </div>
-
+        <p className="font-amiri text-white text-[9px] md:text-[12px] font-bold tracking-wide mt-1 animate-pulse">اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ</p>
         <div className="flex flex-col items-center mt-2">
-          <h1 className="text-xl md:text-3xl font-bold text-[#D4AF37] tracking-wider uppercase drop-shadow-lg leading-tight">
-            Haji Shabbir Ahmed Shigri
-          </h1>
-          {/* عہدوں کی ترتیب (دائیں سے بائیں) */}
-          <p className="text-white text-[8px] md:text-[11px] font-semibold tracking-tight border-t border-[#D4AF37]/30 pt-1 mt-1 uppercase flex flex-row-reverse flex-wrap justify-center gap-x-2 md:gap-x-3" dir="rtl">
-            <span>Founder Noor-ul-Quran Project</span>
-            <span className="opacity-50">|</span>
-            <span>CEO Noor Productions</span>
-            <span className="opacity-50">|</span>
-            <span>Senior Journalist</span>
-            <span className="opacity-50">|</span>
-            <span>Gold Medalist</span>
+          <h1 className="text-xl md:text-4xl font-bold text-[#D4AF37] tracking-wider uppercase drop-shadow-lg leading-tight">Haji Shabbir Ahmed Shigri</h1>
+          <p className="text-white text-[8px] md:text-[12px] font-semibold tracking-tight border-t border-[#D4AF37]/30 pt-1 mt-1 uppercase flex flex-row-reverse flex-wrap justify-center gap-x-2 md:gap-x-3" dir="rtl">
+            <span>Founder Noor-ul-Quran Project</span><span className="opacity-50">|</span><span>CEO Noor Productions</span><span className="opacity-50">|</span><span>Senior Journalist</span><span className="opacity-50">|</span><span>Gold Medalist</span>
           </p>
         </div>
-
         <div className="flex gap-4 mt-2 justify-center z-50">
           {socialLinks.map((s, i) => (
-            <Link key={i} href={s.link} target="_blank" className="text-white transition-all duration-500 hover:rotate-[360deg] hover:scale-125">
-              <span className={`text-base md:text-lg block drop-shadow-md ${s.color}`}>{s.icon}</span>
+            <Link key={i} href={s.link} target="_blank" aria-label={s.name} className="text-white transition-all duration-500 hover:rotate-[360deg] hover:scale-125">
+              <span className={`text-base md:text-xl block drop-shadow-md ${s.color}`}>{s.icon}</span>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* 🧭 مینو بار */}
       <div className="bg-[#0b314d] py-3 px-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
-        <nav className="flex flex-wrap justify-center gap-x-2 md:gap-x-3.5 gap-y-2.5 items-center" dir="rtl">
+        <nav className="flex flex-wrap justify-center gap-x-2 md:gap-x-4 gap-y-2 items-center" dir="rtl">
           {menuItems.map((item, idx) => (
-            <Link key={idx} href={item.link} className={`group relative flex flex-row items-center gap-1.5 px-1.5 md:px-2 py-1 transition-all duration-300 hover:-translate-y-1.5 hover:scale-110 hover:drop-shadow-[0_4px_4px_rgba(212,175,55,0.4)] ${pathname === item.link ? 'text-[#D4AF37]' : 'text-white/80 hover:text-white'}`}>
-              <span className="text-xs md:text-sm transition-all duration-500 group-hover:scale-[1.3] group-hover:-translate-y-1 group-hover:rotate-[360deg] group-hover:text-[#D4AF37] z-10">
-                {item.icon}
-              </span>
-              <span className="urdu-text text-[13px] md:text-[15px] font-extrabold">
-                {item.name}
-              </span>
-              <div className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${pathname === item.link ? 'w-full' : 'w-0 group-hover:w-full'}`}></div>
+            <Link key={idx} href={item.link} className={`group relative flex flex-row items-center gap-1.5 px-2 py-1 transition-all duration-300 hover:scale-110 ${pathname === item.link ? 'text-[#D4AF37]' : 'text-white/80 hover:text-white'}`}>
+              <span className="text-xs md:text-sm transition-all duration-500 group-hover:text-[#D4AF37]">{item.icon}</span>
+              <span className="urdu-text text-[13px] md:text-[16px] font-bold">{item.name}</span>
             </Link>
           ))}
         </nav>
@@ -202,23 +198,17 @@ export function HeroSlider() {
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
         .font-amiri { font-family: 'Amiri', serif; }
-
-        @keyframes shrink-enter {
-          0% { transform: scale(3); opacity: 0; }
-          100% { transform: scale(1); opacity: 1; }
-        }
-        .animate-shrink-enter {
-          animation: shrink-enter 1.5s ease-out forwards;
-        }
-
-        @keyframes breath {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.1); }
-        }
-        .animate-breath {
-          animation: breath 3s infinite ease-in-out;
-        }
+        .arabic-text { font-family: 'Amiri', serif; }
       `}</style>
     </div>
+  );
+}
+
+export default function Header() {
+  return (
+    <>
+      <Navbar />
+      <HeroSlider />
+    </>
   );
 }
