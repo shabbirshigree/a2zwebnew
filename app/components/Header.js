@@ -10,7 +10,6 @@ import {
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
-// 🔴 1. ٹاپ بار (برابر سائز کے لینگویج بٹنز کے ساتھ)
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -18,7 +17,6 @@ export function Navbar() {
   const router = useRouter(); 
   const recognitionRef = useRef(null);
 
-  // مائیکروفون سیٹ اپ
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -47,7 +45,6 @@ export function Navbar() {
     }
   }, [router]);
 
-  // مائیکروفون کو ایکٹیویٹ کرنے کا طریقہ
   const toggleListening = async () => {
     if (!recognitionRef.current) return;
 
@@ -75,12 +72,53 @@ export function Navbar() {
 
   return (
     <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-6 border-b border-[#D4AF37]/30 relative z-50 flex items-center justify-between h-[45px]">
+      
+      {/* 🔴 سی ایس ایس اینیمیشنز کی سیٹنگ (صرف سفید ستاروں کے لیے) */}
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
+        .font-kufi { font-family: 'Reem Kufi', sans-serif; }
+        
         @keyframes wave-grow { 0%, 100% { height: 4px; } 50% { height: 14px; } }
         .wave-bar { width: 2px; background-color: #ef4444; margin: 0 1px; border-radius: 2px; animation: wave-grow 1s infinite ease-in-out; }
+
+        /* 🔴 سفید ستاروں کا ہلکا ایفیکٹ */
+        @keyframes star-out {
+          0% { transform: scale(0) translate(0, 0); opacity: 0; }
+          20% { opacity: 1; }
+          100% { transform: scale(1.5) translate(var(--star-x), var(--star-y)); opacity: 0; }
+        }
+
+        .stars-effect {
+          position: relative;
+          display: inline-block;
+        }
+
+        .stars-effect::before,
+        .stars-effect::after {
+          content: '';
+          position: absolute;
+          width: 2px; height: 2px;
+          border-radius: 50%;
+          background-color: white;
+          opacity: 0;
+          pointer-events: none;
+          animation: star-out 3s infinite ease-out;
+          box-shadow: 0 0 4px white;
+        }
+
+        .stars-effect::before {
+          top: -3px; left: 10%;
+          --star-x: -10px; --star-y: -15px;
+          animation-delay: 0s;
+        }
+
+        .stars-effect::after {
+          bottom: -3px; right: 10%;
+          --star-x: 10px; --star-y: 15px;
+          animation-delay: 1.5s;
+        }
       `}</style>
 
-      {/* 🔍 سرچ اور مائیک */}
       <div className="flex items-center">
         <form onSubmit={handleSearch} className="relative flex items-center rounded-full border border-[#D4AF37]/40 bg-[#0f4c75]/50 w-[120px] md:w-[280px] h-[30px]" dir="rtl">
           <input 
@@ -104,13 +142,12 @@ export function Navbar() {
       </div>
 
       {/* 🕋 ماشاءاللہ */}
-      <div className="absolute left-1/2 -translate-x-1/2 text-center pointer-events-none">
-        <span className="text-[11px] md:text-[18px] font-bold text-white whitespace-nowrap">
+      <div className="absolute left-1/2 -translate-x-1/2 text-center pointer-events-none mt-0.5">
+        <span className="text-[8px] md:text-[10px] font-kufi font-bold text-[#D4AF37] whitespace-nowrap drop-shadow-sm">
           مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ
         </span>
       </div>
 
-      {/* 🌐 انگلش اور فارسی کے آپشنز (دونوں بالکل برابر سائز میں) */}
       <div className="flex items-center gap-1.5 z-10" dir="ltr">
         <button 
           onClick={() => setLanguage('en')} 
@@ -129,7 +166,6 @@ export function Navbar() {
   );
 }
 
-// 🔴 2. مین ہیڈر اور سلائیڈر
 export function HeroSlider() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(0);
@@ -179,7 +215,6 @@ export function HeroSlider() {
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
       
-      {/* 📸 سلائیڈر */}
       <div className="relative w-full aspect-[16/7] md:aspect-[16/6] lg:aspect-[16/5.5] overflow-hidden bg-[#0b314d]">
         {slides.map((s, i) => (
           <div key={i} className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${i === current ? 'opacity-100 z-20' : 'opacity-0 z-10'}`}>
@@ -188,10 +223,8 @@ export function HeroSlider() {
         ))}
       </div>
 
-      {/* 🔹 مرکزی سیکشن */}
       <div className="bg-[#0f4c75] py-2 px-2 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]">
         
-        {/* قرآن لوگو اینیمیشن */}
         <div className="relative z-10 mt-1 animate-shrink-enter">
            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#D4AF37] blur-[30px] opacity-30 animate-pulse"></div>
            <div className="relative text-[#D4AF37] text-2xl md:text-3xl drop-shadow-md animate-breath">
@@ -199,8 +232,10 @@ export function HeroSlider() {
            </div>
         </div>
 
+        {/* 🕋 اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ (خطِ کوفی اور سفید ستاروں کے ایفیکٹ کے ساتھ) */}
         <div className="relative z-10">
-          <p className="font-amiri text-white text-[9px] md:text-[12px] font-bold tracking-wide mt-1">
+          <p className="font-kufi text-white text-[11px] md:text-[15px] font-bold tracking-wider mt-1.5 drop-shadow-md stars-effect">
+              {/* یہاں میں نے 'stars-effect' کی کلاس شامل کر دی ہے */}
               اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ
           </p>
         </div>
@@ -229,7 +264,6 @@ export function HeroSlider() {
         </div>
       </div>
 
-      {/* 🧭 مینو بار */}
       <div className="bg-[#0b314d] py-3 px-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
         <nav className="flex flex-wrap justify-center gap-x-2 md:gap-x-3.5 gap-y-2.5 items-center" dir="rtl">
           {menuItems.map((item, idx) => (
@@ -248,7 +282,10 @@ export function HeroSlider() {
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
+        
         .font-amiri { font-family: 'Amiri', serif; }
+        .font-kufi { font-family: 'Reem Kufi', sans-serif; }
 
         @keyframes shrink-enter {
           0% { transform: scale(3); opacity: 0; }
