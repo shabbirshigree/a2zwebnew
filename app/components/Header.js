@@ -8,24 +8,41 @@ import {
   FaHandshake, FaLandmark, FaUsers, FaPalette, FaMicrophone 
 } from 'react-icons/fa';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// 🔴 یہاں useRouter کا اضافہ کیا گیا ہے تاکہ سرچ کرنے پر پیج تبدیل ہو سکے
+import { usePathname, useRouter } from 'next/navigation';
 
 // 🔴 1. ٹاپ بار 
 export function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const [language, setLanguage] = useState('ur');
+  const router = useRouter(); // 🔴 راؤٹر کو کال کیا گیا ہے
+
+  // 🔴 سرچ کا فنکشن جو یوزر کو سرچ پیج پر لے جائے گا
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== '') {
+      // یہ آپ کو /search پیج پر لے جائے گا اور ساتھ سرچ کا لفظ بھی بھیجے گا
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+    }
+  };
 
   return (
     <div className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-4 border-b border-[#D4AF37]/30 relative z-50 flex flex-row items-center justify-between h-[28px] overflow-hidden">
-      <div className="relative flex items-center w-[75px] md:w-[115px] z-10">
+      
+      {/* 🔴 سرچ باکس کو form میں تبدیل کر دیا گیا ہے تاکہ Enter دبانے سے بھی کام کرے */}
+      <form onSubmit={handleSearch} className="relative flex items-center w-[75px] md:w-[115px] z-10">
         <input 
           type="text" 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="تلاش..." 
           className="w-full bg-white/10 text-white placeholder-gray-400 text-[8px] md:text-[10px] rounded-full py-0.5 pr-4 h-[18px] md:h-[22px] focus:outline-none border border-[#D4AF37]/20"
           dir="rtl"
         />
-        <FaSearch className="absolute right-1.5 text-[#D4AF37] text-[8px] md:text-[10px]" />
-      </div>
+        <button type="submit" className="absolute right-1.5 text-[#D4AF37] text-[8px] md:text-[10px]">
+          <FaSearch />
+        </button>
+      </form>
 
       <div className="flex-1 text-center z-10">
         <span className="text-[10px] md:text-[13px] font-bold arabic-text whitespace-nowrap text-white/90">
@@ -55,7 +72,6 @@ export function HeroSlider() {
     { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/4_xaylj9.png" }
   ];
 
-  // 🔴 تبدیلی: ہوم کا لنک / سے تبدیل کر کے /home کر دیا گیا ہے
   const menuItems = [
     { name: "ہوم", link: "/home", icon: <FaHome /> },
     { name: "نورالقرآن", link: "/project", icon: <FaBookOpen /> },
@@ -147,11 +163,11 @@ export function HeroSlider() {
       <div className="bg-[#0b314d] py-3 px-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
         <nav className="flex flex-wrap justify-center gap-x-2 md:gap-x-3.5 gap-y-2.5 items-center" dir="rtl">
           {menuItems.map((item, idx) => (
-            <Link key={idx} href={item.link} className={`group relative flex flex-row items-center gap-1.5 px-1.5 md:px-2 py-1 transition-all duration-500 ${pathname === item.link ? 'text-[#D4AF37]' : 'text-white/80 hover:text-white'}`}>
+            <Link key={idx} href={item.link} className={`group relative flex flex-row items-center gap-1.5 px-1.5 md:px-2 py-1 transition-all duration-300 hover:-translate-y-1.5 hover:scale-110 hover:drop-shadow-[0_4px_4px_rgba(212,175,55,0.4)] ${pathname === item.link ? 'text-[#D4AF37]' : 'text-white/80 hover:text-white'}`}>
               <span className="text-xs md:text-sm transition-all duration-500 group-hover:scale-[1.3] group-hover:-translate-y-1 group-hover:rotate-[360deg] group-hover:text-[#D4AF37] z-10">
                 {item.icon}
               </span>
-              <span className="urdu-text text-[10px] md:text-[12px] font-bold">
+              <span className="urdu-text text-[13px] md:text-[15px] font-extrabold">
                 {item.name}
               </span>
               <div className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${pathname === item.link ? 'w-full' : 'w-0 group-hover:w-full'}`}></div>
