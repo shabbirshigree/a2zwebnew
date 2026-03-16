@@ -92,31 +92,59 @@ export const allData = {
       { title: "تبرکات کی تقسیم (جشن امیرالمومنینؑ)", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106790/VID-20260128-WA0014.3gp_f9pj1t.3gp" },
       { title: "تبرکات کی تقسیم (جشن امام زمانہؑ)", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106771/VN20260205_195313.3gp_e1nqnt.3gp" }
     ],
-    books: [
+books: [
       {
         id: 'book-anees',
-        title: 'انیس النفوس: دیارِ عشق کا سفر',
+        title: 'انیس النفوس',
         image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',
-        desc: 'حرم امام رضا علیہ السلام کے روحانی، تاریخی اور انتظامی پہلوؤں کا جامع احاطہ۔',
+        desc: 'میری یہ کتاب حرم امام رضا علیہ السلام کی تاریخ اور موجودہ حرم کے بارے میں معلومات کا خزانہ ہے ۔',
         actions: [
-          { type: 'read', label: 'کتاب پڑھیں (Coming Soon)', url: '', disabled: true },
-          { type: 'video', label: 'ویڈیو تبصرہ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769034308/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A7%D9%86%DB%8A%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%DA%A9%D8%A7_%D9%88%DB%8A%DA%88%DB%8A%D9%88_%D8%AA%D8%AC%D8%B2%DB%8A%DB%81_hlzsne.mp4' },
-          { type: 'audio', label: 'آڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769027471/%D8%A7%D9%86%DB%8A%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%D9%BE%D9%88%DA%88%DA%A9%D8%A7%D8%B3%D9%B9_later_y4pzhy.mp3' }
+          { 
+            type: 'read', 
+            label: 'کتاب کی تفصیلات', 
+            url: '/library#book-anees', 
+            disabled: false 
+          },
+          { 
+            type: 'audio', 
+            label: 'آڈیو پوڈکاسٹ', 
+            url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769027471/%D8%A7%D9%86%DB%8C%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%D9%BE%D9%88%DA%88%DA%A9%D8%A7%D8%B3%D9%B9_later_y4pzhy.mp3', 
+            disabled: false 
+          },
+          { 
+            type: 'video', 
+            label: 'ویڈیو تبصرہ', 
+            url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769034308/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A7%D9%86%DB%8C%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%DA%A9%D8%A7_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%AC%D8%B2%DB%8C%DB%81_hlzsne.mp4', 
+            disabled: false 
+          }
         ]
       },
-      {
-        id: 'book-khorasan',
-        title: 'خراسان رضوی: تاریخ و تمدن کا گہوارہ',
-        image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp',
-        desc: 'ایران کی اسلامی تاریخ، مذہبی مقامات اور فنِ تعمیر کا ایک جامع جائزہ۔',
-        actions: [
-          { type: 'read', label: 'کتاب پڑھیں', url: 'https://heyzine.com/flip-book/13dc8af2e5.html', disabled: false },
-          { type: 'video', label: 'ویڈیو تبصرہ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4' },
-          { type: 'audio', label: 'آڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4' }
-        ]
+     {
+    id: 'book-khorasan',
+    title: 'خراسان رضوی (حصہ اول و دوم)',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png',
+    desc: 'یہ ایک شاندار تصویری کتاب ہے جس کی مکمل ڈیزائننگ خاکسار نے کی ہے۔ اس میں خراسان کے تاریخی مقامات کو پیش کیا گیا ہے۔',
+    actions: [
+      { 
+        type: 'read', 
+        label: 'کتاب کی تفصیلات', 
+        url: '/library#book-khorasan', 
+        disabled: false 
+      },
+      { 
+        type: 'audio', 
+        label: 'آڈیو پوڈکاسٹ', 
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4', 
+      },
+      { 
+        type: 'video', 
+        label: 'ویڈیو تبصرہ', 
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4', 
+        disabled: false 
       }
-    ],
-    articles: [
+    ]
+  }
+],    articles: [
     // 1. روضہ مبارک (تفصیلی مضمون کے ساتھ)
     {
         id: 43, 

@@ -308,8 +308,13 @@ export default function ImamRezaPage() {
          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-5xl mx-auto">
             <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaYoutube size={28} /> امام رضاؑ کی دیگر ویڈیوز (پلے لسٹ)</a>
             <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaVideo size={28} /> آفیشل چینل (نور پروڈکشن)</a>
-            <a href="https://shabbirshigri.vercel.app/article" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaPenNib size={28} /> میری تمام تحریریں اور کالمز</a>
-         </div>
+<a 
+  href="/article" 
+  className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"
+>
+  <FaPenNib size={28} /> 
+  میری تمام تحریریں اور کالمز
+</a>         </div>
       </div>
 
       <Footer />
