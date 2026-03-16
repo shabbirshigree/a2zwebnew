@@ -1,25 +1,45 @@
 "use client";
-import React from 'react';
-// FaHome کو بھی شامل کیا گیا ہے نئے بٹن کے لیے
-import { FaAward, FaVideo, FaBullhorn, FaArrowLeft, FaNewspaper, FaImages, FaQuoteRight, FaHome } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaAward, FaVideo, FaBullhorn, FaArrowLeft, FaArrowRight, FaTimes, FaNewspaper, FaImages, FaQuoteRight, FaHome, FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
 import { Navbar } from '../components/Header';
 import Footer from '../components/Footer';
 import { ghaziData } from './ghaziData';
 
 export default function SadayEGhaziPage() {
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const [activeMediaList, setActiveMediaList] = useState([]);
+
+  // لائٹ باکس کھولنے کا فنکشن (موبائل فرینڈلی)
+  const openLightbox = (index, list) => {
+    setActiveMediaList(list);
+    setCurrentIndex(index);
+  };
+
+  const closeLightbox = () => setCurrentIndex(null);
+
+  const nextMedia = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev + 1) % activeMediaList.length);
+  };
+
+  const prevMedia = (e) => {
+    e.stopPropagation();
+    setCurrentIndex((prev) => (prev - 1 + activeMediaList.length) % activeMediaList.length);
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 overflow-x-hidden rtl" dir="rtl">
       <style>{`
         /* فونٹس کی امپورٹ */
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
         
-        /* ہیڈنگ کے فونٹ کو لاک کر دیا گیا ہے تاکہ وہ حد سے زیادہ نہ پھیلے */
+        /* ہیڈنگ کے فونٹ کو لاک کر دیا گیا ہے */
         .font-heading {
           font-family: 'Amiri', serif !important;
         }
         
-        /* تحریر کی الائنمنٹ دونوں طرف سے برابر (Justify) */
+        /* تحریر کی الائنمنٹ اور سائز (آپ کی پسند کے مطابق) */
         .text-body {
           font-family: 'Noto Naskh Arabic', 'Amiri', sans-serif;
           font-size: 1.15rem;
@@ -33,7 +53,7 @@ export default function SadayEGhaziPage() {
           .text-body { font-size: 1.3rem; }
         }
 
-        /* لہروں والا اینیمیشن (Ripple Effect) */
+        /* لہروں والا اینیمیشن */
         @keyframes ripple {
           0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7), 0 0 0 0 rgba(212, 175, 55, 0.4); }
           100% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0), 0 0 0 40px rgba(212, 175, 55, 0); }
@@ -66,7 +86,7 @@ export default function SadayEGhaziPage() {
         </div>
       </section>
 
-      {/* 2. خوش آمدید نوٹ (اب اس کا سائز بالکل متوازن رہے گا) */}
+      {/* 2. خوش آمدید نوٹ */}
       <section className="container mx-auto px-4 -mt-10 relative z-20 pb-16">
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-12 border-t-8 gold-border">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 text-[#8b0000] mb-8 text-center md:text-right">
@@ -90,8 +110,14 @@ export default function SadayEGhaziPage() {
           </h3>
 
           <div className="max-w-4xl mx-auto">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white mb-8 bg-black">
-              <video src={ghaziData.award.video} controls className="w-full aspect-video" />
+            <div 
+              className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white mb-8 bg-black cursor-pointer group relative touch-manipulation"
+              onClick={() => openLightbox(0, [ghaziData.award.video])}
+            >
+              <video src={ghaziData.award.video} className="w-full aspect-video pointer-events-none" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all">
+                <FaPlay className="text-6xl text-[#D4AF37] opacity-80" />
+              </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-[#D4AF37]/50 relative">
@@ -120,8 +146,14 @@ export default function SadayEGhaziPage() {
                 <p className="text-body text-gray-800">{ghaziData.news.paragraph2}</p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 gold-border bg-black">
-              <video src={ghaziData.news.video} controls className="w-full aspect-video" />
+            <div 
+              className="rounded-2xl overflow-hidden shadow-2xl border-4 gold-border bg-black cursor-pointer group relative touch-manipulation"
+              onClick={() => openLightbox(0, [ghaziData.news.video])}
+            >
+              <video src={ghaziData.news.video} className="w-full aspect-video pointer-events-none" />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all">
+                <FaPlay className="text-6xl text-[#D4AF37] opacity-80" />
+              </div>
             </div>
           </div>
         </div>
@@ -135,7 +167,11 @@ export default function SadayEGhaziPage() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {ghaziData.award.images.map((img, i) => (
-              <div key={i} className="h-48 md:h-64 overflow-hidden rounded-xl shadow-lg border border-gray-300 hover:scale-105 transition-transform">
+              <div 
+                key={i} 
+                className="h-48 md:h-64 overflow-hidden rounded-xl shadow-lg border border-gray-300 hover:scale-105 transition-transform cursor-pointer touch-manipulation"
+                onClick={() => openLightbox(i, ghaziData.award.images)}
+              >
                 <img src={img} className="w-full h-full object-cover" alt="Award Ceremony" />
               </div>
             ))}
@@ -151,7 +187,11 @@ export default function SadayEGhaziPage() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {ghaziData.gallery.map((img, i) => (
-              <div key={i} className="h-56 md:h-72 overflow-hidden rounded-xl shadow-md border-2 border-slate-100 hover:border-[#D4AF37] transition-all">
+              <div 
+                key={i} 
+                className="h-56 md:h-72 overflow-hidden rounded-xl shadow-md border-2 border-slate-100 hover:border-[#D4AF37] transition-all cursor-pointer touch-manipulation"
+                onClick={() => openLightbox(i, ghaziData.gallery)}
+              >
                 <img src={img} className="w-full h-full object-cover" alt="Gallery" />
               </div>
             ))}
@@ -167,7 +207,11 @@ export default function SadayEGhaziPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-6">
             {ghaziData.news.mediaImages.map((img, i) => (
-              <div key={i} className="bg-white p-3 shadow-lg rounded-lg border border-gray-200 hover:-translate-y-2 transition-transform">
+              <div 
+                key={i} 
+                className="bg-white p-3 shadow-lg rounded-lg border border-gray-200 hover:-translate-y-2 transition-transform cursor-pointer touch-manipulation"
+                onClick={() => openLightbox(i, ghaziData.news.mediaImages)}
+              >
                 <img src={img} className="h-48 md:h-64 object-contain" alt="Media Coverage" />
               </div>
             ))}
@@ -175,16 +219,20 @@ export default function SadayEGhaziPage() {
         </div>
       </section>
 
-      {/* 8. روح پرور مناظر اور زیارات */}
+      {/* 8. شہنشاہِ باوفا کے بابرکت لمحات */}
       <section className="py-20 bg-[#2a0000] text-white border-t-8 gold-border">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-5xl font-heading font-bold text-center text-[#D4AF37] mb-12 flex items-center justify-center gap-4">
-            <FaVideo /> روح پرور مناظر اور زیارات
+          <h3 className="text-xl md:text-3xl font-heading font-bold text-center text-[#D4AF37] mb-12 max-w-4xl mx-auto leading-relaxed">
+            شہنشاہِ باوفا غازی عباسؑ کے حرم کے کچھ بابرکت اور یادگار لحظات، حاجی شبیر احمد شگری کے کیمرے کی آنکھ سے
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ghaziData.ziyaratVideos.map((vid, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden shadow-2xl border-2 gold-border bg-black hover:scale-105 transition-transform flex flex-col">
-                <video src={vid.url} controls className="w-full aspect-video bg-black" />
+              <div 
+                key={i} 
+                className="rounded-2xl overflow-hidden shadow-2xl border-2 gold-border bg-black hover:scale-105 transition-transform flex flex-col cursor-pointer touch-manipulation"
+                onClick={() => openLightbox(i, ghaziData.ziyaratVideos.map(v => v.url))}
+              >
+                <video src={vid.url} className="w-full aspect-video bg-black pointer-events-none" />
                 <div className="p-4 bg-black/90 text-center text-[#D4AF37] font-bold text-lg md:text-xl font-heading border-t border-[#D4AF37]/30 flex-grow flex items-center justify-center">
                   {vid.title}
                 </div>
@@ -196,13 +244,56 @@ export default function SadayEGhaziPage() {
 
       <Footer />
 
-      {/* امام رضا پیج والے گول فلوٹنگ بٹنز */}
+      {/* 🔴 لائٹ باکس (بڑی تصویر/ویڈیو اور ایروز) 🔴 */}
+      {currentIndex !== null && (
+        <div 
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md" 
+          onClick={closeLightbox}
+        >
+          {/* بند کرنے کا بٹن */}
+          <button className="absolute top-6 right-6 text-white text-5xl z-[10000]" onClick={closeLightbox}>
+            <FaTimes />
+          </button>
+
+          {/* دایاں ایرو */}
+          {activeMediaList.length > 1 && (
+            <button className="absolute left-4 md:left-10 text-[#D4AF37] text-5xl md:text-7xl z-[10000] hover:scale-110 transition-transform" onClick={prevMedia}>
+              <FaArrowLeft />
+            </button>
+          )}
+
+          {/* مین ڈسپلے */}
+          <div className="max-w-7xl w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            {activeMediaList[currentIndex]?.includes('.mp4') || activeMediaList[currentIndex]?.includes('video') ? (
+              <video 
+                src={activeMediaList[currentIndex]} 
+                controls 
+                autoPlay 
+                className="max-h-[85vh] w-auto rounded-lg border-2 border-[#D4AF37]" 
+              />
+            ) : (
+              <img 
+                src={activeMediaList[currentIndex]} 
+                className="max-h-[85vh] w-auto object-contain rounded-lg border-2 border-[#D4AF37] shadow-2xl" 
+                alt="Enlarged" 
+              />
+            )}
+          </div>
+
+          {/* بایاں ایرو */}
+          {activeMediaList.length > 1 && (
+            <button className="absolute right-4 md:right-10 text-[#D4AF37] text-5xl md:text-7xl z-[10000] hover:scale-110 transition-transform" onClick={nextMedia}>
+              <FaArrowRight />
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* فلوٹنگ بٹنز */}
       <div className="fixed bottom-6 left-6 z-50 flex items-center gap-3">
-        {/* پیچھے جانے والا سفید بٹن (Back Arrow) */}
         <button onClick={() => window.history.back()} className="w-12 h-12 md:w-14 md:h-14 bg-white text-[#D4AF37] rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-4 border-[#D4AF37]">
           <FaArrowLeft className="text-xl md:text-2xl" />
         </button>
-        {/* ہوم پیج پر جانے والا گولڈن بٹن (Home Icon) */}
         <Link href="/" className="w-12 h-12 md:w-14 md:h-14 bg-[#D4AF37] text-white rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-4 border-white">
           <FaHome className="text-xl md:text-2xl" />
         </Link>
