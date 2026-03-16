@@ -1,18 +1,20 @@
 "use client";
 import { useState, useEffect } from 'react';
-// 👇 تمام امپورٹس مکمل (FaBookOpen سمیت)
 import { 
   FaArrowLeft, FaPlay, FaTimes, FaHome, FaImages, FaVideo, FaGift, FaFilm, 
   FaCalendarAlt, FaMicrophone, FaPenNib, FaBook, FaYoutube, FaChevronRight, 
-  FaChevronLeft, FaLaptop, FaClock, FaCalendarCheck, FaFacebook, FaShoppingBag, 
-  FaBookOpen 
+  FaChevronLeft, FaLaptop, FaClock, FaCalendarCheck 
 } from "react-icons/fa";
 import Link from 'next/link';
 import { Navbar } from '../components/Header';
 import Footer from '../components/Footer';
 
-// 👇 ڈیٹا امپورٹ 
-import { imamRezaImages, allData, boxes, rezaviData } from './data'; 
+// 👇 نئے الگ کیے گئے سیکشنز (Components) امپورٹ کر رہے ہیں
+import BooksSection from './BooksSection';
+import ArticlesSection from './ArticlesSection';
+import RezaviSection from './RezaviSection';
+
+import { imamRezaImages, allData, boxes } from './data'; 
 
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
@@ -33,17 +35,13 @@ export default function ImamRezaPage() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedArticle, setSelectedArticle] = useState(null);
-  
-  // 🛍️ رضوی آنلائن سلائیڈر
-  const [rezaviSlide, setRezaviSlide] = useState(0);
 
   // 🚀 ڈیٹا 
-  const displayArticles = allData?.articles || [];
   const programVideos = allData?.programs || [];
   const manqabatVideos = allData?.manqabats || [];
   const tabarrukatVideos = allData?.tabarrukat || [];
   const documentaryVideos = allData?.documentaries || [];
-  const bookList = allData?.books || [];
+  const liveParticipationVideos = allData?.liveParticipations || []; 
 
   // 🛠️ ویڈیو پلیئر
   const renderVideoPlayer = () => {
@@ -69,16 +67,6 @@ export default function ImamRezaPage() {
       style.id = 'custom-animations';
       style.textContent = globalStyles;
       document.head.appendChild(style);
-    }
-  }, []);
-
-  // 🛍️ آٹو سلائیڈر
-  useEffect(() => {
-    if (rezaviData?.images?.length > 0) {
-        const interval = setInterval(() => {
-            setRezaviSlide((prev) => (prev === rezaviData.images.length - 1 ? 0 : prev + 1));
-        }, 3000); 
-        return () => clearInterval(interval);
     }
   }, []);
 
@@ -178,6 +166,22 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
+      {/* 🔥 نیا سیکشن: لائیو پروگرامز میں شرکت */}
+      {liveParticipationVideos.length > 0 && (
+          <div id="liveParticipations" className="relative z-10 container mx-auto px-4 py-10 bg-[#0f4c75]/5 border-y-4 border-[#D4AF37] my-8">
+             <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">لائیو پروگرامز میں شرکت</h2></div>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" dir="rtl">
+                {liveParticipationVideos.map((vid, idx) => (
+                   <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 flex flex-col items-center gap-4 cursor-pointer hover:-translate-y-2 hover:shadow-2xl transition-all group text-center">
+                      <div className="bg-red-600 text-white p-4 rounded-full group-hover:scale-110 transition-transform animate-pulse shadow-md"><FaVideo size={28} /></div>
+                      <span className="text-lg font-bold text-gray-800 leading-relaxed">{vid.title}</span>
+                      <span className="bg-[#D4AF37] text-white px-4 py-1 rounded-full text-xs font-bold mt-2">ویڈیو دیکھیں</span>
+                   </div>
+                ))}
+             </div>
+          </div>
+      )}
+
       {/* 🎤 منقبت */}
       <div id="manqabat" className="relative z-10 container mx-auto px-4 py-10">
          <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">منقبت اور قصائد</h2></div>
@@ -191,48 +195,11 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 📚 کتب */}
-      <div id="books" className="relative z-10 container mx-auto px-4 py-10 bg-white border-t-8 border-[#D4AF37]">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">کتب و رسائل</h2></div>
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" dir="rtl">
-            {bookList.map((book, idx) => (
-               <div key={idx} className="bg-gray-50 p-6 rounded-3xl border-2 border-[#D4AF37]/50 shadow-xl flex flex-col md:flex-row items-center gap-6 group">
-                   <img src={book.image} alt={book.title} className="w-32 h-auto rounded-lg shadow-md border group-hover:scale-105 transition-transform" />
-                   <div className="text-center md:text-right flex-1">
-                       <h3 className="text-xl font-bold text-[#0f4c75] mb-2">{book.title}</h3>
-                       <p className="text-gray-700 text-sm mb-4 font-bold">{book.desc}</p>
-                       <div className="flex flex-wrap justify-center md:justify-start gap-2">
-                          {book.actions?.map((action, i) => (
-                             <button key={i} disabled={action.disabled} onClick={() => action.url ? (action.type === 'read' ? window.open(action.url, '_blank') : setActiveVideo(action.url)) : null} className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 shadow-sm transition-all ${action.disabled ? 'bg-gray-400 cursor-not-allowed' : (action.type === 'read' ? 'bg-[#0f4c75] text-white hover:bg-[#D4AF37]' : 'bg-red-600 text-white hover:bg-red-700')}`}>
-                               {action.type === 'read' ? <FaBookOpen /> : <FaPlay />} {action.label}
-                             </button>
-                          ))}
-                       </div>
-                   </div>
-               </div>
-            ))}
-         </div>
-      </div>
+      {/* 📚 کتب (چھوٹا کر دیا گیا) */}
+      <BooksSection setActiveVideo={setActiveVideo} />
 
-      {/* ✍️ مضامین */}
-      <div id="articles" className="relative z-10 container mx-auto px-4 py-10 bg-[#fdfdfd]">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">اسپیشل ایڈیشنز / مضامین</h2></div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="rtl">
-            {displayArticles.map((art, idx) => (
-               <div key={idx} onClick={() => setSelectedArticle(art)} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 group">
-                  <div className="relative h-48 overflow-hidden">
-                     <img src={art.image} alt={art.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                     <div className="absolute top-0 right-0 bg-[#D4AF37] text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md">{art.date}</div>
-                  </div>
-                  <div className="p-5 text-center">
-                     <h3 className="text-lg font-bold text-[#0f4c75] mb-2 leading-tight group-hover:text-[#D4AF37] transition-colors">{art.title}</h3>
-                     <p className="text-gray-500 text-xs mb-4 font-bold">{art.paper || art.newspaper || art.source}</p>
-                     <button className="bg-[#0f4c75] text-white px-6 py-2 rounded-full text-sm font-bold shadow-md hover:bg-[#D4AF37] transition-colors">مزید پڑھیں</button>
-                  </div>
-               </div>
-            ))}
-         </div>
-      </div>
+      {/* ✍️ مضامین (چھوٹا کر دیا گیا) */}
+      <ArticlesSection setSelectedArticle={setSelectedArticle} />
 
       {/* 🌐 آنلائن خدمات و ویبینار */}
       <div id="services" className="relative z-10 container mx-auto px-4 py-12 bg-white">
@@ -254,53 +221,8 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 🛍️ رضوی آنلائن سیکشن (اب یہاں سب سے نیچے ہے) */}
-      {rezaviData && (
-        <div id="rezavi" className="relative z-10 container mx-auto px-4 py-12 bg-white border-y-4 border-[#D4AF37] mt-8 mb-8">
-            <div className="text-center mb-10">
-                <h2 className="text-2xl md:text-4xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">{rezaviData.title}</h2>
-            </div>
-            
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center" dir="rtl">
-                {/* 🖼️ سلائیڈر */}
-                <div className="w-full md:w-1/2 h-80 md:h-[500px] relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#D4AF37] bg-gray-50">
-                    {rezaviData.images?.map((img, index) => (
-                        <img 
-                            key={index} 
-                            src={img} 
-                            alt="Rezavi Product" 
-                            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${index === rezaviSlide ? "opacity-100" : "opacity-0"}`} 
-                        />
-                    ))}
-                    <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-1 rounded-full text-xs font-bold">متبرک اشیاء</div>
-                </div>
-
-                {/* 📝 متن اور لنکس */}
-                <div className="w-full md:w-1/2 space-y-6 text-justify">
-                    <div className="text-lg md:text-xl leading-loose font-bold text-gray-800 whitespace-pre-line">
-                        {rezaviData.desc}
-                    </div>
-                    <div className="bg-[#f8f9fa] p-4 rounded-xl border-r-4 border-[#D4AF37] shadow-sm">
-                        <strong className="text-[#0f4c75] text-lg md:text-xl block text-center animate-pulse">{rezaviData.punchline}</strong>
-                    </div>
-                    
-                    {/* لنکس */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                        {rezaviData.youtube && (
-                            <a href={rezaviData.youtube} target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white py-3 rounded-xl shadow-lg hover:bg-red-700 transition-all flex items-center justify-center gap-2 font-bold text-lg">
-                                <FaYoutube size={28} /> یوٹیوب (Subscribe)
-                            </a>
-                        )}
-                        {rezaviData.facebook && (
-                            <a href={rezaviData.facebook} target="_blank" rel="noopener noreferrer" className="flex-1 bg-blue-600 text-white py-3 rounded-xl shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2 font-bold text-lg">
-                                <FaFacebook size={28} /> فیس بک پیج
-                            </a>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-      )}
+      {/* 🛍️ رضوی آنلائن سیکشن (چھوٹا کر دیا گیا) */}
+      <RezaviSection />
 
       {/* 👇 آخری 3 اہم بٹن */}
       <div className="relative z-10 container mx-auto px-4 py-12 text-center bg-[#f8f9fa] mt-10 border-t-2 border-[#D4AF37]/30">
@@ -308,13 +230,10 @@ export default function ImamRezaPage() {
          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-5xl mx-auto">
             <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaYoutube size={28} /> امام رضاؑ کی دیگر ویڈیوز (پلے لسٹ)</a>
             <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaVideo size={28} /> آفیشل چینل (نور پروڈکشن)</a>
-<a 
-  href="/article" 
-  className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"
->
-  <FaPenNib size={28} /> 
-  میری تمام تحریریں اور کالمز
-</a>         </div>
+            <Link href="/article" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
+              <FaPenNib size={28} /> میری تمام تحریریں اور کالمز
+            </Link>         
+         </div>
       </div>
 
       <Footer />
