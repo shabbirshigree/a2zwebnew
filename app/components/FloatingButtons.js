@@ -29,7 +29,7 @@ export default function FloatingButtons() {
 
   return (
     <>
-      {/* 🟢 بائیں جانب: واٹس ایپ بٹن (چھوٹا سائز) */}
+      {/* 🟢 بائیں جانب: واٹس ایپ بٹن */}
       <button
         onClick={handleWhatsapp}
         className="fixed left-4 bottom-6 md:left-6 md:bottom-8 z-[9999] bg-green-500 text-white p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
@@ -38,13 +38,13 @@ export default function FloatingButtons() {
         <FaWhatsapp className="text-xl" />
       </button>
 
-      {/* 🔵 دائیں جانب: چھوٹے اور بالکل برابر سائز کے بٹنز */}
-      {/* w-28 md:w-32 کی وجہ سے تینوں بٹنوں کی چوڑائی بالکل ایک جیسی (برابر) رہے گی */}
+      {/* 🔵 دائیں جانب: بٹنز */}
       <div className="fixed right-4 bottom-6 md:right-6 md:bottom-8 z-[9999] flex flex-col gap-2 w-28 md:w-32">
-        
-        {/* 1. ہوم پیج */}
-        <Link 
-          href="/"
+
+        {/* 1. ہوم پیج (درست شدہ لنک) */}
+        <Link
+          href="/home"
+          prefetch={false}
           className="w-full bg-[#D4AF37] text-white px-3 py-1.5 rounded-full shadow-md opacity-70 backdrop-blur-sm hover:opacity-100 hover:scale-105 transition-all duration-300 flex items-center justify-between focus:outline-none"
         >
           <span className="text-xs md:text-sm font-bold font-amiri">ہوم پیج</span>
@@ -69,7 +69,7 @@ export default function FloatingButtons() {
           <span className="text-xs md:text-sm font-bold font-amiri">اوپر جائیں</span>
           <FaArrowUp className="text-sm" />
         </button>
-        
+
       </div>
     </>
   );
