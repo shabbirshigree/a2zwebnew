@@ -2313,7 +2313,7 @@ export const articlesData = [
             </div>
 
             <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
-                <h4 style="color:#0f4c75;">زمانہ نیوز</h4>
+                <h4 style="color:#0f4c75;">فیس بک</h4>
                 <ul style="list-style:none; padding:0;">
                     <li style="margin-bottom:10px;">
                         <strong>لنک:</strong> 
