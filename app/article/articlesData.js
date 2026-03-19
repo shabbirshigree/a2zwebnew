@@ -2307,7 +2307,20 @@ export const articlesData = [
 آج امت اسلامیہ اس عظیم رہنما سے محروم ہوگئی۔ ابھوں نے شہادت کا عظیم رتبہ پالیا لیکن اس بات کا گہرا غم و غصہ ضرور ہے کہ اس طرح کی ہستیوں کے لئے اعلانیہ سر کی قیمت لگائی جارہی ہے اور اس پر باقاعدہ عمل بھی کیا جارہا ہے۔اللہ پاک اس عظیم شہید کی عالم اسلام کے لئے ان تمام کاوشوں کو قبول و منظور فرمائے اور ان کے درجات بلند فرمائے۔آمین
 </p>
 <br>
-          
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <h4 style="color:#0f4c75; text-align:center; font-family: sans-serif;">اخبارات کے تراشے / تصاویر</h4>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 10px; background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #ddd;">
+                
+                <div style="flex: 1; min-width: 250px; max-width: 450px; text-align: center;">
+                    <p style="font-size: 0.9em; margin-bottom: 5px; color: #666;">روزنامہ زمانہ نیوز</p>
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1773912331/2adfcc4c-02bb-43b1-8d6f-5ff66c9cc29c.png" 
+                         style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #ccc;" 
+                         alt="News Clip 1">
+                </div>
+
                 </div>
 
             </div>

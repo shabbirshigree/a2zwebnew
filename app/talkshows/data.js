@@ -1,10 +1,11 @@
 // app/talkshows/data.js
 
+import { FaYoutube, FaFacebook, FaGlobe } from 'react-icons/fa';
 export const talkshowIntro = {
-  title: "ٹی وی ٹاک شوز اور الیکٹرانک میڈیا",
+  title: "الیکٹرانک میڈیا",
   subtitle: "پسِ پردہ حقائق کی نقاب کشائی (نور پروڈکشنز کی پیشکش)",
   quote: `"قلمی صحافت کے میدان میں طویل عرصہ کامیابی سے گزارنے کے بعد مجھے اس بات کا شدت سے احساس ہوا کہ الیکٹرانک میڈیا پر بہت سے اہم اور حساس موضوعات پر خاموشی اختیار کی جاتی ہے۔ انھی پوشیدہ حقائق کو عوام تک پہنچانے اور شعور بیدار کرنے کے لیے میں نے ٹی وی ٹاک شوز کے میدان میں قدم رکھا۔"`,
-  
+
   noorProductionIntro: {
     title: "نور پروڈکشنز: ایک دور اندیش آغاز اور تاریخ ساز سفر",
     text1: "اس تمام ابلاغی سفر کا سب سے درخشاں باب 'نور پروڈکشنز' ہے۔ اس کی وجہِ تسمیہ قرآن مجید کی سورہ نور کی وہ عظیم آیت ہے: 'اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ' (اللہ آسمانوں اور زمین کا نور ہے)۔ اسی مقدس نور سے فیض یاب ہوتے ہوئے اس ادارے کی بنیاد رکھی گئی۔ نور پروڈکشنز کی باقاعدہ بنیاد 2008 میں رکھی گئی، یہ وہ دور تھا جب یوٹیوب خود اپنے ابتدائی مراحل (2007) میں تھا۔ اس وقت ڈیجیٹل میڈیا کی اس ابھرتی ہوئی طاقت اور وقت کی ضرورت کو بھانپ لینا ایک ایسا فیصلہ تھا جس نے مستقبل کی راہیں متعین کیں۔",
@@ -27,45 +28,91 @@ export const talkshowIntro = {
     }
   ]
 };
+export const TALKSHOW_CHANNELS = [
+  {
+    title: 'نورُ القرآن',
+    handle: '@noorullquraan',
+    desc: 'دنیا کا پہلا ویژول قرآن پروجیکٹ۔ آیات کا بصری ترجمہ، قرآنی تعلیمات کا منفرد انداز۔',
+    button: 'Subscribe',
+    href: 'https://www.youtube.com/@noorullquraan',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705133/NoorulQuran_normal_jpeg_eq5n6u.jpg',
+    color: 'from-emerald-500 to-green-600',
+    type: 'youtube'
+  },
+  {
+    title: 'نور پروڈکشنز',
+    handle: '@noorproduction',
+    desc: 'اسلامی ثقافتی فلمیں، زیارات، اور ڈاکومنٹریزپر مبنی ویڈیوز کا مرکز۔',
+    button: 'Subscribe',
+    href: 'https://www.youtube.com/@noorproduction',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705046/noor_xgcod3.jpg',
+    color: 'from-blue-700 to-indigo-800',
+    type: 'youtube'
+  },
+  {
+    title: 'طفلان نور',
+    handle: '@tiflan-e-noor',
+    desc: 'بچوں کے لئےاسلامی، اخلاقی تربیتی اور تفریحی ویڈیوز کا اردو زبان میں منفرد چینل۔',
+    button: 'Subscribe',
+    href: 'https://www.youtube.com/@TiflaneNoor',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705046/tiflan_jlzaog.jpg',
+    color: 'from-blue-700 to-indigo-800',
+    type: 'youtube'
+  },
+  {
+    title: 'بی این این (BNN)',
+    handle: '@Baltistan News Network',
+    desc: 'بلتستان بھر سے خبریں اور معلومات۔',
+    button: 'Follow',
+    href: 'https://www.youtube.com/@Bnnskardu',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1773921624/bnn_logo_globe_copy_xlcxoa.png',
+    color: 'from-red-600 to-red-800',
+    type: 'youtube'
+  },
+  {
+    title: 'نور پروڈکشنز (FB)',
+    handle: '@noorproductionchannel',
+    desc: 'نورپروڈکشنز کا آفیشل فیس بک پیج۔ ثقافتی فلمیں اور زیارات۔',
+    button: 'Follow',
+    href: 'https://www.facebook.com/noorproductionchannel',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705046/noor_xgcod3.jpg',
+    color: 'from-blue-600 to-blue-800',
+    type: 'facebook'
+  },
+  {
+    title: 'آپارات (نور پروڈکشنز)',
+    handle: 'aparat.com/noorproduction',
+    desc: 'نورپروڈکشنز کا فارسی چینل',
+    button: 'Follow Channel',
+    href: 'https://www.aparat.com/noorproduction',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705045/aparat_gvp8hp.png',
+    color: 'from-pink-500 to-rose-600',
+    icon: <FaGlobe size={30} />
+  },
+  {
+    title: 'حاجی شبیر احمد شگری',
+    handle: '@shabbirahmed1103',
+    desc: 'آفیشل پرسنل چینل۔ وی لاگز، ٹالک شوز، تجزیے اور روزمرہ کی مصروفیات۔',
+    button: 'Subscribe',
+    href: 'https://www.youtube.com/@shabbirahmed1103',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1770705045/channels4_profile_fz4ga1.jpg',
+    color: 'from-cyan-500 to-blue-500',
+    icon: <FaYoutube size={30} />
+  },
 
-// 🔴 آپ کے تمام دیگر اہم چینلز کی جگہ
-export const otherChannels = [
   {
-    title: "حاجی شبیر احمد شگری (پرسنل)",
-    desc: "آفیشل پرسنل چینل، وی لاگز، تجزیے اور مصروفیات",
-    url: "https://www.youtube.com/@shabbirahmed1103",
-    color: "from-teal-500 to-emerald-600",
-    iconType: "youtube"
-  },
-  {
-    title: "آپارات (نور پروڈکشنز)",
-    desc: "نور پروڈکشنز کا آفیشل فارسی چینل (Aparat)",
-    url: "https://www.aparat.com/noorproduction",
-    color: "from-pink-500 to-rose-600",
-    iconType: "globe"
-  },
-  {
-    title: "رضوی آن لائن",
-    desc: "جلد ہی اس چینل پر کام کا آغاز کیا جائے گا",
-    url: "#",
-    color: "from-indigo-500 to-purple-600",
-    iconType: "youtube"
-  },
-  {
-    title: "طفلانِ نور",
-    desc: "بچوں کی دینی، اخلاقی تربیت اور اسلامی کہانیوں کا مرکز",
-    url: "https://www.youtube.com/@TiflaneNoor",
-    color: "from-orange-400 to-yellow-500",
-    iconType: "youtube"
-  },
-  {
-    title: "BNN (بلتستان نیوز نیٹ ورک)",
-    desc: "علاقائی خبریں، اہم تجزیے اور تازہ ترین صورتحال",
-    url: "#", 
-    color: "from-blue-600 to-blue-800",
-    iconType: "youtube"
+    title: 'رضوی آنلائن',
+    handle: '@Rezavi Islamic Products',
+    desc: 'اسلامی ثقافتی مصنوعات۔',
+    button: 'Follow',
+    href: 'https://www.youtube.com/@RezaviOnline',
+    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1773921471/9e5b66dc-aaa8-4379-84e6-a1ce4037acf1.png',
+    color: 'from-blue-600 to-blue-800',
+    icon: <FaFacebook size={30} />
   }
+  // باقی چینلز بھی اسی طرح 'type' کے ساتھ شامل کریں...
 ];
+
 
 export const talkshowVideos = [
   // ٹاک شوز

@@ -360,28 +360,57 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-      {/* 📚 7. تصانیف کا گوشہ (Clickable Heyzine Links) */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] text-center urdu-text mb-12">میری تصانیف و تالیفات</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" dir="ltr">
-            {BOOKS_DATA.map((book, i) => {
-              const readLink = getBookReadLink(book);
-              const isExternal = readLink.startsWith("http");
+{/* 📚 7. تصانیف کا گوشہ (Main Page Formula) */}
+<section className="py-20 bg-slate-50">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] urdu-text mb-12">میری تصانیف و تالیفات</h2>
+    
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="rtl">
+      {/* 🟢 ہم یہاں BOOKS_DATA کو ہی میپ کر رہے ہیں لیکن لنک مین پیج والا دے رہے ہیں */}
+      {BOOKS_DATA.map((book, i) => {
+        
+        // 🛠️ یہ ہے وہ فارمولا: ٹائٹل کے حساب سے لنک بنانا
+        let manualLink = "/library";
+        if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
+        else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
+        else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
+        else if (book.title.includes("سفرنامہ") || book.title.includes("سیاحت")) manualLink = "/library#book-safarnama";
+        else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
+        else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
+        else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
+        else if (book.title.includes("خراسان")) manualLink = "/library#book-khorasan";
+        else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
+        else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
+        else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
 
-              return (
-                <a href={readLink} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""} key={i} className="group relative rounded-2xl overflow-hidden shadow-lg border-2 border-transparent hover:border-[#D4AF37] transition-all block cursor-pointer">
-                  <img src={book.image} className="w-full h-[300px] object-cover group-hover:scale-110 transition-transform duration-500" alt={book.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-4">
-                    <p className="text-[#D4AF37] urdu-text font-bold text-lg leading-tight w-full text-center drop-shadow-lg">{book.title}</p>
-                    <p className="text-white text-xs text-center mt-1 opacity-0 group-hover:opacity-100 transition-opacity">پڑھنے کے لیے کلک کریں</p>
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+        // اگر ڈیٹا میں پہلے سے لنک موجود ہے تو وہ استعمال کریں، ورنہ ہمارا بنایا ہوا فارمولا
+        const finalHref = book.link || manualLink;
+
+        return (
+          <Link 
+            href={finalHref} 
+            key={i} 
+            className="group flex flex-col items-center"
+          >
+            {/* 🖼️ کتاب کا فریم اور سائز (بالکل مین پیج جیسا) */}
+            <div className="relative w-full aspect-[3/4] bg-white rounded-lg shadow-md border-2 border-transparent group-hover:border-[#D4AF37] transition-all overflow-hidden flex items-center justify-center p-2">
+              <img 
+                src={book.img || book.image} 
+                className="max-w-full max-h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" 
+                alt={book.title} 
+              />
+            </div>
+
+            {/* 📝 کتاب کا نام */}
+            <h3 className="mt-4 text-[#0b314d] urdu-text font-bold text-sm md:text-base group-hover:text-[#D4AF37] text-center leading-tight">
+              {book.title}
+            </h3>
+          </Link>
+        );
+      })}
+    </div>
+  </div>
+</section>   
 
       <Footer />
 

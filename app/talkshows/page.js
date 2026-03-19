@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { FaYoutube, FaChevronDown, FaGlobe, FaWhatsapp, FaFacebook, FaTelegram, FaTiktok } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
-import { talkshowIntro, talkshowVideos, interviewsImages, generalGallery, otherChannels } from './data';
+import { talkshowIntro, talkshowVideos, interviewsImages, generalGallery, TALKSHOW_CHANNELS as otherChannels } from './data';
 
 const getYouTubeId = (url) => {
     if (!url) return '';
@@ -63,6 +63,33 @@ export default function TalkshowsPage() {
                 </div>
             </section>
 
+            {/* 🌟 ہمارے دیگر پلیٹ فارمز (صرف یہ حصہ اپڈیٹ کیا گیا ہے) */}
+            <section className="container mx-auto px-4 py-16" dir="rtl">
+                <h2 className="text-2xl md:text-4xl font-bold text-[#0b314d] mb-12 text-center urdu-text">ہمارے دیگر پلیٹ فارمز / چینلز</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {otherChannels.map((channel, idx) => (
+                        <div key={idx} className="relative transition-all duration-300 hover:-translate-y-2 h-full">
+                            <a href={channel.url || channel.href} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-30 cursor-pointer"></a>
+                            <div className="bg-white rounded-[2rem] p-6 shadow-lg border-2 border-[#D4AF37] h-full flex flex-col items-center text-center relative overflow-hidden group transition-all duration-500 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                <div className={`absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r ${channel.color}`} />
+                                <div className="relative w-20 h-20 mx-auto mb-4 mt-2">
+                                    <div className="w-full h-full rounded-2xl p-1 bg-white shadow-md ring-1 ring-gray-100 overflow-hidden">
+                                        <img src={channel.img} alt={channel.title} className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110" />
+                                    </div>
+                                    <div className="absolute -bottom-1 -right-1 bg-white p-1.5 rounded-lg shadow-sm border border-gray-50">
+                                        {channel.iconType === 'youtube' ? <FaYoutube className="text-[#ff0000]" size={16} /> : <FaGlobe className="text-[#0b314d]" size={16} />}
+                                    </div>
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-800 mb-1 urdu-text leading-tight group-hover:text-[#0b314d]">{channel.title}</h3>
+                                <p className="text-[10px] font-bold text-blue-500 mb-3 opacity-70 tracking-tighter uppercase">{channel.handle || '@noorproduction'}</p>
+                                <p className="text-gray-500 text-xs leading-relaxed mb-6 urdu-text line-clamp-2">{channel.desc}</p>
+                                <div className={`mt-auto w-full py-2.5 rounded-xl font-bold text-white text-sm shadow-md bg-gradient-to-r ${channel.color} transition-transform group-hover:scale-105`}>وزٹ کریں</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
             {/* 🌟 نور پروڈکشنز کا خصوصی تعارف */}
             <section className="container mx-auto px-4 py-12" dir="rtl">
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
@@ -76,24 +103,6 @@ export default function TalkshowsPage() {
                         </p>
                         <p>{talkshowIntro.noorProductionIntro.text3}</p>
                     </div>
-                </div>
-            </section>
-
-            {/* 🌟 ہمارے دیگر یوٹیوب اور سوشل چینلز */}
-            <section className="container mx-auto px-4 pb-12" dir="rtl">
-                <h2 className="text-2xl md:text-4xl font-bold text-[#0b314d] mb-8 text-center urdu-text">ہمارے دیگر پلیٹ فارمز / چینلز</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {otherChannels.map((channel, idx) => (
-                        <a key={idx} href={channel.url} target="_blank" rel="noopener noreferrer" className={`bg-gradient-to-r ${channel.color} p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-white text-center flex flex-col justify-center items-center h-full group`}>
-                            {channel.iconType === 'youtube' ? (
-                                <FaYoutube className="text-5xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform" />
-                            ) : (
-                                <FaGlobe className="text-5xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-transform" />
-                            )}
-                            <h3 className="text-2xl font-bold mb-2 urdu-text drop-shadow-md">{channel.title}</h3>
-                            <p className="text-sm font-light urdu-text">{channel.desc}</p>
-                        </a>
-                    ))}
                 </div>
             </section>
 
@@ -254,9 +263,9 @@ export default function TalkshowsPage() {
 
             {/* 🔴 یوٹیوب ویڈیو پلے کرنے والا ماڈل */}
             {activeVideo && (
-                <div className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
-                    <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[1001]">&times;</button>
-                    <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
+                <div className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md" onClick={() => setActiveVideo(null)}>
+                    <button className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[1001]">&times;</button>
+                    <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]" onClick={(e) => e.stopPropagation()}>
                         <iframe
                             className="w-full h-[50vh] md:h-[75vh]"
                             src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`}
