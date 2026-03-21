@@ -1,11 +1,14 @@
+
 "use client";
+
 import { useState } from 'react';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
-// 🔴 سوشل میڈیا کے تمام آئکنز
 import { FaYoutube, FaChevronDown, FaGlobe, FaWhatsapp, FaFacebook, FaTelegram, FaTiktok } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
+// 🔴 1. گیلری کمپوننٹ امپورٹ کریں
+import Gallery from './Gallery'; 
 import { talkshowIntro, talkshowVideos, interviewsImages, generalGallery, TALKSHOW_CHANNELS as otherChannels } from './data';
 
 const getYouTubeId = (url) => {
@@ -209,36 +212,28 @@ export default function TalkshowsPage() {
                 </div>
             </section>
 
-            {/* 📸 سیکشن 3: انٹرویوز اور شخصیات */}
-            <section className="bg-gray-50 py-12 md:py-16">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] mb-10 text-center urdu-text">🎙️ اہم شخصیات کے انٹرویوز</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                        {interviewsImages.map((item, idx) => (
-                            <div key={idx} className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden group hover:shadow-xl transition-all">
-                                <div className="h-40 md:h-48 overflow-hidden bg-gray-200 relative">
-                                    <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                                </div>
-                                <div className="p-3 bg-[#0f4c75] text-center border-t-2 border-[#D4AF37]">
-                                    <p className="text-white font-bold text-sm md:text-base urdu-text">{item.title}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+           
+{/* --- انٹرویوز کی تصویری گیلری --- */}
+<section className="bg-white py-16 border-t">
+  <div className="container mx-auto">
+    <Gallery 
+      title="🎙️ اہم شخصیات کے انٹرویوز" 
+      images={interviewsImages} 
+      isObjectArray={true} 
+    />
+  </div>
+</section>
 
-            {/* 📸 سیکشن 4: دیگر تصویری جھلکیاں */}
-            <section className="container mx-auto px-4 py-12 border-t border-gray-200">
-                <h2 className="text-2xl md:text-4xl font-bold text-[#0b314d] mb-10 text-center urdu-text">📸 یادگار لمحات</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-                    {generalGallery.map((img, idx) => (
-                        <div key={idx} className="relative group rounded-lg overflow-hidden border border-gray-200 hover:border-[#D4AF37] shadow-sm hover:shadow-lg transition-all duration-300 aspect-square bg-black">
-                            <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-transform duration-500" />
-                        </div>
-                    ))}
-                </div>
-            </section>
+{/* --- یادگار لمحات کی گیلری --- */}
+<section className="bg-gray-50 py-16 border-t">
+  <div className="container mx-auto">
+    <Gallery 
+      title="📸 یادگار لمحات" 
+      images={generalGallery} 
+      isObjectArray={false} 
+    />
+  </div>
+</section>
 
             {/* 🌟 5. ہمیں فالو کریں (سوشل میڈیا) */}
             <section className="container mx-auto px-4 pb-16 pt-10">
@@ -261,18 +256,12 @@ export default function TalkshowsPage() {
                 </div>
             </section>
 
-            {/* 🔴 یوٹیوب ویڈیو پلے کرنے والا ماڈل */}
+         {/* ویڈیو ماڈل */}
             {activeVideo && (
                 <div className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md" onClick={() => setActiveVideo(null)}>
                     <button className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[1001]">&times;</button>
                     <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]" onClick={(e) => e.stopPropagation()}>
-                        <iframe
-                            className="w-full h-[50vh] md:h-[75vh]"
-                            src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen>
-                        </iframe>
+                        <iframe className="w-full h-[50vh] md:h-[75vh]" src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0`} frameBorder="0" allowFullScreen></iframe>
                     </div>
                 </div>
             )}
