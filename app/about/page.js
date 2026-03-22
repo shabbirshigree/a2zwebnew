@@ -11,9 +11,10 @@ import Footer from '../components/Footer';
 
 // 🔴 ڈیٹا امپورٹس
 import { founderItems, mediaRoles, services } from './aboutData';
-import { legendsData } from '../homeData';
-import { BOOKS_DATA } from '../library/libraryData';
 
+// ✅ ڈیٹا امپورٹ کرنے کا درست اور واحد طریقہ (صرف ایک بار رکھیں)
+import { legendsData } from '@/app/home/homeData'; 
+import { BOOKS_DATA } from '../library/libraryData';
 export default function UltimateAboutPage() {
   const [activeVideo, setActiveVideo] = useState(null);
 

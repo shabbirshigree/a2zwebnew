@@ -1,33 +1,113 @@
-import { FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib, FaTv, FaMicrophone, FaTrophy, FaImages, FaHandHoldingHeart } from "react-icons/fa";
+// ہم نے آئیکنز بھی یہیں منگوا لیے ہیں تاکہ مین پیج ہلکا رہے
+import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMicrophone, FaNewspaper, FaTv, FaPlane } from "react-icons/fa";
 
-// 📚 کتابوں کا ڈیٹا (سلائیڈر کے لیے)
+// 🔴 1. ویلکم سیکشن کا ڈیٹا
+export const welcomeData = {
+  bismillah: "بِسْمِ اللّٰہِ الرَّحْمٰنِ الرَّحِیْمِ",
+  greeting: "السلام علیکم!",
+  description: "میں آپ کو اپنی آفیشل ویب سائٹ پر خوش آمدید کہتا ہوں۔ یہ ویب سائٹ میری 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا ایک عاجزانہ عکس ہے۔ یہاں آپ کو میرے 'نور القرآن ویژول' جیسے عظیم پروجیکٹ کی تفصیلات کے ساتھ میرے کالمز، مضامین، سفرنامے، ڈاکومنٹریز، اور دیگر خدمات کا مجموعہ ملے گا۔ بالخصوص میری تحاریر پر گوگل کے خصوصی اور دلچسپ تجزیے آڈیو پوڈکاسٹ اور ویڈیو کی شکل میں سن اور دیکھ سکتے ہیں۔",
+  name: "حاجی شبیر احمد شگری"
+};
+
+// 🔴 2. اہم اعزازات (بٹنز)
+export const honorsData = [
+  { title: "خادمِ امام رضاؑ", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif", direction: "right" },
+  { title: "خادمِ غازی عباسؑ", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif", direction: "left" }
+];
+
+// 🔴 3. نیویگیشن کارڈز کا ڈیٹا
+export const navCardsData = [
+  { title: "نور القرآن", link: "/project", target: "_self", icon: <FaBookOpen /> },
+  { title: "نور پروڈکشنز", link: "https://www.youtube.com/@noorproduction?sub_confirmation=1", target: "_blank", icon: <FaYoutube /> },
+  { title: "پاک ایران دوستی", link: "https://pakiiranassociation.wixsite.com/pira", target: "_blank", icon: <FaHandshake /> },
+  { title: "ویب سائٹ", link: "/", target: "_self", icon: <FaGlobe /> }
+];
+
+// homeData.js کے اندر اس حصے کو دیکھیں
+export const projectSectionData = {
+  title: "📖 Noor-ul-Quran Project",
+  description: "نورالقرآن ویژول کا مقصد قرآن مجید کی آیات کو بصری انداز میں پیش کرنا ہے۔",
+  btnText: "تفصیلات دیکھیں",
+  link: "/library#book-noor", // 👈 یہاں لائبریری کا مخصوص لنک لگا دیں
+  image: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png"
+};
+
+// 🔴 5. حاجی شبیر احمد شگری کی تمام 8 کتب کا مکمل ڈیٹا
 export const booksData = [
-  { title: 'سیرتِ فاطمہ زہراؑ: بوئے بہشت', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png', link: '/library#book-booy' },
-  { title: 'شاخ نبات(حصہ اول و دوم)', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1773673146/0125d4e5-ab4f-43f0-961b-b05c3cd8b420.png', link: '/library#shakh-e-nabaat' },
-  { title: 'انیس النفوس', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png', link: '/library#book-anees' },
-  { title: 'سفرنامہ ایران: دیارِ عشق کا سفر', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651728/eb2e1ccd-e669-4453-8ca7-10f38cf13a50.png', link: '/library#book-safarnama' },
-  { title: 'روح کی معراج', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772599153/39144cf5-3156-4054-85a3-bbfd54106240.png', link: '/library#book-rooh' },
-  { title: 'سکون کی تلاش', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651897/e56ab798-14ec-4aaf-a0b3-a205a1aae1f4.png', link: '/library#book-sakoon' },
-  { title: 'سیاحتِ ایران (حصہ اول و دوم)', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png', link: '/library#book-sayahat-parts' },
-  { title: 'کنجی بہشت: دعاؤں کا مجموعہ', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png', link: '/library#book-dua' },
-  { title: 'خراسان رضوی (حصہ اول و دوم)', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png', link: '/library#book-khorasan' },
-  { title: 'رہبر کے فتوے (حصہ اول و دوم)', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772597583/e1511aec-3b7d-44d3-9bd1-4cdfbeecb9c3.png', link: '/library#book-fatwa' },
-  { title: 'مجلہ فرھنگستان', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png', link: '/library#book-farhang' },
-  { title: 'مجلہ انقلاب', img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772598044/95eeeeb5-067e-4fcb-b4c6-ed952d52af89.png', link: '/library#book-inqilab' }
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016596/sakoon.ki.talash_nmlugh.png", title: "سکون کی تلاش", author: "حاجی شبیر احمد شگری", year: "2015", link: "/library#book-sakoon" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png", title: "بوئے بہشت", author: "حاجی شبیر احمد شگری", year: "2018", link: "/library#book-booy" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768062537/front_page_jce6fj.png", title: "روح کی معراج", author: "حاجی شبیر احمد شگری", year: "2012", link: "/library#book-rooh" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png", title: "کنجی بہشت", author: "حاجی شبیر احمد شگری", year: "2019", link: "/library#book-kunji" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png", title: "سیاحت ایران", author: "حاجی شبیر احمد شگری", year: "2016", link: "/library#book-iran" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp", title: "انیس النفوس", author: "حاجی شبیر احمد شگری", year: "2020", link: "/library#book-anees" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", title: "مجلہ فرھنگستان", author: "حاجی شبیر احمد شگری", year: "2017", link: "/library#book-farhang" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "نورالقرآن", author: "حاجی شبیر احمد شگری", year: "2021", link: "/library#book-noor" } 
 ];
 
-// 🏆 خدمات کا ڈیٹا
-export const servicesData = [
-  { title: 'ڈپلومیٹک خدمات', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'بین الاقوامی سطح پر سفارتی اور تعمیری کردار کی تفصیلات۔' },
-  { title: 'کلچرل ڈپلومیسی', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'پاک ایران ثقافتی تعلقات اور ہم آہنگی کا فروغ۔' },
-  { title: 'وحدت امت', link: '/unity', icon: <FaUsers size={24} />, desc: 'مسلمانوں کے درمیان اتحاد اور بھائی چارے کی انتھک کوششیں۔' },
-  { title: 'تصانیف و کتب', link: '/library', icon: <FaBook size={24} />, desc: 'علمی، ادبی اور روحانی موضوعات پر شاندار کتب کا ذخیرہ۔' },
-  { title: 'جرنلزم و مضامین', link: '/article', icon: <FaPenNib size={24} />, desc: 'نصف صدی پر محیط صحافتی خدمات اور فکری مضامین۔' },
-  { title: 'ٹی وی چینلز', link: '/channels', icon: <FaTv size={24} />, desc: 'مختلف بین الاقوامی ٹی وی چینلز پر دینی و سماجی خدمات۔' },
-  { title: 'ٹالک شوز', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'اہم قومی و بین الاقوامی موضوعات پر فکر انگیز انٹرویوز۔' },
-  { title: 'اعزازات و ایوارڈز', link: '/awards', icon: <FaTrophy size={24} />, desc: 'قومی اور بین الاقوامی سطح پر ملنے والے اعلیٰ اعزازات۔' },
-  { title: 'پکچر گیلری', link: '/gallery', icon: <FaImages size={24} />, desc: 'یادگار لمحات، شخصیات اور اہم تقریبات کی تصویری جھلکیاں۔' },
-  { title: 'دیگر خدمات', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'سماجی، فلاحی اور دیگر اہم ملی و رفاہی خدمات۔' }
+// 🔴 6. نامور شخصیات کے تمام 9 انٹرویوز کا مکمل ڈیٹا (Cloudinary MP4 Links)
+export const legendsData = [
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.mp4", 
+    name: "Mian Manzoor Watoo", 
+    role: "Ex-Chief Minister" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.mp4", 
+    name: "Pir Usman Shah Noori", 
+    role: "Peace Committee" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.mp4", 
+    name: "Pir Burhanuddin Usmani", 
+    role: "Usmani Foundation" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.mp4", 
+    name: "Dr. M. Sadaqat Ali", 
+    role: "Religious Scholar" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.mp4", 
+    name: "Pir Maoom H. Naqvi", 
+    role: "Senior Scholar" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.mp4", 
+    name: "Sardar Sikandar Singh", 
+    role: "Sikh Leader" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.mp4", 
+    name: "Hafiz A.G. Roparhi", 
+    role: "Jamia Ahle Hadith" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.mp4", 
+    name: "Molana M. Khan Laghari", 
+    role: "Ahle Sunnat Scholar" 
+  },
+  { 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.mp4", 
+    name: "Pir G. Rasool Awesi", 
+    role: "Spiritual Leader" 
+  }
 ];
 
-// یہاں اپنی پرانی homeData کی دیگر چیزیں (welcomeData, honorsData وغیرہ) بھی شامل رکھیں
+// 🔴 7. حاجی شبیر احمد شگری کی 45 سالہ خدمات کا ڈیٹا (آئیکنز کے ساتھ)
+export const journeyData = [
+  { title: "Radio Pakistan", desc: "Start of Career at Radio Pakistan Skardu.", icon: <FaMicrophone /> },
+  { title: "Journalism (45 Years)", desc: "Deputy Editor: Daily Havi, Akath & Prachar.", icon: <FaNewspaper /> },
+  { title: "TV Talk Shows", desc: "Host & Guest on National & International TV.", icon: <FaTv /> },
+  { title: "Cultural Diplomacy", desc: "Ex-PRO & In-charge at Khana Farhang Iran.", icon: <FaHandshake /> },
+  { title: "Books & Author", desc: "Author of 9+ books including 'Booy-e-Bahisht'.", icon: <FaBookOpen /> },
+  { title: "Tourism Pioneer", desc: "Launched First Cultural Tourism to Iran.", icon: <FaPlane /> }
+];

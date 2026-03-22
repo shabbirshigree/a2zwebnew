@@ -1,3 +1,4 @@
+
 import { Gulzar, Noto_Naskh_Arabic } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";

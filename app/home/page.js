@@ -1,89 +1,24 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaTimes, FaArrowLeft, FaPlay, FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib, FaTv, FaMicrophone, FaTrophy, FaImages, FaHandHoldingHeart } from "react-icons/fa";
+import {
+  FaHeart, FaMicrophone, FaAward, FaQuran, FaLandmark,
+  FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild,
+  FaStar, FaArrowRight, FaArrowLeft, FaBookOpen, FaPlay, FaTimes, FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper, FaBriefcase, FaUser
+} from "react-icons/fa";
 import Link from 'next/link';
-
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
-import { welcomeData, honorsData, navCardsData, projectSectionData, legendsData, journeyData } from '../homeData'; 
 
-// 📚 🔴 کتابوں کا ڈیٹا (اینکر لنکس کے ساتھ) 🔴 📚
-const booksData = [
-  {
-    title: 'سیرتِ فاطمہ زہراؑ: بوئے بہشت',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png',
-    link: '/library#book-booy'
-  },
-  {
-    title: 'شاخ نبات(حصہ اول و دوم)',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1773673146/0125d4e5-ab4f-43f0-961b-b05c3cd8b420.png',
-    link: '/library#shakh-e-nabaat'
-  },
-  {
-    title: 'انیس النفوس',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',
-    link: '/library#book-anees'
-  },
-  {
-    title: 'سفرنامہ ایران: دیارِ عشق کا سفر',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651728/eb2e1ccd-e669-4453-8ca7-10f38cf13a50.png',
-    link: '/library#book-safarnama'
-  },
-  {
-    title: 'روح کی معراج',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772599153/39144cf5-3156-4054-85a3-bbfd54106240.png',
-    link: '/library#book-rooh'
-  },
-  {
-    title: 'سکون کی تلاش',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651897/e56ab798-14ec-4aaf-a0b3-a205a1aae1f4.png',
-    link: '/library#book-sakoon'
-  },
-  {
-    title: 'سیاحتِ ایران (حصہ اول و دوم)',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png',
-    link: '/library#book-sayahat-parts'
-  },
-  {
-    title: 'کنجی بہشت: دعاؤں کا مجموعہ',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png',
-    link: '/library#book-dua'
-  },
-  {
-    title: 'خراسان رضوی (حصہ اول و دوم)',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png',
-    link: '/library#book-khorasan'
-  },
-  {
-    title: 'رہبر کے فتوے (حصہ اول و دوم)',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772597583/e1511aec-3b7d-44d3-9bd1-4cdfbeecb9c3.png',
-    link: '/library#book-fatwa'
-  },
-  {
-    title: 'مجلہ فرھنگستان',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png',
-    link: '/library#book-farhang'
-  },
-  {
-    title: 'مجلہ انقلاب',
-    img: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772598044/95eeeeb5-067e-4fcb-b4c6-ed952d52af89.png',
-    link: '/library#book-inqilab'
-  }
-];
-
-// 🏆 🔴 45 سالہ خدمات کا ڈیٹا 🔴 🏆
-const servicesData = [
-  { title: 'ڈپلومیٹک خدمات', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'بین الاقوامی سطح پر سفارتی اور تعمیری کردار کی تفصیلات۔' },
-  { title: 'کلچرل ڈپلومیسی', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'پاک ایران ثقافتی تعلقات اور ہم آہنگی کا فروغ۔' },
-  { title: 'وحدت امت', link: '/unity', icon: <FaUsers size={24} />, desc: 'مسلمانوں کے درمیان اتحاد اور بھائی چارے کی انتھک کوششیں۔' },
-  { title: 'تصانیف و کتب', link: '/library', icon: <FaBook size={24} />, desc: 'علمی، ادبی اور روحانی موضوعات پر شاندار کتب کا ذخیرہ۔' },
-  { title: 'جرنلزم و مضامین', link: '/article', icon: <FaPenNib size={24} />, desc: 'نصف صدی پر محیط صحافتی خدمات اور فکری مضامین۔' },
-  { title: 'ٹی وی چینلز', link: '/channels', icon: <FaTv size={24} />, desc: 'مختلف بین الاقوامی ٹی وی چینلز پر دینی و سماجی خدمات۔' },
-  { title: 'ٹالک شوز', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'اہم قومی و بین الاقوامی موضوعات پر فکر انگیز انٹرویوز۔' },
-  { title: 'اعزازات و ایوارڈز', link: '/awards', icon: <FaTrophy size={24} />, desc: 'قومی اور بین الاقوامی سطح پر ملنے والے اعلیٰ اعزازات۔' },
-  { title: 'پکچر گیلری', link: '/gallery', icon: <FaImages size={24} />, desc: 'یادگار لمحات، شخصیات اور اہم تقریبات کی تصویری جھلکیاں۔' },
-  { title: 'دیگر خدمات', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'سماجی، فلاحی اور دیگر اہم ملی و رفاہی خدمات۔' }
-];
+// ڈیٹا امپورٹ (یقینی بنائیں کہ راستہ درست ہے)
+import { 
+  welcomeData, 
+  honorsData, 
+  navCardsData, 
+  projectSectionData, 
+  booksData, 
+  legendsData, 
+  journeyData 
+} from './homeData';
 
 const getYouTubeId = (url) => {
   if (!url) return '';
@@ -113,7 +48,7 @@ const globalStyles = `
 
   @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
   .islamic-pattern { 
-    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.05) 20px, rgba(212, 175, 55, 0.05) 40px);
+    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.25) 20px, rgba(212, 175, 55, 0.25) 40px);
     animation: patternMove 20s linear infinite; 
   }
   .card-lift { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
@@ -123,14 +58,8 @@ const globalStyles = `
   @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
   .pause-on-hover:hover { animation-play-state: paused; }
-  
-  .responsive-video-container {
-    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%;
-    background: black; border-radius: 12px; box-shadow: 0 0 30px rgba(212,175,55,0.4); border: 2px solid #D4AF37;
-  }
-  .responsive-video-container iframe, .responsive-video-container video {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  }
+  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 `;
 
 export default function Home() {
@@ -158,7 +87,7 @@ export default function Home() {
           <HeroSlider />
         </div>
 
-        {/* خوش آمدید سیکشن */}
+        {/* 🏠 خوش آمدید سیکشن */}
         <div className="container mx-auto px-3 md:px-4 py-8 relative z-10">
           <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
             <div className="space-y-6 relative z-10">
@@ -192,11 +121,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* نیویگیشن کارڈز */}
+        {/* 🧭 نیویگیشن کارڈز */}
         <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
             {navCardsData?.map((card, i) => (
-               <Link key={i} href={card.link} target={card.target === "_blank" ? "_blank" : "_self"} className="h-full">
+               <Link key={i} href={card.link} className="h-full">
                  <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
                    <div className="text-3xl text-[#D4AF37] mb-3 group-hover:scale-125 transition-transform drop-shadow-sm">{card.icon}</div>
                    <h3 className="text-gray-800 text-sm md:text-lg urdu-text font-bold group-hover:text-[#0f4c75]">{card.title}</h3>
@@ -206,7 +135,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* پروجیکٹ سیکشن */}
+        {/* 🚀 پروجیکٹ سیکشن */}
         <section className="container mx-auto px-3 md:px-4 py-6 relative z-10">
           <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-1 shadow-xl border-2 border-[#D4AF37] hover:shadow-[0_0_50px_rgba(15,76,117,0.3)] transition-all duration-500">
             <div className="bg-white rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-8">
@@ -227,7 +156,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* شخصیات سلائیڈر */}
+        {/* 🎥 شخصیات سلائیڈر */}
         <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
           <div className="container mx-auto px-2 relative z-10 text-center">
             <h2 className="text-lg md:text-3xl font-bold text-[#D4AF37] text-center urdu-text mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto">نامور شخصیات کا میرے بارے اظہار خیال</h2>
@@ -251,7 +180,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* تصانیف سلائیڈر */}
+        {/* 📚 تصانیف سلائیڈر */}
         <section className="container mx-auto px-2 py-10 relative z-10">
           <h2 className="text-xl md:text-3xl font-bold text-[#0f4c75] text-center urdu-text mb-8 border-b-2 border-[#D4AF37]/30 pb-2 inline-block mx-auto w-full">حاجی شبیر احمد شگری کی تصانیف</h2>
           <div className="bg-white p-6 rounded-[2rem] shadow-xl border border-[#D4AF37]/20 overflow-hidden" dir="ltr">
@@ -262,8 +191,8 @@ export default function Home() {
                               <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                               <div className="absolute bottom-0 w-full p-4 text-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
-                                 <div className="text-sm md:text-base text-[#D4AF37] urdu-text font-bold drop-shadow-md leading-tight">{item.title}</div>
-                                 <div className="text-[10px] md:text-xs text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">تفصیلات کے لیے کلک کریں</div>
+                                  <div className="text-sm md:text-base text-[#D4AF37] urdu-text font-bold drop-shadow-md leading-tight">{item.title}</div>
+                                  <div className="text-[10px] md:text-xs text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">تفصیلات کے لیے کلک کریں</div>
                               </div>
                            </Link>
                         </div>
@@ -272,7 +201,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 45 سالہ خدمات سیکشن */}
+        {/* ⏳ خدمت کے 45 سال */}
         <section className="bg-gradient-to-b from-white to-[#f8f9fa] py-16 border-t-2 border-[#D4AF37]/20 relative z-10 shadow-inner">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center mb-12">
@@ -280,23 +209,14 @@ export default function Home() {
                <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {servicesData?.map((item, i) => (
-                   <Link key={i} href={item.link || "#"} className="block group h-full">
-                     <div className="relative bg-white rounded-2xl p-6 border-2 border-transparent hover:border-[#D4AF37] hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full text-right flex flex-col justify-between" dir="rtl">
-                       <div className="absolute -bottom-6 -left-6 text-[#0f4c75] opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform scale-[3] pointer-events-none">{item.icon}</div>
-                       <div>
-                         <div className="flex items-center gap-4 mb-4">
-                           <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#D4AF37] transition-all duration-500">{item.icon}</div>
-                           <h3 className="font-bold text-[#0f4c75] text-xl md:text-2xl font-amiri group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
-                         </div>
-                         <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium transition-colors relative z-10">{item.desc}</p>
-                       </div>
-                       <div className="mt-6 flex items-center justify-end text-[#D4AF37] opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300">
-                          <span className="text-sm font-bold ml-2 urdu-text">مزید دیکھیں</span>
-                          <FaArrowLeft size={14} />
-                       </div>
-                     </div>
-                   </Link>
+                {journeyData?.map((item, i) => (
+                   <div key={i} className="relative bg-white rounded-2xl p-6 border-2 border-transparent hover:border-[#D4AF37] hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full text-right flex flex-col justify-between" dir="rtl">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#D4AF37] transition-all duration-500">{item.icon}</div>
+                        <h3 className="font-bold text-[#0f4c75] text-xl md:text-2xl font-amiri group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
+                      </div>
+                      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium transition-colors relative z-10">{item.desc}</p>
+                   </div>
                 ))}
             </div>
           </div>
@@ -305,7 +225,7 @@ export default function Home() {
         <Footer year="2026" />
       </main>
 
-      {/* ویڈیو ماڈل */}
+      {/* 🎬 ویڈیو ماڈل */}
       {activeVideo && (
         <div className="fixed inset-0 bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-md z-[99999]">
           <div className="w-full max-w-4xl flex flex-col items-center">
