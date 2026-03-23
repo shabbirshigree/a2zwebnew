@@ -1,5 +1,8 @@
-// app/about/aboutData.js
-import { FaHeart, FaHandshake, FaTrophy, FaGlobe, FaQuran, FaAward, FaMedal, FaMicrophone, FaTv, FaVideo, FaNewspaper, FaBriefcase, FaUser, FaPenNib, FaLandmark } from "react-icons/fa";
+import { 
+  FaHeart, FaHandshake, FaTrophy, FaGlobe, FaQuran, FaAward, FaMedal, 
+  FaMicrophone, FaTv, FaVideo, FaNewspaper, FaBriefcase, FaUser, 
+  FaPenNib, FaLandmark, FaUsers, FaHandHoldingHeart, FaImages 
+} from "react-icons/fa";
 
 export const founderItems = [
   { icon: <FaQuran />, title: "نور القرآن پراجیکٹ", desc: "World's First Visual Quran" },
@@ -19,15 +22,15 @@ export const mediaRoles = [
   { icon: <FaNewspaper />, title: "Journalist", desc: "45 سالہ صحافتی تجربہ" }
 ];
 
-// 🔴 ریڈیو پاکستان کا خصوصی مواد
+// ریڈیو پاکستان کا ڈیٹا اب پیج پر 'radio-section' میں استعمال ہو رہا ہے
 export const radioHistory = {
   title: "ریڈیو پاکستان: میرا پہلا مکتب",
   image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771722020/pbcs_Copy_xlljiu.png",
   quote: "شعور اور آگہی کا پہلا باقاعدہ دروازہ ریڈیو پاکستان کے ذریعے کھلا۔",
   text: [
-    "مجھے آج بھی اچھی طرح یاد ہے جب میں محض آٹھ یا نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو (Medium Wave) آزمائشی نشریات کا آغاز ہوا۔ اس دور میں جب ٹی وی اور انٹرنیٹ کا تصور بھی محال تھا، ریڈیو ہی دنیا سے رابطے کا واحد ذریعہ ہوا کرتا تھا۔",
-    "میں سکردو کے ان چند خوش نصیب بچوں میں شامل تھا جنہیں 'چاند تارے' پروگرام میں شرکت کا موقع ملا۔ جلد ہی میں نے 'بھائی جان' کے روپ میں میزبانی شروع کر دی۔ ریڈیو کے سخت اصول 'اسکرپٹ کے بغیر نہیں بولنا' نے مجھے پختہ تحریر کا عادی بنا دیا۔",
-    "وقت کے ساتھ ساتھ میں نے 'عزمِ جواں' کی کمپیئرنگ سنبھالی اور بلتی زبان میں دو گھنٹے کی طویل براہِ راست نشریات کرنے لگا۔ سکردو میں صبح کی آزمائشی نشریات کا آغاز بھی میرے ہاتھوں ہوا۔ 1989-90 میں 750 روپے کا وہ چیک میری پہلی کمائی نہیں بلکہ اس عزت کا اعتراف تھا جو مائیکروفون نے مجھے دی تھی۔"
+    "مجھے آج بھی اچھی طرح یاد ہے جب میں محض آٹھ یا نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو (Medium Wave) آزمائشی نشریات کا آغاز ہوا۔",
+    "ریڈیو کے سخت اصول 'اسکرپٹ کے بغیر نہیں بولنا' نے مجھے پختہ تحریر کا عادی بنا دیا۔",
+    "1989-90 میں 750 روپے کا وہ چیک میری پہلی کمائی نہیں بلکہ اس عزت کا اعتراف تھا جو مائیکروفون نے مجھے دی تھی۔"
   ]
 };
 

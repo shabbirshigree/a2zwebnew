@@ -1,15 +1,15 @@
-"use client";
-import { useState, useEffect } from 'react';
+"use client"; // 👈 نمبر 1: یہ سب سے اوپر ہونی چاہیے
+import { useState, useEffect } from 'react'; // 👈 نمبر 2: یہ لائن یہاں غائب تھی، اسے لازمی ڈالیں
+import Link from 'next/link'; // 👈 یہ لائن بٹنز کو کام کرنے کے قابل بنائے گی
 import {
   FaHeart, FaMicrophone, FaAward, FaQuran, FaLandmark,
   FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild,
-  FaStar, FaArrowRight, FaArrowLeft, FaBookOpen, FaPlay, FaTimes, FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper, FaBriefcase, FaUser
+  FaStar, FaArrowRight, FaArrowLeft, FaBookOpen, FaPlay, FaTimes, 
+  FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper, 
+  FaBriefcase, FaUser, FaHeadphones, FaBook 
 } from "react-icons/fa";
-import Link from 'next/link';
-import { Navbar, HeroSlider } from '../components/Header';
-import Footer from '../components/Footer';
 
-// ڈیٹا امپورٹ (یقینی بنائیں کہ راستہ درست ہے)
+// باقی ڈیٹا امپورٹ ویسے ہی رہے گا جیسے آپ نے بھیجا ہے
 import { 
   welcomeData, 
   honorsData, 
@@ -19,6 +19,9 @@ import {
   legendsData, 
   journeyData 
 } from './homeData';
+// 🟢 یہ لائن 'Navbar' اور 'HeroSlider' کو جوڑنے کے لیے ہے
+import { Navbar, HeroSlider } from '../components/Header';
+import Footer from '../components/Footer';
 
 const getYouTubeId = (url) => {
   if (!url) return '';
@@ -63,8 +66,12 @@ const globalStyles = `
 `;
 
 export default function Home() {
+  // 1. تمام اسٹیٹس (States) یہاں ایک ساتھ رکھیں
   const [activeVideo, setActiveVideo] = useState(null);
+  const [selectedHomeVideo, setSelectedHomeVideo] = useState(null);
+  const [showHomeBooklet, setShowHomeBooklet] = useState(false);
 
+  // 2. اس کے بعد useEffect والا حصہ آئے گا
   useEffect(() => {
     if (typeof window !== 'undefined' && !document.getElementById('custom-animations')) {
       const style = document.createElement('style');
@@ -72,7 +79,9 @@ export default function Home() {
       style.textContent = globalStyles;
       document.head.appendChild(style);
     }
-  }, []);
+  }, []); // 👈 یہاں یہ ختم ہو رہا ہے
+
+  // اس کے بعد باقی کوڈ...
 
   const repeatCount = 8; 
   const infiniteLegends = Array(repeatCount).fill(legendsData || []).flat();
@@ -121,40 +130,62 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 🧭 نیویگیشن کارڈز */}
-        <section className="container mx-auto px-3 md:px-4 py-2 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-            {navCardsData?.map((card, i) => (
-               <Link key={i} href={card.link} className="h-full">
-                 <div className="bg-white border border-[#D4AF37]/20 p-5 rounded-2xl shadow-sm flex flex-col items-center text-center hover:bg-[#fffbf0] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
-                   <div className="text-3xl text-[#D4AF37] mb-3 group-hover:scale-125 transition-transform drop-shadow-sm">{card.icon}</div>
-                   <h3 className="text-gray-800 text-sm md:text-lg urdu-text font-bold group-hover:text-[#0f4c75]">{card.title}</h3>
-                 </div>
-               </Link>
-            ))}
-          </div>
-        </section>
+{/* 🚀 نور القرآن پراجیکٹ سیکشن (نیا اور پروفیشنل ڈیزائن) */}
+<section className="container mx-auto px-3 md:px-4 py-8 relative z-10">
+  <div className="max-w-6xl mx-auto bg-[#0a0a0a] border border-[#D4AF37]/30 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative overflow-hidden group">
+    
+    <div className="flex flex-col lg:flex-row-reverse gap-10 items-center relative z-10">
+      
+      {/* 🖼️ تصویر اور بیج */}
+      <div className="lg:w-1/3 relative">
+        <div className="absolute -top-4 -right-4 bg-[#D4AF37] text-[#0b314d] text-[10px] font-bold px-3 py-1 rounded-full z-10 shadow-lg">
+          WORLD'S FIRST VISUAL QURAN
+        </div>
+        <img 
+          src="https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png" 
+          alt="نور القرآن پراجیکٹ" 
+          className="w-full h-auto rounded-2xl border-2 border-[#D4AF37]/50 shadow-2xl transition-transform group-hover:scale-105 duration-500"
+        />
+      </div>
 
-        {/* 🚀 پروجیکٹ سیکشن */}
-        <section className="container mx-auto px-3 md:px-4 py-6 relative z-10">
-          <div className="bg-gradient-to-r from-[#0f4c75] to-[#1e6091] rounded-3xl p-1 shadow-xl border-2 border-[#D4AF37] hover:shadow-[0_0_50px_rgba(15,76,117,0.3)] transition-all duration-500">
-            <div className="bg-white rounded-2xl p-4 md:p-8 flex flex-col md:flex-row items-center gap-8">
-              <div className="flex-1 text-center md:text-right order-2 md:order-1">
-                <h3 className="text-xl md:text-3xl font-bold text-[#0f4c75] mb-3 font-serif">{projectSectionData?.title}</h3>
-                <div className="bg-blue-50 p-4 rounded-xl border border-[#D4AF37]/30 shadow-inner group transition-all mb-4">
-                  <p className="text-[#0f4c75] font-bold text-sm md:text-lg urdu-text group-hover:scale-[1.01] transition-transform leading-relaxed" dir="rtl">{projectSectionData?.description}</p>
-                </div>
-                <div className="flex justify-center md:justify-end mt-5">
-                  <Link href={projectSectionData?.link || '#'} className="group relative inline-flex items-center gap-3 px-8 py-2 rounded-full border-2 border-[#D4AF37] text-[#0f4c75] text-lg font-bold overflow-hidden transition-all duration-300 hover:text-white hover:bg-[#D4AF37] shadow-md hover:shadow-lg hover:-translate-y-1">
-                    <span className="urdu-text relative z-10">{projectSectionData?.btnText}</span>
-                    <FaArrowLeft className="relative z-10 group-hover:-translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-              <img src={projectSectionData?.image} alt="Project Logo" className="w-32 md:w-48 rounded-2xl shadow-lg border-4 border-[#D4AF37] order-1 md:order-2" />
-            </div>
-          </div>
-        </section>
+      {/* 📝 تحریر اور بٹنز */}
+      <div className="lg:w-2/3 text-right" dir="rtl">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-5 urdu-text">
+          نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن
+        </h2>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed urdu-text mb-8">
+          یہ حاجی شبیر احمد شگری کا ایک جدید اور منفرد منصوبہ ہے۔ اس پروجیکٹ کا بنیادی مقصد جدید ٹیکنالوجی اور مصنوعی ذہانت (AI) کے ذریعے قرآن مجید کے ترجمے اور مفاہیم کو بصری اور فلمی انداز میں پیش کرنا ہے۔
+        </p>
+
+        {/* 🔘 بٹن پینل (جو اب پاپ اپ کھولیں گے) */}
+        <div className="flex flex-wrap gap-3 justify-start">
+          <button 
+            onClick={() => setShowHomeBooklet(true)}
+            className="px-6 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#D4AF37] text-[#0b314d] hover:bg-white transition-all shadow-md"
+          >
+            <FaBookOpen /> تفصیل پڑھیں
+          </button>
+          
+          <button 
+            onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
+            className="px-5 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#0f4c75] text-white hover:bg-[#1b6ca8] transition-all shadow-md"
+          >
+            <FaPlay /> ویڈیو پوڈکاسٹ
+          </button>
+
+          <button 
+            onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
+            className="px-5 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37] hover:bg-[#D4AF37]/20 transition-all"
+          >
+            <FaHeadphones /> آڈیو پوڈکاسٹ
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* 🎥 شخصیات سلائیڈر */}
         <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
@@ -201,31 +232,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ⏳ خدمت کے 45 سال */}
-        <section className="bg-gradient-to-b from-white to-[#f8f9fa] py-16 border-t-2 border-[#D4AF37]/20 relative z-10 shadow-inner">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f4c75] urdu-text mb-4">خدمت کے 45 سال</h2>
-               <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full"></div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {journeyData?.map((item, i) => (
-                   <div key={i} className="relative bg-white rounded-2xl p-6 border-2 border-transparent hover:border-[#D4AF37] hover:shadow-[0_15px_30px_rgba(212,175,55,0.15)] transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full text-right flex flex-col justify-between" dir="rtl">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-full flex items-center justify-center shadow-lg group-hover:bg-[#D4AF37] transition-all duration-500">{item.icon}</div>
-                        <h3 className="font-bold text-[#0f4c75] text-xl md:text-2xl font-amiri group-hover:text-[#D4AF37] transition-colors">{item.title}</h3>
-                      </div>
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium transition-colors relative z-10">{item.desc}</p>
-                   </div>
-                ))}
-            </div>
-          </div>
-        </section>
+{/* ⏳ خدمت کے 45 سال (مکمل RTL ترتیب کے ساتھ) */}
+<section className="bg-gradient-to-b from-[#fdfbfb] to-[#f3f4f6] py-16 border-t-2 border-[#D4AF37]/20 relative z-10">
+  <div className="container mx-auto px-4 max-w-7xl">
+    
+    <div className="text-center mb-12 relative">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f4c75] urdu-text mb-3">خدمت کے 45 سال</h2>
+      <div className="w-20 h-1 bg-[#D4AF37] mx-auto rounded-full shadow-md"></div>
+    </div>
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+      {journeyData?.map((item, i) => (
+        <Link key={i} href={item.link || '#'} className="flex group relative">
+          
+          <div className="relative bg-white rounded-2xl p-6 border-2 border-[#D4AF37]/30 shadow-sm transition-all duration-500 overflow-hidden transform group-hover:-translate-y-2 group-hover:shadow-[0_15px_35px_rgba(212,175,55,0.25)] w-full h-full text-right flex flex-col items-end group-hover:bg-[#0f4c75] group-hover:border-[#D4AF37] cursor-pointer" dir="rtl">
+            
+            {/* 🟢 آئیکن اور ٹائٹل کی ترتیب (RTL) */}
+            <div className="flex flex-row-reverse items-center justify-between w-full mb-5 gap-3">
+              {/* آئیکن اب بائیں طرف (RTL کے مطابق) نظر آئے گا */}
+              <div className="relative flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-xl flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out group-hover:from-[#D4AF37] group-hover:to-[#B38728] group-hover:text-[#0f4c75] group-hover:rotate-[360deg] group-hover:scale-110">
+                {item.icon}
+              </div>
 
+              {/* ٹائٹل اب دائیں طرف سے شروع ہوگا */}
+              <h3 className="font-bold text-[#0f4c75] text-lg md:text-xl font-amiri group-hover:text-white transition-colors duration-300 text-right flex-grow">
+                {item.title}
+              </h3>
+            </div>
+
+            {/* تفصیل (Description) */}
+            <p className="text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed font-medium transition-colors duration-300 flex-grow text-right w-full">
+              {item.desc}
+            </p>
+
+            {/* نچلی پٹی */}
+            <div className="mt-5 pt-3 border-t border-gray-100 w-full group-hover:border-white/20 transition-colors">
+              <div className="flex flex-row-reverse items-center justify-between">
+                 <span className="text-xs text-[#0f4c75] group-hover:text-white font-bold urdu-text">تفصیل دیکھیں</span>
+                 <FaArrowLeft className="text-[#D4AF37] group-hover:text-white text-xs translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />
+              </div>
+            </div>
+            
+          </div>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
         <Footer year="2026" />
       </main>
 
-      {/* 🎬 ویڈیو ماڈل */}
+    {/* 🎬 ویڈیو ماڈل */}
       {activeVideo && (
         <div className="fixed inset-0 bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-md z-[99999]">
           <div className="w-full max-w-4xl flex flex-col items-center">
@@ -242,6 +299,30 @@ export default function Home() {
           </div>
         </div>
       )}
-    </>
-  );
-}
+
+      {/* 🟢 پاپ اپس (ویڈیو اور بکلیٹ) */}
+      {selectedHomeVideo && (
+        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setSelectedHomeVideo(null)}>
+          <div className="relative w-full max-w-4xl" onClick={e => e.stopPropagation()}>
+            <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setSelectedHomeVideo(null)}>
+              <FaTimes /> بند کریں
+            </button>
+            <video src={selectedHomeVideo} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37]" />
+          </div>
+        </div>
+      )}
+
+      {showHomeBooklet && (
+        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setShowHomeBooklet(false)}>
+          <div className="relative w-full max-w-5xl h-[85vh]" onClick={e => e.stopPropagation()}>
+            <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setShowHomeBooklet(false)}>
+              <FaTimes /> بند کریں
+            </button>
+            <iframe src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" className="w-full h-full bg-white rounded-2xl border-4 border-[#D4AF37]"></iframe>
+          </div>
+        </div>
+      )}
+
+    </> // 👈 یہاں مین فریگمنٹ بند ہو رہا ہے
+  ); // 👈 یہاں ریٹرن بند ہو رہا ہے
+} // 👈 یہاں ہوم فنکشن بند ہو رہا ہے

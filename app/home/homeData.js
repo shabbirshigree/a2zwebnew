@@ -1,5 +1,8 @@
-// ہم نے آئیکنز بھی یہیں منگوا لیے ہیں تاکہ مین پیج ہلکا رہے
-import { FaYoutube, FaBookOpen, FaHandshake, FaGlobe, FaMicrophone, FaNewspaper, FaTv, FaPlane } from "react-icons/fa";
+import { 
+  FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib, 
+  FaTv, FaMicrophone, FaTrophy, FaImages, FaHandHoldingHeart,
+  FaYoutube, FaBookOpen, FaGlobe, FaNewspaper, FaPlane, FaUsers as FaUsersGroup 
+} from "react-icons/fa";
 
 // 🔴 1. ویلکم سیکشن کا ڈیٹا
 export const welcomeData = {
@@ -9,30 +12,39 @@ export const welcomeData = {
   name: "حاجی شبیر احمد شگری"
 };
 
-// 🔴 2. اہم اعزازات (بٹنز)
+// 🔴 2. اہم اعزازات
 export const honorsData = [
-  { title: "خادمِ امام رضاؑ", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif", direction: "right" },
-  { title: "خادمِ غازی عباسؑ", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif", direction: "left" }
+  { title: "خادمِ امام رضاؑ", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" },
+  { title: "خادمِ غازی عباسؑ", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" }
 ];
 
-// 🔴 3. نیویگیشن کارڈز کا ڈیٹا
-export const navCardsData = [
-  { title: "نور القرآن", link: "/project", target: "_self", icon: <FaBookOpen /> },
-  { title: "نور پروڈکشنز", link: "https://www.youtube.com/@noorproduction?sub_confirmation=1", target: "_blank", icon: <FaYoutube /> },
-  { title: "پاک ایران دوستی", link: "https://pakiiranassociation.wixsite.com/pira", target: "_blank", icon: <FaHandshake /> },
-  { title: "ویب سائٹ", link: "/", target: "_self", icon: <FaGlobe /> }
-];
-
-// homeData.js کے اندر اس حصے کو دیکھیں
+// 🔴 3. نور القرآن پراجیکٹ ڈیٹا
 export const projectSectionData = {
-  title: "📖 Noor-ul-Quran Project",
-  description: "نورالقرآن ویژول کا مقصد قرآن مجید کی آیات کو بصری انداز میں پیش کرنا ہے۔",
-  btnText: "تفصیلات دیکھیں",
-  link: "/library#book-noor", // 👈 یہاں لائبریری کا مخصوص لنک لگا دیں
-  image: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png"
+  id: 'visual-quran-main-2026',
+  title: 'نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن',
+  image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
+  badge: "WORLD'S FIRST VISUAL QURAN",
+  descUrdu: 'یہ حاجی شبیر احمد شگری کا ایک جدید اور منفرد منصوبہ ہے۔ اس پروجیکٹ کا بنیادی مقصد جدید ٹیکنالوجی اور مصنوعی ذہانت (AI) کے ذریعے قرآن مجید کے ترجمے اور مفاہیم کو بصری اور فلمی انداز میں پیش کرنا ہے۔ ویژول قرآن: تلاوت کے ساتھ اردو ترجمہ اور متعلقہ مناظر، تاکہ نوجوان نسل اسے آسانی سے سمجھ سکے۔',
+  videoUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4',
+  audioUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4',
+  bookletUrl: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf'
 };
 
-// 🔴 5. حاجی شبیر احمد شگری کی تمام 8 کتب کا مکمل ڈیٹا
+// 🔴 4. 45 سالہ خدمات (journeyData)
+export const journeyData = [
+  { title: 'ڈپلومیٹک خدمات', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'بین الاقوامی سطح پر سفارتی اور تعمیری کردار کی تفصیلات۔' },
+  { title: 'کلچرل ڈپلومیسی', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'پاک ایران ثقافتی تعلقات اور ہم آہنگی کا فروغ۔' },
+  { title: 'وحدت امت', link: '/unity', icon: <FaUsers size={24} />, desc: 'مسلمانوں کے درمیان اتحاد اور بھائی چارے کی انتھک کوششیں۔' },
+  { title: 'تصانیف و کتب', link: '/library', icon: <FaBook size={24} />, desc: 'علمی، ادبی اور روحانی موضوعات پر شاندار کتب کا ذخیرہ۔' },
+  { title: 'جرنلزم و مضامین', link: '/article', icon: <FaPenNib size={24} />, desc: 'نصف صدی پر محیط صحافتی خدمات اور فکری مضامین۔' },
+  { title: 'ٹی وی چینلز', link: '/channels', icon: <FaTv size={24} />, desc: 'مختلف بین الاقوامی ٹی وی چینلز پر دینی و سماجی خدمات۔' },
+  { title: 'ٹالک شوز', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'اہم قومی و بین الاقوامی موضوعات پر فکر انگیز انٹرویوز۔' },
+  { title: 'اعزازات و ایوارڈز', link: '/awards', icon: <FaTrophy size={24} />, desc: 'قومی اور بین الاقوامی سطح پر ملنے والے اعلیٰ اعزازات۔' },
+  { title: 'پکچر گیلری', link: '/gallery', icon: <FaImages size={24} />, desc: 'یادگار لمحات، شخصیات اور اہم تقریبات کی تصویری جھلکیاں۔' },
+  { title: 'دیگر خدمات', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'سماجی، فلاحی اور دیگر اہم ملی و رفاہی خدمات۔' }
+];
+
+// 🔴 5. کتب کا ڈیٹا
 export const booksData = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016596/sakoon.ki.talash_nmlugh.png", title: "سکون کی تلاش", author: "حاجی شبیر احمد شگری", year: "2015", link: "/library#book-sakoon" },
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png", title: "بوئے بہشت", author: "حاجی شبیر احمد شگری", year: "2018", link: "/library#book-booy" },
@@ -44,70 +56,77 @@ export const booksData = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "نورالقرآن", author: "حاجی شبیر احمد شگری", year: "2021", link: "/library#book-noor" } 
 ];
 
-// 🔴 6. نامور شخصیات کے تمام 9 انٹرویوز کا مکمل ڈیٹا (Cloudinary MP4 Links)
+// 🔴 6. نامور شخصیات کا مکمل ڈیٹا (بشمول جعفر روہناس اور ڈاکٹر صداقت علی فریدی)
 export const legendsData = [
   { 
+    name: "جعفر روہناس", 
+    role: "DG خانہ فرہنگ ایران، لاہور", 
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771770325/IMG20230623164017_Copy_ddz2fd.jpg", 
+    video: "https://www.youtube.com/watch?v=Xn5wUG0lPrE",
+    quote: "شبیر احمد شگری کلچرل ایکسپرٹ ہیں، انہوں نے تاریخ میں پہلی مرتبہ پاکستان اور ایران کے درمیان زیارتی و سیاحتی ٹور شروع کیا ہے۔" 
+  },
+    { 
+    name: "منظور احمد وٹو", 
+    role: "سابق وزیراعلیٰ پنجاب", 
     img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.mp4", 
-    name: "Mian Manzoor Watoo", 
-    role: "Ex-Chief Minister" 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.mp4",
+    quote: "شبیر احمد شگری کی بہت سی تحریریں ہیں، ان کو پڑھنا چاہئے، انہوں نے کلچر اور تحریروں کی وجہ سے گولڈ میڈل حاصل کیا ہے۔" 
   },
   { 
+    name: "پیر عثمان نوری", 
+    role: "Peace Committee", 
     img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.mp4", 
-    name: "Pir Usman Shah Noori", 
-    role: "Peace Committee" 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.mp4",
+    quote: "شگری جیسے ایک دو بندے اور ہوجائیں تو شاید ایران کے ساتھ ہمارے معاملات اس طرح نہ ہوتے بلکہ وہ کہیں اور پہنچے ہوتے۔" 
   },
   { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.mp4", 
-    name: "Pir Burhanuddin Usmani", 
-    role: "Usmani Foundation" 
-  },
-  { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.mp4", 
-    name: "Dr. M. Sadaqat Ali", 
-    role: "Religious Scholar" 
-  },
-  { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.mp4", 
-    name: "Pir Maoom H. Naqvi", 
-    role: "Senior Scholar" 
-  },
-  { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.mp4", 
-    name: "Sardar Sikandar Singh", 
-    role: "Sikh Leader" 
-  },
-  { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.mp4", 
-    name: "Hafiz A.G. Roparhi", 
-    role: "Jamia Ahle Hadith" 
-  },
-  { 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.mp4", 
-    name: "Molana M. Khan Laghari", 
-    role: "Ahle Sunnat Scholar" 
-  },
-  { 
+    name: "پیر غلام رسول اویسی", 
+    role: "مذہبی پیشوا", 
     img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.jpg", 
-    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.mp4", 
-    name: "Pir G. Rasool Awesi", 
-    role: "Spiritual Leader" 
-  }
-];
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.mp4",
+    quote: "ماشاءاللہ! پاکستان کے تمام سیاسی، سماجی اور مذہبی حلقوں میں شبیر احمد شگری کو یکساں قدر کی نگاہ سے دیکھا جاتا ہے۔" 
+  },
+  { 
+    name: "پیر عثمان الدین برہانی", 
+    role: "Usmani Foundation", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.mp4",
+    quote: "شبیر شگری ہر دو کیفیتوں امت کی وحدت کی کاوش اور پاکستان اور ایران کے لوگوں کے دلوں کو آپس میں جوڑتے ہیں۔" 
+  },
 
-// 🔴 7. حاجی شبیر احمد شگری کی 45 سالہ خدمات کا ڈیٹا (آئیکنز کے ساتھ)
-export const journeyData = [
-  { title: "Radio Pakistan", desc: "Start of Career at Radio Pakistan Skardu.", icon: <FaMicrophone /> },
-  { title: "Journalism (45 Years)", desc: "Deputy Editor: Daily Havi, Akath & Prachar.", icon: <FaNewspaper /> },
-  { title: "TV Talk Shows", desc: "Host & Guest on National & International TV.", icon: <FaTv /> },
-  { title: "Cultural Diplomacy", desc: "Ex-PRO & In-charge at Khana Farhang Iran.", icon: <FaHandshake /> },
-  { title: "Books & Author", desc: "Author of 9+ books including 'Booy-e-Bahisht'.", icon: <FaBookOpen /> },
-  { title: "Tourism Pioneer", desc: "Launched First Cultural Tourism to Iran.", icon: <FaPlane /> }
+  { 
+    name: "حافظ عبدالغفار روپڑی", 
+    role: "امیر جماعت اہلحدیث", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.mp4",
+    quote: "شبیر احمد شگری جو اس کوشش میں ہیں کہ امت کو وحدت کی لڑی میں پرو دیا جائے، ان کی یہ کاوش اور محنت بہت ہی عمدہ ہے۔" 
+  },
+      { 
+    name: "سردار محمد خان لغاری", 
+    role: "سیاسی رہنما", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.mp4",
+    quote: "حکومت پاکستان کو چاہئے کہ ان کو خصوصی میڈل دے تاکہ پاک ایران تعلقات کی خدمات پر حوصلہ افزائی ہو۔" 
+  },
+  { 
+    name: "پیر معصوم نقوی", 
+    role: "مرکزی صدر جمیعت علمائے پاکستان", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.mp4",
+    quote: "شبیر شگری نے تمام مسالک کو اکٹھا کرنے، ان کو جوڑنے اور حضور پاکؐ کی امت کو متحد رکھنے میں بڑا کردار ادا کیا ہے۔" 
+  },
+  { 
+    name: "سردار سکندر سنگھ", 
+    role: "سکھ رہنما", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.mp4",
+    quote: "شبیر احمد شگری کی بین المذاہب ہم آہنگی اور ایران کے کلچر کے حوالے سے بہت خدمات ہیں۔" 
+  },
+    { 
+    name: "ڈاکٹر محمد صداقت علی فریدی", 
+    role: "مذہبی اسکالر", 
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.jpg", 
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.mp4",
+    quote: "شبیر احمد شگری کی سرگرمیاں وحدت امت کے لیے روز افزوں ہیں اور ان کی کاوشیں قابل تحسین ہیں۔" 
+  },
 ];
