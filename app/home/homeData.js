@@ -1,7 +1,7 @@
-import { 
-  FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib, 
+import {
+  FaHandshake, FaLandmark, FaUsers, FaBook, FaPenNib,
   FaTv, FaMicrophone, FaTrophy, FaImages, FaHandHoldingHeart,
-  FaYoutube, FaBookOpen, FaGlobe, FaNewspaper, FaPlane, FaUsers as FaUsersGroup 
+  FaYoutube, FaBookOpen, FaGlobe, FaNewspaper, FaPlane, FaUsers as FaUsersGroup
 } from "react-icons/fa";
 
 // 🔴 1. ویلکم سیکشن کا ڈیٹا
@@ -53,80 +53,80 @@ export const booksData = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png", title: "سیاحت ایران", author: "حاجی شبیر احمد شگری", year: "2016", link: "/library#book-iran" },
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Book_Khorasan-e-Razavi_b9nqdb.bmp", title: "انیس النفوس", author: "حاجی شبیر احمد شگری", year: "2020", link: "/library#book-anees" },
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", title: "مجلہ فرھنگستان", author: "حاجی شبیر احمد شگری", year: "2017", link: "/library#book-farhang" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "نورالقرآن", author: "حاجی شبیر احمد شگری", year: "2021", link: "/library#book-noor" } 
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1766843381/quran_logo.jpg_ie9iqz.png", title: "نورالقرآن", author: "حاجی شبیر احمد شگری", year: "2021", link: "/library#book-noor" }
 ];
 
 // 🔴 6. نامور شخصیات کا مکمل ڈیٹا (بشمول جعفر روہناس اور ڈاکٹر صداقت علی فریدی)
 export const legendsData = [
-  { 
-    name: "جعفر روہناس", 
-    role: "DG خانہ فرہنگ ایران، لاہور", 
-    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771770325/IMG20230623164017_Copy_ddz2fd.jpg", 
+  {
+    name: "جعفر روہناس",
+    role: "DG خانہ فرہنگ ایران، لاہور",
+    img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771770325/IMG20230623164017_Copy_ddz2fd.jpg",
     video: "https://www.youtube.com/watch?v=Xn5wUG0lPrE",
-    quote: "شبیر احمد شگری کلچرل ایکسپرٹ ہیں، انہوں نے تاریخ میں پہلی مرتبہ پاکستان اور ایران کے درمیان زیارتی و سیاحتی ٹور شروع کیا ہے۔" 
+    quote: "شبیر احمد شگری کلچرل ایکسپرٹ ہیں، انہوں نے تاریخ میں پہلی مرتبہ پاکستان اور ایران کے درمیان زیارتی و سیاحتی ٹور شروع کیا ہے۔"
   },
-    { 
-    name: "منظور احمد وٹو", 
-    role: "سابق وزیراعلیٰ پنجاب", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.jpg", 
+  {
+    name: "منظور احمد وٹو",
+    role: "سابق وزیراعلیٰ پنجاب",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/1.Mian_Manzoor_Ahmed_Watoo_evn2nm.mp4",
-    quote: "شبیر احمد شگری کی بہت سی تحریریں ہیں، ان کو پڑھنا چاہئے، انہوں نے کلچر اور تحریروں کی وجہ سے گولڈ میڈل حاصل کیا ہے۔" 
+    quote: "شبیر احمد شگری کی بہت سی تحریریں ہیں، ان کو پڑھنا چاہئے، انہوں نے کلچر اور تحریروں کی وجہ سے گولڈ میڈل حاصل کیا ہے۔"
   },
-  { 
-    name: "پیر عثمان نوری", 
-    role: "Peace Committee", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.jpg", 
+  {
+    name: "پیر عثمان نوری",
+    role: "Peace Committee",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525557/4.Pir_Usman_Shah_Noori_kz9ieb.mp4",
-    quote: "شگری جیسے ایک دو بندے اور ہوجائیں تو شاید ایران کے ساتھ ہمارے معاملات اس طرح نہ ہوتے بلکہ وہ کہیں اور پہنچے ہوتے۔" 
+    quote: "شگری جیسے ایک دو بندے اور ہوجائیں تو شاید ایران کے ساتھ ہمارے معاملات اس طرح نہ ہوتے بلکہ وہ کہیں اور پہنچے ہوتے۔"
   },
-  { 
-    name: "پیر غلام رسول اویسی", 
-    role: "مذہبی پیشوا", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.jpg", 
+  {
+    name: "پیر غلام رسول اویسی",
+    role: "مذہبی پیشوا",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525505/3.Pir_Ghullam_Rasool_Awesi_dnuxif.mp4",
-    quote: "ماشاءاللہ! پاکستان کے تمام سیاسی، سماجی اور مذہبی حلقوں میں شبیر احمد شگری کو یکساں قدر کی نگاہ سے دیکھا جاتا ہے۔" 
+    quote: "ماشاءاللہ! پاکستان کے تمام سیاسی، سماجی اور مذہبی حلقوں میں شبیر احمد شگری کو یکساں قدر کی نگاہ سے دیکھا جاتا ہے۔"
   },
-  { 
-    name: "پیر عثمان الدین برہانی", 
-    role: "Usmani Foundation", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.jpg", 
+  {
+    name: "پیر عثمان الدین برہانی",
+    role: "Usmani Foundation",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525530/5.Pir_Burhan_ud_Deen_Usmani_bxhkzp.mp4",
-    quote: "شبیر شگری ہر دو کیفیتوں امت کی وحدت کی کاوش اور پاکستان اور ایران کے لوگوں کے دلوں کو آپس میں جوڑتے ہیں۔" 
+    quote: "شبیر شگری ہر دو کیفیتوں امت کی وحدت کی کاوش اور پاکستان اور ایران کے لوگوں کے دلوں کو آپس میں جوڑتے ہیں۔"
   },
 
-  { 
-    name: "حافظ عبدالغفار روپڑی", 
-    role: "امیر جماعت اہلحدیث", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg", 
+  {
+    name: "حافظ عبدالغفار روپڑی",
+    role: "امیر جماعت اہلحدیث",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767715324/Abdulghfar_roparhi_m5ifhn.mp4",
-    quote: "شبیر احمد شگری جو اس کوشش میں ہیں کہ امت کو وحدت کی لڑی میں پرو دیا جائے، ان کی یہ کاوش اور محنت بہت ہی عمدہ ہے۔" 
+    quote: "شبیر احمد شگری جو اس کوشش میں ہیں کہ امت کو وحدت کی لڑی میں پرو دیا جائے، ان کی یہ کاوش اور محنت بہت ہی عمدہ ہے۔"
   },
-      { 
-    name: "سردار محمد خان لغاری", 
-    role: "سیاسی رہنما", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg", 
+  {
+    name: "سردار محمد خان لغاری",
+    role: "سیاسی رہنما",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525558/2.Molana_Muhammad_Khan_Laghari_diggus.mp4",
-    quote: "حکومت پاکستان کو چاہئے کہ ان کو خصوصی میڈل دے تاکہ پاک ایران تعلقات کی خدمات پر حوصلہ افزائی ہو۔" 
+    quote: "حکومت پاکستان کو چاہئے کہ ان کو خصوصی میڈل دے تاکہ پاک ایران تعلقات کی خدمات پر حوصلہ افزائی ہو۔"
   },
-  { 
-    name: "پیر معصوم نقوی", 
-    role: "مرکزی صدر جمیعت علمائے پاکستان", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg", 
+  {
+    name: "پیر معصوم نقوی",
+    role: "مرکزی صدر جمیعت علمائے پاکستان",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525593/6.Pir_Maoom_Hussain_Naqvi_nzxz0n.mp4",
-    quote: "شبیر شگری نے تمام مسالک کو اکٹھا کرنے، ان کو جوڑنے اور حضور پاکؐ کی امت کو متحد رکھنے میں بڑا کردار ادا کیا ہے۔" 
+    quote: "شبیر شگری نے تمام مسالک کو اکٹھا کرنے، ان کو جوڑنے اور حضور پاکؐ کی امت کو متحد رکھنے میں بڑا کردار ادا کیا ہے۔"
   },
-  { 
-    name: "سردار سکندر سنگھ", 
-    role: "سکھ رہنما", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.jpg", 
+  {
+    name: "سردار سکندر سنگھ",
+    role: "سکھ رہنما",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525528/8.Sardar_Sikandar_Singh_yg3tn9.mp4",
-    quote: "شبیر احمد شگری کی بین المذاہب ہم آہنگی اور ایران کے کلچر کے حوالے سے بہت خدمات ہیں۔" 
+    quote: "شبیر احمد شگری کی بین المذاہب ہم آہنگی اور ایران کے کلچر کے حوالے سے بہت خدمات ہیں۔"
   },
-    { 
-    name: "ڈاکٹر محمد صداقت علی فریدی", 
-    role: "مذہبی اسکالر", 
-    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.jpg", 
+  {
+    name: "ڈاکٹر محمد صداقت علی فریدی",
+    role: "مذہبی اسکالر",
+    img: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.jpg",
     video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1767525503/7.Dr._Muhammad_Sadaqat_Ali_Afridi_k6w0nh.mp4",
-    quote: "شبیر احمد شگری کی سرگرمیاں وحدت امت کے لیے روز افزوں ہیں اور ان کی کاوشیں قابل تحسین ہیں۔" 
+    quote: "شبیر احمد شگری کی سرگرمیاں وحدت امت کے لیے روز افزوں ہیں اور ان کی کاوشیں قابل تحسین ہیں۔"
   },
 ];

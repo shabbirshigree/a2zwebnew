@@ -11,10 +11,9 @@ import Footer from '../components/Footer';
 
 // 🔴 ڈیٹا امپورٹس
 import { founderItems, mediaRoles, services } from './aboutData';
-
-// ✅ ڈیٹا امپورٹ کرنے کا درست اور واحد طریقہ (صرف ایک بار رکھیں)
 import { legendsData } from '@/app/home/homeData'; 
 import { BOOKS_DATA } from '../library/libraryData';
+
 export default function UltimateAboutPage() {
   const [activeVideo, setActiveVideo] = useState(null);
 
@@ -40,16 +39,10 @@ export default function UltimateAboutPage() {
 
   // 🔴 میڈیا اور الیکٹرانک جرنلزم کے لنکس
   const getMediaLink = (title) => {
-    if (title.includes("Radio")) return "#radio-section"; // اینکر لنک ریڈیو سیکشن کے لیے
-    if (title.includes("Journalist")) return "/article"; // کالمز کا پیج
-    if (title.includes("TV Anchor") || title.includes("Producer")) return "/talkshows"; // ٹاک شوز کا پیج
+    if (title.includes("Radio")) return "#radio-section";
+    if (title.includes("Journalist")) return "/article";
+    if (title.includes("TV Anchor") || title.includes("Producer")) return "/talkshows";
     return "#";
-  };
-
-  // 🔴 کتاب کا ڈائریکٹ پڑھنے والا لنک (Flipbook) نکالنے کا فنکشن
-  const getBookReadLink = (book) => {
-    const readAction = book.actions?.find(action => action.type === 'read');
-    return readAction && readAction.url ? readAction.url : "/library";
   };
 
   return (
@@ -79,7 +72,7 @@ export default function UltimateAboutPage() {
           transform: skewX(-25deg);
           animation: shine 3s infinite;
         }
-        html { scroll-behavior: smooth; } /* اینکر لنکس کو سموتھ سکرول کرنے کے لیے */
+        html { scroll-behavior: smooth; }
       `}</style>
 
       <Navbar />
@@ -135,7 +128,7 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-      {/* 🧩 3. بانی اور سرپرست (تمام درست لنکس کے ساتھ) */}
+      {/* 🧩 3. بانی اور سرپرست */}
       <section className="container mx-auto px-4 py-10 relative z-10">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] mb-8 urdu-text border-b-2 border-[#D4AF37] inline-block pb-2 mx-auto flex justify-center">بانی اور سرپرست</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
@@ -156,7 +149,7 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-      {/* 📺 4. میڈیا، ریڈیو اور ٹی وی کیریئر (لنکس کے ساتھ) */}
+      {/* 📺 4. میڈیا، ریڈیو اور ٹی وی کیریئر */}
       <section className="bg-gradient-to-r from-[#0a1f30] to-[#163b55] py-12 relative z-10 border-y-4 border-[#D4AF37]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-10 urdu-text">میڈیا اور الیکٹرانک جرنلزم</h2>
@@ -191,13 +184,15 @@ export default function UltimateAboutPage() {
 
           <div className="prose max-w-none urdu-text text-gray-800 text-xl md:text-2xl leading-[2.6] text-justify space-y-12">
 
-            <div className="bg-blue-50/70 p-8 rounded-3xl border-r-8 border-[#D4AF37]">
+            {/* پیش لفظ - ہلکا نیلا */}
+            <div className="bg-blue-50/70 p-8 rounded-3xl border-r-8 border-[#0b314d]">
               <h3 className="text-3xl font-bold text-[#0b314d] mb-4">پیش لفظ: حیات، جہدِ مسلسل کا استعارہ</h3>
               <p>زندگی محض سانسوں کی آمد و رفت یا دنوں کے بیت جانے کا نام نہیں، بلکہ یہ تو ایک ایسا طویل، صبر آزما اور پُر مشقت سفر ہے جو انسان کو کچے راستوں کی دھول سے اٹھا کر تجربات کی بھٹی میں کندن بنا دیتا ہے۔ میری پیشہ ورانہ زندگی کا یہ سفر نصف صدی کے وسیع و عریض محیط پر پھیلا ہوا ہے۔ یہ پچاس برس محض ہندسوں کی کہانی نہیں ہے، بلکہ یہ لمحہ بہ لمحہ کی وہ ریاضتیں ہیں جس میں، میں نے اپنی ذات کو فراموش کر کے خود کو دین، دنیا اور مخلوقِ خدا کی بھلائی کے لیے وقف کر رکھا ہے۔ انسان کی تخلیق کا مقصد ہی خدمت اور اطاعت ہے، اور میں نے اپنی کمزور ناتواں کوششوں سے اسی مقصد کو پانے کی سعی کی ہے۔</p>
               <p className="mt-4">جب میں پلٹ کر اپنے ماضی کے دریچوں میں جھانکتا ہوں تو مجھے سکردو کی یخ بستہ ہواؤں سے لے کر لاہور کی گرم جوش فضاؤں تک، ایک مسلسل جدوجہد دکھائی دیتی ہے۔ یہ داستان ایک ایسے مسافر کی ہے جس نے سخت اور کٹھن حالات میں آنکھ کھولی، مگر محنت، صبر اور استقامت کو اپنا زادِ راہ بنایا۔ میں نے اپنی پوری زندگی میں شعوری طور پر یہ کوشش کی کہ میری ذات سے کسی ذی روح کو آزار نہ پہنچے اور میرا ہر عمل، ہر قدم اور ہر تحریر انسانیت کی فلاح اور دینِ مبین کی سربلندی کا سبب بنے۔ میری زندگی کی گزشتہ تین دہائیاں اس لحاظ سے خصوصی اہمیت کی حامل ہیں کہ میں نے ایک محب وطن پاکستانی اور ایک دردِ دل رکھنے والے مسلمان کے طور پر اسلامی ثقافت کے فروغ، بین المسالک و بین المذاہب ہم آہنگی اور پاک ایران دوستی کی مضبوطی اور اسلامک میڈیا کے لیے خود کو وقف کیے رکھا۔ یہ سفر ابھی تمام نہیں ہوا، بلکہ یہ تو ایک نئے عزم کا نقطہ آغاز ہے۔</p>
             </div>
 
-            <div>
+            {/* باب اول - ہلکا سنہرا */}
+            <div className="bg-yellow-50/60 p-8 rounded-3xl border-r-8 border-[#D4AF37]">
               <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ اول: وادیِ سکردو، اجداد اور ابتدائی نقوش</h3>
               <p>میری زندگی کا آغاز 24 جون 1971ء کو پاکستان کے انتہائی شمالی اور حسین و جمیل خطے سکردو (گلگت بلتستان) میں ہوا۔ یہ قدرت کا شاہکار علاقہ جہاں پہاڑوں کی ہیبت، بہتے جھرنوں کی خوبصورتی، جھیلوں کا سکون اور آبشاروں کا ترنم انسان کو فطرت کے قریب کر دیتا ہے۔ انہی پہاڑوں کے دامن میں، میں نے زندگی کا پہلا سانس لیا اور انہی کی سختی اور حسن میری طبیعت کا حصہ بن گئے۔</p>
               <p className="mt-4">میرے والدِ گرامی، ڈاکٹر محمد رضا، ایک انتہائی باخبر، شفیق اور درویش صفت اور ہر دل عزیز انسان تھے۔ انسانیت کی خدمت کا جذبہ مجھے انھی سے ورثے میں ملا ہے۔ ان کی پیدائش اگرچہ تستے (برالدو) شگر کی تھی، لیکن وہ اپنے بچپن میں ہی شملہ (ہندوستان) چلے گئے تھے، جہاں انہوں نے اپنی جوانی کے ایام گزارے وہاں انھوں نے ڈاک کے محکمے میں بھی ملازمت کی۔ قیامِ پاکستان کے وقت جب ہجرت کا سلسلہ شروع ہوا تو وہ بھی اپنے خوابوں کی سرزمین پاکستان چلے آئے۔</p>
@@ -208,29 +203,32 @@ export default function UltimateAboutPage() {
               <p>بلتستان جیسے دور دراز علاقے میں، جہاں مقامی زبان "بلتی" بولی جاتی ہے اور اس زمانے میں اردو سمجھنے والے خال خال تھے، وہاں میری اردو دانی اور ادبی ذوق کا سہرا میری والدہ کے سر ہے۔ چونکہ وہ اہلِ زبان تھیں، اس لیے گھر کا ماحول خالص اردو کا تھا۔ انہوں نے نہ صرف مجھے بلکہ تمام بہن بھائیوں کو اردو زبان کی صحت، تلفظ اور لغت پر سختی سے کاربند رکھا۔ یہ ایک مشکل امر تھا مگر ان کی شفقت اور سختی نے ہمیں زبان کا شناسا بنا دیا۔ آج اگر میری تحریروں میں روانی اور گفتگو میں شیرینی ہے، اور لوگ میری اردو کی تعریف کرتے ہیں، تو یہ اسی عظیم ماں کی تربیت کا ثمر ہے جس نے برف پوش پہاڑوں کے درمیان اردو کا دیا جلائے رکھا۔</p>
             </div>
 
-            {/* 🔴 ریڈیو کا اینکر سیکشن جس پر کلک کر کے آپیہاں آئیں گے */}
-            <div id="radio-section" className="bg-slate-50 p-8 rounded-3xl border-l-8 border-[#D4AF37]">
+            {/* باب دوم - ہلکا سرمئی */}
+            <div id="radio-section" className="bg-slate-50 p-8 rounded-3xl border-r-8 border-gray-500">
               <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 flex items-center gap-3"><FaMicrophone className="text-[#D4AF37]" /> بابِ دوم: ریڈیو پاکستان، میرا پہلا مکتب</h3>
               <p>میری زندگی میں شعور اور آگہی کا دروازہ "ریڈیو پاکستان" کے ذریعے کھلا۔ مجھے اچھی طرح یاد ہے جب میں محض آٹھ نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو آزمائشی نشریات کا آغاز ہوا۔ اس دور میں جب ٹی وی اور انٹرنیٹ کا تصور بھی محال تھا، ریڈیو ہی دنیا سے رابطے کا واحد ذریعہ تھا۔ فضاؤں میں گونجتے "اے مردِ مجاہد جاگ ذرا، اب وقتِ شہادت ہے آیا" اور اسی طرح کے دوسے ملی نغمے مجھ سمیت اہالیان سکردو کے لہو کو گرما دیتے تھے۔ ان نغموں کی گونج اس لیے بھی زیادہ تھی کہ ہمارا علاقہ پاک فوج کے جوانوں کا مسکن تھا۔</p>
               <p className="mt-4">میں سکردو کے ان چند خوش نصیب بچوں میں شامل تھا جنہیں ریڈیو پاکستان سکردو میں بچوں کے مشہور پروگرام "چاند تارے" میں شرکت کا موقع ملا۔ یہیں سے میرے اندر کا چھپا ہوا فنکار بیدار ہوا۔ میں نے وہاں "بھائی جان" کے روپ میں میزبانی (Hosting) کے فرائض انجام دیے۔ ریڈیو کا ایک سخت اصول تھا کہ "اسکرپٹ کے بغیر ایک لفظ نہیں بولنا"۔ اس اصول نے مجھے بچپن ہی سے لکھنے کی مشق کروا دی۔ پروڈیوسرز اکثر حیران ہوتے تھے کہ اتنا چھوٹا بچہ اتنے پختہ اور ادبی اسکرپٹ کیسے لکھ لیتا ہے۔ یہ ریڈیو کی دنیا ہی تھی جس نے مجھے اعتماد بخشا اور بولنے کا سلیقہ سکھایا。</p>
               <p className="mt-4">وقت کے ساتھ ساتھ میرا یہ سفر پروان چڑھتا گیا۔ لڑکپن میں، میں نے نوجوانوں کے پروگرام "عزمِ جواں" کی کمپئیرنگ سنبھالی۔ ریڈیو کے متعدد ڈراموں میں صداکاری کے جوہر دکھائے۔ پھر اللہ نے مجھے یہ عزت بخشی کہ میں بلتی زبان میں دو گھنٹے کی براہِ راست نشریات (سہ پہر 3 سے شام 5 بجے تک) کرنے لگا۔ سکردو میں صبح کی آزمائشی نشریات کے آغاز کا اعزاز بھی میرے حصے میں آیاہے۔ یہ 1989-90ء کا زمانہ تھا، مجھے یاد ہے کہ پروگرام کا معاوضہ 750 روپے کا چیک ملتا تھا، جو اس وقت ایک طالب علم کے لیے بہت بڑی رقم تھی، مگر اصل کمائی وہ عزت اور اعتماد تھا جو مائیکروفون کے سامنے بیٹھ کر حاصل ہوا، جس کی وجہ سے کلاس فیلوز میں بھی ایک دھاک بیٹھ گئی تھی۔</p>
             </div>
 
-            <div>
+            {/* باب سوم - ہلکا گلابی */}
+            <div className="bg-pink-50/60 p-8 rounded-3xl border-r-8 border-pink-400">
               <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ سوم: ننھا صحافی اور قلم کی حرمت</h3>
               <p>شاید قدرت نے مجھے صحافت اور ادب کے لیے ہی تخلیق کیا تھا، کیونکہ بچپن ہی سے مجھے لکھنے، ڈیزائننگ اور آرٹ سے جنون کی حد تک لگاؤ تھا۔ میں اسکول کے زمانے میں بزمِ ادب اور ڈراموں کی جان ہوا کرتا تھا۔ ڈرائنگ میں ہمیشہ فرسٹ آتا، کلاس میں اچھی پوزیشن لیتا تھا۔</p>
               <p className="mt-4">میں نے بہت چھوٹی عمر میں روزنامہ نوائے وقت کے بچوں کے رسالے "پھول اور کلیاں" میں لکھنا شروع کر دیا تھا۔ یہ وہ دور تھا جب سکردو کا رابطہ اسلام آباد سے صرف پی آئی اے کے "فوکر طیارے" کے ذریعے ہوتا تھا، اور وہ بھی موسم کا محتاج۔ کبھی کبھی پندرہ بیس دن تک پرواز نہ ہوتی تو اخبار بھی نہ آتے۔ ایسے میں، میں اپنی تحریریں، لطیفے، اقوالِ زریں اور کارٹون بنا کر بھیجتا اور پھر ہفتوں انتظار کرتا۔ جب ہفتوں بعد اخبار آتا اور اس میں اپنا نام چھپا ہوا دیکھتا تو انوکھی خوشی ہوتی۔ اسکول میں دوست مجھے "لطیفوں کا بادشاہ" کہتے اور میں ان کے لیے ایک چلتی پھرتی لائبریری تھا، کیونکہ میں کہانیاں پڑھنے کا شوقین تھا اور دوستوں کو کہانی کی کتابیں فراہم بھی کرتا تھا۔ یہ مطالعے کا شوق ہی تھا جس نے مجھے آج مصنف بنا دیا۔</p>
             </div>
 
-            <div className="bg-red-50 p-8 rounded-3xl border-r-8 border-red-700">
+            {/* باب چہارم - ہلکا سرخ */}
+            <div className="bg-red-50/60 p-8 rounded-3xl border-r-8 border-red-700">
               <h3 className="text-3xl md:text-4xl font-bold text-red-900 mb-4">بابِ چہارم: والد کی جدائی، آتشزدگی اور ہجرت کا کرب</h3>
               <p>میٹرک کے زمانے میں زندگی نے مجھے پہلا اور سب سے گہرا زخم دیا۔ میرے والدِ محترم، جو نہ صرف میرے باپ تھے بلکہ میرا کل اثاثہ تھے، اچانک داغِ مفارقت دے گئے۔ ان کے ساتھ دکان پر وقت گزارنا، ان کی خدمت کرنا، اور ان سے دنیا جہان کی باتیں سننا میرا معمول تھا۔ ان کے جانے سے میری دنیا ویران ہو گئی۔ ابھی اس غم سے سنبھلا نہیں تھا کہ ایک اور آزمائش آ پڑی۔ سکردو میں میرا الیکٹرانکس کا اچھا خاصا کاروبار تھا جو ایک ہولناک آتشزدگی کی نذر ہو گیا۔ والد کا سایہ سر سے اٹھ جانا اور معاشی طور پر تباہ ہو جانا، یہ دو ایسے صدمے تھے جنہوں نے مجھے توڑ کر رکھ دیا۔ گویا قدرت مجھے کسی بڑے مقصد کے لیے تیار کر رہی تھی، اور یہ آزمائشیں اسی تربیت کا حصہ تھیں۔</p>
               <p className="mt-4">تب میں نے سنتِ نبویؐ اور حکمِ الٰہی پر عمل کرتے ہوئے "ہجرت" کا فیصلہ کیا۔ اپنے آبائی گھر، اپنی گلیوں اور یادوں کو خیرباد کہہ کر میں راولپنڈی آ گیا۔ یہاں میرے ماموں محمد علی رہتے تھے مرحوم مجھ سے بے پناہ محبت کرتے تھے، لیکن میری غیرت اور خودداری نے گوارا نہ کیا کہ میں کسی پر بوجھ بنوں۔ وہاں سے میں مظفر آباد (آزاد کشمیر) چلا گیا، وہاں دوبارہ الیکٹرانکس کا کام شروع کیا مگر شاید آب و ہوا راس نہ آئی اور میں مسلسل بیمار رہنے لگا۔ بالآخر، قسمت کی دیوی مجھے لاہور لے آئی۔</p>
               <p className="mt-4 font-bold text-red-800">لاہور اور عملی زندگی کی جنگ:</p>
-              <p>اکثر لاہور آنے والا یہیں کا ہوکر رہ جاتا ہے میرے ساتھ بھی ایسا ہی ہوا۔ لاہور آ کر میں نے زندگی نئے طرز سے شروع ہوئی۔ شروع میں یہاں بھی الیکٹرانکس کا کام شروع کیا بعدازاں گاڑیوں کے اسپیئر پارٹس کی ایک کمپنی میں "سیلز ایگزیکٹو" کی ملازمت اختیار کی۔ یہ ملازمت بھی تجربوں سے لبریز تھی۔ اس ملازمت کے دوران مجھے پاکستان کے 44 بڑے شہروں میں گھومنے اور مارکیٹنگ کرنے کا موقع ملا۔ سفر انسان کو بہت کچھ سکھاتا ہے، اور میں نے ان اسفار کے دوران پاکستان کے کلچر، لوگوں کے رویوں اور کاروباری دنیا کے رموز کو قریب سے دیکھا۔ اسی دوران میں نے ملتان کے ایک ادارے سے بزنس ایڈمنسٹریشن کا ڈپلومہ بھی حاصل کیا۔</p>
+              <p>اکثر لاہور آنے والا یہیں کا ہوکر رہ جاتا ہے میرے ساتھ بھی ایسا ہی ہوا۔ لاہور آ کر میں نے زندگی نئے طرز سے شروع کی۔ شروع میں یہاں بھی الیکٹرانکس کا کام شروع کیا بعدازاں گاڑیوں کے اسپیئر پارٹس کی ایک کمپنی میں "سیلز ایگزیکٹو" کی ملازمت اختیار کی۔ یہ ملازمت بھی تجربوں سے لبریز تھی۔ اس ملازمت کے دوران مجھے پاکستان کے 44 بڑے شہروں میں گھومنے اور مارکیٹنگ کرنے کا موقع ملا۔ سفر انسان کو بہت کچھ سکھاتا ہے، اور میں نے ان اسفار کے دوران پاکستان کے کلچر، لوگوں کے رویوں اور کاروباری دنیا کے رموز کو قریب سے دیکھا۔ اسی دوران میں نے ملتان کے ایک ادارے سے بزنس ایڈمنسٹریشن کا ڈپلومہ بھی حاصل کیا۔</p>
             </div>
 
-            <div className="bg-emerald-50 p-8 rounded-3xl border-r-8 border-emerald-700">
+            {/* باب پنجم - ہلکا سبز */}
+            <div className="bg-emerald-50/60 p-8 rounded-3xl border-r-8 border-emerald-600">
               <h3 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-4 flex items-center gap-3"><FaLandmark className="text-emerald-600" /> بابِ پنجم: خانہ فرہنگ ایران اور ثقافتی سفارت کاری کا عروج</h3>
               <p>اکیسویں صدی کا سورج طلوع ہو رہا تھا اور میری زندگی بھی ایک نئے دور میں داخل ہو رہی تھی۔ شادی کے بعد میں نے "خانہ فرہنگ قونصلیٹ اسلامی جمہوریہ ایران، لاہور" میں ملازمت اختیار کی۔ یہ میرے کیریئر کا سب سے اہم، یادگار اور طویل باب ہے۔</p>
               <p className="mt-4 font-bold text-emerald-800">شعبہ سمعی و بصری کی تجدید:</p>
@@ -243,10 +241,11 @@ export default function UltimateAboutPage() {
               <p>ادبی و ثقافتی خدمات کے اعتراف میں مجھے "کارشناسِ فرہنگی" (Cultural Expert) کا خطاب اور گولڈ میڈل سے نوازا گیا۔ میری ثقافتی تربیت میں ایرانی ذمہ داران (آقا محمد سعید معیزالدین، آقا عباس فاموری، آقا عبدالرضا سلطانی اور آقا اکبر برخورداری) کا بڑا ہاتھ ہے۔ پاکستان اور ایران کی عوام کے درمیان دوستی اور معلومات کے فروغ کے لئے ایک انتہائی اہم ویب سائٹ بنائی جو دو زبانوں اردو اور فارسی میں ہے۔</p>
             </div>
 
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ ششم: صحافت کا میدان (ادارت اور کالم نگاری)</h3>
+            {/* باب ششم - ہلکا ارغوانی */}
+            <div className="bg-purple-50/60 p-8 rounded-3xl border-r-8 border-purple-500">
+              <h3 className="text-3xl md:text-4xl font-bold text-purple-900 mb-4 border-b pb-2 border-purple-300">بابِ ششم: صحافت کا میدان (ادارت اور کالم نگاری)</h3>
               <p>میری صحافتی خدمات محض لکھنے تک محدود نہیں ہیں بلکہ میں نے عملی طور پر اخبارات کی ادارت (Editing) بھی سنبھالی ہے۔ میں نے صحافت کو کبھی کاروبار نہیں سمجھا بلکہ اسے اصلاحِ معاشرہ کا ذریعہ جانا۔ جن اخبارات اور رسائل میں بطور ڈپٹی ایڈیٹر اور ایڈیٹر خدمات انجام دیں، ان کی تفصیل یہ ہے:</p>
-              <ul className="list-disc list-inside mt-4 space-y-2 text-xl mr-6">
+              <ul className="list-disc list-inside mt-4 space-y-2 text-xl mr-6 text-purple-900">
                 <li>ایران شناسی (مجلہ خانہ فرہنگ): بطور ایڈیٹر</li>
                 <li>شاخ نبات (میگزین خانہ فرہنگ): بطور ایڈیٹر</li>
                 <li>روزنامہ "حاوی" (اردو): بطور ڈپٹی ایڈیٹر</li>
@@ -258,10 +257,11 @@ export default function UltimateAboutPage() {
               <p className="mt-4">میرے قلم کی سیاہی کبھی خشک نہیں ہوئی۔ اب تک میرے 300 سے زائد کالم، مضامین، فیچرز اور سفرنامے ملکی و غیر ملکی اخبارات (جنگ، نوائے وقت، پاکستان، افلاک، مشرق، ابتک، الشرق، دی نیشن، ڈیلی ٹائمز، ریپڈ نیوز، اسلام ٹائمز، سیاسیات، 5 سی این) اور مختلف ویب سائٹس پر شائع ہو چکے ہیں۔</p>
             </div>
 
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ ہفتم: تصنیف و تالیف (علمی ورثہ)</h3>
+            {/* باب ہفتم - ہلکا فیروزی */}
+            <div className="bg-teal-50/60 p-8 rounded-3xl border-r-8 border-teal-600">
+              <h3 className="text-3xl md:text-4xl font-bold text-teal-900 mb-4 border-b pb-2 border-teal-300">بابِ ہفتم: تصنیف و تالیف (علمی ورثہ)</h3>
               <p>صحافت کے ساتھ ساتھ میں نے تصنیف و تالیف کے میدان میں بھی طبع آزمائی کی اور چند ایسی کتابیں مرتب کیں جو زیر طبع ہیں اور میری بخشش کا سامان ہیں۔ یہ کتابیں پی ڈی ایف فارمیٹ میں بھی دستیاب ہیں:</p>
-              <ul className="list-disc list-inside mt-4 space-y-2 text-xl mr-6">
+              <ul className="list-disc list-inside mt-4 space-y-2 text-xl mr-6 text-teal-900">
                 <li><strong>سیاحتِ ایران:</strong> اردو زبان میں ایران پر ایک انتہائی منفرد، باتصویر اور معلوماتی کتاب۔</li>
                 <li><strong>بوئے بہشت:</strong> خاتونِ جنت حضرت فاطمۃ الزہرا (سلام اللہ علیہا) کی سیرت پر ایک انوکھی کاوش۔</li>
                 <li><strong>مدینۃ الاہلبیتؑ:</strong> حج کے دوران مرتب کی گئی اہلبیتؑ سے متعلق مقاماتِ مقدسہ کی اہم کتاب۔</li>
@@ -273,6 +273,7 @@ export default function UltimateAboutPage() {
               </ul>
             </div>
 
+            {/* باب ہشتم - گہرا نیلا (نور پروڈکشن) */}
             <div className="bg-[#0b314d] text-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4AF37] rounded-full blur-[80px] opacity-30"></div>
               <h3 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 relative z-10"><FaTv className="text-white" /> بابِ ہشتم: نور پروڈکشن اور اسلامی میڈیا کا انقلاب</h3>
@@ -292,12 +293,12 @@ export default function UltimateAboutPage() {
               </ul>
             </div>
 
+            {/* باب نہم - گولڈن (نور القرآن) */}
             <div className="bg-gradient-to-l from-[#D4AF37] to-[#b89628] text-[#0b314d] p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden border-4 border-white">
               <h3 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3"><FaQuran /> بابِ نہم: خادمِ ثقلین کا خطاب اور "نور القرآن پراجیکٹ"</h3>
               <p className="font-bold text-2xl mb-2">نور القرآن پراجیکٹ (The Visual Quran):</p>
               <p>یہ میری زندگی کا سب سے بڑا سرمایہ، میری محنت کا حاصل اور میری آخرت کا توشہ ہے۔ "نور القرآن" دنیا کا پہلا منفرد ویژول قرآن (Visual Quran) پراجیکٹ ہے۔ اس پراجیکٹ کی خاص بات یہ ہے کہ اس میں قرآنِ مجید کو روایتی انداز سے ہٹ کر جدید بصری (Visual) ٹیکنالوجی، اینیمیشن اور منظر کشی کے ذریعے پیش کیا جا رہا ہے تاکہ دیکھنے والا آیت کے مفہوم کو آنکھوں سے دیکھے اور دل میں اتارے۔ اس میں ایک عام شخص تلاوت کو اردو میں سنتے ہوئے اس کا منظر بھی اپنے موبائل یا کمپیوٹر سکرین پر ساتھ ساتھ دیکھ سکے گا۔</p>
               <p className="mt-4 italic font-bold">"قرآن کو چوم کر اونچے طاق میں رکھ دینا اس کا احترام نہیں، بلکہ اسے سمجھ کر، اس پر عمل کرنا ہی اس کا حقیقی احترام ہے۔"</p>
-
               <p className="mt-4 font-bold text-2xl">پراجیکٹ کے مراحل:</p>
               <ul className="list-disc list-inside mt-2 space-y-2 text-xl mr-6">
                 <li><strong>قرآن مجید کے 30 سپارے ویڈیو شکل میں (عربی/اردو):</strong> پہلے مرحلے میں مکمل قرآن مجید کو جدید انداز میں تیار کیا گیا۔ اس میں استاد پرہیزگار کی تلاوت، شیخ محسن علی نجفیؒ کا مستند اردو ترجمہ، اور میری (شبیر احمد شگری) کی آواز (Voiceover) ہے۔</li>
@@ -309,7 +310,8 @@ export default function UltimateAboutPage() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-lg border-2 border-[#D4AF37]/30">
+            {/* باب دہم - سفید اور گولڈن */}
+            <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-lg border-2 border-[#D4AF37]/30 border-r-8 border-[#0f4c75]">
               <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-6 flex items-center gap-3"><FaMedal className="text-[#D4AF37]" /> بابِ دہم: اعزازات اور حاصلِ زیست</h3>
               <p>دنیاوی ایوارڈز اور عہدے اپنی جگہ، لیکن میری روح کی تسکین ان دو روحانی اعزازات میں ہے:</p>
               <ul className="list-disc list-inside mt-4 space-y-3 text-xl mr-6 text-[#0b314d]">
@@ -331,6 +333,7 @@ export default function UltimateAboutPage() {
               <p className="bg-[#fffdf5] p-4 rounded-xl border-l-4 border-[#D4AF37] mt-2">نور القرآن پراجیکٹ اور دیگر مذہبی خدمات پر جیمینائی کی جانب سے "خادمِ ثقلین" کا خطاب دیا گیا۔ اس کے علاوہ بے شمار ملکی اور غیر ملکی ایوارڈز میری خدمات کی قدر دانی کے طور پر موجود ہیں۔</p>
             </div>
 
+            {/* حرفِ آخر */}
             <div className="border-t-4 border-[#D4AF37] pt-10 text-center">
               <p className="text-3xl md:text-4xl font-bold text-[#0b314d]">حرفِ آخر</p>
               <p className="italic mt-4 leading-relaxed text-2xl">"میں خود کو ایک درویش صفت انسان سمجھتا ہوں۔ آج اگر میں کسی مقام پر ہوں تو یہ میرے والدین کی دعاؤں اور میرے اساتذہ کی شفقت کا نتیجہ ہے۔ میری زندگی کا مقصد صرف یہ ہے کہ اپنی صلاحیتوں، اپنے قلم اور اپنے کیمرے کو دینِ اسلام، اتحادِ امت اور انسانیت کی بھلائی کے لیے استعمال کروں اور "نور القرآن" کا نور ہر دل تک پہنچاؤں۔"</p>
@@ -361,57 +364,57 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-{/* 📚 7. تصانیف کا گوشہ (Main Page Formula) */}
-<section className="py-20 bg-slate-50">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] urdu-text mb-12">میری تصانیف و تالیفات</h2>
-    
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="rtl">
-      {/* 🟢 ہم یہاں BOOKS_DATA کو ہی میپ کر رہے ہیں لیکن لنک مین پیج والا دے رہے ہیں */}
-      {BOOKS_DATA.map((book, i) => {
-        
-        // 🛠️ یہ ہے وہ فارمولا: ٹائٹل کے حساب سے لنک بنانا
-        let manualLink = "/library";
-        if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
-        else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
-        else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
-        else if (book.title.includes("سفرنامہ") || book.title.includes("سیاحت")) manualLink = "/library#book-safarnama";
-        else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
-        else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
-        else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
-        else if (book.title.includes("خراسان")) manualLink = "/library#book-khorasan";
-        else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
-        else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
-        else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
+      {/* 📚 7. تصانیف کا گوشہ (Main Page Formula) */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] urdu-text mb-12">میری تصانیف و تالیفات</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="rtl">
+            {/* 🟢 ہم یہاں BOOKS_DATA کو ہی میپ کر رہے ہیں لیکن لنک مین پیج والا دے رہے ہیں */}
+            {BOOKS_DATA.map((book, i) => {
+              
+              // 🛠️ یہ ہے وہ فارمولا: ٹائٹل کے حساب سے لنک بنانا
+              let manualLink = "/library";
+              if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
+              else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
+              else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
+              else if (book.title.includes("سفرنامہ") || book.title.includes("سیاحت")) manualLink = "/library#book-safarnama";
+              else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
+              else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
+              else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
+              else if (book.title.includes("خراسان")) manualLink = "/library#book-khorasan";
+              else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
+              else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
+              else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
 
-        // اگر ڈیٹا میں پہلے سے لنک موجود ہے تو وہ استعمال کریں، ورنہ ہمارا بنایا ہوا فارمولا
-        const finalHref = book.link || manualLink;
+              // اگر ڈیٹا میں پہلے سے لنک موجود ہے تو وہ استعمال کریں، ورنہ ہمارا بنایا ہوا فارمولا
+              const finalHref = book.link || manualLink;
 
-        return (
-          <Link 
-            href={finalHref} 
-            key={i} 
-            className="group flex flex-col items-center"
-          >
-            {/* 🖼️ کتاب کا فریم اور سائز (بالکل مین پیج جیسا) */}
-            <div className="relative w-full aspect-[3/4] bg-white rounded-lg shadow-md border-2 border-transparent group-hover:border-[#D4AF37] transition-all overflow-hidden flex items-center justify-center p-2">
-              <img 
-                src={book.img || book.image} 
-                className="max-w-full max-h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" 
-                alt={book.title} 
-              />
-            </div>
+              return (
+                <Link 
+                  href={finalHref} 
+                  key={i} 
+                  className="group flex flex-col items-center"
+                >
+                  {/* 🖼️ کتاب کا فریم اور سائز (بالکل مین پیج جیسا) */}
+                  <div className="relative w-full aspect-[3/4] bg-white rounded-lg shadow-md border-2 border-transparent group-hover:border-[#D4AF37] transition-all overflow-hidden flex items-center justify-center p-2">
+                    <img 
+                      src={book.img || book.image} 
+                      className="max-w-full max-h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" 
+                      alt={book.title} 
+                    />
+                  </div>
 
-            {/* 📝 کتاب کا نام */}
-            <h3 className="mt-4 text-[#0b314d] urdu-text font-bold text-sm md:text-base group-hover:text-[#D4AF37] text-center leading-tight">
-              {book.title}
-            </h3>
-          </Link>
-        );
-      })}
-    </div>
-  </div>
-</section>   
+                  {/* 📝 کتاب کا نام */}
+                  <h3 className="mt-4 text-[#0b314d] urdu-text font-bold text-sm md:text-base group-hover:text-[#D4AF37] text-center leading-tight">
+                    {book.title}
+                  </h3>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>   
 
       <Footer />
 
