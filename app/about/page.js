@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 
 // 🔴 ڈیٹا امپورٹس
 import { founderItems, mediaRoles, services } from './aboutData';
-import { legendsData } from '@/app/home/homeData'; 
+import { legendsData } from '@/app/home/homeData';
 import { BOOKS_DATA } from '../library/libraryData';
 
 export default function UltimateAboutPage() {
@@ -368,11 +368,11 @@ export default function UltimateAboutPage() {
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] urdu-text mb-12">میری تصانیف و تالیفات</h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="rtl">
             {/* 🟢 ہم یہاں BOOKS_DATA کو ہی میپ کر رہے ہیں لیکن لنک مین پیج والا دے رہے ہیں */}
             {BOOKS_DATA.map((book, i) => {
-              
+
               // 🛠️ یہ ہے وہ فارمولا: ٹائٹل کے حساب سے لنک بنانا
               let manualLink = "/library";
               if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
@@ -391,17 +391,17 @@ export default function UltimateAboutPage() {
               const finalHref = book.link || manualLink;
 
               return (
-                <Link 
-                  href={finalHref} 
-                  key={i} 
+                <Link
+                  href={finalHref}
+                  key={i}
                   className="group flex flex-col items-center"
                 >
                   {/* 🖼️ کتاب کا فریم اور سائز (بالکل مین پیج جیسا) */}
                   <div className="relative w-full aspect-[3/4] bg-white rounded-lg shadow-md border-2 border-transparent group-hover:border-[#D4AF37] transition-all overflow-hidden flex items-center justify-center p-2">
-                    <img 
-                      src={book.img || book.image} 
-                      className="max-w-full max-h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500" 
-                      alt={book.title} 
+                    <img
+                      src={book.img || book.image}
+                      className="max-w-full max-h-full object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500"
+                      alt={book.title}
                     />
                   </div>
 
@@ -414,7 +414,7 @@ export default function UltimateAboutPage() {
             })}
           </div>
         </div>
-      </section>   
+      </section>
 
       <Footer />
 

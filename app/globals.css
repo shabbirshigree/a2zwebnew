@@ -26,18 +26,10 @@ body {
 
 /* ==================================================================== */
 
-
 /* --- 1. ٹیکسٹ ٹکر (Text Ticker) --- */
 @keyframes scroll-ticker {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(50%);
-  }
-
-  /* RTL کے لیے دائیں طرف */
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
 }
 
 .animate-marquee-instant {
@@ -47,26 +39,14 @@ body {
 }
 
 /* --- 2. کارڈز اسکرولنگ (Infinity Scroll - No Waiting) --- */
-/* لیفٹ اسکرول (کتابوں کے لیے) */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* رائٹ اسکرول (لیجنڈز کے لیے) */
 @keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .animate-scroll-left {
@@ -106,17 +86,60 @@ body {
 
 /* --- 4. فیڈ ان اور اپ اینیمیشن (Fade-In Up Effect) --- */
 @keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
+
+/* ==================================================================== */
+/* 👇 ایرانی کلچر کے اضافی اثرات (Background & Birds) 👇              */
+/* ==================================================================== */
+
+/* 🌸 1. ایرانی نقشِ و نگار کا مدہم بیک گراؤنڈ */
+.iranian-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 0c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63-31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM10 2c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm80 80c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM9 93c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm80-63c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM35 39c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM11 54c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed; 
+}
+
+/* 🕊️ 2. لطیف اڑتے پرندوں کی اینیمیشن */
+@keyframes fly {
+  0% { transform: translateX(-10vw) translateY(10vh) scale(0.5); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(110vw) translateY(-10vh) scale(1); opacity: 0; }
+}
+
+@keyframes flap {
+  0% { transform: rotateX(0deg); }
+  50% { transform: rotateX(60deg); }
+  100% { transform: rotateX(0deg); }
+}
+
+.bird-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  will-change: transform;
+  animation-name: fly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.bird {
+  animation-name: flap;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+}
+
+.bird-container--one { animation-duration: 35s; animation-delay: 0s; }
+.bird--one { animation-duration: 0.6s; }
+
+.bird-container--two { animation-duration: 45s; animation-delay: 10s; top: 15%; }
+.bird--two { animation-duration: 0.8s; }
+
+.bird-container--three { animation-duration: 55s; animation-delay: 20s; top: 25%; }
+.bird--three { animation-duration: 0.7s; }
