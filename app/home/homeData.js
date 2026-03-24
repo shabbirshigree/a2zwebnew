@@ -68,7 +68,7 @@ export const legendsData = [
     name: "جعفر روہناس",
     role: "DG خانہ فرہنگ ایران، لاہور",
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771770325/IMG20230623164017_Copy_ddz2fd.jpg",
-    video: "https://www.youtube.com/watch?v=Xn5wUG0lPrE", // 👈 حاجی صاحب، یہاں بس جعفر روہناس صاحب کی کلاؤڈ ویڈیو کا لنک دوبارہ ڈال دیں جو آپ نے ابھی اپلوڈ کیا تھا۔
+    video: "https://res.cloudinary.com/dtqrziupt/video/upload/v1774379811/jafar-rohnas_pkmmdc.mp4", // 👈 حاجی صاحب، یہاں بس جعفر روہناس صاحب کی کلاؤڈ ویڈیو کا لنک دوبارہ ڈال دیں جو آپ نے ابھی اپلوڈ کیا تھا۔
     quote: "شبیر احمد شگری کلچرل ایکسپرٹ ہیں، انہوں نے تاریخ میں پہلی مرتبہ پاکستان اور ایران کے درمیان زیارتی و سیاحتی ٹور شروع کیا ہے۔"
   },
   {
