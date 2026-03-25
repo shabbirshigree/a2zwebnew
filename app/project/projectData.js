@@ -2,7 +2,7 @@ import { FaBook, FaPlay, FaHeadphones } from "react-icons/fa";
 
 export const quranVideos = {
   // 1. مرکزی تعارف
-  intro: {
+intro: {
     id: 'visual-quran-main-2026',
     title: 'نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
@@ -11,9 +11,30 @@ export const quranVideos = {
     descUrdu: 'یہ حاجی شبیر احمد شگری کا ایک جدید اور منفرد منصوبہ ہے۔ اس پروجیکٹ کا بنیادی مقصد جدید ٹیکنالوجی اور مصنوعی ذہانت (AI) کے ذریعے قرآن مجید کے ترجمے اور مفاہیم کو بصری اور فلمی انداز میں پیش کرنا ہے۔\n\nویژول قرآن: تلاوت کے ساتھ اردو ترجمہ اور متعلقہ مناظر، تاکہ نوجوان نسل اسے آسانی سے سمجھ سکے۔',
     flipbookIframe: `<iframe src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" style="width: 100%; height: 600px; border: none;" allowfullscreen></iframe>`,
     actions: [
-      { type: 'project', label: 'تفصیل پڑھیں', icon: <FaBook className="ml-2" />, link: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf', color: 'bg-[#D4AF37] hover:bg-[#B8860B] text-white', isPopup: true },
-      { type: 'video-urdu', label: 'گوگل ویڈیو پوڈکاسٹ', icon: <FaPlay className="ml-2" />, url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4', color: 'bg-[#0f4c75] hover:bg-[#1b6ca8] text-white' },
-      { type: 'audio-urdu', label: 'گوگل آڈیو پوڈکاسٹ', icon: <FaHeadphones className="ml-2" />, url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4', color: 'bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 text-[#0f4c75] border border-[#D4AF37]' }
+      { 
+        type: 'project', 
+        label: 'تفصیل پڑھیں', 
+        icon: <FaBook className="ml-2" />, 
+        link: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf', 
+        color: 'bg-[#D4AF37] hover:bg-[#B8860B] text-white', 
+        isPopup: true 
+      },
+      { 
+        type: 'video-urdu', 
+        label: 'گوگل ویڈیو پوڈکاسٹ', 
+        icon: <FaPlay className="ml-2" />, 
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4',
+        audioUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4' 
+      },      
+      { 
+        type: 'audio-urdu', 
+        label: 'گوگل آڈیو پوڈکاسٹ', 
+        icon: <FaHeadphones className="ml-2" />, 
+        // یہاں ہم نے وہ لنک لگایا ہے جو ہوم پیج پر کام کر رہا ہے
+        audioUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4',
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4', 
+        color: 'bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 text-[#0f4c75] border border-[#D4AF37]' 
+      }
     ]
   },
 
@@ -66,7 +87,7 @@ export const quranVideos = {
   // 5. قرآنی قصص
   stories: [
     { id: 'WZsQIRCFYPE', title: 'چشمہ حیات (حضرت خضرؑ)' }, { id: 'hAY5a3diWD4', title: 'حضرت سلیمانؑ اور ملکہ سبا' },
-    { id: 'J_gY7lZ7K8A', title: 'اصحاب کہف' }, { id: 'ZgOxnRGzDLs', title: 'ابلیس نے سجدہ کیوں نہ کیا' },
+{ id: 'XcVR7Jix3BI', title: 'حضرت یوسفؑ کا قصہ ' }, { id: 'ZgOxnRGzDLs', title: 'ابلیس نے سجدہ کیوں نہ کیا' },
     { id: 'UaQIT_z9rYU', title: 'حضرت عزیرؑ کا قصہ' }, { id: 'y9O9BTPEBcw', title: 'The Fountain of Life (Eng)' }
   ],
 
