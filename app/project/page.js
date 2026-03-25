@@ -210,18 +210,24 @@ export default function ProjectPage() {
         </div>
       </section>
 
-      {/* 🎬 افتتاحی ویڈیو */}
-      <section className="container mx-auto px-4 py-8 md:py-12 relative z-10 border-t border-white/5 mt-4">
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="bg-[#111] border border-[#D4AF37]/30 rounded-xl p-5 md:p-6 shadow-lg">
-            <h3 className="text-lg md:text-2xl font-bold text-[#D4AF37] text-center urdu-text mb-3">✨ اردو ترجمے کے ساتھ مکمل قرآن پاک کا افتتاح ✨</h3>
-            <p className="text-center text-gray-400 urdu-text mb-4 text-xs md:text-sm">یکم رمضان المبارک کو علامہ شیخ محسن علی نجفیؒ کی قبر مطہر پر (جامعہ کوثر اسلام آباد) میں اس تاریخی پروجیکٹ کا افتتاح۔</p>
-            <div className="aspect-video rounded-lg overflow-hidden border border-[#D4AF37]/50">
-              <iframe src="https://www.youtube.com/embed/ah0OXlnDw2k" allowFullScreen className="w-full h-full"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+   {/* 🎬 افتتاحی ویڈیو */}
+<section className="container mx-auto px-4 py-8 md:py-12 relative z-10 border-t border-white/5 mt-4">
+  <div className="max-w-4xl mx-auto mb-8">
+    <div className="bg-[#111] border border-[#D4AF37]/30 rounded-xl p-5 md:p-6 shadow-lg">
+      <h3 className="text-lg md:text-2xl font-bold text-[#D4AF37] text-center urdu-text mb-3">✨ اردو ترجمے کے ساتھ مکمل قرآن پاک کا افتتاح ✨</h3>
+      <p className="text-center text-gray-400 urdu-text mb-4 text-xs md:text-sm">یکم رمضان المبارک کو علامہ شیخ محسن علی نجفیؒ کی قبر مطہر پر (جامعہ کوثر اسلام آباد) میں اس تاریخی پروجیکٹ کا افتتاح۔</p>
+      <div className="aspect-video rounded-lg overflow-hidden border border-[#D4AF37]/50">
+        {/* لنک میں ?rel=0&modestbranding=1&showinfo=0 کا اضافہ کیا گیا ہے */}
+        <iframe 
+          src="https://www.youtube.com/embed/ah0OXlnDw2k?rel=0&modestbranding=1&showinfo=0" 
+          allowFullScreen 
+          className="w-full h-full"
+          title="Noor ul Quran Project Launch"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 📺 ویڈیوز کی لسٹ */}
       <div className="bg-black">
