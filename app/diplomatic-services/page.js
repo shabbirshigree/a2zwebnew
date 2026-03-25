@@ -66,8 +66,8 @@ export default function DiplomaticServices() {
       </section>
 
       {/* 🤝 سیکشن 2: انجمن دوستی اور ویب سائٹ (نمایاں کر کے) */}
-      <section className="bg-[#0b314d] text-white py-12 md:py-16 border-y-4 border-[#D4AF37] relative">
-        <div className="container mx-auto px-4 relative z-10" dir="rtl">
+
+<section id="anjuman" className="bg-[#0b314d] text-white py-12 md:py-16 border-y-4 border-[#D4AF37] relative scroll-mt-24">        <div className="container mx-auto px-4 relative z-10" dir="rtl">
           <div className="text-center mb-10">
              <FaUsers className="text-5xl text-[#D4AF37] mx-auto mb-4" />
              <h2 className="text-3xl md:text-5xl font-bold text-[#D4AF37] mb-4 urdu-text drop-shadow-md">انجمنِ دوستی پاکستان و ایران</h2>
@@ -150,7 +150,7 @@ export default function DiplomaticServices() {
       </section>
 
       {/* 🌍 سیکشن 4: سیاحت اور ثقافتی تبادلہ (ایران کا پہلا سفرنامہ) */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-200 py-12 md:py-16">
+<section id="tourism" className="bg-gradient-to-br from-gray-50 to-gray-200 py-12 md:py-16 scroll-mt-24">
         <div className="container mx-auto px-4" dir="rtl">
           <h2 className="text-2xl md:text-4xl font-bold text-[#0f4c75] mb-6 text-center urdu-text drop-shadow-sm">🌍 سیاحت اور ثقافتی تبادلہ: پاک ایران تعلقات کا ایک نیا باب</h2>
           

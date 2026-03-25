@@ -16,25 +16,13 @@ import { BOOKS_DATA } from '../library/libraryData';
 
 export default function UltimateAboutPage() {
   const [activeVideo, setActiveVideo] = useState(null);
+  const [showCulturePopup, setShowCulturePopup] = useState(false);
 
   const getYouTubeId = (url) => {
     if (!url) return '';
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : null;
-  };
-
-  // 🔴 بانی اور سرپرست کے لنکس
-  const getFounderLink = (title) => {
-    if (title.includes("نور القرآن")) return "/project";
-    if (title.includes("نور پروڈکشنز")) return "/talkshows";
-    if (title.includes("انجمن دوستی")) return "https://pakiiranassociation.wixsite.com/pira";
-    if (title.includes("ویب سائٹ")) return "https://pakiiranassociation.wixsite.com/pira";
-    if (title.includes("ٹریڈ اینڈ کلچر")) return "https://pakiranfriendship.com";
-    if (title.includes("ٹورزم")) return "https://pakiranfriendship.com";
-    if (title.includes("آپارات")) return "https://www.aparat.com/noorproduction";
-    if (title.includes("طفلانِ نور")) return "https://www.youtube.com/@TiflaneNoor";
-    return "#";
   };
 
   // 🔴 میڈیا اور الیکٹرانک جرنلزم کے لنکس
@@ -133,18 +121,48 @@ export default function UltimateAboutPage() {
         <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] mb-8 urdu-text border-b-2 border-[#D4AF37] inline-block pb-2 mx-auto flex justify-center">بانی اور سرپرست</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
           {founderItems.map((item, i) => {
-            const linkHref = getFounderLink(item.title);
-            const isExternal = linkHref.startsWith("http");
+            const title = item.title || "";
+            const linkHref = item.link || "#";
 
-            return (
-              <Link href={linkHref} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full">
-                  <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
-                  <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-lg mb-2 leading-tight">{item.title}</h3>
-                  <p className="text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans">{item.desc}</p>
-                </div>
-              </Link>
+            const CardContent = (
+              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full w-full">
+                <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
+                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-lg mb-2 leading-tight">{title}</h3>
+                <p className="text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans">{item.desc}</p>
+              </div>
             );
+
+            // 🟢 1. کلچر اینڈ ٹریڈ (پاپ اپ) - اب یہ بالکل پرفیکٹ کھلے گا
+            if (title.includes("کلچر") || title.includes("ٹریڈ")) {
+              return <button key={i} onClick={() => setShowCulturePopup(true)} className="w-full h-full block text-left">{CardContent}</button>;
+            }
+            // 🔵 2. انجمن دوستی
+            if (title.includes("انجمن")) {
+              return <Link href="/diplomatic-services#anjuman" key={i} className="w-full h-full block">{CardContent}</Link>;
+            }
+            // 🟡 3. ٹورزم (یہاں اسپیلنگ ٹورزم کر دی ہے تاکہ میچ ہو جائے)
+            if (title.includes("ٹورازم") || title.includes("سیاحت") || title.includes("ٹورزم")) {
+              return <Link href="/diplomatic-services#tourism" key={i} className="w-full h-full block">{CardContent}</Link>;
+            }
+            // 🌐 4. ویب سائٹ
+            if (title.includes("ویب") || title.includes("سائیٹ")) {
+              return <a href="https://pakiiranassociation.wixsite.com/pira" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
+            }
+            // 🎥 5. نور پروڈکشن
+            if (title.includes("نورپروڈکشن") || title.includes("نور پروڈکشن")) {
+              return <a href="https://www.youtube.com/@noorproduction" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
+            }
+            // 👶 6. طفلان نور
+            if (title.includes("طفلان نور") || title.includes("طفلانِ نور")) {
+              return <a href="https://www.youtube.com/results?search_query=Tiflan+e+Noor" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
+            }
+            // 📖 7. نورالقرآن
+            if (title.includes("نورالقرآن") || title.includes("نور القرآن")) {
+              return <Link href="/project" key={i} className="w-full h-full block">{CardContent}</Link>;
+            }
+            
+            // ⚪ باقی سب کے لیے (جیسے آپارات کا پرانا اوریجنل لنک)
+            return <Link href={linkHref} key={i} className="w-full h-full block">{CardContent}</Link>;
           })}
         </div>
       </section>
@@ -206,7 +224,7 @@ export default function UltimateAboutPage() {
             {/* باب دوم - ہلکا سرمئی */}
             <div id="radio-section" className="bg-slate-50 p-8 rounded-3xl border-r-8 border-gray-500">
               <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 flex items-center gap-3"><FaMicrophone className="text-[#D4AF37]" /> بابِ دوم: ریڈیو پاکستان، میرا پہلا مکتب</h3>
-              <p>میری زندگی میں شعور اور آگہی کا دروازہ "ریڈیو پاکستان" کے ذریعے کھلا۔ مجھے اچھی طرح یاد ہے جب میں محض آٹھ نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو آزمائشی نشریات کا آغاز ہوا۔ اس دور میں جب ٹی وی اور انٹرنیٹ کا تصور بھی محال تھا، ریڈیو ہی دنیا سے رابطے کا واحد ذریعہ تھا۔ فضاؤں میں گونجتے "اے مردِ مجاہد جاگ ذرا، اب وقتِ شہادت ہے آیا" اور اسی طرح کے دوسے ملی نغمے مجھ سمیت اہالیان سکردو کے لہو کو گرما دیتے تھے۔ ان نغموں کی گونج اس لیے بھی زیادہ تھی کہ ہمارا علاقہ پاک فوج کے جوانوں کا مسکن تھا۔</p>
+              <p>میری زندگی میں شعور اور آگہی کا دروازہ "ریڈیو پاکستان" کے ذریعے کھلا۔ مجھے اچھی طرح یاد ہے جب میں محض آٹھ نو سال کا تھا تو سکردو میں ریڈیو پاکستان کی میڈیم ویو آزمائشی نشریات کا آغاز ہوا۔ اس دور میں جب ٹی وی اور انٹرنیٹ کا تصور بھی محال تھا، ریڈیو ہی دنیا سے رابطے کا واحد ذریعہ تھا۔ فضاؤں میں گونجتے "اے مردِ مجاہد جاگ ذرا، اب وقتِ شہادت ہے آیا" اور اسی طرح کے دوسے ملی نغمے مجھ سمیت اہالیان سکردو کے لہو کو گرما دیتے تھے۔ ان اور اسی طرح کے دوسرے ملی نغموں کی گونج اس لیے بھی زیادہ تھی کہ ہمارا علاقہ پاک فوج کے جوانوں کا مسکن تھا۔</p>
               <p className="mt-4">میں سکردو کے ان چند خوش نصیب بچوں میں شامل تھا جنہیں ریڈیو پاکستان سکردو میں بچوں کے مشہور پروگرام "چاند تارے" میں شرکت کا موقع ملا۔ یہیں سے میرے اندر کا چھپا ہوا فنکار بیدار ہوا۔ میں نے وہاں "بھائی جان" کے روپ میں میزبانی (Hosting) کے فرائض انجام دیے۔ ریڈیو کا ایک سخت اصول تھا کہ "اسکرپٹ کے بغیر ایک لفظ نہیں بولنا"۔ اس اصول نے مجھے بچپن ہی سے لکھنے کی مشق کروا دی۔ پروڈیوسرز اکثر حیران ہوتے تھے کہ اتنا چھوٹا بچہ اتنے پختہ اور ادبی اسکرپٹ کیسے لکھ لیتا ہے۔ یہ ریڈیو کی دنیا ہی تھی جس نے مجھے اعتماد بخشا اور بولنے کا سلیقہ سکھایا。</p>
               <p className="mt-4">وقت کے ساتھ ساتھ میرا یہ سفر پروان چڑھتا گیا۔ لڑکپن میں، میں نے نوجوانوں کے پروگرام "عزمِ جواں" کی کمپئیرنگ سنبھالی۔ ریڈیو کے متعدد ڈراموں میں صداکاری کے جوہر دکھائے۔ پھر اللہ نے مجھے یہ عزت بخشی کہ میں بلتی زبان میں دو گھنٹے کی براہِ راست نشریات (سہ پہر 3 سے شام 5 بجے تک) کرنے لگا۔ سکردو میں صبح کی آزمائشی نشریات کے آغاز کا اعزاز بھی میرے حصے میں آیاہے۔ یہ 1989-90ء کا زمانہ تھا، مجھے یاد ہے کہ پروگرام کا معاوضہ 750 روپے کا چیک ملتا تھا، جو اس وقت ایک طالب علم کے لیے بہت بڑی رقم تھی، مگر اصل کمائی وہ عزت اور اعتماد تھا جو مائیکروفون کے سامنے بیٹھ کر حاصل ہوا، جس کی وجہ سے کلاس فیلوز میں بھی ایک دھاک بیٹھ گئی تھی۔</p>
             </div>
@@ -364,21 +382,20 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-      {/* 📚 7. تصانیف کا گوشہ (Main Page Formula) */}
+      {/* 📚 7. تصانیف کا گوشہ */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] urdu-text mb-12">میری تصانیف و تالیفات</h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="rtl">
-            {/* 🟢 ہم یہاں BOOKS_DATA کو ہی میپ کر رہے ہیں لیکن لنک مین پیج والا دے رہے ہیں */}
             {BOOKS_DATA.map((book, i) => {
 
-              // 🛠️ یہ ہے وہ فارمولا: ٹائٹل کے حساب سے لنک بنانا
               let manualLink = "/library";
               if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
               else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
               else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
-              else if (book.title.includes("سفرنامہ") || book.title.includes("سیاحت")) manualLink = "/library#book-safarnama";
+              else if (book.title.includes("سفرنامہ")) manualLink = "/library#book-safarnama";
+              else if (book.title.includes("سیاحت")) manualLink = "/library#book-sayahat-parts"; 
               else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
               else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
               else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
@@ -386,8 +403,8 @@ export default function UltimateAboutPage() {
               else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
               else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
               else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
+              else if (book.title.includes("نورالقرآن") || book.title.includes("قرآن")) manualLink = "/library#Quran"; 
 
-              // اگر ڈیٹا میں پہلے سے لنک موجود ہے تو وہ استعمال کریں، ورنہ ہمارا بنایا ہوا فارمولا
               const finalHref = book.link || manualLink;
 
               return (
@@ -396,7 +413,6 @@ export default function UltimateAboutPage() {
                   key={i}
                   className="group flex flex-col items-center"
                 >
-                  {/* 🖼️ کتاب کا فریم اور سائز (بالکل مین پیج جیسا) */}
                   <div className="relative w-full aspect-[3/4] bg-white rounded-lg shadow-md border-2 border-transparent group-hover:border-[#D4AF37] transition-all overflow-hidden flex items-center justify-center p-2">
                     <img
                       src={book.img || book.image}
@@ -405,7 +421,6 @@ export default function UltimateAboutPage() {
                     />
                   </div>
 
-                  {/* 📝 کتاب کا نام */}
                   <h3 className="mt-4 text-[#0b314d] urdu-text font-bold text-sm md:text-base group-hover:text-[#D4AF37] text-center leading-tight">
                     {book.title}
                   </h3>
@@ -415,8 +430,26 @@ export default function UltimateAboutPage() {
           </div>
         </div>
       </section>
-
+      
       <Footer />
+
+      {/* 🌟 پاک ایران کلچر اینڈ ٹریڈ کا پاپ اپ (اب یہ بالکل محفوظ اور باہر ہے) */}
+      {showCulturePopup && (
+        <div className="fixed inset-0 bg-black/80 flex flex-col items-center justify-center z-[9999] p-4 backdrop-blur-sm">
+          <div className="bg-white rounded-[2rem] max-w-xl w-full p-8 md:p-10 relative shadow-[0_0_40px_rgba(212,175,55,0.3)] border-2 border-[#D4AF37]/50">
+            <button onClick={() => setShowCulturePopup(false)} className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-3xl font-bold">&times;</button>
+            <div className="text-center flex flex-col items-center">
+              <div className="w-36 h-36 mb-6 rounded-full p-3 bg-white shadow-lg border-4 border-[#0b314d]">
+                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1774428398/3929eb58-af72-466f-89fc-98380b8abe4c.png" alt="Culture and Trade Logo" className="w-full h-full object-contain rounded-full" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#0f4c75] mb-4 urdu-text border-b-2 border-[#D4AF37] pb-3">پاک ایران کلچر اینڈ ٹریڈ کا قیام</h3>
+              <p className="text-gray-700 leading-relaxed urdu-text text-center text-lg mt-4 font-light text-justify">
+                خانہ فرہنگ اسلامی جمہوریہ ایران کے تعاون سے پاک ایران کلچر اینڈ ٹریڈ کا قیام عمل میں لایا گیا۔ اس فورم کے بانی شبیر احمد شگری ہیں۔ اس فورم کا مقصد پاکستان اور ایران کے درمیان کلچر کا فروغ اور تجارت کے لئے دونوں ممالک کے درمیان روابط میں اضافہ کرنا تھا۔
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 🔴 ویڈیو ماڈل */}
       {activeVideo && (
