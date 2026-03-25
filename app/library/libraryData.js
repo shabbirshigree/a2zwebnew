@@ -2,7 +2,7 @@ export const AUTHOR_REVIEW = {
   title: "حاجی شبیر احمد شگری کی حیات و خدمات پر تجزیہ",
   desc: "میری نصف صدی پر محیط صحافتی، ثقافتی اور دینی خدمات کا ایک جامع اور غیر جانبدارانہ ڈیجیٹل تجزیہ جو گوگل اے آئی (Google AI) نے ترتیب دیا ہے۔ اسے ضرور سنیں اور دیکھیں۔",
   videoUrl: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772595268/%D8%B3%D9%81%D8%B1%D9%90_%D9%86%D9%88%D8%B1__%DA%A9%D9%88%DB%81%D8%B3%D8%A7%D8%B1%D9%88%DA%BA_%D8%B3%DB%92_%D9%85%DB%8C%D9%86%D8%A7%D8%B1%D9%88%DA%BA_%D8%AA%DA%A9_xhax6w.mp4",
-  audioUrl: "https://res.cloudinary.com/dtqrziupt/video/upload/v1772595285/%D8%B3%DA%A9%D9%88%D9%86_%DA%A9%DB%8C_%D8%AA%D9%84%D8%A7%D8%B4_tgzvni.mp4",
+  audioUrl: "https://res.cloudinary.com/dtqrziupt/video/upload/v1774473007/khudnawisht-shabbir-shigri_jkdrao.mp3",
   image: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png"
 };
 
