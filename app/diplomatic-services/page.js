@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-import { FaLanguage, FaFilm, FaPlay, FaBookReader, FaUsers, FaTimes, FaArrowRight, FaArrowLeft } from 'react-icons/fa'; 
+import Link from 'next/link';
+import { FaLanguage, FaFilm, FaPlay, FaBookReader, FaUsers, FaTimes, FaArrowRight, FaArrowLeft, FaBookOpen, FaHeadphones } from 'react-icons/fa';
 import { Navbar, HeroSlider } from '../components/Header'; 
 import Footer from '../components/Footer'; 
 
@@ -82,7 +83,7 @@ export default function DiplomaticServices() {
         </div>
       </section>
 
-      {/* 🤝 سیکشن 2: انجمن دوستی اور ویب سائٹ */}
+{/* 🤝 سیکشن 2: انجمن دوستی اور ویب سائٹ */}
       <section className="bg-[#0b314d] text-white py-16 md:py-20 border-y-4 border-[#D4AF37] relative">
         <div className="container mx-auto px-4 relative z-10" dir="rtl">
           <div className="text-center mb-12">
@@ -113,13 +114,21 @@ export default function DiplomaticServices() {
             </div>
           </div>
 
+          {/* 🔴 گیلری */}
           <ImageGallery images={anjumanGallery} openLightbox={openLightbox} />
           
+        {/* 🔴 سلم اور خوبصورت ویب سائٹ کا بٹن */}
           <div className="text-center mt-12">
-            <a href="https://pakiranassociation.wixsite.com/pira" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#D4AF37] text-[#0b314d] font-bold px-12 py-5 rounded-full hover:bg-white hover:text-[#0b314d] transition-colors shadow-[0_0_20px_rgba(212,175,55,0.5)] text-xl urdu-text">
+            <a 
+              href="https://pakiiranassociation.wixsite.com/pira" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block bg-[#D4AF37] text-[#0b314d] font-bold px-8 py-3 rounded-full hover:bg-white hover:text-[#0b314d] hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.4)] text-lg urdu-text border-2 border-transparent hover:border-[#D4AF37]"
+            >
               انجمن کی ویب سائٹ وزٹ کریں
             </a>
           </div>
+          
         </div>
       </section>
 
@@ -181,7 +190,7 @@ export default function DiplomaticServices() {
             </p>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-6 text-center bg-[#0b314d] inline-block px-10 py-3 rounded-full mx-auto shadow-md urdu-text">🇮🇷 ایران: پہلا زیارتی، سیاحتی و معلوماتی سفر</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-6 text-center bg-[#0b314d] inline-block px-10 py-3 rounded-full mx-auto shadow-md urdu-text"> ایران: پہلا زیارتی، سیاحتی و معلوماتی سفر</h3>
           <p className="text-center text-gray-700 mb-10 text-xl font-bold urdu-text">تحریر: شبیر احمد شگری (صدر، انجمن دوستی پاکستان و ایران)</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
@@ -202,7 +211,65 @@ export default function DiplomaticServices() {
                ))}
              </ul>
           </div>
+{/* 📘 نیا ڈیزائن: سفرنامہ کتاب اور پوڈکاسٹ */}
+          <div className="bg-[#0b314d] rounded-3xl shadow-2xl overflow-hidden mb-16 border-2 border-[#D4AF37] hover:shadow-[0_10px_40px_rgba(212,175,55,0.3)] transition-shadow duration-300 relative">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] pointer-events-none"></div>
 
+            <div className="flex flex-col lg:flex-row relative z-10">
+              
+              {/* 🖼️ کتاب کی تصویر (کلک کرنے پر لائبریری جائے گی) */}
+              <div className="lg:w-1/3 p-8 flex justify-center items-center relative border-b lg:border-b-0 lg:border-l border-[#D4AF37]/30 bg-black/20">
+                <Link href="/library#book-safarnama" className="cursor-pointer block transform hover:scale-105 transition-transform duration-500 relative z-10" title="لائبریری میں پڑھیں"> 
+                  <img 
+                    src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772651728/eb2e1ccd-e669-4453-8ca7-10f38cf13a50.png" 
+                    alt="سفرنامہ ایران" 
+                    className="w-48 md:w-full max-w-[220px] rounded-lg shadow-[0_15px_30px_rgba(0,0,0,0.6)] border border-[#D4AF37]/50" 
+                  />
+                </Link>
+              </div>
+              
+              {/* 📝 تحریر اور بٹنز */}
+              <div className="lg:w-2/3 p-8 md:p-12 text-right" dir="rtl">
+                <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-5 urdu-text">
+                  سفرنامہ ایران: دیارِ عشق کا سفر
+                </h2>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed urdu-text mb-8">
+                  حاجی شبیر احمد شگری کی یہ کتاب محض ایک سفرنامہ نہیں، بلکہ ایران کے تاریخی، مذہبی اور ثقافتی مقامات کا ایک جامع جائزہ ہے۔ اس سفرنامے میں زیارات کے ساتھ ساتھ ایران کے سیاحتی مقامات کا بھی تفصیل سے ذکر ہے۔ یہ ایک خوبصورت باتصویر سفرنامہ ہے جو ایران کے پہلے زیارتی و سیاحتی سفر کے موقع پر لکھا گیا ہے۔
+                  <br/><br/>
+                  <strong className="text-[#D4AF37] font-bold">مصنف:</strong> حاجی شبیر احمد شگری
+                </p>
+
+                {/* 🔘 بٹن پینل */}
+                <div className="flex flex-wrap gap-3 justify-start">
+                  
+                  {/* 🟢 لائبریری لنک */}
+                  <Link
+                    href="/library#book-safarnama"
+                    className="px-6 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#D4AF37] text-[#0b314d] hover:bg-white transition-all shadow-md"
+                  >
+                    <FaBookOpen /> لائبریری میں پڑھیں
+                  </Link>
+
+                  {/* 🟢 ویڈیو پوڈکاسٹ (فی الحال غیر فعال) */}
+                  <button
+                    disabled
+                    className="px-5 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#0f4c75] opacity-50 text-white cursor-not-allowed transition-all shadow-md"
+                  >
+                    <FaFilm /> ویڈیو (جلد آرہا ہے)
+                  </button>
+
+                  {/* 🟢 آڈیو پوڈکاسٹ (آپ کے موجودہ ویڈیو ماڈل میں کھلے گا) */}
+                  <button
+                    onClick={() => setActiveVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1772594033/Ziarati-syahati-safarnama-audeo-podcast_qqjiwy.mp3')}
+                    className="px-5 py-2.5 rounded-xl font-bold urdu-text flex items-center gap-2 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37] hover:bg-[#D4AF37]/20 transition-all"
+                  >
+                    <FaHeadphones /> آڈیو پوڈکاسٹ
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
           {/* 🎥 ویڈیوز */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#0b314d] mb-10 text-center urdu-text border-b-2 border-[#D4AF37] pb-4 inline-block mx-auto">سیاحت، انٹرویوز اور خبریں (ویڈیوز)</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
