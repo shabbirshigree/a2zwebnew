@@ -23,10 +23,23 @@ export const urduData = [
 ہرمز اس وقت ایران کے ہاتھ  میں موجود ایسا سوئچ ہے جسے وہ جب چاہے دبا کر عالمی معیشت کو مفلوج کر سکتا ہے۔کسی بھی ملک کے لیے اپنی سرحدوں اور مفادات کا تحفظ سب سے اولین ترجیح ہوتی ہے۔ ایران نے جس طرح آبنائے ہرمز کو بہترین ڈھال کے طور پر استعمال کیا ہے۔اب جنگ مسلط کرنے والوں کے ہاتھ سے گیم نکل چکی ہے۔مغربی طاقتیں ہرمز کے آگے ٹھس ہوچکی ہیں۔اور دنیا کی معیشت خطرے میں پڑ چکی ہے۔ایران واقعی صحیح کہتا ہے کہ یہ جنگ تم نے شروع کی اور اسے ختم ہم کریں گے۔ 
 </p>
 <br>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
-          
+            <h4 style="color:#0f4c75; text-align:center; font-family: sans-serif;">اخبارات کے تراشے / تصاویر</h4>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 10px; background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #ddd;">
+                
+                <div style="flex: 1; min-width: 250px; max-width: 450px; text-align: center;">
+                    <p style="font-size: 0.9em; margin-bottom: 5px; color: #666;">روزنامہ زمانہ نیوز</p>
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1774599904/bf634d0a-1bd3-46bf-95f9-0a5f04fb2f34.png" 
+                         style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #ccc;" 
+                         alt="News Clip 1">
                 </div>
-
+   <div style="flex: 1; min-width: 250px; max-width: 450px; text-align: center;">
+                    <p style="font-size: 0.9em; margin-bottom: 5px; color: #666;">روزنامہ زمانہ مشرق</p>
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1774601108/d49f3b49-6888-4e2d-864a-8b102cd648c7.png" 
+                         style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #ccc;" 
+                         alt="News Clip 1">
                 </div>
 
             </div>
@@ -36,7 +49,7 @@ export const urduData = [
                 <ul style="list-style:none; padding:0;">
                     <li style="margin-bottom:10px;">
                         <strong>لنک:</strong> 
-       <a href="https://www.facebook.com/share/p/14Z6paq4LdM/">فیس بک پر پڑھنے کے لئےکلک کریں</a>                    </li>
+       <a href="https://mashriqakhbar.com.pk/page/p4/2026-03-24/1">آنلائن پڑھنے کے لئےکلک کریں</a>                    </li>
                 </ul>
             </div>
         </div>
