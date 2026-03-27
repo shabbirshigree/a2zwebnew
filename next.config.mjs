@@ -5,13 +5,17 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**', 
       },
     ],
   },
-  // اگر آپ موبائل پر ٹیسٹ کر رہے ہیں تو یہ لائن رہنے دیں، ورنہ اسے بھی ہٹا سکتے ہیں
+  // ہم نے 'turbo' والا حصہ یہاں سے نکال دیا ہے کیونکہ آپ کا ورژن اسے نہیں مان رہا
   experimental: {
-    allowedDevOrigins: ["192.168.1.5", "localhost:3000"]
-  }
+    serverActions: {
+      allowedOrigins: ["192.168.1.5", "localhost:3000"],
+    },
+  },
 };
 
 export default nextConfig;

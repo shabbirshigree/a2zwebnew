@@ -130,31 +130,31 @@ export default function Home() {
           </div>
         </div>
 
-{/* 🌟 4 اہم پروجیکٹس / نیویگیشن کارڈز کا سیکشن (نیا ڈیزائن) */}
+        {/* 🌟 4 اہم پروجیکٹس / نیویگیشن کارڈز کا سیکشن (نیا ڈیزائن) */}
         <section className="w-full px-3 md:px-4 py-8 relative z-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {navCardsData?.map((card, i) => (
               <Link key={i} href={card.link || '#'} className="bg-white rounded-3xl p-6 md:p-8 border-2 border-[#D4AF37]/30 text-center flex flex-col items-center justify-center shadow-lg hover:shadow-[0_20px_40px_rgba(212,175,55,0.4)] hover:-translate-y-3 transition-all duration-500 group relative overflow-hidden">
-                
+
                 {/* ✨ شائن ایفیکٹ (جب ماؤس اوپر آئے گا تو چمک پیدا ہوگی) */}
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine z-0 pointer-events-none"></div>
 
                 {/* 🟡 گولڈن آئیکن (اوپر کی طرف) */}
                 <div className="w-20 h-20 bg-gradient-to-br from-[#D4AF37] to-[#B38728] text-white rounded-full flex items-center justify-center mb-6 group-hover:from-[#0f4c75] group-hover:to-[#1e6091] transition-all duration-700 shadow-[0_10px_20px_rgba(212,175,55,0.4)] group-hover:shadow-[0_10px_20px_rgba(15,76,117,0.4)] group-hover:rotate-[360deg] group-hover:scale-110 relative z-10">
-                  <span className="text-3xl drop-shadow-md">{card.icon}</span> 
+                  <span className="text-3xl drop-shadow-md">{card.icon}</span>
                 </div>
 
                 {/* 🔵 نیلا ٹائٹل (نیچے کی طرف) */}
                 <h3 className="font-extrabold text-[#0f4c75] text-xl md:text-2xl urdu-text group-hover:text-[#D4AF37] transition-colors duration-300 relative z-10">
                   {card.title}
                 </h3>
-                
+
               </Link>
             ))}
           </div>
         </section>
 
-     {/* 🚀 نور القرآن پراجیکٹ سیکشن (نیا اور پروفیشنل ڈیزائن) */}
+        {/* 🚀 نور القرآن پراجیکٹ سیکشن (نیا اور پروفیشنل ڈیزائن) */}
         <section className="container mx-auto px-3 md:px-4 py-8 relative z-10">
           <div className="max-w-6xl mx-auto bg-[#0a0a0a] border border-[#D4AF37]/30 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative overflow-hidden group">
 
@@ -183,7 +183,7 @@ export default function Home() {
 
                 {/* 🔘 بٹن پینل (جو اب سیدھا فلپ بک لائبریری میں لے جائے گا) */}
                 <div className="flex flex-wrap gap-3 justify-start">
-                  
+
                   {/* 🟢 یہ بٹن اب سیدھا لائبریری جائے گا */}
                   <Link
                     href={projectSectionData?.bookletUrl || "/library#Quran"}
@@ -351,4 +351,4 @@ export default function Home() {
 
     </> // 👈 یہاں مین فریگمنٹ بند ہو رہا ہے
   ); // 👈 یہاں ریٹرن بند ہو رہا ہے
-} // 👈 یہاں ہوم فنکشن بند ہو رہا ہے
+} // 👈 یہاں ہوم فنکشن بند ہو رہا ہےSS
