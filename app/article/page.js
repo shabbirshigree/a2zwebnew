@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import {
   FaArrowLeft, FaCalendar, FaNewspaper, FaEye, FaSearch, FaPenNib, FaBookOpen, FaMedal,
-  FaShareAlt, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope
+  FaHeart, FaRegHeart, FaShareAlt, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope, FaCommentDots
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
@@ -14,13 +14,25 @@ import { allArticles } from './index';
 export default function ArticlesPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [likedArticles, setLikedArticles] = useState({});
+  const [articleViews, setArticleViews] = useState({});
+  const [articleComments] = useState({});
 
   // ✅ 'urdu' سیٹ کرنے سے پیج لوڈ ہوتے ہی اردو کالم نظر آئیں گے
 const [filterCategory, setFilterCategory] = useState('column');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => { 
-    setMounted(true); 
+    setMounted(true);
+    try {
+      const storedLikes = JSON.parse(localStorage.getItem('articleLikes') || '{}');
+      const storedViews = JSON.parse(localStorage.getItem('articleViews') || '{}');
+      setLikedArticles(storedLikes);
+      setArticleViews(storedViews);
+    } catch {
+      setLikedArticles({});
+      setArticleViews({});
+    }
   }, []);
 
   if (!mounted) return null;
@@ -52,6 +64,35 @@ const categories = [
       { id: 'international', label: '🌍 انٹرنیشنل' },
       { id: 'all', label: '🔍 تمام' }
     ];
+
+    const getArticleKey = (article) => `${article.id}-${article.title}`;
+    const getBaseViews = (article) => 120 + ((Number(article.id) || 1) * 7);
+    const getBaseLikes = (article) => 15 + ((Number(article.id) || 1) * 2);
+    const getBaseComments = (article) => 3 + ((Number(article.id) || 1) % 9);
+
+    const getStats = (article) => {
+      const key = getArticleKey(article);
+      return {
+        views: getBaseViews(article) + (articleViews[key] || 0),
+        likes: getBaseLikes(article) + (likedArticles[key] ? 1 : 0),
+        comments: getBaseComments(article) + (articleComments[key] || 0),
+      };
+    };
+
+    const handleOpenArticle = (article) => {
+      const key = getArticleKey(article);
+      const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
+      setArticleViews(updatedViews);
+      localStorage.setItem('articleViews', JSON.stringify(updatedViews));
+      setSelectedArticle(article);
+    };
+
+    const toggleArticleLike = (article) => {
+      const key = getArticleKey(article);
+      const updatedLikes = { ...likedArticles, [key]: !likedArticles[key] };
+      setLikedArticles(updatedLikes);
+      localStorage.setItem('articleLikes', JSON.stringify(updatedLikes));
+    };
 
     const getArticleUrl = (article) => {
       if (typeof window === 'undefined') return '';
@@ -186,7 +227,7 @@ const categories = [
     {filteredArticles.map((article, index) => (
       <div
         key={`${article.id}-${index}`} // ✅ یہ لائن آئی ڈی کا مسئلہ حل کر دے گی
-        onClick={() => setSelectedArticle(article)}
+        onClick={() => handleOpenArticle(article)}
         className="bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group flex flex-col h-full"
       >
                       <div className="h-48 overflow-hidden bg-gray-100 relative">
@@ -208,7 +249,25 @@ const categories = [
                           {article.excerpt}
                         </p>
                         <div className="rounded-xl border border-[#D4AF37]/25 bg-gradient-to-r from-[#fffdf5] to-white p-3 mb-3">
-                          <div className="flex flex-wrap items-center gap-2 mt-0.5">
+                          <div className="flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm">
+                            <button
+                              type="button"
+                              onClick={(e) => { e.stopPropagation(); toggleArticleLike(article); }}
+                              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 text-rose-600 hover:scale-105 transition-transform"
+                            >
+                              {likedArticles[getArticleKey(article)] ? <FaHeart className="animate-pulse" /> : <FaRegHeart />}
+                              {getStats(article).likes}
+                            </button>
+                            <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">
+                              <FaEye />
+                              {getStats(article).views}
+                            </span>
+                            <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">
+                              <FaCommentDots />
+                              {getStats(article).comments}
+                            </span>
+                          </div>
+                          <div className="flex flex-wrap items-center gap-2 mt-2.5">
                             <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'whatsapp'); }} className="p-2 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
                             <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'facebook'); }} className="p-2 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>
                             <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'telegram'); }} className="p-2 rounded-full bg-sky-100 text-sky-700 hover:scale-110 transition-transform"><FaTelegramPlane /></button>
@@ -260,6 +319,18 @@ const categories = [
 
                 <div className="mb-8 rounded-2xl border border-[#D4AF37]/30 bg-gradient-to-r from-[#fffef8] to-[#f8fbff] p-4 md:p-5 shadow-sm">
                   <div className="flex flex-wrap gap-2 md:gap-3 items-center justify-between">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-3 text-sm">
+                      <button
+                        type="button"
+                        onClick={() => toggleArticleLike(selectedArticle)}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-50 text-rose-600 hover:scale-105 transition-transform"
+                      >
+                        {likedArticles[getArticleKey(selectedArticle)] ? <FaHeart className="animate-pulse" /> : <FaRegHeart />}
+                        <span>{getStats(selectedArticle).likes} لائکس</span>
+                      </button>
+                      <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700"><FaEye /> {getStats(selectedArticle).views} ویوز</span>
+                      <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 text-amber-700"><FaCommentDots /> {getStats(selectedArticle).comments} کمنٹس</span>
+                    </div>
                     <div className="flex flex-wrap items-center gap-2">
                       <button type="button" onClick={() => shareArticle(selectedArticle, 'whatsapp')} className="p-2.5 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
                       <button type="button" onClick={() => shareArticle(selectedArticle, 'facebook')} className="p-2.5 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>

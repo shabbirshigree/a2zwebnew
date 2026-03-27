@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
-  FaShareAlt, FaWhatsapp, FaFacebookF,
+  FaHeart, FaRegHeart, FaEye, FaShareAlt, FaWhatsapp, FaFacebookF,
   FaTelegramPlane, FaEnvelope
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,6 +11,8 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function GlobalEngagementBox() {
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
+  const [likes, setLikes] = useState({});
+  const [views, setViews] = useState({});
 
   const pageKey = useMemo(() => pathname || "/", [pathname]);
 
@@ -19,7 +21,34 @@ export default function GlobalEngagementBox() {
 
   useEffect(() => {
     setIsMounted(true);
+    try {
+      const storedLikes = JSON.parse(localStorage.getItem("globalPageLikes") || "{}");
+      const storedViews = JSON.parse(localStorage.getItem("globalPageViews") || "{}");
+      setLikes(storedLikes);
+
+      const seenKey = `seen-${pageKey}`;
+      const nextViews = { ...storedViews };
+      if (!sessionStorage.getItem(seenKey)) {
+        nextViews[pageKey] = (nextViews[pageKey] || 0) + 1;
+        sessionStorage.setItem(seenKey, "1");
+        localStorage.setItem("globalPageViews", JSON.stringify(nextViews));
+      }
+      setViews(nextViews);
+    } catch {
+      setLikes({});
+      setViews({});
+    }
   }, [pageKey]);
+
+  const baseViews = 80 + (pageKey.length * 9);
+  const totalViews = baseViews + (views[pageKey] || 0);
+  const totalLikes = 10 + (pageKey.length % 7) + (likes[pageKey] ? 1 : 0);
+
+  const toggleLike = () => {
+    const updated = { ...likes, [pageKey]: !likes[pageKey] };
+    setLikes(updated);
+    localStorage.setItem("globalPageLikes", JSON.stringify(updated));
+  };
 
   const shareCurrentPage = async (platform) => {
     const url = typeof window !== "undefined" ? window.location.href : "";
@@ -57,6 +86,16 @@ export default function GlobalEngagementBox() {
       <div className="max-w-7xl mx-auto px-3 md:px-6 py-3">
         <div className="flex items-center gap-2 md:gap-3 overflow-x-auto whitespace-nowrap">
           <p className="urdu-text text-[#0b314d] text-sm md:text-base font-bold ml-1">شیئرنگ آپشنز:</p>
+          <button
+            type="button"
+            onClick={toggleLike}
+            className="px-3 py-1.5 inline-flex items-center justify-center gap-1.5 rounded-full bg-rose-50 text-rose-600 hover:scale-[1.02] transition-transform text-xs"
+          >
+            {likes[pageKey] ? <FaHeart className="animate-pulse" /> : <FaRegHeart />} {totalLikes}
+          </button>
+          <span className="px-3 py-1.5 inline-flex items-center justify-center gap-1.5 rounded-full bg-blue-50 text-blue-700 text-xs">
+            <FaEye /> {totalViews}
+          </span>
           <button type="button" onClick={() => shareCurrentPage("whatsapp")} className="p-2 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
           <button type="button" onClick={() => shareCurrentPage("facebook")} className="p-2 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>
           <button type="button" onClick={() => shareCurrentPage("telegram")} className="p-2 rounded-full bg-sky-100 text-sky-700 hover:scale-110 transition-transform"><FaTelegramPlane /></button>
