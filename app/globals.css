@@ -25,6 +25,49 @@ body {
 }
 
 /* ==================================================================== */
+/* 👇 پوری سائٹ کے لیے بہتر Urdu Typography (PC + Mobile)         👇  */
+/* ==================================================================== */
+body {
+  /* next/font سے variable آ رہا ہے، fallback بھی دے رہے ہیں */
+  font-family: var(--font-nastaliq), 'Jameel Noori Nastaleeq', serif;
+  direction: rtl;
+  text-align: right;
+}
+
+main {
+  direction: rtl;
+  text-align: right;
+}
+
+main h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.25;
+}
+
+main h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
+  line-height: 1.28;
+}
+
+main h3 {
+  font-size: clamp(1.35rem, 2.6vw, 2.05rem);
+  line-height: 1.32;
+}
+
+main h4 {
+  font-size: clamp(1.15rem, 2.1vw, 1.7rem);
+  line-height: 1.35;
+}
+
+/* پیراگراف/لسٹ متن کو خوبصورت، موبائل فرینڈلی اور justified رکھیں */
+main p,
+main li {
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  line-height: 2.05;
+  text-align: justify;
+}
+
+/* ==================================================================== */
 
 /* --- 1. ٹیکسٹ ٹکر (Text Ticker) --- */
 @keyframes scroll-ticker {
