@@ -52,9 +52,9 @@ export default function ServicesPage() {
          <div className="absolute inset-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#0b314d] to-transparent"></div>
          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-[#D4AF37] urdu-text mb-6 drop-shadow-2xl">دینی، علمی و ثقافتی خدمات</h1>
+            <h1 className="text-3xl md:text-6xl font-extrabold text-[#D4AF37] urdu-text mb-6 drop-shadow-2xl">دینی، علمی و ثقافتی خدمات</h1>
             <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-8"></div>
-            <p className="text-[#fff7cc] text-xl md:text-3xl urdu-text font-light italic opacity-90">"مسائل اور وسائل کو نہیں، ہم نے صرف رسائل کو دیکھا ہے"</p>
+            <p className="text-base md:text-2xl urdu-text font-light italic opacity-90">"مسائل اور وسائل کو نہیں، ہم نے صرف رسائل کو دیکھا ہے"</p>
          </div>
       </section>
 
@@ -70,7 +70,7 @@ export default function ServicesPage() {
         <div className="mt-24 md:mt-36 bg-white rounded-[3.5rem] p-10 md:p-20 shadow-2xl border border-gray-100 text-center relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37] rounded-full blur-[150px] opacity-10 group-hover:opacity-20 transition-all duration-700"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-[#0b314d] urdu-text leading-tight">انسانیت کی خدمت کے اس سفر میں <br/> ہمارا ساتھ دیں</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-8 text-[#0b314d] urdu-text leading-tight">انسانیت کی خدمت کے اس سفر میں <br/> ہمارا ساتھ دیں</h2>
             <p className="text-gray-500 mb-12 max-w-3xl mx-auto text-lg md:text-2xl urdu-text leading-relaxed font-light">
               آپ کی تجاویز، دعائیں اور شمولیت ہمارے مشن کو مزید تقویت بخشیں گی۔ آئیے مل کر اس نور کو عام کریں۔
             </p>
@@ -78,9 +78,9 @@ export default function ServicesPage() {
             <a 
               href="https://wa.me/923334491715" 
               target="_blank"
-              className="group bg-[#25D366] text-white px-12 md:px-24 py-5 rounded-full font-bold text-xl md:text-2xl transition-all inline-flex items-center justify-center gap-4 shadow-[0_20px_40px_rgba(37,211,102,0.3)] hover:shadow-[0_25px_50px_rgba(37,211,102,0.5)] hover:-translate-y-2 urdu-text"
+              className="group bg-[#25D366] text-white px-8 md:px-16 py-3.5 rounded-full font-bold text-base md:text-xl transition-all inline-flex items-center justify-center gap-3 shadow-[0_12px_24px_rgba(37,211,102,0.25)] hover:shadow-[0_16px_32px_rgba(37,211,102,0.35)] hover:-translate-y-1 urdu-text"
             >
-              <FaWhatsapp size={35} className="group-hover:rotate-12 transition-transform" /> واٹس ایپ پر رابطہ کریں
+              <FaWhatsapp size={24} className="group-hover:rotate-12 transition-transform" /> واٹس ایپ پر رابطہ کریں
             </a>
           </div>
         </div>

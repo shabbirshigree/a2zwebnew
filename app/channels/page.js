@@ -89,9 +89,9 @@ export default function ChannelsPage() {
       <section className="container mx-auto px-4 py-10">
         <div className="max-w-4xl mx-auto bg-[#0f4c75] rounded-3xl p-8 text-white border-2 border-[#D4AF37] text-center relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="text-2xl md:text-4xl font-bold mb-3 urdu-text text-[#D4AF37]">ہمیں فالو کریں</h2>
-            <p className="text-sm md:text-xl mb-8 opacity-90 urdu-text">سوشل میڈیا پر ہمارے ساتھ جڑیں</p>
-            <div className="flex flex-wrap justify-center gap-6 items-center">
+            <h2 className="text-xl md:text-4xl font-bold mb-3 urdu-text text-[#D4AF37] text-center">ہمیں فالو کریں</h2>
+            <p className="text-sm md:text-xl mb-8 opacity-90 urdu-text text-center">سوشل میڈیا پر ہمارے ساتھ جڑیں</p>
+            <div className="flex flex-nowrap justify-center gap-4 md:gap-6 items-center overflow-x-auto scrollbar-hide">
               <a href="https://wa.me/923334491715" target="_blank" className="hover:scale-110 transition"><FaWhatsapp size={30} /></a>
               <a href="https://www.youtube.com/@noorproduction" target="_blank" className="hover:scale-110 transition"><FaYoutube size={30} /></a>
               <a href="https://www.facebook.com/shigri51214/" target="_blank" className="hover:scale-110 transition"><FaFacebook size={30} /></a>

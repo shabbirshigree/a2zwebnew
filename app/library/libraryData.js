@@ -178,8 +178,8 @@ export const BOOKS_DATA = [
   },
   {
     id: 'Quran',
-    title: 'مورالقرآن ویژول پراجیکٹ',
-    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
+    title: 'نورالقرآن ویژول پراجیکٹ',
+        image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
     badge: 'نورالقرآن',
     orientation: 'portrait',
     descUrdu: `نورالقرآن پراجیکٹ کی تفصیل`,

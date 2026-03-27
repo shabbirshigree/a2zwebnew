@@ -50,7 +50,7 @@ export default function ModernGallery() {
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0b314d]/50"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-2xl">تصویری دستاویزی سفر</h1>
+          <h1 className="text-3xl md:text-6xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-2xl">تصویری دستاویزی سفر</h1>
           <p className="text-white/80 text-xl md:text-2xl urdu-text font-light tracking-widest">یادوں کے جھروکوں سے 45 سالہ خدمات کی ایک جھلک</p>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-8 rounded-full"></div>
         </div>
@@ -72,7 +72,7 @@ export default function ModernGallery() {
 
       {/* 🏷️ فلٹرز (Categorization) */}
       <section className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-3 overflow-x-auto scrollbar-hide">
           {CATEGORIES.map(cat => (
             <button
               key={cat.value}
@@ -134,11 +134,11 @@ export default function ModernGallery() {
           </button>
 
           {/* Navigation Arrows */}
-          <button onClick={goPrev} className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-4 z-50">
-            <FaChevronLeft size={50} />
+          <button onClick={goPrev} className="absolute left-2 md:left-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-2 md:p-4 z-50">
+            <FaChevronLeft size={34} />
           </button>
-          <button onClick={goNext} className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-4 z-50">
-            <FaChevronRight size={50} />
+          <button onClick={goNext} className="absolute right-2 md:right-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-2 md:p-4 z-50">
+            <FaChevronRight size={34} />
           </button>
 
           {/* Image/Video Display */}

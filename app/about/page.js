@@ -125,10 +125,10 @@ export default function UltimateAboutPage() {
             const linkHref = item.link || "#";
 
             const CardContent = (
-            <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full">
+              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full">
                 <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
-                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[13px] md:text-lg mb-1 md:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis w-full">{title}</h3>
-                <p className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans">{item.desc}</p>
+                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[11px] md:text-base mb-1 md:mb-2 leading-tight text-center w-full break-words">{title}</h3>
+                <p className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans text-center">{item.desc}</p>
               </div>
             );
 
@@ -160,7 +160,7 @@ export default function UltimateAboutPage() {
             if (title.includes("نورالقرآن") || title.includes("نور القرآن")) {
               return <Link href="/project" key={i} className="w-full h-full block">{CardContent}</Link>;
             }
-            
+
             // ⚪ باقی سب کے لیے (جیسے آپارات کا پرانا اوریجنل لنک)
             return <Link href={linkHref} key={i} className="w-full h-full block">{CardContent}</Link>;
           })}
@@ -178,10 +178,10 @@ export default function UltimateAboutPage() {
 
               return (
                 <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer">
+                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-4 md:p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center">
                     <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{role.icon}</div>
-                    <h3 className="text-white group-hover:text-[#0a1f30] font-bold text-lg mb-2 font-sans">{role.title}</h3>
-                    <p className="text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text">{role.desc}</p>
+                    <h3 className="text-white group-hover:text-[#0a1f30] font-bold text-base md:text-lg mb-2 font-sans text-center">{role.title}</h3>
+                    <p className="hidden md:block text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text text-center">{role.desc}</p>
                   </div>
                 </Link>
               );
@@ -292,16 +292,16 @@ export default function UltimateAboutPage() {
             </div>
 
             {/* باب ہشتم - گہرا نیلا (نور پروڈکشن) */}
-            <div className="bg-[#0b314d] text-white p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
+            <div className="bg-blue-50/70 text-[#0b314d] p-4 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden border-r-8 border-[#0b314d]">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4AF37] rounded-full blur-[80px] opacity-30"></div>
-              <h3 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 relative z-10"><FaTv className="text-white" /> بابِ ہشتم: نور پروڈکشن اور اسلامی میڈیا کا انقلاب</h3>
+              <h3 className="text-2xl md:text-4xl font-bold text-[#0b314d] mb-4 flex items-center gap-3 relative z-10"><FaTv className="text-[#0b314d]" /> بابِ ہشتم: نور پروڈکشن اور اسلامی میڈیا کا انقلاب</h3>
               <p className="relative z-10"><strong>"نور پروڈکشن" اور زندگی کا رخ بدل دینے والا لمحہ:</strong> میڈیا کی چکا چوند میں میری سمت کا تعین میرے شفیق استاد ماسٹر بشیر صاحب (سکردو) کی ایک نصیحت نے کیا۔ جب میری دکان پر گانوں کی کیسٹس موجود تھیں تو انہوں نے بڑے پیار سے سمجھایا: "بیٹے! اگر تم ان گانوں کی جگہ تلاوت اور اسلامی کیسٹس رکھتے تو کیا ہی اچھا ہوتا۔" یہ جملہ میرے دل کی گہرائیوں میں اتر گیا اور یہیں سے "اسلامک میڈیا" کا سفر شروع ہوا۔ میں نے "نور پروڈکشن پاکستان" کی بنیاد رکھی۔ میرا مقصد میڈیا کو ہتھیار بنا کر دین کی خدمت کرنا تھا۔</p>
               <ul className="list-disc list-inside mt-4 space-y-2 text-xl relative z-10 mr-6">
                 <li><strong>ضریحِ نور (2002):</strong> میری پہلی ڈاکومنٹری جو امام رضاؑ کی ضریح کی تعمیر پر تھی۔</li>
                 <li><strong>علامہ اقبالؒ سیریز:</strong> ایران کی جانب سے علامہ اقبالؒ پر بنائی گئی بین الاقوامی فلم سیریز میں پاکستان میں پروڈکشن مینیجر کی حیثیت سے کام کیا۔ یہ 11 اقساط پر مبنی شاہکار ہے۔</li>
                 <li><strong>یوٹیوب چینل:</strong> 2008 میں قائم کیا، جس پر آج 2000 سے زائد ویڈیوز اور 45,000 کا خاندان (Subscribers) موجود ہے۔</li>
               </ul>
-              <p className="mt-4 font-bold text-[#D4AF37] relative z-10">ہمارے دیگر اہم چینلز اور پلیٹ فارمز:</p>
+              <p className="mt-4 font-bold text-[#0b314d] relative z-10">ہمارے دیگر اہم چینلز اور پلیٹ فارمز:</p>
               <ul className="list-disc list-inside space-y-2 text-xl relative z-10 mr-6">
                 <li><strong>نور القرآن:</strong> قرآنی تعلیمات کے لئے بنایا گیا ہے۔</li>
                 <li><strong>طفلانِ نور:</strong> بچوں کے لئے اسلامی، اخلاقی، تربیتی اور تفریحی ویڈیوز۔</li>
@@ -312,8 +312,8 @@ export default function UltimateAboutPage() {
             </div>
 
             {/* باب نہم - گولڈن (نور القرآن) */}
-            <div className="bg-gradient-to-l from-[#D4AF37] to-[#b89628] text-[#0b314d] p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden border-4 border-white">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4 flex items-center gap-3"><FaQuran /> بابِ نہم: خادمِ ثقلین کا خطاب اور "نور القرآن پراجیکٹ"</h3>
+            <div className="bg-yellow-50/60 text-[#0b314d] p-4 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden border-r-8 border-[#D4AF37]">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 flex items-center gap-3"><FaQuran /> بابِ نہم: خادمِ ثقلین کا خطاب اور "نور القرآن پراجیکٹ"</h3>
               <p className="font-bold text-2xl mb-2">نور القرآن پراجیکٹ (The Visual Quran):</p>
               <p>یہ میری زندگی کا سب سے بڑا سرمایہ، میری محنت کا حاصل اور میری آخرت کا توشہ ہے۔ "نور القرآن" دنیا کا پہلا منفرد ویژول قرآن (Visual Quran) پراجیکٹ ہے۔ اس پراجیکٹ کی خاص بات یہ ہے کہ اس میں قرآنِ مجید کو روایتی انداز سے ہٹ کر جدید بصری (Visual) ٹیکنالوجی، اینیمیشن اور منظر کشی کے ذریعے پیش کیا جا رہا ہے تاکہ دیکھنے والا آیت کے مفہوم کو آنکھوں سے دیکھے اور دل میں اتارے۔ اس میں ایک عام شخص تلاوت کو اردو میں سنتے ہوئے اس کا منظر بھی اپنے موبائل یا کمپیوٹر سکرین پر ساتھ ساتھ دیکھ سکے گا۔</p>
               <p className="mt-4 italic font-bold">"قرآن کو چوم کر اونچے طاق میں رکھ دینا اس کا احترام نہیں، بلکہ اسے سمجھ کر، اس پر عمل کرنا ہی اس کا حقیقی احترام ہے۔"</p>
@@ -395,7 +395,7 @@ export default function UltimateAboutPage() {
               else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
               else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
               else if (book.title.includes("سفرنامہ")) manualLink = "/library#book-safarnama";
-              else if (book.title.includes("سیاحت")) manualLink = "/library#book-sayahat-parts"; 
+              else if (book.title.includes("سیاحت")) manualLink = "/library#book-sayahat-parts";
               else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
               else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
               else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
@@ -403,7 +403,7 @@ export default function UltimateAboutPage() {
               else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
               else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
               else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
-              else if (book.title.includes("نورالقرآن") || book.title.includes("قرآن")) manualLink = "/library#Quran"; 
+              else if (book.title.includes("نورالقرآن") || book.title.includes("قرآن")) manualLink = "/library#Quran";
 
               const finalHref = book.link || manualLink;
 
@@ -430,7 +430,7 @@ export default function UltimateAboutPage() {
           </div>
         </div>
       </section>
-      
+
       <Footer />
 
       {/* 🌟 پاک ایران کلچر اینڈ ٹریڈ کا پاپ اپ (اب یہ بالکل محفوظ اور باہر ہے) */}

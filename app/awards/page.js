@@ -121,7 +121,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
       {/* ہیڈر سیکشن */}
       <section className="pt-6 pb-4 text-center">
          <div className="container mx-auto px-4">
-            <h1 className="text-2xl md:text-3xl font-bold text-[#D4AF37] urdu-text mb-2">اعزازات اور حاصلِ زیست</h1>
+          <h1 className="text-xl md:text-3xl font-bold text-[#D4AF37] urdu-text mb-2">اعزازات اور حاصلِ زیست</h1>
             <p className="text-gray-400 max-w-3xl mx-auto urdu-text text-base md:text-lg italic leading-relaxed">
                "دنیاوی ایوارڈز اپنی جگہ ایک مقام رکھتے ہیں، لیکن میری روح کی اصل تسکین ان عظیم روحانی اعزازات میں پوشیدہ ہے جو مجھ ناچیز کو عطا ہوئے۔"
             </p>
@@ -140,7 +140,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
             <div className="flex-1 text-center"><span className="block text-xs md:text-xl font-extrabold font-amiri leading-none whitespace-nowrap">خادمِ امام رضاؑ</span></div>
           </Link>
 
-          <h2 className="text-sm md:text-2xl font-bold text-[#D4AF37] urdu-text whitespace-nowrap px-1">✨ عظیم روحانی اعزازات اور مناصب</h2>
+          <h2 className="text-xs md:text-2xl font-bold text-[#D4AF37] urdu-text whitespace-nowrap px-1">✨ عظیم روحانی اعزازات اور مناصب</h2>
 
           {/* بٹن 2: خادم غازی عباسؑ */}
           <Link href="/ghazi-abbas" className="animate-shine group relative inline-flex items-center flex-row-reverse pl-1 pr-3 md:pr-4 gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-1.5 rounded-full shadow-lg hover:scale-105 transition-all shrink-0 w-[145px] md:w-[260px]">
@@ -178,7 +178,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
       {/* صحافتی و میڈیا ایوارڈز */}
       <section className="bg-[#080808] py-4">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#D4AF37] urdu-text mb-6 inline-block border-b border-gray-800 pb-2">🏅 نمایاں صحافتی و فرہنگی ایوارڈز</h2>
+          <h2 className="text-xl md:text-3xl font-bold text-[#D4AF37] urdu-text mb-6 inline-block border-b border-gray-800 pb-2">🏅 نمایاں صحافتی و فرہنگی ایوارڈز</h2>
           <div className="max-w-6xl mx-auto space-y-4" dir="rtl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 award-card border border-[#222]">
               <div className="urdu-text text-right">
@@ -215,7 +215,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
 
       {/* ڈیجیٹل دور */}
       <section className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold text-[#D4AF37] urdu-text text-center mb-6 border-b border-gray-800 pb-2">🌐 ڈیجیٹل دور اور عالمی (AI) خراجِ تحسین</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-[#D4AF37] urdu-text text-center mb-6 border-b border-gray-800 pb-2">🌐 ڈیجیٹل دور اور عالمی (AI) خراجِ تحسین</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="rtl">
            <div className="glow-box shadow-2xl urdu-text text-center">
               <h4 className="text-[#D4AF37] font-bold text-xl mb-2 flex items-center justify-center gap-2"><FaGlobe /> گوگل جیمینائی سند</h4>
@@ -235,7 +235,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
 
       {/* ایوارڈز گیلری */}
       <section className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl md:text-4xl font-bold text-center text-white urdu-text mb-10 border-b border-gray-800 pb-4">ایوارڈز گیلری</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-center text-white urdu-text mb-10 border-b border-gray-800 pb-4">ایوارڈز گیلری</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {galleryImages.map((img, index) => (
             <div key={index} className="gallery-item relative group cursor-pointer bg-[#111]" onClick={() => setSelectedImageIndex(index)}>

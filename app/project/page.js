@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaPlay, FaTimes, FaChevronDown, FaMobileAlt, FaInfoCircle, FaCheckCircle, FaBookOpen, FaImages, FaFilm, FaHeadphones, FaShareAlt } from "react-icons/fa";
+import { FaPlay, FaTimes, FaChevronDown, FaMobileAlt, FaInfoCircle, FaCheckCircle, FaBookOpen, FaImages, FaFilm, FaHeadphones, FaShareAlt, FaHeart, FaRegHeart, FaEye, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
@@ -13,6 +14,8 @@ export default function ProjectPage() {
   const [showFullText, setShowFullText] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [langTab, setLangTab] = useState('ur');
+  const [popupLikes, setPopupLikes] = useState({});
+  const [popupViews, setPopupViews] = useState({});
 
   const [counts, setCounts] = useState({
     arabic: 8,
@@ -47,9 +50,48 @@ export default function ProjectPage() {
 
   const handlePlayLocalVideo = (url) => {
     if (url) {
+      const key = `local-${url}`;
+      const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
+      setPopupViews(nextViews);
       setLocalVideoUrl(url);
       setIsLocalVideoOpen(true);
     }
+  };
+
+  const handleOpenYoutubeVideo = (video) => {
+    const key = `yt-${video.id}`;
+    const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
+    setPopupViews(nextViews);
+    setSelectedVideo(video);
+  };
+
+  const togglePopupLike = (key) => {
+    const nextLikes = { ...popupLikes, [key]: !popupLikes[key] };
+    setPopupLikes(nextLikes);
+  };
+
+  const shareFromPopup = (key) => {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const text = `نورالقرآن پراجیکٹ کی یہ ویڈیو/پلیئر شیئر کریں (${key})`;
+    const encodedUrl = encodeURIComponent(url);
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
+  };
+
+  const shareToPlatform = (platform, key) => {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const text = `نورالقرآن پراجیکٹ کی یہ ویڈیو/پلیئر شیئر کریں (${key})`;
+    const encodedUrl = encodeURIComponent(url);
+    const encodedText = encodeURIComponent(text);
+    const links = {
+      whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
+      email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor ul Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
+      x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
+    };
+    const target = links[platform];
+    if (target) window.open(target, "_blank", "noopener,noreferrer,width=700,height=700");
   };
 
   const handleShare = () => {
@@ -70,7 +112,7 @@ export default function ProjectPage() {
   };
 
   const VideoCard = ({ video }) => (
-    <div onClick={() => setSelectedVideo(video)} className="bg-[#0a0a0a] rounded-lg overflow-hidden shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 cursor-pointer group border border-[#D4AF37]/50 flex flex-col h-full">
+    <div onClick={() => handleOpenYoutubeVideo(video)} className="bg-[#0a0a0a] rounded-lg overflow-hidden shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 cursor-pointer group border border-[#D4AF37]/50 flex flex-col h-full">
       <div className="relative aspect-video bg-black overflow-hidden">
         <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors duration-300">
@@ -301,6 +343,22 @@ export default function ProjectPage() {
           <div className="relative w-full max-w-4xl" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 bg-red-600 text-white px-3 py-1.5 rounded-full flex items-center gap-2" onClick={() => setSelectedVideo(null)}><FaTimes /> بند کریں</button>
             <iframe src={`https://www.youtube.com/embed/${selectedVideo.id}?autoplay=1`} allowFullScreen className="w-full aspect-video rounded-lg shadow-2xl border border-[#D4AF37]"></iframe>
+            <div className="mt-4 bg-[#0d0d0d] border border-[#D4AF37]/40 rounded-xl p-3 flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={() => togglePopupLike(`yt-${selectedVideo.id}`)} className="px-3 py-1.5 rounded-full bg-rose-100 text-rose-700 text-xs flex items-center gap-1.5">
+                  {popupLikes[`yt-${selectedVideo.id}`] ? <FaHeart /> : <FaRegHeart />} {popupLikes[`yt-${selectedVideo.id}`] ? 1 : 0}
+                </button>
+                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs flex items-center gap-1.5"><FaEye /> {popupViews[`yt-${selectedVideo.id}`] || 1}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <button type="button" onClick={() => shareFromPopup(`yt-${selectedVideo.id}`)} className="px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white text-xs flex items-center gap-1"><FaShareAlt /> شیئر</button>
+                <button onClick={() => shareToPlatform("whatsapp", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-green-100 text-green-700"><FaWhatsapp /></button>
+                <button onClick={() => shareToPlatform("facebook", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-blue-100 text-blue-700"><FaFacebookF /></button>
+                <button onClick={() => shareToPlatform("telegram", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-sky-100 text-sky-700"><FaTelegramPlane /></button>
+                <button onClick={() => shareToPlatform("email", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-gray-100 text-gray-700"><FaEnvelope /></button>
+                <button onClick={() => shareToPlatform("x", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-slate-100 text-slate-700"><FaXTwitter /></button>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -311,6 +369,22 @@ export default function ProjectPage() {
           <div className="w-full max-w-4xl relative" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full" onClick={() => setIsLocalVideoOpen(false)}><FaTimes /> بند کریں</button>
             <video src={localVideoUrl} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37] bg-black" />
+            <div className="mt-4 bg-[#0d0d0d] border border-[#D4AF37]/40 rounded-xl p-3 flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={() => togglePopupLike(`local-${localVideoUrl}`)} className="px-3 py-1.5 rounded-full bg-rose-100 text-rose-700 text-xs flex items-center gap-1.5">
+                  {popupLikes[`local-${localVideoUrl}`] ? <FaHeart /> : <FaRegHeart />} {popupLikes[`local-${localVideoUrl}`] ? 1 : 0}
+                </button>
+                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs flex items-center gap-1.5"><FaEye /> {popupViews[`local-${localVideoUrl}`] || 1}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <button type="button" onClick={() => shareFromPopup(`local-${localVideoUrl}`)} className="px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white text-xs flex items-center gap-1"><FaShareAlt /> شیئر</button>
+                <button onClick={() => shareToPlatform("whatsapp", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-green-100 text-green-700"><FaWhatsapp /></button>
+                <button onClick={() => shareToPlatform("facebook", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-blue-100 text-blue-700"><FaFacebookF /></button>
+                <button onClick={() => shareToPlatform("telegram", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-sky-100 text-sky-700"><FaTelegramPlane /></button>
+                <button onClick={() => shareToPlatform("email", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-gray-100 text-gray-700"><FaEnvelope /></button>
+                <button onClick={() => shareToPlatform("x", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-slate-100 text-slate-700"><FaXTwitter /></button>
+              </div>
+            </div>
           </div>
         </div>
       )}

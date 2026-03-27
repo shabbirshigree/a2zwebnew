@@ -50,7 +50,7 @@ export default function DiplomaticServices() {
       <section className="bg-gradient-to-b from-[#0b314d] to-[#0f4c75] text-white py-12 md:py-16 text-center relative border-b-4 border-[#D4AF37] shadow-xl">
          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/arabesque.png')" }}></div>
          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 urdu-text tracking-wide leading-tight">
+            <h1 className="text-2xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 urdu-text tracking-wide leading-tight">
               {pageIntro.title}
             </h1>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full mb-6"></div>
@@ -70,7 +70,7 @@ export default function DiplomaticServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8" dir="rtl">
           {diplomaticServicesList.map((service, index) => (
             <div key={index} className="bg-white p-8 md:p-10 rounded-xl shadow-md border border-[#D4AF37]/30 hover:border-[#D4AF37] hover:shadow-xl transition-all duration-300">
-              <h3 className="text-2xl font-bold text-[#D4AF37] mb-4 urdu-text flex items-center gap-2">
+              <h3 className="text-lg md:text-2xl font-bold text-[#D4AF37] mb-4 urdu-text text-center leading-tight">
                 <span className="w-3 h-3 rounded-full bg-[#0b314d]"></span> {service.title}
               </h3>
               <p className="text-gray-800 text-lg md:text-xl leading-relaxed urdu-text text-justify">{service.text}</p>
@@ -88,8 +88,8 @@ export default function DiplomaticServices() {
         <div className="container mx-auto px-4 relative z-10" dir="rtl">
           <div className="text-center mb-12">
              <FaUsers className="text-6xl text-[#D4AF37] mx-auto mb-4" />
-             <h2 className="text-3xl md:text-5xl font-bold text-[#D4AF37] mb-4 urdu-text drop-shadow-md">انجمنِ دوستی پاکستان و ایران</h2>
-             <p className="text-xl md:text-2xl text-[#fff7cc] urdu-text">بانی و صدر کا تاریخی اعزاز اور پاک ایران ویب سائٹ</p>
+             <h2 className="text-2xl md:text-5xl font-bold text-[#D4AF37] mb-4 urdu-text drop-shadow-md">انجمنِ دوستی پاکستان و ایران</h2>
+             <p className="text-base md:text-2xl text-[#fff7cc] urdu-text">بانی و صدر کا تاریخی اعزاز اور پاک ایران ویب سائٹ</p>
           </div>
           
           <div className="bg-white/10 p-8 md:p-12 rounded-2xl border border-[#D4AF37]/50 backdrop-blur-sm mb-10">
@@ -176,7 +176,7 @@ export default function DiplomaticServices() {
       {/* 🌍 سیکشن 4: سیاحت اور ثقافتی تبادلہ */}
       <section className="bg-gradient-to-br from-gray-50 to-gray-200 py-16 md:py-24">
         <div className="container mx-auto px-4" dir="rtl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0f4c75] mb-10 text-center urdu-text drop-shadow-sm">🌍 سیاحت اور ثقافتی تبادلہ: پاک ایران تعلقات کا نیا باب</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#0f4c75] mb-10 text-center urdu-text drop-shadow-sm">🌍 سیاحت اور ثقافتی تبادلہ: پاک ایران تعلقات کا نیا باب</h2>
           
           <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg border-l-8 border-[#D4AF37] mb-14">
             <p className="text-lg md:text-xl leading-relaxed text-gray-800 urdu-text text-justify mb-6">
@@ -190,7 +190,7 @@ export default function DiplomaticServices() {
             </p>
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-6 text-center bg-[#0b314d] inline-block px-10 py-3 rounded-full mx-auto shadow-md urdu-text"> ایران: پہلا زیارتی، سیاحتی و معلوماتی سفر</h3>
+          <h3 className="text-xl md:text-3xl font-bold text-[#D4AF37] mb-6 text-center bg-[#0b314d] inline-block px-6 md:px-10 py-3 rounded-full mx-auto shadow-md urdu-text"> ایران: پہلا زیارتی، سیاحتی و معلوماتی سفر</h3>
           <p className="text-center text-gray-700 mb-10 text-xl font-bold urdu-text">تحریر: شبیر احمد شگری (صدر، انجمن دوستی پاکستان و ایران)</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-14">
@@ -285,7 +285,7 @@ export default function DiplomaticServices() {
 
       {/* 🎭 سیکشن 5: ثقافتی خدمات */}
       <section className="container mx-auto px-4 py-16 md:py-24 border-t-4 border-[#D4AF37]" dir="rtl">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] mb-12 text-center urdu-text drop-shadow-sm">🎭 ثقافتی خدمات اور بین الاقوامی فیسٹیولز</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#0b314d] mb-12 text-center urdu-text drop-shadow-sm">🎭 ثقافتی خدمات اور بین الاقوامی فیسٹیولز</h2>
         
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200 mb-16">
           <p className="text-xl md:text-2xl text-[#0f4c75] font-bold mb-8 urdu-text text-justify leading-relaxed">
@@ -336,7 +336,7 @@ export default function DiplomaticServices() {
       {/* 🎶 سیکشن 6: سُر سنگیت */}
       <section className="bg-white py-16 md:py-24 border-t border-gray-200">
         <div className="container mx-auto px-4" dir="rtl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] mb-10 text-center urdu-text drop-shadow-sm">🎶 پاک ایران 'سُر سنگیت' اور بین الاقوامی میوزک فیسٹیولز</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#0b314d] mb-10 text-center urdu-text drop-shadow-sm">🎶 پاک ایران 'سُر سنگیت' اور بین الاقوامی میوزک فیسٹیولز</h2>
           
           <div className="bg-gray-50 p-8 md:p-12 rounded-3xl shadow-lg border-r-8 border-[#D4AF37] mb-14">
             <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-8 text-justify urdu-text">
@@ -361,7 +361,7 @@ export default function DiplomaticServices() {
       {/* 🏛️ سیکشن 7: ایوانِ اقبال */}
       <section className="bg-gray-100 py-16 md:py-24 border-t-2 border-[#D4AF37]/50">
         <div className="container mx-auto px-4" dir="rtl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] mb-12 text-center urdu-text drop-shadow-sm">🏛️ ایوانِ اقبال کی تاریخی نمائش اور صحافتی کوریج</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#0b314d] mb-12 text-center urdu-text drop-shadow-sm">🏛️ ایوانِ اقبال کی تاریخی نمائش اور صحافتی کوریج</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-t-8 border-[#0b314d] hover:shadow-2xl transition-all">
@@ -385,7 +385,7 @@ export default function DiplomaticServices() {
       {/* 🛡️ سیکشن 8: گلوبل وومن میڈیا */}
       <section className="bg-white py-16 md:py-24 border-t border-gray-200">
         <div className="container mx-auto px-4" dir="rtl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0b314d] mb-10 text-center urdu-text drop-shadow-sm">🛡️ گلوبل وومن میڈیا: نظریاتی آئیڈیا سے عملی حقیقت تک</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#0b314d] mb-10 text-center urdu-text drop-shadow-sm">🛡️ گلوبل وومن میڈیا: نظریاتی آئیڈیا سے عملی حقیقت تک</h2>
           
           <div className="bg-pink-50 p-8 md:p-12 rounded-3xl shadow-lg border-r-8 border-pink-500 mb-14">
             <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-8 text-justify urdu-text font-bold">
@@ -412,16 +412,16 @@ export default function DiplomaticServices() {
       {/* 🌍 سیکشن 9: بین الاقوامی ٹورازم اور کتب میلے */}
       <section className="bg-[#0b314d] text-white py-16 md:py-24 border-t-8 border-[#D4AF37]">
         <div className="container mx-auto px-4" dir="rtl">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#D4AF37] mb-14 text-center urdu-text drop-shadow-lg">🌍 بین الاقوامی ٹورازم نمائش اور کتاب میلے</h2>
+          <h2 className="text-2xl md:text-5xl font-bold text-[#D4AF37] mb-14 text-center urdu-text drop-shadow-lg">🌍 بین الاقوامی ٹورازم نمائش اور کتاب میلے</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-8 text-center border-b border-white/20 pb-4 urdu-text">ٹورازم نمائش کے مناظر</h3>
-              <ImageGallery images={tourismExhibitionGallery} openLightbox={openLightbox} />
+              <h3 className="text-xl md:text-3xl font-bold text-[#D4AF37] mb-8 text-center border-b border-white/20 pb-4 urdu-text">ٹورازم نمائش کے مناظر</h3>
+              <ImageGallery images={tourismExhibitionGallery} openLightbox={openLightbox} large />
             </div>
             <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-8 text-center border-b border-white/20 pb-4 urdu-text">بین الاقوامی کتاب میلہ</h3>
-              <ImageGallery images={bookFairGallery} openLightbox={openLightbox} />
+              <h3 className="text-xl md:text-3xl font-bold text-[#D4AF37] mb-8 text-center border-b border-white/20 pb-4 urdu-text">بین الاقوامی کتاب میلہ</h3>
+              <ImageGallery images={bookFairGallery} openLightbox={openLightbox} large />
             </div>
           </div>
         </div>
@@ -496,15 +496,15 @@ function TravelCard({ title, desc, list }) {
   );
 }
 
-function ImageGallery({ images, openLightbox }) {
+function ImageGallery({ images, openLightbox, large = false }) {
   if (!images || images.length === 0) return null;
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className={large ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"}>
       {images.map((img, idx) => (
         <div 
           key={idx} 
           onClick={() => openLightbox(images, idx)}
-          className="relative group cursor-pointer rounded-2xl overflow-hidden border-4 border-[#D4AF37]/40 hover:border-[#D4AF37] shadow-md hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition-all duration-500 aspect-[4/3] bg-black"
+          className={`relative group cursor-pointer rounded-2xl overflow-hidden border-4 border-[#D4AF37]/40 hover:border-[#D4AF37] shadow-md hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition-all duration-500 bg-black ${large ? "aspect-[16/10]" : "aspect-[4/3]"}`}
         >
           <img src={img} alt={`Gallery Image ${idx + 1}`} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-125 transition-transform duration-700 ease-in-out" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">

@@ -34,8 +34,8 @@ export default function Contact() {
                 {method.icon}
               </div>
               
-              <h3 className="text-2xl font-bold text-[#0b314d] urdu-text mb-3">{method.title}</h3>
-              <p className="text-gray-600 font-sans text-sm md:text-base font-semibold tracking-wide">{method.info}</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0b314d] urdu-text mb-3 text-center">{method.title}</h3>
+              <p className="text-gray-600 font-sans text-sm md:text-base font-semibold tracking-wide text-center">{method.info}</p>
             </a>
           ))}
         </div>

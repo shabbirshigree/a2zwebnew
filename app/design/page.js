@@ -124,10 +124,10 @@ export default function DesignPortfolio() {
             <div className="flex justify-center mb-6 text-[#D4AF37] opacity-80 animate-bounce">
                 <FaPalette size={50} />
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] tracking-wide">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)] tracking-wide">
               آرٹسٹ اور ڈیزائنر
             </h1>
-            <h2 className="text-lg md:text-2xl text-white/80 urdu-text tracking-widest mb-6">
+            <h2 className="text-base md:text-xl text-white/80 urdu-text tracking-widest mb-6">
               فن، تخلیق اور ڈیزائننگ کا یادگار سفر
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-6 rounded-full shadow-[0_0_10px_rgba(212,175,55,0.8)]"></div>
@@ -172,7 +172,7 @@ export default function DesignPortfolio() {
       <section className="bg-gradient-to-b from-[#0a0a0a] to-[#111] py-16 md:py-24 border-y border-white/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#D4AF37] urdu-text mb-6">آرٹ، گرافک ڈیزائننگ اور 3D شاہکار</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] urdu-text mb-6">آرٹ، گرافک ڈیزائننگ اور 3D شاہکار</h2>
             <p className="text-gray-400 text-lg md:text-xl urdu-text max-w-4xl mx-auto font-light leading-relaxed">
               آج سے 25 سال قبل، جب ڈیجیٹل فلیکس (Flex) پرنٹنگ یا کمپیوٹر گرافکس کا کوئی خاص تصور نہیں تھا، میں نے اپنی تخلیقی صلاحیتوں کی بدولت ایسے شاہکار تخلیق کیے جو آج بھی یادگار ہیں۔
             </p>
@@ -303,7 +303,7 @@ export default function DesignPortfolio() {
       <section className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="text-center mb-12">
            <div className="inline-block bg-[#D4AF37] text-black px-6 py-2 rounded-full font-bold urdu-text text-sm mb-4">26 سال قبل کے شاہکار</div>
-           <h2 className="text-3xl md:text-5xl font-bold text-white urdu-text mb-4">تاریخی تصویری گیلری</h2>
+           <h2 className="text-2xl md:text-4xl font-bold text-white urdu-text mb-4">تاریخی تصویری گیلری</h2>
            <p className="text-gray-400 text-base md:text-lg urdu-text max-w-3xl mx-auto">
              جب کمپیوٹر اور اے آئی کا دور نہیں تھا، یہ ان دنوں کی دستی محنت اور تخلیق کی جیتی جاگتی تصاویر ہیں۔ یہ تمام شاہکار تھرموپور، آئل پینٹنگز اور مکینیکل آرٹ کا بہترین نمونہ ہیں۔
            </p>

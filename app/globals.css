@@ -40,33 +40,39 @@ main {
 }
 
 main h1 {
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.7rem, 3.2vw, 3.1rem);
   line-height: 1.25;
+  text-align: center;
 }
 
 main h2 {
-  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
+  font-size: clamp(1.45rem, 2.7vw, 2.45rem);
   line-height: 1.28;
+  text-align: center;
 }
 
 main h3 {
-  font-size: clamp(1.35rem, 2.6vw, 2.05rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.9rem);
   line-height: 1.32;
+  text-align: center;
 }
 
 main h4 {
-  font-size: clamp(1.15rem, 2.1vw, 1.7rem);
+  font-size: clamp(1.05rem, 1.9vw, 1.5rem);
   line-height: 1.35;
+  text-align: center;
 }
 
 main h5 {
-  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  font-size: clamp(0.98rem, 1.6vw, 1.35rem);
   line-height: 1.4;
+  text-align: center;
 }
 
 main h6 {
-  font-size: clamp(0.98rem, 1.6vw, 1.25rem);
+  font-size: clamp(0.93rem, 1.4vw, 1.2rem);
   line-height: 1.45;
+  text-align: center;
 }
 
 /* اقتباسات (Blockquote) کو بھی اسی نستعلیق vibe کے ساتھ رکھتے ہیں */
