@@ -3,8 +3,6 @@ import { Gulzar, Noto_Naskh_Arabic } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import FloatingButtons from './components/FloatingButtons';
-import PageTransition from './components/PageTransition';
-import ScrollRevealInit from './components/ScrollRevealInit';
 
 // 🔴 آپ کا نیا سیکیورٹی گارڈ یہاں امپورٹ ہو گیا ہے
 import SecurityLock from './components/SecurityLock';
@@ -55,10 +53,7 @@ export default function RootLayout({ children }) {
         {/* فلوٹنگ بٹنز اب باڈی کے اندر محفوظ طریقے سے کام کریں گے */}
         <FloatingButtons />
 
-        <ScrollRevealInit />
-        <main>
-          <PageTransition>{children}</PageTransition>
-        </main>
+        <main>{children}</main>
 
         {/* گوگل اینالیٹکس آئی ڈی */}
         <GoogleAnalytics gaId="G-YSSSMV99G6" />

@@ -91,11 +91,12 @@ export default function ModernGallery() {
 
       {/* 🖼️ گیلری گرڈ (Modern Masonry Style) */}
       <section className="container mx-auto px-4 py-8 relative z-10">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+        {/* inline-block + w-full: Safari/iOS میں multi-column کے ساتھ تصاویر کا غائب ہونا کم ہوتا ہے */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6">
           {filtered.map((item, i) => (
             <div
               key={i}
-              className="break-inside-avoid group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 cursor-pointer border border-gray-100"
+              className="break-inside-avoid mb-6 inline-block w-full max-w-full align-top group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 cursor-pointer border border-gray-100"
               onClick={() => openLightbox(i)}
             >
               <div className="relative overflow-hidden">

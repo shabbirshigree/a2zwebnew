@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useDeferredValue } from "react";
 import Link from "next/link";
 import { Navbar, HeroSlider } from "../components/Header";
 import Footer from "../components/Footer";
@@ -15,14 +15,8 @@ import { SERVICES_DATA } from "../services/servicesData";
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [debouncedQuery, setDebouncedQuery] = useState("");
-
-  useEffect(() => {
-    const t = setTimeout(() => setDebouncedQuery(searchQuery), 220);
-    return () => clearTimeout(t);
-  }, [searchQuery]);
-
-  const isSearchPending = searchQuery !== debouncedQuery;
+  const deferredQuery = useDeferredValue(searchQuery);
+  const isFilterStale = searchQuery !== deferredQuery;
 
   const masterSearchData = useMemo(() => {
     const projectItems = [
@@ -85,17 +79,17 @@ export default function SearchPage() {
   }, []);
 
   const filteredData = useMemo(() => {
-    const q = (debouncedQuery || "").toLowerCase().trim();
+    const q = (deferredQuery || "").toLowerCase().trim();
     if (!q) return masterSearchData;
     return masterSearchData.filter(
       (item) =>
         (item.title || "").toLowerCase().includes(q) ||
         (item.description || "").toLowerCase().includes(q)
     );
-  }, [masterSearchData, debouncedQuery]);
+  }, [masterSearchData, deferredQuery]);
 
-  const showLoading =
-    isSearchPending && (searchQuery || "").trim().length > 0;
+  const showCompactLoading =
+    isFilterStale && (searchQuery || "").trim().length > 0;
 
   return (
     <main className="min-h-screen bg-gray-50" dir="rtl">
@@ -106,48 +100,43 @@ export default function SearchPage() {
         <input
           type="text"
           placeholder="تلاش کریں..."
-          className="w-full p-4 border rounded-xl mb-6 text-right shadow-sm focus:ring-2 focus:ring-[#D4AF37] outline-none"
+          className="w-full p-4 border rounded-xl mb-4 text-right shadow-sm focus:ring-2 focus:ring-[#D4AF37] outline-none"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
 
-        {showLoading && (
+        {showCompactLoading && (
           <div
-            className="flex flex-col items-center justify-center py-12 gap-4 text-[#B8860B]"
+            className="flex flex-row-reverse items-center justify-center gap-3 py-2 mb-4 text-[#D4AF37]"
             aria-live="polite"
             aria-busy="true"
           >
             <div
-              className="h-14 w-14 rounded-full border-4 border-[#D4AF37]/25 border-t-[#D4AF37] animate-spin shadow-[0_0_20px_rgba(212,175,55,0.35)]"
+              className="h-9 w-9 shrink-0 rounded-full border-[3px] border-[#D4AF37]/25 border-t-[#D4AF37] animate-spin"
               role="status"
             />
-            <p className="text-lg md:text-xl font-extrabold text-[#D4AF37] drop-shadow-sm urdu-text">
-              انتظار فرمائیے
-            </p>
-            <p className="text-sm md:text-base font-semibold text-[#B8860B] tracking-wide">
-              شبیر احمد شگری
-            </p>
+            <div className="text-center leading-snug">
+              <p className="text-sm font-bold urdu-text">انتظار فرمائیے</p>
+              <p className="text-xs text-[#B8860B]">شبیر احمد شگری</p>
+            </div>
           </div>
         )}
 
-        <div className={`space-y-4 ${showLoading ? "opacity-40 pointer-events-none" : ""}`}>
-          {!showLoading &&
-            filteredData.map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                className="block bg-white p-4 rounded-lg shadow-sm border-r-4 border-[#0f4c75] hover:shadow-md hover:border-[#D4AF37] transition"
-              >
-                <h3 className="font-bold text-lg">{item.title}</h3>
-                <p className="text-gray-500 text-sm">{item.description}</p>
-                <span className="text-xs bg-amber-50 text-[#0f4c75] px-2 py-1 rounded mt-2 inline-block">{item.category}</span>
-              </Link>
-            ))}
-          {!showLoading &&
-            filteredData.length === 0 &&
-            (debouncedQuery || "").trim().length > 0 && (
-              <p className="text-center text-gray-400 mt-10">کوئی نتیجہ نہیں ملا</p>
-            )}
+        <div className="space-y-4">
+          {filteredData.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="block bg-white p-4 rounded-lg shadow-sm border-r-4 border-[#0f4c75] hover:shadow-md hover:border-[#D4AF37] transition"
+            >
+              <h3 className="font-bold text-lg">{item.title}</h3>
+              <p className="text-gray-500 text-sm">{item.description}</p>
+              <span className="text-xs bg-amber-50 text-[#0f4c75] px-2 py-1 rounded mt-2 inline-block">{item.category}</span>
+            </Link>
+          ))}
+          {filteredData.length === 0 && (deferredQuery || "").trim().length > 0 && (
+            <p className="text-center text-gray-400 mt-10">کوئی نتیجہ نہیں ملا</p>
+          )}
         </div>
       </div>
       <Footer />
