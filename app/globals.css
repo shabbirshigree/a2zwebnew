@@ -59,6 +59,30 @@ main h4 {
   line-height: 1.35;
 }
 
+main h5 {
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  line-height: 1.4;
+}
+
+main h6 {
+  font-size: clamp(0.98rem, 1.6vw, 1.25rem);
+  line-height: 1.45;
+}
+
+/* اقتباسات (Blockquote) کو بھی اسی نستعلیق vibe کے ساتھ رکھتے ہیں */
+main blockquote {
+  font-family: var(--font-nastaliq), 'Jameel Noori Nastaleeq', serif;
+  font-size: clamp(1rem, 1.35vw, 1.28rem);
+  line-height: 2.05;
+  text-align: justify;
+  direction: rtl;
+  margin: 1.25rem 0;
+  padding: 1rem 1.1rem;
+  border-right: 4px solid #D4AF37;
+  background: rgba(212, 175, 55, 0.06);
+  border-radius: 12px;
+}
+
 /* پیراگراف/لسٹ متن کو خوبصورت، موبائل فرینڈلی اور justified رکھیں */
 main p,
 main li {
