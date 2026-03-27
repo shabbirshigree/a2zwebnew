@@ -128,13 +128,18 @@ export default function UltimateAboutPage() {
               <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full">
                 <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
                 <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[11px] md:text-base mb-1 md:mb-2 leading-tight text-center w-full break-words">{title}</h3>
-                <p className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans text-center">{item.desc}</p>
+                <p
+                  dir="ltr"
+                  className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-[10px] md:text-xs uppercase tracking-wide font-sans text-center w-full max-w-[95%] mx-auto leading-snug px-1"
+                >
+                  {item.desc}
+                </p>
               </div>
             );
 
             // 🟢 1. کلچر اینڈ ٹریڈ (پاپ اپ) - اب یہ بالکل پرفیکٹ کھلے گا
             if (title.includes("کلچر") || title.includes("ٹریڈ")) {
-              return <button key={i} onClick={() => setShowCulturePopup(true)} className="w-full h-full block text-left">{CardContent}</button>;
+              return <button key={i} onClick={() => setShowCulturePopup(true)} className="w-full h-full block text-center">{CardContent}</button>;
             }
             // 🔵 2. انجمن دوستی
             if (title.includes("انجمن")) {
@@ -178,10 +183,15 @@ export default function UltimateAboutPage() {
 
               return (
                 <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-4 md:p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center">
+                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-4 md:p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center flex flex-col items-center">
                     <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{role.icon}</div>
-                    <h3 className="text-white group-hover:text-[#0a1f30] font-bold text-base md:text-lg mb-2 font-sans text-center">{role.title}</h3>
-                    <p className="hidden md:block text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text text-center">{role.desc}</p>
+                    <h3
+                      dir="ltr"
+                      className="text-white group-hover:text-[#0a1f30] font-bold text-base md:text-lg mb-2 font-sans text-center w-full max-w-full px-1 leading-tight break-words"
+                    >
+                      {role.title}
+                    </h3>
+                    <p className="hidden md:block text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text text-center w-full">{role.desc}</p>
                   </div>
                 </Link>
               );

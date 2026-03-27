@@ -118,9 +118,9 @@ export default function Home() {
                       <div className="relative h-14 w-14 md:h-16 md:w-16 rounded-full border-2 border-white shadow-lg overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
                         <img src={btn.gif} alt={btn.title} className="w-full h-full object-cover rounded-full" />
                       </div>
-                      <div className="flex-1 text-center flex flex-col justify-center">
-                        <span className="block text-xl md:text-2xl font-extrabold font-amiri leading-none whitespace-nowrap drop-shadow-md">{btn.title}</span>
-                        <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold mt-1 tracking-wider">تفصیلات کے لیے کلک کریں</span>
+                      <div className="flex-1 text-center flex flex-col justify-center gap-2 md:gap-1.5 min-h-[3.25rem] md:min-h-0 py-1">
+                        <span className="block text-lg sm:text-xl md:text-2xl font-extrabold font-amiri leading-snug sm:whitespace-nowrap drop-shadow-md">{btn.title}</span>
+                        <span className="block text-[11px] md:text-xs text-[#4a0000]/80 font-bold tracking-wider mt-0.5 md:mt-0">تفصیلات کے لیے کلک کریں</span>
                       </div>
                     </Link>
                   </div>
