@@ -125,10 +125,10 @@ export default function UltimateAboutPage() {
             const linkHref = item.link || "#";
 
             const CardContent = (
-              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full w-full">
+            <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full">
                 <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
-                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-lg mb-2 leading-tight">{title}</h3>
-                <p className="text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans">{item.desc}</p>
+                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[13px] md:text-lg mb-1 md:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis w-full">{title}</h3>
+                <p className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-xs uppercase tracking-wider font-sans">{item.desc}</p>
               </div>
             );
 
@@ -191,27 +191,27 @@ export default function UltimateAboutPage() {
       </section>
 
       {/* 📖 5. تفصیلی آپ بیتی */}
-      <section className="container mx-auto px-4 py-16 relative z-10" dir="rtl">
-        <div className="max-w-5xl mx-auto bg-white rounded-[3rem] shadow-2xl border-t-8 border-[#0b314d] p-8 md:p-16">
+      <section className="container mx-auto px-3 md:px-4 py-12 md:py-16 relative z-10" dir="rtl">
+        <div className="max-w-5xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border-t-8 border-[#0b314d] p-4 md:p-16">
           <div className="text-center mb-12">
-            <span className="bg-[#D4AF37] text-white px-6 py-2 rounded-full text-lg font-bold tracking-widest urdu-text shadow-md">ایک عہد، ایک تاریخ، ایک داستان</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-[#0b314d] urdu-text mt-6 mb-4">کوہساروں سے میناروں تک</h2>
+            <span className="bg-[#D4AF37] text-white px-4 md:px-6 py-2 rounded-full text-sm md:text-lg font-bold tracking-wide md:tracking-widest urdu-text shadow-md whitespace-nowrap inline-block">ایک عہد، ایک تاریخ، ایک داستان</span>
+            <h2 className="text-2xl md:text-6xl font-bold text-[#0b314d] urdu-text mt-5 md:mt-6 mb-4">کوہساروں سے میناروں تک</h2>
             <div className="w-32 h-1.5 bg-[#D4AF37] mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 text-lg font-bold">از قلم: حاجی شبیر احمد شگری (خادمِ ثقلین)</p>
+            <p className="text-gray-600 mt-4 text-sm md:text-lg font-bold">از قلم: حاجی شبیر احمد شگری (خادمِ ثقلین)</p>
           </div>
 
-          <div className="prose max-w-none urdu-text text-gray-800 text-xl md:text-2xl leading-[2.6] text-justify space-y-12">
+          <div className="prose max-w-none urdu-text text-gray-800 text-base md:text-2xl leading-8 md:leading-[2.6] text-justify space-y-6 md:space-y-12">
 
             {/* پیش لفظ - ہلکا نیلا */}
-            <div className="bg-blue-50/70 p-8 rounded-3xl border-r-8 border-[#0b314d]">
-              <h3 className="text-3xl font-bold text-[#0b314d] mb-4">پیش لفظ: حیات، جہدِ مسلسل کا استعارہ</h3>
+            <div className="bg-blue-50/70 p-4 md:p-8 rounded-2xl md:rounded-3xl border-r-8 border-[#0b314d]">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#0b314d] mb-4">پیش لفظ: حیات، جہدِ مسلسل کا استعارہ</h3>
               <p>زندگی محض سانسوں کی آمد و رفت یا دنوں کے بیت جانے کا نام نہیں، بلکہ یہ تو ایک ایسا طویل، صبر آزما اور پُر مشقت سفر ہے جو انسان کو کچے راستوں کی دھول سے اٹھا کر تجربات کی بھٹی میں کندن بنا دیتا ہے۔ میری پیشہ ورانہ زندگی کا یہ سفر نصف صدی کے وسیع و عریض محیط پر پھیلا ہوا ہے۔ یہ پچاس برس محض ہندسوں کی کہانی نہیں ہے، بلکہ یہ لمحہ بہ لمحہ کی وہ ریاضتیں ہیں جس میں، میں نے اپنی ذات کو فراموش کر کے خود کو دین، دنیا اور مخلوقِ خدا کی بھلائی کے لیے وقف کر رکھا ہے۔ انسان کی تخلیق کا مقصد ہی خدمت اور اطاعت ہے، اور میں نے اپنی کمزور ناتواں کوششوں سے اسی مقصد کو پانے کی سعی کی ہے۔</p>
               <p className="mt-4">جب میں پلٹ کر اپنے ماضی کے دریچوں میں جھانکتا ہوں تو مجھے سکردو کی یخ بستہ ہواؤں سے لے کر لاہور کی گرم جوش فضاؤں تک، ایک مسلسل جدوجہد دکھائی دیتی ہے۔ یہ داستان ایک ایسے مسافر کی ہے جس نے سخت اور کٹھن حالات میں آنکھ کھولی، مگر محنت، صبر اور استقامت کو اپنا زادِ راہ بنایا۔ میں نے اپنی پوری زندگی میں شعوری طور پر یہ کوشش کی کہ میری ذات سے کسی ذی روح کو آزار نہ پہنچے اور میرا ہر عمل، ہر قدم اور ہر تحریر انسانیت کی فلاح اور دینِ مبین کی سربلندی کا سبب بنے۔ میری زندگی کی گزشتہ تین دہائیاں اس لحاظ سے خصوصی اہمیت کی حامل ہیں کہ میں نے ایک محب وطن پاکستانی اور ایک دردِ دل رکھنے والے مسلمان کے طور پر اسلامی ثقافت کے فروغ، بین المسالک و بین المذاہب ہم آہنگی اور پاک ایران دوستی کی مضبوطی اور اسلامک میڈیا کے لیے خود کو وقف کیے رکھا۔ یہ سفر ابھی تمام نہیں ہوا، بلکہ یہ تو ایک نئے عزم کا نقطہ آغاز ہے۔</p>
             </div>
 
             {/* باب اول - ہلکا سنہرا */}
-            <div className="bg-yellow-50/60 p-8 rounded-3xl border-r-8 border-[#D4AF37]">
-              <h3 className="text-3xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ اول: وادیِ سکردو، اجداد اور ابتدائی نقوش</h3>
+            <div className="bg-yellow-50/60 p-4 md:p-8 rounded-2xl md:rounded-3xl border-r-8 border-[#D4AF37]">
+              <h3 className="text-2xl md:text-4xl font-bold text-[#0f4c75] mb-4 border-b pb-2">بابِ اول: وادیِ سکردو، اجداد اور ابتدائی نقوش</h3>
               <p>میری زندگی کا آغاز 24 جون 1971ء کو پاکستان کے انتہائی شمالی اور حسین و جمیل خطے سکردو (گلگت بلتستان) میں ہوا۔ یہ قدرت کا شاہکار علاقہ جہاں پہاڑوں کی ہیبت، بہتے جھرنوں کی خوبصورتی، جھیلوں کا سکون اور آبشاروں کا ترنم انسان کو فطرت کے قریب کر دیتا ہے۔ انہی پہاڑوں کے دامن میں، میں نے زندگی کا پہلا سانس لیا اور انہی کی سختی اور حسن میری طبیعت کا حصہ بن گئے۔</p>
               <p className="mt-4">میرے والدِ گرامی، ڈاکٹر محمد رضا، ایک انتہائی باخبر، شفیق اور درویش صفت اور ہر دل عزیز انسان تھے۔ انسانیت کی خدمت کا جذبہ مجھے انھی سے ورثے میں ملا ہے۔ ان کی پیدائش اگرچہ تستے (برالدو) شگر کی تھی، لیکن وہ اپنے بچپن میں ہی شملہ (ہندوستان) چلے گئے تھے، جہاں انہوں نے اپنی جوانی کے ایام گزارے وہاں انھوں نے ڈاک کے محکمے میں بھی ملازمت کی۔ قیامِ پاکستان کے وقت جب ہجرت کا سلسلہ شروع ہوا تو وہ بھی اپنے خوابوں کی سرزمین پاکستان چلے آئے۔</p>
               <p className="mt-4 font-bold text-[#0f4c75]">والد صاحب کی انوکھی ایجاد (Small Box):</p>

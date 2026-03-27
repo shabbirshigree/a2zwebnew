@@ -54,7 +54,7 @@ export default function GlobalEngagementBox() {
     const url = typeof window !== "undefined" ? window.location.href : "";
     const pageTitle = typeof document !== "undefined" ? document.title : "ویب پیج";
     const customMessage = pageKey.startsWith("/article")
-      ? 'یہ کالم "نگینہِ ہرمز" اپنے دوستوں اور گروپس میں شیئر کریں'
+      ? `حاجی شبیر احمد شگری کی یہ تحریر شیئر کریں: ${pageTitle}`
       : "یہ صفحہ اپنے دوستوں اور گروپس میں شیئر کریں";
     const text = `${pageTitle} — ${customMessage}`;
     const encodedUrl = encodeURIComponent(url);
@@ -75,6 +75,18 @@ export default function GlobalEngagementBox() {
         return;
       }
       return;
+    }
+
+    if (platform === "telegram" && typeof window !== "undefined") {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isMobile) {
+        const tgAppUrl = `tg://msg_url?url=${encodedUrl}&text=${encodedText}`;
+        window.location.href = tgAppUrl;
+        setTimeout(() => {
+          window.open(links.telegram, "_blank", "noopener,noreferrer,width=700,height=700");
+        }, 800);
+        return;
+      }
     }
 
     const target = links[platform];

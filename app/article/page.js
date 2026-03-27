@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   FaArrowLeft, FaCalendar, FaNewspaper, FaEye, FaSearch, FaPenNib, FaBookOpen, FaMedal,
   FaHeart, FaRegHeart, FaShareAlt, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope, FaCommentDots
@@ -12,6 +13,7 @@ import Footer from '../components/Footer';
 import { allArticles } from './index';
 
 export default function ArticlesPage() {
+  const searchParams = useSearchParams();
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [likedArticles, setLikedArticles] = useState({});
@@ -34,6 +36,19 @@ const [filterCategory, setFilterCategory] = useState('column');
       setArticleViews({});
     }
   }, []);
+
+  useEffect(() => {
+    if (!mounted || selectedArticle) return;
+    const readId = searchParams.get('read');
+    if (!readId) return;
+    const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
+    if (!matched) return;
+    const key = `${matched.id}-${matched.title}`;
+    const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
+    setArticleViews(updatedViews);
+    localStorage.setItem('articleViews', JSON.stringify(updatedViews));
+    setSelectedArticle(matched);
+  }, [mounted, searchParams, selectedArticle, articleViews]);
 
   if (!mounted) return null;
 
@@ -101,9 +116,10 @@ const categories = [
 
     const shareArticle = async (article, platform) => {
       const url = getArticleUrl(article);
-      const text = `${article.title} — یہ کالم اپنے دوستوں اور گروپس میں شیئر کریں`;
+      const text = `حاجی شبیر احمد شگری کی یہ تحریر شیئر کریں: ${article.title}`;
+      const imageLine = article.image ? `\nتصویر: ${article.image}` : '';
       const encodedUrl = encodeURIComponent(url);
-      const encodedText = encodeURIComponent(text);
+      const encodedText = encodeURIComponent(`${text}${imageLine}`);
 
       const links = {
         whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
@@ -115,11 +131,23 @@ const categories = [
 
       if (platform === 'native' && navigator.share) {
         try {
-          await navigator.share({ title: article.title, text, url });
+          await navigator.share({ title: article.title, text: `${text}${imageLine}`, url });
         } catch {
           return;
         }
         return;
+      }
+
+      if (platform === 'telegram' && typeof window !== 'undefined') {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (isMobile) {
+          const tgAppUrl = `tg://msg_url?url=${encodedUrl}&text=${encodedText}`;
+          window.location.href = tgAppUrl;
+          setTimeout(() => {
+            window.open(links.telegram, '_blank', 'noopener,noreferrer,width=700,height=700');
+          }, 800);
+          return;
+        }
       }
 
       const shareLink = links[platform];
