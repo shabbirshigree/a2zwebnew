@@ -1,6 +1,7 @@
 "use client";
 import { FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import GlobalEngagementBox from "./GlobalEngagementBox";
 
 export default function Footer() {
   // نئی ای میل اور واٹس ایپ میسج کی ترتیب
@@ -18,7 +19,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-[#0f4c75] via-[#0a3552] to-[#0f4c75] text-white pt-10 pb-6 border-t-4 border-[#D4AF37] relative z-10 mt-20">
+    <>
+    <GlobalEngagementBox />
+    <footer className="bg-gradient-to-r from-[#0f4c75] via-[#0a3552] to-[#0f4c75] text-white pt-10 pb-6 border-t-4 border-[#D4AF37] relative z-10 mt-0">
       <div className="container mx-auto px-4 text-center">
         
         {/* صرف سبسکرائب بٹن (بغیر بڑے باکس اور ٹیکسٹ کے) */}
@@ -69,5 +72,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

@@ -3,7 +3,6 @@ import { Gulzar, Noto_Naskh_Arabic } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import FloatingButtons from './components/FloatingButtons';
-import GlobalEngagementBox from './components/GlobalEngagementBox';
 
 // 🔴 آپ کا نیا سیکیورٹی گارڈ یہاں امپورٹ ہو گیا ہے
 import SecurityLock from './components/SecurityLock';
@@ -53,7 +52,6 @@ export default function RootLayout({ children }) {
 
         {/* فلوٹنگ بٹنز اب باڈی کے اندر محفوظ طریقے سے کام کریں گے */}
         <FloatingButtons />
-        <GlobalEngagementBox />
 
         <main>{children}</main>
 
