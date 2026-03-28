@@ -13,10 +13,34 @@ export const welcomeData = {
   name: "حاجی شبیر احمد شگری"
 };
 
+export const welcomeDataEn = {
+  bismillah: "In the name of Allah, the Most Gracious, the Most Merciful",
+  greeting: "Peace be upon you!",
+  description: "I welcome you to my official website. This platform serves as a humble reflection of my 45-year journey in journalism, culture, and religious service. Here, you will find comprehensive details of the 'Noor-ul-Quran Visual' project, alongside a curated collection of my editorials, travelogues, and documentaries. Explore exclusive AI-driven analyses of my literary works, available in both audio and video formats.",
+  name: "Haji Shabbir Ahmed Shigri"
+};
+
+export const welcomeDataFa = {
+  bismillah: "بسم الله الرحمن الرحیم",
+  greeting: "السلام علیکم!",
+  description: "به وب‌سایت رسمی من خوش آمدید. این وب‌سایت بازتابی فروتنانه از ۴۵ سال خدمات روزنامه‌نگاری، فرهنگی، اجتماعی و دینی من است. در اینجا جزئیات پروژه‌های بزرگی مانند «نورالقرآن ویژوال» را به همراه مجموعه‌ای از ستون‌ها، مقالات، سفرنامه‌ها و مستندهای من خواهید یافت. به‌ویژه می‌توانید تحلیل‌های اختصاصی هوش مصنوعی در مورد نوشته‌های من را به صورت پادکست صوتی و ویدئویی مشاهده کنید.",
+  name: "حاجی شبیر احمد شگری"
+};
+
 // 🔴 2. اہم اعزازات
 export const honorsData = [
   { title: "خادمِ امام رضاؑ", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" },
   { title: "خادمِ غازی عباسؑ", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" }
+];
+
+export const honorsDataEn = [
+  { title: "Servant of Imam Reza (a.s)", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" },
+  { title: "Servant of Ghazi Abbas (a.s)", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" }
+];
+
+export const honorsDataFa = [
+  { title: "خادم امام رضا (ع)", link: "/imam-reza", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" },
+  { title: "خادم غازی عباس (ع)", link: "/ghazi-abbas", gif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" }
 ];
 
 // 🔴 3. نور القرآن پراجیکٹ ڈیٹا
@@ -45,6 +69,32 @@ export const journeyData = [
   { title: 'دیگر خدمات', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'سماجی، فلاحی اور دیگر اہم ملی و رفاہی خدمات۔' }
 ];
 
+export const journeyDataEn = [
+  { title: 'Diplomatic Services', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'In-depth analysis of international diplomatic and constructive engagements.' },
+  { title: 'Cultural Diplomacy', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'Promoting Pak-Iran bilateral relations through cultural exchange.' },
+  { title: 'Global Unity', link: '/unity', icon: <FaUsers size={24} />, desc: 'Persistent efforts towards fostering brotherhood and harmony among the Ummah.' },
+  { title: 'Literary Works', link: '/library', icon: <FaBook size={24} />, desc: 'An extensive repository of scientific, literary, and spiritual publications.' },
+  { title: 'Journalism', link: '/article', icon: <FaPenNib size={24} />, desc: 'Insightful editorial contributions spanning nearly five decades of journalism.' },
+  { title: 'Media Broadcasting', link: '/channels', icon: <FaTv size={24} />, desc: 'Strategic religious and social outreach across international media networks.' },
+  { title: 'Intellectual Dialogues', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'Engaging interviews on critical national and global socio-political themes.' },
+  { title: 'Distinguished Awards', link: '/awards', icon: <FaTrophy size={24} />, desc: 'A record of high-profile national and international honors and recognitions.' },
+  { title: 'Visual Archive', link: '/gallery', icon: <FaImages size={24} />, desc: 'A curated visual journey through historical moments and key personalities.' },
+  { title: 'Social Philanthropy', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'Dedicated community service and welfare initiatives for the public good.' }
+];
+
+export const journeyDataFa = [
+  { title: 'خدمات دیپلماتیک', link: '/diplomatic-services', icon: <FaHandshake size={24} />, desc: 'جزئیات نقش‌های دیپلماتیک و سازنده در سطح بین‌المللی.' },
+  { title: 'دیپلماسی فرهنگی', link: '/cultural', icon: <FaLandmark size={24} />, desc: 'ترویج روابط فرهنگی و هماهنگی بین پاکستان و ایران.' },
+  { title: 'وحدت امت', link: '/unity', icon: <FaUsers size={24} />, desc: 'تلاش‌های خستگی‌ناپذیر برای اتحاد و برادری میان مسلمانان.' },
+  { title: 'تالیفات و کتاب‌ها', link: '/library', icon: <FaBook size={24} />, desc: 'مجموعه‌ای از کتاب‌های ارزشمند در موضوعات علمی، ادبی و معنوی.' },
+  { title: 'روزنامه‌نگاری و مقالات', link: '/article', icon: <FaPenNib size={24} />, desc: 'خدمات روزنامه‌نگاری و مقالات فکری با سابقه نیم قرن.' },
+  { title: 'شبکه‌های تلویزیونی', link: '/channels', icon: <FaTv size={24} />, desc: 'خدمات دینی و اجتماعی در شبکه‌های مختلف تلویزیونی بین‌المللی.' },
+  { title: 'میزگردها', link: '/talkshows', icon: <FaMicrophone size={24} />, desc: 'مصاحبه‌های تامل‌برانگیز در مورد موضوعات مهم ملی و بین‌المللی.' },
+  { title: 'افتخارات و جوایز', link: '/awards', icon: <FaTrophy size={24} />, desc: 'جوایز معتبر ملی و بین‌المللی دریافت شده.' },
+  { title: 'گالری تصاویر', link: '/gallery', icon: <FaImages size={24} />, desc: 'تصاویر برگزیده از لحظات ماندگار، شخصیت‌ها و مراسم‌های مهم.' },
+  { title: 'خدمات اجتماعی', link: '/services', icon: <FaHandHoldingHeart size={24} />, desc: 'خدمات اجتماعی، رفاهی و دیگر خدمات مهم ملی و مذهبی.' }
+];
+
 // 🔴 5. کتب کا مکمل ڈیٹا (Books Slider) - 100% Correct Links
 export const booksData = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png", title: "سیرتِ فاطمہ زہراؑ: بوئے بہشت", author: "حاجی شبیر احمد شگری", year: "2018", link: "/library#book-booy" },
@@ -60,6 +110,40 @@ export const booksData = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png", title: "مجلہ فرھنگستان", author: "حاجی شبیر احمد شگری", year: "2017", link: "/library#book-farhang" },
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772598044/95eeeeb5-067e-4fcb-b4c6-ed952d52af89.png", title: "مجلہ انقلاب", author: "حاجی شبیر احمد شگری", year: "2017", link: "/library#book-inqilab" }, // 👈 درست ہو گیا
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png", title: "نورالقرآن", author: "حاجی شبیر احمد شگری", year: "2021", link: "/library#Quran" } // 👈 درست ہو گیا
+];
+
+/** عناوین کتاب — انگریزی (ترتیب booksData کے مطابق) */
+export const booksTitlesEn = [
+  "Sirat Fatima Zahra (s.a): Boi-e-Bahisht",
+  "Anis al-Nufus — The Holy Shrine of Imam Reza (a.s.)",
+  "Iran Travelogue: Journey of Love",
+  "Ascension of the Soul — Self-Reformation",
+  "In Search of Peace",
+  "Iran Travelogue",
+  "Razavi Khorasan",
+  "Decrees of the Supreme Leader",
+  "Key to Paradise — Prayers & Supplications",
+  "Magazine: Shakh-e-Nabat",
+  "Magazine: Farhangistan",
+  "Magazine: Inqilab",
+  "Noor-ul-Quran",
+];
+
+/** عناوین کتاب — فارسی */
+export const booksTitlesFa = [
+  "سیرت حضرت فاطمه زهرا(س): بوی بهشت",
+  "انیس النفوس — حرم امام رضا(ع)",
+  "سفرنامه ایران: سفر دیار عشق",
+  "معراج روح — اصلاح نفس",
+  "جستجوی آرامش",
+  "سیاحت ایران",
+  "خراسان رضوی",
+  "فتاوای رهبری",
+  "کلید بهشت — مجموعه وضایف",
+  "مجله شاخ نبات",
+  "مجله فرهنگستان",
+  "مجله انقلاب",
+  "نورالقرآن",
 ];
 
 // 🔴 6. نامور شخصیات کا مکمل ڈیٹا
@@ -136,10 +220,60 @@ export const legendsData = [
   }
 ];
 
+const legendRolesEn = [
+  "Director, Iran Culture House, Lahore",
+  "Former Chief Minister of Punjab",
+  "Peace Committee",
+  "Religious leader",
+  "Usmani Foundation",
+  "Ameer, Jamaat Ahl-e-Hadith",
+  "Political leader",
+  "Central President, Jamiat Ulema-e-Pakistan",
+  "Sikh community leader",
+  "Religious scholar",
+];
+
+const legendRolesFa = [
+  "رایزن فرهنگی ایران، لاهور",
+  "استاندار سابق پنجاب",
+  "کمیته صلح",
+  "رهبر مذهبی",
+  "بنیاد عثمانی",
+  "امیر جماعت اهل حدیث",
+  "رهبر سیاسی",
+  "رئیس مرکزی جمیعت علمای پاکستان",
+  "رهبر جامعه سیک‌ها",
+  "عالم دینی",
+];
+
+export const legendsDataEn = legendsData.map((l, i) => ({
+  ...l,
+  role: legendRolesEn[i] ?? l.role,
+}));
+
+export const legendsDataFa = legendsData.map((l, i) => ({
+  ...l,
+  role: legendRolesFa[i] ?? l.role,
+}));
+
 // 🔴 7. چار اہم پروجیکٹس (Nav Cards)
 export const navCardsData = [
   { title: "نور القرآن پراجیکٹ", icon: <FaQuran />, link: "/project" },
   { title: "نور پروڈکشنز", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
   { title: "انجمن دوستی پاک ایران", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
   { title: "دیگر خدمات", icon: <FaHandHoldingHeart />, link: "/services" }
+];
+
+export const navCardsDataEn = [
+  { title: "Noor-ul-Quran Project", icon: <FaQuran />, link: "/project" },
+  { title: "Noor Productions", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
+  { title: "Pak–Iran Friendship Association", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
+  { title: "Other Services", icon: <FaHandHoldingHeart />, link: "/services" }
+];
+
+export const navCardsDataFa = [
+  { title: "پروژه نورالقرآن", icon: <FaQuran />, link: "/project" },
+  { title: "نور پروداکشنز", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
+  { title: "انجمن دوستی پاک و ایران", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
+  { title: "سایر خدمات", icon: <FaHandHoldingHeart />, link: "/services" }
 ];

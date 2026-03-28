@@ -1,8 +1,9 @@
 
-import { Gulzar, Noto_Naskh_Arabic } from "next/font/google";
+import { Gulzar, Noto_Naskh_Arabic, Vazirmatn, Amiri, Reem_Kufi } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import FloatingButtons from './components/FloatingButtons';
+import LocaleProvider from './components/LocaleProvider';
 
 // 🔴 آپ کا نیا سیکیورٹی گارڈ یہاں امپورٹ ہو گیا ہے
 import SecurityLock from './components/SecurityLock';
@@ -20,6 +21,27 @@ const naskh = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   weight: ["400", "700"],
   variable: "--font-naskh",
+  display: "swap",
+});
+
+const vazirmatn = Vazirmatn({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-vazirmatn",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+const kufi = Reem_Kufi({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-kufi",
   display: "swap",
 });
 
@@ -45,18 +67,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ur" dir="rtl" suppressHydrationWarning>
-      <body className={`${nastaliq.variable} ${naskh.variable} bg-gray-50 text-gray-800 font-sans antialiased`}>
+      <body
+        className={`${nastaliq.variable} ${naskh.variable} ${vazirmatn.variable} ${amiri.variable} ${kufi.variable} bg-gray-50 text-gray-800 font-sans antialiased`}
+      >
 
-        {/* 🔴 یہ رہا آپ کا سیکیورٹی گارڈ جو پوری ویب سائٹ کو رائٹ کلک اور کاپی سے بچائے گا */}
-        <SecurityLock />
+        <LocaleProvider>
+          {/* 🔴 یہ رہا آپ کا سیکیورٹی گارڈ جو پوری ویب سائٹ کو رائٹ کلک اور کاپی سے بچائے گا */}
+          <SecurityLock />
 
-        {/* فلوٹنگ بٹنز اب باڈی کے اندر محفوظ طریقے سے کام کریں گے */}
-        <FloatingButtons />
+          {/* فلوٹنگ بٹنز اب باڈی کے اندر محفوظ طریقے سے کام کریں گے */}
+          <FloatingButtons />
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        {/* گوگل اینالیٹکس آئی ڈی */}
-        <GoogleAnalytics gaId="G-YSSSMV99G6" />
+          {/* گوگل اینالیٹکس آئی ڈی */}
+          <GoogleAnalytics gaId="G-YSSSMV99G6" />
+        </LocaleProvider>
       </body>
     </html>
   );

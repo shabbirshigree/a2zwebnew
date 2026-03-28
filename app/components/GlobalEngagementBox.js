@@ -2,14 +2,26 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useLocale } from "./LocaleProvider";
+import { getDictionary } from "../lib/i18n";
 import {
   FaHeart, FaRegHeart, FaEye, FaShareAlt, FaWhatsapp, FaFacebookF,
   FaTelegramPlane, FaEnvelope
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+function engagementTextClass(locale) {
+  if (locale === "en") return "font-hero-en";
+  if (locale === "fa") return "font-persian";
+  return "urdu-text";
+}
+
 export default function GlobalEngagementBox() {
   const pathname = usePathname();
+  const { locale } = useLocale();
+  const dict = getDictionary(locale);
+  const eg = /** @type {{ shareOptions: string; morePlatforms: string; shareArticle: string; sharePage: string }} */ (dict.engagement);
+  const ect = engagementTextClass(locale);
   const [isMounted, setIsMounted] = useState(false);
   const [likes, setLikes] = useState({});
   const [views, setViews] = useState({});
@@ -52,10 +64,10 @@ export default function GlobalEngagementBox() {
 
   const shareCurrentPage = async (platform) => {
     const url = typeof window !== "undefined" ? window.location.href : "";
-    const pageTitle = typeof document !== "undefined" ? document.title : "ویب پیج";
+    const pageTitle = typeof document !== "undefined" ? document.title : "";
     const customMessage = pageKey.startsWith("/article")
-      ? `حاجی شبیر احمد شگری کی یہ تحریر شیئر کریں: ${pageTitle}`
-      : "یہ صفحہ اپنے دوستوں اور گروپس میں شیئر کریں";
+      ? `${eg.shareArticle}: ${pageTitle}`
+      : eg.sharePage;
     const text = `${pageTitle} — ${customMessage}`;
     const encodedUrl = encodeURIComponent(url);
     const encodedText = encodeURIComponent(text);
@@ -97,7 +109,7 @@ export default function GlobalEngagementBox() {
     <section className="w-full border-y border-[#D4AF37]/25 bg-gradient-to-r from-[#fffef8] via-white to-[#f7fbff]">
       <div className="max-w-7xl mx-auto px-3 md:px-6 py-3">
         <div className="flex items-center gap-2 md:gap-3 overflow-x-auto whitespace-nowrap">
-          <p className="urdu-text text-[#0b314d] text-sm md:text-base font-bold ml-1">شیئرنگ آپشنز:</p>
+          <p className={`${ect} text-[#0b314d] text-xs md:text-sm font-semibold ml-1 shrink-0`}>{eg.shareOptions}:</p>
           <button
             type="button"
             onClick={toggleLike}
@@ -118,7 +130,7 @@ export default function GlobalEngagementBox() {
             onClick={() => isMounted && shareCurrentPage("native")}
             className="text-xs px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white inline-flex items-center gap-1.5 hover:bg-[#0f4c75]"
           >
-            <FaShareAlt /> دوسرے پلیٹ فارمز
+            <FaShareAlt /> <span className={ect}>{eg.morePlatforms}</span>
           </button>
         </div>
       </div>

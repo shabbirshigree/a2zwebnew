@@ -149,15 +149,15 @@ export default function LandingPage() {
       {/* START SCREEN */}
       <div className={`absolute inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
         <div className="text-center max-w-2xl px-6 md:px-8 flex flex-col items-center">
-          <h1 className="text-xs md:text-base text-[#D4AF37] font-bold mb-3 md:mb-4 arabic-text tracking-[0.28em]">{landingData.bismillah}</h1>
-          <h2 className="text-sm md:text-xl text-white/95 font-medium arabic-text mb-3 md:mb-5 leading-relaxed" dir="rtl">{landingData.ayat}</h2>
-          <p className="text-[#fde68a]/70 text-xs md:text-lg urdu-nastaliq px-4 md:px-10 leading-[2.05] mb-7 md:mb-10" dir="rtl">"{landingData.translation}"</p>
+          <h1 className="text-[10px] sm:text-xs md:text-sm text-[#D4AF37] font-bold mb-2 md:mb-3 arabic-text tracking-[0.2em]">{landingData.bismillah}</h1>
+          <h2 className="text-xs sm:text-sm md:text-base text-white/95 font-medium arabic-text mb-2 md:mb-4 leading-snug max-w-xl px-2" dir="rtl">{landingData.ayat}</h2>
+          <p className="text-[#fde68a]/70 text-[11px] sm:text-xs md:text-sm urdu-nastaliq px-3 md:px-8 leading-relaxed mb-4 md:mb-6 max-w-lg" dir="rtl">"{landingData.translation}"</p>
           <button 
             onClick={handleEnterClick} 
-            className="px-6 md:px-10 py-1.5 md:py-2 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full hover:bg-[#D4AF37]/10 transition-all duration-700 whitespace-nowrap"
+            className="px-4 md:px-8 py-1.5 md:py-2 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full hover:bg-[#D4AF37]/10 transition-all duration-700 max-w-[92vw]"
             style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
           >
-            <span className="text-xs md:text-lg font-normal leading-normal">
+            <span className="text-[11px] sm:text-xs md:text-sm font-normal leading-snug">
               میری خدمات کی دنیا میں داخل ہوں
             </span>
           </button>
@@ -168,17 +168,17 @@ export default function LandingPage() {
       <div className={`absolute inset-0 z-[50] transition-opacity duration-[2000ms] ${appState === 'MAIN' ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         
         {/* ویلکم ٹیکسٹ */}
-        <div className="absolute top-16 md:top-12 left-1/2 -translate-x-1/2 z-[300] w-[90%] md:w-auto flex justify-center pointer-events-none">
-          <div className="bg-black/40 backdrop-blur-md border border-[#D4AF37]/30 flex flex-col items-center px-4 md:px-8 py-2 md:py-3 rounded-full overflow-hidden max-w-full">
+        <div className="absolute top-14 md:top-10 left-1/2 -translate-x-1/2 z-[300] w-[92%] max-w-xl flex justify-center pointer-events-none">
+          <div className="bg-black/45 backdrop-blur-md border border-[#D4AF37]/30 flex flex-col items-center px-3 md:px-5 py-1.5 md:py-2 rounded-2xl max-w-full">
             <h2 
-              className="text-[#D4AF37] font-bold text-[10px] sm:text-xs md:text-lg mb-1.5 md:mb-2.5 whitespace-nowrap" 
+              className="text-[#D4AF37] font-bold text-[10px] sm:text-[11px] md:text-sm text-center leading-snug mb-0.5 md:mb-1" 
               style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }} 
               dir="rtl"
             >
               {landingData.welcomeTitle}
             </h2>
             <p 
-              className="text-[#fff7cc] text-[8px] sm:text-[11px] md:text-xs whitespace-nowrap" 
+              className="text-[#fff7cc] text-[9px] sm:text-[10px] md:text-xs text-center leading-snug" 
               style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }} 
               dir="rtl"
             >
@@ -232,20 +232,20 @@ export default function LandingPage() {
         </div>
 
         {/* معلومات کا ڈبہ - موبائل کے لئے پوزیشن اوپر کر دی گئی ہے */}
-        <div className="absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 z-[300] w-full flex justify-center pointer-events-none">
+        <div className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-[300] w-[94%] max-w-md flex justify-center pointer-events-none px-2">
           {hoveredIndex !== null && (
-            <div className="bg-black/80 backdrop-blur-md px-6 py-2 rounded-full border border-[#D4AF37]/40 flex flex-col md:flex-row items-center gap-2" dir="rtl">
+            <div className="bg-black/80 backdrop-blur-md px-3 py-1.5 md:px-4 md:py-2 rounded-xl border border-[#D4AF37]/40 flex flex-col items-center gap-0.5 text-center" dir="rtl">
                 <span 
-                  className="text-xs md:text-sm font-bold text-[#D4AF37] whitespace-nowrap"
+                  className="text-[10px] sm:text-xs font-bold text-[#D4AF37] leading-tight"
                   style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
                 >
                   {hoveredIndex === 'home' ? "مرکزی ہوم پیج" : planetItems[hoveredIndex].title}
                 </span>
                 <span 
-                  className="text-[#fff7cc] text-[9px] md:text-xs whitespace-nowrap"
+                  className="text-[#fff7cc] text-[9px] sm:text-[10px] leading-snug"
                   style={{ fontFamily: "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif" }}
                 >
-                  {hoveredIndex === 'home' ? "ہوم پیج کے لئے یہاں کلک کریں" : planetItems[hoveredIndex].desc}
+                  {hoveredIndex === 'home' ? "ہوم پیج کے لیے یہاں کلک کریں" : planetItems[hoveredIndex].desc}
                 </span>
             </div>
           )}

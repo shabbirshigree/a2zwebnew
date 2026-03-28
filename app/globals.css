@@ -4,6 +4,7 @@
 body {
   user-select: none;
   -webkit-user-select: none;
+  direction: unset;
 }
 
 /* ==================================================================== */
@@ -24,6 +25,38 @@ body {
   line-height: 2.2 !important;
 }
 
+/* ہیڈر میں ایک لائن عہدے — نستعلیق فونٹ مگر عام سطر کی اونچائی */
+.urdu-header-roles {
+  font-family: 'Jameel Noori Nastaleeq', serif !important;
+  line-height: 1.3 !important;
+}
+
+/* فارسی — Vazirmatn (عربی آیت الگ) */
+.font-persian {
+  font-family: var(--font-vazirmatn), "Vazirmatn", Tahoma, sans-serif;
+  font-weight: 500;
+}
+
+/* عربی قرآنی آیت — Amiri، بقیہ متن سے الگ */
+.font-arabic-verse {
+  font-family: var(--font-amiri), "Amiri", "Scheherazade New", serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* انگریزی ہیڈر نام — ہلکا، زیادہ بولڈ نہیں */
+.font-hero-en {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.font-kufi {
+  font-family: var(--font-kufi), "Reem Kufi", sans-serif;
+  font-weight: 500;
+}
+
 /* ==================================================================== */
 /* 👇 پوری سائٹ کے لیے بہتر Urdu Typography (PC + Mobile)         👇  */
 /* ==================================================================== */
@@ -35,10 +68,11 @@ body {
 }
 
 main {
-  direction: rtl;
-  text-align: right;
+  direction: unset;
+  text-align: unset;
 }
 
+/* موبائل/ٹی ایل ونڈ: صفحات خود h1–h6 سائز دیتے ہیں — عالوی clamp ہیڈر و چھوٹے ٹائٹل توڑ دیتا تھا */
 main h1 {
   font-size: clamp(1.7rem, 3.2vw, 3.1rem);
   line-height: 1.25;
@@ -75,6 +109,14 @@ main h6 {
   text-align: center;
 }
 
+/* ہیڈر naam: عالوی main h1 clamp نہ لگے */
+main h1.text-fluid-reset {
+  font-size: revert-layer;
+  line-height: revert-layer;
+  text-align: revert-layer;
+  font-weight: revert-layer;
+}
+
 /* اقتباسات (Blockquote) کو بھی اسی نستعلیق vibe کے ساتھ رکھتے ہیں */
 main blockquote {
   font-family: var(--font-nastaliq), 'Jameel Noori Nastaleeq', serif;
@@ -89,12 +131,31 @@ main blockquote {
   border-radius: 12px;
 }
 
-/* پیراگراف/لسٹ متن کو خوبصورت، موبائل فرینڈلی اور justified رکھیں */
-main p,
+/* پیراگراف/لسٹ — ہیڈر والی سطریں مستثنیٰ (ورنہ clamp ـ سب ایک سائز) */
+main p:not(.hero-header-tight),
 main li {
   font-size: clamp(1rem, 1.25vw, 1.18rem);
   line-height: 2.05;
   text-align: justify;
+}
+
+/* ماشاءاللہ / نور آیت / عہدے — main p کے clamp سے آزاد، حقیقی چھوٹا سائز */
+main p.hero-header-tight.hero-mashallah {
+  font-size: clamp(0.3rem, 1.05vw, 0.46rem) !important;
+  line-height: 1.08 !important;
+  text-align: center !important;
+}
+
+main p.hero-header-tight.hero-ayah {
+  font-size: clamp(0.34rem, 1.2vw, 0.52rem) !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+}
+
+main p.hero-header-tight.hero-roles {
+  font-size: clamp(0.29rem, 0.9vw, 0.42rem) !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
 }
 
 /* ==================================================================== */
