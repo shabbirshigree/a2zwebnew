@@ -7,12 +7,12 @@ import FloatingButtons from './components/FloatingButtons';
 // 🔴 آپ کا نیا سیکیورٹی گارڈ یہاں امپورٹ ہو گیا ہے
 import SecurityLock from './components/SecurityLock';
 
-// اردو نستعلیق فونٹ - جھٹکا ختم کرنے کے لیے 'block' استعمال کیا گیا ہے
+// اردو نستعلیق فونٹ — swap تاکہ صفحہ جلد دکھے، موبائل پر ناگوار "روک" کم ہو
 const nastaliq = Gulzar({
   subsets: ["arabic"],
   weight: ["400"],
   variable: "--font-nastaliq",
-  display: "block",
+  display: "swap",
 });
 
 // اردو نسخ فونٹ
@@ -20,7 +20,7 @@ const naskh = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   weight: ["400", "700"],
   variable: "--font-naskh",
-  display: "block",
+  display: "swap",
 });
 
 // ویب سائٹ کی مکمل ایس ای او (SEO) سیٹنگ
