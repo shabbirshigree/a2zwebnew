@@ -142,17 +142,17 @@ export default function UnityOfUmmah() {
       {activeVideo && (
         <div className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[1001]">&times;</button>
-          <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
+          <div className="w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
             {activeVideo.includes('youtu') ? (
               <iframe 
-                className="w-full h-[50vh] md:h-[70vh]" 
+                className="w-full max-h-[60vh]" 
                 src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`} 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen>
               </iframe>
             ) : (
-              <video className="w-full h-[50vh] md:h-[70vh] bg-black" src={activeVideo} controls autoPlay playsInline></video>
+              <video className="w-full max-h-[60vh] bg-black" src={activeVideo} controls autoPlay playsInline></video>
             )}
           </div>
         </div>

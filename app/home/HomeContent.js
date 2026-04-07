@@ -90,91 +90,91 @@ export function HomeContent() {
 
   const { bismillah, welcome, honors, navCards, legends, books, journey, labels } =
     useMemo(() => {
-    const dict = getDictionary(locale);
-    if (locale === "ur") {
+      const dict = getDictionary(locale);
+      if (locale === "ur") {
+        return {
+          bismillah: welcomeData.bismillah,
+          welcome: {
+            greeting: welcomeData.greeting,
+            description: welcomeData.description,
+            name: welcomeData.name,
+            honorsHint: dict.home.honorsHint,
+          },
+          honors: honorsData,
+          navCards: navCardsData,
+          legends: legendsData,
+          books: booksData,
+          journey: journeyData,
+          labels: {
+            projBadge: "WORLD'S FIRST VISUAL QURAN",
+            projTitle: "نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن",
+            projDesc: "یہ حاجی شبیر احمد شگری کا ایک جدید اور منفرد منصوبہ ہے۔ اس پروجیکٹ کا بنیادی مقصد جدید ٹیکنالوجی اور مصنوعی ذہانت (AI) کے ذریعے قرآن مجید کے ترجمے اور مفاہیم کو بصری اور فلمی انداز میں پیش کرنا ہے۔",
+            btnRead: "تفصیل پڑھیں",
+            btnVideo: "ویڈیو پوڈکاسٹ",
+            btnAudio: "آڈیو پوڈکاسٹ",
+            legendsHead: "نامور شخصیات کا میرے بارے اظہار خیال",
+            booksHead: "حاجی شبیر احمد شگری کی تصانیف",
+            booksHint: "تفصیلات کے لیے کلک کریں",
+            journeyHead: "خدمت کے 45 سال",
+            journeyView: "تفصیل دیکھیں",
+            btnBack: "واپس جائیں",
+            btnClose: "بند کریں"
+          }
+        };
+      }
+
+      const isEn = locale === "en";
+      const currentWelcome = isEn ? welcomeDataEn : welcomeDataFa;
+      const bookTitles = isEn ? booksTitlesEn : booksTitlesFa;
+
       return {
+        /* تینوں زبانوں میں ویلکم باکس: عربی بسم اللہ */
         bismillah: welcomeData.bismillah,
         welcome: {
-          greeting: welcomeData.greeting,
-          description: welcomeData.description,
-          name: welcomeData.name,
+          greeting: currentWelcome.greeting,
+          description: currentWelcome.description,
+          name: currentWelcome.name,
           honorsHint: dict.home.honorsHint,
         },
-        honors: honorsData,
-        navCards: navCardsData,
-        legends: legendsData,
-        books: booksData,
-        journey: journeyData,
-        labels: {
+        honors: isEn ? honorsDataEn : honorsDataFa,
+        navCards: isEn ? navCardsDataEn : navCardsDataFa,
+        legends: isEn ? legendsDataEn : legendsDataFa,
+        books: booksData.map((b, i) => ({
+          ...b,
+          title: bookTitles[i] ?? b.title,
+        })),
+        journey: isEn ? journeyDataEn : journeyDataFa,
+        labels: isEn ? {
           projBadge: "WORLD'S FIRST VISUAL QURAN",
-          projTitle: "نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن",
-          projDesc: "یہ حاجی شبیر احمد شگری کا ایک جدید اور منفرد منصوبہ ہے۔ اس پروجیکٹ کا بنیادی مقصد جدید ٹیکنالوجی اور مصنوعی ذہانت (AI) کے ذریعے قرآن مجید کے ترجمے اور مفاہیم کو بصری اور فلمی انداز میں پیش کرنا ہے۔",
-          btnRead: "تفصیل پڑھیں",
-          btnVideo: "ویڈیو پوڈکاسٹ",
-          btnAudio: "آڈیو پوڈکاسٹ",
-          legendsHead: "نامور شخصیات کا میرے بارے اظہار خیال",
-          booksHead: "حاجی شبیر احمد شگری کی تصانیف",
-          booksHint: "تفصیلات کے لیے کلک کریں",
-          journeyHead: "خدمت کے 45 سال",
-          journeyView: "تفصیل دیکھیں",
-          btnBack: "واپس جائیں",
-          btnClose: "بند کریں"
+          projTitle: "Noor-ul-Quran Project: World's First Visual Quran",
+          projDesc: "This is a state-of-the-art and unique initiative by Haji Shabbir Ahmed Shigri. The primary objective is to leverage modern technology and Artificial Intelligence (AI) to present the translations and concepts of the Holy Quran through immersive visual and cinematic narratives.",
+          btnRead: "Read More",
+          btnVideo: "Video Podcast",
+          btnAudio: "Audio Podcast",
+          legendsHead: "Reflections from Distinguished Personalities",
+          booksHead: "Publications of Haji Shabbir Ahmed Shigri",
+          booksHint: "Click for details",
+          journeyHead: "45 Years of Dedicated Service",
+          journeyView: "View Details",
+          btnBack: "Go Back",
+          btnClose: "Close"
+        } : {
+          projBadge: "اولین قرآن تصویری جهان",
+          projTitle: "پروژه نورالقرآن: اولین قرآن تصویری جهان",
+          projDesc: "این یک طرح مدرن و منحصر به فرد از حاجی شبیر احمد شگری است. هدف اصلی این پروژه استفاده از فناوری‌های روز و هوش مصنوعی (AI) برای ارائه مفاهیم قرآن کریم در قالب‌های تصویری و سینمایی است.",
+          btnRead: "جزئیات بیشتر",
+          btnVideo: "پادکست ویدئویی",
+          btnAudio: "پادکست صوتی",
+          legendsHead: "اظهار نظر شخصیت‌های برجسته در مورد من",
+          booksHead: "تالیفات حاجی شبیر احمد شگری",
+          booksHint: "برای جزئیات کلیک کنید",
+          journeyHead: "۴۵ سال خدمت مخلصانه",
+          journeyView: "مشاهده جزئیات",
+          btnBack: "بازگشت",
+          btnClose: "بستن"
         }
       };
-    }
-
-    const isEn = locale === "en";
-    const currentWelcome = isEn ? welcomeDataEn : welcomeDataFa;
-    const bookTitles = isEn ? booksTitlesEn : booksTitlesFa;
-
-    return {
-      /* تینوں زبانوں میں ویلکم باکس: عربی بسم اللہ */
-      bismillah: welcomeData.bismillah,
-      welcome: {
-        greeting: currentWelcome.greeting,
-        description: currentWelcome.description,
-        name: currentWelcome.name,
-        honorsHint: dict.home.honorsHint,
-      },
-      honors: isEn ? honorsDataEn : honorsDataFa,
-      navCards: isEn ? navCardsDataEn : navCardsDataFa,
-      legends: isEn ? legendsDataEn : legendsDataFa,
-      books: booksData.map((b, i) => ({
-        ...b,
-        title: bookTitles[i] ?? b.title,
-      })),
-      journey: isEn ? journeyDataEn : journeyDataFa,
-      labels: isEn ? {
-        projBadge: "WORLD'S FIRST VISUAL QURAN",
-        projTitle: "Noor-ul-Quran Project: World's First Visual Quran",
-        projDesc: "This is a state-of-the-art and unique initiative by Haji Shabbir Ahmed Shigri. The primary objective is to leverage modern technology and Artificial Intelligence (AI) to present the translations and concepts of the Holy Quran through immersive visual and cinematic narratives.",
-        btnRead: "Read More",
-        btnVideo: "Video Podcast",
-        btnAudio: "Audio Podcast",
-        legendsHead: "Reflections from Distinguished Personalities",
-        booksHead: "Publications of Haji Shabbir Ahmed Shigri",
-        booksHint: "Click for details",
-        journeyHead: "45 Years of Dedicated Service",
-        journeyView: "View Details",
-        btnBack: "Go Back",
-        btnClose: "Close"
-      } : {
-        projBadge: "اولین قرآن تصویری جهان",
-        projTitle: "پروژه نورالقرآن: اولین قرآن تصویری جهان",
-        projDesc: "این یک طرح مدرن و منحصر به فرد از حاجی شبیر احمد شگری است. هدف اصلی این پروژه استفاده از فناوری‌های روز و هوش مصنوعی (AI) برای ارائه مفاهیم قرآن کریم در قالب‌های تصویری و سینمایی است.",
-        btnRead: "جزئیات بیشتر",
-        btnVideo: "پادکست ویدئویی",
-        btnAudio: "پادکست صوتی",
-        legendsHead: "اظهار نظر شخصیت‌های برجسته در مورد من",
-        booksHead: "تالیفات حاجی شبیر احمد شگری",
-        booksHint: "برای جزئیات کلیک کنید",
-        journeyHead: "۴۵ سال خدمت مخلصانه",
-        journeyView: "مشاهده جزئیات",
-        btnBack: "بازگشت",
-        btnClose: "بستن"
-      }
-    };
-  }, [locale]);
+    }, [locale]);
 
   const [activeVideo, setActiveVideo] = useState(null);
   const [selectedHomeVideo, setSelectedHomeVideo] = useState(null);
@@ -243,9 +243,8 @@ export function HomeContent() {
                 dir={locale === "en" ? "ltr" : "rtl"}
               >
                 <span
-                  className={`text-[#D4AF37] text-base md:text-xl font-semibold drop-shadow-sm block sm:inline mb-1 sm:mb-0 ${
-                    locale === "en" ? "sm:mr-2" : "sm:ml-2"
-                  }`}
+                  className={`text-[#D4AF37] text-base md:text-xl font-semibold drop-shadow-sm block sm:inline mb-1 sm:mb-0 ${locale === "en" ? "sm:mr-2" : "sm:ml-2"
+                    }`}
                 >
                   {welcome.greeting}
                 </span>{" "}
@@ -255,12 +254,12 @@ export function HomeContent() {
                 <span className={nameClass}>{welcome.name}</span>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mt-4 w-full border-t-2 border-[#D4AF37]/20 pt-6">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7 mt-4 w-full border-t-2 border-[#D4AF37]/20 pt-6">
                 {honors?.map((btn, i) => (
                   <div key={i} className="w-full md:w-auto flex justify-center">
                     <Link
                       href={btn.link}
-                      className={`group relative inline-flex items-center gap-1.5 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] rounded-full shadow-lg hover:scale-[1.03] hover:shadow-[0_0_22px_rgba(212,175,55,0.65)] transition-all duration-300 w-full max-w-[320px] md:w-[300px] px-2.5 md:px-3 py-1.5 border border-white`}
+                      className={`group relative inline-flex items-center gap-2.5 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] rounded-full shadow-lg hover:scale-[1.03] hover:shadow-[0_0_22px_rgba(212,175,55,0.65)] transition-all duration-300 w-full max-w-[320px] md:w-[300px] px-2.5 md:px-3 py-1.5 border border-white`}
                     >
                       <div className="relative h-11 w-11 md:h-12 md:w-12 rounded-full border border-white shadow-md overflow-hidden flex-shrink-0 animate-ripple z-10 bg-white p-0.5">
                         <img src={btn.gif} alt={btn.title} className="w-full h-full object-cover rounded-full" />
@@ -330,12 +329,12 @@ export function HomeContent() {
                 <h2 className={`text-2xl md:text-3xl font-bold text-[#D4AF37] mb-4 ${bodyFont(locale)} leading-snug`}>
                   {labels.projTitle}
                 </h2>
-                <p className={`text-gray-300 text-sm md:text-base leading-relaxed ${bodyFont(locale)} mb-6 font-normal`}>
+                <p className={`text-gray-300 text-sm md:text-base leading-relaxed ${bodyFont(locale)} mb-6 font-normal ${locale === 'fa' ? 'text-justify' : ''}`}>
                   {labels.projDesc}
                 </p>
 
                 {/* 🔘 بٹن پینل (جو اب سیدھا فلپ بک لائبریری میں لے جائے گا) */}
-                <div className="flex flex-wrap gap-3 justify-start">
+                <div className={`flex flex-wrap gap-3 justify-start`}>
 
                   {/* 🟢 یہ بٹن اب سیدھا لائبریری جائے گا */}
                   <Link
@@ -432,36 +431,35 @@ export function HomeContent() {
               <div className="w-20 h-1 bg-[#D4AF37] mx-auto rounded-full shadow-md"></div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-stretch">
               {journey?.map((item, i) => (
                 <Link key={i} href={item.link || '#'} className="flex group relative">
 
-                  <div className={`relative bg-white rounded-2xl p-6 border-2 border-[#D4AF37]/30 shadow-sm transition-all duration-500 overflow-hidden transform group-hover:-translate-y-2 group-hover:shadow-[0_15px_35px_rgba(212,175,55,0.25)] w-full h-full ${locale === 'en' ? 'text-left items-start' : 'text-right items-end'} group-hover:bg-[#0f4c75] group-hover:border-[#D4AF37] cursor-pointer`} dir={mainDir}>
+                  <div className={`relative bg-white rounded-2xl p-4 md:p-5 border-2 border-[#D4AF37]/30 shadow-sm transition-all duration-500 overflow-hidden transform group-hover:-translate-y-2 group-hover:shadow-[0_15px_35px_rgba(212,175,55,0.25)] w-full h-full flex flex-col items-start group-hover:bg-[#0f4c75] group-hover:border-[#D4AF37] cursor-pointer`} dir={locale === 'ur' ? mainDir : locale === 'en' ? 'ltr' : 'rtl'}>
 
                     {/* آئیکن + عنوان: EN بائیں→دائیں، اردو/فارسی دائیں→بائیں */}
                     <div
-                      className={`flex items-center justify-between w-full mb-4 gap-3 ${
-                        locale === "en" ? "flex-row" : "flex-row-reverse"
-                      }`}
+                      className={`flex w-full items-center gap-2 mb-3 ${locale === "en" ? "flex-row" : "flex-row"
+                        }`}
                     >
-                      <div className="relative flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-xl flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out group-hover:from-[#D4AF37] group-hover:to-[#B38728] group-hover:text-[#0f4c75] group-hover:rotate-[360deg] group-hover:scale-110">
+                      <div className="relative flex-shrink-0 w-10 h-10 bg-gradient-to-br from-[#0f4c75] to-[#1e6091] text-white rounded-xl flex items-center justify-center shadow-lg transition-all duration-700 ease-in-out group-hover:from-[#D4AF37] group-hover:to-[#B38728] group-hover:text-[#0f4c75] group-hover:rotate-[360deg] group-hover:scale-110">
                         {item.icon}
                       </div>
 
-                      <h3 className={`font-bold text-[#0f4c75] text-base md:text-lg ${bodyFont(locale)} ${locale === "en" ? "text-left" : "text-right"} group-hover:text-white transition-colors duration-300 flex-grow leading-snug min-w-0`}>
+                      <h3 className={`font-bold text-[#0f4c75] text-sm md:text-base ${bodyFont(locale)} w-full group-hover:text-white transition-colors duration-300 leading-snug break-words ${locale === "en" ? "text-left" : "text-right"}`}>
                         {item.title}
                       </h3>
                     </div>
 
                     {/* تفصیل (Description) */}
-                    <p className={`text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed font-normal transition-colors duration-300 flex-grow ${locale === "en" ? "text-left" : "text-right"} w-full ${bodyFont(locale)}`}>
+                    <p className={`text-gray-600 group-hover:text-gray-200 text-xs leading-snug font-normal transition-colors duration-300 flex-grow w-full ${bodyFont(locale)} ${locale === "en" ? "text-left" : "text-right"} whitespace-normal`}>
                       {item.desc}
                     </p>
 
                     {/* نچلی پٹی */}
-                    <div className="mt-5 pt-3 border-t border-gray-100 w-full group-hover:border-white/20 transition-colors">
-                      <div className={`flex ${locale === 'en' ? 'flex-row' : 'flex-row-reverse'} items-center justify-between`}>
-                        <span className={`text-xs text-[#0f4c75] group-hover:text-white font-semibold ${bodyFont(locale)}`}>{labels.journeyView}</span>
+                    <div className="mt-3 pt-2 border-t border-gray-100 w-full group-hover:border-white/20 transition-colors">
+                      <div className={`flex items-center justify-between w-full ${locale === 'en' ? 'flex-row' : 'flex-row'}`}>
+                        <span className={`text-xs text-[#0f4c75] group-hover:text-white font-semibold ${bodyFont(locale)} ${locale === "en" ? "text-left" : "text-right"}`}>{labels.journeyView}</span>
                         {locale === 'en' ? <FaArrowRight className="text-[#D4AF37] group-hover:text-white text-xs -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" /> : <FaArrowLeft className="text-[#D4AF37] group-hover:text-white text-xs translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500" />}
                       </div>
                     </div>
@@ -478,7 +476,7 @@ export function HomeContent() {
       {/* 🎬 ویڈیو ماڈل */}
       {activeVideo && (
         <div className="fixed inset-0 bg-black/95 flex flex-col items-center justify-center p-4 backdrop-blur-md z-[99999]">
-          <div className="w-full max-w-4xl flex flex-col items-center">
+          <div className="w-full max-w-3xl flex flex-col items-center">
             <button onClick={() => setActiveVideo(null)} className="mb-4 flex items-center justify-center gap-2 bg-[#D4AF37] text-black px-5 py-2 rounded-full font-bold">
               {locale === 'en' ? <FaArrowRight className="rotate-180" /> : <FaArrowLeft size={14} />} {labels.btnBack}
             </button>
@@ -486,7 +484,7 @@ export function HomeContent() {
               {activeVideo.includes('youtu') ? (
                 <iframe src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1`} frameBorder="0" allowFullScreen></iframe>
               ) : (
-                <video src={activeVideo} controls autoPlay className="w-full h-full object-contain"></video>
+                <video src={activeVideo} controls autoPlay className="w-full h-full object-contain max-h-[60vh]"></video>
               )}
             </div>
           </div>
@@ -496,18 +494,18 @@ export function HomeContent() {
       {/* 🟢 پاپ اپس (ویڈیو اور بکلیٹ) */}
       {selectedHomeVideo && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setSelectedHomeVideo(null)}>
-          <div className="relative w-full max-w-4xl" onClick={e => e.stopPropagation()}>
+          <div className="relative w-full max-w-3xl" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setSelectedHomeVideo(null)}>
               <FaTimes /> {labels.btnClose}
             </button>
-            <video src={selectedHomeVideo} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37]" />
+            <video src={selectedHomeVideo} controls autoPlay className="w-full rounded-2xl border-4 border-[#D4AF37] max-h-[60vh]" />
           </div>
         </div>
       )}
 
       {showHomeBooklet && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setShowHomeBooklet(false)}>
-          <div className="relative w-full max-w-5xl h-[85vh]" onClick={e => e.stopPropagation()}>
+          <div className="relative w-full max-w-4xl h-[70vh]" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setShowHomeBooklet(false)}>
               <FaTimes /> {labels.btnClose}
             </button>

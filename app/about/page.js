@@ -66,11 +66,13 @@ export default function UltimateAboutPage() {
       <Navbar />
       <HeroSlider />
 
-      {/* 🌟 1. روح پرور ہیڈر */}
+{/* 🌟 1. روح پرور ہیڈر (درست اور سینٹرڈ) */}
       <section className="relative bg-gradient-to-r from-[#0b314d] via-[#0f4c75] to-[#0b314d] py-16 text-center border-b-4 border-[#D4AF37]">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
-        <div className="relative z-10 px-4">
-          <div className="relative inline-block mb-8 mt-4">
+        <div className="relative z-10 px-4 flex flex-col items-center justify-center">
+          
+          {/* تصویر */}
+          <div className="relative mb-8 mt-4">
             <div className="animate-ripple bg-white p-1 rounded-full">
               <img
                 src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768008780/757657567_xgnsri.png"
@@ -79,8 +81,14 @@ export default function UltimateAboutPage() {
               />
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[#D4AF37] mb-2 urdu-text drop-shadow-lg">حاجی شبیر احمد شگری</h1>
-          <p className="text-white text-lg md:text-2xl font-light opacity-90 urdu-text">خادمِ ثقلین | صحافی، محقق، براڈکاسٹر اور ثقافتی ماہر</p>
+          
+          {/* نام اور عہدے - اب یہ ہر حال میں سینٹر رہیں گے */}
+          <div className="max-w-2xl text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#D4AF37] mb-2 urdu-text drop-shadow-lg">حاجی شبیر احمد شگری</h1>
+            <p className="text-white text-lg md:text-2xl font-light opacity-90 urdu-text leading-relaxed">
+              خادمِ ثقلین | صحافی، محقق، براڈکاسٹر اور ثقافتی ماہر
+            </p>
+          </div>
         </div>
       </section>
 
@@ -116,9 +124,13 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
-      {/* 🧩 3. بانی اور سرپرست */}
+{/* 🧩 3. بانی اور سرپرست */}
       <section className="container mx-auto px-4 py-10 relative z-10">
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] mb-8 urdu-text border-b-2 border-[#D4AF37] inline-block pb-2 mx-auto flex justify-center">بانی اور سرپرست</h2>
+<div className="flex justify-center w-full my-8">
+  <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] border-b-4 border-[#D4AF37] pb-2 px-4 urdu-text w-fit">
+    بانی اور سرپرست
+  </h2>
+</div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
           {founderItems.map((item, i) => {
             const title = item.title || "";
@@ -137,7 +149,7 @@ export default function UltimateAboutPage() {
               </div>
             );
 
-            // 🟢 1. کلچر اینڈ ٹریڈ (پاپ اپ) - اب یہ بالکل پرفیکٹ کھلے گا
+            // 🟢 1. کلچر اینڈ ٹریڈ (پاپ اپ)
             if (title.includes("کلچر") || title.includes("ٹریڈ")) {
               return <button key={i} onClick={() => setShowCulturePopup(true)} className="w-full h-full block text-center">{CardContent}</button>;
             }
@@ -145,7 +157,7 @@ export default function UltimateAboutPage() {
             if (title.includes("انجمن")) {
               return <Link href="/diplomatic-services#anjuman" key={i} className="w-full h-full block">{CardContent}</Link>;
             }
-            // 🟡 3. ٹورزم (یہاں اسپیلنگ ٹورزم کر دی ہے تاکہ میچ ہو جائے)
+            // 🟡 3. ٹورزم
             if (title.includes("ٹورازم") || title.includes("سیاحت") || title.includes("ٹورزم")) {
               return <Link href="/diplomatic-services#tourism" key={i} className="w-full h-full block">{CardContent}</Link>;
             }
@@ -166,7 +178,6 @@ export default function UltimateAboutPage() {
               return <Link href="/project" key={i} className="w-full h-full block">{CardContent}</Link>;
             }
 
-            // ⚪ باقی سب کے لیے (جیسے آپارات کا پرانا اوریجنل لنک)
             return <Link href={linkHref} key={i} className="w-full h-full block">{CardContent}</Link>;
           })}
         </div>
@@ -465,17 +476,17 @@ export default function UltimateAboutPage() {
       {activeVideo && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-5xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
-          <div className="w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
+          <div className="w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(212,175,55,0.6)] border-4 border-[#D4AF37]">
             {activeVideo.includes('youtu') ? (
               <iframe
-                className="w-full h-[50vh] md:h-[70vh]"
+                className="w-full max-h-[60vh]"
                 src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1&rel=0`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen>
               </iframe>
             ) : (
-              <video className="w-full h-[50vh] md:h-[70vh] bg-black" src={activeVideo} controls autoPlay playsInline></video>
+              <video className="w-full max-h-[60vh] bg-black" src={activeVideo} controls autoPlay playsInline></video>
             )}
           </div>
         </div>

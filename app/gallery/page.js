@@ -46,13 +46,13 @@ export default function ModernGallery() {
       <HeroSlider />
 
       {/* 🎨 جدید ہیڈر */}
-      <section className="bg-[#0b314d] py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0b314d]/50"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="bg-[#0b314d] py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0b314d]/50" />
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <h1 className="text-3xl md:text-6xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-2xl">تصویری دستاویزی سفر</h1>
-          <p className="text-white/80 text-xl md:text-2xl urdu-text font-light tracking-widest">یادوں کے جھروکوں سے 45 سالہ خدمات کی ایک جھلک</p>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-8 rounded-full"></div>
+          <p className="text-white/80 text-xl md:text-2xl urdu-text font-light tracking-widest max-w-3xl">یادوں کے جھروکوں سے 45 سالہ خدمات کی ایک جھلک</p>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-8 rounded-full" />
         </div>
       </section>
 

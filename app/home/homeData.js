@@ -233,6 +233,19 @@ const legendRolesEn = [
   "Religious scholar",
 ];
 
+const legendNamesEn = [
+  "Jafar Rohanas",
+  "Manzoor Ahmed Watto",
+  "Pir Usman Noori",
+  "Pir Ghulam Rasool Owaisi",
+  "Pir Burhan ud Din Usmani",
+  "Hafiz Abdul Ghaffar Ropari",
+  "Sardar Muhammad Khan Laghari",
+  "Pir Masoom Naqvi",
+  "Sardar Sikandar Singh",
+  "Dr. Muhammad Sadaqat Ali Afridi",
+];
+
 const legendRolesFa = [
   "رایزن فرهنگی ایران، لاهور",
   "استاندار سابق پنجاب",
@@ -248,6 +261,7 @@ const legendRolesFa = [
 
 export const legendsDataEn = legendsData.map((l, i) => ({
   ...l,
+  name: legendNamesEn[i] ?? l.name,
   role: legendRolesEn[i] ?? l.role,
 }));
 

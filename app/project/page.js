@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { FaPlay, FaTimes, FaChevronDown, FaMobileAlt, FaInfoCircle, FaCheckCircle, FaBookOpen, FaImages, FaFilm, FaHeadphones, FaShareAlt, FaHeart, FaRegHeart, FaEye, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
@@ -8,6 +9,7 @@ import Footer from '../components/Footer';
 import { quranVideos } from './projectData';
 
 export default function ProjectPage() {
+  const router = useRouter();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [localVideoUrl, setLocalVideoUrl] = useState('');
   const [isLocalVideoOpen, setIsLocalVideoOpen] = useState(false);
@@ -24,6 +26,16 @@ export default function ProjectPage() {
     stories: 8,
     tilawat: 8
   });
+
+  const handleLanguageChange = (lang) => {
+    if (lang === 'fa') {
+      router.push('/fa/home');
+    } else if (lang === 'ur') {
+      router.push('/home');
+    } else {
+      router.push('/home');
+    }
+  };
 
   // ✅ یہاں لنکس بالکل درست کر دیے گئے ہیں
   // ✅ یہاں لنکس کو Cloudinary کے ورکنگ لنکس سے بدل دیا گیا ہے
@@ -176,10 +188,12 @@ export default function ProjectPage() {
             <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772106162/fe64b922-ae4d-4243-b541-9849b90c34df.png" alt="نور القرآن" className="w-full h-auto rounded-2xl shadow-lg border border-[#D4AF37]/50" />
             <div className="space-y-3">
               <div className="flex rounded-xl overflow-hidden shadow-sm">
-                <Link href="/library#Quran" className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors">
+                <Link href="/library#Quran" className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-[#1a1a1a] text-white border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors shadow-sm">
                   <FaBookOpen className="ml-2" /> تفصیل پڑھیں
                 </Link>
-                <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 border-r-0 hover:opacity-80 transition"><FaShareAlt size={14} /></button>
+                <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#1a1a1a] text-white border border-[#D4AF37]/50 border-r-0 hover:bg-[#D4AF37] hover:text-black transition-colors">
+                  <FaShareAlt size={14} />
+                </button>
               </div>
               <div className="flex rounded-xl overflow-hidden shadow-sm">
                 <button onClick={() => handlePlayLocalVideo(AUTHOR_REVIEW.audioUrl)} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-gradient-to-r from-[#D4AF37] to-[#b8860b] text-[#0b314d] hover:shadow-lg transition-all">
@@ -199,8 +213,9 @@ export default function ProjectPage() {
           <div className="flex-1 text-right relative z-10" dir="rtl">
             <div className="flex flex-wrap justify-between items-center mb-6 gap-4 border-b border-gray-800 pb-4">
               <div className="flex gap-2">
-                <button onClick={() => setLangTab('ur')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'ur' ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>اردو</button>
-                <button onClick={() => setLangTab('en')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'en' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>English</button>
+                <button onClick={() => handleLanguageChange('ur')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'ur' ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>اردو</button>
+                <button onClick={() => handleLanguageChange('en')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'en' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>English</button>
+                <button onClick={() => handleLanguageChange('fa')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'fa' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>فارسی</button>
               </div>
             </div>
 
@@ -351,12 +366,12 @@ export default function ProjectPage() {
                 <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs flex items-center gap-1.5"><FaEye /> {popupViews[`yt-${selectedVideo.id}`] || 1}</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <button type="button" onClick={() => shareFromPopup(`yt-${selectedVideo.id}`)} className="px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white text-xs flex items-center gap-1"><FaShareAlt /> شیئر</button>
-                <button onClick={() => shareToPlatform("whatsapp", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-green-100 text-green-700"><FaWhatsapp /></button>
-                <button onClick={() => shareToPlatform("facebook", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-blue-100 text-blue-700"><FaFacebookF /></button>
-                <button onClick={() => shareToPlatform("telegram", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-sky-100 text-sky-700"><FaTelegramPlane /></button>
-                <button onClick={() => shareToPlatform("email", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-gray-100 text-gray-700"><FaEnvelope /></button>
-                <button onClick={() => shareToPlatform("x", `yt-${selectedVideo.id}`)} className="p-2 rounded-full bg-slate-100 text-slate-700"><FaXTwitter /></button>
+                <button type="button" onClick={() => shareFromPopup(`yt-${selectedVideo.id}`)} className="share-btn"><FaShareAlt /> شیئر</button>
+                <button onClick={() => shareToPlatform("whatsapp", `yt-${selectedVideo.id}`)} className="social-icon-btn social-whatsapp"><FaWhatsapp /></button>
+                <button onClick={() => shareToPlatform("facebook", `yt-${selectedVideo.id}`)} className="social-icon-btn social-facebook"><FaFacebookF /></button>
+                <button onClick={() => shareToPlatform("telegram", `yt-${selectedVideo.id}`)} className="social-icon-btn social-telegram"><FaTelegramPlane /></button>
+                <button onClick={() => shareToPlatform("email", `yt-${selectedVideo.id}`)} className="social-icon-btn social-email"><FaEnvelope /></button>
+                <button onClick={() => shareToPlatform("x", `yt-${selectedVideo.id}`)} className="social-icon-btn social-twitter"><FaXTwitter /></button>
               </div>
             </div>
           </div>
@@ -377,12 +392,12 @@ export default function ProjectPage() {
                 <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs flex items-center gap-1.5"><FaEye /> {popupViews[`local-${localVideoUrl}`] || 1}</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <button type="button" onClick={() => shareFromPopup(`local-${localVideoUrl}`)} className="px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white text-xs flex items-center gap-1"><FaShareAlt /> شیئر</button>
-                <button onClick={() => shareToPlatform("whatsapp", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-green-100 text-green-700"><FaWhatsapp /></button>
-                <button onClick={() => shareToPlatform("facebook", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-blue-100 text-blue-700"><FaFacebookF /></button>
-                <button onClick={() => shareToPlatform("telegram", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-sky-100 text-sky-700"><FaTelegramPlane /></button>
-                <button onClick={() => shareToPlatform("email", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-gray-100 text-gray-700"><FaEnvelope /></button>
-                <button onClick={() => shareToPlatform("x", `local-${localVideoUrl}`)} className="p-2 rounded-full bg-slate-100 text-slate-700"><FaXTwitter /></button>
+                <button type="button" onClick={() => shareFromPopup(`local-${localVideoUrl}`)} className="share-btn"><FaShareAlt /> شیئر</button>
+                <button onClick={() => shareToPlatform("whatsapp", `local-${localVideoUrl}`)} className="social-icon-btn social-whatsapp"><FaWhatsapp /></button>
+                <button onClick={() => shareToPlatform("facebook", `local-${localVideoUrl}`)} className="social-icon-btn social-facebook"><FaFacebookF /></button>
+                <button onClick={() => shareToPlatform("telegram", `local-${localVideoUrl}`)} className="social-icon-btn social-telegram"><FaTelegramPlane /></button>
+                <button onClick={() => shareToPlatform("email", `local-${localVideoUrl}`)} className="social-icon-btn social-email"><FaEnvelope /></button>
+                <button onClick={() => shareToPlatform("x", `local-${localVideoUrl}`)} className="social-icon-btn social-twitter"><FaXTwitter /></button>
               </div>
             </div>
           </div>

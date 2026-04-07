@@ -13,21 +13,21 @@ import {
 
 export const founderItems = [
 
-  { icon: <FaQuran />, title: "نور القرآن پراجیکٹ", desc: "World's First Visual Quran" },
+  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran" },
 
-  { icon: <FaTv />, title: "نور پروڈکشنز", desc: "Islamic Media Network" },
+  { icon: <FaTv />, title: "Noor Productions", desc: "Islamic Media Network" },
 
-  { icon: <FaHandshake />, title: "انجمن دوستی پاک ایران", desc: "Friendship Association" },
+  { icon: <FaHandshake />, title: "Pak-Iran Friendship Association", desc: "Friendship Association" },
 
-  { icon: <FaGlobe />, title: "پاک ایران ویب سائٹ", desc: "Web Portal (Urdu/Farsi)" },
+  { icon: <FaGlobe />, title: "Pak-Iran Website", desc: "Web Portal (Urdu/Farsi)" },
 
-  { icon: <FaGlobe />, title: "ٹریڈ اینڈ کلچر فیڈریشن", desc: "Federation of Culture & Trade" },
+  { icon: <FaGlobe />, title: "Trade and Culture Federation", desc: "Federation of Culture & Trade" },
 
-  { icon: <FaTrophy />, title: "بانی: پاک ایران ٹورزم", desc: "First Time in Pakistan" },
+  { icon: <FaTrophy />, title: "Founder: Pak-Iran Tourism", desc: "First Time in Pakistan" },
 
-  { icon: <FaTv />, title: "آپارات چینل (فارسی)", desc: "Temporarily Unavailable" },
+  { icon: <FaTv />, title: "Aparat Channel (Farsi)", desc: "Temporarily Unavailable" },
 
-  { icon: <FaQuran />, title: "طفلانِ نور چینل", desc: "Kids Entertainment Channel" }
+  { icon: <FaQuran />, title: "Tiflanoor Channel", desc: "Kids Entertainment Channel" }
 
 ];
 
@@ -35,13 +35,13 @@ export const founderItems = [
 
 export const mediaRoles = [
 
-  { icon: <FaMicrophone />, title: "Radio Host", desc: "ریڈیو پاکستان سکردو (بھائی جان)" },
+  { icon: <FaMicrophone />, title: "Radio Host", desc: "Radio Pakistan Skardu (Bhai Jan)" },
 
-  { icon: <FaTv />, title: "TV Anchor", desc: "سٹار ایشیا (پروگرام رہنما)" },
+  { icon: <FaTv />, title: "TV Anchor", desc: "Star Asia (Program Guide)" },
 
-  { icon: <FaVideo />, title: "Producer", desc: "2000+ ڈاکومنٹریز و ویڈیوز" },
+  { icon: <FaVideo />, title: "Producer", desc: "2000+ Documentaries and Videos" },
 
-  { icon: <FaNewspaper />, title: "Journalist", desc: "45 سالہ صحافتی تجربہ" }
+  { icon: <FaNewspaper />, title: "Journalist", desc: "45 Years of Journalism Experience" }
 
 ];
 

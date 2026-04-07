@@ -92,21 +92,6 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="flex justify-center gap-6 mb-5 pb-5 border-b border-blue-700/50">
-            {socialLinks.map((social, i) => (
-              <a
-                key={i}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-2xl text-[#D4AF37] transition duration-300 hover:scale-125 hover:-translate-y-2 ${social.color} drop-shadow-md`}
-                title={social.name}
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
-
           <div className="text-center flex flex-col items-center gap-1">
             <p
               dir="ltr"

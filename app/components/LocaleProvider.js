@@ -16,9 +16,9 @@ const STORAGE_KEY = "site-locale";
 
 /** راستہ ـ ہوم پر زبان طے کرتا ہے (localStorage بعد میں اسے اووررائڈ نہ کرے) */
 function localeFromPathname(pathname) {
-  if (pathname === "/en/home") return "en";
-  if (pathname === "/fa/home") return "fa";
-  if (pathname === "/home") return "ur";
+  if (pathname === "/en" || pathname === "/en/home" || pathname.startsWith("/en/")) return "en";
+  if (pathname === "/fa" || pathname === "/fa/home" || pathname.startsWith("/fa/")) return "fa";
+  if (pathname === "/" || pathname === "/home") return "ur";
   return null;
 }
 

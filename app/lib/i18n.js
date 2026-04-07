@@ -185,3 +185,25 @@ export function getHomePath(locale) {
   return "/home";
 }
 
+/** تمام صفحات کے لیے درست لینگویج پاتھ بنائیں */
+/** @param {string} pathname - موجودہ راستہ 
+ @param {SiteLocale} locale - ہدف لینگویج */
+export function getLocalizedPath(pathname, locale) {
+  // `/fa/...` یا `/en/...` سے لینگویج prefix ہٹائیں
+  let basePath = pathname;
+  if (pathname.startsWith("/fa/")) {
+    basePath = pathname.slice(3); // `/fa/` ہٹائیں
+  } else if (pathname.startsWith("/en/")) {
+    basePath = pathname.slice(3); // `/en/` ہٹائیں
+  }
+
+  // اب basePath ہے جیسے `/project`, `/about`, `/home` وغیرہ
+  if (locale === "fa") {
+    return `/fa${basePath}`;
+  } else if (locale === "en") {
+    return `/en${basePath}`;
+  }
+  // اردو کے لیے prefix نہیں
+  return basePath;
+}
+

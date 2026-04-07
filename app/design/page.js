@@ -1,17 +1,14 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
 import { FaPaintBrush, FaPalette, FaMosque, FaTree, FaFilm, FaImage, FaBookOpen, FaBook, FaNewspaper, FaCheckCircle, FaSearchPlus, FaTimes, FaChevronLeft, FaChevronRight, FaShareAlt, FaGlobe, FaHeadphones } from "react-icons/fa";
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function DesignPortfolio() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  
-  // 🟢 پاپ اپ کے لیے اسٹیٹس
-  const [bookModalOpen, setBookModalOpen] = useState(false);
-  const [currentBookUrl, setCurrentBookUrl] = useState(''); 
-  const [videoModalOpen, setVideoModalOpen] = useState(false); // 🔴 ویڈیو پاپ اپ کے لیے نیا اسٹیٹ
-  const [videoUrl, setVideoUrl] = useState(''); // 🔴 ویڈیو کے لنک کے لیے نیا اسٹیٹ
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState('');
   const [langTab, setLangTab] = useState('ur');
 
   // 🟢 خراسان رضوی کتاب کا ڈیٹا
@@ -21,21 +18,14 @@ export default function DesignPortfolio() {
     titleEn: 'Khurasan Razavi',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png',
     badge: 'ڈیزائن و لے آؤٹ',
-    descUrdu: 'یہ ایک شاندار تصویری کتاب ہے جس کی مکمل ڈیزائننگ (Graphics & Layout) خاکسار نے کی۔ یہ پاکستان میں ڈیزائن ہونے والی پہلی ایرانی کتاب تھی، جو بعد ازاں ایران سے اعلیٰ ترین معیار پر شائع ہوئی۔ اس کتاب میں خراسان اور مشہدِ مقدس کے تاریخی، ثقافتی اور روحانی مقامات کو انتہائی خوبصورتی سے پیش کیا گیا ہے۔', 
-    descEn: 'A magnificent pictorial book completely designed (Graphics & Layout) by the author. It was the first Iranian book designed in Pakistan, later published in Iran with the highest quality standards. This book beautifully presents the historical, cultural, and spiritual sites of Khurasan and Mashhad.',
-    flipbookUrl1: 'https://heyzine.com/flip-book/13dc8af2e5.html', // حصہ اول
-    flipbookUrl2: 'https://heyzine.com/flip-book/2fc9607e11.html', // حصہ دوم
-    videoUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4', // 🔴 ویڈیو تبصرہ
-    audioUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4'  // 🔴 آڈیو پوڈکاسٹ
+    descUrdu: 'یہ ایک شاندار تصویری کتاب ہے جس کی مکمل ڈیزائننگ (Graphics & Layout) خاکسار نے کی۔ یہ پاکستان میں ڈیزائن ہونے والی پہلی ایرانی کتاب تھی، جو بعد ازاں ایران سے اعلیٰ ترین معیار پر شائع ہوئی۔ اس کتاب میں خراسان اور مشہدِ مقدس کے تاریخی، ثقافتی اور روحانی مقامات کو انتہائی خوبصورتی سے پیش کیا گیا ہے۔ اس میں ایران کی تاریخی عمارات، مزاریں، اور ثقافتی میراث کے ہزاروں تصویریں شامل ہیں جو خصوصی جمع و ترتیب کے ساتھ تیار کی گئی ہیں۔', 
+    descEn: 'A magnificent pictorial book completely designed (Graphics & Layout) by the author. It was the first Iranian book designed in Pakistan, later published in Iran with the highest quality standards. This book beautifully presents the historical, cultural, and spiritual sites of Khurasan and Mashhad. It contains thousands of carefully selected and curated photographs of Iran\'s historical buildings, shrines, and cultural heritage.',
+    libraryUrl: '/library#book-khorasan',
+    videoUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4',
+    audioUrl: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4'
   };
 
-  const handleOpenBook = (e, url) => {
-    e.preventDefault();
-    setCurrentBookUrl(url); 
-    setBookModalOpen(true);
-  };
-
-  // 🔴 ویڈیو یا آڈیو چلانے کا نیا فنکشن
+  // 🔴 ویڈیو یا آڈیو چلانے کا فنکشن
   const handlePlayVideo = (e, url) => {
     e.preventDefault();
     if (url) {
@@ -147,7 +137,7 @@ export default function DesignPortfolio() {
             </div>
             <div className="relative z-10 text-right urdu-text" dir="rtl">
               <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-6">بچپن کے شوق سے شاہکاروں تک</h3>
-              <p className="text-gray-300 leading-relaxed text-lg text-justify">
+              <p className="text-gray-300 leading-relaxed text-lg text-justify" dir="rtl">
                 "بچپن ہی سے مجھے لکھنے، آرٹ اور ڈیزائننگ سے جنون کی حد تک لگاؤ تھا۔ اسکول کے زمانے میں بزمِ ادب کی سرگرمیاں ہوں یا اسٹیج ڈرامے، میں ہمیشہ ان کی جان ہوا کرتا تھا۔ ڈرائنگ کے مقابلوں میں ہمیشہ اول پوزیشن حاصل کرنا اور کلاس میں نمایاں رہنا میرے اس تخلیقی سفر کی پہلی سیڑھی تھی۔ نوائے وقت کے بچوں کے رسالوں تک میرے کارٹون چھپا کرتے تھے۔"
               </p>
             </div>
@@ -155,7 +145,7 @@ export default function DesignPortfolio() {
 
           <div className="text-right urdu-text" dir="rtl">
              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 border-b border-gray-800 pb-4 inline-block">خانہ فرہنگ ایران: تخلیقی میدان</h2>
-             <p className="text-gray-300 leading-[2.2] text-lg text-justify mb-6">
+             <p className="text-gray-300 leading-[2.2] text-lg text-justify mb-6" dir="rtl">
                خانہ فرہنگ ایران (لاہور) میں اپنی سفارتی اور ابلاغی خدمات کے دوران، 'شعبہ ڈیزائننگ اور آڈیو/ویڈیو' کی ذمہ داری بھی میرے پاس تھی۔ اس نے مجھے اپنے اندر چھپے آرٹسٹ کو باہر لانے کا ایک شاندار موقع فراہم کیا۔
              </p>
              <ul className="space-y-4 text-gray-400">
@@ -173,7 +163,7 @@ export default function DesignPortfolio() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] urdu-text mb-6">آرٹ، گرافک ڈیزائننگ اور 3D شاہکار</h2>
-            <p className="text-gray-400 text-lg md:text-xl urdu-text max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-gray-400 text-lg md:text-xl urdu-text max-w-4xl mx-auto font-light leading-relaxed" dir="rtl">
               آج سے 25 سال قبل، جب ڈیجیٹل فلیکس (Flex) پرنٹنگ یا کمپیوٹر گرافکس کا کوئی خاص تصور نہیں تھا، میں نے اپنی تخلیقی صلاحیتوں کی بدولت ایسے شاہکار تخلیق کیے جو آج بھی یادگار ہیں۔
             </p>
           </div>
@@ -188,19 +178,11 @@ export default function DesignPortfolio() {
               <img src={khurasanBook.image} alt={khurasanBook.title} className="w-full rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.8)] border border-gray-800 object-cover group-hover:border-[#D4AF37]/30 transition-colors" />
               
               <div className="flex flex-col gap-3">
-                {/* 🔴 حصہ اول کا بٹن */}
+                {/* 🔴 کتاب پڑھیں - لائبریری میں کھولیں */}
                 <div className="flex rounded-xl overflow-hidden shadow-sm">
-                  <button onClick={(e) => handleOpenBook(e, khurasanBook.flipbookUrl1)} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors">
-                    <FaBook className="ml-2" /> حصہ اول پڑھیں
-                  </button>
-                  <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14}/></button>
-                </div>
-
-                {/* 🔴 حصہ دوم کا بٹن */}
-                <div className="flex rounded-xl overflow-hidden shadow-sm">
-                  <button onClick={(e) => handleOpenBook(e, khurasanBook.flipbookUrl2)} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors">
-                    <FaBook className="ml-2" /> حصہ دوم پڑھیں
-                  </button>
+                  <Link href={khurasanBook.libraryUrl} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm urdu-text bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors">
+                    <FaBook className="ml-2" /> کتاب پڑھیں (آن لائن)
+                  </Link>
                   <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#1a1a1a] text-[#D4AF37] border border-[#D4AF37]/50 border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14}/></button>
                 </div>
 
@@ -233,14 +215,14 @@ export default function DesignPortfolio() {
               </div>
 
               {langTab === 'ur' ? (
-                <div>
+                <div dir="rtl">
                   <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6 urdu-text">{khurasanBook.title}</h2>
                   <p className="text-gray-300 text-base md:text-lg leading-[2.2] text-justify urdu-text font-light">{khurasanBook.descUrdu}</p>
                 </div>
               ) : (
                 <div className="font-sans text-left" dir="ltr">
                   <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-6">{khurasanBook.titleEn}</h2>
-                  <p className="text-gray-300 text-base md:text-lg leading-relaxed text-justify font-light">{khurasanBook.descEn}</p>
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed text-left font-light">{khurasanBook.descEn}</p>
                 </div>
               )}
             </div>
@@ -254,44 +236,49 @@ export default function DesignPortfolio() {
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaNewspaper size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaNewspaper /></div>
                <h3 className="text-2xl font-bold text-white mb-4 urdu-text">فارسی مجلہ 'شاخِ نبات'</h3>
-               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
                  ایران کے مشہور اور ڈیزائن سے بھرپور فارسی مجلے 'شاخِ نبات' کے تمام صفحات کی مکمل ڈیزائننگ کا اعزاز بھی مجھے حاصل رہا۔ ایرانی قوم آرٹ میں بہت آگے ہے، اور ان کے معیارات پر پورا اترنا میرے لیے ایک اعزاز تھا۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
-               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaPaintBrush size={120}/></div>
-               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaPaintBrush /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">الحمرا کا 90 فٹ طویل شاہکار</h3>
+            <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
+               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaNewspaper size={120}/></div>
+               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaNewspaper /></div>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">فارسی مجلہ 'شاخِ نبات'</h3>
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
+                 ایران کے مشہور ترین اور ڈیزائن سے بھرپور فارسی مجلے 'شاخِ نبات' کے تمام صفحات کی مکمل ڈیزائننگ اور لے آؤٹ کا اعزاز مجھے حاصل ہوا۔ اس مجلے میں ایرانی ثقافت، شاعری، اور فنونِ لطیفہ کی بہترین مثالیں ہوتی تھیں۔ ایرانی قوم آرٹ اور ڈیزائننگ میں انتہائی ترقی یافتہ ہے، اور ان کے اعلیٰ معیارات پر پورا اترنا میرے لیے ایک بہت بڑا اعزاز اور چیلنج تھا۔ اس کام نے میری ڈیزائننگ کی صلاحیتوں کو آگے بڑھانے میں بہت مدد دی۔
+               </p>
+            </div>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
-                 انقلابِ اسلامی ایران کی سالگرہ پر الحمرا لاہور کی بیرونی دیوار کے لیے <strong>تقریباً 100 فٹ کا طویل ترین بینر</strong> اپنے ہاتھوں سے پینٹ کیا۔ اس پر 'میدانِ آزادی' کا تفصیلی ڈیزائن تھا جو دور دور سے توجہ کا مرکز بنتا تھا۔
+                 انقلابِ اسلامی ایران کی سالگرہ کی تقریب میں، الحمرا لاہور کی بیرونی دیوار کے لیے <strong>تقریباً 100 فٹ کی طویل ترین دیوار پر ہاتھ سے پینٹنگ</strong> کی۔ اس میں 'میدانِ آزادی' تہران کا تفصیلی منظر اور ایرانی انقلاب کی علامات موجود تھیں۔ یہ شاہکار روز سے رات تک دور دور سے شہر بھر میں نظر آتا تھا اور ہر آنے والے کو متاثر کرتا تھا۔ اس کے رنگ اور ڈیزائن ایران کے روحانی و سیاسی نظریات کو خوبصورتی سے ظاہر کرتے تھے۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaMosque size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaMosque /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">مسجدِ نبویؐ اور روضہ امام علیؑ</h3>
-               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
-                 ایک خصوصی پروگرام کے لیے تھرموپور سے مسجدِ نبویؐ کا ایک شاندار قدِ آدم ماڈل اور روضہ امام علی علیہ السلام کا انتہائی خوبصورت اور تفصیلی نمونہ تیار کیا، جسے حاضرین نے بے حد سراہا۔
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">مسجدِ نبوی اور روضہ امام علی - تھرموپور شاہکار</h3>
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
+                 ایک بہت بڑی ثقافتی و مذہبی تقریب کے لیے تھرموپور (Thermofoam) سے مسجدِ نبوی ﷺ کا ایک شاندار اور تفصیلی قدِ آدم ماڈل تیار کیا۔ ساتھ ہی، روضہ امام علی علیہ السلام کا ایک بہت ہی خوبصورت اور معماری لحاظ سے درست ماڈل بھی تیار کیا۔ ان ماڈلز میں لائٹنگ اور تفصیلات انتہائی شاندار تھیں، جنھوں نے تقریب کو ایک روحانی منظر بخش دیا۔ حاضرین نے ان شاہکاروں کی تعریف و توصیف انتہائی سراہی۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaFilm size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaFilm /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">نوارِ رستم (دیوہیکل مکینیکل کیسٹ)</h3>
-               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
-                 میں نے ایک VHS کیسٹ کا دیوہیکل مکینیکل ماڈل تیار کیا۔ ایرانی حکام نے اس کی جسامت دیکھ کر اسے <strong>"نوارِ رستم"</strong> کا نام دیا۔ اس کے اندر ریل باقاعدہ گھومتی تھی اور لائٹس کی مدد سے فلم چلتی ہوئی دکھائی دیتی تھی۔
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">نوارِ رستم - دیوہیکل مکینیکل VHS کیسٹ</h3>
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
+                 میں نے ایک عظیم الشان دیوہیکل VHS کیسٹ کا ماڈل تیار کیا جو حقیقی کیسٹ کے مقابلے میں زیادہ بڑا تھا۔ اس میں ریل اندر سے باقاعدہ گھومتی تھی اور اردگرد لگی خصوصی لائٹس کی مدد سے فلم چلتی ہوئی دکھائی دیتی تھی۔ ایرانی حکام نے اس کی منفرد تخلیق اور جسامت دیکھ کر اسے 'نوارِ رستم' کا نام دیا، جو ایرانی روایات میں کسی بہت بڑی اور اہم چیز کے لیے استعمال ہوتا ہے۔ یہ تقریب کا ایک منفرد کردار ادا کرتا تھا۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaTree size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaTree /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">شجرِ اہلِ بیتؑ (نورانی درخت)</h3>
-               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
-                 ایک ایسا منفرد درخت ڈیزائن کیا جس کے پتوں پر اسمائے اہلِ بیت علیہم السلام کندہ تھے اور ان میں نصب خصوصی لائٹس انہیں تقریب کے دوران روشن کر دیتی تھیں۔ یہ ایک انتہائی روحانی منظر پیش کرتا تھا۔
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">شجرِ اہلِ بیت ؑ - نورانی روحانی درخت</h3>
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
+                 میں نے ایک منفرد اور روحانی نوعیت کا درخت ڈیزائن کیا جو شجرِ اہلِ بیت علیہم السلام کی نمائندگی کرتا تھا۔ اس درخت کے پتوں پر حضرت محمد ﷺ اور آئمہ اہلِ بیتؑ کے نام اور القابات خوبصورتی سے کندہ تھے۔ درخت میں خصوصی لائٹنگ سسٹم نصب تھا جو تقریب کے دوران ایک ایک پتا روشن ہو جاتا تھا، جس سے ایک بہت ہی پرجلال اور روحانی منظر پیدا ہوتا تھا۔ یہ تقریب کا ایک فوکس پوائنٹ بن جاتا تھا۔
                </p>
             </div>
 
@@ -304,7 +291,7 @@ export default function DesignPortfolio() {
         <div className="text-center mb-12">
            <div className="inline-block bg-[#D4AF37] text-black px-6 py-2 rounded-full font-bold urdu-text text-sm mb-4">26 سال قبل کے شاہکار</div>
            <h2 className="text-2xl md:text-4xl font-bold text-white urdu-text mb-4">تاریخی تصویری گیلری</h2>
-           <p className="text-gray-400 text-base md:text-lg urdu-text max-w-3xl mx-auto">
+           <p className="text-gray-400 text-base md:text-lg urdu-text max-w-3xl mx-auto" dir="rtl">
              جب کمپیوٹر اور اے آئی کا دور نہیں تھا، یہ ان دنوں کی دستی محنت اور تخلیق کی جیتی جاگتی تصاویر ہیں۔ یہ تمام شاہکار تھرموپور، آئل پینٹنگز اور مکینیکل آرٹ کا بہترین نمونہ ہیں۔
            </p>
         </div>
@@ -380,17 +367,7 @@ export default function DesignPortfolio() {
         </div>
       )}
 
-      {/* 📚 🔴 کتاب کا پاپ اپ 🔴 */}
-      {bookModalOpen && (
-        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-2 backdrop-blur-sm" onClick={() => setBookModalOpen(false)}>
-          <div className="w-full max-w-5xl h-[90vh] bg-white rounded-2xl overflow-hidden relative shadow-[0_0_50px_rgba(212,175,55,0.3)] border-4 border-[#D4AF37]" onClick={e => e.stopPropagation()}>
-             <button className="absolute top-2 right-4 text-black bg-white/50 rounded-full w-10 h-10 flex items-center justify-center text-4xl font-bold z-10 hover:text-red-600 hover:bg-white transition shadow-lg" onClick={() => setBookModalOpen(false)}>&times;</button>
-             <iframe src={currentBookUrl} className="w-full h-full border-none" />
-          </div>
-        </div>
-      )}
-
-      {/* 🎦 🔴 ویڈیو / آڈیو کا پاپ اپ 🔴 */}
+      {/* 📚 🔴 ویڈیو / آڈیو کا پاپ اپ 🔴 */}
       {videoModalOpen && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex flex-col items-center justify-center p-4 backdrop-blur-sm" onClick={() => setVideoModalOpen(false)}>
            <div className="w-full max-w-4xl relative flex flex-col items-center animate-in zoom-in-95 duration-300" onClick={e => e.stopPropagation()}>

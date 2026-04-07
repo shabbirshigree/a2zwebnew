@@ -6,7 +6,7 @@ export const contactMethods = [
   {
     icon: <FaWhatsapp size={32} />,
     title: "واٹس ایپ",
-    info: "+92 333 4491715",
+    info: "+92-333-4491715",
     link: "https://wa.me/923334491715"
   },
   {
@@ -20,12 +20,6 @@ export const contactMethods = [
     title: "مقام",
     info: "Skardu, Gilgit Baltistan, Pakistan",
     link: "https://maps.app.goo.gl/YourSkarduLink" // (نقشے کا لنک)
-  },
-  {
-    icon: <FaPhone size={32} />,
-    title: "فون",
-    info: "+92 333 4491715",
-    link: "tel:+923334491715"
   }
 ];
 

@@ -18,6 +18,7 @@ import {
   FaHandshake,
   FaLandmark,
   FaUsers,
+  FaGlobe,
   FaPalette,
   FaMicrophone,
   FaStop,
@@ -26,7 +27,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
-import { getDictionary, getHomePath } from "../lib/i18n";
+import { getDictionary, getHomePath, getLocalizedPath } from "../lib/i18n";
 
 const isHomePath = (p) =>
   p === "/" || p === "/home" || p === "/en/home" || p === "/fa/home";
@@ -204,21 +205,18 @@ export function Navbar() {
             placeholder={
               isListening ? dict.nav.listening : dict.nav.searchPlaceholder
             }
-            className={`w-full bg-transparent text-white text-[12px] outline-none ${
-              locale === "en" ? "pl-8 pr-10" : "pr-8 pl-10"
-            }`}
+            className={`w-full bg-transparent text-white text-[12px] outline-none ${locale === "en" ? "pl-8 pr-10" : "pr-8 pl-10"
+              }`}
           />
           <FaSearch
-            className={`absolute text-[12px] pointer-events-none opacity-70 ${
-              locale === "en" ? "left-2" : "right-2"
-            }`}
+            className={`absolute text-[12px] pointer-events-none opacity-70 ${locale === "en" ? "left-2" : "right-2"
+              }`}
           />
           <button
             type="button"
             onClick={toggleListening}
-            className={`absolute text-[#D4AF37] ${
-              locale === "en" ? "right-2" : "left-2"
-            }`}
+            className={`absolute text-[#D4AF37] ${locale === "en" ? "right-2" : "left-2"
+              }`}
             aria-label="Voice search"
           >
             {isListening ? (
@@ -234,11 +232,12 @@ export function Navbar() {
         </form>
       </div>
 
-      {/* دائیں→بائیں: اردو، فارسی، انگریزی (RTL میں پہلا آئٹم دائیں) */}
+      {/* دائیں→بائیں: گلوب، اردو، فارسی، انگریزی (RTL میں پہلا آئٹم دائیں) */}
       <div
-        className="flex items-center gap-1.5 md:gap-2 z-10 shrink-0"
+        className="flex items-center gap-2 md:gap-3 z-10 shrink-0"
         dir="rtl"
       >
+        <FaGlobe className="text-[16px] md:text-[18px] text-[#D4AF37] animate-pulse" />
         {[
           { code: "ur", label: "اردو" },
           { code: "fa", label: "فارسی" },
@@ -250,21 +249,36 @@ export function Navbar() {
               key={code}
               type="button"
               onClick={() => {
-                setLocale(/** @type {'ur'|'fa'|'en'} */ (code));
-                if (isHomePath(pathname)) router.push(getHomePath(code));
+                setLocale(/** @type {'ur'|'fa'|'en'} */(code));
+                const newPath = getLocalizedPath(pathname, code);
+                router.push(newPath);
               }}
               className={`
-                relative overflow-hidden rounded-xl min-w-[3rem] md:min-w-[3.75rem] px-2 py-1 md:px-2.5 md:py-1.5
-                text-[9px] md:text-[11px] font-bold transition-all duration-300 ease-out
-                border backdrop-blur-sm
-                ${
-                  active
-                    ? "lang-btn-shimmer border-[#D4AF37] bg-gradient-to-br from-[#f7e7b4] via-[#D4AF37] to-[#9a7b2d] text-[#0b314d] shadow-[0_0_18px_rgba(212,175,55,0.75),inset_0_1px_0_rgba(255,255,255,0.45)] scale-[1.06] ring-2 ring-[#D4AF37]/90"
-                    : "border-[#D4AF37]/45 bg-[#0f4c75]/55 text-[#f0e6c8] hover:border-[#D4AF37] hover:bg-[#143a52]/90 hover:shadow-md hover:scale-[1.03]"
+                group relative overflow-hidden rounded-2xl w-14 md:w-16 px-2 py-1.5 md:px-3 md:py-2
+                text-[11px] md:text-[13px] font-extrabold transition-all duration-500 ease-out
+                backdrop-blur-md border-2
+                ${active
+                  ? "bg-gradient-to-br from-[#D4AF37]/90 via-[#B8860B]/80 to-[#FFD700]/70 text-[#0b314d] border-[#FFD700] shadow-[0_0_25px_rgba(212,175,55,0.6)] scale-105 ring-2 ring-[#FFD700]/50"
+                  : "bg-gradient-to-br from-white/10 via-white/5 to-transparent text-white border-white/20 hover:border-[#D4AF37]/60 hover:bg-gradient-to-br hover:from-[#D4AF37]/20 hover:via-[#B8860B]/15 hover:to-[#FFD700]/10 hover:text-[#FFD700] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:scale-105"
                 }
+                before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
+                before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700
+                after:absolute after:inset-0 after:bg-gradient-to-br after:from-transparent after:via-[#FFD700]/10 after:to-transparent
+                after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-500
               `}
             >
-              <span className="relative z-10 drop-shadow-sm">{label}</span>
+              <div className="relative z-10 flex items-center justify-center">
+                <span className="drop-shadow-sm font-black tracking-wide">
+                  {label}
+                </span>
+              </div>
+
+              {/* Animated background particles */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0s' }} />
+                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
+                <div className="absolute bottom-1/4 left-1/2 w-0.5 h-0.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '1s' }} />
+              </div>
             </button>
           );
         })}
@@ -312,9 +326,8 @@ export function HeroSlider() {
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${
-              i === current ? "opacity-100 z-20" : "opacity-0 z-10"
-            }`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${i === current ? "opacity-100 z-20" : "opacity-0 z-10"
+              }`}
           >
             <img
               src={s.img}
@@ -326,7 +339,7 @@ export function HeroSlider() {
             />
           </div>
         ))}
-        <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-0.5 px-1">
+        <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1">
           <p
             className="hero-header-tight hero-mashallah font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
             dir="rtl"
@@ -336,38 +349,36 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className="bg-[#0f4c75]/80 py-1 md:py-1.5 px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-0">
+      <div className="bg-[#0f4c75]/80 py-2 md:py-2.5 px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-2 md:gap-2">
         <p className="hero-header-tight hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 max-w-[min(100%,19rem)]">
           {HERO_NUR_AYAH_AR}
         </p>
 
-        <div className="relative z-10 animate-shrink-enter leading-none mt-0.5 md:mt-1">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 bg-[#D4AF37] blur-[18px] opacity-20 animate-pulse" />
-          <div className="relative text-[#D4AF37] text-[0.85rem] md:text-[0.9rem] animate-breath leading-none">
+        <div className="relative z-10 animate-shrink-enter leading-none mt-1 md:mt-1.5">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 bg-[#D4AF37] blur-[18px] opacity-20 animate-pulse" />
+          <div className="relative text-[#D4AF37] text-[1.1rem] md:text-[1.25rem] animate-breath leading-none">
             <FaBookOpen />
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-0 mt-0.5">
+        <div className="flex flex-col items-center gap-1.5 md:gap-1.5 mt-1">
           <h1
-            className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${
-              locale === "ur"
-                ? "urdu-text text-[17px] sm:text-[18px] md:text-[1.2rem] lg:text-[1.28rem] font-semibold whitespace-nowrap"
+            className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${locale === "ur"
+                ? "urdu-text text-[22px] sm:text-[24px] md:text-[1.5rem] lg:text-[1.65rem] font-semibold whitespace-nowrap"
                 : locale === "fa"
-                  ? "font-persian font-semibold text-[0.95rem] sm:text-[1.05rem] md:text-lg lg:text-xl max-w-[92vw]"
-                  : "font-hero-en font-semibold text-[1rem] sm:text-[1.05rem] md:text-lg lg:text-xl"
-            }`}
+                  ? "font-persian font-semibold text-[1.15rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] max-w-[92vw]"
+                  : "font-hero-en font-semibold text-[1.2rem] sm:text-[1.3rem] md:text-[1.45rem] lg:text-[1.6rem]"
+              }`}
           >
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 mt-0.5 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${
-              locale === "en"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-1 md:pt-1.5 mt-1 md:mt-1.5 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
                   : "urdu-header-roles"
-            }`}
+              }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >
             {rolesLine.map((r, i) => (
@@ -379,7 +390,7 @@ export function HeroSlider() {
           </p>
         </div>
 
-        <div className="flex gap-2.5 mt-0.5 justify-center z-50">
+        <div className="flex gap-4 md:gap-5 mt-1.5 md:mt-1.5 justify-center z-50">
           {socialLinks.map((s, i) => (
             <Link
               key={i}
@@ -404,36 +415,35 @@ export function HeroSlider() {
             const Icon = item.icon;
             const name = dict.menu[item.key];
             const href =
-              item.key === "home" ? getHomePath(locale) : item.link;
+              item.key === "home"
+                ? getHomePath(locale)
+                : getLocalizedPath(item.link, locale);
             const active = pathname === href;
             return (
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex flex-row items-center gap-1 rounded-lg px-1.5 md:px-2 py-1 md:py-1.5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${
-                  active
+                className={`group relative flex flex-row items-center gap-1 rounded-lg px-1.5 md:px-2 py-1 md:py-1.5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/35"
                     : "text-white/80 hover:text-white"
-                }`}
+                  }`}
               >
                 <span className="text-[12px] md:text-[13px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10">
                   <Icon />
                 </span>
                 <span
-                  className={`text-[11px] md:text-[12px] leading-tight ${
-                    locale === "en"
+                  className={`text-[11px] md:text-[12px] leading-tight ${locale === "en"
                       ? "font-sans font-medium"
                       : locale === "fa"
                         ? "font-persian font-semibold"
                         : "urdu-text font-bold"
-                  }`}
+                    }`}
                 >
                   {name}
                 </span>
                 <div
-                  className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${
-                    active ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                  className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${active ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                 />
               </Link>
             );

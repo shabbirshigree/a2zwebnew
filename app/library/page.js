@@ -232,7 +232,7 @@ export default function LibraryPage() {
                   <audio src={mediaUrl} controls autoPlay className="w-full" />
                 </div>
               ) : (
-                <video src={mediaUrl} controls autoPlay className="w-full h-auto aspect-video" />
+                <video src={mediaUrl} controls autoPlay className="w-full h-auto max-h-[60vh]" />
               )}
             </div>
           </div>

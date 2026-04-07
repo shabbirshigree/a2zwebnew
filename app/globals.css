@@ -1,10 +1,23 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
+
+/* ============================================================================ */
+/* 🎯 یہ rule تمام font مسائل ختم کرتا ہے - کوئی دوسرا rule override نہیں کر سکتا */
+/* ============================================================================ */
+html, body, *, *::before, *::after {
+  font-family: 'Jameel Noori Nastaleeq', serif !important;
+  line-height: 1.6 !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  letter-spacing: 0 !important;
+}
 
 /* 🔴 پوری ویب سائٹ پر ٹیکسٹ سلیکٹ (Highlight) کرنے پر پابندی 🔴 */
 body {
   user-select: none;
   -webkit-user-select: none;
-  direction: unset;
+  direction: rtl;
+  text-align: right;
+  font-family: 'Jameel Noori Nastaleeq', serif !important;
 }
 
 /* ==================================================================== */
@@ -22,106 +35,53 @@ body {
 /* اس کلاس کو جہاں بھی لگائیں گے، تحریر اخبار جیسی خوبصورت ہو جائے گی */
 .urdu-text {
   font-family: 'Jameel Noori Nastaleeq', serif !important;
-  line-height: 2.2 !important;
 }
 
-/* ہیڈر میں ایک لائن عہدے — نستعلیق فونٹ مگر عام سطر کی اونچائی */
-.urdu-header-roles {
+.persian-text {
   font-family: 'Jameel Noori Nastaleeq', serif !important;
-  line-height: 1.3 !important;
-}
-
-/* فارسی — Vazirmatn (عربی آیت الگ) */
-.font-persian {
-  font-family: var(--font-vazirmatn), "Vazirmatn", Tahoma, sans-serif;
-  font-weight: 500;
-}
-
-/* عربی قرآنی آیت — Amiri، بقیہ متن سے الگ */
-.font-arabic-verse {
-  font-family: var(--font-amiri), "Amiri", "Scheherazade New", serif;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-}
-
-/* انگریزی ہیڈر نام — ہلکا، زیادہ بولڈ نہیں */
-.font-hero-en {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.font-kufi {
-  font-family: var(--font-kufi), "Reem Kufi", sans-serif;
-  font-weight: 500;
 }
 
 /* ==================================================================== */
 /* 👇 پوری سائٹ کے لیے بہتر Urdu Typography (PC + Mobile)         👇  */
 /* ==================================================================== */
-body {
-  /* next/font سے variable آ رہا ہے، fallback بھی دے رہے ہیں */
-  font-family: var(--font-nastaliq), 'Jameel Noori Nastaleeq', serif;
+main {
   direction: rtl;
   text-align: right;
 }
 
-main {
-  direction: unset;
-  text-align: unset;
-}
-
-/* موبائل/ٹی ایل ونڈ: صفحات خود h1–h6 سائز دیتے ہیں — عالوی clamp ہیڈر و چھوٹے ٹائٹل توڑ دیتا تھا */
 main h1 {
-  font-size: clamp(1.7rem, 3.2vw, 3.1rem);
-  line-height: 1.25;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
   text-align: center;
 }
 
 main h2 {
-  font-size: clamp(1.45rem, 2.7vw, 2.45rem);
-  line-height: 1.28;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
   text-align: center;
 }
 
 main h3 {
-  font-size: clamp(1.2rem, 2.2vw, 1.9rem);
-  line-height: 1.32;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
   text-align: center;
 }
 
 main h4 {
-  font-size: clamp(1.05rem, 1.9vw, 1.5rem);
-  line-height: 1.35;
+  font-size: clamp(0.98rem, 1.6vw, 1.25rem);
   text-align: center;
 }
 
 main h5 {
-  font-size: clamp(0.98rem, 1.6vw, 1.35rem);
-  line-height: 1.4;
+  font-size: clamp(0.92rem, 1.4vw, 1.1rem);
   text-align: center;
 }
 
 main h6 {
-  font-size: clamp(0.93rem, 1.4vw, 1.2rem);
-  line-height: 1.45;
+  font-size: clamp(0.88rem, 1.2vw, 1rem);
   text-align: center;
-}
-
-/* ہیڈر naam: عالوی main h1 clamp نہ لگے */
-main h1.text-fluid-reset {
-  font-size: revert-layer;
-  line-height: revert-layer;
-  text-align: revert-layer;
-  font-weight: revert-layer;
 }
 
 /* اقتباسات (Blockquote) کو بھی اسی نستعلیق vibe کے ساتھ رکھتے ہیں */
 main blockquote {
-  font-family: var(--font-nastaliq), 'Jameel Noori Nastaleeq', serif;
   font-size: clamp(1rem, 1.35vw, 1.28rem);
-  line-height: 2.05;
   text-align: justify;
   direction: rtl;
   margin: 1.25rem 0;
@@ -131,39 +91,25 @@ main blockquote {
   border-radius: 12px;
 }
 
-/* پیراگراف/لسٹ — ہیڈر والی سطریں مستثنیٰ (ورنہ clamp ـ سب ایک سائز) */
-main p:not(.hero-header-tight),
+/* پیراگراف/لسٹ متن کو خوبصورت، موبائل فرینڈلی اور justified رکھیں */
+main p,
 main li {
   font-size: clamp(1rem, 1.25vw, 1.18rem);
-  line-height: 2.05;
   text-align: justify;
 }
 
-/* ماشاءاللہ / نور آیت / عہدے — main p کے clamp سے آزاد، حقیقی چھوٹا سائز */
-main p.hero-header-tight.hero-mashallah {
-  font-size: clamp(0.3rem, 1.05vw, 0.46rem) !important;
-  line-height: 1.08 !important;
-  text-align: center !important;
-}
-
-main p.hero-header-tight.hero-ayah {
-  font-size: clamp(0.34rem, 1.2vw, 0.52rem) !important;
-  line-height: 1.1 !important;
-  text-align: center !important;
-}
-
-main p.hero-header-tight.hero-roles {
-  font-size: clamp(0.29rem, 0.9vw, 0.42rem) !important;
-  line-height: 1.2 !important;
-  text-align: center !important;
-}
 
 /* ==================================================================== */
 
 /* --- 1. ٹیکسٹ ٹکر (Text Ticker) --- */
 @keyframes scroll-ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
 }
 
 .animate-marquee-instant {
@@ -174,13 +120,23 @@ main p.hero-header-tight.hero-roles {
 
 /* --- 2. کارڈز اسکرولنگ (Infinity Scroll - No Waiting) --- */
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .animate-scroll-left {
@@ -220,8 +176,15 @@ main p.hero-header-tight.hero-roles {
 
 /* --- 4. فیڈ ان اور اپ اینیمیشن (Fade-In Up Effect) --- */
 @keyframes fade-in-up {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-up {
@@ -235,21 +198,42 @@ main p.hero-header-tight.hero-roles {
 /* 🌸 1. ایرانی نقشِ و نگار کا مدہم بیک گراؤنڈ */
 .iranian-bg {
   background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.15' fill-rule='evenodd'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43 0c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63-31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM10 2c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm80 80c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM9 93c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm80-63c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM35 39c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM11 54c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed; 
+  background-attachment: fixed;
 }
 
 /* 🕊️ 2. لطیف اڑتے پرندوں کی اینیمیشن */
 @keyframes fly {
-  0% { transform: translateX(-10vw) translateY(10vh) scale(0.5); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateX(110vw) translateY(-10vh) scale(1); opacity: 0; }
+  0% {
+    transform: translateX(-10vw) translateY(10vh) scale(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(110vw) translateY(-10vh) scale(1);
+    opacity: 0;
+  }
 }
 
 @keyframes flap {
-  0% { transform: rotateX(0deg); }
-  50% { transform: rotateX(60deg); }
-  100% { transform: rotateX(0deg); }
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(60deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
 }
 
 .bird-container {
@@ -269,11 +253,31 @@ main p.hero-header-tight.hero-roles {
   transform-origin: center;
 }
 
-.bird-container--one { animation-duration: 35s; animation-delay: 0s; }
-.bird--one { animation-duration: 0.6s; }
+.bird-container--one {
+  animation-duration: 35s;
+  animation-delay: 0s;
+}
 
-.bird-container--two { animation-duration: 45s; animation-delay: 10s; top: 15%; }
-.bird--two { animation-duration: 0.8s; }
+.bird--one {
+  animation-duration: 0.6s;
+}
 
-.bird-container--three { animation-duration: 55s; animation-delay: 20s; top: 25%; }
-.bird--three { animation-duration: 0.7s; }
+.bird-container--two {
+  animation-duration: 45s;
+  animation-delay: 10s;
+  top: 15%;
+}
+
+.bird--two {
+  animation-duration: 0.8s;
+}
+
+.bird-container--three {
+  animation-duration: 55s;
+  animation-delay: 20s;
+  top: 25%;
+}
+
+.bird--three {
+  animation-duration: 0.7s;
+}

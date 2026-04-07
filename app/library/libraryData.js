@@ -10,6 +10,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-booy',
     title: 'سیرتِ فاطمہ زہراؑ: بوئے بہشت',
+    englishTitle: 'Biography of Fatima Zahra (SA): Scent of Paradise',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png',
     badge: 'SEERAT-E-FATIMA (S.A)',
     orientation: 'portrait',
@@ -24,6 +25,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-anees',
     title: 'انیس النفوس',
+    englishTitle: 'Anis al-Nufus',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',
     badge: 'حرم امام رضاؑ',
     orientation: 'portrait',
@@ -37,6 +39,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-safarnama',
     title: 'سفرنامہ ایران: دیارِ عشق کا سفر',
+    englishTitle: 'Travelogue of Iran: Journey to the Land of Love',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651728/eb2e1ccd-e669-4453-8ca7-10f38cf13a50.png',
     badge: 'سفرنامہ',
     orientation: 'portrait',
@@ -51,6 +54,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-rooh',
     title: 'روح کی معراج',
+    englishTitle: 'Ascension of the Soul',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772599153/39144cf5-3156-4054-85a3-bbfd54106240.png',
     badge: 'اصلاح نفس',
     orientation: 'portrait',
@@ -65,6 +69,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-sakoon',
     title: 'سکون کی تلاش',
+    englishTitle: 'Search for Peace',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772651897/e56ab798-14ec-4aaf-a0b3-a205a1aae1f4.png',
     badge: 'سکون کی چابی',
     orientation: 'portrait',
@@ -79,6 +84,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-sayahat-parts',
     title: 'سیاحتِ ایران (حصہ اول و دوم)',
+    englishTitle: 'Tourism of Iran (Part 1 & 2)',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016582/Siahat-e-Iran.book_orgj2d.png',
     badge: 'ایران کی سیاحت',
     orientation: 'portrait',
@@ -94,6 +100,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-dua',
     title: 'کنجی بہشت: دعاؤں کا مجموعہ',
+    englishTitle: 'Key to Paradise: Collection of Prayers',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768074750/Kunji-e-Bahisht_book_Dua_ukkrrm.png',
     badge: 'وضائف',
     orientation: 'landscape',
@@ -108,6 +115,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-khorasan',
     title: 'خراسان رضوی (حصہ اول و دوم)',
+    englishTitle: 'Khorasan Razavi (Part 1 & 2)',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png',
     badge: 'خراسان رضوی',
     orientation: 'portrait',
@@ -123,6 +131,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-fatwa',
     title: 'رہبر کے فتوے (حصہ اول و دوم)',
+    englishTitle: 'Fatwas of the Leader (Part 1 & 2)',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772597583/e1511aec-3b7d-44d3-9bd1-4cdfbeecb9c3.png',
     badge: 'رہبر کا فتوٰی',
     orientation: 'portrait',
@@ -138,6 +147,7 @@ export const BOOKS_DATA = [
   {
     id: 'shakh-e-nabaat',
     title: 'شاخ نبات(حصہ اول و دوم)',
+    englishTitle: 'Shakh Nabat (Part 1 & 2)',
     // میں نے یہاں مستقل پبلک لنک ڈال دیا ہے جو ایکسپائر نہیں ہوگا
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1773673146/0125d4e5-ab4f-43f0-961b-b05c3cd8b420.png',
     badge: 'فرہنگی مجلہ',
@@ -151,6 +161,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-farhang',
     title: 'مجلہ فرھنگستان',
+    englishTitle: 'Magazine Farhangistan',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016581/Majala-Farhangistan_xdsc1a.png',
     badge: 'فرہنگی مجلہ',
     orientation: 'portrait',
@@ -165,6 +176,7 @@ export const BOOKS_DATA = [
   {
     id: 'book-inqilab',
     title: 'مجلہ انقلاب',
+    englishTitle: 'Magazine Inqilab',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772598044/95eeeeb5-067e-4fcb-b4c6-ed952d52af89.png',
     badge: 'اسلامی مجلہ',
     orientation: 'portrait',
@@ -179,6 +191,7 @@ export const BOOKS_DATA = [
   {
     id: 'Quran',
     title: 'نورالقرآن ویژول پراجیکٹ',
+    englishTitle: 'Noor Al-Quran Visual Project',
         image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
     badge: 'نورالقرآن',
     orientation: 'portrait',

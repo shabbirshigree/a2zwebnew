@@ -106,32 +106,79 @@ export default function GlobalEngagementBox() {
   };
 
   return (
-    <section className="w-full border-y border-[#D4AF37]/25 bg-gradient-to-r from-[#fffef8] via-white to-[#f7fbff]">
-      <div className="max-w-7xl mx-auto px-3 md:px-6 py-3">
-        <div className="flex items-center gap-2 md:gap-3 overflow-x-auto whitespace-nowrap">
-          <p className={`${ect} text-[#0b314d] text-xs md:text-sm font-semibold ml-1 shrink-0`}>{eg.shareOptions}:</p>
-          <button
-            type="button"
-            onClick={toggleLike}
-            className="px-3 py-1.5 inline-flex items-center justify-center gap-1.5 rounded-full bg-rose-50 text-rose-600 hover:scale-[1.02] transition-transform text-xs"
-          >
-            {likes[pageKey] ? <FaHeart className="animate-pulse" /> : <FaRegHeart />} {totalLikes}
-          </button>
-          <span className="px-3 py-1.5 inline-flex items-center justify-center gap-1.5 rounded-full bg-blue-50 text-blue-700 text-xs">
-            <FaEye /> {totalViews}
+    <section className="w-full border-y border-[#D4AF37]/15 bg-[#f7f8fb]">
+      <div className="max-w-7xl mx-auto px-3 md:px-6 py-4">
+        <div className="flex flex-col items-center justify-center gap-4">
+          {/* Likes اور Views - Center میں ساتھ ساتھ */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <button
+              type="button"
+              onClick={toggleLike}
+              className="inline-flex items-center gap-2 rounded-full bg-[#fff7e0] text-[#b65d4c] px-3 py-2 text-xs md:text-sm font-semibold shadow-sm hover:bg-[#fff1d0] transition"
+            >
+              {likes[pageKey] ? <FaHeart className="text-red-500" /> : <FaRegHeart className="text-red-500" />} {totalLikes}
+            </button>
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#e7f2ff] text-[#1f5a9f] px-3 py-2 text-xs md:text-sm font-semibold shadow-sm">
+              <FaEye /> {totalViews}
+            </span>
+          </div>
+
+          {/* Sharing Buttons - Center میں */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => shareCurrentPage("whatsapp")}
+              className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#D4AF37] bg-[#0b314d] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              title="Share on WhatsApp"
+            >
+              <FaWhatsapp />
+            </button>
+            <button
+              type="button"
+              onClick={() => shareCurrentPage("facebook")}
+              className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#D4AF37] bg-[#0b314d] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              title="Share on Facebook"
+            >
+              <FaFacebookF />
+            </button>
+            <button
+              type="button"
+              onClick={() => shareCurrentPage("telegram")}
+              className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#D4AF37] bg-[#0b314d] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              title="Share on Telegram"
+            >
+              <FaTelegramPlane />
+            </button>
+            <button
+              type="button"
+              onClick={() => shareCurrentPage("email")}
+              className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#D4AF37] bg-[#0b314d] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              title="Share by Email"
+            >
+              <FaEnvelope />
+            </button>
+            <button
+              type="button"
+              onClick={() => shareCurrentPage("x")}
+              className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#D4AF37] bg-[#0b314d] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] shadow-[0_10px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              title="Share on X"
+            >
+              <FaXTwitter />
+            </button>
+            <button
+              type="button"
+              onClick={() => isMounted && shareCurrentPage("native")}
+              className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37] text-[#0b314d] px-4 py-3 font-semibold shadow-lg hover:bg-[#d0a83b] transition"
+              title="More share options"
+            >
+              <FaShareAlt /> <span className={ect}>{eg.morePlatforms}</span>
+            </button>
+          </div>
+
+          {/* Share Text - تمام Pages پر */}
+          <span className={`${ect} text-[#0b314d] text-xs md:text-sm font-semibold`}>
+            {locale === "fa" ? "این صفحه را با دوستان و گروه‌های خود به اشتراک بگذارید" : locale === "en" ? "Share this page with friends and groups" : "یہ صفحہ دوستوں اور گروپس میں شیئر کریں"}
           </span>
-          <button type="button" onClick={() => shareCurrentPage("whatsapp")} className="p-2 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
-          <button type="button" onClick={() => shareCurrentPage("facebook")} className="p-2 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>
-          <button type="button" onClick={() => shareCurrentPage("telegram")} className="p-2 rounded-full bg-sky-100 text-sky-700 hover:scale-110 transition-transform"><FaTelegramPlane /></button>
-          <button type="button" onClick={() => shareCurrentPage("email")} className="p-2 rounded-full bg-gray-100 text-gray-700 hover:scale-110 transition-transform"><FaEnvelope /></button>
-          <button type="button" onClick={() => shareCurrentPage("x")} className="p-2 rounded-full bg-slate-100 text-slate-700 hover:scale-110 transition-transform"><FaXTwitter /></button>
-          <button
-            type="button"
-            onClick={() => isMounted && shareCurrentPage("native")}
-            className="text-xs px-2.5 py-1.5 rounded-full bg-[#0b314d] text-white inline-flex items-center gap-1.5 hover:bg-[#0f4c75]"
-          >
-            <FaShareAlt /> <span className={ect}>{eg.morePlatforms}</span>
-          </button>
         </div>
       </div>
     </section>

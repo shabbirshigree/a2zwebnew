@@ -1,8 +1,9 @@
 "use client";
-import { FaWhatsapp, FaPaperPlane } from "react-icons/fa";
-import { Navbar, HeroSlider } from '../components/Header';
+import { FaWhatsapp, FaPaperPlane, FaShareAlt, FaFacebookF, FaTelegramPlane, FaEnvelope, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { Navbar, HeroSlider } from "../components/Header";
 import Footer from '../components/Footer';
-import { contactMethods, socialLinks } from './contactData'; 
+import { contactMethods } from './contactData';
 
 export default function Contact() {
   return (
@@ -14,19 +15,19 @@ export default function Contact() {
       <section className="bg-[#0b314d] py-16 md:py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#0b314d] to-transparent"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold text-[#D4AF37] urdu-text mb-4 drop-shadow-2xl">رابطہ کریں</h1>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto rounded-full mb-6"></div>
-          <p className="text-[#fff7cc] text-xl md:text-2xl urdu-text font-light tracking-widest opacity-90">ہم سے براہ راست رابطہ قائم کریں</p>
+          <p className="text-[#fff7cc] text-xl md:text-2xl urdu-text font-light tracking-widest opacity-90 max-w-3xl text-center">ہم سے براہ راست رابطہ قائم کریں</p>
         </div>
       </section>
 
       {/* 📞 رابطہ کے ذرائع (Cards with Golden Border) */}
       <section className="container mx-auto px-4 py-12 md:py-20 relative z-10 -mt-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {contactMethods.map((method, i) => (
             <a key={i} href={method.link} target={method.title === "مقام" ? "_blank" : "_self"} 
-               className="bg-white border-2 border-[#D4AF37] rounded-3xl p-8 shadow-[0_10px_20px_rgba(212,175,55,0.15)] hover:shadow-[0_20px_40px_rgba(212,175,55,0.3)] hover:-translate-y-2 transition-all duration-500 group text-center relative overflow-hidden">
+               className="bg-white border-2 border-[#D4AF37] rounded-3xl p-8 shadow-[0_10px_20px_rgba(212,175,55,0.15)] hover:shadow-[0_20px_40px_rgba(212,175,55,0.3)] hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col items-center justify-center text-center">
               
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4AF37] rounded-bl-full opacity-10 group-hover:opacity-20 transition-all duration-500"></div>
               
@@ -35,7 +36,7 @@ export default function Contact() {
               </div>
               
               <h3 className="text-xl md:text-2xl font-bold text-[#0b314d] urdu-text mb-3 text-center">{method.title}</h3>
-              <p className="text-gray-600 font-sans text-sm md:text-base font-semibold tracking-wide text-center">{method.info}</p>
+              <p className="text-gray-600 font-sans text-sm md:text-base font-semibold tracking-wide text-center" dir="ltr">{method.info}</p>
             </a>
           ))}
         </div>
@@ -82,23 +83,6 @@ export default function Contact() {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade">
              </iframe>
-          </div>
-        </div>
-      </section>
-
-      {/* 🌐 سوشل میڈیا پر جڑیں (Golden Theme) */}
-      <section className="bg-gray-50 py-16 border-y border-[#D4AF37]/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0b314d] urdu-text mb-12 border-b-2 border-[#D4AF37] inline-block pb-3">سوشل میڈیا پر ہمارے ساتھ جڑیں</h2>
-          
-          <div className="flex justify-center gap-6 md:gap-12 flex-wrap">
-            {socialLinks.map((social, i) => (
-              <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" 
-                 className="w-16 h-16 md:w-20 md:h-20 bg-[#0b314d] border-2 border-[#D4AF37] rounded-full flex items-center justify-center text-3xl md:text-4xl text-[#D4AF37] shadow-[0_5px_15px_rgba(212,175,55,0.2)] transition-all duration-500 transform hover:-translate-y-3 hover:shadow-[0_15px_30px_rgba(212,175,55,0.5)] hover:bg-[#D4AF37] hover:text-[#0b314d] group" 
-                 title={social.name}>
-                 <span className="transition-transform duration-300 group-hover:scale-110">{social.icon}</span>
-              </a>
-            ))}
           </div>
         </div>
       </section>

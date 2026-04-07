@@ -295,15 +295,15 @@ export default function ArticlesPage() {
                           </span>
                         </div>
                         <div className="flex flex-wrap items-center gap-2 mt-2.5">
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'whatsapp'); }} className="p-2 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'facebook'); }} className="p-2 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'telegram'); }} className="p-2 rounded-full bg-sky-100 text-sky-700 hover:scale-110 transition-transform"><FaTelegramPlane /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'email'); }} className="p-2 rounded-full bg-gray-100 text-gray-700 hover:scale-110 transition-transform"><FaEnvelope /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'x'); }} className="p-2 rounded-full bg-slate-100 text-slate-700 hover:scale-110 transition-transform"><FaXTwitter /></button>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'whatsapp'); }} className="social-icon-btn social-whatsapp"><FaWhatsapp /></button>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'facebook'); }} className="social-icon-btn social-facebook"><FaFacebookF /></button>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'telegram'); }} className="social-icon-btn social-telegram"><FaTelegramPlane /></button>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'email'); }} className="social-icon-btn social-email"><FaEnvelope /></button>
+                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'x'); }} className="social-icon-btn social-twitter"><FaXTwitter /></button>
                           <button
                             type="button"
                             onClick={(e) => { e.stopPropagation(); shareArticle(article, 'native'); }}
-                            className="px-2.5 py-1 rounded-full bg-[#0b314d] text-white text-xs flex items-center gap-1.5 hover:bg-[#0f4c75]"
+                            className="share-btn"
                           >
                             <FaShareAlt /> دوسرے پلیٹ فارمز
                           </button>
@@ -359,12 +359,12 @@ export default function ArticlesPage() {
                     <span className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 text-amber-700"><FaCommentDots /> {getStats(selectedArticle).comments} کمنٹس</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'whatsapp')} className="p-2.5 rounded-full bg-green-100 text-green-700 hover:scale-110 transition-transform"><FaWhatsapp /></button>
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'facebook')} className="p-2.5 rounded-full bg-blue-100 text-blue-700 hover:scale-110 transition-transform"><FaFacebookF /></button>
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'telegram')} className="p-2.5 rounded-full bg-sky-100 text-sky-700 hover:scale-110 transition-transform"><FaTelegramPlane /></button>
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'email')} className="p-2.5 rounded-full bg-gray-100 text-gray-700 hover:scale-110 transition-transform"><FaEnvelope /></button>
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'x')} className="p-2.5 rounded-full bg-slate-100 text-slate-700 hover:scale-110 transition-transform"><FaXTwitter /></button>
-                    <button type="button" onClick={() => shareArticle(selectedArticle, 'native')} className="px-3 py-1.5 rounded-full bg-[#0b314d] text-white text-xs md:text-sm flex items-center gap-2 hover:bg-[#0f4c75]"><FaShareAlt /> دوسرے پلیٹ فارمز</button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'whatsapp')} className="social-icon-btn social-whatsapp"><FaWhatsapp /></button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'facebook')} className="social-icon-btn social-facebook"><FaFacebookF /></button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'telegram')} className="social-icon-btn social-telegram"><FaTelegramPlane /></button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'email')} className="social-icon-btn social-email"><FaEnvelope /></button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'x')} className="social-icon-btn social-twitter"><FaXTwitter /></button>
+                    <button type="button" onClick={() => shareArticle(selectedArticle, 'native')} className="share-btn"><FaShareAlt /> دوسرے پلیٹ فارمز</button>
                   </div>
                 </div>
               </div>
