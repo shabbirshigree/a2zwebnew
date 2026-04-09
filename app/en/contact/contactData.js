@@ -18,7 +18,7 @@ export const contactMethods = [
     icon: <FaMapMarkerAlt size={32} />,
     title: 'Location',
     info: 'Skardu, Gilgit Baltistan, Pakistan',
-    link: 'https://maps.app.goo.gl/YourSkarduLink'
+    link: 'https://www.google.com/maps/place/Skardu,+Gilgit-Baltistan,+Pakistan'
   }
 ];
 

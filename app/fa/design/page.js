@@ -13,6 +13,11 @@ import {
   FaChevronRight,
   FaImage,
   FaCheckCircle,
+  FaGlobe,
+  FaLandmark,
+  FaMosque,
+  FaTree,
+  FaStar,
 } from "react-icons/fa";
 import { Navbar, HeroSlider } from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -37,36 +42,39 @@ const khurasanBook = {
 };
 
 const galleryImages = [
-  {
-    id: 1,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075728/FIL3526-Picsart-AiImageEnhancer_fclosx.jpg",
-    title: "مدل سه بعدی مسجد نبوی",
-  },
-  {
-    id: 2,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075727/FIL3513-Picsart-AiImageEnhancer_xlbvid.jpg",
-    title: "طرح بنر فرهنگی",
-  },
-  {
-    id: 3,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075724/FIL3514-Picsart-AiImageEnhancer_pizdrd.jpg",
-    title: "آثار هنری نمایشگاهی",
-  },
-  {
-    id: 4,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077437/FIL3550_n9odsm.jpg",
-    title: "طرح عظیم بنر الحمرا",
-  },
-  {
-    id: 5,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076275/FIL3515-Picsart-AiImageEnhancer_l5crkz.jpg",
-    title: "نقاشی خطاطی",
-  },
-  {
-    id: 6,
-    src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076595/FIL3490_hwleco.jpg",
-    title: "ماکت روضه امام علی",
-  },
+  { id: 1, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075728/FIL3526-Picsart-AiImageEnhancer_fclosx.jpg", title: "مدل سه‌بعدی مسجد نبوی" },
+  { id: 2, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075727/FIL3513-Picsart-AiImageEnhancer_xlbvid.jpg", title: "جزئیات معماری مسجد نبوی" },
+  { id: 3, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075724/FIL3514-Picsart-AiImageEnhancer_pizdrd.jpg", title: "ساخت و طراحی مسجد نبوی" },
+  { id: 4, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075722/FIL3501-Picsart-AiImageEnhancer_muujyx.jpg", title: "نصب‌تعادل مسجد نبوی در رویداد" },
+  { id: 5, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075722/FIL3500-Picsart-AiImageEnhancer_txdisi.jpg", title: "مدل مسجد نبوی در نمایشگاه" },
+  { id: 6, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772075727/FIL3502-Picsart-AiImageEnhancer_mj5f8w.jpg", title: "جشن‌واره مسجد نبوی" },
+
+  { id: 7, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076123/FIL3491-Picsart-AiImageEnhancer_x9kyyy.jpg", title: "درخت نورانی اهل‌البیت" },
+
+  { id: 8, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076275/FIL3515-Picsart-AiImageEnhancer_l5crkz.jpg", title: "نقاشی خطاطی روغنی" },
+  { id: 9, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076279/FIL3496-Picsart-AiImageEnhancer_mkhz93.jpg", title: "اثر هنری خطاطی" },
+  { id: 10, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076276/FIL3504-Picsart-AiImageEnhancer_swyypy.jpg", title: "نصب‌تعادل ریختگی بر روی سن" },
+  { id: 11, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076280/FIL3511-Picsart-AiImageEnhancer_xadkvu.jpg", title: "لحظه‌‌ای از رویداد فرهنگی" },
+
+  { id: 12, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076595/FIL3490_hwleco.jpg", title: "ماکت روضه امام علی" },
+  { id: 13, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076595/FIL3493_tdsqer.jpg", title: "جزئیات ماکت روضه‌ی مطهره" },
+  { id: 14, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076596/FIL3489_z7y1fu.jpg", title: "مدل معماری روضه امام علی" },
+  { id: 15, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076594/FIL3518_trass8.jpg", title: "نمایش روضه امام علی" },
+
+  { id: 16, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3527_oaz56i.jpg", title: "نوار رستم - نصب‌تعادل مکانیکی" },
+  { id: 17, src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1772076948/FIL3510_xgre7z.jpg", title: "شاهکار صنعتی نوار رستم" },
+  { id: 18, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076947/FIL3498_fn6mic.jpg", title: "طراحی و مراحل ساخت" },
+  { id: 19, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3499_hamxq0.jpg", title: "نمایش هنری نوار رستم" },
+  { id: 20, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3528_ptwcws.jpg", title: "هنرمند با اثر خود" },
+
+  { id: 21, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077437/FIL3550_n9odsm.jpg", title: "بنر الحمرا - 100 متری نقاشی دستی" },
+  { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077439/FIL3542_nh6fu8.jpg", title: "منظر میدان آزادی تهران" },
+
+  { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077857/FIL3609_hpkrkd.jpg", title: "مدل قرآنی سه‌بعدی" },
+
+  { id: 24, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077767/FIL3519_auclv8.jpg", title: "نصب‌تعادل ترموفوم اهل‌البیت" },
+  { id: 25, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077755/FIL3610_cnczkz.jpg", title: "نمایشگاه آئمه‌ی طاهرین" },
+  { id: 26, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772077745/FIL3608_jeycmp.jpg", title: "اثر معماری ترموفوم" }
 ];
 
 export default function FarsiDesignPage() {
@@ -87,7 +95,7 @@ export default function FarsiDesignPage() {
   const handleShare = () => {
     const url = typeof window !== "undefined" ? window.location.href : "";
     if (navigator.share) {
-      navigator.share({ title: khurasanBook.title, url }).catch(() => {});
+      navigator.share({ title: khurasanBook.title, url }).catch(() => { });
     } else {
       navigator.clipboard.writeText(url);
       alert("لینک کپی شد");
@@ -107,6 +115,15 @@ export default function FarsiDesignPage() {
     setSelectedImageIndex((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
+  };
+
+  const openImageByTitle = (title) => {
+    const index = galleryImages.findIndex((img) => img.title.includes(title));
+    if (index !== -1) {
+      setSelectedImageIndex(index);
+    } else {
+      setSelectedImageIndex(15);
+    }
   };
 
   return (
@@ -201,16 +218,63 @@ export default function FarsiDesignPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" dir="rtl">
+          <div className="text-center mb-12 mt-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37]">پروژه‌های طراحی برجسته</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto mt-4 leading-relaxed">نمونه‌ای از دستاوردهای 25 سال طراحی و نقاشی برای نهادهای فرهنگی، مؤسسات مذهبی و جشنواره‌های بین‌المللی در ایران و پاکستان.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16" dir="rtl">
+            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaGlobe size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">مجلہ فارسی "شاخِ نبات"</h3>
+              <p className="text-gray-300 leading-relaxed text-right">طراحی و صفحه‌آرایی کامل برای معروف‌ترین مجلهٔ فرهنگی ایران که شامل شاعری، فلسفه و هنر ایرانی است. ایجاد هویت بصری الهام‌گر و هماهنگ با سطح بین‌المللی.</p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaLandmark size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">دیوار الحمرا 100 فٹی</h3>
+              <p className="text-gray-300 leading-relaxed text-right">نقاشی دستی تاریخی بر روی دیوار بزرگ الحمرا لاهور برای جشن انقلاب اسلامی ایران. بازنمایی دقیق میدان آزادی تهران با نمادهای انقلاب و نشان رفع سلاح چندین کیلومتری.</p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaMosque size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">مدل‌های معماری مقدس</h3>
+              <p className="text-gray-300 leading-relaxed text-right">ساخت مدل‌های ترموفوم بزرگ‌مقیاس از مسجد النبی و روضهٔ امام علی علیه‌السلام برای مراسم فرهنگی و مذهبی. ترکیب احترام، فن و تفاصیل معماری دقیق.</p>
+            </div>
+
+            <div onClick={() => openImageByTitle('نوار رستم')} role="button" tabIndex={0} className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300 cursor-pointer">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaFilm size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">مجسمهٔ نوار رستم</h3>
+              <p className="text-gray-300 leading-relaxed text-right">خلق یک مجسمهٔ مکانیکی دیوهیکل کاسٹ VHS با چرخش‌های واقعی و روشنایی متحرک. ایرانیان این اثر را "نوار رستم" نام دادند، نمادی از بزرگی و اهمیت در فرهنگ ایرانی.</p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaTree size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">درخت نورانی اهل‌البیت</h3>
+              <p className="text-gray-300 leading-relaxed text-right">ایجاد نصب تعادل روحانی با داشتن نام‌ها و القاب ائمه معصومین بر برگ‌های روشنایی‌دار. سیستم روشنایی ترتیبی جو معنوی و اثر الهی‌الهام‌گر ایجاد می‌کند.</p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaStar size={28} /></div>
+              <h3 className="text-2xl font-bold text-white mb-3 text-right">صنعتگری فوق‌العاده</h3>
+              <p className="text-gray-300 leading-relaxed text-right">هر پروژه ترکیبی از تکنیک‌های هنری سنتی و فناوری نوین است. نتیجه آن نصب تعادل و انتشارات‌شامل معنویت، تعلیم و احترام به میراث فرهنگی و روحانی.</p>
+            </div>
+          </div>
+
+          <div className="text-center mb-10 mt-8">
+            <span className="inline-block bg-[#D4AF37] text-black px-5 py-2 rounded-full font-bold uppercase tracking-[0.15em] text-sm mb-4">گالری بصری</span>
+            <h3 className="text-3xl md:text-4xl font-bold text-white">آرشیو نمایشی طراحی</h3>
+            <p className="text-gray-400 max-w-3xl mx-auto mt-4 leading-relaxed">مجموعهٔ فراگیر از پروژه‌های طراحی برجسته و نصب تعادل‌هایی که بیش از 25 سال برای نهادهای فرهنگی، نمایشگاه‌ها و کمپین‌های رسانه‌ای در ایران و پاکستان ایجاد شده‌اند.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" dir="rtl">
             {galleryImages.map((item) => (
-              <div key={item.id} className="bg-[#050505] p-6 rounded-3xl border border-gray-800 shadow-lg transition hover:border-[#D4AF37]/50">
-                <div className="h-48 rounded-3xl overflow-hidden mb-5 bg-[#111]">
-                  <img src={item.src} alt={item.title} className="w-full h-full object-cover" />
+              <div key={item.id} className="rounded-[2rem] overflow-hidden border border-[#222] shadow-2xl bg-[#111] transition hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] cursor-pointer hover:border-[#D4AF37]/50"
+                onClick={() => openImage(item.id - 1)}>
+                <img src={item.src} alt={item.title} className="h-56 w-full object-cover transition-transform hover:scale-105" />
+                <div className="p-6">
+                  <h4 className="text-lg font-bold text-white mb-2 text-right">{item.title}</h4>
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3">{item.title}</h4>
-                <button onClick={() => openImage(item.id - 1)} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 hover:bg-[#D4AF37]/15 transition">
-                  <FaImage /> مشاهده تصویر
-                </button>
               </div>
             ))}
           </div>

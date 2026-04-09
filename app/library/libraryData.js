@@ -91,8 +91,8 @@ export const BOOKS_DATA = [
     descUrdu: `میری اس کتاب ایران کے بارے میں ہر قسم کی معلومات درج ہیں۔ ایران جانے سے ہلے اس کتاب کو پڑھنا میرے خیال میں ایک زائر اور سیاح کے قلب و روح کو حقیقی سکون عطا کرے گا۔ایران کی مکمل ثقافتی اور جغرافیائی سیر۔
 مصنف: حاجی شبیراحمدشگری`,
     actions: [
-      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/sayahat-e-iran1_compressed.pdf', color: 'theme-read', disabled: false },
-      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/sayahat-e-iran2_compressed.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/Syahat%20e%20Iran%20book_part%201%202016%20with%20transp.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/Syahat%20e%20Iran%20book_part%201%202016%20with%20transp.pdf', color: 'theme-read', disabled: false },
       { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769065454/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86_%DA%A9%DB%8C_%D9%85%D8%B2%D8%A7%D8%AD%D9%85%D8%AA_%D8%A7%D9%88%D8%B1_%D9%85%D8%B4%DB%81%D8%AF_%DA%A9%D8%A7_%D8%B3%D9%81%D8%B1_giowyp.mp4', color: 'theme-urdu-aud', disabled: false },
       { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769034696/%D8%B3%DB%8C%D8%A7%D8%AD%D8%AA%D9%90_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86_%D9%88%DA%88%DB%8C%D9%88_%D8%AA%D8%AC%D8%B2%DB%8C%DB%81_tctlnm.mp4', color: 'theme-urdu-vid', disabled: false }
     ]
@@ -122,8 +122,8 @@ export const BOOKS_DATA = [
     descUrdu: `یہ ایک شاندار تصویری کتاب ہے جس کی مکمل ڈیزائننگ خاکسار نے کی ہے۔ اس میں خراسان کے تاریخی مقامات کو پیش کیا گیا ہے۔یہ پہلی ایرانی کتاب ہے جسے پاکستان میں ڈیزائن کیا گیا اور مجھے یہ اعزاز حاصل ہوا۔میری ڈیزائن کردہ یہ کتاب ایران میں شائع کی گئی جو نفیس کاغذ پر پرنٹ کی گئی ہے۔
 ڈیزائن: حاجی شبیراحمدشگری`,
     actions: [
-      { type: 'read', source: 'supabase', label: 'حصہ اول پڑھیں', icon: 'book', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/khorasan-razavi-1_compressed.pdf', color: 'theme-read', disabled: false },
-      { type: 'read', source: 'supabase', label: 'حصہ دوم پڑھیں', icon: 'book', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/khorasan-razavi-2_compressed.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', source: 'supabase', label: 'حصہ اول پڑھیں', icon: 'book', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/khorasan-e-razavi-1.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', source: 'supabase', label: 'حصہ دوم پڑھیں', icon: 'book', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/khorasan-e-razavi-2.pdf', color: 'theme-read', disabled: false },
       { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', icon: 'headphones', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4', color: 'theme-urdu-aud', disabled: false },
       { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', icon: 'film', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4', color: 'theme-urdu-vid', disabled: false }
     ]
@@ -138,8 +138,8 @@ export const BOOKS_DATA = [
     descUrdu: `رہبرِ معظم آیت اللہ سید علی خامنہ ای کے اہم فتاویٰ کا مستند مجموعہ، جو مومنین کی روزمرہ شرعی رہنمائی کے لیے ترتیب دیا گیا ہے۔پوری دنیا کے جید علما کے خیالات کو بھی اس کتاب میں شامل کیا گیا ہے۔مسلمانوں کے درمیان وحدت کے لئے انتہائی خوبسورت تحفہ۔یہ کتاب خانہ فرہنگ ایران کی جانب سے چھاپی گئی اس کے ایڈیٹنگ کا اعزاز مجھے حاصل ہوا۔
 ایڈٹ اور ڈیزائن: حاجی شبیراحمدشگری`,
     actions: [
-      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/rehbar-k-fatawa1_compressed.pdf', color: 'theme-read', disabled: false },
-      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/rehbar-k-fatawa2_compressed.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/Fatawa-e-eRehbar-p1.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/Fatawa-e-eRehbar-p2.pdf', color: 'theme-read', disabled: false },
       { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-aud', disabled: true },
       { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-vid', disabled: true }
     ]
@@ -154,8 +154,8 @@ export const BOOKS_DATA = [
     orientation: 'portrait',
     descUrdu: 'خانہ فرہنگ ایران لاہور کا مجلہ جس کا ایڈیٹر ہونے کا اعزاز حاصل رہا۔',
     actions: [
-      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/shakh-e-nabaat-part1.pdf', color: 'theme-read', disabled: false },
-      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/shakh-e-nabaat-part2.pdf', color: 'theme-read', disabled: false }
+      { type: 'read', label: 'حصہ اول پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/shakh-e-nabaat-part2.pdf.pdf', color: 'theme-read', disabled: false },
+      { type: 'read', label: 'حصہ دوم پڑھیں', url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/syahat%20e%20Iran_part%202%202016%20with%20transp.pdf', color: 'theme-read', disabled: false }
     ]
   },
   {
@@ -188,18 +188,38 @@ export const BOOKS_DATA = [
       { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', icon: 'film', url: '', color: 'theme-urdu-vid', disabled: true }
     ]
   },
+
   {
     id: 'Quran',
     title: 'نورالقرآن ویژول پراجیکٹ',
-    englishTitle: 'Noor Al-Quran Visual Project',
-        image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
     badge: 'نورالقرآن',
     orientation: 'portrait',
     descUrdu: `نورالقرآن پراجیکٹ کی تفصیل`,
     actions: [
-       { type: 'read', label: 'کتاب پڑھیں', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf', color: 'theme-read', disabled: false },
-      { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4', color: 'theme-urdu-aud', disabled: false },
-            { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', icon: 'film', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4', color: 'theme-urdu-vid', disabled: false }
+      {
+        type: 'read',
+        label: 'کتاب پڑھیں',
+        // یہاں میں نے آپ کا نیا ورسل بلوب والا لنک ڈال دیا ہے
+        url: 'https://nvl8nqcvv35svzpy.public.blob.vercel-storage.com/2.Project%20Proposal.without.expen_compressed%20%281%29.pdf',
+        color: 'theme-read',
+        disabled: false
+      },
+      {
+        type: 'audio',
+        label: 'گوگل آڈیو پوڈکاسٹ',
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4',
+        color: 'theme-urdu-aud',
+        disabled: false
+      },
+      {
+        type: 'video',
+        label: 'گوگل ویڈیو پوڈکاسٹ',
+        icon: 'film',
+        url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4',
+        color: 'theme-urdu-vid',
+        disabled: false
+      }
     ]
   }
 ];

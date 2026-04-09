@@ -19,7 +19,7 @@ export const SERVICES_DATA = [
   { 
     icon: <FaHeart />, 
     title: "اصلاحِ نفس (روزانہ پیغام)", 
-    link: "https://heyzine.com/flip-book/efa19771fc.html", // 👈 کتاب پڑھنے کا براہ راست لنک
+    link: "/library#book-rooh",
     desc: "انسانی کردار کی تعمیر اور تزکیہ نفس کے لیے روزانہ کی بنیاد پر 'اصلاحِ نفس' کا پیغام شیئر کیا جاتا ہے۔ یہ پیغامات دراصل میری تالیف 'روح کی معراج' (جو کہ علامہ احمد نراقی کی ضخیم کتاب کا آسان خلاصہ اور ترجمہ ہے) سے اخذ کیے جاتے ہیں۔",
     socials: [
       { icon: <FaFacebookF size={18}/>, url: "https://facebook.com/madrasanoorequran", color: "text-blue-600" },

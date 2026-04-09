@@ -10,7 +10,7 @@ const SERVICES_DATA_FA = [
   {
     icon: <FaQuran />,
     title: "کلیپ قرآنی روزانه (نور القرآن)",
-    link: "/project",
+    link: "/fa/project",
     desc: "در پروژه نور القرآن هر روز یک کلیپ یک دقیقه‌ای قرآن منتشر می‌شود که تلاوت منتخب آیات و تفسیر کوتاه و روان آن را در قالب تصویری ارائه می‌دهد.",
     socials: [
       { icon: <FaWhatsapp size={20} />, url: "https://wa.me/923334491715", color: "text-green-600" },
@@ -20,7 +20,7 @@ const SERVICES_DATA_FA = [
   {
     icon: <FaHeart />,
     title: "اصلاح نفس (پیام روزانه)",
-    link: "https://heyzine.com/flip-book/efa19771fc.html",
+    link: "/fa/library#book-rooh",
     desc: "برای تربیت اخلاقی و تزکیه نفس، پیام‌های روزانه \"اصلاح نفس\" به اشتراک گذاشته می‌شود؛ این پیام‌ها برگرفته از تالیفات عرفانی و خلاصه‌ای از معارف اسلامی هستند.",
     socials: [
       { icon: <FaWhatsapp size={20} />, url: "https://wa.me/923334491715", color: "text-green-600" },
@@ -49,7 +49,7 @@ const SERVICES_DATA_FA = [
   {
     icon: <FaGlobeAmericas />,
     title: "زیارت و سیاحت",
-    link: "/cultural",
+    link: "/fa/cultural",
     desc: "ارتقای گردشگری زیارتی و فرهنگی در ایران، عراق و شام با کاروان‌های مطمئن و خدمات کامل سفر برای زائران گرامی.",
     socials: [
       { icon: <FaWhatsapp size={20} />, url: "https://wa.me/923334491715", color: "text-green-600" },

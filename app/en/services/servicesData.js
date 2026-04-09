@@ -14,7 +14,7 @@ export const SERVICES_DATA = [
   {
     icon: <FaHeart />,
     title: 'Spiritual Guidance',
-    link: 'https://heyzine.com/flip-book/efa19771fc.html',
+    link: '/en/library#book-rooh',
     desc: 'Daily messages from the collection "Rooh Ki Meraj" offering practical spiritual guidance and ethical insights for everyday life.',
     socials: [
       { icon: <FaFacebookF size={18} />, url: 'https://facebook.com/madrasanoorequran', color: 'text-blue-600' },

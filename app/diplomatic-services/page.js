@@ -84,7 +84,7 @@ export default function DiplomaticServices() {
       </section>
 
 {/* 🤝 سیکشن 2: انجمن دوستی اور ویب سائٹ */}
-      <section className="bg-[#0b314d] text-white py-16 md:py-20 border-y-4 border-[#D4AF37] relative">
+      <section id="anjuman" className="bg-[#0b314d] text-white py-16 md:py-20 border-y-4 border-[#D4AF37] relative">
         <div className="container mx-auto px-4 relative z-10" dir="rtl">
           <div className="text-center mb-12">
              <FaUsers className="text-6xl text-[#D4AF37] mx-auto mb-4" />
@@ -133,7 +133,7 @@ export default function DiplomaticServices() {
       </section>
 
       {/* 🗣️ سیکشن 3: فارسی زبان کی خدمات */}
-      <section className="py-16 md:py-24 bg-[#fffdf5] border-b border-gray-200" dir="rtl">
+      <section id="tourism" className="py-16 md:py-24 bg-[#fffdf5] border-b border-gray-200" dir="rtl">
         <div className="container mx-auto px-4">
            <div className="text-center mb-14">
              <h2 className="text-3xl md:text-5xl font-bold text-emerald-800 urdu-text mb-6 flex justify-center items-center gap-4">

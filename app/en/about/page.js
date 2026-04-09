@@ -32,6 +32,7 @@ const bookTitleTranslations = {
 export default function UltimateAboutPage() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [showCulturePopup, setShowCulturePopup] = useState(false);
+  const [showFederationPopup, setShowFederationPopup] = useState(false);
 
   const getYouTubeId = (url) => {
     if (!url) return '';
@@ -44,9 +45,19 @@ export default function UltimateAboutPage() {
   const getMediaLink = (title) => {
     if (title.includes("Radio")) return "#radio-section";
     if (title.includes("Journalist")) return "/article";
-    if (title.includes("TV Anchor") || title.includes("Producer")) return "/talkshows";
+    if (title.includes("TV Anchor") || title.includes("Producer")) return "/en/talkshows";
     return "#";
   };
+
+  const localizedFounderItems = founderItems.map((item) => {
+    const href = item.link || "#";
+    const normalizedLink = href.startsWith("/project")
+      ? "/en/project"
+      : href.startsWith("/diplomatic-services")
+        ? href.replace("/diplomatic-services", "/en/diplomatic-services")
+        : href;
+    return { ...item, link: normalizedLink };
+  });
 
   return (
     <main className="min-h-screen bg-[#f8f9fa] overflow-x-hidden font-sans" dir="ltr">
@@ -146,12 +157,14 @@ export default function UltimateAboutPage() {
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
-          {founderItems.map((item, i) => {
+          {localizedFounderItems.map((item, i) => {
             const title = item.title || "";
             const linkHref = item.link || "#";
 
+            const isFederationCard = title === "Trade and Culture Federation";
+
             const CardContent = (
-              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full text-center">
+              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full text-center cursor-pointer">
                 <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
                 <h3 className="font-bold text-white group-hover:text-[#0a1f30] text-[11px] md:text-base mb-2 leading-tight text-center w-full break-words">{title}</h3>
                 <p
@@ -163,36 +176,29 @@ export default function UltimateAboutPage() {
               </div>
             );
 
-            // 🟢 1. کلچر اینڈ ٹریڈ (پاپ اپ)
-            if (title.includes("کلچر") || title.includes("ٹریڈ")) {
-              return <button key={i} onClick={() => setShowCulturePopup(true)} className="w-full h-full block text-center">{CardContent}</button>;
-            }
-            // 🔵 2. انجمن دوستی
-            if (title.includes("انجمن")) {
-              return <Link href="/diplomatic-services#anjuman" key={i} className="w-full h-full block">{CardContent}</Link>;
-            }
-            // 🟡 3. ٹورزم
-            if (title.includes("ٹورازم") || title.includes("سیاحت") || title.includes("ٹورزم")) {
-              return <Link href="/diplomatic-services#tourism" key={i} className="w-full h-full block">{CardContent}</Link>;
-            }
-            // 🌐 4. ویب سائٹ
-            if (title.includes("ویب") || title.includes("سائیٹ")) {
-              return <a href="https://pakiiranassociation.wixsite.com/pira" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
-            }
-            // 🎥 5. نور پروڈکشن
-            if (title.includes("نورپروڈکشن") || title.includes("نور پروڈکشن")) {
-              return <a href="https://www.youtube.com/@noorproduction" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
-            }
-            // 👶 6. طفلان نور
-            if (title.includes("طفلان نور") || title.includes("طفلانِ نور")) {
-              return <a href="https://www.youtube.com/results?search_query=Tiflan+e+Noor" key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">{CardContent}</a>;
-            }
-            // 📖 7. نورالقرآن
-            if (title.includes("نورالقرآن") || title.includes("نور القرآن")) {
-              return <Link href="/project" key={i} className="w-full h-full block">{CardContent}</Link>;
+            const isExternalLink = typeof linkHref === "string" && linkHref.startsWith("http");
+
+            if (isFederationCard) {
+              return (
+                <div key={i} className="w-full h-full block" onClick={() => setShowFederationPopup(true)}>
+                  {CardContent}
+                </div>
+              );
             }
 
-            return <Link href={linkHref} key={i} className="w-full h-full block">{CardContent}</Link>;
+            if (isExternalLink) {
+              return (
+                <a href={linkHref} key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
+                  {CardContent}
+                </a>
+              );
+            }
+
+            return (
+              <Link href={linkHref} key={i} className="w-full h-full block">
+                {CardContent}
+              </Link>
+            );
           })}
         </div>
       </section>
@@ -422,6 +428,47 @@ export default function UltimateAboutPage() {
         </div>
       </section>
 
+      {/* Trade and Culture Federation Popup */}
+      {showFederationPopup && (
+        <div className="fixed inset-0 bg-black/80 flex flex-col items-center justify-center z-[9999] p-4 backdrop-blur-sm">
+          <div className="bg-gradient-to-b from-white to-slate-50 rounded-[3rem] max-w-2xl w-full p-8 md:p-16 relative shadow-[0_0_80px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 left-0 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#0b314d]/5 rounded-full blur-3xl"></div>
+            
+            <button onClick={() => setShowFederationPopup(false)} className="absolute top-6 right-6 text-gray-400 hover:text-red-500 hover:scale-125 text-3xl font-bold transition-all duration-300">&times;</button>
+            
+            <div className="text-center flex flex-col items-center relative z-10">
+              {/* Logo with decorative ring */}
+              <div className="relative mb-8 mt-4">
+                <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[#D4AF37]/30" style={{width: '160px', height: '160px', margin: 'auto'}}></div>
+                <div className="w-40 h-40 rounded-full p-4 bg-gradient-to-br from-white via-blue-50 to-white shadow-2xl border-6 border-white relative flex items-center justify-center">
+                  <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1774428398/3929eb58-af72-466f-89fc-98380b8abe4c.png" alt="Trade and Culture Federation Logo" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              
+              {/* Title with decorative line */}
+              <div className="mb-6">
+                <h3 className="text-3xl md:text-4xl font-extrabold text-[#0b314d] mb-4 drop-shadow-sm">Trade & Culture Federation</h3>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-4"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="max-w-lg">
+                <p className="text-gray-700 leading-relaxed text-center text-base md:text-lg font-semibold text-justify mb-6 text-[#0f4c75]">
+                  Establishment of Trade and Culture Federation
+                </p>
+                <div className="bg-gradient-to-r from-[#0b314d]/5 to-[#D4AF37]/5 rounded-2xl p-6 border-l-4 border-[#D4AF37]">
+                  <p className="text-gray-700 leading-relaxed text-center text-sm md:text-base font-light text-justify">
+                    With the cooperation of the Islamic Culture House of the Islamic Republic of Iran, the Trade and Culture Federation was established. The founder of this forum is <span className="font-bold text-[#0b314d]">Haji Shabbir Ahmed Shigri</span>. The purpose of this organization is to strengthen cultural, trade, and diplomatic relations between Pakistan and Iran.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* 🌟 6. نامور شخصیات کا اعتراف (Legends Section) */}
       <section className="bg-[#1a1a1a] py-16 border-y-4 border-[#D4AF37]">
         <div className="container mx-auto px-4">
@@ -450,20 +497,20 @@ export default function UltimateAboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto" dir="ltr">
             {BOOKS_DATA.map((book, i) => {
 
-              let manualLink = "/library";
-              if (book.title.includes("بوئے بہشت")) manualLink = "/library#book-booy";
-              else if (book.title.includes("شاخ نبات")) manualLink = "/library#shakh-e-nabaat";
-              else if (book.title.includes("انیس النفوس")) manualLink = "/library#book-anees";
-              else if (book.title.includes("سفرنامہ")) manualLink = "/library#book-safarnama";
-              else if (book.title.includes("سیاحت")) manualLink = "/library#book-sayahat-parts";
-              else if (book.title.includes("روح کی معراج")) manualLink = "/library#book-rooh";
-              else if (book.title.includes("سکون کی تلاش")) manualLink = "/library#book-sakoon";
-              else if (book.title.includes("کنجی بہشت")) manualLink = "/library#book-dua";
-              else if (book.title.includes("خراسان")) manualLink = "/library#book-khorasan";
-              else if (book.title.includes("فتوے")) manualLink = "/library#book-fatwa";
-              else if (book.title.includes("فرھنگستان")) manualLink = "/library#book-farhang";
-              else if (book.title.includes("انقلاب")) manualLink = "/library#book-inqilab";
-              else if (book.title.includes("نورالقرآن") || book.title.includes("قرآن")) manualLink = "/library#Quran";
+              let manualLink = "/en/library";
+              if (book.title.includes("بوئے بہشت")) manualLink = "/en/library#book-booy";
+              else if (book.title.includes("شاخ نبات")) manualLink = "/en/library#shakh-e-nabaat";
+              else if (book.title.includes("انیس النفوس")) manualLink = "/en/library#book-anees";
+              else if (book.title.includes("سفرنامہ")) manualLink = "/en/library#book-safarnama";
+              else if (book.title.includes("سیاحت")) manualLink = "/en/library#book-sayahat-parts";
+              else if (book.title.includes("روح کی معراج")) manualLink = "/en/library#book-rooh";
+              else if (book.title.includes("سکون کی تلاش")) manualLink = "/en/library#book-sakoon";
+              else if (book.title.includes("کنجی بہشت")) manualLink = "/en/library#book-dua";
+              else if (book.title.includes("خراسان")) manualLink = "/en/library#book-khorasan";
+              else if (book.title.includes("فتوے")) manualLink = "/en/library#book-fatwa";
+              else if (book.title.includes("فرھنگستان")) manualLink = "/en/library#book-farhang";
+              else if (book.title.includes("انقلاب")) manualLink = "/en/library#book-inqilab";
+              else if (book.title.includes("نورالقرآن") || book.title.includes("قرآن")) manualLink = "/en/library#Quran";
 
               const finalHref = book.link || manualLink;
 

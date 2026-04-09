@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaPaintBrush, FaPalette, FaMosque, FaTree, FaFilm, FaImage, FaBookOpen, FaBook, FaNewspaper, FaCheckCircle, FaSearchPlus, FaTimes, FaChevronLeft, FaChevronRight, FaShareAlt, FaGlobe, FaHeadphones } from "react-icons/fa";
+import { FaPaintBrush, FaPalette, FaMosque, FaTree, FaFilm, FaImage, FaBookOpen, FaBook, FaNewspaper, FaCheckCircle, FaSearchPlus, FaTimes, FaChevronLeft, FaChevronRight, FaShareAlt, FaGlobe, FaHeadphones, FaLandmark, FaStar } from "react-icons/fa";
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -100,6 +100,15 @@ export default function DesignPortfolio() {
     setSelectedImageIndex((prevIndex) => 
       prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
     );
+  };
+
+  const openImageByTitle = (title) => {
+    const index = galleryImages.findIndex((img) => img.title.includes(title));
+    if (index !== -1) {
+      setSelectedImageIndex(index);
+    } else {
+      setSelectedImageIndex(15);
+    }
   };
 
   return (
@@ -229,59 +238,67 @@ export default function DesignPortfolio() {
 
           </div>
 
-          {/* باقی ڈیزائنز کی لسٹ */}
+          {/* پروجیکٹس کے شاہکار - کارڈز */}
+          <div className="text-center mb-12 mt-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] urdu-text">پروجیکٹس کے شاہکار</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto mt-4 leading-relaxed urdu-text" dir="rtl">25 سال کی تخلیقی محنت سے تیار کردہ شاہکار اور نصب تعادل جو ایران اور پاکستان کے فرہنگی اداروں، نمائشوں اور مختلف پروگراموں کے لیے بنائے گئے۔</p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" dir="rtl">
             
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
-               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaNewspaper size={120}/></div>
-               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaNewspaper /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">فارسی مجلہ 'شاخِ نبات'</h3>
+               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaPalette size={120}/></div>
+               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaPalette /></div>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">فارسی مجلہ 'شاخِ نبات'</h3>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
-                 ایران کے مشہور اور ڈیزائن سے بھرپور فارسی مجلے 'شاخِ نبات' کے تمام صفحات کی مکمل ڈیزائننگ کا اعزاز بھی مجھے حاصل رہا۔ ایرانی قوم آرٹ میں بہت آگے ہے، اور ان کے معیارات پر پورا اترنا میرے لیے ایک اعزاز تھا۔
+                 ایران کے مشہور ترین اور ڈیزائن سے بھرپور فارسی مجلے 'شاخِ نبات' کے تمام صفحات کی مکمل ڈیزائننگ اور لے آؤٹ کا اعزاز مجھے حاصل ہوا۔ اس مجلے میں ایرانی ثقافت، شاعری، اور فنونِ لطیفہ کی بہترین مثالیں ہوتی تھیں۔ ایرانی قوم آرٹ اور ڈیزائننگ میں انتہائی ترقی یافتہ ہے، اور ان کے اعلیٰ معیارات پر پورا اترنا میرے لیے ایک بہت بڑا اعزاز اور چیلنج تھا۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
-            <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
-               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaNewspaper size={120}/></div>
-               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaNewspaper /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">فارسی مجلہ 'شاخِ نبات'</h3>
+               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaLandmark size={120}/></div>
+               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaLandmark /></div>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">الحمرا دیوار - 100 فٹ پینٹنگ</h3>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
-                 ایران کے مشہور ترین اور ڈیزائن سے بھرپور فارسی مجلے 'شاخِ نبات' کے تمام صفحات کی مکمل ڈیزائننگ اور لے آؤٹ کا اعزاز مجھے حاصل ہوا۔ اس مجلے میں ایرانی ثقافت، شاعری، اور فنونِ لطیفہ کی بہترین مثالیں ہوتی تھیں۔ ایرانی قوم آرٹ اور ڈیزائننگ میں انتہائی ترقی یافتہ ہے، اور ان کے اعلیٰ معیارات پر پورا اترنا میرے لیے ایک بہت بڑا اعزاز اور چیلنج تھا۔ اس کام نے میری ڈیزائننگ کی صلاحیتوں کو آگے بڑھانے میں بہت مدد دی۔
-               </p>
-            </div>
-               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify">
-                 انقلابِ اسلامی ایران کی سالگرہ کی تقریب میں، الحمرا لاہور کی بیرونی دیوار کے لیے <strong>تقریباً 100 فٹ کی طویل ترین دیوار پر ہاتھ سے پینٹنگ</strong> کی۔ اس میں 'میدانِ آزادی' تہران کا تفصیلی منظر اور ایرانی انقلاب کی علامات موجود تھیں۔ یہ شاہکار روز سے رات تک دور دور سے شہر بھر میں نظر آتا تھا اور ہر آنے والے کو متاثر کرتا تھا۔ اس کے رنگ اور ڈیزائن ایران کے روحانی و سیاسی نظریات کو خوبصورتی سے ظاہر کرتے تھے۔
+                 انقلابِ اسلامی ایران کی سالگرہ کی تقریب میں، الحمرا لاہور کی بیرونی دیوار کے لیے تقریباً 100 فٹ کی طویل ترین دیوار پر ہاتھ سے پینٹنگ کی۔ اس میں 'میدانِ آزادی' تہران کا تفصیلی منظر اور ایرانی انقلاب کی علامات موجود تھیں۔ یہ شاہکار دور دور سے شہر بھر میں نظر آتا تھا۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaMosque size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaMosque /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">مسجدِ نبوی اور روضہ امام علی - تھرموپور شاہکار</h3>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">مسجدِ نبوی اور روضہ امام علی - تھرموپور شاہکار</h3>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
-                 ایک بہت بڑی ثقافتی و مذہبی تقریب کے لیے تھرموپور (Thermofoam) سے مسجدِ نبوی ﷺ کا ایک شاندار اور تفصیلی قدِ آدم ماڈل تیار کیا۔ ساتھ ہی، روضہ امام علی علیہ السلام کا ایک بہت ہی خوبصورت اور معماری لحاظ سے درست ماڈل بھی تیار کیا۔ ان ماڈلز میں لائٹنگ اور تفصیلات انتہائی شاندار تھیں، جنھوں نے تقریب کو ایک روحانی منظر بخش دیا۔ حاضرین نے ان شاہکاروں کی تعریف و توصیف انتہائی سراہی۔
+                 ایک بہت بڑی ثقافتی و مذہبی تقریب کے لیے تھرموپور (Thermofoam) سے مسجدِ نبوی ﷺ کا ایک شاندار اور تفصیلی قدِ آدم ماڈل تیار کیا۔ ساتھ ہی، روضہ امام علی علیہ السلام کا ایک بہت ہی خوبصورت اور معماری لحاظ سے درست ماڈل بھی تیار کیا۔ ان ماڈلز میں لائٹنگ اور تفصیلات انتہائی شاندار تھیں۔
                </p>
             </div>
 
-            <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
+            <div onClick={() => openImageByTitle('نوارِ رستم')} role="button" tabIndex={0} className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden cursor-pointer">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaFilm size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaFilm /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">نوارِ رستم - دیوہیکل مکینیکل VHS کیسٹ</h3>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">نوارِ رستم - دیوہیکل مکینیکل VHS کیسٹ</h3>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
-                 میں نے ایک عظیم الشان دیوہیکل VHS کیسٹ کا ماڈل تیار کیا جو حقیقی کیسٹ کے مقابلے میں زیادہ بڑا تھا۔ اس میں ریل اندر سے باقاعدہ گھومتی تھی اور اردگرد لگی خصوصی لائٹس کی مدد سے فلم چلتی ہوئی دکھائی دیتی تھی۔ ایرانی حکام نے اس کی منفرد تخلیق اور جسامت دیکھ کر اسے 'نوارِ رستم' کا نام دیا، جو ایرانی روایات میں کسی بہت بڑی اور اہم چیز کے لیے استعمال ہوتا ہے۔ یہ تقریب کا ایک منفرد کردار ادا کرتا تھا۔
+                 میں نے ایک عظیم الشان دیوہیکل VHS کیسٹ کا ماڈل تیار کیا جو حقیقی کیسٹ کے مقابلے میں زیادہ بڑا تھا۔ اس میں ریل اندر سے باقاعدہ گھومتی تھی اور اردگرد لگی خصوصی لائٹس کی مدد سے فلم چلتی ہوئی دکھائی دیتی تھی۔ ایرانی حکام نے اسے 'نوارِ رستم' کا نام دیا۔
                </p>
             </div>
 
             <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
                <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaTree size={120}/></div>
                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaTree /></div>
-               <h3 className="text-2xl font-bold text-white mb-4 urdu-text">شجرِ اہلِ بیت ؑ - نورانی روحانی درخت</h3>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">شجرِ اہلِ بیت ؑ - نورانی روحانی درخت</h3>
                <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
-                 میں نے ایک منفرد اور روحانی نوعیت کا درخت ڈیزائن کیا جو شجرِ اہلِ بیت علیہم السلام کی نمائندگی کرتا تھا۔ اس درخت کے پتوں پر حضرت محمد ﷺ اور آئمہ اہلِ بیتؑ کے نام اور القابات خوبصورتی سے کندہ تھے۔ درخت میں خصوصی لائٹنگ سسٹم نصب تھا جو تقریب کے دوران ایک ایک پتا روشن ہو جاتا تھا، جس سے ایک بہت ہی پرجلال اور روحانی منظر پیدا ہوتا تھا۔ یہ تقریب کا ایک فوکس پوائنٹ بن جاتا تھا۔
+                 میں نے ایک منفرد اور روحانی نوعیت کا درخت ڈیزائن کیا جو شجرِ اہلِ بیت علیہم السلام کی نمائندگی کرتا تھا۔ اس درخت کے پتوں پر حضرت محمد ﷺ اور آئمہ اہلِ بیتؑ کے نام اور القابات خوبصورتی سے کندہ تھے۔ درخت میں خصوصی لائٹنگ سسٹم نصب تھا جو تقریب کے دوران ایک ایک پتا روشن ہو جاتا تھا۔
                </p>
             </div>
 
+            <div className="bg-[#050505] p-8 rounded-3xl border border-gray-800 hover:border-[#D4AF37]/50 transition-all group shadow-lg hover:shadow-[0_10px_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
+               <div className="absolute -bottom-6 -left-6 text-[#D4AF37] opacity-5 group-hover:scale-110 transition-transform duration-500"><FaStar size={120}/></div>
+               <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] text-2xl mb-6 border border-[#D4AF37]/30"><FaStar /></div>
+               <h3 className="text-2xl font-bold text-white mb-4 urdu-text text-right">عمدہ صنعتگری</h3>
+               <p className="text-gray-400 text-base leading-relaxed urdu-text text-justify" dir="rtl">
+                 ہر پروجیکٹ روایتی فن کی تکنیکوں اور جدید میڈیا ٹیکنولوجی کا امتزاج ہے۔ نتیجہ وہ نصب تعادلیں اور اشاعتیں ہیں جو معنویت، تعلیم اور ہماری ثقافتی و روحانی میراث کی عزت کے ساتھ بولتی ہیں۔
+               </p>
+            </div>
           </div>
         </div>
       </section>

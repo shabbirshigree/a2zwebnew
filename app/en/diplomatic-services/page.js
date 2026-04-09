@@ -197,7 +197,7 @@ export default function DiplomaticServicesEN() {
             </section>
 
             {/* Section 2: Anjuman Dosti and Website */}
-            <section className="bg-[#0b314d] text-white py-16 md:py-20 border-y-4 border-[#D4AF37] relative">
+            <section id="anjuman" className="bg-[#0b314d] text-white py-16 md:py-20 border-y-4 border-[#D4AF37] relative">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center mb-12">
                         <FaUsers className="text-6xl text-[#D4AF37] mx-auto mb-4" />
@@ -247,7 +247,7 @@ export default function DiplomaticServicesEN() {
             </section>
 
             {/* Section 3: Persian Language Services */}
-            <section className="py-16 md:py-24 bg-[#fffdf5] border-b border-gray-200">
+            <section id="tourism" className="py-16 md:py-24 bg-[#fffdf5] border-b border-gray-200">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-14">
                         <h2 className="text-3xl md:text-5xl font-bold text-emerald-800 mb-6 flex justify-center items-center gap-4">

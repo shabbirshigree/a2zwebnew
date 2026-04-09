@@ -79,7 +79,7 @@ export default function AwardsPageEN() {
             <div className="h-9 w-9 md:h-12 md:w-12 rounded-full border-2 border-white overflow-hidden animate-ripple bg-white shrink-0">
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" className="w-full h-full object-cover rounded-full" alt="imam-reza" />
             </div>
-            <div className="flex-1 text-center"><span className="block text-xs md:text-xl font-extrabold font-amiri leading-none whitespace-nowrap">Custodian of Imam Reza</span></div>
+            <div className="flex-1 text-center"><span className="block text-xs md:text-xl font-extrabold font-amiri leading-none whitespace-nowrap">Servant of Imam Reza</span></div>
           </Link>
 
           <h2 className="text-xs md:text-2xl font-bold text-[#D4AF37] whitespace-nowrap px-1">✨ Major Spiritual Honors & Titles</h2>
@@ -96,11 +96,11 @@ export default function AwardsPageEN() {
           {/* Award 1 */}
           <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#222]">
             <div className="text-left">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start"><FaQuran /> Custodian of Imam Reza (2011)</h3>
-              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">It is a great blessing from Allah that in recognition of my Islamic and cultural services, I was honored with the title 'Custodian of Imam Reza'. This is one of the greatest achievements of my life.</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start"><FaQuran /> Servant of Imam Reza (2011)</h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">It is a great blessing from Allah that in recognition of my Islamic and cultural services, I was honored with the title 'Servant of Imam Reza'. This is one of the greatest achievements of my life.</p>
             </div>
             <div className="img-wrap h-[300px] md:h-[380px] shadow-2xl">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768214711/11427210_860298097380781_7853481782485550208_n_ry85rw.jpg" className="w-full h-full object-cover" alt="Custodian Award" />
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768214711/11427210_860298097380781_7853481782485550208_n_ry85rw.jpg" className="w-full h-full object-cover" alt="Servant Award" />
             </div>
           </div>
 

@@ -14,7 +14,7 @@ const galleryImages = [
   { id: 6, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772075727/FIL3502-Picsart-AiImageEnhancer_mj5f8w.jpg', title: '3D model presentation' },
   { id: 7, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076123/FIL3491-Picsart-AiImageEnhancer_x9kyyy.jpg', title: 'Noorani Tree Model' },
   { id: 8, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076275/FIL3515-Picsart-AiImageEnhancer_l5crkz.jpg', title: 'Calligraphy Oil Painting' },
-  { id: 9, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076279/FIL3496-Picsart-AiImageEnhancer_mkhz93.jpg', title: 'Nawar-e-Rustom Sculpture' },
+  { id: 9, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772077214/FIL3527-Picsart-AiImagehEnhancer_c6fxsf.jpg', title: 'Nawar-e-Rustom Sculpture' },
   { id: 10, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076276/FIL3504-Picsart-AiImageEnhancer_swyypy.jpg', title: 'Art installation on stage' },
   { id: 11, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076280/FIL3511-Picsart-AiImageEnhancer_xadkvu.jpg', title: 'Program performance scene' },
   { id: 12, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076595/FIL3490_hwleco.jpg', title: 'Imam Ali Shrine Model' },
@@ -22,7 +22,7 @@ const galleryImages = [
   { id: 14, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076596/FIL3489_z7y1fu.jpg', title: 'Model showcased at event' },
   { id: 15, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076594/FIL3518_trass8.jpg', title: 'Ceremony at Imam Ali model' },
   { id: 16, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3527_oaz56i.jpg', title: 'Nawar-e-Rustom installation' },
-  { id: 17, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772077214/FIL3527-Picsart-AiImageEnhancer_c6fxsf.jpg', title: 'Mechanical sculpture detail' },
+ { id: 17, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1772076948/FIL3510_xgre7z.jpg', title: 'Mechanical sculpture detail' },
   { id: 18, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076947/FIL3498_fn6mic.jpg', title: 'Work in progress at exhibition' },
   { id: 19, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3499_hamxq0.jpg', title: 'Exhibition installation' },
   { id: 20, src: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772076948/FIL3528_ptwcws.jpg', title: 'Artist with project' },
@@ -72,6 +72,15 @@ export default function DesignPageEN() {
   const prevImage = (e) => {
     e?.stopPropagation();
     setSelectedImageIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+  };
+
+  const openImageByTitle = (title) => {
+    const index = galleryImages.findIndex((img) => img.title.includes(title));
+    if (index !== -1) {
+      setSelectedImageIndex(index);
+    } else {
+      setSelectedImageIndex(15);
+    }
   };
 
   return (
@@ -171,7 +180,7 @@ export default function DesignPageEN() {
               <p className="text-gray-300 leading-relaxed text-left">Large-scale thermofoam architectural models of Masjid Nabawi and Imam Ali shrine created for major religious and cultural events. These installations combined reverence with advanced sculptural techniques for powerful visual presentations honoring Islamic heritage with dignity.</p>
             </div>
 
-            <div className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300" dir="ltr">
+            <div onClick={() => openImageByTitle('Nawar-e-Rustom')} role="button" tabIndex={0} className="rounded-[2rem] border border-[#303030] bg-[#111] p-8 shadow-xl hover:border-[#D4AF37]/50 transition-all duration-300 cursor-pointer" dir="ltr">
               <div className="w-16 h-16 mb-6 rounded-3xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center"><FaFilm size={28} /></div>
               <h3 className="text-2xl font-bold text-white mb-3 text-left">Nawar-e-Rustom Sculpture</h3>
               <p className="text-gray-300 leading-relaxed text-left">A monumental mechanical VHS cassette sculpture featuring motorized reels and synchronized lighting effects. Named "Nawar-e-Rustom" (legendary epic hero) by Iranian officials, it became the commanding visual centerpiece of the exhibition with functional mechanical elements.</p>

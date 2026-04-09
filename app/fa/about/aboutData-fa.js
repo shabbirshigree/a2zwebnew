@@ -5,14 +5,14 @@ import {
 } from "react-icons/fa";
 
 export const founderItems = [
-    { icon: "FaQuran", title: "پروژه نورالقرآن", desc: "نخستین قرآن بصری جهان" },
-    { icon: "FaTv", title: "نورپروداکشنز", desc: "شبکه رسانه‌های اسلامی" },
-    { icon: "FaHandshake", title: "انجمن دوستی پاک ایران", desc: "انجمن دوستی" },
-    { icon: "FaGlobe", title: "وب‌سایت پاک ایران", desc: "درگاه وب (اردو/فارسی)" },
-    { icon: "FaGlobe", title: "فدراسیون تجارت و فرهنگ", desc: "فدراسیون فرهنگ و تجارت" },
-    { icon: "FaTrophy", title: "بنیانگذار: گردشگری پاک ایران", desc: "نخستین بار در پاکستان" },
-    { icon: "FaTv", title: "کانال اپارات (فارسی)", desc: "موقتاً در دسترس نیست" },
-    { icon: "FaQuran", title: "کانال کودکان نور", desc: "کانال سرگرمی کودکان" }
+    { icon: "FaQuran", title: "پروژه نورالقرآن", desc: "نخستین قرآن بصری جهان", link: "/fa/project" },
+    { icon: "FaTv", title: "نورپروداکشنز", desc: "شبکه رسانه‌های اسلامی", link: "https://www.youtube.com/@noorproduction" },
+    { icon: "FaHandshake", title: "انجمن دوستی پاک ایران", desc: "انجمن دوستی", link: "/fa/diplomatic-services#anjuman" },
+    { icon: "FaGlobe", title: "وب‌سایت پاک ایران", desc: "درگاه وب (اردو/فارسی)", link: "https://pakiiranassociation.wixsite.com/farsee/main" },
+    { icon: "FaGlobe", title: "فدراسیون تجارت و فرهنگ", desc: "فدراسیون فرهنگ و تجارت", link: "/fa/diplomatic-services#tourism" },
+    { icon: "FaTrophy", title: "بنیانگذار: گردشگری پاک ایران", desc: "نخستین بار در پاکستان", link: "/fa/diplomatic-services#tourism" },
+    { icon: "FaTv", title: "کانال اپارات (فارسی)", desc: "موقتاً در دسترس نیست", link: "https://www.aparat.com" },
+    { icon: "FaQuran", title: "کانال کودکان نور", desc: "کانال سرگرمی کودکان", link: "https://www.youtube.com/results?search_query=Tiflan+e+Noor" }
 ];
 
 export const mediaRoles = [

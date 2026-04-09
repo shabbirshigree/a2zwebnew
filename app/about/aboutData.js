@@ -13,21 +13,21 @@ import {
 
 export const founderItems = [
 
-  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran" },
+  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran", link: "/project" },
 
-  { icon: <FaTv />, title: "Noor Productions", desc: "Islamic Media Network" },
+  { icon: <FaTv />, title: "Noor Productions", desc: "Islamic Media Network", link: "https://www.youtube.com/@noorproduction" },
 
-  { icon: <FaHandshake />, title: "Pak-Iran Friendship Association", desc: "Friendship Association" },
+  { icon: <FaHandshake />, title: "Pak-Iran Friendship Association", desc: "Friendship Association", link: "/diplomatic-services#anjuman" },
 
-  { icon: <FaGlobe />, title: "Pak-Iran Website", desc: "Web Portal (Urdu/Farsi)" },
+  { icon: <FaGlobe />, title: "Pak-Iran Website", desc: "Web Portal (Urdu/Farsi)", link: "https://pakiiranassociation.wixsite.com/pira" },
 
-  { icon: <FaGlobe />, title: "Trade and Culture Federation", desc: "Federation of Culture & Trade" },
+  { icon: <FaGlobe />, title: "Trade and Culture Federation", desc: "Federation of Culture & Trade", link: "/diplomatic-services#tourism" },
 
-  { icon: <FaTrophy />, title: "Founder: Pak-Iran Tourism", desc: "First Time in Pakistan" },
+  { icon: <FaTrophy />, title: "Founder: Pak-Iran Tourism", desc: "First Time in Pakistan", link: "/diplomatic-services#tourism" },
 
-  { icon: <FaTv />, title: "Aparat Channel (Farsi)", desc: "Temporarily Unavailable" },
+  { icon: <FaTv />, title: "Aparat Channel (Farsi)", desc: "Temporarily Unavailable", link: "https://www.aparat.com" },
 
-  { icon: <FaQuran />, title: "Tiflanoor Channel", desc: "Kids Entertainment Channel" }
+  { icon: <FaQuran />, title: "Tiflanoor Channel", desc: "Kids Entertainment Channel", link: "https://www.youtube.com/results?search_query=Tiflan+e+Noor" }
 
 ];
 
