@@ -18,14 +18,14 @@ const MobileProfileCard = () => {
       
       {/* Profile Image at Top */}
       <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
-        {/* Water Ripples Effect - Completely outside the image */}
+        {/* Water Ripples Effect - Outside the image circle */}
         <div style={{
           position: 'absolute',
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '220px',
-          height: '220px',
+          width: '200px',
+          height: '200px',
           borderRadius: '50%',
           pointerEvents: 'none',
           zIndex: 1
