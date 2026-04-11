@@ -38,10 +38,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '2px solid rgba(212,175,55,0.6)',
+            border: '3px solid rgba(212,175,55,0.8)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite'
+            animation: 'waterRipple 3s ease-out infinite',
+            boxShadow: '0 0 10px rgba(212,175,55,0.4)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -50,10 +51,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '2px solid rgba(26,71,42,0.5)',
+            border: '3px solid rgba(26,71,42,0.7)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 0.5s'
+            animation: 'waterRipple 3s ease-out infinite 0.5s',
+            boxShadow: '0 0 10px rgba(26,71,42,0.4)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -62,10 +64,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '2px solid rgba(212,175,55,0.4)',
+            border: '3px solid rgba(212,175,55,0.6)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 1s'
+            animation: 'waterRipple 3s ease-out infinite 1s',
+            boxShadow: '0 0 10px rgba(212,175,55,0.4)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -74,10 +77,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '2px solid rgba(26,71,42,0.3)',
+            border: '3px solid rgba(26,71,42,0.5)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 1.5s'
+            animation: 'waterRipple 3s ease-out infinite 1.5s',
+            boxShadow: '0 0 10px rgba(26,71,42,0.4)'
           }}></div>
         </div>
         
