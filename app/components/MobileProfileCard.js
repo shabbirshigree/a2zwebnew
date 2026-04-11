@@ -237,7 +237,7 @@ const MobileProfileCard = () => {
             حرم امام رضا سے "سرٹیفکیٹ آف اپریسی ایشن" وصول کرنے والے۔ آواز غازی ایوارڈ، گولڈ میڈل اور ۵۰ سے زیادہ قومی اور بین الاقوامی انعامات کے فاتح۔
           </span>
         </div>
-        
+
         {/* Titles */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
