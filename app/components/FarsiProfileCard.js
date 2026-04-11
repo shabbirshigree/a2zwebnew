@@ -17,7 +17,70 @@ const FarsiProfileCard = () => {
     }}>
       
       {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
+        {/* Water Ripples Effect - Completely outside the image */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '220px',
+          height: '220px',
+          borderRadius: '50%',
+          pointerEvents: 'none',
+          zIndex: 1
+        }}>
+          {/* Multiple ripple circles */}
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(212,175,55,0.6)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(26,71,42,0.5)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 0.5s'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(212,175,55,0.4)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 1s'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(26,71,42,0.3)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 1.5s'
+          }}></div>
+        </div>
+        
         <div style={{
           width: '180px',
           height: '180px',
@@ -28,21 +91,9 @@ const FarsiProfileCard = () => {
           boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
           background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
           padding: '3px',
-          position: 'relative'
+          position: 'relative',
+          zIndex: 2
         }}>
-          {/* Ripple Effect */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 30% 30%, rgba(212,175,55,0.3) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(26,71,42,0.2) 0%, transparent 35%)',
-            animation: 'ripple 3s ease-in-out infinite',
-            pointerEvents: 'none'
-          }}></div>
-          
           <img 
             src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
             alt="Haji Shabbir Ahmed Shigri" 
@@ -50,20 +101,20 @@ const FarsiProfileCard = () => {
           />
         </div>
         
-        {/* CSS for Ripple Animation */}
+        {/* CSS for Water Ripples Animation */}
         <style jsx>{`
-          @keyframes ripple {
+          @keyframes waterRipple {
             0% {
-              transform: scale(1);
+              transform: translate(-50%, -50%) scale(0);
               opacity: 0.8;
             }
             50% {
-              transform: scale(1.05);
-              opacity: 0.4;
+              transform: translate(-50%, -50%) scale(4);
+              opacity: 0.3;
             }
             100% {
-              transform: scale(1);
-              opacity: 0.8;
+              transform: translate(-50%, -50%) scale(6);
+              opacity: 0;
             }
           }
         `}</style>

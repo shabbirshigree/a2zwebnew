@@ -17,7 +17,70 @@ const MobileProfileCard = () => {
     }}>
       
       {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
+        {/* Water Ripples Effect - Completely outside the image */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '220px',
+          height: '220px',
+          borderRadius: '50%',
+          pointerEvents: 'none',
+          zIndex: 1
+        }}>
+          {/* Multiple ripple circles */}
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(212,175,55,0.6)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(26,71,42,0.5)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 0.5s'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(212,175,55,0.4)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 1s'
+          }}></div>
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            border: '2px solid rgba(26,71,42,0.3)',
+            background: 'transparent',
+            transform: 'translate(-50%, -50%)',
+            animation: 'waterRipple 3s ease-out infinite 1.5s'
+          }}></div>
+        </div>
+        
         <div style={{
           width: '180px',
           height: '180px',
@@ -28,42 +91,30 @@ const MobileProfileCard = () => {
           boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
           background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
           padding: '3px',
-          position: 'relative'
+          position: 'relative',
+          zIndex: 2
         }}>
-          {/* Ripple Effect */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 30% 30%, rgba(212,175,55,0.3) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(26,71,42,0.2) 0%, transparent 35%)',
-            animation: 'ripple 3s ease-in-out infinite',
-            pointerEvents: 'none'
-          }}></div>
-          
           <img 
             src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
-            alt="حاجی شبیر احمد شگری" 
+            alt="Haji Shabbir Ahmed Shigri" 
             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
           />
         </div>
         
-        {/* CSS for Ripple Animation */}
+        {/* CSS for Water Ripples Animation */}
         <style jsx>{`
-          @keyframes ripple {
+          @keyframes waterRipple {
             0% {
-              transform: scale(1);
+              transform: translate(-50%, -50%) scale(0);
               opacity: 0.8;
             }
             50% {
-              transform: scale(1.05);
-              opacity: 0.4;
+              transform: translate(-50%, -50%) scale(4);
+              opacity: 0.3;
             }
             100% {
-              transform: scale(1);
-              opacity: 0.8;
+              transform: translate(-50%, -50%) scale(6);
+              opacity: 0;
             }
           }
         `}</style>
@@ -84,7 +135,7 @@ const MobileProfileCard = () => {
           marginBottom: '10px',
           textAlign: 'center'
         }}>
-          سینیئر صحافی، محقق، مصنف اور پروڈیوسر
+          سینئیر صحافی، محقق، مصنف اور پروڈیوسر
         </p>
       </div>
 
@@ -96,122 +147,142 @@ const MobileProfileCard = () => {
         marginBottom: '15px'
       }}>
         
-        {/* اعزازات */}
+        {/* Name */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            اعزازات:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            خادمِ امام رضا (علیہ السلام) مشہد، اور خادمِ حرمِ حضرت عباس (علیہ السلام) کربلا۔
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            پاکستان میں آستانِ قدس رضوی (مشہد، ایران) کے پہلے باقاعدہ نمائندے ہونے کا منفرد اعزاز۔
-          </span>
-        </div>
-
-        {/* تعلیم */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            تعلیم:
+            نام:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            گورنمنٹ ڈگری کالج سکردو۔ MBA (ڈپلومہ بزنس ایڈمنسٹریشن) اور ڈپلومہ ان الیکٹرانکس۔
+            حاجی شبیر احمد شگری
           </span>
         </div>
 
-        {/* عہدے */}
+        {/* Identity */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            عہدے:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            بانی و صدر: انجمنِ دوستی پاکستان و ایران (نامزد کردہ: ایرانی قونصلیٹ)۔
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            ریٹائرمنٹ: پبلک ریلیشن آفیسر،خانہ فرہنگ ایران۔لاہور
-          </span>
-        </div>
-
-        {/* تصانیف */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            تصانیف:
+            تعارف:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            7 سے زائد علمی و ادبی کتب کے مصنف۔
+            سینئیر صحافی، محقق، مصنف اور پروڈیوسر
+          </span>
+        </div>
+
+        {/* Honors */}
+        <div style={{ marginBottom: '10px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+            ۱. اعزازات اور مذہبی خدمات:
+          </span>
+          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
+            حرم امام رضا (مشہد مقدس، ایران) اور حرم حضرت عباس (ع) کربلا کے خادم۔
+          </span>
+          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
+            پاکستان میں حرم امام رضا کے پہلے باضابطہ نمائندے کے اعزاز کے حامل۔
+          </span>
+        </div>
+
+        {/* Education */}
+        <div style={{ marginBottom: '10px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+            ۲. تعلیمی قابلیت:
+          </span>
+          <span style={{ fontSize: '14px', color: '#333' }}>
+            گورنمنٹ کالج سکردو سے فارغ التحصیل۔ ایم بی اے (بزنس ایڈمنسٹریشن) اور الیکٹرانکس ڈپلومہ کے حامل۔
+          </span>
+        </div>
+
+        {/* Positions */}
+        <div style={{ marginBottom: '10px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+            ۳. عہدوں اور انتظامی عہدے:
+          </span>
+          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
+            بانی اور صدر: ایران پاکستان دوستی ایسوسی ایشن (ایران کے قونصلگریٹ کی منظور شدہ)۔
+          </span>
+          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
+            پبلک ریلیشنز آفیسر (سابق): کلچرل سینٹر آف اسلامی ریپبلک آف ایران - لاہور۔
+          </span>
+        </div>
+
+        {/* Publications */}
+        <div style={{ marginBottom: '10px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+            ۴. ادبی اور تحقیقی کام:
+          </span>
+          <span style={{ fontSize: '14px', color: '#333' }}>
+            تصانیف: ۷ سے زیادہ علمی اور ادبی کتابوں کے مصنف۔
           </span>
         </div>
         
-        {/* ادارت */}
+        {/* Editorship */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ادارت:
+            ایڈیٹرشپ:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            ملکی و غیر ملکی علمی مجلات کے ایڈیٹر ، اخبارات روزنامہ حاوی، اکٹھ (پنجابی) اور پرچار کے ڈپٹی ایڈیٹر۔
+            قومی اور بین الاقوامی سائنسی جرائد کے ایڈیٹر؛ ہاوی، اکھٹ (پنجابی) اور پرچار اخبارات کے ڈپٹی ایڈیٹر۔
           </span>
         </div>
 
-        {/* کالم نگاری */}
+        {/* Column Writing */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
             کالم نگاری:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            روزنامہ نوائے وقت، پاکستان اور مشرق میں 300 سے زائد کالمز، مضامین اور سفرنامے شائع ہو چکے ہیں۔
+            نوائے وقت، پاکستان اور مشرق اخبارات میں ۳۰۰ سے زیادہ مضامین، کالمز اور سفرنامے شائع۔
           </span>
         </div>
         
-        {/* بانی */}
+        {/* Founder */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            بانی:
+            ۵. بنیاد اور منصوبے:
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            بانی نور القرآن پروجیکٹ۔سی ای او (CEO): نور پروڈکشنز۔
+            نور القرآن ویژوال پروجیکٹ کے بانی (پہلا ویژوال قرآن پروجیکٹ)۔
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            بانی پاک ایران زیارتی و سیاحتی ٹورازم۔
+            سی ای او نور پروڈکشنز۔ پاک-ایران زراعت اور سیاحتی کے بانی۔
           </span>
         </div>
         
-        {/* میڈیا کیرئیر */}
+        {/* Media Career */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            میڈیا کیرئیر:
+            ۶. میڈیا کیریئر:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            سینیئر ریڈیو براڈکاسٹر، ٹی وی اینکر پرسن اور پروڈیوسر۔
+            سینئر ریڈیو اناؤنسر، ٹیلی ویژن ہوسٹ اور پروڈیوسر۔
           </span>
         </div>
 
-        {/* ثقافتی و سفارتی خدمات */}
+        {/* Cultural Services */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ثقافتی و سفارتی خدمات:
+            ۷. ثقافتی اور سفارتی خدمات:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            ماہرِ امورِ فرہنگی: خانہ فرہنگِ ایران، لاہور میں 25 سالہ طویل علمی و ثقافتی خدمات۔
+            کلچرل افیسر: کلچرل سینٹر آف ایران (لاہور) میں ۲۵ سال کی سائنسی اور ثقافتی خدمات؛ ثقافتی سفارتی معاملات کا ماہر۔
           </span>
         </div>
 
-        {/* ایوارڈز */}
+        {/* Awards */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ایوارڈز:
+            ۸. انعامات اور اعزازات:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            "تقدیر نامہ" (آستانِ قدس رضوی)، صدائے غازی ایوارڈ، گولڈ میڈلسٹ، اور 50 سے زائد ملکی و بین الاقوامی ایوارڈز۔
+            حرم امام رضا سے "سرٹیفکیٹ آف اپریسی ایشن" وصول کرنے والے۔ آواز غازی ایوارڈ، گولڈ میڈل اور ۵۰ سے زیادہ قومی اور بین الاقوامی انعامات کے فاتح۔
           </span>
         </div>
         
-        {/* القاب */}
+        {/* Titles */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            القاب:
+            ۹. القاب:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            خادمِ ثقلین، کار شناسِ فرہنگی (Cultural Expert)۔
+            خادم الثقلین | کلچرل ایکسپرٹ
           </span>
         </div>
 
@@ -231,7 +302,7 @@ const MobileProfileCard = () => {
           fontSize: '14px'
         }}>
           <div style={{ marginBottom: '5px' }}>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>•</span>
+            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
             <a 
               href="mailto:shigri51214@gmail.com" 
               style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
@@ -242,7 +313,7 @@ const MobileProfileCard = () => {
             </a>
           </div>
           <div>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>•</span>
+            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
             <a 
               href="http://www.shabbirshigri.com" 
               target="_blank" 
