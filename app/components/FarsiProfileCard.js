@@ -16,112 +16,66 @@ const FarsiProfileCard = () => {
       padding: '20px'
     }}>
       
-      {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
-        {/* Water Ripples Effect - Outside the image circle */}
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '200px',
-          height: '200px',
-          borderRadius: '50%',
-          pointerEvents: 'none',
-          zIndex: 1
-        }}>
-          {/* Multiple ripple circles */}
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            border: '3px solid rgba(255,215,0,0.9)',
-            background: 'transparent',
-            transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite',
-            boxShadow: '0 0 15px rgba(255,215,0,0.6)'
-          }}></div>
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            border: '3px solid rgba(0,123,255,0.9)',
-            background: 'transparent',
-            transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 0.5s',
-            boxShadow: '0 0 15px rgba(0,123,255,0.6)'
-          }}></div>
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            border: '3px solid rgba(255,69,0,0.9)',
-            background: 'transparent',
-            transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 1s',
-            boxShadow: '0 0 15px rgba(255,69,0,0.6)'
-          }}></div>
-          <div style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            border: '3px solid rgba(0,255,127,0.9)',
-            background: 'transparent',
-            transform: 'translate(-50%, -50%)',
-            animation: 'waterRipple 3s ease-out infinite 1.5s',
-            boxShadow: '0 0 15px rgba(0,255,127,0.6)'
-          }}></div>
-        </div>
-        
+      {/* Profile Image with Water Ripple Effect */}
+      <div style={{ textAlign: 'center', marginBottom: '30px', position: 'relative' }}>
         <div style={{
           width: '180px',
           height: '180px',
-          borderRadius: '50%',
-          border: '4px solid #D4AF37',
           margin: '0 auto',
-          overflow: 'hidden',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-          background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
-          padding: '3px',
           position: 'relative',
-          zIndex: 2
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}>
-          <img 
-            src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
-            alt="Haji Shabbir Ahmed Shigri" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
-          />
+          
+          {/* Ripple 1 */}
+          <div className="ripple-wave"></div>
+          {/* Ripple 2 */}
+          <div className="ripple-wave" style={{ animationDelay: '1s' }}></div>
+          {/* Ripple 3 */}
+          <div className="ripple-wave" style={{ animationDelay: '2s' }}></div>
+
+          {/* Actual Profile Image */}
+          <div style={{
+            width: '180px',
+            height: '180px',
+            borderRadius: '50%',
+            border: '4px solid #D4AF37',
+            overflow: 'hidden',
+            boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
+            zIndex: '10',
+            position: 'relative',
+            backgroundColor: '#fff'
+          }}>
+            <img 
+              src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
+              alt="Haji Shabbir Ahmed Shigri" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+          </div>
         </div>
         
-        {/* CSS for Water Ripples Animation */}
+        {/* CSS for Ripples - اسے فائل میں کہیں بھی ڈال دیں */}
         <style jsx>{`
-          @keyframes waterRipple {
+          .ripple-wave {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 2px solid #D4AF37;
+            border-radius: 50%;
+            opacity: 0;
+            animation: water-ripple 4s cubic-bezier(0, 0.4, 0.6, 1) infinite;
+            z-index: 1;
+          }
+
+          @keyframes water-ripple {
             0% {
-              transform: translate(-50%, -50%) scale(0.1);
+              transform: scale(1);
               opacity: 0.8;
-              border-width: 3px;
-            }
-            50% {
-              transform: translate(-50%, -50%) scale(3);
-              opacity: 0.3;
-              border-width: 2px;
             }
             100% {
-              transform: translate(-50%, -50%) scale(5);
+              transform: scale(1.6);
               opacity: 0;
-              border-width: 1px;
             }
           }
         `}</style>
