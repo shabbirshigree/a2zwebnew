@@ -43,7 +43,7 @@ const MobileProfileCard = () => {
             border: '4px solid #D4AF37',
             overflow: 'hidden',
             boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
-            zIndex: '10', // تصویر کو لہروں سے اوپر رکھنے کے لیے
+            zIndex: '10',
             position: 'relative',
             backgroundColor: '#fff'
           }}>
