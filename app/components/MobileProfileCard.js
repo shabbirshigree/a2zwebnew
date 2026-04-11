@@ -38,11 +38,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '3px solid rgba(212,175,55,0.8)',
+            border: '3px solid rgba(255,215,0,0.9)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
             animation: 'waterRipple 3s ease-out infinite',
-            boxShadow: '0 0 10px rgba(212,175,55,0.4)'
+            boxShadow: '0 0 15px rgba(255,215,0,0.6)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -51,11 +51,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '3px solid rgba(26,71,42,0.7)',
+            border: '3px solid rgba(0,123,255,0.9)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
             animation: 'waterRipple 3s ease-out infinite 0.5s',
-            boxShadow: '0 0 10px rgba(26,71,42,0.4)'
+            boxShadow: '0 0 15px rgba(0,123,255,0.6)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -64,11 +64,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '3px solid rgba(212,175,55,0.6)',
+            border: '3px solid rgba(255,69,0,0.9)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
             animation: 'waterRipple 3s ease-out infinite 1s',
-            boxShadow: '0 0 10px rgba(212,175,55,0.4)'
+            boxShadow: '0 0 15px rgba(255,69,0,0.6)'
           }}></div>
           <div style={{
             position: 'absolute',
@@ -77,11 +77,11 @@ const MobileProfileCard = () => {
             width: '20px',
             height: '20px',
             borderRadius: '50%',
-            border: '3px solid rgba(26,71,42,0.5)',
+            border: '3px solid rgba(0,255,127,0.9)',
             background: 'transparent',
             transform: 'translate(-50%, -50%)',
             animation: 'waterRipple 3s ease-out infinite 1.5s',
-            boxShadow: '0 0 10px rgba(26,71,42,0.4)'
+            boxShadow: '0 0 15px rgba(0,255,127,0.6)'
           }}></div>
         </div>
         
@@ -109,17 +109,17 @@ const MobileProfileCard = () => {
         <style jsx>{`
           @keyframes waterRipple {
             0% {
-              transform: translate(-50%, -50%) scale(0);
+              transform: translate(-50%, -50%) scale(0.1);
               opacity: 0.8;
               border-width: 3px;
             }
             50% {
-              transform: translate(-50%, -50%) scale(4);
+              transform: translate(-50%, -50%) scale(3);
               opacity: 0.3;
               border-width: 2px;
             }
             100% {
-              transform: translate(-50%, -50%) scale(6);
+              transform: translate(-50%, -50%) scale(5);
               opacity: 0;
               border-width: 1px;
             }
