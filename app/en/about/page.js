@@ -124,7 +124,7 @@ export default function UltimateAboutPage() {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
           {/* Servant of Imam Reza */}
-          <Link href="/imam-reza" className="group">
+          <Link href="/en/imam-reza" className="group">
             <div className="animate-shine bg-gradient-to-bl from-emerald-900 to-emerald-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="Imam Reza" />
@@ -136,7 +136,7 @@ export default function UltimateAboutPage() {
           </Link>
 
           {/* Guardian and Servant of the Sanctuary of Ghazi Abbas */}
-          <Link href="/ghazi-abbas" className="group">
+          <Link href="/en/ghazi-abbas" className="group">
             <div className="animate-shine bg-gradient-to-bl from-red-900 to-red-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="Ghazi Abbas" />

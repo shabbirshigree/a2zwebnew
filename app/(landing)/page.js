@@ -148,10 +148,10 @@ export default function LandingPage() {
 
       {/* START SCREEN */}
       <div className={`absolute inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-1000 ${appState === 'START' ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-        <div className="text-center max-w-2xl px-3 md:px-8 flex flex-col items-center gap-3">
-          <h1 className="text-[5.8px] sm:text-[6.2px] md:text-[7.5px] text-[#D4AF37] font-bold kufic-text tracking-wider leading-tight">{landingData.bismillah}</h1>
-          <h2 className="text-[5.8px] sm:text-[6.2px] md:text-[7.5px] text-white/95 font-medium kufic-text leading-tight max-w-xl px-1 md:px-2" dir="rtl">{landingData.ayat}</h2>
-          <p className="text-[#fde68a]/70 text-[5px] sm:text-[5.5px] md:text-[6.5px] urdu-nastaliq px-2 md:px-6 leading-tight max-w-sm md:max-w-lg" dir="rtl" style={{ whiteSpace: 'normal' }}>"اور تو جسے چاہے عزت دے اور جسے چاہے ذلت دے"</p>
+        <div className="text-center max-w-2xl px-3 md:px-8 flex flex-col items-center gap-4 sm:gap-5">
+          <h1 className="text-[2.2px] sm:text-[3px] md:text-[3.8px] text-white/95 font-normal kufic-text tracking-normal leading-normal mb-1">{landingData.bismillah}</h1>
+          <h2 className="text-[5.8px] sm:text-[6.2px] md:text-[7.8px] text-white/95 font-medium kufic-text leading-normal max-w-xl px-1 md:px-2" dir="rtl">{landingData.ayat}</h2>
+          <p className="text-[#fde68a]/70 text-[5px] sm:text-[5.5px] md:text-[6.5px] urdu-nastaliq px-2 md:px-6 leading-relaxed max-w-sm md:max-w-lg" dir="rtl" style={{ whiteSpace: 'normal' }}>"اور تو جسے چاہے عزت دے اور جسے چاہے ذلت دے"</p>
           <button
             onClick={handleEnterClick}
             className="px-6 md:px-10 py-2 md:py-2.5 border border-[#D4AF37]/30 text-[#D4AF37] rounded-full hover:bg-[#D4AF37]/10 transition-all duration-700 max-w-[92vw] flex items-center justify-center"

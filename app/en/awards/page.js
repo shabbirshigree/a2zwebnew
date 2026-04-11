@@ -75,7 +75,7 @@ export default function AwardsPageEN() {
 
       <section className="container mx-auto px-4 py-2">
         <div className="flex flex-row items-center justify-center gap-2 md:gap-8 mb-6 border-b border-gray-800 pb-6">
-          <Link href="/imam-reza" className="animate-shine group relative inline-flex items-center pr-1 pl-3 md:pl-4 gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-1.5 rounded-full shadow-lg hover:scale-105 transition-all shrink-0 w-[145px] md:w-[260px]">
+          <Link href="/en/imam-reza" className="animate-shine group relative inline-flex items-center pr-1 pl-3 md:pl-4 gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-1.5 rounded-full shadow-lg hover:scale-105 transition-all shrink-0 w-[145px] md:w-[260px]">
             <div className="h-9 w-9 md:h-12 md:w-12 rounded-full border-2 border-white overflow-hidden animate-ripple bg-white shrink-0">
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" className="w-full h-full object-cover rounded-full" alt="imam-reza" />
             </div>
@@ -84,7 +84,7 @@ export default function AwardsPageEN() {
 
           <h2 className="text-xs md:text-2xl font-bold text-[#D4AF37] whitespace-nowrap px-1">✨ Major Spiritual Honors & Titles</h2>
 
-          <Link href="/ghazi-abbas" className="animate-shine group relative inline-flex items-center pl-1 pr-3 md:pr-4 gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-1.5 rounded-full shadow-lg hover:scale-105 transition-all shrink-0 w-[145px] md:w-[260px]">
+          <Link href="/en/ghazi-abbas" className="animate-shine group relative inline-flex items-center pl-1 pr-3 md:pr-4 gap-2 bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] py-1.5 rounded-full shadow-lg hover:scale-105 transition-all shrink-0 w-[145px] md:w-[260px]">
             <div className="h-9 w-9 md:h-12 md:w-12 rounded-full border-2 border-white overflow-hidden animate-ripple bg-white shrink-0">
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif" className="w-full h-full object-cover rounded-full" alt="ghazi-abbas" />
             </div>

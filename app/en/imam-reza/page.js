@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import { 
   FaArrowLeft, FaPlay, FaTimes, FaHome, FaImages, FaVideo, FaGift, FaFilm, 
   FaCalendarAlt, FaMicrophone, FaPenNib, FaBook, FaYoutube, FaChevronRight, 
-  FaChevronLeft, FaLaptop, FaClock, FaCalendarCheck 
+  FaChevronLeft, FaLaptop, FaClock, FaCalendarCheck, FaMosque, FaShoppingBag
 } from "react-icons/fa";
 import Link from 'next/link';
-import { Navbar } from '../components/Header';
-import Footer from '../components/Footer';
+import { Navbar } from '../../components/Header';
+import Footer from '../../components/Footer';
 
-// 👇 نئے الگ کیے گئے سیکشنز (Components) امپورٹ کر رہے ہیں
+// Import the separate page sections (components)
 import BooksSection from './BooksSection';
 import ArticlesSection from './ArticlesSection';
 import RezaviSection from './RezaviSection';
@@ -30,20 +30,36 @@ const globalStyles = `
   .font-extra-bold { font-weight: 800 !important; }
 `;
 
+const getIcon = (name) => {
+  switch (name) {
+    case "FaVideo": return <FaVideo />;
+    case "FaGift": return <FaGift />;
+    case "FaFilm": return <FaFilm />;
+    case "FaCalendarAlt": return <FaCalendarAlt />;
+    case "FaMicrophone": return <FaMicrophone />;
+    case "FaPenNib": return <FaPenNib />;
+    case "FaMosque": return <FaMosque />;
+    case "FaBook": return <FaBook />;
+    case "FaImages": return <FaImages />;
+    case "FaShoppingBag": return <FaShoppingBag />;
+    default: return null;
+  }
+};
+
 export default function ImamRezaPage() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
-  // 🚀 ڈیٹا 
+  // Data
   const programVideos = allData?.programs || [];
   const manqabatVideos = allData?.manqabats || [];
   const tabarrukatVideos = allData?.tabarrukat || [];
   const documentaryVideos = allData?.documentaries || [];
   const liveParticipationVideos = allData?.liveParticipations || []; 
 
-  // 🛠️ ویڈیو پلیئر
+  // Video player
   const renderVideoPlayer = () => {
     if (!activeVideo) return null;
     if (activeVideo.includes('youtube.com') || activeVideo.includes('youtu.be')) {
@@ -89,13 +105,13 @@ export default function ImamRezaPage() {
       <Navbar />
       <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
       
-      {/* 🔙 نیویگیشن */}
+      {/* Navigation */}
       <div className="absolute top-20 md:top-24 left-4 z-[60] flex gap-3">
-         <Link href="/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
-         <Link href="/" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowLeft size={18} /></Link>
+         <Link href="/en/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
+         <Link href="/en/" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowLeft size={18} /></Link>
       </div>
 
-      {/* 🏛️ ہیڈر */}
+      {/* Header */}
       <div className="relative z-10 container mx-auto px-4 pt-16 pb-8 text-center">
         <div className="bg-white/80 backdrop-blur-md border-2 border-[#D4AF37] rounded-[2rem] p-6 md:p-10 shadow-xl max-w-5xl mx-auto animate-float">
            <div className="flex justify-center -mt-20 mb-6">
@@ -103,32 +119,32 @@ export default function ImamRezaPage() {
                 <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-24 h-24 md:w-40 md:h-40 rounded-full object-cover" />
              </div>
            </div>
-           <h1 className="text-2xl md:text-5xl font-extrabold text-[#0f4c75] mb-2 font-extra-bold">خادمِ دربارِ شاہِ خراسان حاجی شبیر احمد شگری</h1>
-           <h2 className="text-lg md:text-2xl text-[#D4AF37] font-bold">(زندگی کا روحانی و ایمانی سفر)</h2>
+           <h1 className="text-2xl md:text-5xl font-extrabold text-[#0f4c75] mb-2 font-extra-bold">Hajji Shabbir Ahmad Shugri — Servant of Imam Reza</h1>
+           <h2 className="text-lg md:text-2xl text-[#D4AF37] font-bold">A Spiritual Journey in the Path of Faith, Service and Cultural Duty</h2>
            <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-6 opacity-50"></div>
-           <div className="text-gray-900 text-sm md:text-xl leading-loose text-justify md:text-center max-w-4xl mx-auto space-y-4 font-extra-bold" dir="rtl">
-             <p className="font-extrabold text-[#0f4c75] text-lg md:text-2xl">"جس در پہ جھکتے ہیں بادشاہ، یہ وہ دربار ہے..."</p>
-             <p>میری زندگی کا حاصل، میرا کل سرمایہ اور میری بخشش کا سب سے بڑا آسرا، وہ نسبت ہے جو مجھے شاہِ خراسان، امام علی رضا علیہ السلام کے دربار سے ملی ہے۔</p>
-             <p className="bg-[#f8f9fa] p-4 rounded-xl border-r-4 border-[#D4AF37] shadow-sm"><strong className="text-[#0f4c75] text-lg">نور کی پہلی کرن: "ضریحِ نور" (2002)</strong><br/>قدرت نے مجھے نور پھیلانے کے لیے منتخب کیا تو سب سے پہلا کام بھی اسی "منبعِ نور" کا سونپا۔ 2002ء میں، جب امام رضاؑ کی موجودہ ضریح مبارک کی تعمیر کے لمحات کو ڈاکومنٹری فلم "ضریح نور" میں محفوظ کیا۔ الحمداللہ 2011 میں آستان قدس رضوی کی جانب سے <strong className="text-[#D4AF37]">"خادم امام رضا علیہ السلام"</strong> کا خطاب عطا ہوا۔</p>
+           <div className="text-gray-900 text-sm md:text-xl leading-loose text-justify md:text-center max-w-4xl mx-auto space-y-4 font-extra-bold">
+             <p className="font-extrabold text-[#0f4c75] text-lg md:text-2xl">"Where kings and nobles bow their heads, this honorable gathering..."</p>
+             <p>Welcome to the dedicated page of service and spiritual mission at the Holy Shrine of Imam Reza (AS). This page showcases the magnificent journey of Hajji Shabbir Ahmad Shugri as he represents the beautiful heritage of religious love and cultural service.</p>
+             <p className="bg-[#f8f9fa] p-4 rounded-xl border-l-4 border-[#D4AF37] shadow-sm"><strong className="text-[#0f4c75] text-lg">First Light: "Zarih-e-Noor" (2002)</strong><br />In 2002, he documented the construction of the current blessed shrine. In 2011, Astan Quds Razavi honored him with the title of <strong className="text-[#D4AF37]">"Servant of Imam Reza"</strong>.</p>
            </div>
         </div>
       </div>
 
-      {/* ✨ 10 بٹنز */}
+      {/* 10 buttons */}
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-7xl mx-auto" dir="rtl">
            {boxes?.map((item, index) => (
              <div key={index} onClick={() => handleBoxClick(item)} className="bg-white/95 border-2 border-[#D4AF37]/20 p-5 rounded-2xl shadow-md hover:border-[#D4AF37] transition-all cursor-pointer text-center group">
-                <div className="text-[#D4AF37] text-3xl mb-2 group-hover:scale-110 transition-transform">{item.icon}</div>
+                <div className="text-[#D4AF37] text-3xl mb-2 group-hover:scale-110 transition-transform">{getIcon(item.icon)}</div>
                 <span className="text-[#0f4c75] font-extrabold text-sm md:text-lg">{item.title}</span>
              </div>
            ))}
         </div>
       </div>
 
-      {/* 📹 ڈاکومنٹریز */}
+      {/* Documentaries */}
       <div id="docs" className="relative z-10 container mx-auto px-4 py-10">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">ڈاکومنٹریز اور مستند ویڈیوز</h2></div>
+         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Documentaries & Special Videos</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4" dir="rtl">
             {documentaryVideos.map((vid, idx) => (
                <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white border-r-4 border-[#D4AF37] p-4 rounded-xl shadow-sm flex items-center gap-3 cursor-pointer hover:bg-[#fff9e6] transition-colors group">
@@ -139,23 +155,23 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 🎁 تبرکات */}
+      {/* Tabarrukat */}
       <div id="tabarrukat" className="relative z-10 container mx-auto px-4 py-10 bg-[#D4AF37]/10 rounded-[3rem]">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#8a6200] border-b-4 border-white inline-block pb-2">تبرکات کی تقسیم</h2></div>
+         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#8a6200] border-b-4 border-white inline-block pb-2">Blessed Items Distribution</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto" dir="rtl">
             {tabarrukatVideos.map((vid, idx) => (
                <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white p-6 rounded-2xl shadow-lg border-2 border-[#D4AF37] flex flex-col items-center gap-3 cursor-pointer hover:scale-105 transition-transform group text-center">
                   <div className="bg-[#D4AF37] text-white p-4 rounded-full animate-pulse"><FaGift size={24} /></div>
                   <span className="text-xl font-bold text-[#0f4c75]">{vid.title}</span>
-                  <span className="text-sm text-gray-500 font-bold">ویڈیو دیکھیں</span>
+                  <span className="text-sm text-gray-500 font-bold">Watch</span>
                </div>
             ))}
          </div>
       </div>
 
-      {/* 🕌 پروگرامز */}
+      {/* Shrine Programs */}
       <div id="programs" className="relative z-10 container mx-auto px-4 py-10">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">حرم کے پروگرامز اور لائیو زیارت</h2></div>
+         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Live Shrine and Pilgrimage Programs</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-2 gap-4" dir="rtl">
             {programVideos.map((vid, idx) => (
                <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white border-l-4 border-[#0f4c75] p-4 rounded-xl shadow-sm flex items-center gap-3 cursor-pointer hover:bg-[#e6f4ff] transition-colors group">
@@ -166,25 +182,25 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 🔥 نیا سیکشن: لائیو پروگرامز میں شرکت */}
+      {/* Live Participation */}
       {liveParticipationVideos.length > 0 && (
           <div id="liveParticipations" className="relative z-10 container mx-auto px-4 py-10 bg-[#0f4c75]/5 border-y-4 border-[#D4AF37] my-8">
-             <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">لائیو پروگرامز میں شرکت</h2></div>
+             <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Live Program Participation</h2></div>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" dir="rtl">
                 {liveParticipationVideos.map((vid, idx) => (
                    <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 flex flex-col items-center gap-4 cursor-pointer hover:-translate-y-2 hover:shadow-2xl transition-all group text-center">
                       <div className="bg-red-600 text-white p-4 rounded-full group-hover:scale-110 transition-transform animate-pulse shadow-md"><FaVideo size={28} /></div>
                       <span className="text-lg font-bold text-gray-800 leading-relaxed">{vid.title}</span>
-                      <span className="bg-[#D4AF37] text-white px-4 py-1 rounded-full text-xs font-bold mt-2">ویڈیو دیکھیں</span>
+                      <span className="bg-[#D4AF37] text-white px-4 py-1 rounded-full text-xs font-bold mt-2">Watch</span>
                    </div>
                 ))}
              </div>
           </div>
       )}
 
-      {/* 🎤 منقبت */}
+      {/* Manqabat */}
       <div id="manqabat" className="relative z-10 container mx-auto px-4 py-10">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">منقبت اور قصائد</h2></div>
+         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Manqabats and Naats</h2></div>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-4" dir="rtl">
             {manqabatVideos.map((vid, idx) => (
                <div key={idx} onClick={() => setActiveVideo(vid.link)} className="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 cursor-pointer border border-gray-200 hover:bg-[#fff9e6] transition-colors group">
@@ -195,50 +211,48 @@ export default function ImamRezaPage() {
          </div>
       </div>
 
-      {/* 📚 کتب (چھوٹا کر دیا گیا) */}
-      <BooksSection setActiveVideo={setActiveVideo} />
+      {/* Books */}
+      <BooksSection books={allData.books} setActiveVideo={setActiveVideo} />
 
-      {/* ✍️ مضامین (چھوٹا کر دیا گیا) */}
-      <ArticlesSection setSelectedArticle={setSelectedArticle} />
+      {/* Articles */}
+      <ArticlesSection articles={allData.articles} setSelectedArticle={setSelectedArticle} />
 
-      {/* 🌐 آنلائن خدمات و ویبینار */}
+      {/* Online Services & Webinars */}
       <div id="services" className="relative z-10 container mx-auto px-4 py-12 bg-white">
-         <div className="text-center mb-10"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">آنلائن خدمات و ویبینار</h2></div>
+         <div className="text-center mb-10"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Online Services & Webinars</h2></div>
          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl border-2 border-[#D4AF37] overflow-hidden flex flex-col md:flex-row" dir="rtl">
             <div className="md:w-1/2 relative h-64 md:h-auto">
                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771275651/webinar._m4jyic.png" alt="Webinar" className="absolute inset-0 w-full h-full object-cover" />
-               <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-md animate-pulse">لائیو ویبینار</div>
+               <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-md animate-pulse">Live Webinar</div>
             </div>
             <div className="md:w-1/2 p-8 flex flex-col justify-center space-y-4">
-               <h3 className="text-2xl font-extrabold text-[#0f4c75] leading-tight">راہِ حسینیت اور 12 روزہ معرکہ حق و باطل</h3>
-               <p className="text-gray-600 font-bold border-b pb-2">حرم امام رضا علیہ السلام کے ادارے "آستان قدس رضوی" اور "نورپروڈکشنز" کے تعاون سے خصوصی نشست۔</p>
+               <h3 className="text-2xl font-extrabold text-[#0f4c75] leading-tight">The Husseini Path and the 12-Day Battle of Right vs Wrong</h3>
+               <p className="text-gray-600 font-bold border-b pb-2">Special session held in collaboration with Astan Quds Razavi and Noor Productions.</p>
                <div className="space-y-3 mt-2">
-                  <div className="flex items-center gap-3 text-gray-700"><FaCalendarCheck className="text-[#D4AF37] text-xl" /><span className="font-bold">تاریخ: بدھ، 30 جولائی 2025</span></div>
-                  <div className="flex items-center gap-3 text-gray-700"><FaClock className="text-[#D4AF37] text-xl" /><span className="font-bold">وقت: سہ پہر 15:30 تا 16:30</span></div>
-                  <div className="flex items-center gap-3 text-gray-700"><FaLaptop className="text-[#D4AF37] text-xl" /><span className="font-bold">مقام: آنلائن (ویڈیو لنک)</span></div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaCalendarCheck className="text-[#D4AF37] text-xl" /><span className="font-bold">Date: Wednesday, July 30, 2025</span></div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaClock className="text-[#D4AF37] text-xl" /><span className="font-bold">Time: 15:30 to 16:30</span></div>
+                  <div className="flex items-center gap-3 text-gray-700"><FaLaptop className="text-[#D4AF37] text-xl" /><span className="font-bold">Location: Online (Video Link)</span></div>
                </div>
             </div>
          </div>
       </div>
 
-      {/* 🛍️ رضوی آنلائن سیکشن (چھوٹا کر دیا گیا) */}
+      {/* Rezavi Online Section */}
       <RezaviSection />
 
-      {/* 👇 آخری 3 اہم بٹن */}
+      {/* Final call-to-action buttons */}
       <div className="relative z-10 container mx-auto px-4 py-12 text-center bg-[#f8f9fa] mt-10 border-t-2 border-[#D4AF37]/30">
-         <h2 className="text-2xl font-bold text-[#0f4c75] mb-8 border-b-2 border-[#D4AF37] inline-block pb-2">مزید دیکھیے اور پڑھیے</h2>
+         <h2 className="text-2xl font-bold text-[#0f4c75] mb-8 border-b-2 border-[#D4AF37] inline-block pb-2">Explore More and Study</h2>
          <div className="flex flex-col md:flex-row justify-center gap-6 max-w-5xl mx-auto">
-            <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaYoutube size={28} /> امام رضاؑ کی دیگر ویڈیوز (پلے لسٹ)</a>
-            <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaVideo size={28} /> آفیشل چینل (نور پروڈکشن)</a>
-            <Link href="/article" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
-              <FaPenNib size={28} /> میری تمام تحریریں اور کالمز
-            </Link>         
+            <a href="https://www.youtube.com/playlist?list=PLVLSFOIjQLcLVVB_iHIoaN45MJx5xaJed" target="_blank" rel="noopener noreferrer" className="flex-1 bg-red-600 text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaYoutube size={28} /> More Imam Reza Videos</a>
+            <a href="https://www.youtube.com/@noorproduction?sub_confirmation=1" target="_blank" rel="noopener noreferrer" className="flex-1 bg-[#0f4c75] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg"><FaVideo size={28} /> Official Noor Production Channel</a>
+            <Link href="/en/article" className="flex-1 bg-[#D4AF37] text-white p-5 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3 font-bold text-lg">
+              <FaPenNib size={28} /> All Articles and Notes
+            </Link>
          </div>
       </div>
 
-      <Footer />
-
-      {/* 📹 ویڈیو موڈل (اسمارٹ پلیئر) */}
+      {/* Video modal */}
       {activeVideo && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
           <button onClick={() => setActiveVideo(null)} className="absolute top-5 right-5 text-[#D4AF37] text-4xl hover:text-red-500 transition-all z-[101]"><FaTimes /></button>
@@ -248,7 +262,7 @@ export default function ImamRezaPage() {
         </div>
       )}
 
-      {/* 🖼️ امیج گیلری */}
+      {/* Image gallery */}
       {isGalleryOpen && (
         <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md">
            <button onClick={() => setIsGalleryOpen(false)} className="absolute top-5 right-5 text-white text-4xl hover:text-[#D4AF37] transition-all z-[101]"><FaTimes /></button>
@@ -262,7 +276,7 @@ export default function ImamRezaPage() {
         </div>
       )}
 
-      {/* 📰 آرٹیکل موڈل */}
+      {/* Article modal */}
       {selectedArticle && (
         <div className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
             <div className="bg-white w-full max-w-4xl rounded-2xl shadow-2xl relative overflow-hidden flex flex-col max-h-[90vh]">
@@ -282,6 +296,7 @@ export default function ImamRezaPage() {
         </div>
       )}
 
+      <Footer />
     </main>
   );
 }

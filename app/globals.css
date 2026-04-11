@@ -1,5 +1,46 @@
 ﻿@import "tailwindcss";
 
+.font-heading {
+  font-family: 'Amiri', serif !important;
+}
+
+.text-body {
+  font-family: 'Inter', 'system-ui', sans-serif;
+  font-size: 1.15rem;
+  line-height: 2.2;
+  font-weight: 700;
+  text-align: start;
+  text-justify: inter-word;
+}
+
+@media (min-width: 768px) {
+  .text-body {
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7), 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0), 0 0 0 40px rgba(212, 175, 55, 0);
+  }
+}
+
+.animate-ripple {
+  animation: ripple 2.5s infinite linear;
+  border-radius: 50%;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #4a0000 0%, #7a0000 100%);
+}
+
+.gold-border {
+  border-color: #D4AF37;
+}
+
 /* ============================================================================ */
 /* 🎯 یہ rule تمام font مسائل ختم کرتا ہے - کوئی دوسرا rule override نہیں کر سکتا */
 /* ============================================================================ */
@@ -15,9 +56,17 @@ html, body, *, *::before, *::after {
 body {
   user-select: none;
   -webkit-user-select: none;
+  font-family: 'Jameel Noori Nastaleeq', serif !important;
+}
+
+main:dir(rtl), main[dir="rtl"] {
   direction: rtl;
   text-align: right;
-  font-family: 'Jameel Noori Nastaleeq', serif !important;
+}
+
+main:dir(ltr), main[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
 }
 
 /* ==================================================================== */

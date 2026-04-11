@@ -1,96 +1,91 @@
-// ALL PROFILE CARDS BACKUP - Complete with all changes
-// This file contains all three profile cards with proper styling and content
+import React from 'react';
 
-// Farsi Profile Card
-export const FarsiProfileCardComplete = `import React from 'react';
-
-const FarsiProfileCard = () => {
+const AllProfileCards_Complete = () => {
   return (
-    <div style={{
-      border: '3px solid #D4AF37', 
-      borderRadius: '15px',
-      backgroundColor: '#fff', 
-      fontFamily: 'Vazirmatn, sans-serif',
-      direction: 'rtl',
-      boxShadow: '0px 15px 40px rgba(212,175,55,0.2)',
-      margin: '20px auto',
-      lineHeight: '1.7',
-      position: 'relative',
-      maxWidth: '600px',
-      padding: '20px'
-    }}>
-      
-      {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+    <div>
+      {/* Profile Image with Water Ripple Effect */}
+      <div style={{ textAlign: 'center', marginBottom: '30px', position: 'relative' }}>
         <div style={{
           width: '180px',
           height: '180px',
-          borderRadius: '50%',
-          border: '4px solid #D4AF37',
           margin: '0 auto',
-          overflow: 'hidden',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-          background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
-          padding: '3px',
-          position: 'relative'
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}>
-          {/* Ripple Effect */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 30% 30%, rgba(212,175,55,0.3) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(26,71,42,0.2) 0%, transparent 35%)',
-            animation: 'ripple 3s ease-in-out infinite',
-            pointerEvents: 'none'
-          }}></div>
           
-          <img 
-            src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
-            alt="Haji Shabbir Ahmed Shigri" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
-          />
+          {/* Ripple 1 */}
+          <div className="ripple-wave"></div>
+          {/* Ripple 2 */}
+          <div className="ripple-wave" style={{ animationDelay: '1s' }}></div>
+          {/* Ripple 3 */}
+          <div className="ripple-wave" style={{ animationDelay: '2s' }}></div>
+
+          {/* Actual Profile Image */}
+          <div style={{
+            width: '180px',
+            height: '180px',
+            borderRadius: '50%',
+            border: '4px solid #D4AF37',
+            overflow: 'hidden',
+            boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
+            zIndex: '10',
+            position: 'relative',
+            backgroundColor: '#fff'
+          }}>
+            <img 
+              src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
+              alt="Haji Shabbir Ahmed Shigri" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+          </div>
         </div>
-        
-        {/* CSS for Ripple Animation */}
-        <style jsx>{\`
-          @keyframes ripple {
+
+        {/* CSS for Ripples - اسے فائل میں کہیں بھیں ڈال دیں */}
+        <style jsx>{`
+          .ripple-wave {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 2px solid #D4AF37;
+            border-radius: 50%;
+            opacity: 0;
+            animation: water-ripple 4s cubic-bezier(0, 0.4, 0.6, 1) infinite;
+            z-index: 1;
+          }
+
+          @keyframes water-ripple {
             0% {
               transform: scale(1);
               opacity: 0.8;
             }
-            50% {
-              transform: scale(1.05);
-              opacity: 0.4;
-            }
             100% {
-              transform: scale(1);
-              opacity: 0.8;
+              transform: scale(1.6);
+              opacity: 0;
             }
           }
-        \`}</style>
-        
-        {/* Name and Title */}
-        <h1 style={{ 
-          fontSize: '28px', 
-          color: '#1a472a', 
-          margin: '15px 0 5px 0',
-          fontWeight: 'bold'
-        }}>
-          {{urdu}}
-        </h1>
-        <p style={{ 
-          fontSize: '16px', 
-          color: '#666', 
-          margin: '0',
-          marginBottom: '10px',
-          textAlign: 'center'
-        }}>
-          {{urdu}}
-        </p>
+        `}</style>
       </div>
+
+      {/* Name and Title */}
+      <h1 style={{ 
+        fontSize: '28px', 
+        color: '#1a472a', 
+        margin: '15px 0 5px 0',
+        fontWeight: 'bold'
+      }}>
+        حاجی شبیر احمد شگری
+      </h1>
+      <p style={{ 
+        fontSize: '16px', 
+        color: '#666', 
+        margin: '0',
+        marginBottom: '10px',
+        textAlign: 'center'
+      }}>
+        سینئیر صحافی، محقق، مصنف اور پروڈیوسر
+      </p>
 
       {/* Main Content - Single Line Layout */}
       <div style={{
@@ -103,139 +98,139 @@ const FarsiProfileCard = () => {
         {/* Name */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            نام:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            حاجی شبیر احمد شگری
           </span>
         </div>
 
         {/* Identity */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            تعارف:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            سینئیر صحافی، محقق، مصنف اور پروڈیوسر
           </span>
         </div>
 
         {/* Honors */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۱. اعزازات اور مذہبی خدمات:
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            حرم امام رضا (مشہد مقدس، ایران) اور حرم حضرت عباس (ع) کربلا کے خادم۔
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            پاکستان میں حرم امام رضا کے پہلے باضابطہ نمائندے کے اعزاز کے حامل۔
           </span>
         </div>
 
         {/* Education */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۲. تعلیمی قابلیت:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            گورنمنٹ کالج سکردو سے فارغ التحصیل۔ ایم بی اے (بزنس ایڈمنسٹریشن) اور الیکٹرانکس ڈپلومہ کے حامل۔
           </span>
         </div>
 
         {/* Positions */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۳. عہدوں اور انتظامی عہدے:
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            بانی اور صدر: ایران پاکستان دوستی ایسوسی ایشن (ایران کے قونصلگریٹ کی منظور شدہ)۔
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            پبلک ریلیشنز آفیسر (سابق): کلچرل سینٹر آف اسلامی ریپبلک آف ایران - لاہور۔
           </span>
         </div>
 
         {/* Publications */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۴. ادبی اور تحقیقی کام:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            تصانیف: ۷ سے زیادہ علمی اور ادبی کتابوں کے مصنف۔
           </span>
         </div>
         
         {/* Editorship */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ایڈیٹرشپ:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            قومی اور بین الاقوامی سائنسی جرائد کے ایڈیٹر؛ ہاوی، اکھٹ (پنجابی) اور پرچار اخبارات کے ڈپٹی ایڈیٹر۔
           </span>
         </div>
 
         {/* Column Writing */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            کالم نگاری:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            نوائے وقت، پاکستان اور مشرق اخبارات میں ۳۰۰ سے زیادہ مضامین، کالمز اور سفرنامے شائع۔
           </span>
         </div>
         
         {/* Founder */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۵. بنیاد اور منصوبے:
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            نور القرآن ویژوال پروجیکٹ کے بانی (پہلا ویژوال قرآن پروجیکٹ)۔
           </span>
           <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
+            سی ای او نور پروڈکشنز۔ پاک-ایران زراعت اور سیاحتی کے بانی۔
           </span>
         </div>
         
         {/* Media Career */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۶. میڈیا کیریئر:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            سینئر ریڈیو اناؤنسر، ٹیلی ویژن ہوسٹ اور پروڈیوسر۔
           </span>
         </div>
 
         {/* Cultural Services */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۷. ثقافتی اور سفارتی خدمات:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            کلچرل افیسر: کلچرل سینٹر آف ایران (لاہور) میں ۲۵ سال کی سائنسی اور ثقافتی خدمات؛ ثقافتی سفارتی معاملات کا ماہر۔
           </span>
         </div>
 
         {/* Awards */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۸. انعامات اور اعزازات:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            حرم امام رضا سے "سرٹیفکیٹ آف اپریسی ایشن" وصول کرنے والے۔ آواز غازی ایوارڈ، گولڈ میڈل اور ۵۰ سے زیادہ قومی اور بین الاقوامی انعامات کے فاتح۔
           </span>
         </div>
-        
+
         {/* Titles */}
         <div style={{ marginBottom: '10px' }}>
           <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
+            ۹. القاب:
           </span>
           <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
+            خادم الثقلین | کلچرل ایکسپرٹ
           </span>
         </div>
 
@@ -255,18 +250,18 @@ const FarsiProfileCard = () => {
           fontSize: '14px'
         }}>
           <div style={{ marginBottom: '5px' }}>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
+            <span style={{ color: '#D4AF37', marginRight: '5px' }}>ای میل:</span>
             <a 
               href="mailto:shigri51214@gmail.com" 
               style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
               onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
               onMouseOut={(e) => e.target.style.textDecoration = 'none'}
             >
-              {{urdu}}: shigri51214@gmail.com
+              shigri51214@gmail.com
             </a>
           </div>
           <div>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
+            <span style={{ color: '#D4AF37', marginRight: '5px' }}>ویب سائٹ:</span>
             <a 
               href="http://www.shabbirshigri.com" 
               target="_blank" 
@@ -275,7 +270,7 @@ const FarsiProfileCard = () => {
               onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
               onMouseOut={(e) => e.target.style.textDecoration = 'none'}
             >
-              {{urdu}}: www.shabbirshigri.com
+              www.shabbirshigri.com
             </a>
           </div>
         </div>
@@ -285,583 +280,4 @@ const FarsiProfileCard = () => {
   );
 };
 
-export default FarsiProfileCard;`;
-
-// English Profile Card
-export const EnglishProfileCardComplete = `import React from 'react';
-
-const EnglishProfileCard = () => {
-  return (
-    <div style={{
-      border: '3px solid #D4AF37', 
-      borderRadius: '15px',
-      backgroundColor: '#fff', 
-      fontFamily: 'Arial, sans-serif',
-      direction: 'ltr',
-      boxShadow: '0px 15px 40px rgba(212,175,55,0.2)',
-      margin: '20px auto',
-      lineHeight: '1.7',
-      position: 'relative',
-      maxWidth: '600px',
-      padding: '20px'
-    }}>
-      
-      {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <div style={{
-          width: '180px',
-          height: '180px',
-          borderRadius: '50%',
-          border: '4px solid #D4AF37',
-          margin: '0 auto',
-          overflow: 'hidden',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-          background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
-          padding: '3px',
-          position: 'relative'
-        }}>
-          {/* Ripple Effect */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 30% 30%, rgba(212,175,55,0.3) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(26,71,42,0.2) 0%, transparent 35%)',
-            animation: 'ripple 3s ease-in-out infinite',
-            pointerEvents: 'none'
-          }}></div>
-          
-          <img 
-            src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
-            alt="Haji Shabbir Ahmed Shigri" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
-          />
-        </div>
-        
-        {/* CSS for Ripple Animation */}
-        <style jsx>{\`
-          @keyframes ripple {
-            0% {
-              transform: scale(1);
-              opacity: 0.8;
-            }
-            50% {
-              transform: scale(1.05);
-              opacity: 0.4;
-            }
-            100% {
-              transform: scale(1);
-              opacity: 0.8;
-            }
-          }
-        \`}</style>
-        
-        {/* Name and Title */}
-        <h1 style={{ 
-          fontSize: '28px', 
-          color: '#1a472a', 
-          margin: '15px 0 5px 0',
-          fontWeight: 'bold'
-        }}>
-          Haji Shabbir Ahmed Shigri
-        </h1>
-        <p style={{ 
-          fontSize: '16px', 
-          color: '#666', 
-          margin: '0',
-          marginBottom: '10px',
-          textAlign: 'center'
-        }}>
-          Senior Journalist, Researcher, Author and Producer
-        </p>
-      </div>
-
-      {/* Main Content - Single Line Layout */}
-      <div style={{
-        background: 'linear-gradient(135deg, #fafafa, #f5f5f5)',
-        borderRadius: '10px',
-        padding: '15px',
-        marginBottom: '15px'
-      }}>
-        
-        {/* Name */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Name:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Haji Shabbir Ahmed Shigri
-          </span>
-        </div>
-
-        {/* Identity */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Identity:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Senior Journalist, Researcher, Author and Producer
-          </span>
-        </div>
-
-        {/* Honors */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Honors:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Khadim-e-Imam Reza (AS) Mashhad, and Khadim-e-Haram-e-Abbas (AS) Karbala.
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Unique honor of being the first official representative of Astan Quds Razvi (Mashhad, Iran) in Pakistan.
-          </span>
-        </div>
-
-        {/* Education */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Education:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Government Degree College Skardu. MBA (Diploma in Business Administration) and Diploma in Electronics.
-          </span>
-        </div>
-
-        {/* Positions */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Positions:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder and President: Anjuman-e-Dosti Pakistan Iran (Nominated: Iranian Consul).
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Retirement: Public Relation Officer, Khana Farhang Iran Lahore
-          </span>
-        </div>
-
-        {/* Publications */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Publications:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Author of 7+ scholarly and literary books.
-          </span>
-        </div>
-        
-        {/* Editorship */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Editorship:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Editor of national and international academic journals, newspapers Daily Havi, Akth (Punjabi) and Prachar as Deputy Editor.
-          </span>
-        </div>
-
-        {/* Column Writing */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Column Writing:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            300+ columns, articles and travelogues published in Daily Nawa-e-Waqt, Pakistan and Mashriq.
-          </span>
-        </div>
-        
-        {/* Founder */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Founder:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder Noor-ul-Quran Project.CEO (CEO): Noor Productions.
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder Pak Iran Ziyarati and Siyahi Tourism.
-          </span>
-        </div>
-        
-        {/* Media Career */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Media Career:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Senior Radio Broadcaster, TV Anchor Person and Producer.
-          </span>
-        </div>
-
-        {/* Cultural and Diplomatic Services */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Cultural and Diplomatic Services:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Expert in Cultural Affairs: 25 years of long academic and cultural services at Khana Farhang Iran, Lahore.
-          </span>
-        </div>
-
-        {/* Awards */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Awards:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            "Taqdeer Nama" (Astan Quds Razvi), Sada-e-Ghazi Award, Gold Medalist, and 50+ national and international awards.
-          </span>
-        </div>
-        
-        {/* Titles */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Titles:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Khadim-e-Saqalain, Cultural Expert.
-          </span>
-        </div>
-
-      </div>
-
-      {/* Footer Section */}
-      <div style={{
-        background: 'linear-gradient(135deg, #1a472a, #2d5a3c)',
-        borderRadius: '10px',
-        padding: '15px',
-        textAlign: 'center'
-      }}>
-        
-        <div style={{ 
-          borderTop: '1px solid rgba(255,255,255,0.3)',
-          paddingTop: '10px',
-          fontSize: '14px'
-        }}>
-          <div style={{ marginBottom: '5px' }}>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
-            <a 
-              href="mailto:shigri51214@gmail.com" 
-              style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              Email: shigri51214@gmail.com
-            </a>
-          </div>
-          <div>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
-            <a 
-              href="http://www.shabbirshigri.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              Website: www.shabbirshigri.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  );
-};
-
-export default EnglishProfileCard;`;
-
-// Urdu Profile Card
-export const UrduProfileCardComplete = `import React from 'react';
-
-const MobileProfileCard = () => {
-  return (
-    <div style={{
-      border: '3px solid #D4AF37', 
-      borderRadius: '15px',
-      backgroundColor: '#fff', 
-      fontFamily: 'Jameel Noori Nastaleeq, serif',
-      direction: 'rtl',
-      boxShadow: '0px 15px 40px rgba(212,175,55,0.2)',
-      margin: '20px auto',
-      lineHeight: '1.7',
-      position: 'relative',
-      maxWidth: '600px',
-      padding: '20px'
-    }}>
-      
-      {/* Profile Image at Top */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <div style={{
-          width: '180px',
-          height: '180px',
-          borderRadius: '50%',
-          border: '4px solid #D4AF37',
-          margin: '0 auto',
-          overflow: 'hidden',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.15)',
-          background: 'linear-gradient(135deg, #f8f9fa, #e9ecef)',
-          padding: '3px',
-          position: 'relative'
-        }}>
-          {/* Ripple Effect */}
-          <div style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 30% 30%, rgba(212,175,55,0.3) 0%, transparent 40%), radial-gradient(circle at 70% 70%, rgba(26,71,42,0.2) 0%, transparent 35%)',
-            animation: 'ripple 3s ease-in-out infinite',
-            pointerEvents: 'none'
-          }}></div>
-          
-          <img 
-            src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
-            alt="Haji Shabbir Ahmed Shigri" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
-          />
-        </div>
-        
-        {/* CSS for Ripple Animation */}
-        <style jsx>{\`
-          @keyframes ripple {
-            0% {
-              transform: scale(1);
-              opacity: 0.8;
-            }
-            50% {
-              transform: scale(1.05);
-              opacity: 0.4;
-            }
-            100% {
-              transform: scale(1);
-              opacity: 0.8;
-            }
-          }
-        \`}</style>
-        
-        {/* Name and Title */}
-        <h1 style={{ 
-          fontSize: '28px', 
-          color: '#1a472a', 
-          margin: '15px 0 5px 0',
-          fontWeight: 'bold'
-        }}>
-          {{urdu}}
-        </h1>
-        <p style={{ 
-          fontSize: '16px', 
-          color: '#666', 
-          margin: '0',
-          marginBottom: '10px',
-          textAlign: 'center'
-        }}>
-          {{urdu}}
-        </p>
-      </div>
-
-      {/* Main Content - Single Line Layout */}
-      <div style={{
-        background: 'linear-gradient(135deg, #fafafa, #f5f5f5)',
-        borderRadius: '10px',
-        padding: '15px',
-        marginBottom: '15px'
-      }}>
-        
-        {/* Name */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Identity */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Honors */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Education */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Positions */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Publications */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-        
-        {/* Editorship */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Column Writing */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-        
-        {/* Founder */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            {{urdu}}
-          </span>
-        </div>
-        
-        {/* Media Career */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Cultural Services */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-        {/* Awards */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-        
-        {/* Titles */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            {{urdu}}:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            {{urdu}}
-          </span>
-        </div>
-
-      </div>
-
-      {/* Footer Section */}
-      <div style={{
-        background: 'linear-gradient(135deg, #1a472a, #2d5a3c)',
-        borderRadius: '10px',
-        padding: '15px',
-        textAlign: 'center'
-      }}>
-        
-        <div style={{ 
-          borderTop: '1px solid rgba(255,255,255,0.3)',
-          paddingTop: '10px',
-          fontSize: '14px'
-        }}>
-          <div style={{ marginBottom: '5px' }}>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
-            <a 
-              href="mailto:shigri51214@gmail.com" 
-              style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              {{urdu}}: shigri51214@gmail.com
-            </a>
-          </div>
-          <div>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
-            <a 
-              href="http://www.shabbirshigri.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              {{urdu}}: www.shabbirshigri.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  );
-};
-
-export default MobileProfileCard;`;
-
-// Export all cards
-export {
-  FarsiProfileCardComplete,
-  EnglishProfileCardComplete,
-  UrduProfileCardComplete
-};
+export default AllProfileCards_Complete;

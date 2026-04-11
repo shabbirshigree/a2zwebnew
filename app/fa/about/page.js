@@ -104,25 +104,25 @@ export default function UltimateAboutPageFA() {
                 <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
                     {/* خادم امام رضا */}
-                    <Link href="/imam-reza" className="group">
+                    <Link href="/fa/imam-reza" className="group">
                         <div className="animate-shine bg-gradient-to-bl from-emerald-900 to-emerald-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
                             <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
                             <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="امام رضا" />
                             <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] relative z-10 mb-2 drop-shadow-md text-center">خادم امام رضا علیه‌السلام</h3>
                             <p className="text-white font-semibold text-base text-center relative z-10 border-b border-emerald-500 pb-2 mb-4">آستان قدس رضوی (مشهد مقدس)</p>
-                            <p className="text-emerald-50 text-sm md:text-base leading-relaxed relative z-10">در جایی که پادشاهان و حاکمان ماه‌ها منتظر اجازه‌ی جاروکشی می‌مانند، اعزام خدمت منظم دربار فریدِ خراسان در سال 2011 میسّر گردید.</p>
+                            <p className="text-emerald-50 text-sm md:text-base leading-relaxed relative z-10">در جایی که پادشاهان و حاکمان ماه‌ها منتظر اجازه‌ی جاروکشی می‌مانند، اعزام خدمت منظم دربار فریدِ خراسان در سال ۲۰۱۱ میسّر گردید.</p>
                             <div className="mt-6 inline-flex items-center bg-white text-emerald-800 px-6 py-2 rounded-full font-bold text-sm hover:bg-[#D4AF37] hover:text-white transition-colors relative z-10 shadow-md">جزئیات و سفرها <FaArrowRight className="ml-2 rotate-180" /></div>
                         </div>
                     </Link>
 
                     {/* خادم غازی عباس */}
-                    <Link href="/ghazi-abbas" className="group">
+                    <Link href="/fa/ghazi-abbas" className="group">
                         <div className="animate-shine bg-gradient-to-bl from-red-900 to-red-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
                             <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
                             <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="غازی عباس" />
                             <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] relative z-10 mb-2 drop-shadow-md text-center">محافظ و خادم حرم غازی عباس علیه‌السلام</h3>
                             <p className="text-white font-semibold text-base text-center relative z-10 border-b border-red-500 pb-2 mb-4">اعزام: صدای غازی (کربلای معلّی)</p>
-                            <p className="text-red-50 text-base leading-relaxed relative z-10">در فرصت شریف ولادت امام زمان (عج) در سال 2024، حرم مطهر حضرت غازی عباس علم‌دار علیه‌السلام اعزام «محافظ حرم» و مدالی بزرگ اهدا فرمود.</p>
+                            <p className="text-red-50 text-base leading-relaxed relative z-10">در فرصت شریف ولادت امام زمان (عج) در سال ۲۰۲۴، حرم مطهر حضرت غازی عباس علم‌دار علیه‌السلام اعزام «محافظ حرم» و مدالی بزرگ اهدا فرمود.</p>
                             <div className="mt-6 inline-flex items-center bg-white text-red-800 px-6 py-2 rounded-full font-bold text-sm hover:bg-[#D4AF37] hover:text-white transition-colors relative z-10 shadow-md">جزئیات و سفرها <FaArrowRight className="ml-2 rotate-180" /></div>
                         </div>
                     </Link>

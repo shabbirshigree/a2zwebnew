@@ -81,7 +81,8 @@ const MobileProfileCard = () => {
         `}</style>
       </div>
         
-        {/* Name and Title */}
+      {/* Name and Title */}
+      <div>
         <h1 style={{ 
           fontSize: '28px', 
           color: '#1a472a', 
@@ -99,7 +100,7 @@ const MobileProfileCard = () => {
         }}>
           سینئیر صحافی، محقق، مصنف اور پروڈیوسر
         </p>
-      </div>
+      </div> 
 
       {/* Main Content - Single Line Layout */}
       <div style={{
