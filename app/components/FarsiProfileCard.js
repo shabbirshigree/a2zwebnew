@@ -107,14 +107,17 @@ const FarsiProfileCard = () => {
             0% {
               transform: translate(-50%, -50%) scale(0);
               opacity: 0.8;
+              border-width: 3px;
             }
             50% {
               transform: translate(-50%, -50%) scale(4);
               opacity: 0.3;
+              border-width: 2px;
             }
             100% {
               transform: translate(-50%, -50%) scale(6);
               opacity: 0;
+              border-width: 1px;
             }
           }
         `}</style>
