@@ -63,6 +63,10 @@ export const dictionaries = {
       institutionDescription: "شاہ خراسان امام علی رضا علیہ السلام کا مقدس حرم - مشہد، ایران",
       highlight: "یہ اعزاز اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے مخلص کوششوں کی تسلیم ہے۔",
     },
+    aiArtGallery: {
+      title: "ضامنِ آہو علیہ السلام: بین الاقوامی آرٹ مقابلے کے لیے خصوصی تخلیقات",
+      description: "یہ تصویری سیریز مشہورِ زمانہ داستان \"ضامنِ آہو\" (ہرنی کے ضامن امام رضا علیہ السلام) کو آرٹیفیشل انٹیلیجنس (AI) کے جدید آلات کی مدد سے تصویری شکل دینے کی ایک منفرد کوشش ہے۔ ان تصاویر کو آستان قدس رضوی کے زیر اہتمام منعقدہ بین الاقوامی تصویری مقابلے میں شرکت کے لیے حاجی شبیر احمد شگری نے خصوصی طور پر تخلیق کیا ہے۔ ہر تصویر اس مقدس واقعے کے روحانی اور جذباتی پہلوؤں کو نمایاں کرتی ہے۔",
+    },
   },
   fa: {
     nav: {
@@ -130,6 +134,10 @@ export const dictionaries = {
       institutionDescription: "حرم مقدس حضرت امام علی رضا (ع) - مشهد، ایران",
       highlight: "این تقدیرنامه به عنوان اعتراف به تلاش‌های مستمر در ترویج معارف اسلامی و خدمت به معاشرهٔ انسانی است.",
     },
+    aiArtGallery: {
+      title: "ضامن آهو (ع): آثار هنری هوش مصنوعی اختصاصی برای مسابقه بین‌المللی",
+      description: "این مجموعه تصویری بی‌نظیر، روایت تاریخی و مشهور \"ضامن آهو\" (حضرت امام رضا علیه‌السلام به عنوان ضامن آهو) را با استفاده از ابزارهای پیشرفته هوش مصنوعی (AI) به تصویر می‌کشد. این آثار هنری توسط حاجی شبیر احمد شگری به طور اختصاصی برای شرکت در مسابقه بین‌المللی هنر و عکاسی که توسط آستان قدس رضوی برگزار می‌شود، خلق شده‌اند. هر تصویر تلاش می‌کند تا جوهر معنوی و دلسوزانه این داستان مقدس را تجلی بخشد.",
+    },
   },
   en: {
     nav: {
@@ -196,6 +204,10 @@ export const dictionaries = {
       institutionLabel: "Astan Quds Razavi",
       institutionDescription: "The Holy Shrine of Imam Ali Reza (A.S) - Mashhad, Iran",
       highlight: "This letter of appreciation is a testament to his steadfast commitment to promoting Islamic knowledge and serving humanity.",
+    },
+    aiArtGallery: {
+      title: "The Guarantor of the Gazelle (A.S): Exclusive AI Art for International Competition",
+      description: "This powerful visual series conceptualizes the famous historical narrative of \"Zamin-e-Ahoo\" (Imam Reza as the Guarantor of the Gazelle) using advanced Artificial Intelligence (AI) tools. These artworks were exclusively created by Haji Shabbir Ahmed Shigri for submission to the International Art & Photography Competition organized by Astan Quds Razavi. Each image seeks to evoke the spiritual and compassionate essence of this sacred story.",
     },
   },
 };

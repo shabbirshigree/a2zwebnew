@@ -14,6 +14,7 @@ import BooksSection from './BooksSection';
 import ArticlesSection from './ArticlesSection';
 import RezaviSection from './RezaviSection';
 import AstanAppreciationComponent from './AstanAppreciationComponent';
+import AIArtGallery from './AIArtGallery';
 
 import { imamRezaImages, allData, boxes } from './data'; 
 
@@ -117,6 +118,9 @@ export default function ImamRezaPage() {
 
       {/* 🏛️ تقدیرنامهٔ آستان قدس رضوی */}
       <AstanAppreciationComponent />
+
+      {/* 🎨 نمایشگاه آثار هنری هوش مصنوعی */}
+      <AIArtGallery />
 
       {/* ✨ 10 بٹنز */}
       <div className="relative z-10 container mx-auto px-4 py-8">
