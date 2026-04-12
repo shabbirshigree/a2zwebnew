@@ -191,7 +191,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
                 </div>
               </div>
             </div>
-            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+            <div className="img-wrap h-[350px] md:h-[550px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Iranian Ambassador's Tribute to Haji Shabbir Ahmed Shigri" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
@@ -207,7 +207,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
                 یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
               </p>
             </div>
-            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
