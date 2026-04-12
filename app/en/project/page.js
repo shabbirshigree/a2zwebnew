@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
+import QuranIntroCard from '../../components/QuranIntroCard';
 import { quranVideos } from '../../project/projectData';
 
 export default function EnglishProjectPage() {
@@ -208,38 +209,7 @@ export default function EnglishProjectPage() {
                     </div>
 
                     <div className="flex-1 text-left relative z-10" dir="ltr">
-                        <div className="flex flex-wrap justify-between items-center mb-6 gap-4 border-b border-gray-800 pb-4">
-                            <div className="flex gap-2">
-                                <button onClick={() => handleLanguageChange('ur')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${false ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>اردو</button>
-                                <button onClick={() => handleLanguageChange('en')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${true ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>English</button>
-                                <button onClick={() => handleLanguageChange('fa')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${false ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>فارسی</button>
-                            </div>
-                        </div>
-
-                        <div className="font-sans text-left" dir="ltr">
-                            <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-6">The World's First "Visual Quran" Project</h2>
-                            <p className="text-gray-300 text-base md:text-lg leading-relaxed text-justify font-light mb-6">
-                                By the grace of Allah, the launch of the "Noor Al-Quran Project" represents a beautiful marriage of the Holy Quran and modern technology. This project is rooted in 25 years of Islamic media services. The primary objective is to present the Quran in a contemporary audio-visual format, enabling the younger generation and people everywhere to not just read, but truly comprehend and visualize the divine message.
-                            </p>
-                            <button onClick={() => setShowFullText(!showFullText)} className="inline-flex items-center gap-2 text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded-full font-bold hover:bg-[#D4AF37] hover:text-black transition-all">
-                                <FaInfoCircle /> {showFullText ? "Hide Details" : "Read Project Phases"}
-                            </button>
-                        </div>
-
-                        {showFullText && (
-                            <div className="pt-6 mt-6 border-t border-gray-800 text-left">
-                                <div className="grid grid-cols-1 gap-4">
-                                    <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                                        <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> Phase One & Two</h4>
-                                        <p className="text-sm text-gray-300 text-justify">The complete Quran has been prepared in 30-part videos (Arabic and Urdu). This includes the recitation of renowned Qari Parhezgar, Sheikh Muhsin Ali Najafi's authoritative Urdu translation, and Urdu voice-over narration.</p>
-                                    </div>
-                                    <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                                        <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> Phase Three (Standard Visual)</h4>
-                                        <p className="text-sm text-gray-300 text-justify">We have successfully experimented with short-form content. The next phase involves producing the complete Quran in standard format (16:9) with high resolution and cinematic visuals for the global audience.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                        <QuranIntroCard lang='en' phase={0} />
                     </div>
                 </div>
             </section>
@@ -273,6 +243,7 @@ export default function EnglishProjectPage() {
             </section>
 
             <div className="bg-black">
+                <QuranIntroCard lang='en' />
                 <section id="arabic" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
                     <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">Quranic Videos (Arabic) - 30 Parts</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -285,8 +256,13 @@ export default function EnglishProjectPage() {
                     )}
                 </section>
 
+                {/* Phase 2 Card */}
+                <div className="py-8">
+                    <QuranIntroCard lang='en' phase={2} />
+                </div>
+
+                {/* Urdu Videos */}
                 <section id="urdu" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-                    <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">Urdu Text & Translation - 30 Parts</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {quranVideos.parat_urdu.slice(0, counts.urdu).map((v, i) => <VideoCard key={i} video={v} />)}
                     </div>
@@ -310,8 +286,8 @@ export default function EnglishProjectPage() {
                 </section>
 
                 <section id="stories" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-                    <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">Visual Quranic Stories</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <QuranIntroCard lang="en" phase={3} />
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         {quranVideos.stories.slice(0, counts.stories).map((v, i) => <VideoCard key={i} video={v} />)}
                     </div>
                     {counts.stories < quranVideos.stories.length && (

@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
+import QuranIntroCard from '../components/QuranIntroCard';
 import { quranVideos } from './projectData';
 
 export default function ProjectPage() {
@@ -211,47 +212,8 @@ export default function ProjectPage() {
           </div>
 
           <div className="flex-1 text-right relative z-10" dir="rtl">
-            <div className="flex flex-wrap justify-between items-center mb-6 gap-4 border-b border-gray-800 pb-4">
-              <div className="flex gap-2">
-                <button onClick={() => handleLanguageChange('ur')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'ur' ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>اردو</button>
-                <button onClick={() => handleLanguageChange('en')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'en' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>English</button>
-                <button onClick={() => handleLanguageChange('fa')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'fa' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>فارسی</button>
-              </div>
-            </div>
-
-            {langTab === 'ur' ? (
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6 urdu-text">دنیا کا پہلا "ویژول قرآن" پراجیکٹ</h2>
-                <p className="text-gray-300 text-base md:text-lg leading-[2.2] text-justify urdu-text font-light mb-6">
-                  اللہ کے فضل و کرم سے "نورالقرآن پراجیکٹ" کا آغاز ایک خواب کی تعبیر ہے۔ اس خواب کے پیچھے 25 سال کی اسلامی میڈیا کی خدمات کارفرما ہے۔ اس پراجیکٹ کا اصل مقصد یہ ہے کہ قرآن کریم کو جدید سمعی و بصری انداز میں پیش کیا جائے تاکہ نوجوان نسل اور عام انسان قرآن کو صرف پڑھنے نہیں بلکہ دل کی آنکھ سے دیکھنے اور سمجھنے لگیں۔
-                </p>
-                <button onClick={() => setShowFullText(!showFullText)} className="inline-flex items-center gap-2 text-[#D4AF37] border border-[#D4AF37] px-6 py-2 rounded-full font-bold urdu-text hover:bg-[#D4AF37] hover:text-black transition-all">
-                  <FaInfoCircle /> {showFullText ? "تفصیلات بند کریں" : "پراجیکٹ کے مراحل پڑھیں"}
-                </button>
-              </div>
-            ) : (
-              <div className="font-sans text-left" dir="ltr">
-                <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-6">The First "Visual Quran" Project</h2>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed text-justify font-light">
-                  The launch of the "Noor Al-Quran Project" presents the Holy Quran in a modern audio-visual format, enabling everyone to visualize and comprehend its divine message.
-                </p>
-              </div>
-            )}
-
-            {showFullText && langTab === 'ur' && (
-              <div className="pt-6 mt-6 border-t border-gray-800 text-right">
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                    <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> پہلا اور دوسرا مرحلہ</h4>
-                    <p className="text-sm text-gray-300 text-justify">مکمل قرآن مجید کو 30 پاروں کی ویڈیو شکل (عربی و اردو) میں تیار کیا گیا۔ اس میں مشہور قاری استاد پرہیزگار کی تلاوت، شیخ محسن علی نجفیؒ کا مستند اردو ترجمہ اور میری آواز میں اردو وائس اوور شامل ہے۔</p>
-                  </div>
-                  <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                    <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> تیسرا مرحلہ (اسٹینڈرڈ ویژول)</h4>
-                    <p className="text-sm text-gray-300 text-justify">اس وقت شارٹس کی شکل میں ہم کامیاب تجربہ کر چکے ہیں۔ اگلا مرحلہ مکمل قرآن پاک کو اسٹینڈرڈ سائز (16:9) میں ہائی ریزولوشن اور سینماٹک ویژولز کے ساتھ تیار کرنا ہے۔</p>
-                  </div>
-                </div>
-              </div>
-            )}
+            <QuranIntroCard lang={langTab} phase={0} />
+            <p className="text-sm text-gray-300 text-justify">اس وقت شارٹس کی شکل میں ہم کامیاب تجربہ کر چکے ہیں۔ اگلا مرحلہ مکمل قرآن پاک کو اسٹینڈرڈ سائز (16:9) میں ہائی ریزولوشن اور سینماٹک ویژولز کے ساتھ تیار کرنا ہے۔</p>
           </div>
         </div>
       </section>
@@ -288,6 +250,8 @@ export default function ProjectPage() {
 
       {/* 📺 ویڈیوز کی لسٹ */}
       <div className="bg-black">
+        <QuranIntroCard lang={langTab} />
+
         {/* عربی پارے */}
         <section id="arabic" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
           <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 urdu-text text-xl font-bold text-center mb-8">قرآنی ویڈیوز (عربی) - 30 پارے</h3>
@@ -301,9 +265,13 @@ export default function ProjectPage() {
           )}
         </section>
 
-        {/* اردو پارے */}
+        {/* 📺 مرحلہ دوم - کارڈ */}
+        <div className="py-8">
+          <QuranIntroCard lang={langTab} phase={2} />
+        </div>
+
+        {/* اردو پارے - ویڈیوز */}
         <section id="urdu" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-          <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 urdu-text text-xl font-bold text-center mb-8">اردو ٹیکسٹ و ترجمہ - 30 پارے</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {quranVideos.parat_urdu.slice(0, counts.urdu).map((v, i) => <VideoCard key={i} video={v} />)}
           </div>
@@ -314,7 +282,7 @@ export default function ProjectPage() {
           )}
         </section>
 
-        {/* سورتیں، واقعات، تلاوت (باقی حصے) */}
+        {/* عربی پارے */}
         <section id="surahs" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
           <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 urdu-text text-xl font-bold text-center mb-8">منتخب سورتیں</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -328,8 +296,8 @@ export default function ProjectPage() {
         </section>
 
         <section id="stories" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-          <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 urdu-text text-xl font-bold text-center mb-8">بصری قرآنی واقعات</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <QuranIntroCard lang={langTab} phase={3} />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             {quranVideos.stories.slice(0, counts.stories).map((v, i) => <VideoCard key={i} video={v} />)}
           </div>
           {counts.stories < quranVideos.stories.length && (

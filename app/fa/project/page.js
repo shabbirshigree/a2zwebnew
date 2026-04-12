@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
+import QuranIntroCard from '../../components/QuranIntroCard';
 import { useLocale } from '../../components/LocaleProvider';
 import { quranVideos } from '../../project/projectData';
 
@@ -209,47 +210,7 @@ export default function FarsiProjectPage() {
           </div>
 
           <div className="flex-1 text-right relative z-10" dir="rtl">
-            <div className="flex flex-wrap justify-between items-center mb-6 gap-4 border-b border-gray-800 pb-4">
-              <div className="flex gap-2">
-                <button onClick={() => handleLanguageChange('fa')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'fa' ? 'bg-[#D4AF37] text-black shadow-[0_0_10px_rgba(212,175,55,0.4)]' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>فارسی</button>
-                <button onClick={() => handleLanguageChange('ur')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'ur' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>اردو</button>
-                <button onClick={() => handleLanguageChange('en')} className={`px-5 py-1.5 rounded-full text-sm font-bold transition ${langTab === 'en' ? 'bg-[#D4AF37] text-black' : 'border border-[#D4AF37]/50 text-[#D4AF37]'}`}>English</button>
-              </div>
-            </div>
-
-            {langTab === 'fa' ? (
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-6 text-center">اولین پروژه "قرآن تصویری" جهان</h2>
-                <p className="text-gray-300 text-base md:text-lg leading-[2.2] text-justify font-light mb-6">
-                  آغاز پروژه نورالقرآن، نمایش قرآن کریم در قالبی نوین و صوتی و تصویری است تا مخاطبان بتوانند پیام ربانی را به چشم دل ببینند و بهتر دریابند.
-                </p>
-                <button onClick={() => setShowFullText(!showFullText)} className="inline-flex items-center gap-2 bg-[#111] text-white border border-[#D4AF37]/50 px-6 py-2 rounded-full font-bold hover:bg-[#D4AF37] hover:text-black transition-all">
-                  <FaInfoCircle /> {showFullText ? 'بستن جزئیات' : 'مراحل پروژه را بخوانید'}
-                </button>
-              </div>
-            ) : (
-              <div className="font-sans text-left" dir="ltr">
-                <h2 className="text-2xl md:text-4xl font-bold text-[#D4AF37] mb-6">The First "Visual Quran" Project</h2>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed text-justify font-light">
-                  The launch of the "Noor Al-Quran Project" presents the Holy Quran in a modern audio-visual format, enabling everyone to visualize and comprehend its divine message.
-                </p>
-              </div>
-            )}
-
-            {showFullText && langTab === 'fa' && (
-              <div className="pt-6 mt-6 border-t border-gray-800 text-right">
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                    <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> مرحله اول و دوم</h4>
-                    <p className="text-sm text-gray-300 text-justify">قرآن کامل را در ۳۰ پارہ با ترجمه فارسی و قرائت استاد پرهیزگار و صدای انگلیسی به شکل صوتی و تصویری آماده کرده‌ایم.</p>
-                  </div>
-                  <div className="bg-white/5 p-4 rounded-xl border border-gray-800 hover:border-[#D4AF37]/30 transition-all">
-                    <h4 className="text-white font-bold mb-2 flex items-center gap-2"><FaCheckCircle className="text-[#D4AF37]" /> مرحله سوم (ویژوال استاندارد)</h4>
-                    <p className="text-sm text-gray-300 text-justify">مرحله بعدی تولید قرآن کامل در سایز استاندارد با کیفیت بالا و تصاویر سینمایی است تا تجربه بصری قوی‌تری فراهم شود.</p>
-                  </div>
-                </div>
-              </div>
-            )}
+            <QuranIntroCard lang='fa' phase={0} />
           </div>
         </div>
       </section>
@@ -283,6 +244,7 @@ export default function FarsiProjectPage() {
       </section>
 
       <div className="bg-black">
+        <QuranIntroCard lang='fa' />
         <section id="arabic" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
           <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">ویدئوهای قرآنی (عربی) - ۳۰ پارہ</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -295,8 +257,13 @@ export default function FarsiProjectPage() {
           )}
         </section>
 
+        {/* مرحله دوم - کارڈ */}
+        <div className="py-8">
+          <QuranIntroCard lang='fa' phase={2} />
+        </div>
+
+        {/* ویدیوهای اردو */}
         <section id="urdu" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-          <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">متن فارسی و ترجمه - ۳۰ پارہ</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {quranVideos.parat_urdu.slice(0, counts.urdu).map((v, i) => <VideoCard key={i} video={v} />)}
           </div>
@@ -320,8 +287,8 @@ export default function FarsiProjectPage() {
         </section>
 
         <section id="stories" className="py-8 px-4 border-t border-white/5 max-w-6xl mx-auto">
-          <h3 className="bg-[#0b314d] text-[#D4AF37] px-6 py-2 rounded-full border border-[#D4AF37]/50 text-xl font-bold text-center mb-8">رویدادهای تصویری قرآنی</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <QuranIntroCard lang="fa" phase={3} />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
             {quranVideos.stories.slice(0, counts.stories).map((v, i) => <VideoCard key={i} video={v} />)}
           </div>
           {counts.stories < quranVideos.stories.length && (
