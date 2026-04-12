@@ -90,6 +90,11 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
       id: 24, 
       src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
       title: "پاکستان میں تعینات ایرانی سفیر کی جانب سے حاجی شبیر احمد شگری کو زبردست خراج تحسین" 
+    },
+    { 
+      id: 25, 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png", 
+      title: "خصوصی یادگاری شیلڈ / اعزاز (سفیرِ ایران کی جانب سے)" 
     }
 ]; // لسٹ یہاں ختم ہو رہی ہے
 
@@ -169,6 +174,27 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] font-amiri tracking-wider">بین الاقوامی اعترافِ خدمات</h2>
             <p className="text-[#D4AF37]/80 text-xl mt-2 font-light">International Recognition</p>
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
+          </div>
+
+          {/* ایرانی یادگاری شیلڈ (New Entry) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+            <div className="urdu-text">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 leading-snug">
+                <FaAward className="shrink-0" /> خصوصی یادگاری شیلڈ / اعزاز
+              </h3>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  سابق ایرانی سفیر سید محمد علی حسینی کی جانب سے شبیر احمد شگری کو ان کی بہترین کارکردگی اور علمی خدمات کے اعتراف میں پیش کیا گیا ایک خصوصی تحفہ اور اعزاز۔ یہ خوبصورت یادگاری شیلڈ ان کی تحقیقی کاوشوں اور بین الثقافتی تعلقات کے فروغ میں ان کے اہم کردار کی علامت ہے۔
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold text-base md:text-lg">سفیرِ اسلامی جمہوریہ ایران برائے پاکستان</p>
+                </div>
+              </div>
+            </div>
+            <div className="img-wrap h-[350px] md:h-[550px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Special Commemorative Award from Iranian Ambassador" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
           </div>
 
           {/* سفیر کا لیٹر (Updated Entry) */}

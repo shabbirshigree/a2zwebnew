@@ -38,6 +38,11 @@ export default function AwardsPageEN() {
       id: 24, 
       src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
       title: "A Grand Tribute to Haji Shabir Ahmed Shigri by the Ambassador of the Islamic Republic of Iran to Pakistan" 
+    },
+    { 
+      id: 25, 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png", 
+      title: "Special Commemorative Award (Ambassador of Iran)" 
     }
   ];
 
@@ -104,6 +109,27 @@ export default function AwardsPageEN() {
           <div className="text-center mb-10 pt-10 border-t-2 border-[#D4AF37]/20">
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] tracking-wider uppercase">International Recognition</h2>
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
+          </div>
+
+          {/* Special Commemorative Award (New Entry) */}
+          <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+            <div className="text-left">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start leading-snug">
+                <FaAward className="shrink-0" /> Special Commemorative Award
+              </h3>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  A special award presented by H.E. Seyed Mohammad Ali Hosseini, the Ambassador of the Islamic Republic of Iran to Pakistan, to Shabbir Ahmed Shigri in recognition of his outstanding performance and scholarly contributions. This commemorative piece symbolizes his dedication to research and his significant role in promoting cultural and intellectual ties.
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold text-base md:text-lg">Ambassador of the Islamic Republic of Iran to Pakistan</p>
+                </div>
+              </div>
+            </div>
+            <div className="img-wrap h-[350px] md:h-[550px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Special Commemorative Award from Iranian Ambassador" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
           </div>
 
           {/* Ambassador's Letter (Updated Entry) */}
