@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight, FaMagic } from 'react-icons/fa';
-import { useLanguage } from '../lib/LanguageContext';
-import { translations } from '../lib/i18n';
+import { useLocale } from '../components/LocaleProvider';
+import { dictionaries } from '../lib/i18n';
 
 const aiArtImages = [
   "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776010421/84935d36-b673-4e7f-8b13-acadd76cf260.png",
@@ -13,9 +13,9 @@ const aiArtImages = [
 ];
 
 export default function AIArtGallery() {
-  const { language } = useLanguage();
-  const t = translations[language].aiArtGallery;
-  const isRtl = language === 'ur' || language === 'fa';
+  const { locale } = useLocale();
+  const t = dictionaries[locale]?.aiArtGallery || dictionaries.ur.aiArtGallery;
+  const isRtl = locale === 'ur' || locale === 'fa';
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
