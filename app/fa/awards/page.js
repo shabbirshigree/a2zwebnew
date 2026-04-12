@@ -81,9 +81,31 @@ export default function AwardsPortfolioFinal() {
         </div>
 
         {/* باقی تمام کارڈز اور تحریریں جوں کی توں موجود ہیں */}
-        <div className="max-w-6xl mx-auto space-y-4" dir="rtl">
+        <div className="max-w-6xl mx-auto space-y-8" dir="rtl">
           
-          {/* تقدیرنامه آستان قدس رضوی (New Entry) */}
+          {/* International Recognition Section */}
+          <div className="text-center mb-10 pt-10 border-t-2 border-[#D4AF37]/20">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] tracking-wider">قدردانی بین‌المللی</h2>
+            <p className="text-[#D4AF37]/80 text-xl mt-2 font-light">International Recognition</p>
+            <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
+          </div>
+
+          {/* نامه سفیر (New Entry) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+            <div className="persian-text text-right">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaCertificate className="animate-pulse" /> تقدیرنامه آستان قدس رضوی (نامه سفیر)
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                این لوح سپاس از سوی آستان قدس رضوی (مشهد مقدس) به پاس همکاری‌های علمی و حضور فعال جناب آقای شبیر احمد شگری در محافل معنوی و فکری به ایشان اهدا شده است. در این مکتوب از تلاش‌های ایشان در راستای ترویج معارف اسلامی و ارزش‌های انسانی قدردانی شده و برای ایشان در پناه حضرت امام رضا (ع) آرزوی توفیق روزافزون گشته است.
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+            </div>
+          </div>
+
+          {/* تقدیرنامه آستان قدس رضوی */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
             <div className="persian-text text-right">
               <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
