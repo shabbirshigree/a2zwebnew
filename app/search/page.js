@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 import { CHANNELS } from "../channels/channelsData";
 import { contactMethods } from "../contact/contactData";
-import { quranVideos } from "../noor-ul-quran/noor-ul-quranData";
+import { quranVideos } from "../noor-ul-quran/noor-ul-quran-data";
 import { BOOKS_DATA } from "../library/libraryData";
 import { allArticles } from "../article";
 import { founderItems, mediaRoles } from "../about/aboutData";
