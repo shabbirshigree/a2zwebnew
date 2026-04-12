@@ -80,6 +80,11 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
       id: 22, 
       src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", 
       title: "سربراہ جمعیت علمائے پاکستان پیر  معصوم نقوی چادر پوشی کررہے ہیں" 
+    },
+        { 
+      id: 23, 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", 
+      title: "آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر" 
     }
 ]; // لسٹ یہاں ختم ہو رہی ہے
 
@@ -153,6 +158,22 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
 
         {/* باقی تمام کارڈز اور تحریریں جوں کی توں موجود ہیں */}
         <div className="max-w-6xl mx-auto space-y-4" dir="rtl">
+          
+          {/* آستان قدس رضوی کی سند (New Entry) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
+            <div className="urdu-text">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaCertificate /> آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-[#D4AF37]/20">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50" alt="Astan Quds Razavi Certificate" />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#222]">
             <div className="urdu-text">
               <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3"><FaQuran /> خادمِ امام رضا علیہ السلام (2011)</h3>

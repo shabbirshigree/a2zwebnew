@@ -1,7 +1,5 @@
 export const ghaziData = {
   intro: {
-    heroTitle: "Sada-e-Ghazi Award",
-    heroSubtitle: "Haji Shabbir Ahmed Shigri — honored guardian and servant of the shrine of Hazrat Ghazi Abbas (AS).",
     welcome: "Welcome to the Sada-e-Ghazi page.",
     text: "I am grateful for the countless blessings of Allah, especially the honors that few people receive in this world. I have been blessed with many awards by His grace, yet two titles stand out as life-changing: after receiving the title of Servant of Imam Reza (AS) in 2011, I was honored with the Sada-e-Ghazi medal and the title of Guardian of the Shrine of Ghazi Abbas (AS) in 2024. These honors opened a path of blessings in my life. I am not worthy, but I strive to serve the teachings of Prophet Muhammad and the Ahl al-Bayt, and to remain faithful to Ghazi Abbas (AS). I pray to Allah for success in these noble goals. Ameen.",
     author: "Haji Shabbir Ahmed Shigri",
@@ -9,7 +7,6 @@ export const ghaziData = {
     // 👇 High-resolution profile GIF link 👇
     profileGif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif"
   },
-  dir: 'ltr',
 
   // ... (The rest of the news, awards and media data remains unchanged.)
 

@@ -7,8 +7,8 @@ export default function BooksSection({ books, setActiveVideo }) {
 
   return (
     <div id="books" className="relative z-10 container mx-auto px-4 py-10 bg-white border-t-8 border-[#D4AF37]">
-         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Books & Publications</h2></div>
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+         <div className="text-center mb-8"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">کتب و انتشارات</h2></div>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" dir="rtl">
             {bookList.map((book, idx) => (
                <div key={idx} className="bg-gray-50 p-6 rounded-3xl border-2 border-[#D4AF37]/50 shadow-xl flex flex-col md:flex-row items-center gap-6 group">
                    <img src={book.image} alt={book.title} className="w-32 h-auto rounded-lg shadow-md border group-hover:scale-105 transition-transform" />

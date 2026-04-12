@@ -17,12 +17,22 @@ export default function CompactSearch() {
     }
     const recognition = new SpeechRecognition();
     recognition.lang = 'ur-PK';
+    recognition.continuous = false; // فورا نتیجہ دینے کے لیے
+    recognition.interimResults = true; // بولتے وقت ہی ٹیکسٹ دکھانے کے لیے
+    
     recognition.onstart = () => setIsListening(true);
     recognition.onend = () => setIsListening(false);
+    
     recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript;
+      const transcript = Array.from(event.results)
+        .map(result => result[0])
+        .map(result => result.transcript)
+        .join('');
       setQuery(transcript);
-      router.push(`/search?q=${transcript}`);
+      
+      if (event.results[0].isFinal) {
+        router.push(`/search?q=${transcript}`);
+      }
     };
     recognition.start();
   };

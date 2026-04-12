@@ -93,8 +93,8 @@ export const allData = {
     { title: "حرم میں ماہ رمضان", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771103198/Ramzan_dar_haram_e_Imam_Reza_a_s_%D8%AD%D8%B1%D9%85_%D8%A7%D9%85%D8%A7%D9%85_%D8%B9%D9%84%DB%8C_%D8%A7%D9%84%D8%B1%D8%B6%D8%A7_%D8%B9%D9%84%DB%8C%DB%81_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A7%D9%88%D8%B1_%D9%85%D8%A7%DB%81_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_360P_irco0g.mp4" }
   ],
   liveParticipations: [
-    { title: "خادم امام رضا علیہ السلام حاجی شبیر احمد شگری کی حرم امام رضاؑ کے لائیو پروگرام میں شرکت 17 مارچ 2026", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
-    { title: "خادم امام رضا علیہ السلام حاجی شبیر احمد شگری کی حرم امام رضاؑ کے لائیو پروگرام میں شرکت 12 دسمبر 2025", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
+    { title: "خادم امام رضا علیہ السلام حاجی شبیر احمد شگری کی جانب سے حرم امام رضاؑ کے لائیو پروگرام کا کامیاب انعقاد و انتظام 17 مارچ 2026", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
+    { title: "خادم امام رضا علیہ السلام حاجی شبیر احمد شگری کی جانب سے حرم امام رضاؑ کے لائیو پروگرام کا کامیاب انعقاد و انتظام 12 دسمبر 2025", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
   ],
   tabarrukat: [
     { title: "تبرکات کی تقسیم (جشن امیرالمومنینؑ)", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106790/VID-20260128-WA0014.3gp_f9pj1t.3gp" },
@@ -161,7 +161,7 @@ export const allData = {
 // 🔥 11 مخصوص موضوعات (ڈبوں کے لنکس)
 export const boxes = [
   { title: "لائیو زیارت", icon: <FaVideo />, type: "video", link: allData.programs[0].link },
-  { title: "لائیو پروگرامز میں شرکت", icon: <FaVideo />, type: "scroll", target: "liveParticipations" },
+  { title: "لائیو پروگرامز کا انعقاد", icon: <FaVideo />, type: "scroll", target: "liveParticipations" },
   { title: "تبرکات کی تقسیم", icon: <FaGift />, type: "scroll", target: "tabarrukat" },
   { title: "ویڈیو ڈاکومنٹریز", icon: <FaFilm />, type: "scroll", target: "docs" },
   { title: "حرم کے پروگرامز", icon: <FaCalendarAlt />, type: "scroll", target: "programs" },

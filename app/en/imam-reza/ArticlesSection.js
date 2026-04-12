@@ -7,11 +7,11 @@ export default function ArticlesSection({ articles, setSelectedArticle }) {
   return (
     <div id="articles" className="relative z-10 container mx-auto px-4 py-10 bg-[#fdfdfd]">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">Featured Articles</h2>
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">مقالات ویژه</h2>
       </div>
 
       {displayArticles.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" dir="rtl">
           {displayArticles.map((art, idx) => (
             <div key={idx} onClick={() => setSelectedArticle(art)} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 group">
               <div className="relative h-48 overflow-hidden">
@@ -21,15 +21,15 @@ export default function ArticlesSection({ articles, setSelectedArticle }) {
               <div className="p-5 text-center">
                 <h3 className="text-lg font-bold text-[#0f4c75] mb-2 leading-tight group-hover:text-[#D4AF37] transition-colors">{art.title}</h3>
                 <p className="text-gray-500 text-xs mb-4 font-bold">{art.paper || art.newspaper || art.source}</p>
-                <button className="bg-[#0f4c75] text-white px-6 py-2 rounded-full text-sm font-bold shadow-md hover:bg-[#D4AF37] transition-colors">Read More</button>
+                <button className="bg-[#0f4c75] text-white px-6 py-2 rounded-full text-sm font-bold shadow-md hover:bg-[#D4AF37] transition-colors">بیشتر بخوانید</button>
               </div>
             </div>
           ))}
         </div>
       ) : (
         <div className="max-w-4xl mx-auto text-center py-16 px-6 bg-white rounded-3xl shadow-lg border border-gray-200">
-          <h3 className="text-xl md:text-2xl font-bold text-[#0f4c75] mb-4">English articles are coming soon</h3>
-          <p className="text-gray-600 text-base md:text-lg">We are preparing English articles for this page. Please visit other sections for the latest stories in the meantime.</p>
+          <h3 className="text-xl md:text-2xl font-bold text-[#0f4c75] mb-4">مقالات فارسی به زودی منتشر می‌شوند</h3>
+          <p className="text-gray-600 text-base md:text-lg">ما در حال آماده‌سازی مقالات فارسی برای این صفحه هستیم. برای مشاهده داستان‌های جاری لطفاً به بخش‌های دیگر مراجعه کنید.</p>
         </div>
       )}
     </div>

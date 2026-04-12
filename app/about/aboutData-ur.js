@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa";
 
 export const founderItems = [
-  { icon: <FaQuran />, title: "پروجیکٹ نور القرآن", desc: "دنیا کا پہلا بصری قرآن", link: "/noor-ul-quran" },
+  { icon: <FaQuran />, title: "پروجیکٹ نور القرآن", desc: "دنیا کا پہلا بصری قرآن", link: "/project" },
   { icon: <FaTv />, title: "نور پروڈکشن", desc: "اسلامی میڈیا نیٹ ورک", link: "https://www.youtube.com/@noorproduction" },
   { icon: <FaHandshake />, title: "پاک ایران دوستی انجمن", desc: "دوستی کا فورم", link: "/diplomatic-services#anjuman" },
   { icon: <FaGlobe />, title: "پاک ایران ویب سائٹ", desc: "اردو/فارسی ویب پورٹل", link: "https://pakiiranassociation.wixsite.com/pira" },

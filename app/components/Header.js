@@ -41,7 +41,7 @@ const HERO_NUR_AYAH_AR =
 const MENU_CONFIG = [
   { key: "home", link: "/home", icon: FaHome },
   { key: "about", link: "/about", icon: FaUserAlt },
-  { key: "project", link: "/noor-ul-quran", icon: FaBookOpen },
+  { key: "project", link: "/project", icon: FaBookOpen },
   { key: "articles", link: "/article", icon: FaNewspaper },
   { key: "diplomatic", link: "/diplomatic-services", icon: FaHandshake },
   { key: "cultural", link: "/cultural", icon: FaLandmark },
@@ -364,20 +364,20 @@ export function HeroSlider() {
         <div className="flex flex-col items-center gap-1.5 md:gap-1.5 mt-1">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${locale === "ur"
-              ? "urdu-text text-[22px] sm:text-[24px] md:text-[1.5rem] lg:text-[1.65rem] font-semibold whitespace-nowrap"
-              : locale === "fa"
-                ? "font-persian font-semibold text-[1.15rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] max-w-[92vw]"
-                : "font-hero-en font-semibold text-[1.2rem] sm:text-[1.3rem] md:text-[1.45rem] lg:text-[1.6rem]"
+                ? "urdu-text text-[22px] sm:text-[24px] md:text-[1.5rem] lg:text-[1.65rem] font-semibold whitespace-nowrap"
+                : locale === "fa"
+                  ? "font-persian font-semibold text-[1.15rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] max-w-[92vw]"
+                  : "font-hero-en font-semibold text-[1.2rem] sm:text-[1.3rem] md:text-[1.45rem] lg:text-[1.6rem]"
               }`}
           >
             {dict.hero.name}
           </h1>
           <p
             className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-1 md:pt-1.5 mt-1 md:mt-1.5 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
-              ? "font-hero-en max-w-[34rem]"
-              : locale === "fa"
-                ? "font-persian"
-                : "urdu-header-roles"
+                ? "font-hero-en max-w-[34rem]"
+                : locale === "fa"
+                  ? "font-persian"
+                  : "urdu-header-roles"
               }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >
@@ -424,8 +424,8 @@ export function HeroSlider() {
                 key={item.key}
                 href={href}
                 className={`group relative flex flex-row items-center gap-1 rounded-lg px-1.5 md:px-2 py-1 md:py-1.5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${active
-                  ? "text-[#D4AF37] bg-[#0f4c75]/35"
-                  : "text-white/80 hover:text-white"
+                    ? "text-[#D4AF37] bg-[#0f4c75]/35"
+                    : "text-white/80 hover:text-white"
                   }`}
               >
                 <span className="text-[12px] md:text-[13px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10">
@@ -433,10 +433,10 @@ export function HeroSlider() {
                 </span>
                 <span
                   className={`text-[11px] md:text-[12px] leading-tight ${locale === "en"
-                    ? "font-sans font-medium"
-                    : locale === "fa"
-                      ? "font-persian font-semibold"
-                      : "urdu-text font-bold"
+                      ? "font-sans font-medium"
+                      : locale === "fa"
+                        ? "font-persian font-semibold"
+                        : "urdu-text font-bold"
                     }`}
                 >
                   {name}

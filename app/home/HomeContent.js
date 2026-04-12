@@ -35,9 +35,6 @@ import {
 } from "./homeData";
 import { Navbar, HeroSlider } from "../components/Header";
 import Footer from "../components/Footer";
-import MobileProfileCard from "../components/MobileProfileCard";
-import FarsiProfileCard from "../components/FarsiProfileCard";
-import EnglishProfileCard from "../components/EnglishProfileCard";
 
 /** فارسی / انگریزی / اردو کے لیے مرکزی متن کلاس */
 function bodyFont(locale) {
@@ -235,15 +232,10 @@ export function HomeContent() {
           <HeroSlider />
         </div>
 
-        {/* Profile Card Section */}
-        {locale === "ur" && <MobileProfileCard />}
-        {locale === "fa" && <FarsiProfileCard />}
-        {locale === "en" && <EnglishProfileCard />}
-
         <div className={`container mx-auto px-3 md:px-4 relative z-10${welcomePaddingClass}`}>
           <div className="islamic-pattern rounded-3xl shadow-[0_0_40px_rgba(212,175,55,0.4)] border-4 border-[#D4AF37] p-6 md:p-12 text-center max-w-5xl mx-auto bg-white hover:border-[#b89628] transition-all duration-700">
             <div className="space-y-4 md:space-y-5 relative z-10">
-              <h2 className="font-kufi text-[#D4AF37] text-[12px] sm:text-[14px] md:text-[16px] font-bold tracking-wide opacity-100 leading-tight max-w-[min(100%,20rem)] mx-auto">
+              <h2 className="font-kufi text-[#0f4c75] text-[10px] sm:text-[11px] md:text-xs font-normal tracking-wide opacity-95 leading-tight max-w-[min(100%,20rem)] mx-auto">
                 {bismillah}
               </h2>
               <p

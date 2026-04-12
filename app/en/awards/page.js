@@ -32,7 +32,8 @@ export default function AwardsPageEN() {
     { id: 19, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835353/IMG_20230522_12353811_Copy_mmry9w_o42miw.jpg", title: "Shield Presentation by Sheikh Shahzad Naqvi" },
     { id: 20, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835759/IMG_20191106_142828_Copy_hxufdv_vslbsj.jpg", title: "Former Chief Minister and Speaker Presenting a Book" },
     { id: 21, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835715/Mosin_ali_Najafi_ki_Mazar_par_Qurani_videos_k_Iftitah_k_moqah_pr_afhing_dvlllv.jpg", title: "Book Presentation at Maulana Ishaq Ali Najafi's Shrine" },
-    { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", title: "Leader of Jamiat Ulama Pakistan Peer Masoom Naqvi" }
+    { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", title: "Leader of Jamiat Ulama Pakistan Peer Masoom Naqvi" },
+    { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", title: "Letter of Appreciation from Astan Quds Razavi" }
   ];
 
   const nextImg = (e) => { e.stopPropagation(); setSelectedImageIndex((i) => (i + 1) % galleryImages.length); };
@@ -93,6 +94,22 @@ export default function AwardsPageEN() {
         </div>
 
         <div className="max-w-6xl mx-auto space-y-4">
+          
+          {/* Astan Quds Razavi Certificate (New Entry) */}
+          <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
+            <div className="text-left">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start">
+                <FaCertificate /> Letter of Appreciation from Astan Quds Razavi
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                This certificate of recognition was presented by Astan Quds Razavi (the holy shrine of Imam Reza, Mashhad, Iran) to Haji Shabbir Ahmed Shigri. It acknowledges his valuable scholarly cooperation and successful organization and management of intellectual and spiritual gatherings. The letter commends his efforts in promoting Islamic values and prays for his continued success in the light of the teachings of Imam Reza (A.S).
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-[#D4AF37]/20">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50" alt="Astan Quds Razavi Certificate" />
+            </div>
+          </div>
+
           {/* Award 1 */}
           <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#222]">
             <div className="text-left">

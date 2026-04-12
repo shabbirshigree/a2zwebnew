@@ -82,6 +82,22 @@ export default function AwardsPortfolioFinal() {
 
         {/* باقی تمام کارڈز اور تحریریں جوں کی توں موجود ہیں */}
         <div className="max-w-6xl mx-auto space-y-4" dir="rtl">
+          
+          {/* تقدیرنامه آستان قدس رضوی (New Entry) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
+            <div className="persian-text text-right">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaCertificate /> تقدیرنامه آستان قدس رضوی
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                این لوح سپاس از سوی آستان قدس رضوی (مشهد مقدس) به پاس همکاری‌های علمی و برگزاری موفق و مدیریت محافل معنوی و فکری توسط جناب حاجی شبیر احمد شگری به ایشان اهدا شده است. در این مکتوب از تلاش‌های ایشان در راستای ترویج معارف اسلامی و ارزش‌های انسانی قدردانی شده و برای ایشان در پناه حضرت امام رضا (ع) آرزوی توفیق روزافزون گشته است.
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-[#D4AF37]/20">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50" alt="Astan Quds Razavi Certificate" />
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#222]">
             <div className="persian-text">
               <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3"><FaQuran /> خادم امام رضا علیه‌السلام (2011)</h3>

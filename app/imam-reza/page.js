@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import BooksSection from './BooksSection';
 import ArticlesSection from './ArticlesSection';
 import RezaviSection from './RezaviSection';
+import AstanAppreciationComponent from './AstanAppreciationComponent';
 
 import { imamRezaImages, allData, boxes } from './data'; 
 
@@ -113,6 +114,9 @@ export default function ImamRezaPage() {
            </div>
         </div>
       </div>
+
+      {/* 🏛️ آستان قدس رضوی کی جانب سے تقدیرنامہ */}
+      <AstanAppreciationComponent />
 
       {/* ✨ 10 بٹنز */}
       <div className="relative z-10 container mx-auto px-4 py-8">

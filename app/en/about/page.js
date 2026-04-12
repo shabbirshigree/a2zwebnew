@@ -51,8 +51,8 @@ export default function UltimateAboutPage() {
 
   const localizedFounderItems = founderItems.map((item) => {
     const href = item.link || "#";
-    const normalizedLink = href.startsWith("/noor-ul-quran")
-      ? "/en/noor-ul-quran"
+    const normalizedLink = href.startsWith("/project")
+      ? "/en/project"
       : href.startsWith("/diplomatic-services")
         ? href.replace("/diplomatic-services", "/en/diplomatic-services")
         : href;
@@ -124,7 +124,7 @@ export default function UltimateAboutPage() {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
 
           {/* Servant of Imam Reza */}
-          <Link href="/en/imam-reza" className="group">
+          <Link href="/imam-reza" className="group">
             <div className="animate-shine bg-gradient-to-bl from-emerald-900 to-emerald-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="Imam Reza" />
@@ -136,7 +136,7 @@ export default function UltimateAboutPage() {
           </Link>
 
           {/* Guardian and Servant of the Sanctuary of Ghazi Abbas */}
-          <Link href="/en/ghazi-abbas" className="group">
+          <Link href="/ghazi-abbas" className="group">
             <div className="animate-shine bg-gradient-to-bl from-red-900 to-red-700 rounded-3xl p-8 shadow-2xl border-4 border-[#D4AF37] hover:scale-105 transition-all duration-500 flex flex-col items-center text-center h-full">
               <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif" className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 relative z-10" alt="Ghazi Abbas" />
@@ -435,24 +435,24 @@ export default function UltimateAboutPage() {
             {/* Decorative background elements */}
             <div className="absolute top-0 left-0 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#0b314d]/5 rounded-full blur-3xl"></div>
-
+            
             <button onClick={() => setShowFederationPopup(false)} className="absolute top-6 right-6 text-gray-400 hover:text-red-500 hover:scale-125 text-3xl font-bold transition-all duration-300">&times;</button>
-
+            
             <div className="text-center flex flex-col items-center relative z-10">
               {/* Logo with decorative ring */}
               <div className="relative mb-8 mt-4">
-                <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[#D4AF37]/30" style={{ width: '160px', height: '160px', margin: 'auto' }}></div>
+                <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[#D4AF37]/30" style={{width: '160px', height: '160px', margin: 'auto'}}></div>
                 <div className="w-40 h-40 rounded-full p-4 bg-gradient-to-br from-white via-blue-50 to-white shadow-2xl border-6 border-white relative flex items-center justify-center">
                   <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1774428398/3929eb58-af72-466f-89fc-98380b8abe4c.png" alt="Trade and Culture Federation Logo" className="w-full h-full object-contain" />
                 </div>
               </div>
-
+              
               {/* Title with decorative line */}
               <div className="mb-6">
                 <h3 className="text-3xl md:text-4xl font-extrabold text-[#0b314d] mb-4 drop-shadow-sm">Trade & Culture Federation</h3>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-4"></div>
               </div>
-
+              
               {/* Content */}
               <div className="max-w-lg">
                 <p className="text-gray-700 leading-relaxed text-center text-base md:text-lg font-semibold text-justify mb-6 text-[#0f4c75]">

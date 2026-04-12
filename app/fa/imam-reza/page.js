@@ -9,10 +9,11 @@ import Link from 'next/link';
 import { Navbar } from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// 👇 بخش‌های جدا شده جدید (کامپوننت‌ها) را ایمپورت می‌کنیم
+// 👇 نئے الگ کیے گئے سیکشنز (Components) امپورٹ کر رہے ہیں
 import BooksSection from './BooksSection';
 import ArticlesSection from './ArticlesSection';
 import RezaviSection from './RezaviSection';
+import AstanAppreciationComponent from './AstanAppreciationComponent';
 
 import { imamRezaImages, allData, boxes } from './data'; 
 
@@ -36,14 +37,14 @@ export default function ImamRezaPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
-  // 🚀 داده‌ها
+  // 🚀 ڈیٹا 
   const programVideos = allData?.programs || [];
   const manqabatVideos = allData?.manqabats || [];
   const tabarrukatVideos = allData?.tabarrukat || [];
   const documentaryVideos = allData?.documentaries || [];
   const liveParticipationVideos = allData?.liveParticipations || []; 
 
-  // 🛠️ پخش‌کننده ویدیو
+  // 🛠️ ویڈیو پلیئر
   const renderVideoPlayer = () => {
     if (!activeVideo) return null;
     if (activeVideo.includes('youtube.com') || activeVideo.includes('youtu.be')) {
@@ -90,7 +91,7 @@ export default function ImamRezaPage() {
       <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
       
       {/* 🔙 نیویگیشن */}
-      <div className="absolute top-20 md:top-24 left-4 z-[60] flex gap-3">
+      <div className="absolute top-4 left-4 z-50 flex gap-3">
          <Link href="/fa/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
          <Link href="/fa/" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowLeft size={18} /></Link>
       </div>
@@ -114,7 +115,10 @@ export default function ImamRezaPage() {
         </div>
       </div>
 
-      {/* ✨ 10 دکمه */}
+      {/* 🏛️ تقدیرنامهٔ آستان قدس رضوی */}
+      <AstanAppreciationComponent />
+
+      {/* ✨ 10 بٹنز */}
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-7xl mx-auto" dir="rtl">
            {boxes?.map((item, index) => (

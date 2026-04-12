@@ -1,7 +1,7 @@
 import { FaHandHoldingHeart, FaVideo, FaGift, FaFilm, FaCalendarAlt, FaMicrophone, FaPenNib, FaMosque, FaBook, FaImages, FaShoppingBag } from "react-icons/fa";
 import { articlesData2 } from './articlesData2';
 
-// 🖼️ تصاویر گالری
+// 🖼️ گیلری کی تصاویر
 export const imamRezaImages = [
   "https://res.cloudinary.com/dtqrziupt/image/upload/v1768225155/IMG_20180303_171531_Copy_gdq2iq.jpg",
   "https://res.cloudinary.com/dtqrziupt/image/upload/v1768219010/IMG_3717_v7m2cz.jpg",
@@ -24,7 +24,7 @@ export const imamRezaImages = [
   "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771114001/12_kxuikm.png"
 ];
 
-// 🔥 داده‌های جدید: رضوی آنلاین
+// 🔥 نیا ڈیٹا: رضوی آنلائن
 export const rezaviData = {
   title: "رضوی آنلاین: مرکز فرهنگی اسلامی",
   desc: `رضوی آنلاین مرکز فرهنگی اسلامی است که کالاهای متبرک و فرهنگی اداره حرم رضوی را ارائه می‌دهد.
@@ -93,8 +93,8 @@ export const allData = {
     { title: "ماه رمضان در حرم", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771103198/Ramzan_dar_haram_e_Imam_Reza_a_s_%D8%AD%D8%B1%D9%85_%D8%A7%D9%85%D8%A7%D9%85_%D8%B9%D9%84%DB%8C_%D8%A7%D9%84%D8%B1%D8%B6%D8%A7_%D8%B9%D9%84%DB%8C%DB%81_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A7%D9%88%D8%B1_%D9%85%D8%A7%DB%81_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_360P_irco0g.mp4" }
   ],
   liveParticipations: [
-    { title: "شرکت خادم امام رضا علیه‌السلام حاجی شبیر احمد شگری در برنامه زنده حرم امام رضا علیه‌السلام - ۱۷ مارس ۲۰۲۶", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
-    { title: "شرکت خادم امام رضا علیه‌السلام حاجی شبیر احمد شگری در برنامه زنده حرم امام رضا علیه‌السلام - ۱۲ دسامبر ۲۰۲۵", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
+    { title: "برگزاری موفق و مدیریت برنامه زنده حرم امام رضا علیه‌السلام توسط حاجی شبیر احمد شگری - ۱۷ مارس ۲۰۲۶", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
+    { title: "برگزاری موفق و مدیریت برنامه زنده حرم امام رضا علیه‌السلام توسط خادم امام رضا علیه‌السلام حاجی شبیر احمد شگری - ۱۲ دسامبر ۲۰۲۵", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
   ],
   tabarrukat: [
     { title: "توزیع تبرکات (جشن امیرالمؤمنین علیه‌السلام)", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106790/VID-20260128-WA0014.3gp_f9pj1t.3gp" },
@@ -158,10 +158,10 @@ export const allData = {
   articles: articlesData2
 };
 
-// 🔥 11 موضوع خاص (لینک‌های جعبه‌ها)
+// 🔥 11 مخصوص موضوعات (ڈبوں کے لنکس)
 export const boxes = [
   { title: "زیارت زنده", icon: <FaVideo />, type: "video", link: allData.programs[0].link },
-  { title: "شرکت در برنامه‌های زنده", icon: <FaVideo />, type: "scroll", target: "liveParticipations" },
+  { title: "برگزاری برنامه‌های زنده", icon: <FaVideo />, type: "scroll", target: "liveParticipations" },
   { title: "توزیع تبرکات", icon: <FaGift />, type: "scroll", target: "tabarrukat" },
   { title: "ویدئوهای مستند", icon: <FaFilm />, type: "scroll", target: "docs" },
   { title: "برنامه‌های حرم", icon: <FaCalendarAlt />, type: "scroll", target: "programs" },

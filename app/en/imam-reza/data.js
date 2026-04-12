@@ -25,12 +25,12 @@ export const imamRezaImages = [
 
 // 🔥 New data: Rezavi Online
 export const rezaviData = {
-  title: "Rezavi Online: Islamic Cultural Center",
-  desc: `Rezavi Online is an Islamic cultural center that offers blessed items from the Holy Shrine of Imam Reza.
-    Discover sacred souvenirs made from the flowers of the shrine, blessed badges, bracelets, and gold-plated jewelry.
-    The collection includes prayer beads, blessed pottery, sacred soil from the shrine, flags, talismans, and beautifully calligraphed frames.
-    All items are presented with love and respect to the sacred shrine.`,
-  punchline: 'Visit now — Rezavi Online is your Islamic cultural destination.',
+  title: "رزوی آنلاین: بوتیک فرهنگی اسلامی",
+  desc: `رزوی آنلاین یک بوتیک فرهنگی اسلامی است که اقلام مبارک حرم امام رضا را عرضه می‌کند.
+    یادگاری‌های مقدس ساخته‌شده از گل‌های حرم، نشان‌های مبارک، دستبندها و زیورآلات طلاکاری‌شده را کشف کنید.
+    مجموعه شامل تسبیح‌ها، سفال‌های متبرک، تربت مقدس، پرچم‌ها، طلسم‌ها و قاب‌های خوش‌خط نیز می‌شود.
+    همه اقلام با عشق و احترام به حرم مقدس ارائه می‌شوند.`,
+  punchline: 'همین حالا بازدید کنید — رزوی آنلاین مقصد فرهنگی اسلامی شماست.',
   youtube: "https://www.youtube.com/@RezaviOnline?sub_confirmation=1",
   facebook: "https://www.facebook.com/share/1AoVqdtaVB/",
   images: [
@@ -91,35 +91,35 @@ export const allData = {
     { title: "Ramadan in the Shrine", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771103198/Ramzan_dar_haram_e_Imam_Reza_a_s_%D8%AD%D8%B1%D9%85_%D8%A7%D9%85%D8%A7%D9%85_%D8%B9%D9%84%DB%8C_%D8%A7%D9%84%D8%B1%D8%B6%D8%A7_%D8%B9%D9%84%DB%8C%DB%81_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%A7%D9%88%D8%B1_%D9%85%D8%A7%DB%81_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_360P_irco0g.mp4" },
   ],
   liveParticipations: [
-    { title: "Live Program Participation of Hajji Shabbir Ahmad Shugri at Imam Reza Shrine - March 17, 2026", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
-    { title: "Live Program Participation of Hajji Shabbir Ahmad Shugri at Imam Reza Shrine - December 12, 2025", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
+    { title: "Successful organization and management of live program in the Holy Shrine of Imam Reza by Haji Shabbir Ahmed Shigri - March 17, 2026", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689695/videoplayback_2_j6kbac.mp4" },
+    { title: "Successful organization and management of live program in the Holy Shrine of Imam Reza by Haji Shabbir Ahmed Shigri - December 12, 2025", link: "https://res.cloudinary.com/dtqrziupt/video/upload/v1773689693/VID-20251222-WA0073_a1uuk1.mp4" }
   ],
   tabarrukat: [
-    { title: "Blessed Items Distribution - Celebration of Commander of the Faithful", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106790/VID-20260128-WA0014.3gp_f9pj1t.3gp" },
-    { title: "Blessed Items Distribution - Celebration of Imam Zamana", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106771/VN20260205_195313.3gp_e1nqnt.3gp" }
+    { title: "پخش تبرکات - جشن امیرالمؤمنین", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106790/VID-20260128-WA0014.3gp_f9pj1t.3gp" },
+    { title: "پخش تبرکات - جشن امام زمان", link: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771106771/VN20260205_195313.3gp_e1nqnt.3gp" }
   ],
   books: [
     {
       id: 'book-anees',
-      title: 'Anees An-Nafoos',
+      title: 'انیس النفوس',
       image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',
-      desc: 'A comprehensive guide about the history and significance of the Holy Shrine of Imam Reza.',
+      desc: 'راهنمای مفصل فارسی درباره تاریخ و اهمیت حرم امام رضا.',
       actions: [
         {
           type: 'read',
-          label: 'View Details',
+          label: 'مشاهده جزئیات',
           url: '/library#book-anees',
           disabled: false
         },
         {
           type: 'audio',
-          label: 'Audio Podcast',
+          label: 'پادکست صوتی',
           url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769027471/%D8%A7%D9%86%DB%8C%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%D9%BE%D9%88%DA%88%DA%A9%D8%A7%D8%B3%D9%B9_later_y4pzhy.mp3',
           disabled: false
         },
         {
           type: 'video',
-          label: 'Video Commentary',
+          label: 'تماشا و شرح',
           url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769034308/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%A7%D9%86%DB%8C%D8%B3_%D8%A7%D9%84%D9%86%D9%81%D9%88%D8%B3_%DA%A9%D8%A7_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%AC%D8%B2%DB%8C%DB%81_hlzsne.mp4',
           disabled: false
         }
@@ -127,26 +127,26 @@ export const allData = {
     },
     {
       id: 'book-khorasan',
-      title: 'Khorasan Rezawi (Volume 1 & 2)',
+      title: 'خراسان رضوی (جلد ۱ و ۲)',
       image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772111272/65878faa-2f99-4af6-8216-ad9009adc747.png',
-      desc: 'A beautifully illustrated book showcasing the historical sites and cultural heritage of Khorasan.',
+      desc: 'کتاب تصویری زیبایی که مکان‌های تاریخی خراسان را نمایش می‌دهد.',
       actions: [
         {
           type: 'read',
-          label: 'View Details',
+          label: 'مشاهده جزئیات',
           url: '/library#book-khorasan',
           disabled: false
         },
         {
           type: 'audio',
-          label: 'Audio Podcast',
+          label: 'پادکست صوتی',
           // 🔥 This link is fixed and not truncated
           url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076045/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_ctn2j6.mp4',
           disabled: false
         },
         {
           type: 'video',
-          label: 'Video Commentary',
+          label: 'تماشا و شرح',
           url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769076063/%DA%A9%D8%AA%D8%A7%D8%A8_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C_%D9%BE%D8%A7%D8%B1%D9%B9_1_unp6gj.mp4',
           disabled: false
         }
@@ -159,14 +159,14 @@ export const allData = {
 // 🔥 11 special topics (box links)
 export const boxes = [
   { title: "Live Ziyarat", icon: "FaVideo", type: "video", link: allData.programs[0].link },
-  { title: "Live Program Participation", icon: "FaVideo", type: "scroll", target: "liveParticipations" },
-  { title: "Blessed Items Distribution", icon: "FaGift", type: "scroll", target: "tabarrukat" },
-  { title: "Documentaries & Videos", icon: "FaFilm", type: "scroll", target: "docs" },
-  { title: "Shrine Programs", icon: "FaCalendarAlt", type: "scroll", target: "programs" },
-  { title: "Manqabats & Eulogies", icon: "FaMicrophone", type: "scroll", target: "manqabat" },
-  { title: "Articles & Writings", icon: "FaPenNib", type: "scroll", target: "articles" },
-  { title: "Special Ziyarat", icon: "FaMosque", type: "video", link: allData.documentaries[3].link },
-  { title: "Books & Publications", icon: "FaBook", type: "scroll", target: "books" },
-  { title: "Photo Gallery", icon: "FaImages", type: "gallery" },
-  { title: "Rezavi Online (Shop)", icon: "FaShoppingBag", type: "scroll", target: "rezavi" }
+  { title: "Live Event Organization", icon: "FaVideo", type: "scroll", target: "liveParticipations" },
+  { title: "Distribution of Tabarrukat", icon: "FaGift", type: "scroll", target: "tabarrukat" },
+  { title: "مستندها و ویدیوها", icon: "FaFilm", type: "scroll", target: "docs" },
+  { title: "برنامه‌های حرم", icon: "FaCalendarAlt", type: "scroll", target: "programs" },
+  { title: "منقبت‌ها و نعت‌ها", icon: "FaMicrophone", type: "scroll", target: "manqabat" },
+  { title: "مقالات و یادداشت‌ها", icon: "FaPenNib", type: "scroll", target: "articles" },
+  { title: "زیارت ویژه", icon: "FaMosque", type: "video", link: allData.documentaries[3].link },
+  { title: "کتب و انتشارات", icon: "FaBook", type: "scroll", target: "books" },
+  { title: "گالری تصاویر", icon: "FaImages", type: "gallery" },
+  { title: "رزوی آنلاین (فروشگاه)", icon: "FaShoppingBag", type: "scroll", target: "rezavi" }
 ];

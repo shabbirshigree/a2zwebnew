@@ -54,6 +54,15 @@ export const dictionaries = {
       shareArticle: "حاجی شبیر احمد شگری کی یہ تحریر شیئر کریں",
       sharePage: "یہ صفحہ دوستوں اور گروپس میں شیئر کریں",
     },
+    astanAppreciation: {
+      title: "تقدیرنامہ آستان قدس رضوی",
+      subtitle: "آستان قدس رضوی کی جانب سے اعزاز",
+      description: "یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔",
+      badge: "خادم امام رضا علیہ السلام",
+      institutionLabel: "آستان قدس رضوی",
+      institutionDescription: "شاہ خراسان امام علی رضا علیہ السلام کا مقدس حرم - مشہد، ایران",
+      highlight: "یہ اعزاز اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے مخلص کوششوں کی تسلیم ہے۔",
+    },
   },
   fa: {
     nav: {
@@ -112,6 +121,15 @@ export const dictionaries = {
       shareArticle: "این نوشتهٔ حاجی شبیر احمد شگری را به اشتراک بگذارید",
       sharePage: "این صفحه را با دوستان خود به اشتراک بگذارید",
     },
+    astanAppreciation: {
+      title: "تقدیرنامه آستان قدس رضوی",
+      subtitle: "تقدیر از جانب آستان قدس رضوی",
+      description: "این لوح سپاس از سوی آستان قدس رضوی (مشهد مقدس) به پاس همکاری‌های علمی و برگزاری موفق و مدیریت محافل معنوی و فکری توسط جناب حاجی شبیر احمد شگری به ایشان اهدا شده است. در این مکتوب از تلاش‌های ایشان در راستای ترویج معارف اسلامی و ارزش‌های انسانی قدردانی شده و برای ایشان در پناه حضرت امام رضا (ع) آرزوی توفیق روزافزون گشته است.",
+      badge: "خادم امام رضا علیه السلام",
+      institutionLabel: "آستان قدس رضوی",
+      institutionDescription: "حرم مقدس حضرت امام علی رضا (ع) - مشهد، ایران",
+      highlight: "این تقدیرنامه به عنوان اعتراف به تلاش‌های مستمر در ترویج معارف اسلامی و خدمت به معاشرهٔ انسانی است.",
+    },
   },
   en: {
     nav: {
@@ -169,6 +187,15 @@ export const dictionaries = {
       morePlatforms: "More platforms",
       shareArticle: "Share this article by Haji Shabbir Ahmed Shigri",
       sharePage: "Share this page with friends and groups",
+    },
+    astanAppreciation: {
+      title: "Letter of Appreciation from Astan Quds Razavi",
+      subtitle: "Recognition from Astan Quds Razavi",
+      description: "This certificate of recognition was presented by Astan Quds Razavi (the holy shrine of Imam Reza, Mashhad, Iran) to Haji Shabbir Ahmed Shigri. It acknowledges his valuable scholarly cooperation and successful organization and management of intellectual and spiritual gatherings. The letter commends his efforts in promoting Islamic values and prays for his continued success in the light of the teachings of Imam Reza (A.S).",
+      badge: "Servant of Imam Reza (A.S)",
+      institutionLabel: "Astan Quds Razavi",
+      institutionDescription: "The Holy Shrine of Imam Ali Reza (A.S) - Mashhad, Iran",
+      highlight: "This letter of appreciation is a testament to his steadfast commitment to promoting Islamic knowledge and serving humanity.",
     },
   },
 };

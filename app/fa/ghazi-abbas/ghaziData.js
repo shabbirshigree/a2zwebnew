@@ -1,21 +1,18 @@
 export const ghaziData = {
   intro: {
-    heroTitle: "صدائے غازی ایوارڈ",
-    heroSubtitle: "حاجی شبیر احمد شگری، افتخارآمیز خادم و محافظ حرم حضرت عباس علمدار علیہ السلام",
     welcome: "به صفحه صدای غازی خوش آمدید.",
     text: "من برای نعمت‌های بی‌شمار خداوند سپاسگزارم، به‌ویژه آن عنایاتی که تنها به تعداد اندکی از خوش‌اقبالان در این دنیا عطا می‌شود. گرچه مدال طلا و بسیاری از جوایز دیگر به لطف او به من داده شده است، اما دو عنوان مهم در زندگی‌ام جلوه‌ای ویژه دارند: پس از دریافت عنوان خادم امام رضا (ع) در سال ۲۰۱۱، نشان صدای غازی و لقب حافظ حرم حضرت عباس (ع) در سال ۲۰۲۴ مسیر خیر و برکت را در زندگی‌ام گشود. رحمت‌های الهی بر من نازل شد. هرچند خود را شایسته نمی‌دانم، اما تلاش می‌کنم در راه تعالیم محمد و آل محمد و وفاداری عملی به غازی باوفا کوشش کنم. از خدا می‌خواهم در این اهداف نیک موفقم گرداند. آمین.",
-    author: "حاجی شبیر احمد شگری",
+    author: "حاجی شبیـر احمد شیگری",
 
     // 👇 اینجا لینک جدید با کیفیت بالا قرار دارد 👇
     profileGif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif"
   },
-  dir: 'rtl',
 
   // ... (بقیه داده‌های خبر، جایزه و ویدیوها بدون تغییر باقی می‌ماند.)
 
   news: {
-    headline: '"حاجی شبیر احمد شگری به عنوان خادم و محافظ حرم حضرت عباس علمدار معرفی شد."',
-    paragraph1: "پس از دریافت عنوان خادم امام رضا (ع)، حاجی شبیر احمد شگری نشان صدای غازی را به عنوان پاداش خدمات فرهنگی از حرم حضرت عباس علمدار (ع) در کربلا دریافت کرد. این افتخار در مراسم میلاد امام زمان (عج) اهدا شد و حجت‌الاسلام والمسلمین محمد عباس الحسینی شخصاً این مدال را به ایشان تقدیم نمود. این نشان به خادم و محافظ ویژه حرم اعطا می‌شود و برای مؤمنان مایه افتخار بزرگی است.",
+    headline: '"حاجی شبیـر احمد شیگری به عنوان خادم و محافظ حرم حضرت عباس علمدار معرفی شد."',
+    paragraph1: "پس از دریافت عنوان خادم امام رضا (ع)، حاجی شبیـر احمد شیگری نشان صدای غازی را به عنوان پاداش خدمات فرهنگی از حرم حضرت عباس علمدار (ع) در کربلا دریافت کرد. این افتخار در مراسم میلاد امام زمان (عج) اهدا شد و حجت‌الاسلام والمسلمین محمد عباس الحسینی شخصاً این مدال را به ایشان تقدیم نمود. این نشان به خادم و محافظ ویژه حرم اعطا می‌شود و برای مؤمنان مایه افتخار بزرگی است.",
     paragraph2: "حجت‌الاسلام والمسلمین محمد عباس الحسینی اخیراً به رحمت خدا رفت. از خداوند متعال می‌خواهیم جایگاه ایشان را در بهشت فردوس اعلا قرار دهد. آمین.",
     video: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771393241/%D9%85%D8%AD%D8%A7%D9%81%D8%B8_%D8%AD%D8%B1%D9%85_%D8%AD%D8%B6%D8%B1%D8%AA_%D8%B9%D8%A8%D8%A7%D8%B3_%D8%B9%D9%84%D9%85%D8%AF%D8%A7%D8%B1_%DA%BE%D9%88%D9%86%DB%92_%DA%A9%D8%A7_%D8%A7%D8%B9%D8%B2%D8%A7%D8%B2._wzp9mz.mp4",
     mediaImages: [
@@ -30,7 +27,7 @@ export const ghaziData = {
 
   award: {
     video: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771400214/Saday_e_Ghazi_as_i13d1k.mp4",
-    videoText: "حاجی شبیر احمد شگری بیان کردند که این افتخار فقط برای او نیست، بلکه برای دوستداران و همراهان او نیز افتخار و شادی بزرگی است که همیشه او را تشویق کرده و در دعاهای خود یاد او را دارند. او از این فرصت برای شکرگزاری از مولا غازی عباس علمدار (ع) و امام زمان (عج) استفاده کرد و از خدا خواست تا توفیق انجام این مسئولیت را به او عطا فرماید. پس از کسب این افتخار مهم، پیام‌های تبریک از سوی نهادها و دوستان بسیار دریافت شد.",
+    videoText: "حاجی شبیـر احمد شیگری بیان کردند که این افتخار فقط برای او نیست، بلکه برای دوستداران و همراهان او نیز افتخار و شادی بزرگی است که همیشه او را تشویق کرده و در دعاهای خود یاد او را دارند. او از این فرصت برای شکرگزاری از مولا غازی عباس علمدار (ع) و امام زمان (عج) استفاده کرد و از خدا خواست تا توفیق انجام این مسئولیت را به او عطا فرماید. پس از کسب این افتخار مهم، پیام‌های تبریک از سوی نهادها و دوستان بسیار دریافت شد.",
     images: [
       "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771399594/IMG_20240224_165237_Copy_dmzd6p.jpg",
       "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771399594/IMG_20240224_165316_Copy_zdnrsr.jpg",
@@ -58,13 +55,13 @@ export const ghaziData = {
     { title: "زیارت حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399474/Ziarat_Roza_e_Mubarak_Ghazi_as_iwv6nb.mp4" },
     { title: "زیارت غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399553/Ziarat_H_Ghazi_Abbas_as_qnn62m.mp4" },
     { title: "حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399445/Haram_k_samney_Ghazi_Abbas_as_yviczc.mp4" },
-    { title: "رود فرات", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
-    { title: "مکانی که اولین بازوی غازی عباس شهادت یافت", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
-    { title: "مکانی که دومین بازوی غازی عباس شهادت یافت", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
-    { title: "اردوگاه حسینی", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
-    { title: "بین‌الحرمین کربلا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
-    { title: "یک مجلس در حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
-    { title: "یک منظر از ضریح مبارک حضرت غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
-    { title: "منظر ضریح مبارک حضرت غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
+    { title: "نہر فرات", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
+    { title: "وہ مقام جہاں غازی عباس ؑ کا پہلا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
+    { title: "وہ مقام جہاں غازی عباس ؑ کا دوسرا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
+    { title: "خیمہ گاہ حسینی", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
+    { title: "بین الحرمین۔ کربلا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
+    { title: "حرم غازی عباس علیہ السلام کی ایک مجلس", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
+    { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا ایک منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
+    { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
   ]
 };
