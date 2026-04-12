@@ -198,7 +198,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
           </div>
 
           {/* آستان قدس رضوی کی سند */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.05)]">
             <div className="urdu-text">
               <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
                 <FaCertificate /> آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر
@@ -207,8 +207,9 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
                 یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
               </p>
             </div>
-            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-[#D4AF37]/20">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50" alt="Astan Quds Razavi Certificate" />
+            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 
