@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 .font-heading {
   font-family: 'Amiri', serif !important;
@@ -44,12 +44,75 @@
 /* ============================================================================ */
 /* 🎯 یہ rule تمام font مسائل ختم کرتا ہے - کوئی دوسرا rule override نہیں کر سکتا */
 /* ============================================================================ */
+/* 🌟 پریمیم اینیمیشنز اور یوٹیلیٹیز */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 🖼️ گلاس مورفزم (Glassmorphism) ایفیکٹ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 🏆 پریمیم گولڈن گریڈینٹ */
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F9E2AF 50%, #D4AF37 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F9E2AF 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 📱 اسکرول بار کو خوبصورت بنانا */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f4c75;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
 html, body, *, *::before, *::after {
   font-family: 'Jameel Noori Nastaleeq', serif !important;
-  line-height: 1.6 !important;
+  line-height: 1.8 !important;
   font-style: normal !important;
-  font-weight: normal !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
+  transition: all 0.3s ease; /* ہر چیز کے لیے ہموار ٹرانزیشن */
+}
+
+/* موبائل کے لیے خصوصی سیٹنگز */
+@media (max-width: 768px) {
+  html, body, p, span, div, h1, h2, h3, h4, h5, h6 {
+    font-size: 1.05rem !important; /* موبائل پر فانٹ سائز تھوڑا بڑھایا گیا ہے */
+    line-height: 1.9 !important; /* لائنوں کے درمیان فاصلہ بڑھایا گیا ہے تاکہ پڑھنے میں آسانی ہو */
+    font-weight: 600 !important; /* موبائل پر تحریر کو مزید بولڈ کیا گیا ہے */
+  }
 }
 
 /* 🔴 پوری ویب سائٹ پر ٹیکسٹ سلیکٹ (Highlight) کرنے پر پابندی 🔴 */

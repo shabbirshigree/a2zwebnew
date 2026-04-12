@@ -47,22 +47,15 @@ const kufi = Reem_Kufi({
 
 // ویب سائٹ کی مکمل ایس ای او (SEO) سیٹنگ
 export const metadata = {
-  title: "حاجی شبیر احمد شگری | آفیشل ویب سائٹ",
-  description: "حاجی شبیر احمد شگری کے کالمز، آپ بیتی اور اسلامی و سیاسی موضوعات پر علمی و فکری تحاریر کا مجموعہ۔",
+  title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+  description: 'حاجی شبیر احمد شگری کی علمی، تحقیقی اور صحافتی خدمات کا مجموعہ۔ نور القرآن پروجیکٹ اور اتحادِ امت کے لیے خصوصی کاوشیں۔',
+  keywords: 'Shabbir Ahmed Shigri, Noor-ul-Quran, Visual Quran, Islamic Scholar, Journalist, Pakistan, Iran, Unity of Ummah',
   openGraph: {
-    title: "حاجی شبیر احمد شگری | کالم نگار، اینکر، پروڈیوسر",
-    description: "45 سالہ صحافتی و ادبی خدمات کا ڈیجیٹل مجموعہ۔",
-    url: "https://shabbirshigri.com",
-    siteName: "Shabbir Shigri",
-    locale: "ur_PK",
-    type: "website",
+    title: 'Haji Shabbir Ahmed Shigri | Official Website',
+    description: 'Explore 45 years of dedicated service in journalism, culture, and religious research by Haji Shabbir Ahmed Shigri.',
+    images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "حاجی شبیر احمد شگری",
-    description: "صحافت اور ادب کے میدان میں ایک معتبر نام۔",
-  },
-};
+}
 
 export default function RootLayout({ children }) {
   return (

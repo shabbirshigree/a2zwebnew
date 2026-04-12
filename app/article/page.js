@@ -7,11 +7,13 @@ import {
 import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
+import { useLocale } from '../components/LocaleProvider';
 
 // ✅ تمام فائلوں کا ڈیٹا یہاں سے امپورٹ ہو رہا ہے
 import { allArticles } from './index';
 
 export default function ArticlesPage() {
+  const { locale } = useLocale();
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [likedArticles, setLikedArticles] = useState({});
@@ -218,100 +220,88 @@ export default function ArticlesPage() {
       <div className="container mx-auto px-4 pb-16 pt-4">
         {!selectedArticle ? (
           <>
-            {/* 🔍 سرچ بار اور فلٹرز */}
-            <div className="bg-white p-5 md:p-8 rounded-2xl shadow-lg border border-[#D4AF37]/30 mb-10 text-center relative overflow-hidden" dir="rtl">
-              <div className="relative max-w-2xl mx-auto mb-5">
-                <input
-                  type="text"
-                  placeholder="مضمون کا عنوان تلاش کریں..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full p-3 pr-12 rounded-full border-2 border-[#0b314d]/20 outline-none focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/20 transition-all text-sm md:text-lg urdu-text shadow-sm"
-                />
-                <FaSearch className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
+            {/* 🔍 سرچ بار اور فلٹرز (International Level Design) */}
+            <section className="-mt-10 md:-mt-12 mb-12 relative z-20">
+              <div className="bg-white rounded-2xl shadow-2xl p-6 border border-[#D4AF37]/20">
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  <div className="relative w-full md:w-1/2 group">
+                    <FaSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-[#D4AF37] group-focus-within:scale-110 transition-transform" />
+                    <input
+                      type="text"
+                      placeholder="تحریر تلاش کریں... (Search Articles)"
+                      className="w-full pr-12 pl-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[#D4AF37] focus:ring-0 outline-none transition-all urdu-text text-lg font-bold"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                  </div>
+                  <div className="flex flex-wrap gap-2 justify-center w-full md:w-1/2">
+                    {categories.map((cat) => (
+                      <button
+                        key={cat.id}
+                        onClick={() => setFilterCategory(cat.id)}
+                        className={`px-6 py-3 rounded-full urdu-text text-base font-bold transition-all shadow-md hover:shadow-lg ${
+                          filterCategory === cat.id
+                            ? 'bg-[#D4AF37] text-white scale-105 border-2 border-white'
+                            : 'bg-white text-[#0f4c75] border-2 border-gray-100 hover:border-[#D4AF37]/30'
+                        }`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
-
-              <div className="flex flex-wrap justify-center gap-2">
-                {categories.map(cat => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setFilterCategory(cat.id)}
-                    className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full font-bold urdu-text text-xs md:text-sm transition-all duration-300 shadow-sm border ${filterCategory === cat.id
-                      ? 'bg-[#0b314d] text-[#D4AF37] border-[#0b314d] shadow-[0_0_10px_rgba(11,49,77,0.4)]'
-                      : 'bg-white text-[#0b314d] border-[#0b314d]/30 hover:border-[#D4AF37] hover:bg-gray-50'
-                      }`}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+            </section>
 
             {/* 📚 آرٹیکلز گرڈ */}
             {filteredArticles.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" dir="rtl">
-                {/* ✅ یہاں (article, index) لکھیں تاکہ ہر کارڈ کی پہچان الگ ہو سکے */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" dir="rtl">
                 {filteredArticles.map((article, index) => (
                   <div
-                    key={`${article.id}-${index}`} // ✅ یہ لائن آئی ڈی کا مسئلہ حل کر دے گی
+                    key={`${article.id}-${index}`}
                     onClick={() => handleOpenArticle(article)}
-                    className="bg-white rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group flex flex-col h-full"
+                    className="group relative bg-white rounded-[2rem] overflow-hidden cursor-pointer shadow-lg hover:shadow-[0_20px_50px_rgba(15,76,117,0.15)] transition-all duration-500 border border-gray-100 flex flex-col h-full animate-fade-in-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="h-48 overflow-hidden bg-gray-100 relative">
+                    {/* تصویر اور بیج */}
+                    <div className="h-56 overflow-hidden bg-gray-100 relative">
                       <img
                         src={article.image}
                         alt={article.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                         onError={(e) => e.target.src = 'https://via.placeholder.com/300x200?text=No+Image'}
                       />
-                      <div className="absolute top-3 right-3 bg-[#D4AF37] text-[#0b314d] text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-[#0b314d] text-xs font-bold px-4 py-1.5 rounded-full shadow-lg border border-[#D4AF37]/30">
                         {categories.find(c => c.id === (Array.isArray(article.category) ? article.category[0] : article.category))?.label.replace(/[^a-zA-Zآ-ی]/g, '').trim()}
                       </div>
                     </div>
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h3 className="text-lg font-bold text-[#0b314d] mb-2 urdu-text leading-tight group-hover:text-[#D4AF37] transition-colors line-clamp-2">
+
+                    {/* مواد (Content) */}
+                    <div className="p-6 flex flex-col flex-grow relative">
+                      <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold mb-3">
+                        <FaCalendar /> {article.date}
+                      </div>
+                      <h3 className="text-xl font-bold text-[#0b314d] mb-3 urdu-text leading-tight group-hover:text-[#D4AF37] transition-colors line-clamp-2">
                         {article.title}
                       </h3>
-                      <p className="text-gray-600 text-xs md:text-sm urdu-text line-clamp-3 mb-4 flex-grow">
+                      <p className="text-gray-600 text-sm urdu-text line-clamp-3 mb-6 flex-grow leading-relaxed">
                         {article.excerpt}
                       </p>
-                      <div className="rounded-xl border border-[#D4AF37]/25 bg-gradient-to-r from-[#fffdf5] to-white p-3 mb-3">
-                        <div className="flex flex-wrap items-center justify-between gap-2 text-xs md:text-sm">
-                          <button
-                            type="button"
-                            onClick={(e) => { e.stopPropagation(); toggleArticleLike(article); }}
-                            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 text-rose-600 hover:scale-105 transition-transform"
-                          >
-                            {likedArticles[getArticleKey(article)] ? <FaHeart className="animate-pulse" /> : <FaRegHeart />}
-                            {getStats(article).likes}
-                          </button>
-                          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">
-                            <FaEye />
-                            {getStats(article).views}
+
+                      {/* انٹرایکشن بار */}
+                      <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <span className="flex items-center gap-1.5 text-rose-500 font-bold text-sm">
+                            <FaHeart /> {getStats(article).likes}
                           </span>
-                          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">
-                            <FaCommentDots />
-                            {getStats(article).comments}
+                          <span className="flex items-center gap-1.5 text-blue-500 font-bold text-sm">
+                            <FaEye /> {getStats(article).views}
                           </span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-2 mt-2.5">
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'whatsapp'); }} className="social-icon-btn social-whatsapp"><FaWhatsapp /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'facebook'); }} className="social-icon-btn social-facebook"><FaFacebookF /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'telegram'); }} className="social-icon-btn social-telegram"><FaTelegramPlane /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'email'); }} className="social-icon-btn social-email"><FaEnvelope /></button>
-                          <button type="button" onClick={(e) => { e.stopPropagation(); shareArticle(article, 'x'); }} className="social-icon-btn social-twitter"><FaXTwitter /></button>
-                          <button
-                            type="button"
-                            onClick={(e) => { e.stopPropagation(); shareArticle(article, 'native'); }}
-                            className="share-btn"
-                          >
-                            <FaShareAlt /> دوسرے پلیٹ فارمز
-                          </button>
-                        </div>
-                      </div>
-                      <div className="flex justify-between items-center text-xs text-gray-500 border-t border-gray-100 pt-3 mt-auto">
-                        <span className="flex items-center gap-1.5"><FaCalendar className="text-[#D4AF37]" /> {article.date}</span>
-                        <span className="text-[#0f4c75] font-bold flex items-center gap-1.5 bg-blue-50 px-3 py-1 rounded-full group-hover:bg-[#0b314d] group-hover:text-white transition-colors">پڑھیں <FaEye /></span>
+                        <span className="w-10 h-10 rounded-full bg-[#0f4c75]/5 flex items-center justify-center text-[#0f4c75] group-hover:bg-[#D4AF37] group-hover:text-white transition-all duration-500 shadow-sm">
+                          <FaArrowLeft className={locale === 'en' ? 'rotate-180' : ''} />
+                        </span>
                       </div>
                     </div>
                   </div>

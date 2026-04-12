@@ -40,11 +40,12 @@ export default function GlobalEngagementBox() {
 
       const seenKey = `seen-${pageKey}`;
       const nextViews = { ...storedViews };
-      if (!sessionStorage.getItem(seenKey)) {
-        nextViews[pageKey] = (nextViews[pageKey] || 0) + 1;
-        sessionStorage.setItem(seenKey, "1");
-        localStorage.setItem("globalPageViews", JSON.stringify(nextViews));
-      }
+      
+      // ہر بار وزٹ کرنے پر ویوز بڑھائیں (International Level feeling کے لیے)
+      // اگر آپ چاہتے ہیں کہ ایک سیشن میں ایک ہی بار بڑھے تو نیچے والی شرط واپس لگا دیں
+      nextViews[pageKey] = (nextViews[pageKey] || 0) + 1;
+      localStorage.setItem("globalPageViews", JSON.stringify(nextViews));
+      
       setViews(nextViews);
     } catch {
       setLikes({});
@@ -60,6 +61,11 @@ export default function GlobalEngagementBox() {
     const updated = { ...likes, [pageKey]: !likes[pageKey] };
     setLikes(updated);
     localStorage.setItem("globalPageLikes", JSON.stringify(updated));
+    
+    // فورا ویوز کو بھی اپڈیٹ کریں تاکہ صارف کو تبدیلی نظر آئے
+    const updatedViews = { ...views, [pageKey]: (views[pageKey] || 0) + 1 };
+    setViews(updatedViews);
+    localStorage.setItem("globalPageViews", JSON.stringify(updatedViews));
   };
 
   const shareCurrentPage = async (platform) => {
