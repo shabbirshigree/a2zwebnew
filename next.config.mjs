@@ -10,11 +10,20 @@ const nextConfig = {
       },
     ],
   },
-  // ہم نے 'turbo' والا حصہ یہاں سے نکال دیا ہے کیونکہ آپ کا ورژن اسے نہیں مان رہا
   experimental: {
     serverActions: {
       allowedOrigins: ["192.168.1.5", "localhost:3000"],
     },
+  },
+  // یہ حصہ پرانے /project لنک کو خود بخود /noor-ul-quran پر بھیج دے گا
+  async redirects() {
+    return [
+      {
+        source: '/project',
+        destination: '/noor-ul-quran',
+        permanent: true,
+      },
+    ]
   },
 };
 
