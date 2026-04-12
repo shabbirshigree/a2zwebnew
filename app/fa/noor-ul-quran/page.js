@@ -8,9 +8,9 @@ import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 import QuranIntroCard from '../../components/QuranIntroCard';
 import { useLocale } from '../../components/LocaleProvider';
-import { quranVideos } from '../../noor-ul-quran/noor-ul-quranData';
-
-export default function FarsiProjectPage() {
+// اس لائن کو بالکل ایسے ہی کاپی کریں
+// پرانی لائن کو ہٹائیں اور اسے لکھیں
+import { quranVideos } from "../noor-ul-quran/projectData";export default function FarsiProjectPage() {
   const router = useRouter();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [localVideoUrl, setLocalVideoUrl] = useState('');
