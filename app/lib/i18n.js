@@ -197,7 +197,7 @@ export function getLocalizedPath(pathname, locale) {
     basePath = pathname.slice(3); // `/en/` ہٹائیں
   }
 
-  // اب basePath ہے جیسے `/project`, `/about`, `/home` وغیرہ
+  // اب basePath ہے جیسے `/noor-ul-quran`, `/about`, `/home` وغیرہ
   if (locale === "fa") {
     return `/fa${basePath}`;
   } else if (locale === "en") {

@@ -10,7 +10,7 @@ const SERVICES_DATA_FA = [
   {
     icon: <FaQuran />,
     title: "کلیپ قرآنی روزانه (نور القرآن)",
-    link: "/fa/project",
+    link: "/fa/noor-ul-quran",
     desc: "در پروژه نور القرآن هر روز یک کلیپ یک دقیقه‌ای قرآن منتشر می‌شود که تلاوت منتخب آیات و تفسیر کوتاه و روان آن را در قالب تصویری ارائه می‌دهد.",
     socials: [
       { icon: <FaWhatsapp size={20} />, url: "https://wa.me/923334491715", color: "text-green-600" },

@@ -51,8 +51,8 @@ export default function UltimateAboutPage() {
 
   const localizedFounderItems = founderItems.map((item) => {
     const href = item.link || "#";
-    const normalizedLink = href.startsWith("/project")
-      ? "/en/project"
+    const normalizedLink = href.startsWith("/noor-ul-quran")
+      ? "/en/noor-ul-quran"
       : href.startsWith("/diplomatic-services")
         ? href.replace("/diplomatic-services", "/en/diplomatic-services")
         : href;
@@ -435,24 +435,24 @@ export default function UltimateAboutPage() {
             {/* Decorative background elements */}
             <div className="absolute top-0 left-0 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#0b314d]/5 rounded-full blur-3xl"></div>
-            
+
             <button onClick={() => setShowFederationPopup(false)} className="absolute top-6 right-6 text-gray-400 hover:text-red-500 hover:scale-125 text-3xl font-bold transition-all duration-300">&times;</button>
-            
+
             <div className="text-center flex flex-col items-center relative z-10">
               {/* Logo with decorative ring */}
               <div className="relative mb-8 mt-4">
-                <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[#D4AF37]/30" style={{width: '160px', height: '160px', margin: 'auto'}}></div>
+                <div className="absolute inset-0 animate-pulse rounded-full border-4 border-[#D4AF37]/30" style={{ width: '160px', height: '160px', margin: 'auto' }}></div>
                 <div className="w-40 h-40 rounded-full p-4 bg-gradient-to-br from-white via-blue-50 to-white shadow-2xl border-6 border-white relative flex items-center justify-center">
                   <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1774428398/3929eb58-af72-466f-89fc-98380b8abe4c.png" alt="Trade and Culture Federation Logo" className="w-full h-full object-contain" />
                 </div>
               </div>
-              
+
               {/* Title with decorative line */}
               <div className="mb-6">
                 <h3 className="text-3xl md:text-4xl font-extrabold text-[#0b314d] mb-4 drop-shadow-sm">Trade & Culture Federation</h3>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-4"></div>
               </div>
-              
+
               {/* Content */}
               <div className="max-w-lg">
                 <p className="text-gray-700 leading-relaxed text-center text-base md:text-lg font-semibold text-justify mb-6 text-[#0f4c75]">

@@ -169,7 +169,7 @@ export const legendsDataFa = legendsData;
 
 // Navigation Cards Data
 export const navCardsData = [
-  { title: "Noor-ul-Quran Project", icon: <FaQuran />, link: "/project" },
+  { title: "Noor-ul-Quran Project", icon: <FaQuran />, link: "/noor-ul-quran" },
   { title: "Noor Productions", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
   { title: "Pak-Iran Friendship Association", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
   { title: "Other Services", icon: <FaHandHoldingHeart />, link: "/services" }

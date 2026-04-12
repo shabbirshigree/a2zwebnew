@@ -1,11 +1,11 @@
 
-import { 
+import {
 
-  FaHeart, FaHandshake, FaTrophy, FaGlobe, FaQuran, FaAward, FaMedal, 
+  FaHeart, FaHandshake, FaTrophy, FaGlobe, FaQuran, FaAward, FaMedal,
 
-  FaMicrophone, FaTv, FaVideo, FaNewspaper, FaBriefcase, FaUser, 
+  FaMicrophone, FaTv, FaVideo, FaNewspaper, FaBriefcase, FaUser,
 
-  FaPenNib, FaLandmark, FaUsers, FaHandHoldingHeart, FaImages 
+  FaPenNib, FaLandmark, FaUsers, FaHandHoldingHeart, FaImages
 
 } from "react-icons/fa";
 
@@ -13,7 +13,7 @@ import {
 
 export const founderItems = [
 
-  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran", link: "/project" },
+  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran", link: "/noor-ul-quran" },
 
   { icon: <FaTv />, title: "Noor Productions", desc: "Islamic Media Network", link: "https://www.youtube.com/@noorproduction" },
 

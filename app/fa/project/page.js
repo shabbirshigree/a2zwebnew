@@ -8,7 +8,7 @@ import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 import QuranIntroCard from '../../components/QuranIntroCard';
 import { useLocale } from '../../components/LocaleProvider';
-import { quranVideos } from '../../project/projectData';
+import { quranVideos } from '../../noor-ul-quran/noor-ul-quranData';
 
 export default function FarsiProjectPage() {
   const router = useRouter();
@@ -115,7 +115,7 @@ export default function FarsiProjectPage() {
   const handleShare = () => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
     if (navigator.share) {
-      navigator.share({ title: 'پروژه نورالقرآن', url: url }).catch(() => {});
+      navigator.share({ title: 'پروژه نورالقرآن', url: url }).catch(() => { });
     } else {
       navigator.clipboard.writeText(url);
       alert('لینک کپی شد');

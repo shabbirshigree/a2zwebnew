@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 import QuranIntroCard from '../../components/QuranIntroCard';
-import { quranVideos } from '../../project/projectData';
+import { quranVideos } from '../../noor-ul-quran/noor-ul-quranData';
 
 export default function EnglishProjectPage() {
     const router = useRouter();
@@ -29,11 +29,11 @@ export default function EnglishProjectPage() {
 
     const handleLanguageChange = (lang) => {
         if (lang === 'fa') {
-            router.push('/fa/project');
+            router.push('/fa/noor-ul-quran');
         } else if (lang === 'ur') {
-            router.push('/project');
+            router.push('/noor-ul-quran');
         } else {
-            router.push('/en/project');
+            router.push('/en/noor-ul-quran');
         }
     };
 

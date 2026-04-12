@@ -4,7 +4,7 @@ export const SERVICES_DATA = [
   {
     icon: <FaQuran />,
     title: 'Daily Quranic Clips',
-    link: '/project',
+    link: '/noor-ul-quran',
     desc: 'Daily short Quranic video clips and visual lessons that present selected verses with concise commentary for modern audiences.',
     socials: [
       { icon: <FaYoutube size={20} />, url: 'https://www.youtube.com/@noorullquraan', color: 'text-red-600' },

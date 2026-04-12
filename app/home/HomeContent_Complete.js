@@ -14,7 +14,7 @@ import { welcomeData, welcomeDataEn, welcomeDataFa, honorsData, honorsDataEn, ho
 import BookSlider from '@/components/BookSlider';
 import NavCards from '@/components/NavCards';
 import JourneySection from '@/components/JourneySection';
-import ProjectSection from '@/components/ProjectSection';
+import ProjectSection from '@/components/noor-ul-quranSection';
 import HonorsSection from '@/components/HonorsSection';
 import LegendsSection from '@/components/LegendsSection';
 import { legendsData, legendsDataEn, legendsDataFa } from './homeData';
@@ -110,7 +110,7 @@ const HomeContent = () => {
   const legends = getLegendsData();
 
   return (
-    <div 
+    <div
       className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden"
     >
       <Navbar />

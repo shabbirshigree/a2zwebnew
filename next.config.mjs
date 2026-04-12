@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
         port: '',
-        pathname: '/**', 
+        pathname: '/**',
       },
     ],
   },
@@ -15,11 +15,11 @@ const nextConfig = {
       allowedOrigins: ["192.168.1.5", "localhost:3000"],
     },
   },
-  // یہ حصہ پرانے /project لنک کو خود بخود /noor-ul-quran پر بھیج دے گا
+  // یہ حصہ پرانے /noor-ul-quran لنک کو خود بخود /noor-ul-quran پر بھیج دے گا
   async redirects() {
     return [
       {
-        source: '/project',
+        source: '/noor-ul-quran',
         destination: '/noor-ul-quran',
         permanent: true,
       },

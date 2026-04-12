@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 import { CHANNELS } from "../channels/channelsData";
 import { contactMethods } from "../contact/contactData";
-import { quranVideos } from "../project/projectData";
+import { quranVideos } from "../noor-ul-quran/noor-ul-quranData";
 import { BOOKS_DATA } from "../library/libraryData";
 import { allArticles } from "../article";
 import { founderItems, mediaRoles } from "../about/aboutData";
@@ -46,7 +46,7 @@ function SearchContent() {
       title: item.title,
       description: "نور القرآن پروجیکٹ - ویڈیو",
       category: "پراجیکٹس",
-      link: "/project",
+      link: "/noor-ul-quran",
     }));
     return [
       ...(Array.isArray(allArticles) ? allArticles : []).map((item) => ({

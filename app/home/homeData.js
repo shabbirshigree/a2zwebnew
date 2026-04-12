@@ -272,21 +272,21 @@ export const legendsDataFa = legendsData.map((l, i) => ({
 
 // 🔴 7. چار اہم پروجیکٹس (Nav Cards)
 export const navCardsData = [
-  { title: "نور القرآن پراجیکٹ", icon: <FaQuran />, link: "/project" },
+  { title: "نور القرآن پراجیکٹ", icon: <FaQuran />, link: "/noor-ul-quran" },
   { title: "نور پروڈکشنز", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
   { title: "انجمن دوستی پاک ایران", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
   { title: "دیگر خدمات", icon: <FaHandHoldingHeart />, link: "/services" }
 ];
 
 export const navCardsDataEn = [
-  { title: "Noor-ul-Quran Project", icon: <FaQuran />, link: "/project" },
+  { title: "Noor-ul-Quran Project", icon: <FaQuran />, link: "/noor-ul-quran" },
   { title: "Noor Productions", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
   { title: "Pak–Iran Friendship Association", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
   { title: "Other Services", icon: <FaHandHoldingHeart />, link: "/services" }
 ];
 
 export const navCardsDataFa = [
-  { title: "پروژه نورالقرآن", icon: <FaQuran />, link: "/project" },
+  { title: "پروژه نورالقرآن", icon: <FaQuran />, link: "/noor-ul-quran" },
   { title: "نور پروداکشنز", icon: <FaTv />, link: "https://www.youtube.com/@noorproduction" },
   { title: "انجمن دوستی پاک و ایران", icon: <FaHandshake />, link: "https://pakiiranassociation.wixsite.com/pira" },
   { title: "سایر خدمات", icon: <FaHandHoldingHeart />, link: "/services" }
