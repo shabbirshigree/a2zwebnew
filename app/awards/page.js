@@ -88,8 +88,8 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
     },
     { 
       id: 24, 
-      src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png", 
-      title: "بین الاقوامی اعترافِ خدمات (سفیر کا مکتوب)" 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
+      title: "پاکستان میں تعینات ایرانی سفیر کی جانب سے حاجی شبیر احمد شگری کو زبردست خراج تحسین" 
     }
 ]; // لسٹ یہاں ختم ہو رہی ہے
 
@@ -171,18 +171,29 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
           </div>
 
-          {/* سفیر کا لیٹر (New Entry) */}
+          {/* سفیر کا لیٹر (Updated Entry) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
             <div className="urdu-text">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
-                <FaCertificate className="animate-pulse" /> آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر (سفیر کا مکتوب)
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 leading-snug">
+                <FaCertificate className="animate-pulse shrink-0" /> پاکستان میں تعینات ایرانی سفیر کی جانب سے حاجی شبیر احمد شگری کو زبردست خراج تحسین
               </h3>
-              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
-                یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل میں بھرپور شرکت کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
-              </p>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  اس لیٹر میں ایرانی سفیر کی جانب سےحاجی شبیر احمد شگری کی اسلامی مسئلے کو فراموشی کی نذر ہونے سے بچانے کے لیے آپ کی گراں قدر کوششوں کی بھرپور قدردانی کی گئی اور کہا گیا کہ مظلوم فلسطینی عوام کی حمایت اور غاصب صیہونی حکومت کی مذمت میں اہلِ قلم کا جہاد اللہ تعالیٰ کے ہاں خصوصی اجر کا حامل ہے اور یہ مظلوموں کے دلوں میں روشن مستقبل کی امید کو زندہ رکھتا ہے۔
+                </p>
+                <p>
+                  ساتھ ہی دعا بھی کی گئی کہ اللہ تعالیٰ کی نصرت اور آپ جیسے دانشوروں کی کاوشوں سے، امتِ مسلمہ کے اتحاد و یکجہتی کے سائے میں، ہم جلد ہی مسلمانوں کے قبلہ اول، قدسِ شریف کی آزادی کا مشاہدہ کریں گے۔
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold">سید محمد علی حسینی</p>
+                  <p className="text-sm">سفیرِ اسلامی جمہوریہ ایران برائے پاکستان</p>
+                  <p className="text-xs opacity-60">29 مئی 2020</p>
+                </div>
+              </div>
             </div>
-            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Iranian Ambassador's Tribute to Haji Shabbir Ahmed Shigri" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 

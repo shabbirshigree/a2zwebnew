@@ -90,18 +90,29 @@ export default function AwardsPortfolioFinal() {
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
           </div>
 
-          {/* نامه سفیر (New Entry) */}
+          {/* نامه سفیر (Updated Entry) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
             <div className="persian-text text-right">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
-                <FaCertificate className="animate-pulse" /> تقدیرنامه آستان قدس رضوی (نامه سفیر)
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 leading-snug">
+                <FaCertificate className="animate-pulse shrink-0" /> تجلیلِ شایانِ تقدیرِ سفیرِ جمہوری اسلامی ایران در پاکستان از جناب آقای حاجی شبیر احمد شگری
               </h3>
-              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
-                این لوح سپاس از سوی آستان قدس رضوی (مشهد مقدس) به پاس همکاری‌های علمی و حضور فعال جناب آقای شبیر احمد شگری در محافل معنوی و فکری به ایشان اهدا شده است. در این مکتوب از تلاش‌های ایشان در راستای ترویج معارف اسلامی و ارزش‌های انسانی قدردانی شده و برای ایشان در پناه حضرت امام رضا (ع) آرزوی توفیق روزافزون گشته است.
-              </p>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  در این نامہ رسمی، سفیر محترم ایران از تلاش‌ ہای ارزشمند و گرانقدر جناب آقای حاجی شبیر احمد شگری در راستای جلوگیری از فراموشیِ آرمان‌ ہای اصیل اسلامی و مسئلہ فلسطین، صمیمانہ قدردانی نمودند۔ ایشان خاطرنشان کردند کہ «جہادِ قلم» در حمایت از ملت مظلوم فلسطین و محکومیت رژیم غاصب صہیونیستی، نزد خداوند متعال دارای پاداشی ویژہ است و امید بہ آیندہ‌ ای روشن را در دل‌ ہای مستضعفان زندہ نگہ می‌ دارد۔
+                </p>
+                <p>
+                  ہمچنین دعا و آرزو شد کہ با نصرت الہی و بہ واسطہ مجاہدت‌ ہای اندیشمندانی چون شما، در سایہ اتحاد و ہمدلی امت اسلامی، بہ زودی شاہد آزادی قبلہ اول مسلمانان، قدس شریف باشیم۔
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold">سید محمد علی حسینی</p>
+                  <p className="text-sm">سفیر جمہوری اسلامی ایران در پاکستان</p>
+                  <p className="text-xs opacity-60">۹ خرداد ۱۳۹۹ (۲۹ می ۲۰۲۰)</p>
+                </div>
+              </div>
             </div>
-            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 

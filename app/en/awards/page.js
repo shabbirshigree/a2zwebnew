@@ -34,7 +34,11 @@ export default function AwardsPageEN() {
     { id: 21, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835715/Mosin_ali_Najafi_ki_Mazar_par_Qurani_videos_k_Iftitah_k_moqah_pr_afhing_dvlllv.jpg", title: "Book Presentation at Maulana Ishaq Ali Najafi's Shrine" },
     { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", title: "Leader of Jamiat Ulama Pakistan Peer Masoom Naqvi" },
     { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", title: "Letter of Appreciation from Astan Quds Razavi" },
-    { id: 24, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png", title: "International Recognition (Ambassador's Letter)" }
+    { 
+      id: 24, 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
+      title: "A Grand Tribute to Haji Shabir Ahmed Shigri by the Ambassador of the Islamic Republic of Iran to Pakistan" 
+    }
   ];
 
   const nextImg = (e) => { e.stopPropagation(); setSelectedImageIndex((i) => (i + 1) % galleryImages.length); };
@@ -102,18 +106,29 @@ export default function AwardsPageEN() {
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
           </div>
 
-          {/* Ambassador's Letter (New Entry) */}
+          {/* Ambassador's Letter (Updated Entry) */}
           <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
             <div className="text-left">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start">
-                <FaCertificate className="animate-pulse" /> Letter of Appreciation from Astan Quds Razavi (Ambassador's Letter)
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start leading-snug">
+                <FaCertificate className="animate-pulse shrink-0" /> A Grand Tribute to Haji Shabir Ahmed Shigri by the Ambassador of the Islamic Republic of Iran to Pakistan
               </h3>
-              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
-                This certificate of recognition was presented by Astan Quds Razavi (the holy shrine of Imam Reza, Mashhad, Iran) to Shabbir Ahmed Shigri. It acknowledges his valuable scholarly cooperation and active participation in intellectual and spiritual gatherings organized by the institution. The letter commends his efforts in promoting Islamic values and prays for his continued success in the light of the teachings of Imam Reza (A.S).
-              </p>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  In this formal diplomatic letter, the Iranian Ambassador expressed profound appreciation for the valuable and tireless efforts of Haji Shabir Ahmed Shigri in preventing the core Islamic issues from being consigned to oblivion. The Ambassador emphasized that the "Jihad of the Pen"—undertaken in support of the oppressed Palestinian people and in condemnation of the usurping Zionist regime—holds a special reward in the eyes of Almighty Allah and keeps the hope of a bright future alive in the hearts of the oppressed.
+                </p>
+                <p>
+                  Furthermore, a special prayer was offered that through Divine intervention and the intellectual contributions of scholars like Mr. Shigri, the Muslim Ummah, under the shade of unity and solidarity, may soon witness the liberation of the First Qibla, Al-Quds Al-Sharif.
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold">Syed Mohammad Ali Hosseini</p>
+                  <p className="text-sm">Ambassador of the Islamic Republic of Iran to Pakistan</p>
+                  <p className="text-xs opacity-60">May 29, 2020</p>
+                </div>
+              </div>
             </div>
-            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+            <div className="img-wrap h-[400px] md:h-[600px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Ambassador's Letter of Appreciation" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 

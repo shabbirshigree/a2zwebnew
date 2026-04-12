@@ -23,5 +23,9 @@ export const galleryImages = [
   { id: 21, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835715/Mosin_ali_Najafi_ki_Mazar_par_Qurani_videos_k_Iftitah_k_moqah_pr_afhing_dvlllv.jpg", title: "شیخ اسحاق علی نجفی کتاب را بر مزار شیخ محسن نجفی معرفی می‌کند" },
   { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", title: "رئیس جمعیت علمای پاکستان پیر معصوم نقوی چادرپوشی می‌کنند" },
   { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", title: "تقدیرنامه آستان قدس رضوی" },
-  { id: 24, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776000163/55d433f9-8aac-4b72-b309-5b82210bbe22.png", title: "قدردانی بین‌المللی (نامه سفیر)" }
-];
+    { 
+      id: 24, 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
+      title: "تجلیلِ شایانِ تقدیرِ سفیرِ جمہوری اسلامی ایران در پاکستان از جناب آقای حاجی شبیر احمد شگری" 
+    }
+  ];
