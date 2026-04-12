@@ -10,7 +10,8 @@ import QuranIntroCard from '../../components/QuranIntroCard';
 import { useLocale } from '../../components/LocaleProvider';
 // اس لائن کو بالکل ایسے ہی کاپی کریں
 // پرانی لائن کو ہٹائیں اور اسے لکھیں
-import { quranVideos } from "../noor-ul-quran/projectData";export default function FarsiProjectPage() {
+import { quranVideos } from "../noor-ul-quran/projectData";
+export default function FarsiProjectPage() {
   const router = useRouter();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [localVideoUrl, setLocalVideoUrl] = useState('');
