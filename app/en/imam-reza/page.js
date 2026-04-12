@@ -107,7 +107,7 @@ export default function ImamRezaPage() {
       <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
       
       {/* Navigation */}
-      <div className="absolute top-4 left-4 z-50 flex gap-3">
+      <div className="absolute top-20 md:top-24 left-4 z-[60] flex gap-3">
          <Link href="/en/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
          <Link href="/en/" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowLeft size={18} /></Link>
       </div>
