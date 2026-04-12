@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import QuranIntroCard from '../components/QuranIntroCard';
-import { quranVideos } from './noor-ul-quran-data';
+import { quranVideos } from './projectData';
 export default function ProjectPage() {
   const router = useRouter();
   const [selectedVideo, setSelectedVideo] = useState(null);
