@@ -9,6 +9,7 @@ import { ghaziData } from './ghaziData';
 export default function SadayEGhaziPage() {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [activeMediaList, setActiveMediaList] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   // لائٹ باکس کھولنے کا فنکشن (موبائل فرینڈلی)
   const openLightbox = (index, list) => {
@@ -17,6 +18,7 @@ export default function SadayEGhaziPage() {
   };
 
   const closeLightbox = () => setCurrentIndex(null);
+  const closeVideoPlayer = () => setSelectedVideo(null);
 
   const nextMedia = (e) => {
     e.stopPropagation();
@@ -26,6 +28,10 @@ export default function SadayEGhaziPage() {
   const prevMedia = (e) => {
     e.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + activeMediaList.length) % activeMediaList.length);
+  };
+
+  const openVideoPlayer = (video) => {
+    setSelectedVideo(video);
   };
 
   return (
@@ -45,7 +51,7 @@ export default function SadayEGhaziPage() {
               {ghaziData.intro.heroTitle}
             </h1>
 
-            <p className="text-body text-center max-w-3xl text-sm sm:text-base md:text-xl lg:text-2xl opacity-95 font-bold leading-normal md:leading-relaxed px-2 mx-auto">
+            <p className="text-body text-center max-w-3xl text-sm sm:text-base md:text-xl lg:text-2xl opacity-100 font-black leading-normal md:leading-relaxed px-2 mx-auto text-white drop-shadow-lg">
               {ghaziData.intro.heroSubtitle}
             </p>
           </div>
@@ -179,7 +185,51 @@ export default function SadayEGhaziPage() {
         </div>
       </section>
 
-      {/* 6. گیلری تصاویر */}
+      {/* 6. Video Gallery */}
+      <section className="py-16 bg-gradient-to-b from-[#1a0000] to-[#3a0000] text-white">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl md:text-4xl font-heading font-bold text-center text-[#D4AF37] mb-12 flex items-center justify-center gap-3">
+            <FaVideo /> <span className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4C1] bg-clip-text text-transparent">VDO Gallery</span>
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {[/* eslint-disable */
+              { title: "The First Pilgrim of Karbala", url: "https://youtu.be/MYbMuu9sg3s?si=mj6qT5fkB-5n38FL" },
+              { title: "Khaimagah-e-Hussaini", url: "https://youtu.be/pw29b_Mqg8s?si=iJud14tKFG3g2MT6" },
+              { title: "Ziyarat of Imam Hussain (A.S)", url: "https://youtu.be/r2NUy3mYve4?si=4kVCb2RpkbBdRpxq" },
+              { title: "Tilla-e-Zainabia, Karbala", url: "https://youtu.be/diePDvkdzD0?si=PHdVfJQrFNsKsC5x" },
+              { title: "Garden of Imam Jafar Sadiq (A.S)", url: "https://youtu.be/RdZYvRzaZl4?si=5bboNMiizCB38mJv" },
+              { title: "Station of Sahib al-Zaman (ATFS)", url: "https://youtu.be/PIjyHnlj6s0?si=P6av1oV-GU5tkHay" },
+              { title: "River Euphrates (Al-Qamah)", url: "https://youtu.be/0J-Vn23WxyY?si=vAojdORkbH51AmLv" },
+              { title: "Sher-o-Fizza: Site & Story", url: "https://youtu.be/Q20yfyJu1Iw?si=U6X8eG9jmN2ejV3Y" },
+              { title: "Bohra Mourning at Khaimagah", url: "https://youtu.be/XERYBheJH30?si=9G-9_fj_md-L1yoD" }
+            ].map((video, i) => (
+              <div 
+                key={i} 
+                className="rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]/60 bg-black hover:scale-105 transition-transform flex flex-col cursor-pointer touch-manipulation group"
+                onClick={() => openVideoPlayer(video)}
+              >
+                <div className="relative aspect-video bg-black">
+                  <img 
+                    src={`https://img.youtube.com/vi/${video.url.split('youtu.be/')[1]?.split('?')[0]}/maxresdefault.jpg`}
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => { e.target.src = 'https://via.placeholder.com/640x360/1a0000/D4AF37?text=Video'; }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all">
+                    <FaPlay className="text-5xl text-[#D4AF37] opacity-90 group-hover:scale-110 transition-transform" />
+                  </div>
+                </div>
+                <div className="p-4 bg-gradient-to-b from-black/90 to-black text-center">
+                  <h4 className="text-lg md:text-xl font-heading font-bold text-[#D4AF37] mb-2">{video.title}</h4>
+                  <p className="text-sm text-gray-300 opacity-80">Click to watch on YouTube</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Gallery Images */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-heading font-bold text-[#4a0000] text-center mb-10 flex items-center justify-center gap-3">
@@ -243,6 +293,37 @@ export default function SadayEGhaziPage() {
       </section>
 
       <Footer />
+
+      {/* 🔴 ویڈیو پلئیر لائٹ باکس 🔴 */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4 backdrop-blur-md" 
+          onClick={closeVideoPlayer}
+        >
+          {/* بند کرنے کا بٹن */}
+          <button className="absolute top-6 right-6 text-white text-5xl z-[10000]" onClick={closeVideoPlayer}>
+            <FaTimes />
+          </button>
+
+          {/* ویڈیو پلئیر */}
+          <div className="max-w-5xl w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-full bg-black rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
+              <iframe
+                className="w-full aspect-video"
+                src={`https://www.youtube.com/embed/${selectedVideo.url.split('youtu.be/')[1]?.split('?')[0]}?autoplay=1`}
+                title={selectedVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+              <div className="p-4 bg-gradient-to-b from-black/90 to-black text-center">
+                <h4 className="text-lg md:text-xl font-heading font-bold text-[#D4AF37] mb-2">{selectedVideo.title}</h4>
+                <p className="text-sm text-gray-300 opacity-80">Click outside or X to close</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 🔴 لائٹ باکس (بڑی تصویر/ویڈیو اور ایروز) 🔴 */}
       {currentIndex !== null && (
