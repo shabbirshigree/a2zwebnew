@@ -177,14 +177,6 @@ export function Navbar() {
         }
         .stars-effect::before { top: -4px; left: 10%; --star-x: -15px; --star-y: -20px; animation-delay: 0s; }
         .stars-effect::after { bottom: -4px; right: 10%; --star-x: 15px; --star-y: 20px; animation-delay: 1.5s; }
-        @keyframes lang-flag-flutter {
-          0%, 100% { transform: perspective(120px) rotateY(-6deg) skewY(0.5deg); }
-          50% { transform: perspective(120px) rotateY(6deg) skewY(-0.5deg); }
-        }
-        .lang-flag-flutter {
-          transform-origin: 50% 0%;
-          animation: lang-flag-flutter 2.8s ease-in-out infinite;
-        }
         .lang-flag-active-ring {
           box-shadow: 0 0 0 2px #fde68a, 0 2px 8px rgba(0,0,0,0.35);
         }
@@ -230,34 +222,34 @@ export function Navbar() {
         </form>
       </div>
 
-      {/* زبانیں: مستطیل پرچم (PNG) + مختصر لیبل — ہر زبان میں الگ لفظ */}
+      {/* زبانیں: Cloudinary والے لہراتے پرچم + فاصلہ */}
       <div
-        className="flex flex-row items-center gap-1.5 md:gap-2.5 z-10 shrink-0"
+        className="flex flex-row items-center gap-2 md:gap-3 z-10 shrink-0"
         dir="ltr"
         role="group"
         aria-label={dict.nav.languagesLabel}
       >
-        <span className="text-[10px] sm:text-[11px] md:text-xs font-semibold text-[#fef3c7] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] pr-0.5" title={dict.nav.languagesLabel}>
+        <span className="text-[8px] sm:text-[9px] md:text-xs font-semibold text-[#fef3c7] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] pr-0.5 leading-tight" title={dict.nav.languagesLabel}>
           {dict.nav.languagesLabel}
         </span>
-        <div className="flex items-center gap-0.5 md:gap-1">
+        <div className="flex items-center justify-center gap-2 md:gap-3">
           {[
             {
               code: "ur",
-              src: "https://flagcdn.com/w40/pk.png",
+              src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776121608/pak-flag_sj8vdp.webp",
               label: "Urdu",
             },
             {
               code: "fa",
-              src: "https://flagcdn.com/w40/ir.png",
+              src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776121608/iran-flag_jjfv2w.webp",
               label: "فارسی",
             },
             {
               code: "en",
-              src: "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/60px-Flag_of_England.svg.png",
+              src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776121608/england-flag_clc1jb.webp",
               label: "English",
             },
-          ].map(({ code, src, label }, idx) => {
+          ].map(({ code, src, label }) => {
             const active = locale === code;
             return (
               <button
@@ -270,21 +262,20 @@ export function Navbar() {
                   const newPath = getLocalizedPath(pathname, code);
                   router.push(newPath);
                 }}
-                style={{ animationDelay: `${idx * 0.35}s` }}
                 className={`
-                  relative p-0 shrink-0 rounded-[2px] overflow-hidden
-                  w-[22px] h-[15px] md:w-[26px] md:h-[17px]
+                  relative flex shrink-0 items-center justify-center rounded-[2px] bg-transparent
+                  h-[14px] min-h-[14px] w-[26px] min-w-[26px] md:h-[16px] md:min-h-[16px] md:w-[30px] md:min-w-[30px]
                   transition-transform duration-200 hover:scale-110 hover:z-10
                   focus:outline-none focus-visible:ring-2 focus-visible:ring-[#fde68a] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0b314d]
-                  ${active ? "lang-flag-active-ring z-[1]" : "opacity-95 hover:opacity-100 shadow-[0_1px_4px_rgba(0,0,0,0.45)]"}
+                  ${active ? "lang-flag-active-ring z-[1]" : "opacity-95 hover:opacity-100"}
                 `}
               >
                 <img
                   src={src}
                   alt=""
-                  width={40}
-                  height={27}
-                  className={`block h-full w-full object-cover pointer-events-none lang-flag-flutter ${active ? "brightness-105" : ""}`}
+                  width={60}
+                  height={40}
+                  className={`max-h-full max-w-full object-contain object-center pointer-events-none ${active ? "brightness-105" : ""}`}
                   loading="lazy"
                   decoding="async"
                 />
