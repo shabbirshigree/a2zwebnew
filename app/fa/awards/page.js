@@ -41,7 +41,7 @@ export default function AwardsPortfolioFinal() {
 
         .award-card { position: relative; transition: all 0.5s ease; border: 1px solid #222; background: #0a0a0a; border-radius: 40px; margin-bottom: 1.5rem; min-width: 0; overflow: hidden; }
         .img-wrap { display: block; position: relative; width: 100%; max-width: 420px; margin-inline: auto; border-radius: 20px; overflow: hidden; border: 2px solid #222; aspect-ratio: 16 / 10; min-height: 180px; }
-        .img-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .img-wrap img { display: block; width: 100%; height: 100%; }
         .gallery-item { position: relative; aspect-ratio: 16 / 10; width: 100%; overflow: hidden; border-radius: 20px; border: 1px solid #333; }
         .gallery-img { display: block; width: 100%; height: 100%; object-fit: cover; }
         .glow-box { border: 1px solid #333; background: #0c0c0c; border-radius: 25px; padding: 20px; }
@@ -148,8 +148,23 @@ export default function AwardsPortfolioFinal() {
               </p>
             </div>
             <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.08)]">
+            <div className="persian-text text-right">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaGlobe /> یک افتخار تاریخی و سفرِ یادگار
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                به مناسبت بیست و ششمین سالگرد ارتحال حضرت امام خمینی (ره)، ریاست هیئت اعزامی پاکستان در سفر رسمی به ایران برای اینجانب افتخار و سعادت بزرگی بود. این کارت یادبودی از آن سفر پربار و دیدارهای دیپلماتیک و فرهنگی در سراسر ایران است.
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+              <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776070812/d722682c-1c06-47f5-9192-9f174216a0d7.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="کارت یادبود سفر رسمی به ایران (بیست و ششمین سالگرد ارتحال امام خمینی)" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 
@@ -207,6 +222,16 @@ export default function AwardsPortfolioFinal() {
               </div>
               <div className="img-wrap">
                  <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768202179/15109607_1349777948432791_632510272965563693_n_ztuzms.jpg" className="w-full h-full object-cover" alt="Film Award" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 award-card border border-[#222]">
+              <div className="persian-text text-right">
+                <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3"><FaCertificate /> نمایشگاه بین‌المللی طیور (IPEX) ۲۰۱۵</h3>
+                <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">گواهی‌نامه قدردانی و شرکت در نمایشگاه بین‌المللی طیور ۲۰۱۵ (IPEX) به پاس خدمات ارزنده. این لوح تقدیر نشان‌دهنده تعهد و حضور فعال اینجانب در عرصه‌های مختلف حرفه‌ای و توسعه فعالیت‌های اقتصادی و اجتماعی است.</p>
+              </div>
+              <div className="img-wrap">
+                 <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776071942/5f527bd4-a2d5-4bda-9626-239d4581b809.png" className="w-full h-full object-contain bg-black/50" alt="IPEX 2015 Certificate" />
               </div>
             </div>
           </div>

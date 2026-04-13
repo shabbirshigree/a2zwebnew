@@ -83,7 +83,7 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
     },
         { 
       id: 23, 
-      src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", 
+      src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png", 
       title: "آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر" 
     },
     { 
@@ -234,8 +234,23 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
               </p>
             </div>
             <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.08)]">
+            <div className="urdu-text">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaGlobe /> ایک تاریخی اعزاز اور یادگار سفر
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                حضرت امام خمینیؒ کی ۲۶ویں برسی کے موقع پر، ایران کے سرکاری دورے پر موجود پاکستانی وفد کی سربراہی کرنا میرے لیے ایک عظیم سعادت اور یادگار اعزاز تھا۔ یہ کارڈ اس باوقار سفر اور ایران بھر میں ہونے والی سفارتی و ثقافتی ملاقاتوں کی ایک خوبصورت نشانی ہے۔
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+              <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776070812/d722682c-1c06-47f5-9192-9f174216a0d7.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="امام خمینیؒ کی ۲۶ویں برسی کے موقع پر ایران کے سرکاری دورے کا یادگاری کارڈ" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 
@@ -293,6 +308,16 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
               </div>
               <div className="img-wrap h-[300px] md:h-[380px]">
                  <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768202179/15109607_1349777948432791_632510272965563693_n_ztuzms.jpg" className="w-full h-full object-cover" alt="Film Award" />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 award-card border border-[#222]">
+              <div className="urdu-text text-right">
+                <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3"><FaCertificate /> انٹرنیشنل پولٹری ایکسپو (IPEX) ۲۰۱۵</h3>
+                <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">انٹرنیشنل پولٹری ایکسپو (IPEX) ۲۰۱۵ کے موقع پر اہم خدمات اور فعال شرکت کے اعتراف میں دی گئی یہ تعریفی سند۔ یہ اعزاز مختلف شعبہ جات میں پیشہ ورانہ مہارت اور سماجی و اقتصادی سرگرمیوں میں میری مستقل مزاجی کی ایک کڑی ہے۔</p>
+              </div>
+              <div className="img-wrap h-[300px] md:h-[380px]">
+                 <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776071942/5f527bd4-a2d5-4bda-9626-239d4581b809.png" className="w-full h-full object-contain bg-black/50" alt="IPEX 2015 Certificate" />
               </div>
             </div>
           </div>

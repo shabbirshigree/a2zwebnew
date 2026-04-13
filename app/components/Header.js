@@ -254,8 +254,8 @@ export function Navbar() {
                 router.push(newPath);
               }}
               className={`
-                group relative overflow-hidden rounded-2xl w-14 md:w-16 px-2 py-1.5 md:px-3 md:py-2
-                text-[11px] md:text-[13px] font-extrabold transition-all duration-500 ease-out
+                group relative overflow-hidden rounded-2xl w-[45px] md:w-16 px-1 py-1 md:px-3 md:py-2
+                text-[10px] md:text-[13px] font-bold transition-all duration-500 ease-out
                 backdrop-blur-md border-2
                 ${active
                   ? "bg-gradient-to-br from-[#D4AF37]/90 via-[#B8860B]/80 to-[#FFD700]/70 text-[#0b314d] border-[#FFD700] shadow-[0_0_25px_rgba(212,175,55,0.6)] scale-105 ring-2 ring-[#FFD700]/50"
@@ -268,7 +268,7 @@ export function Navbar() {
               `}
             >
               <div className="relative z-10 flex items-center justify-center">
-                <span className="drop-shadow-sm font-black tracking-wide">
+                <span className="drop-shadow-sm font-bold tracking-tight">
                   {label}
                 </span>
               </div>

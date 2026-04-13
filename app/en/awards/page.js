@@ -33,7 +33,7 @@ export default function AwardsPageEN() {
     { id: 20, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835759/IMG_20191106_142828_Copy_hxufdv_vslbsj.jpg", title: "Former Chief Minister and Speaker Presenting a Book" },
     { id: 21, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835715/Mosin_ali_Najafi_ki_Mazar_par_Qurani_videos_k_Iftitah_k_moqah_pr_afhing_dvlllv.jpg", title: "Book Presentation at Maulana Ishaq Ali Najafi's Shrine" },
     { id: 22, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1772835950/44f75383-5760-43ed-baa8-25d1b01ff999.png", title: "Leader of Jamiat Ulama Pakistan Peer Masoom Naqvi" },
-    { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png", title: "Letter of Appreciation from Astan Quds Razavi" },
+    { id: 23, src: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png", title: "Letter of Appreciation from Astan Quds Razavi" },
     { 
       id: 24, 
       src: "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776027986/CamScanner_02-12-2022_14.42_99_rhufo2.jpg", 
@@ -169,8 +169,23 @@ export default function AwardsPageEN() {
               </p>
             </div>
             <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.08)]">
+            <div className="text-left">
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start">
+                <FaGlobe /> A Historic Honor & Memorable Journey
+              </h3>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                It was a profound honor to lead the Pakistani delegation during an official visit to Iran on the occasion of the 26th Commemoration of Imam Khomeini. This card serves as a memento of that prestigious journey and the significant diplomatic engagements across the country.
+              </p>
+            </div>
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+              <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776070812/d722682c-1c06-47f5-9192-9f174216a0d7.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Commemorative Card – Official Visit to Iran (26th Commemoration of Imam Khomeini)" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 
@@ -233,6 +248,17 @@ export default function AwardsPageEN() {
               </div>
               <div className="img-wrap h-[300px] md:h-[380px]">
                  <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768202179/15109607_1349777948432791_632510272965563693_n_ztuzms.jpg" className="w-full h-full object-cover" alt="Film Award" />
+              </div>
+            </div>
+
+            {/* IPEX 2015 Award */}
+            <div dir="ltr" className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 award-card border border-[#222]">
+              <div className="text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 justify-start"><FaCertificate /> International Poultry Expo (IPEX) 2015</h3>
+                <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">A Certificate of Participation and appreciation from the International Poultry Expo (IPEX) 2015. This recognition highlights my commitment to diverse professional fields and my active involvement in significant socio-economic and industrial events.</p>
+              </div>
+              <div className="img-wrap h-[300px] md:h-[380px]">
+                 <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776071942/5f527bd4-a2d5-4bda-9626-239d4581b809.png" className="w-full h-full object-contain bg-black/50" alt="IPEX 2015 Certificate" />
               </div>
             </div>
           </div>

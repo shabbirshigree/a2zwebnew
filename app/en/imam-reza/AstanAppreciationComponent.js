@@ -24,7 +24,7 @@ export default function AstanAppreciationComponent() {
             <div className="relative">
               <div className="absolute inset-0 bg-[#D4AF37] rounded-[1.5rem] blur-xl opacity-30"></div>
               <img
-                src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776000233/2230104a-ad9d-464d-b2c6-98c3de0c2913.png"
+                src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png"
                 alt="Astan Quds Razavi Appreciation Certificate"
                 className="relative rounded-[1.5rem] shadow-2xl border-4 border-[#D4AF37] w-full max-w-sm object-cover hover:scale-105 transition-transform duration-300"
               />

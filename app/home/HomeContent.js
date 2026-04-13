@@ -302,8 +302,8 @@ export function HomeContent() {
                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#D4AF37]/5 rounded-full group-hover:scale-[3] transition-transform duration-1000"></div>
 
                 {/* 🟡 پریمیم آئیکن سرکل */}
-                <div className="w-24 h-24 bg-white shadow-[0_15px_35px_rgba(212,175,55,0.2)] rounded-3xl flex items-center justify-center mb-8 group-hover:bg-[#0f4c75] transition-all duration-700 relative z-10 border border-[#D4AF37]/10">
-                  <span className="text-4xl text-[#D4AF37] group-hover:text-white group-hover:scale-110 transition-all duration-500">{card.icon}</span>
+                <div className="w-20 h-20 md:w-24 md:h-24 bg-white shadow-[0_15px_35px_rgba(212,175,55,0.2)] rounded-3xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#0f4c75] transition-all duration-700 relative z-10 border border-[#D4AF37]/10">
+                  <span className="text-5xl md:text-4xl text-[#D4AF37] group-hover:text-white group-hover:scale-110 transition-all duration-500">{card.icon}</span>
                 </div>
 
                 {/* 🔵 ٹائٹل */}
@@ -345,39 +345,39 @@ export function HomeContent() {
                 </div>
               </div>
 
-              {/* 📝 مواد اور بٹنز */}
-              <div className={`lg:w-3/5 ${locale === 'en' ? 'text-left' : 'text-right'}`} dir={mainDir}>
-                <h2 className={`text-3xl md:text-5xl font-black text-[#D4AF37] mb-8 ${bodyFont(locale)} leading-tight tracking-tight`}>
-                  {labels.projTitle}
-                </h2>
-                <p className={`text-gray-300 text-lg md:text-xl leading-relaxed ${bodyFont(locale)} mb-10 font-light ${locale === 'fa' ? 'text-justify' : ''} opacity-90`}>
-                  {labels.projDesc}
-                </p>
+                {/* 📝 مواد اور بٹنز */}
+                <div className={`lg:w-3/5 ${locale === 'en' ? 'text-left' : 'text-right'}`} dir={mainDir}>
+                  <h2 className={`text-3xl md:text-5xl font-black text-[#D4AF37] mb-8 ${bodyFont(locale)} leading-tight tracking-tight text-center lg:text-inherit`}>
+                    {labels.projTitle}
+                  </h2>
+                  <p className={`text-gray-300 text-lg md:text-xl leading-relaxed ${bodyFont(locale)} mb-10 font-light ${locale === 'fa' ? 'text-justify' : ''} opacity-90 text-center lg:text-inherit`}>
+                    {labels.projDesc}
+                  </p>
 
-                {/* 🔘 پریمیم ایکشن بٹنز */}
-                <div className="flex flex-wrap gap-5 justify-start">
-                  <Link
-                    href={projectSectionData?.bookletUrl || "/library#Quran"}
-                    className="px-10 py-4 rounded-2xl font-black gold-gradient text-[#0b314d] hover:scale-105 hover:shadow-[0_15px_30px_rgba(212,175,55,0.4)] transition-all flex items-center gap-3 text-lg"
-                  >
-                    <FaBookOpen className="text-xl" /> {labels.btnRead}
-                  </Link>
+                  {/* 🔘 پریمیم ایکشن بٹنز */}
+                  <div className="flex flex-wrap gap-5 justify-center lg:justify-start">
+                    <Link
+                      href={projectSectionData?.bookletUrl || "/library#Quran"}
+                      className="px-8 md:px-10 py-3.5 md:py-4 rounded-2xl font-black gold-gradient text-[#0b314d] hover:scale-105 hover:shadow-[0_15px_30px_rgba(212,175,55,0.4)] transition-all flex items-center gap-3 text-base md:text-lg"
+                    >
+                      <FaBookOpen className="text-xl" /> {labels.btnRead}
+                    </Link>
 
-                  <button
-                    onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
-                    className="px-8 py-4 rounded-2xl font-bold bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-[#0f4c75] transition-all flex items-center gap-3 text-lg"
-                  >
-                    <FaPlay className="text-[#D4AF37]" /> {labels.btnVideo}
-                  </button>
+                    <button
+                      onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
+                      className="px-6 md:px-8 py-3.5 md:py-4 rounded-2xl font-bold bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-[#0f4c75] transition-all flex items-center gap-3 text-base md:text-lg"
+                    >
+                      <FaPlay className="text-[#D4AF37]" /> {labels.btnVideo}
+                    </button>
 
-                  <button
-                    onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
-                    className="px-8 py-4 rounded-2xl font-bold border-2 border-[#D4AF37]/50 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] transition-all flex items-center gap-3 text-lg"
-                  >
-                    <FaHeadphones className="text-xl" /> {labels.btnAudio}
-                  </button>
+                    <button
+                      onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
+                      className="px-6 md:px-8 py-3.5 md:py-4 rounded-2xl font-bold border-2 border-[#D4AF37]/50 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] transition-all flex items-center gap-3 text-base md:text-lg"
+                    >
+                      <FaHeadphones className="text-xl" /> {labels.btnAudio}
+                    </button>
+                  </div>
                 </div>
-              </div>
 
             </div>
           </div>
