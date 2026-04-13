@@ -35,6 +35,9 @@ import {
 } from "./homeData";
 import { Navbar, HeroSlider } from "../components/Header";
 import Footer from "../components/Footer";
+import MobileProfileCard from "../components/MobileProfileCard";
+import EnglishProfileCard from "../components/EnglishProfileCard";
+import FarsiProfileCard from "../components/FarsiProfileCard";
 
 /** فارسی / انگریزی / اردو کے لیے مرکزی متن کلاس */
 function bodyFont(locale) {
@@ -231,6 +234,11 @@ export function HomeContent() {
         <div className="block w-full p-0 m-0 border-none outline-none overflow-hidden relative">
           <HeroSlider />
         </div>
+
+        {/* Profile Card Section (locale based) */}
+        {locale === "ur" && <MobileProfileCard />}
+        {locale === "fa" && <FarsiProfileCard />}
+        {locale === "en" && <EnglishProfileCard />}
 
         <div className={`container mx-auto px-3 md:px-4 relative z-10 animate-fade-in-up ${welcomePaddingClass}`}>
           <div className="glass-card rounded-[3rem] shadow-[0_30px_60px_rgba(212,175,55,0.15)] border-2 border-[#D4AF37]/30 p-8 md:p-16 text-center max-w-6xl mx-auto relative overflow-hidden group">

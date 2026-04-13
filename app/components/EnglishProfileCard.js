@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEnvelope, FaGlobe } from 'react-icons/fa';
 
 const EnglishProfileCard = () => {
   return (
@@ -262,28 +263,28 @@ const EnglishProfileCard = () => {
           paddingTop: '10px',
           fontSize: '14px'
         }}>
-          <div style={{ marginBottom: '5px' }}>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
+          <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <FaEnvelope style={{ color: '#D4AF37', flexShrink: 0 }} size={18} aria-hidden />
             <a 
               href="mailto:shigri51214@gmail.com" 
               style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+              onMouseOver={(e) => { e.target.style.textDecoration = 'underline'; }}
+              onMouseOut={(e) => { e.target.style.textDecoration = 'none'; }}
             >
-              Email: shigri51214@gmail.com
+              shigri51214@gmail.com
             </a>
           </div>
-          <div>
-            <span style={{ color: '#D4AF37', marginRight: '5px' }}>Image size fix ki gayi hai</span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            <FaGlobe style={{ color: '#D4AF37', flexShrink: 0 }} size={18} aria-hidden />
             <a 
               href="http://www.shabbirshigri.com" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: '#fff', textDecoration: 'none', cursor: 'pointer' }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+              onMouseOver={(e) => { e.target.style.textDecoration = 'underline'; }}
+              onMouseOut={(e) => { e.target.style.textDecoration = 'none'; }}
             >
-              Website: www.shabbirshigri.com
+              www.shabbirshigri.com
             </a>
           </div>
         </div>
