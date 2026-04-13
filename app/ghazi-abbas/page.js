@@ -145,6 +145,40 @@ export default function SadayEGhaziPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-[#3a0000] text-white relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-sm p-6 md:p-10 rounded-3xl border border-[#D4AF37]/40 shadow-2xl">
+            <h3 className="text-2xl md:text-4xl font-heading font-bold text-center text-[#D4AF37] mb-6 flex items-center justify-center gap-3">
+              <FaVideo /> نورِ کربلا — پلے لسٹ
+            </h3>
+            <p className="text-body text-gray-100 leading-relaxed text-right md:text-justify mb-8">
+              نورِ کربلا، نور پروڈکشنز کی ایک منفرد اور شاہکار دستاویزی سیریز ہے، جس کے پروڈیوسر حاجی شبیر احمد شگری ہیں۔ اس سیریز میں پہلی مرتبہ زیاراتِ مقدسہ کے ساتھ ساتھ کربلا کے مقامات کی مستند تفصیلات اور ان کے تاریخی پس منظر کو یکجا کیا گیا ہے۔ اپنی نوعیت کی اس پہلی پیشکش کا اعزاز نور پروڈکشنز کو حاصل ہے۔ ذیل میں موجود پلے لسٹ کے ذریعے آپ ان تمام ویڈیوز کا مشاہدہ کر سکتے ہیں۔
+            </p>
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-[#D4AF37]/60 bg-black">
+              <iframe
+                className="w-full aspect-video"
+                src="https://www.youtube.com/embed/videoseries?list=PLVLSFOIjQLcI6nu3X2SSXqkMot1dPP1qr"
+                title="Noor-e-Karbala Playlist"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://youtube.com/playlist?list=PLVLSFOIjQLcI6nu3X2SSXqkMot1dPP1qr&si=CQ2DcDEhObZJlAW7"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] font-bold shadow-lg hover:shadow-2xl hover:scale-105 transition-all border border-white/30"
+              >
+                <FaPlay className="text-lg" />
+                نور کربلا کی تمام ویڈیوز دیکھنے کے لیے پلے لسٹ پر کلک کریں
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. گیلری تصاویر */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
