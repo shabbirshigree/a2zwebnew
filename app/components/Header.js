@@ -18,7 +18,6 @@ import {
   FaHandshake,
   FaLandmark,
   FaUsers,
-  FaGlobe,
   FaPalette,
   FaMicrophone,
   FaStop,
@@ -178,17 +177,16 @@ export function Navbar() {
         }
         .stars-effect::before { top: -4px; left: 10%; --star-x: -15px; --star-y: -20px; animation-delay: 0s; }
         .stars-effect::after { bottom: -4px; right: 10%; --star-x: 15px; --star-y: 20px; animation-delay: 1.5s; }
-        @keyframes lang-shimmer {
-          0% { transform: translateX(-120%); }
-          100% { transform: translateX(120%); }
+        @keyframes lang-flag-flutter {
+          0%, 100% { transform: perspective(120px) rotateY(-6deg) skewY(0.5deg); }
+          50% { transform: perspective(120px) rotateY(6deg) skewY(-0.5deg); }
         }
-        .lang-btn-shimmer::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.35) 50%, transparent 60%);
-          animation: lang-shimmer 2.2s ease-in-out infinite;
-          pointer-events: none;
+        .lang-flag-flutter {
+          transform-origin: 50% 0%;
+          animation: lang-flag-flutter 2.8s ease-in-out infinite;
+        }
+        .lang-flag-active-ring {
+          box-shadow: 0 0 0 2px #fde68a, 0 2px 8px rgba(0,0,0,0.35);
         }
       `}</style>
 
@@ -232,56 +230,68 @@ export function Navbar() {
         </form>
       </div>
 
-      {/* دائیں→بائیں: گلوب، اردو، فارسی، انگریزی (RTL میں پہلا آئٹم دائیں) */}
+      {/* زبانیں: مستطیل پرچم (PNG) + مختصر لیبل — ہر زبان میں الگ لفظ */}
       <div
-        className="flex items-center gap-2 md:gap-3 z-10 shrink-0"
-        dir="rtl"
+        className="flex flex-row items-center gap-1.5 md:gap-2.5 z-10 shrink-0"
+        dir="ltr"
+        role="group"
+        aria-label={dict.nav.languagesLabel}
       >
-        <FaGlobe className="text-[16px] md:text-[18px] text-[#D4AF37] animate-pulse" />
-        {[
-          { code: "ur", label: "اردو" },
-          { code: "fa", label: "فارسی" },
-          { code: "en", label: "English" },
-        ].map(({ code, label }) => {
-          const active = locale === code;
-          return (
-            <button
-              key={code}
-              type="button"
-              onClick={() => {
-                setLocale(/** @type {'ur'|'fa'|'en'} */(code));
-                const newPath = getLocalizedPath(pathname, code);
-                router.push(newPath);
-              }}
-              className={`
-                group relative overflow-hidden rounded-2xl w-[45px] md:w-16 px-1 py-1 md:px-3 md:py-2
-                text-[10px] md:text-[13px] font-bold transition-all duration-500 ease-out
-                backdrop-blur-md border-2
-                ${active
-                  ? "bg-gradient-to-br from-[#D4AF37]/90 via-[#B8860B]/80 to-[#FFD700]/70 text-[#0b314d] border-[#FFD700] shadow-[0_0_25px_rgba(212,175,55,0.6)] scale-105 ring-2 ring-[#FFD700]/50"
-                  : "bg-gradient-to-br from-white/10 via-white/5 to-transparent text-white border-white/20 hover:border-[#D4AF37]/60 hover:bg-gradient-to-br hover:from-[#D4AF37]/20 hover:via-[#B8860B]/15 hover:to-[#FFD700]/10 hover:text-[#FFD700] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:scale-105"
-                }
-                before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
-                before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700
-                after:absolute after:inset-0 after:bg-gradient-to-br after:from-transparent after:via-[#FFD700]/10 after:to-transparent
-                after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-500
-              `}
-            >
-              <div className="relative z-10 flex items-center justify-center">
-                <span className="drop-shadow-sm font-bold tracking-tight">
-                  {label}
-                </span>
-              </div>
-
-              {/* Animated background particles */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0s' }} />
-                <div className="absolute top-3/4 right-1/4 w-0.5 h-0.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
-                <div className="absolute bottom-1/4 left-1/2 w-0.5 h-0.5 bg-[#FFD700] rounded-full animate-ping" style={{ animationDelay: '1s' }} />
-              </div>
-            </button>
-          );
-        })}
+        <span className="text-[10px] sm:text-[11px] md:text-xs font-semibold text-[#fef3c7] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] pr-0.5" title={dict.nav.languagesLabel}>
+          {dict.nav.languagesLabel}
+        </span>
+        <div className="flex items-center gap-0.5 md:gap-1">
+          {[
+            {
+              code: "ur",
+              src: "https://flagcdn.com/w40/pk.png",
+              label: "Urdu",
+            },
+            {
+              code: "fa",
+              src: "https://flagcdn.com/w40/ir.png",
+              label: "فارسی",
+            },
+            {
+              code: "en",
+              src: "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/60px-Flag_of_England.svg.png",
+              label: "English",
+            },
+          ].map(({ code, src, label }, idx) => {
+            const active = locale === code;
+            return (
+              <button
+                key={code}
+                type="button"
+                title={label}
+                aria-label={`${label} — ${dict.nav.languagesLabel}`}
+                onClick={() => {
+                  setLocale(/** @type {'ur'|'fa'|'en'} */(code));
+                  const newPath = getLocalizedPath(pathname, code);
+                  router.push(newPath);
+                }}
+                style={{ animationDelay: `${idx * 0.35}s` }}
+                className={`
+                  relative p-0 shrink-0 rounded-[2px] overflow-hidden
+                  w-[22px] h-[15px] md:w-[26px] md:h-[17px]
+                  transition-transform duration-200 hover:scale-110 hover:z-10
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-[#fde68a] focus-visible:ring-offset-1 focus-visible:ring-offset-[#0b314d]
+                  ${active ? "lang-flag-active-ring z-[1]" : "opacity-95 hover:opacity-100 shadow-[0_1px_4px_rgba(0,0,0,0.45)]"}
+                `}
+              >
+                <img
+                  src={src}
+                  alt=""
+                  width={40}
+                  height={27}
+                  className={`block h-full w-full object-cover pointer-events-none lang-flag-flutter ${active ? "brightness-105" : ""}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -428,11 +438,11 @@ export function HeroSlider() {
                     : "text-white/80 hover:text-white"
                   }`}
               >
-                <span className="text-[12px] md:text-[13px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10">
+                <span className="text-[10px] md:text-[11px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
                   <Icon />
                 </span>
                 <span
-                  className={`text-[11px] md:text-[12px] leading-tight ${locale === "en"
+                  className={`text-[9px] md:text-[10px] leading-tight ${locale === "en"
                       ? "font-sans font-medium"
                       : locale === "fa"
                         ? "font-persian font-semibold"

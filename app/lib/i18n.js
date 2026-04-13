@@ -8,6 +8,7 @@ export const dictionaries = {
       listening: "سن رہا ہوں...",
       micDenied: "براہ کرم براؤزر کی سیٹنگ سے مائیک کی اجازت دیں",
       bismillah: "مَاشَاءَ اللّٰہُ لَا قُوَّۃَ اِلَّا بِاللّٰہِ",
+      languagesLabel: "زبانیں",
     },
     menu: {
       home: "ہوم",
@@ -74,6 +75,7 @@ export const dictionaries = {
       listening: "در حال شنیدن...",
       micDenied: "لطفاً اجازهٔ میکروفون را در مرورگر فعال کنید",
       bismillah: "مَا شَاءَ اللّٰهُ لَا قُوَّۃَ اِلَّا بِاللّٰهِ",
+      languagesLabel: "زبان‌ها",
     },
     menu: {
       home: "خانه",
@@ -145,6 +147,7 @@ export const dictionaries = {
       listening: "Listening...",
       micDenied: "Please allow microphone access in your browser settings",
       bismillah: "Mā shāʾa Allāhu lā quwwata illā billāh",
+      languagesLabel: "Languages",
     },
     menu: {
       home: "Home",

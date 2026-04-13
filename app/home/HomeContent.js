@@ -296,26 +296,28 @@ export function HomeContent() {
         </div>
 
 {/* 🌟 4 اہم پروجیکٹس / نیویگیشن کارڈز کا سیکشن (پریمیم ڈیزائن) */}
-        <section className="w-full px-3 md:px-4 py-12 relative z-10">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="w-full px-3 md:px-4 py-10 md:py-12 relative z-10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {navCards?.map((card, i) => (
               <Link 
                 key={i} 
                 href={i === 2 ? (locale === "fa" ? "https://pakiiranassociation.wixsite.com/farsee/main" : "https://pakiiranassociation.wixsite.com/pira") : (card.link || '#')} 
-                className="group relative bg-white rounded-[2.5rem] p-8 md:p-10 border-2 border-[#D4AF37]/20 text-center flex flex-col items-center justify-center shadow-xl hover:shadow-[0_30px_60px_rgba(15,76,117,0.1)] hover:-translate-y-4 transition-all duration-500 overflow-hidden animate-fade-in-up"
+                className="group relative bg-white rounded-[1.65rem] sm:rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-7 md:p-9 border-2 border-[#D4AF37]/20 text-center flex flex-col items-center justify-center min-h-0 shadow-lg sm:shadow-xl hover:shadow-[0_30px_60px_rgba(15,76,117,0.1)] hover:-translate-y-2 sm:hover:-translate-y-4 transition-all duration-500 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.15}s` }}
               >
                 {/* ✨ بیک گراؤنڈ ایفیکٹ */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#fcf8e8] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#D4AF37]/5 rounded-full group-hover:scale-[3] transition-transform duration-1000"></div>
 
-                {/* 🟡 پریمیم آئیکن سرکل */}
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-white shadow-[0_15px_35px_rgba(212,175,55,0.2)] rounded-3xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-[#0f4c75] transition-all duration-700 relative z-10 border border-[#D4AF37]/10">
-                  <span className="text-5xl md:text-4xl text-[#D4AF37] group-hover:text-white group-hover:scale-110 transition-all duration-500">{card.icon}</span>
+                {/* آئیکن: موبائل پر کارڈ کے ساتھ بہتر تناسب */}
+                <div className="w-[4.85rem] h-[4.85rem] sm:w-[5.25rem] sm:h-[5.25rem] md:w-24 md:h-24 min-w-[4.85rem] min-h-[4.85rem] sm:min-w-[5.25rem] sm:min-h-[5.25rem] bg-white shadow-[0_12px_28px_rgba(212,175,55,0.22)] rounded-2xl sm:rounded-3xl flex items-center justify-center mb-4 sm:mb-5 md:mb-7 group-hover:bg-[#0f4c75] transition-all duration-700 relative z-10 border border-[#D4AF37]/15">
+                  <span className="text-[#D4AF37] group-hover:text-white transition-all duration-500 flex items-center justify-center [&>svg]:w-[2.35rem] [&>svg]:h-[2.35rem] sm:[&>svg]:w-[2.55rem] sm:[&>svg]:h-[2.55rem] md:[&>svg]:w-14 md:[&>svg]:h-14 group-hover:scale-105">
+                    {card.icon}
+                  </span>
                 </div>
 
-                {/* 🔵 ٹائٹل */}
-                <h3 className={`font-extrabold text-[#0f4c75] text-xl md:text-2xl ${bodyFont(locale)} group-hover:text-[#D4AF37] transition-colors duration-300 relative z-10 leading-tight`}>
+                {/* ٹائٹل */}
+                <h3 className={`font-extrabold text-[#0f4c75] text-lg sm:text-xl md:text-2xl ${bodyFont(locale)} group-hover:text-[#D4AF37] transition-colors duration-300 relative z-10 leading-snug px-0.5`}>
                   {card.title}
                 </h3>
                 
@@ -330,59 +332,60 @@ export function HomeContent() {
 
         {/* 🚀 نور القرآن پراجیکٹ سیکشن (عالمی معیار کا ڈیزائن) */}
         <section className="container mx-auto px-3 md:px-4 py-16 relative z-10">
-          <div className="max-w-6xl mx-auto bg-[#050505] border-2 border-[#D4AF37]/40 rounded-[3.5rem] p-8 md:p-16 shadow-[0_0_80px_rgba(212,175,55,0.15)] relative overflow-hidden group">
+          <div className="max-w-6xl mx-auto rounded-[3.5rem] p-8 md:p-16 shadow-[0_12px_48px_rgba(15,76,117,0.12)] relative overflow-hidden group border-2 border-[#b8860b]/50 bg-gradient-to-br from-[#fdf6e3] via-[#e8d5a0] to-[#c9a227]">
             
-            {/* 🌟 پریمیم بیک گراؤنڈ لائٹس */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/10 blur-[120px] rounded-full"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0f4c75]/20 blur-[120px] rounded-full"></div>
+            {/* ہلکے hilights */}
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/25 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0f4c75]/10 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="flex flex-col lg:flex-row-reverse gap-16 items-center relative z-10">
 
-              {/* 🖼️ ویژول امیج ہینڈلنگ */}
+              {/* 🖼️ ویژول امیج */}
               <div className="lg:w-2/5 relative animate-fade-in-up">
                 <div className="absolute -top-6 -right-6 gold-gradient text-[#0b314d] text-xs font-black px-6 py-2 rounded-full z-20 shadow-2xl tracking-widest uppercase">
                   {labels.projBadge}
                 </div>
-                <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-[#D4AF37]/30 shadow-[0_30px_60px_rgba(0,0,0,0.5)] group-hover:border-[#D4AF37] transition-all duration-700">
+                <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-[#0f4c75]/25 shadow-[0_20px_50px_rgba(11,49,77,0.2)] group-hover:border-[#0f4c75]/45 transition-all duration-700">
                   <img
                     src="https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png"
                     alt={labels.projTitle}
-                    className="w-full h-auto transition-transform group-hover:scale-110 duration-1000"
+                    className="w-full h-auto transition-transform group-hover:scale-105 duration-1000"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d]/50 via-transparent to-transparent opacity-40 pointer-events-none" />
                 </div>
               </div>
 
-                {/* 📝 مواد اور بٹنز */}
+                {/* مواد اور بٹنز — سنہری پس‌منظر پر گہرا متن */}
                 <div className={`lg:w-3/5 ${locale === 'en' ? 'text-left' : 'text-right'}`} dir={mainDir}>
-                  <h2 className={`text-3xl md:text-5xl font-black text-[#D4AF37] mb-8 ${bodyFont(locale)} leading-tight tracking-tight text-center lg:text-inherit`}>
+                  <h2 className={`text-3xl md:text-5xl font-black text-[#0b314d] mb-8 ${bodyFont(locale)} leading-tight tracking-tight text-center lg:text-inherit drop-shadow-sm`}>
                     {labels.projTitle}
                   </h2>
-                  <p className={`text-gray-300 text-lg md:text-xl leading-relaxed ${bodyFont(locale)} mb-10 font-light ${locale === 'fa' ? 'text-justify' : ''} opacity-90 text-center lg:text-inherit`}>
+                  <p className={`text-[#2a2310] text-base md:text-lg leading-relaxed ${bodyFont(locale)} mb-10 font-normal ${locale === 'fa' ? 'text-justify' : ''} text-center lg:text-inherit`}>
                     {labels.projDesc}
                   </p>
 
-                  {/* 🔘 پریمیم ایکشن بٹنز */}
-                  <div className="flex flex-wrap gap-5 justify-center lg:justify-start">
+                  <div className="flex flex-wrap gap-4 md:gap-5 justify-center lg:justify-start">
                     <Link
                       href={projectSectionData?.bookletUrl || "/library#Quran"}
-                      className="px-8 md:px-10 py-3.5 md:py-4 rounded-2xl font-black gold-gradient text-[#0b314d] hover:scale-105 hover:shadow-[0_15px_30px_rgba(212,175,55,0.4)] transition-all flex items-center gap-3 text-base md:text-lg"
+                      className="px-7 md:px-9 py-3 md:py-3.5 rounded-2xl font-bold bg-[#0f4c75] text-white border-2 border-[#0a3a5c] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#134b7a] transition-all flex items-center gap-3 text-sm md:text-base"
                     >
-                      <FaBookOpen className="text-xl" /> {labels.btnRead}
+                      <FaBookOpen className="text-lg text-[#fde68a]" /> {labels.btnRead}
                     </Link>
 
                     <button
+                      type="button"
                       onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
-                      className="px-6 md:px-8 py-3.5 md:py-4 rounded-2xl font-bold bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-[#0f4c75] transition-all flex items-center gap-3 text-base md:text-lg"
+                      className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#9f1239] text-white border-2 border-[#7f0d2d] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#be123c] transition-all flex items-center gap-3 text-sm md:text-base"
                     >
-                      <FaPlay className="text-[#D4AF37]" /> {labels.btnVideo}
+                      <FaPlay className="text-lg text-white" /> {labels.btnVideo}
                     </button>
 
                     <button
+                      type="button"
                       onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
-                      className="px-6 md:px-8 py-3.5 md:py-4 rounded-2xl font-bold border-2 border-[#D4AF37]/50 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0b314d] transition-all flex items-center gap-3 text-base md:text-lg"
+                      className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#047857] text-white border-2 border-[#065f46] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#059669] transition-all flex items-center gap-3 text-sm md:text-base"
                     >
-                      <FaHeadphones className="text-xl" /> {labels.btnAudio}
+                      <FaHeadphones className="text-lg text-[#d1fae5]" /> {labels.btnAudio}
                     </button>
                   </div>
                 </div>
