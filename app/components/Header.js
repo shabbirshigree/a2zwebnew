@@ -229,7 +229,7 @@ export function Navbar() {
         role="group"
         aria-label={dict.nav.languagesLabel}
       >
-        <span className="text-[8px] sm:text-[9px] md:text-xs font-semibold text-[#fef3c7] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] pr-0.5 leading-tight" title={dict.nav.languagesLabel}>
+        <span className="text-[13px] sm:text-[14px] md:text-lg font-bold text-[#fef3c7] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] pr-0.5 leading-tight" title={dict.nav.languagesLabel}>
           {dict.nav.languagesLabel}
         </span>
         <div className="flex items-center justify-center gap-2 md:gap-3">

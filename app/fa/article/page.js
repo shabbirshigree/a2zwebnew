@@ -66,13 +66,8 @@ export default function FarsiArticlesPage() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'international', label: '?? ?? ???????' },
-    { id: 'column', label: '?? ???? ?' },
-    { id: 'farsi', label: '?? ?????' },
-    { id: 'english', label: '?? English' },
-    { id: 'special', label: '?? ????? ?????' },
-    { id: 'islamic_unity', label: '?? ???? ??????' },
-    { id: 'all', label: '?? ???' }
+    { id: 'column', label: '✍️ اردو' },
+    { id: 'special', label: '⭐ نسخه های ویژه' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;

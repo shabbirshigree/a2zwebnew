@@ -10,6 +10,7 @@ import Footer from '../../components/Footer';
 
 // ✅ Import all data
 import { allArticles } from '../../article/index';
+import EnglishArticleDetail from './data';
 
 export default function EnglishArticlesPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -66,12 +67,8 @@ export default function EnglishArticlesPage() {
 
   const categories = [
     { id: 'english', label: '✍️ English' },
-    { id: 'column', label: '📖 Urdu' },
-    { id: 'punjabi', label: '📚 Punjabi' },
-    { id: 'special', label: '⭐ Special Editions' },
-    { id: 'islamic_unity', label: '🤝 Islamic Unity' },
-    { id: 'international', label: '🌍 International' },
-    { id: 'all', label: '🔍 All' }
+    { id: 'column', label: '📖 Columns' },
+    { id: 'special', label: '⭐ Special Editions' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -257,12 +254,7 @@ export default function EnglishArticlesPage() {
             >
               <FaArrowLeft /> Back to Articles
             </button>
-            <div className="text-left">
-              <h1 className="text-3xl md:text-5xl text-[#0b314d] mb-6 font-bold leading-tight">
-                {selectedArticle.title}
-              </h1>
-              <div className="article-content text-lg leading-loose text-gray-800 text-justify" dangerouslySetInnerHTML={{ __html: selectedArticle.content }} />
-            </div>
+            <EnglishArticleDetail article={selectedArticle} />
           </div>
         )}
       </div>
