@@ -33,6 +33,7 @@ import {
   journeyDataEn,
   journeyDataFa
 } from "./homeData";
+import { farsiData } from "../article/farsi-data";
 import { Navbar, HeroSlider } from "../components/Header";
 import Footer from "../components/Footer";
 import MobileProfileCard from "../components/MobileProfileCard";
@@ -500,6 +501,8 @@ export function HomeContent() {
             </div>
           </div>
         </section>
+
+        
         <Footer />
       </main>
 

@@ -10,6 +10,7 @@ import Footer from '../../components/Footer';
 
 // ✅ تمام فائلوں کا ڈیٹا یہاں سے امپورٹ ہو رہا ہے
 import { allArticles } from '../../article/index';
+import FarsiArticleDetail from './data';
 
 export default function FarsiArticlesPage() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -65,12 +66,13 @@ export default function FarsiArticlesPage() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'international', label: '🌍 بین المللی' },
-    { id: 'column', label: '✍️ اردو' },
-    { id: 'english', label: '🅰️ English' },
-    { id: 'special', label: '⭐ نسخه های ویژه' },
-    { id: 'islamic_unity', label: '🤝 وحدت اسلامی' },
-    { id: 'all', label: '🔍 همه' }
+    { id: 'international', label: '?? ?? ???????' },
+    { id: 'column', label: '?? ???? ?' },
+    { id: 'farsi', label: '?? ?????' },
+    { id: 'english', label: '?? English' },
+    { id: 'special', label: '?? ????? ?????' },
+    { id: 'islamic_unity', label: '?? ???? ??????' },
+    { id: 'all', label: '?? ???' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -249,19 +251,14 @@ export default function FarsiArticlesPage() {
             )}
           </>
         ) : (
-          <div className="max-w-4xl mx-auto bg-white p-6 md:p-12 rounded-3xl shadow-2xl border-t-8 border-[#D4AF37]">
+          <div>
             <button
               onClick={() => setSelectedArticle(null)}
-              className="bg-[#0b314d] text-[#D4AF37] px-6 py-2.5 rounded-full mb-8 flex items-center gap-2 font-bold"
+              className="bg-[#0b314d] text-[#D4AF37] px-6 py-2.5 rounded-full mb-8 flex items-center gap-2 font-bold mx-auto block w-fit"
             >
               <FaArrowLeft /> بازگشت به مقالات
             </button>
-            <div className="text-right">
-              <h1 className="text-3xl md:text-5xl text-[#0b314d] mb-6 font-bold leading-tight">
-                {selectedArticle.title}
-              </h1>
-              <div className="article-content text-lg leading-loose text-gray-800 text-justify" dangerouslySetInnerHTML={{ __html: selectedArticle.content }} />
-            </div>
+            <FarsiArticleDetail article={selectedArticle} />
           </div>
         )}
       </div>

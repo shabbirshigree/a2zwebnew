@@ -4,6 +4,7 @@ import { englishData } from './english-data';
 import { specialData } from './special-data';
 import { unityData } from './unity-data';
 import { internationalData } from './international-data';
+import { farsiData } from './farsi-data';
 
 export const allArticles = [
   ...(urduData || []),
@@ -11,5 +12,6 @@ export const allArticles = [
   ...(englishData || []),
   ...(specialData || []),
   ...(unityData || []),
-  ...(internationalData || [])
+  ...(internationalData || []),
+  ...(farsiData || [])
 ];

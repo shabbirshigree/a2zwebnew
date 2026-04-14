@@ -228,17 +228,7 @@ export default function SadayEGhaziPage() {
             <FaVideo /> <span className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4C1] bg-clip-text text-transparent">Gallery Video</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {[
-              { title: "The First Pilgrim of Karbala", url: "https://youtu.be/MYbMuu9sg3s?si=mj6qT5fkB-5n38FL" },
-              { title: "Khaimagah-e-Hussaini", url: "https://youtu.be/pw29b_Mqg8s?si=iJud14tKFG3g2MT6" },
-              { title: "Ziyarat of Imam Hussain (A.S)", url: "https://youtu.be/r2NUy3mYve4?si=4kVCb2RpkbBdRpxq" },
-              { title: "Tilla-e-Zainabia, Karbala", url: "https://youtu.be/diePDvkdzD0?si=PHdVfJQrFNsKsC5x" },
-              { title: "Garden of Imam Jafar Sadiq (A.S)", url: "https://youtu.be/RdZYvRzaZl4?si=5bboNMiizCB38mJv" },
-              { title: "Station of Sahib al-Zaman (ATFS)", url: "https://youtu.be/PIjyHnlj6s0?si=P6av1oV-GU5tkHay" },
-              { title: "River Euphrates (Al-Qamah)", url: "https://youtu.be/0J-Vn23WxyY?si=vAojdORkbH51AmLv" },
-              { title: "Sher-o-Fizza: Site & Story", url: "https://youtu.be/Q20yfyJu1Iw?si=U6X8eG9jmN2ejV3Y" },
-              { title: "Bohra Mourning at Khaimagah", url: "https://youtu.be/XERYBheJH30?si=9G-9_fj_md-L1yoD" }
-            ].map((video, i) => (
+            {ghaziData.ziyaratVideos.slice(0, 9).map((video, i) => (
               <div 
                 key={i} 
                 className="rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]/60 bg-black hover:scale-105 transition-transform flex flex-col cursor-pointer touch-manipulation group"
@@ -246,7 +236,7 @@ export default function SadayEGhaziPage() {
               >
                 <div className="relative aspect-video bg-black">
                   <img 
-                    src={`https://img.youtube.com/vi/${video.url.split('youtu.be/')[1]?.split('?')[0]}/maxresdefault.jpg`}
+                    src={video.url.includes('cloudinary') ? video.url.replace('/video/upload/', '/image/upload/f_auto,q_auto/') + '.jpg' : `https://img.youtube.com/vi/${video.url.split('youtu.be/')[1]?.split('?')[0]}/maxresdefault.jpg`}
                     alt={video.title}
                     className="w-full h-full object-cover"
                     onError={(e) => { e.target.src = 'https://via.placeholder.com/640x360/1a0000/D4AF37?text=Video'; }}
