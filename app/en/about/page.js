@@ -51,8 +51,8 @@ export default function UltimateAboutPage() {
 
   const localizedFounderItems = founderItems.map((item) => {
     const href = item.link || "#";
-    const normalizedLink = href.startsWith("/project")
-      ? "/en/project"
+    const normalizedLink = href.startsWith("/project") || href.startsWith("/noor-ul-quran")
+      ? "/en/noor-ul-quran"
       : href.startsWith("/diplomatic-services")
         ? href.replace("/diplomatic-services", "/en/diplomatic-services")
         : href;

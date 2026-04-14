@@ -40,7 +40,7 @@ const HERO_NUR_AYAH_AR =
 const MENU_CONFIG = [
   { key: "home", link: "/home", icon: FaHome },
   { key: "about", link: "/about", icon: FaUserAlt },
-  { key: "project", link: "/project", icon: FaBookOpen },
+  { key: "project", link: "/noor-ul-quran", icon: FaBookOpen },
   { key: "articles", link: "/article", icon: FaNewspaper },
   { key: "diplomatic", link: "/diplomatic-services", icon: FaHandshake },
   { key: "cultural", link: "/cultural", icon: FaLandmark },
@@ -424,12 +424,12 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex flex-row items-center gap-0.5 rounded-lg px-1 md:px-1.5 py-[3px] md:py-1 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${active
+                className={`group relative flex flex-row items-center gap-0.5 rounded-lg px-1 md:px-1.5 py-[3px] md:py-1 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0f4c75]/55 ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/35"
                     : "text-white/80 hover:text-white"
                   }`}
               >
-                <span className="text-[9px] md:text-[10px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
+                <span className="text-[9px] md:text-[10px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
                   <Icon />
                 </span>
                 <span

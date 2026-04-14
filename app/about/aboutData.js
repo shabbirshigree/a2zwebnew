@@ -13,7 +13,7 @@ import {
 
 export const founderItems = [
 
-  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran", link: "/project" },
+  { icon: <FaQuran />, title: "Noor Al-Quran Project", desc: "World's First Visual Quran", link: "/noor-ul-quran" },
 
   { icon: <FaTv />, title: "Noor Productions", desc: "Islamic Media Network", link: "https://www.youtube.com/@noorproduction" },
 

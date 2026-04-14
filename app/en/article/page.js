@@ -171,12 +171,12 @@ export default function EnglishArticlesPage() {
                       onChange={(e) => setSearchTerm(e.target.value)}
                     />
                   </div>
-                  <div className="flex flex-wrap gap-2 justify-center w-full md:w-1/2">
+                  <div className="flex flex-wrap gap-1.5 md:gap-2 justify-center w-full md:w-1/2">
                     {categories.map((cat) => (
                       <button
                         key={cat.id}
                         onClick={() => setFilterCategory(cat.id)}
-                        className={`px-6 py-3 rounded-full text-base font-bold transition-all shadow-md hover:shadow-lg ${
+                        className={`px-3 md:px-6 py-1.5 md:py-3 rounded-full text-[11px] md:text-base font-bold transition-all shadow-sm md:shadow-md hover:shadow-lg ${
                           filterCategory === cat.id
                             ? 'bg-[#D4AF37] text-white scale-105 border-2 border-white'
                             : 'bg-white text-[#0f4c75] border-2 border-gray-100 hover:border-[#D4AF37]/30'
