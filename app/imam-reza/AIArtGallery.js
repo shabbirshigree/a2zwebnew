@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaChevronLeft, FaChevronRight, FaMagic } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLocale } from '../components/LocaleProvider';
 import { dictionaries } from '../lib/i18n';
 
@@ -40,9 +40,6 @@ export default function AIArtGallery() {
           {/* Content Section */}
           <div className="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-[#fcf8e8]">
             <div className={`flex items-center gap-3 mb-6 ${isRtl ? 'flex-row-reverse' : ''}`}>
-              <div className="p-3 bg-[#D4AF37] rounded-xl text-white shadow-lg">
-                <FaMagic size={24} />
-              </div>
               <h2 className={`text-2xl md:text-3xl font-extrabold text-[#0f4c75] leading-tight ${isRtl ? 'text-right' : 'text-left'}`}>
                 {t.title}
               </h2>
@@ -54,11 +51,8 @@ export default function AIArtGallery() {
               {t.description}
             </p>
             
-            <div className={`flex gap-4 mt-auto ${isRtl ? 'justify-end' : 'justify-start'}`}>
-              <div className="px-6 py-3 bg-[#0f4c75] text-white rounded-full font-bold shadow-md">
-                AI Art Series
-              </div>
-              <div className="px-6 py-3 border-2 border-[#D4AF37] text-[#D4AF37] rounded-full font-bold">
+            <div className={`flex mt-auto ${isRtl ? 'justify-end' : 'justify-start'}`}>
+              <div className="px-4 md:px-5 py-1.5 md:py-2 border border-[#D4AF37] text-[#0f4c75] rounded-full text-xs md:text-sm font-semibold leading-tight whitespace-nowrap">
                 International Competition
               </div>
             </div>

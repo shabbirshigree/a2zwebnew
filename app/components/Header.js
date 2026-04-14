@@ -350,31 +350,31 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className="bg-[#0f4c75]/80 py-2 md:py-2.5 px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-2 md:gap-2">
+      <div className="bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-1 md:gap-1.5">
         <p className="hero-header-tight hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 max-w-[min(100%,19rem)]">
           {HERO_NUR_AYAH_AR}
         </p>
 
-        <div className="relative z-10 animate-shrink-enter leading-none mt-1 md:mt-1.5">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 md:w-12 md:h-12 bg-[#D4AF37] blur-[18px] opacity-20 animate-pulse" />
-          <div className="relative text-[#D4AF37] text-[1.1rem] md:text-[1.25rem] animate-breath leading-none">
+        <div className="relative z-10 animate-shrink-enter leading-none mt-0.5 md:mt-1">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 bg-[#D4AF37] blur-[16px] opacity-20 animate-pulse" />
+          <div className="relative text-[#D4AF37] text-[1rem] md:text-[1.15rem] animate-breath leading-none">
             <FaBookOpen />
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-1.5 md:gap-1.5 mt-1">
+        <div className="flex flex-col items-center gap-1 md:gap-1 mt-0.5">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${locale === "ur"
-                ? "urdu-text text-[22px] sm:text-[24px] md:text-[1.5rem] lg:text-[1.65rem] font-semibold whitespace-nowrap"
+                ? "urdu-text text-[20px] sm:text-[22px] md:text-[1.35rem] lg:text-[1.5rem] font-semibold whitespace-nowrap"
                 : locale === "fa"
-                  ? "font-persian font-semibold text-[1.15rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.55rem] max-w-[92vw]"
-                  : "font-hero-en font-semibold text-[1.2rem] sm:text-[1.3rem] md:text-[1.45rem] lg:text-[1.6rem]"
+                  ? "font-persian font-semibold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem] max-w-[92vw]"
+                  : "font-hero-en font-semibold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem]"
               }`}
           >
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-1 md:pt-1.5 mt-1 md:mt-1.5 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
@@ -407,9 +407,9 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className="bg-[#0b314d] py-2 px-1.5 md:py-2.5 border-t border-[#D4AF37]/30 shadow-md relative z-40">
+      <div className="bg-[#0b314d] py-1.5 px-1 md:py-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
         <nav
-          className="flex flex-wrap justify-center gap-x-1.5 md:gap-x-2 gap-y-1 md:gap-y-1 items-center max-w-6xl mx-auto"
+          className="flex flex-wrap justify-center gap-x-1 md:gap-x-1.5 gap-y-0.5 md:gap-y-1 items-center max-w-6xl mx-auto"
           dir={navDir}
         >
           {MENU_CONFIG.map((item) => {
@@ -424,16 +424,16 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex flex-row items-center gap-1 rounded-lg px-1.5 md:px-2 py-1 md:py-1.5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${active
+                className={`group relative flex flex-row items-center gap-0.5 rounded-lg px-1 md:px-1.5 py-[3px] md:py-1 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f4c75]/55 ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/35"
                     : "text-white/80 hover:text-white"
                   }`}
               >
-                <span className="text-[10px] md:text-[11px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
+                <span className="text-[9px] md:text-[10px] transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
                   <Icon />
                 </span>
                 <span
-                  className={`text-[9px] md:text-[10px] leading-tight ${locale === "en"
+                  className={`text-[8px] md:text-[9px] leading-tight ${locale === "en"
                       ? "font-sans font-medium"
                       : locale === "fa"
                         ? "font-persian font-semibold"
@@ -456,7 +456,8 @@ export function HeroSlider() {
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
         .font-amiri { font-family: 'Amiri', serif; }
-        .font-kufi { font-family: 'Reem Kufi', sans-serif; }
+        .font-kufi { font-family: 'Reem Kufi', sans-serif !important; }
+        .hero-mashallah, .hero-ayah { font-family: 'Reem Kufi', sans-serif !important; }
         @keyframes shrink-enter {
           0% { transform: scale(3); opacity: 0; }
           100% { transform: scale(1); opacity: 1; }
