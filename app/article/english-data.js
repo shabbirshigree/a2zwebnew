@@ -18,12 +18,12 @@ export const englishData = [
       { 
         name: "Daily Mashriq", 
         imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_mashriq_2026-04-09_d5ay1j.jpg",
-        onlineUrl: "https://www.daily-mashriq.com" 
+        onlineUrl: "https://mashriqakhbar.com.pk/page/p4/2026-04-09/1" 
       },
       { 
         name: "Zamana News", 
         imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_zamana_news_2026-04-09_wlvent.jpg",
-        onlineUrl: "https://zamananeuz.com" 
+        onlineUrl: "" 
       }
     ],
     body: `In the previous column, I had analyzed Iranian society and politics through the mirror of Iranians' favorite game, chess. Today we saw how Iran arranged its pieces on the chessboard; it sacrificed some of its pieces but led the opponent to a house from which there was no return, where he himself got caught in the trap of Iranian moves and today his pieces have been severely defeated. For some time, by fueling small differences, the claim of "regime change" in Iran was being made. Great sympathy was expressed with the people of Iran and a few days later attacks were made on the same people; children in schools, religious and cultural places and even Jewish places of worship were attacked. The enemy's intention was to create conditions that would weaken Iran's foundations, but the Iranian nation united and shattered all the enemy's dreams in a single moment.

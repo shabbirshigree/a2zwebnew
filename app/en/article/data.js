@@ -20,12 +20,12 @@ const EnglishArticleDetail = ({ article }) => {
       { 
         name: "Daily Mashriq", 
         imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_mashriq_2026-04-09_d5ay1j.jpg",
-        onlineUrl: "https://www.daily-mashriq.com" 
+        onlineUrl: "https://mashriqakhbar.com.pk/page/p4/2026-04-09/1" 
       },
       { 
         name: "Zamana News", 
         imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_zamana_news_2026-04-09_wlvent.jpg",
-        onlineUrl: "https://zamananeuz.com" 
+        onlineUrl: "" 
       }
     ],
 
@@ -102,14 +102,24 @@ Today, the enemy who came to isolate Iran has become such a lonely personality t
                       className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <a 
-                    href={news.onlineUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="mt-auto bg-blue-900 text-white text-center py-3 rounded-xl font-bold hover:bg-slate-800 transition shadow-md"
-                  >
-                    Read Online
-                  </a>
+                  {news.onlineUrl ? (
+                    <a 
+                      href={news.onlineUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="mt-auto bg-blue-900 text-white text-center py-3 rounded-xl font-bold hover:bg-slate-800 transition shadow-md"
+                    >
+                      Read Online
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="mt-auto bg-slate-400 text-white text-center py-3 rounded-xl font-bold opacity-70 cursor-not-allowed"
+                    >
+                      Link unavailable
+                    </button>
+                  )}
                 </div>
               ))}
             </div>

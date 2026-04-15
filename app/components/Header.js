@@ -424,16 +424,16 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex flex-row items-center gap-1 rounded-lg px-2 md:px-3 py-1 md:py-1.5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0f4c75]/55 ${active
+                className={`group relative flex flex-row items-center gap-0.5 rounded-lg px-1.5 md:px-3 py-0.5 md:py-1.5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0f4c75]/55 ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/35"
                     : "text-white/80 hover:text-white"
                   }`}
               >
-                <span className="text-[11px] md:text-[14px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
+                <span className="text-[10px] md:text-[14px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
                   <Icon />
                 </span>
                 <span
-                  className={`text-[10px] md:text-[12px] leading-tight ${locale === "en"
+                  className={`text-[9px] sm:text-[10px] md:text-[12px] leading-tight ${locale === "en"
                       ? "font-sans font-medium"
                       : locale === "fa"
                         ? "font-persian font-semibold"
