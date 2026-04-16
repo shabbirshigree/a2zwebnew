@@ -19,7 +19,7 @@ export default function EnglishArticlesPage() {
   const [articleViews, setArticleViews] = useState({});
   const [articleComments] = useState({});
 
-  const [filterCategory, setFilterCategory] = useState('english');
+  const [filterCategory, setFilterCategory] = useState('all');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -66,9 +66,8 @@ export default function EnglishArticlesPage() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'english', label: '✍️ English' },
-    { id: 'column', label: '📖 Columns' },
-    { id: 'special', label: '⭐ Special Editions' }
+    { id: 'column', label: 'Columns' },
+    { id: 'special', label: 'Special Editions' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;

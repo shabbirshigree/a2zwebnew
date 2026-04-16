@@ -19,7 +19,7 @@ export default function FarsiArticlesPage() {
   const [articleViews, setArticleViews] = useState({});
   const [articleComments] = useState({});
 
-  const [filterCategory, setFilterCategory] = useState('international');
+  const [filterCategory, setFilterCategory] = useState('all');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -66,6 +66,7 @@ export default function FarsiArticlesPage() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
+    { id: 'all', label: '🔍 تمام' },
     { id: 'column', label: '✍️ اردو' },
     { id: 'special', label: '⭐ نسخه های ویژه' }
   ];

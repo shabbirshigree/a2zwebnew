@@ -429,15 +429,15 @@ export function HeroSlider() {
                     : "text-white/80 hover:text-white"
                   }`}
               >
-                <span className="text-[10px] md:text-[14px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
+                <span className="text-[10px] md:text-[14px] lg:text-[16px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
                   <Icon />
                 </span>
                 <span
-                  className={`text-[9px] sm:text-[10px] md:text-[12px] leading-tight ${locale === "en"
+                  className={`text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] leading-tight tracking-tight ${locale === "en"
                       ? "font-sans font-medium"
                       : locale === "fa"
                         ? "font-persian font-semibold"
-                        : "urdu-text font-bold"
+                        : "urdu-text font-normal"
                     }`}
                 >
                   {name}

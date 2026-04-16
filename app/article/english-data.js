@@ -8,7 +8,7 @@ export const englishData = [
     date: "14 April 2026",
     image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152729/images_lwhvar.jpg",
     excerpt: "In the previous column, I had analyzed Iranian society and politics through the mirror of Iranians' favorite game, chess...",
-    category: "english",
+    category: "column",
     newspapers: [
       { 
         name: "Islam Times", 
