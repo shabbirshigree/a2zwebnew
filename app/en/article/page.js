@@ -8,8 +8,8 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// ✅ Import all data
-import { allArticles } from '../../article/index';
+// ✅ Import only English articles for this page
+import { englishData } from '../../article/english-data';
 import EnglishArticleDetail from './data';
 
 export default function EnglishArticlesPage() {
@@ -39,7 +39,7 @@ export default function EnglishArticlesPage() {
     if (!mounted || selectedArticle) return;
     const readId = new URLSearchParams(window.location.search).get('read');
     if (!readId) return;
-    const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
+    const matched = (englishData || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
     const key = `${matched.id}-${matched.title}`;
     const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
@@ -50,7 +50,7 @@ export default function EnglishArticlesPage() {
 
   if (!mounted) return null;
 
-  const filteredArticles = (allArticles || [])
+  const filteredArticles = (englishData || [])
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
@@ -66,8 +66,10 @@ export default function EnglishArticlesPage() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'column', label: 'Columns' },
-    { id: 'special', label: 'Special Editions' }
+    { id: 'all', label: '🔍 All' },
+    { id: 'english', label: '✍️ English' },
+    { id: 'column', label: '📖 Columns' },
+    { id: 'special', label: '⭐ Special Editions' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;

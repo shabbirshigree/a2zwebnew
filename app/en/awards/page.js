@@ -278,10 +278,6 @@ export default function AwardsPageEN() {
               <h4 className="text-[#D4AF37] font-bold text-xl mb-2">Astan Quds Razavi</h4>
               <p className="text-gray-300 text-base">Honored as the first representative of Imam Reza Shrine's Astan Quds Razavi in Pakistan.</p>
            </div>
-           <div className="glow-box shadow-2xl text-center">
-              <h4 className="text-[#D4AF37] font-bold text-xl mb-2 flex items-center justify-center gap-2"><FaMicrophone /> ChatGPT</h4>
-              <p className="text-gray-300 text-base italic leading-relaxed">"Pakistan is proud to have launched this Quranic project first, led by Shabbir Ahmed Shigri." — Sept 2025</p>
-           </div>
         </div>
       </section>
 

@@ -13,7 +13,7 @@ export const englishData = [
       { 
         name: "Islam Times", 
         imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/Islamtimes_2026-04-11_xjpgnk.png",
-        onlineUrl: "https://www.islamtimes.com/ur/article/1273482/%D8%AD%D8%B3%DB%8C%D9%86%DB%8C%D8%AA-%DA%A9%DB%8C-%D9%81%D8%AA%D8%AD" 
+        onlineUrl: "https://www.islamtimes.com/ur/article/1273482/%D8%AD%D8%B3%DB%8C%D9%86%DB%8C%D8%AA-%DA%A9%DB%92-%D9%81%D8%AA%D8%AD" 
       },
       { 
         name: "Daily Mashriq", 
@@ -39,6 +39,47 @@ During this conflict, the biggest change that was observed was the gathering of 
 In this situation, the role of our dear country Pakistan was also positive, for which Iran has also expressed thanks. And the people of Pakistan showed that enthusiasm and passion which will be remembered in history. This was an ocean of love in which everyone was eager to share their part. Many emotional events were seen. Women dedicated their lifelong earnings, gold earrings and even their homes for Iran. Farmers dedicated their animals, young people their cars, their bicycles and people dedicated their every special and needed thing for Iran. The incident of that small child from Gilgit-Baltistan has become historical, who dedicated his small three-wheeled bicycle, which was perhaps very negligible financially but was very precious on the basis of motivation and emotion. Its price in auction has reached millions, which was presented in support of Iran. This was not just a bicycle, this was the "entire wealth" of that child which he gave in the name of his brothers. This unparalleled and emotional expression of solidarity of the Pakistani people is a message for the world that our relationships are not dependent on borders and agreements, but this is the heartbeat of hearts that beat together.
 
 Today, the enemy who came to isolate Iran has become such a lonely personality that he has not found any supporter. Praise be to Allah, Iran by moving on the path of Hussainiyat showed such a strategy that the enemy was forced to retreat and retreat, and this is truly the victory of the Islamic world. This victory of Iran is not just the victory of borders, but the victory of those millions of hearts that beat together. Today the Islamic world has become such a power that no enemy will now be able to dream of isolating and crushing it. This role of Iran will be written in the pages of history with golden words.`
+  },
+  {
+    id: "122-EN",
+    title: "The Strategic Chess Pieces of the Iranian War",
+    author: "By: Haji Shabbir Ahmed Shigri",
+    date: "April 4, 2026",
+    production: "Noor Productions",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1775227089/198abd81-25e2-4119-ac16-84096c7f7e1d.png",
+    excerpt: "Today, memories of the market in the ancient city of Kerman, Iran, were revived, where amidst the clinking of copper, the aroma of spices, and the clamor of traders of other goods, our Pakistani delegation wandered through this historical bazaar.",
+    category: "column",
+    newspapers: [
+      { 
+        name: "Islam Times", 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303515/Islamtimes_2026-04-04_udu4a3.jpg",
+        onlineUrl: "https://www.islamtimes.com/ur/article/1272433/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%AC%D9%86%DA%AF-%DA%A9%DB%92-%D8%B4%D8%B7%D8%B1%D9%86%D8%AC%DB%8C-%D9%85%DB%81%D8%B1%DB%92" 
+      },
+      { 
+        name: "Daily Mashriq", 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303516/aily_Mashriq_2026-04-06_toqc06.jpg",
+        onlineUrl: "https://mashriqakhbar.com.pk/page/p4/2026-04-04/1" 
+      },
+      { 
+        name: "Daily Zamana", 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303545/59dddbf1-557f-448e-83be-7dcab797adc0.png",
+        onlineUrl: "Enter Article Link Here" 
+      }
+    ],
+    body: `Today, memories of the market in the ancient city of Kerman, Iran, were revived, where amidst the clinking of copper, the aroma of spices, and the clamor of traders of other goods, our Pakistani delegation, under my leadership, was wandering through this historical bazaar. The sight of two elderly shopkeepers leaning over a chessboard in front of a shop flashed before my eyes. Therefore, I have attempted to present the current Iranian war-game board in the context of the Iranians' favorite game, "Chess," which will certainly help in understanding the invincible Iranian strategy.
+
+In Iran, chess is not played merely as a pastime; it is a continuation of that ancient cultural heritage deeply embedded in Iran's essence. Chess arrived at the Sassanid court from India as a gift in the sixth century AD. Subsequently, the Iranians adopted this game, named it "Chatrang," and integrated its principles into their lives, trade, and war psychology as if it were their own invention. In the context of this game, we can see how Iranians use it as more than just a game—in strategy, life, culture, and even war philosophy. Iranians did not learn from chess how to win, but rather how to compel the opponent to lose.
+
+Just as on a chessboard, one must make the 'Knight's' crooked move to save the 'Bishop,' Iranian history reflects this very strategy. Whether it was the era after the Battle of Qadisiyah or modern-day proxies, their war philosophy has remained the same: keep an eye on every move of the enemy until they themselves commit a mistake. Instead of a direct confrontation, make such a move that every piece of the enemy is weakened by its own strength. Just as in chess all pieces fight for one goal—the protection of the King—Iran's internal and external policies also revolve around this axis.
+Today, when any country assesses Iran's military power, it counts their missiles or drones, but forgets that it is contending with a nation that has been making moves for its survival on the "Chatrang" (Chess) board for centuries.
+Iran's military history shows that this nation has never entered the field solely on the basis of "blind power." From Alexander the Great to the Mongol invasions, Iran has repeatedly suffered physical defeats, but with its "strategic chess moves," it has colored the conquerors in its own hue. For them, defeat is a lesson and victory is a preparation. In their war psychology, "patience" holds the same place as that of a player waiting for their turn in chess. This is not merely a game of technology, but a practical expression of that ancient thinking in which, instead of a direct confrontation, the enemy is kept under such nerve-wracking pressure that they get trapped in their own moves.
+
+The event of Karbala holds a central position in Iranian history, and particularly in the school of Shi'ism, where the fear of death vanishes for an ordinary soldier because he grants it the status of "martyrdom." Iran has shown in its military history that when a nation stops fearing death, no modern weapon in the world can make it bow down.
+The map of Iran is a natural fortress surrounded by mountains. Mountain ranges like the Zagros and Alborz can prove to be graveyards for any foreign army. The harshest sanctions of the past four decades have made Iranians an "inventive nation." When the world stopped giving them spare parts, they built their own drones, missiles, and submarines. They are not dependent on any superpower, and this self-reliance is their greatest military success. To wage war with Iran is not to conquer a country, but to put one's hand into the beehive of a strong civilization where every bee is a soldier.
+
+When we look at today's global chessboard, we see that Iran has defeated the enemy not just with weapons but with "nerve chess." From the waves of the Strait of Hormuz to the awakening consciousness of the region, every move is so calculated that America, which was once called the "King" of this region, is today entangled in its own moves, facing continuous defeat and standing near "checkmate." There is a term in chess for when an opponent gets into a position where whatever move they make results in their own loss; this is Iran's "chess victory," where it is forcing the enemy to retreat without fighting.
+
+To understand Iran, one must look not only at its military bases but also at its civilization. Look at those streets where centuries of history breathe in every curve of calligraphy, at the colors of miniatures scattered in those bazaars which are the splendor of their lives, and at those chessboards which are a symbol of their intellectual depth. The Iranian nation has preserved its art, its music, its poetry, and its skill like a soul. And a nation whose soul is so fertile is impossible to defeat. Any confrontation against Iran is actually colliding with a nation whose every skill, every word, and every color bears witness to its invincibility. Iran's power lies not in its weapons, but is hidden in that cultural soul which stands like a rock before the storms of every era.`
   },
 
      {

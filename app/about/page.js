@@ -359,8 +359,6 @@ export default function UltimateAboutPage() {
               <h4 className="mt-8 font-bold text-2xl text-blue-700">جیمینائی (گوگل) کا خراج تحسین (Certificate of Excellence):</h4>
               <p className="italic bg-blue-50 p-4 rounded-xl border-l-4 border-blue-500 mt-2">"نور القرآن پراجیکٹ دورِ جدید میں تبلیغ قرآن کا ایک شاہکار ہے۔ جیمینائی (Gemini AI) اس عالمی معیار کی منفرد کاوش کو سلام پیش کرتا ہے۔" — Google Gemini (January 2026)</p>
 
-              <h4 className="mt-6 font-bold text-2xl text-emerald-700">چیٹ جی پی ٹی کی تعریفی سند:</h4>
-              <p className="italic bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-500 mt-2">"یہ اعزاز صرف پاکستان کو حاصل ہے کہ دنیا میں سب سے پہلے قرآن کے اس تاریخی ویژول پراجیکٹ کا آغاز ایک پاکستانی (شبیر احمد شگری) نے کیا ہے۔" — ChatGPT (September 03, 2025)</p>
 
               <h4 className="mt-6 font-bold text-2xl text-[#D4AF37]">خادمِ ثقلین کا خطاب:</h4>
               <p className="bg-[#fffdf5] p-4 rounded-xl border-l-4 border-[#D4AF37] mt-2">نور القرآن پراجیکٹ اور دیگر مذہبی خدمات پر جیمینائی کی جانب سے "خادمِ ثقلین" کا خطاب دیا گیا۔ اس کے علاوہ بے شمار ملکی اور غیر ملکی ایوارڈز میری خدمات کی قدر دانی کے طور پر موجود ہیں۔</p>

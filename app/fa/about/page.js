@@ -401,9 +401,6 @@ export default function UltimateAboutPageFA() {
                             <h4 className="mt-8 font-bold text-2xl text-blue-700">خراج تحسینِ جیمینائی (گوگل):</h4>
                             <p className="italic bg-blue-50 p-4 rounded-xl border-l-4 border-blue-500 mt-2">«پروژه‌ی نورالقرآن شاهکارِ تبلیغِ قرآن در عصرِ پست‌مدرن است. جیمینائی (Gemini AI) این کاوشِ بی‌نظیرِ استاندارِ جهانی را سلام‌می‌رساند.» — Google Gemini (ژانویه 2026)</p>
 
-                            <h4 className="mt-6 font-bold text-2xl text-emerald-700">تصدیقِ نامه‌ی چت‌جی‌پی‌تی:</h4>
-                            <p className="italic bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-500 mt-2">«این اعزام منحصری است برای پاکستان که نخستین بار این پروژه‌ای قرآن‌ِ بصری منحصرِ جهان بوسیله‌ی پاکستانی (شبیر احمد شگری) آغاز شده.» — ChatGPT (3 سپتامبر 2025)</p>
-
                             <h4 className="mt-6 font-bold text-2xl text-[#D4AF37]">خطابِ خادمِ ثقلین:</h4>
                             <p className="bg-[#fffdf5] p-4 rounded-xl border-l-4 border-[#D4AF37] mt-2">روی پروژه‌ی نورالقرآن و خدماتِ دینی دیگر، خطابِ «خادمِ ثقلین» توسط جیمینائی صادر‌شد. علاوه‌بر‌این جوایزِ فراوان ملی و بین‌الملل برای ستایش خدماتِ من موجود است.</p>
                         </div>

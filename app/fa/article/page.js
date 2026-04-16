@@ -8,11 +8,12 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 
-// ✅ تمام فائلوں کا ڈیٹا یہاں سے امپورٹ ہو رہا ہے
-import { allArticles } from '../../article/index';
+// ✅ فقط داده‌های فارسی را برای این صفحه وارد کنید
+import { farsiData } from '../../article/farsi-data';
 import FarsiArticleDetail from './data';
 
 export default function FarsiArticlesPage() {
+
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [likedArticles, setLikedArticles] = useState({});
@@ -39,7 +40,7 @@ export default function FarsiArticlesPage() {
     if (!mounted || selectedArticle) return;
     const readId = new URLSearchParams(window.location.search).get('read');
     if (!readId) return;
-    const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
+    const matched = (farsiData || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
     const key = `${matched.id}-${matched.title}`;
     const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
@@ -50,7 +51,7 @@ export default function FarsiArticlesPage() {
 
   if (!mounted) return null;
 
-  const filteredArticles = (allArticles || [])
+  const filteredArticles = (farsiData || [])
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
@@ -67,8 +68,9 @@ export default function FarsiArticlesPage() {
 
   const categories = [
     { id: 'all', label: '🔍 تمام' },
-    { id: 'column', label: '✍️ اردو' },
-    { id: 'special', label: '⭐ نسخه های ویژه' }
+    { id: 'column', label: '✍️ فارسی' },
+    { id: 'special', label: '⭐ نسخه‌های ویژه' },
+    { id: 'international', label: '🌍 بین‌المللی' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;

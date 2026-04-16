@@ -1,60 +1,66 @@
 import React from 'react';
-
-const EnglishArticleDetail = ({ article }) => {
-  // Use default data if article prop is not provided
-  const columnData = article || {
-    id: "EN-123",
-    title: "Victory of Hussainiyat",
-    author: "Writer: Haji Shabbir Ahmed Shigri",
-    date: "14 April 2026",
+const defaultColumnData = {
+    id: "122-EN",
+    title: "The Strategic Chess Pieces of the Iranian War",
+    author: "By: Haji Shabbir Ahmed Shigri",
+    date: "April 4, 2026",
     production: "Noor Productions",
-    titleImage: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152729/images_lwhvar.jpg",
+    category: "column",
+    titleImage: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1775227089/198abd81-25e2-4119-ac16-84096c7f7e1d.png",
     
-    // Newspapers and their links
     newspapers: [
       { 
         name: "Islam Times", 
-        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/Islamtimes_2026-04-11_xjpgnk.png",
-        onlineUrl: "https://www.islamtimes.com/ur/article/1273482/%D8%AD%D8%B3%DB%8C%D9%86%DB%8C%D8%AA-%DA%A9%DB%8C-%D9%81%D8%AA%D8%AD" 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303515/Islamtimes_2026-04-04_udu4a3.jpg",
+        onlineUrl: "https://www.islamtimes.com/ur/article/1272433/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%AC%D9%86%DA%AF-%DA%A9%DB%92-%D8%B4%D8%B7%D8%B1%D9%86%D8%AC%DB%8C-%D9%85%DB%81%D8%B1%DB%92" 
       },
       { 
         name: "Daily Mashriq", 
-        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_mashriq_2026-04-09_d5ay1j.jpg",
-        onlineUrl: "https://mashriqakhbar.com.pk/page/p4/2026-04-09/1" 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303516/aily_Mashriq_2026-04-06_toqc06.jpg",
+        onlineUrl: "https://mashriqakhbar.com.pk/page/p4/2026-04-04/1" 
       },
       { 
-        name: "Zamana News", 
-        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152000/daily_zamana_news_2026-04-09_wlvent.jpg",
-        onlineUrl: "" 
+        name: "Daily Zamana", 
+        imgUrl: "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1776303545/59dddbf1-557f-448e-83be-7dcab797adc0.png",
+        onlineUrl: "Enter Article Link Here" 
       }
     ],
 
-    body: `In the previous column, I had analyzed Iranian society and politics through the mirror of Iranians' favorite game, chess. Today we saw how Iran arranged its pieces on the chessboard; it sacrificed some of its pieces but led the opponent to a house from which there was no return, where he himself got caught in the trap of Iranian moves and today his pieces have been severely defeated. For some time, by fueling small differences, the claim of "regime change" in Iran was being made. Great sympathy was expressed with the people of Iran and a few days later attacks were made on the same people; children in schools, religious and cultural places and even Jewish places of worship were attacked. The enemy's intention was to create conditions that would weaken Iran's foundations, but the Iranian nation united and shattered all the enemy's dreams in a single moment.
+    body: `Today, memories of the market in the ancient city of Kerman, Iran, were revived, where amidst the clinking of copper, the aroma of spices, and the clamor of traders of other goods, our Pakistani delegation, under my leadership, was wandering through this historical bazaar. The sight of two elderly shopkeepers leaning over a chessboard in front of a shop flashed before my eyes. Therefore, I have attempted to present the current Iranian war-game board in the context of the Iranians' favorite game, "Chess," which will certainly help in understanding the invincible Iranian strategy.
 
-Great claims were made that this defense system would last only a few moments and that this nation would be returned to the "Stone Age" to change the course of history. They saw dreams of regime change in Iran, the destruction of defense installations, forcing unconditional surrender and economic and diplomatic isolation, but on the contrary, the enemy himself was forced to withdraw from the region and was forced to withdraw his hands from his important bases in the region. This is a great defeat for the enemy who could not protect his own established bases, and Iran remained steadfast in its place, but this expulsion of the enemy has made Iran's regional role even more powerful. The closure of the Strait of Hormuz was a very important strategy of Iran that shocked the entire world economy. They resorted to threats to open it, but Iran also proved its importance and superiority to the world here.
+In Iran, chess is not played merely as a pastime; it is a continuation of that ancient cultural heritage deeply embedded in Iran's essence. Chess arrived at the Sassanid court from India as a gift in the sixth century AD. Subsequently, the Iranians adopted this game, named it "Chatrang," and integrated its principles into their lives, trade, and war psychology as if it were their own invention. In the context of this game, we can see how Iranians use it as more than just a game—in strategy, life, culture, and even war philosophy. Iranians did not learn from chess how to win, but rather how to compel the opponent to lose.
 
-When they tried to frighten the people of Iran, for several days past a large part of the Iranian people were present on the streets. Families who, instead of hiding in shelters from fear, came out in the open air, because their leader had chosen this path. Prominent Iranian leaders were threatened and bounties were placed on their heads, but the same leaders were seen among the people in public meetings without any security and gave the message that martyrdom is their desire.
+Just as on a chessboard, one must make the 'Knight's' crooked move to save the 'Bishop,' Iranian history reflects this very strategy. Whether it was the era after the Battle of Qadisiyah or modern-day proxies, their war philosophy has remained the same: keep an eye on every move of the enemy until they themselves commit a mistake. Instead of a direct confrontation, make such a move that every piece of the enemy is weakened by its own strength. Just as in chess all pieces fight for one goal—the protection of the King—Iran's internal and external policies also revolve around this axis.
+Today, when any country assesses Iran's military power, it counts their missiles or drones, but forgets that it is contending with a nation that has been making moves for its survival on the "Chatrang" (Chess) board for centuries.
+Iran's military history shows that this nation has never entered the field solely on the basis of "blind power." From Alexander the Great to the Mongol invasions, Iran has repeatedly suffered physical defeats, but with its "strategic chess moves," it has colored the conquerors in its own hue. For them, defeat is a lesson and victory is a preparation. In their war psychology, "patience" holds the same place as that of a player waiting for their turn in chess. This is not merely a game of technology, but a practical expression of that ancient thinking in which, instead of a direct confrontation, the enemy is kept under such nerve-wracking pressure that they get trapped in their own moves.
 
-And when threats of very dangerous attacks were made and it was specifically announced that important bridges and sensitive installations of Iran would be targeted, people gathered around the same bridges and installations. That nation which was tried to be deceived in the name of inflation, proved that in the matter of foreign intervention, it is like a steel wall.
+The event of Karbala holds a central position in Iranian history, and particularly in the school of Shi'ism, where the fear of death vanishes for an ordinary soldier because he grants it the status of "martyrdom." Iran has shown in its military history that when a nation stops fearing death, no modern weapon in the world can make it bow down.
+The map of Iran is a natural fortress surrounded by mountains. Mountain ranges like the Zagros and Alborz can prove to be graveyards for any foreign army. The harshest sanctions of the past four decades have made Iranians an "inventive nation." When the world stopped giving them spare parts, they built their own drones, missiles, and submarines. They are not dependent on any superpower, and this self-reliance is their greatest military success. To wage war with Iran is not to conquer a country, but to put one's hand into the beehive of a strong civilization where every bee is a soldier.
 
-During this conflict, the biggest change that was observed was the gathering of the Islamic world and humanity in support of Iran on a single point. The enemy who was dreaming of isolating Iran, while he himself remained alone in this chessboard and Iran received moral and diplomatic support from all over the world. Since this war was imposed on Iran, the whole world recognized this aggression. This situation proved that the Muslim Ummah is now awake. Muslims from all over the world and even followers of other religions also expressed sympathy and solidarity with Iran.
+When we look at today's global chessboard, we see that Iran has defeated the enemy not just with weapons but with "nerve chess." From the waves of the Strait of Hormuz to the awakening consciousness of the region, every move is so calculated that America, which was once called the "King" of this region, is today entangled in its own moves, facing continuous defeat and standing near "checkmate." There is a term in chess for when an opponent gets into a position where whatever move they make results in their own loss; this is Iran's "chess victory," where it is forcing the enemy to retreat without fighting.
 
-In this situation, the role of our dear country Pakistan was also positive, for which Iran has also expressed thanks. And the people of Pakistan showed that enthusiasm and passion which will be remembered in history. This was an ocean of love in which everyone was eager to share their part. Many emotional events were seen. Women dedicated their lifelong earnings, gold earrings and even their homes for Iran. Farmers dedicated their animals, young people their cars, their bicycles and people dedicated their every special and needed thing for Iran. The incident of that small child from Gilgit-Baltistan has become historical, who dedicated his small three-wheeled bicycle, which was perhaps very negligible financially but was very precious on the basis of motivation and emotion. Its price in auction has reached millions, which was presented in support of Iran. This was not just a bicycle, this was the "entire wealth" of that child which he gave in the name of his brothers. This unparalleled and emotional expression of solidarity of the Pakistani people is a message for the world that our relationships are not dependent on borders and agreements, but this is the heartbeat of hearts that beat together.
-
-Today, the enemy who came to isolate Iran has become such a lonely personality that he has not found any supporter. Praise be to Allah, Iran by moving on the path of Hussainiyat showed such a strategy that the enemy was forced to retreat and retreat, and this is truly the victory of the Islamic world. This victory of Iran is not just the victory of borders, but the victory of those millions of hearts that beat together. Today the Islamic world has become such a power that no enemy will now be able to dream of isolating and crushing it. This role of Iran will be written in the pages of history with golden words.`
+To understand Iran, one must look not only at its military bases but also at its civilization. Look at those streets where centuries of history breathe in every curve of calligraphy, at the colors of miniatures scattered in those bazaars which are the splendor of their lives, and at those chessboards which are a symbol of their intellectual depth. The Iranian nation has preserved its art, its music, its poetry, and its skill like a soul. And a nation whose soul is so fertile is impossible to defeat. Any confrontation against Iran is actually colliding with a nation whose every skill, every word, and every color bears witness to its invincibility. Iran's power lies not in its weapons, but is hidden in that cultural soul which stands like a rock before the storms of every era.`,
   };
+const EnglishArticleDetail = ({ article }) => {
+  // Use default data if article prop is not provided
+  const columnData = article || defaultColumnData;
 
   return (
     <div className="min-h-screen bg-[#fafaf9] py-12 px-4 md:px-8" dir="ltr">
       <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden border border-gray-100">
         
         {/* Header Section */}
-        <div className="bg-[#1e293b] p-6 text-white flex justify-between items-center shadow-md">
+        <div className="bg-[#1e293b] p-6 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-md">
           <div className="flex flex-col">
             <span className="text-xs uppercase tracking-widest opacity-70">Archive ID</span>
             <span className="text-xl font-mono font-bold text-yellow-400">{columnData.id}</span>
           </div>
-          <h2 className="text-2xl font-bold">{columnData.production}</h2>
+          <div className="flex flex-col items-start md:items-end gap-2">
+            <h2 className="text-2xl font-bold">{columnData.production}</h2>
+            <span className="inline-flex items-center rounded-full bg-[#d4af37]/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-[#f8f3e8]">
+              {columnData.category ? String(columnData.category).charAt(0).toUpperCase() + String(columnData.category).slice(1) : 'Column'}
+            </span>
+          </div>
         </div>
 
         {/* Article Body */}

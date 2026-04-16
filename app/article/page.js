@@ -8,11 +8,10 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
-
-// ✅ تمام فائلوں کا ڈیٹا یہاں سے امپورٹ ہو رہا ہے
 import { allArticles } from './index';
 
 export default function ArticlesPage() {
+
   const { locale } = useLocale();
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,7 +20,7 @@ export default function ArticlesPage() {
   const [articleComments] = useState({});
 
   // ✅ 'urdu' سیٹ کرنے سے پیج لوڈ ہوتے ہی اردو کالم نظر آئیں گے
-  const [filterCategory, setFilterCategory] = useState('column');
+  const [filterCategory, setFilterCategory] = useState('all');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
