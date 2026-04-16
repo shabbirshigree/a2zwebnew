@@ -113,7 +113,7 @@ const EnglishArticleDetail = ({ article }) => {
                       href={news.onlineUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="mt-auto bg-blue-900 text-white text-center py-3 rounded-xl font-bold hover:bg-slate-800 transition shadow-md"
+                      className="mt-auto bg-blue-900 text-white text-center py-4 rounded-xl font-bold text-base md:text-lg hover:bg-slate-800 transition shadow-md"
                     >
                       Read Online
                     </a>
@@ -121,7 +121,7 @@ const EnglishArticleDetail = ({ article }) => {
                     <button
                       type="button"
                       disabled
-                      className="mt-auto bg-slate-400 text-white text-center py-3 rounded-xl font-bold opacity-70 cursor-not-allowed"
+                      className="mt-auto bg-slate-400 text-white text-center py-4 rounded-xl font-bold text-base md:text-lg opacity-70 cursor-not-allowed"
                     >
                       Link unavailable
                     </button>
