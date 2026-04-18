@@ -396,11 +396,11 @@ export function HeroSlider() {
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${isMobile ? "text-[4.5px]" : "text-[4.5px] md:text-[12px]"} ${locale === "en"
-                ? "font-hero-en max-w-[34rem]"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
+                ? `font-hero-en max-w-[34rem] ${isMobile ? "text-[8px]" : "text-[12px]"}`
                 : locale === "fa"
-                  ? "font-persian"
-                  : "urdu-header-roles"
+                  ? `font-persian ${isMobile ? "text-[9px]" : "text-[13px]"}`
+                  : `urdu-header-roles ${isMobile ? "text-[9px]" : "text-[13px]"}`
               }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >
@@ -470,7 +470,7 @@ export function HeroSlider() {
                   <Icon />
                 </span>
                 <span
-                  className={`${isMobile ? "text-[7.5px] font-bold" : "text-[13px] md:text-[14px] lg:text-[15px]"
+                  className={`${isMobile ? "text-[10px] font-bold" : "text-[13px] md:text-[14px] lg:text-[15px]"
                     } leading-none tracking-tight text-center ${locale === "en"
                       ? "font-sans"
                       : locale === "fa"
