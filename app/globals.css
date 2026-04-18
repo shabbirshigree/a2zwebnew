@@ -109,7 +109,6 @@ html, body, *, *::before, *::after {
 /* موبائل کے لیے خصوصی سیٹنگز */
 @media (max-width: 768px) {
   html, body, p, span, div, h1, h2, h3, h4, h5, h6 {
-    font-size: 1.05rem !important; /* موبائل پر فانٹ سائز تھوڑا بڑھایا گیا ہے */
     line-height: 1.9 !important; /* لائنوں کے درمیان فاصلہ بڑھایا گیا ہے تاکہ پڑھنے میں آسانی ہو */
     font-weight: 600 !important; /* موبائل پر تحریر کو مزید بولڈ کیا گیا ہے */
   }

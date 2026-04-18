@@ -364,7 +364,7 @@ export function HeroSlider() {
         ))}
         <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-0.5 px-1">
           <p
-            className={`${isMobile ? "text-[4px]" : "text-[5px] md:hero-header-tight md:hero-mashallah"} font-kufi text-[#f3e5bc] font-normal opacity-90 md:opacity-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
+            className={`${isMobile ? "text-[3px]" : "text-[5px] md:hero-header-tight md:hero-mashallah"} font-kufi text-[#f3e5bc] font-normal opacity-30 md:opacity-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -373,7 +373,7 @@ export function HeroSlider() {
       </div>
 
       <div className="py-0.5 md:py-2 bg-[#0f4c75] md:bg-[#0f4c75]/80 px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center">
-        <p className={`${isMobile ? "text-[6.5px]" : "text-[7px] md:text-base"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 leading-none md:leading-normal`}>
+        <p className={`${isMobile ? "text-[6px]" : "text-[7px] md:text-base"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 leading-none md:leading-normal`}>
           {HERO_NUR_AYAH_AR}
         </p>
 
@@ -387,16 +387,16 @@ export function HeroSlider() {
         <div className="flex flex-col items-center gap-0.5 md:gap-1 mt-0.5">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight font-black ${locale === "ur"
-                ? `urdu-text ${isMobile ? "text-[26px]" : "text-[24px]"} md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap`
+                ? `urdu-text ${isMobile ? "text-[32px]" : "text-[24px]"} md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap`
                 : locale === "fa"
-                  ? `${isMobile ? "text-[1.4rem]" : "text-[1.3rem]"} font-pers text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]`
-                  : `${isMobile ? "text-[1.4rem]" : "text-[1.3rem]"} font-hero-en md:text-[1.4rem] lg:text-[1.5rem]`
+                  ? `${isMobile ? "text-[1.8rem]" : "text-[1.3rem]"} font-pers text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]`
+                  : `${isMobile ? "text-[1.8rem]" : "text-[1.3rem]"} font-hero-en md:text-[1.4rem] lg:text-[1.5rem]`
               }`}
           >
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${isMobile ? "text-[5.5px]" : "text-[4.5px] md:text-[12px]"} ${locale === "en"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${isMobile ? "text-[4.5px]" : "text-[4.5px] md:text-[12px]"} ${locale === "en"
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
@@ -458,19 +458,19 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex ${isMobile ? "flex-col justify-center py-1.5 active:scale-110 active:bg-[#D4AF37] active:text-[#0b314d] active:shadow-[0_0_15px_rgba(212,175,55,0.5)] active:z-50" : "flex-row px-3 py-1.5"
-                  } items-center gap-1.5 rounded-2xl transition-all duration-300 ${isMobile ? "bg-gradient-to-br from-[#0f4c75]/40 to-[#0b314d]/60 border border-[#D4AF37]/20 backdrop-blur-sm" : "hover:bg-[#0f4c75]/55 hover:-translate-y-1"
+                className={`group relative flex ${isMobile ? "flex-col justify-center py-1 active:scale-105 active:bg-[#D4AF37] active:text-[#0b314d] active:z-50" : "flex-row px-3 py-1.5"
+                  } items-center gap-1 rounded-xl transition-all duration-300 ${isMobile ? "bg-gradient-to-br from-[#0f4c75]/30 to-[#0b314d]/50 border border-[#D4AF37]/10 backdrop-blur-sm" : "hover:bg-[#0f4c75]/55 hover:-translate-y-1"
                   } ${active
-                    ? "text-[#D4AF37] bg-[#0f4c75]/80 border-[#D4AF37]/50 shadow-[inset_0_0_10px_rgba(212,175,55,0.2)]"
+                    ? "text-[#D4AF37] bg-[#0f4c75]/80 border-[#D4AF37]/40 shadow-sm"
                     : "text-white/90 hover:text-white"
                   }`}
               >
-                <span className={`${isMobile ? "text-[15px] drop-shadow-[0_0_8px_rgba(212,175,55,0.3)] group-active:rotate-[360deg] transition-transform duration-700" : "text-[14px] lg:text-[16px]"
+                <span className={`${isMobile ? "text-[12px] group-active:rotate-[360deg] transition-transform duration-700" : "text-[14px] lg:text-[16px]"
                   } transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10`}>
                   <Icon />
                 </span>
                 <span
-                  className={`${isMobile ? "text-[8.5px] font-bold" : "text-[13px] md:text-[14px] lg:text-[15px]"
+                  className={`${isMobile ? "text-[7.5px] font-bold" : "text-[13px] md:text-[14px] lg:text-[15px]"
                     } leading-none tracking-tight text-center ${locale === "en"
                       ? "font-sans"
                       : locale === "fa"
