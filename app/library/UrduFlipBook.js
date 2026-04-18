@@ -66,11 +66,12 @@ export default function UrduFlipBook({ pdfUrl, title, onClose, isLandscape }) {
 
   const CustomLoader = ({ message }) => (
     <div className="flex flex-col items-center justify-center w-full h-full bg-[#050505] text-[#D4AF37] p-6 text-center">
-      <div className="relative w-16 h-16 mb-6">
+      <div className="relative w-16 h-16 mb-4">
         <div className="absolute inset-0 border-4 border-[#D4AF37]/20 rounded-full"></div>
         <div className="absolute inset-0 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div>
       </div>
-      <h3 className="urdu-text text-lg font-bold animate-pulse">{message}</h3>
+      <h3 className="urdu-text text-xl font-bold mb-1">انتظار فرمائیے...</h3>
+      <p className="urdu-text text-sm opacity-80">حاجی شبیر احمد شگری</p>
     </div>
   );
 
