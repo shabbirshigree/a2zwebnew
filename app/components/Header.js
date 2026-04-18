@@ -344,7 +344,7 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className="relative w-full h-[15rem] md:h-[18rem] lg:h-[20rem] overflow-hidden bg-[#0b314d]">
+      <div className="relative w-full h-[12rem] md:h-[18rem] lg:h-[20rem] overflow-hidden bg-[#0b314d]">
         {slides.map((s, i) => (
           <div
             key={i}
@@ -354,7 +354,7 @@ export function HeroSlider() {
             <img
               src={s.img}
               alt=""
-              className={`w-full h-full object-cover object-center block transition-all duration-[1200ms] ease-in-out ${i === current ? "scale-100" : "scale-[1.05]"}`}
+              className={`w-full h-full ${isMobile ? "object-contain" : "object-cover"} object-center block transition-all duration-[1200ms] ease-in-out ${i === current ? "scale-100" : "scale-[1.05]"}`}
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
@@ -459,14 +459,14 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex ${isMobile ? "flex-col justify-center py-2" : "flex-row px-3 py-1.5"
+                className={`group relative flex ${isMobile ? "flex-col justify-center py-2 active:scale-110 active:bg-[#0f4c75]/60 active:shadow-lg active:z-50" : "flex-row px-3 py-1.5"
                   } items-center gap-1 rounded-xl transition-all duration-300 ${isMobile ? "bg-[#0f4c75]/20 border border-[#D4AF37]/10" : "hover:bg-[#0f4c75]/55 hover:-translate-y-1"
                   } ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/50 border-[#D4AF37]/30 shadow-inner"
                     : "text-white/90 hover:text-white"
                   }`}
               >
-                <span className={`${isMobile ? "text-[16px]" : "text-[14px] lg:text-[16px]"
+                <span className={`${isMobile ? "text-[16px] group-active:rotate-[360deg] transition-transform duration-500" : "text-[14px] lg:text-[16px]"
                   } transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10`}>
                   <Icon />
                 </span>
