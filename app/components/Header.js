@@ -397,10 +397,10 @@ export function HeroSlider() {
           </h1>
           <p
             className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
-                ? `font-hero-en max-w-[34rem] ${isMobile ? "text-[8px]" : "text-[12px]"}`
+                ? `font-hero-en max-w-[34rem] ${isMobile ? "text-[6px]" : "text-[10px]"}`
                 : locale === "fa"
-                  ? `font-persian ${isMobile ? "text-[9px]" : "text-[13px]"}`
-                  : `urdu-header-roles ${isMobile ? "text-[9px]" : "text-[13px]"}`
+                  ? `font-persian ${isMobile ? "text-[8px]" : "text-[13px]"}`
+                  : `urdu-header-roles ${isMobile ? "text-[8px]" : "text-[13px]"}`
               }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >

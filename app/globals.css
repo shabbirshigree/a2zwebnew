@@ -209,6 +209,30 @@ main li {
   text-align: justify;
 }
 
+/* 🏠 خوش آمدیدی سیکشن کے فونٹس (بسم اللہ، ہیڈنگ، ٹیکسٹ) - پوری ویب سائٹ کے لیے */
+.font-kufi {
+  font-family: 'Reem Kufi', sans-serif !important;
+}
+
+.welcome-heading {
+  font-size: clamp(1.5rem, 4vw, 2.25rem) !important; /* السلام علیکم جیسا سائز */
+  font-weight: 700 !important;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  font-size: clamp(0.875rem, 1.25vw, 1.125rem) !important; /* خوش آمدید متن جیسا سائز */
+  line-height: 1.8 !important;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .welcome-text {
+    text-align: center;
+  }
+}
+
 /* ================== Button touch and mobile sizing ================== */
 button.social-icon-btn,
 button.share-btn,

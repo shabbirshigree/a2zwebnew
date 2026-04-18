@@ -253,10 +253,10 @@ export function HomeContent() {
               </h2>
               
               <div className="max-w-4xl mx-auto">
-                <span className="text-[#D4AF37] text-2xl md:text-4xl font-bold block mb-4 drop-shadow-sm">
+                <span className="text-[#D4AF37] welcome-heading drop-shadow-sm">
                   {welcome.greeting}
                 </span>
-                <p className={`${welcomeTextClass} text-justify md:text-center mt-2 leading-relaxed text-[#0b314d]/90`}>
+                <p className={`${welcomeTextClass} welcome-text mt-2 text-[#0b314d]/90`}>
                   {welcome.description}
                 </p>
               </div>
