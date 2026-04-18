@@ -344,7 +344,7 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className={`relative w-full ${isMobile ? "h-auto aspect-[16/9]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden bg-[#0b314d]`}>
+      <div className={`relative w-full ${isMobile ? "h-[10rem]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden bg-[#0b314d]`}>
         {slides.map((s, i) => (
           <div
             key={i}
@@ -354,7 +354,7 @@ export function HeroSlider() {
             <img
               src={s.img}
               alt=""
-              className="w-full h-full object-cover object-center block transition-all duration-[1200ms] ease-in-out"
+              className={`w-full h-full ${isMobile ? "object-contain" : "object-cover"} object-center block transition-all duration-[1200ms] ease-in-out`}
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
@@ -365,7 +365,7 @@ export function HeroSlider() {
         ))}
         <div className={`absolute inset-x-0 ${isMobile ? "top-1" : "top-0"} z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1`}>
           <p
-            className={`${isMobile ? "text-[10px] opacity-80" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]`}
+            className={`${isMobile ? "text-[10px] opacity-70" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -373,8 +373,8 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className="bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-1 md:gap-1.5">
-        <p className="hero-header-tight hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 max-w-[min(100%,19rem)]">
+      <div className={`${isMobile ? "py-1" : "bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5"} px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-1 md:gap-1.5`}>
+        <p className={`${isMobile ? "text-[12px] leading-tight" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 max-w-[min(100%,19rem)]`}>
           {HERO_NUR_AYAH_AR}
         </p>
 
