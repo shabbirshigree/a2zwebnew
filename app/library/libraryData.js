@@ -200,7 +200,6 @@ export const BOOKS_DATA = [
       {
         type: 'read',
         label: 'کتاب پڑھیں',
-        // یہاں میں نے آپ کا نیا کلاؤڈ نری والا لنک ڈال دیا ہے
         url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1776454789/noorulquran-compressed_umdyg3.pdf',
         color: 'theme-read',
         disabled: false

@@ -183,7 +183,7 @@ export const BOOKS_DATA = [
     orientation: 'portrait',
     descUrdu: `توضیح پروژه نور القرآن`,
     actions: [
-       { type: 'read', label: 'کتاب را بخوانید', url: 'https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf', color: 'theme-read', disabled: false },
+       { type: 'read', label: 'کتاب را بخوانید', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1776454789/noorulquran-compressed_umdyg3.pdf', color: 'theme-read', disabled: false },
       { type: 'audio', label: 'پادکاست صوتی گوگل', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4', color: 'theme-urdu-aud', disabled: false },
             { type: 'video', label: 'پادکاست ویدیویی گوگل', icon: 'film', url: 'https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4', color: 'theme-urdu-vid', disabled: false }
     ]

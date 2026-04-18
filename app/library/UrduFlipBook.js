@@ -8,7 +8,7 @@ import { FaShareAlt, FaExpand, FaTimes } from 'react-icons/fa';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-export default function UrduFlipBook({ pdfUrl, title, onClose, isLandscape }) {
+export default React.memo(function UrduFlipBook({ pdfUrl, title, onClose, isLandscape }) {
   const [numPages, setNumPages] = useState(null);
   const [error, setError] = useState(null);
   const bookRef = useRef();
@@ -92,20 +92,49 @@ export default function UrduFlipBook({ pdfUrl, title, onClose, isLandscape }) {
           error ? (
             <div className="text-red-500 urdu-text">{error}</div>
           ) : (
-            <Document 
-              file={pdfUrl} 
-              onLoadSuccess={({ numPages }) => { setNumPages(numPages); setError(null); }} 
-              onError={() => setError('کتاب لوڈ کرنے میں مسئلہ۔')}
+            <Document
+              key={pdfUrl}
+              file={pdfUrl}
+              onLoadSuccess={({ numPages }) => {
+                setNumPages(numPages);
+                setError(null);
+              }}
+              onLoadError={(err) => {
+                console.error("PDF Load Error:", err);
+                setError("کتاب لوڈ کرنے میں دشواری ہو رہی ہے۔ براہ کرم انٹرنیٹ کنکشن چیک کریں یا دوبارہ کوشش کریں۔");
+              }}
               loading={<CustomLoader message="کتاب لوڈ ہو رہی ہے..." />}
             >
               {numPages && (
-                <HTMLFlipBook width={bookWidth} height={bookHeight} size="fixed" onFlip={playFlipSound} direction="ltr" showCover={true} ref={bookRef} className="mx-auto">
-                  {[...Array(numPages).keys()].map((pNum) => (
-                    <div key={pNum} className="bg-[#0a0a0a] w-full h-full flex items-center justify-center">
-                      <Page pageNumber={pNum + 1} width={bookWidth} height={bookHeight} renderAnnotationLayer={true} renderTextLayer={true} />
-                    </div>
-                  ))}
-                </HTMLFlipBook>
+                <div className="flex justify-center items-center w-full h-full bg-[#1a1a1a]">
+                  <HTMLFlipBook 
+                    width={bookWidth} 
+                    height={bookHeight} 
+                    size="fixed" 
+                    onFlip={playFlipSound} 
+                    direction="ltr" 
+                    showCover={true} 
+                    ref={bookRef} 
+                    className="mx-auto shadow-2xl"
+                    useMouseEvents={true}
+                    swipeDistance={30}
+                    showPageCorners={true}
+                  >
+                    {[...Array(numPages).keys()].map((pNum) => (
+                      <div key={pNum} className="bg-white w-full h-full flex items-center justify-center shadow-inner overflow-hidden">
+                        <Page 
+                          pageNumber={pNum + 1} 
+                          width={bookWidth} 
+                          height={bookHeight} 
+                          renderAnnotationLayer={false} 
+                          renderTextLayer={false}
+                          renderMode="canvas"
+                          loading={<div className="bg-white w-full h-full flex items-center justify-center text-gray-300 text-[10px] italic">صفحہ لوڈ ہو رہا ہے...</div>}
+                        />
+                      </div>
+                    ))}
+                  </HTMLFlipBook>
+                </div>
               )}
             </Document>
           )
