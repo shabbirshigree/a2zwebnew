@@ -294,14 +294,15 @@ export function HeroSlider() {
   const dict = getDictionary(locale);
   const [current, setCurrent] = useState(0);
 
-  const slides = [
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/5_s7hgrb.png" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/2_sn9tyl.png" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/3_fm3ja9.png" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104582/6_oqageq.png" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" },
-    { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/4_xaylj9.png" },
-  ];
+  const slides = 
+[
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/5_stvhcf.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/2_seh6lj.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/3_lsnc0p.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/6_ikke94.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/1_jo1rdp.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/4_tpy60y.jpg" }
+];
 
   const socialLinks = [
     { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
@@ -323,21 +324,23 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className="relative w-full aspect-[16/7] md:aspect-[16/6] lg:aspect-[16/5.5] overflow-hidden bg-[#0b314d]">
+      <div className="relative w-full h-[15rem] md:h-[18rem] lg:h-[20rem] overflow-hidden bg-[#0b314d]">
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${i === current ? "opacity-100 z-20" : "opacity-0 z-10"
+            className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100 animate-slide-glow" : "opacity-0 z-10 scale-[1.04]"
               }`}
           >
             <img
               src={s.img}
               alt=""
-              className="w-full h-full object-fill block"
+              className={`w-full h-full object-cover object-center block transition-all duration-[1200ms] ease-in-out ${i === current ? "scale-100" : "scale-[1.05]"}`}
+              style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
               fetchPriority={i === 0 ? "high" : "low"}
             />
+            <div className={`absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-transparent transition-opacity duration-[1100ms] ${i === current ? 'opacity-100' : 'opacity-0'}`} />
           </div>
         ))}
         <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1">
@@ -468,6 +471,12 @@ export function HeroSlider() {
           50% { transform: scale(1.1); }
         }
         .animate-breath { animation: breath 3s infinite ease-in-out; }
+        @keyframes slide-glow {
+          0% { transform: scale(0.98); opacity: 0.92; }
+          50% { transform: scale(1.02); opacity: 1; }
+          100% { transform: scale(1); opacity: 0.96; }
+        }
+        .animate-slide-glow { animation: slide-glow 6s ease-in-out infinite alternate; }
       `}</style>
     </div>
   );

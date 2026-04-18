@@ -330,7 +330,7 @@ export default function ArticlesPage() {
 
               <div className="flex flex-wrap items-center gap-4 text-sm md:text-base text-gray-600 mb-8 pb-6 border-b border-gray-200">
                 <span className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full"><FaCalendar className="text-[#D4AF37]" /> {selectedArticle.date}</span>
-                <span className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full"><FaNewspaper className="text-[#D4AF37]" /> {selectedArticle.paper}</span>
+                <span className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full"><FaNewspaper className="text-[#D4AF37]" /> {selectedArticle.paper || (Array.isArray(selectedArticle.newspapers) ? selectedArticle.newspapers.join(', ') : 'اخبار')}</span>
               </div>
 
               <div className="mb-8 rounded-2xl border border-[#D4AF37]/30 bg-gradient-to-r from-[#fffef8] to-[#f8fbff] p-4 md:p-5 shadow-sm">
@@ -365,7 +365,7 @@ export default function ArticlesPage() {
               <div
                 className="article-content text-lg md:text-xl leading-loose text-gray-800 text-justify"
                 style={{ fontFamily: selectedArticle.category === 'english' || (Array.isArray(selectedArticle.category) && selectedArticle.category.includes('english')) ? 'sans-serif' : "'Jameel Noori Nastaleeq', serif" }}
-                dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+                dangerouslySetInnerHTML={{ __html: selectedArticle.content || selectedArticle.body || '' }}
               />
             </div>
           </div>
