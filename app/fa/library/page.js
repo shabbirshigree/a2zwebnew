@@ -8,7 +8,13 @@ import dynamic from 'next/dynamic';
 
 const UrduFlipBook = dynamic(() => import('../../library/UrduFlipBook'), {
   ssr: false,
-  loading: () => <div className="text-[#D4AF37] persian-text text-center p-20">در حال بارگذاری...</div>
+  loading: () => (
+    <div className="flex flex-col items-center justify-center p-20 gap-4">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#D4AF37]"></div>
+      <div className="text-[#D4AF37] persian-text text-center text-xl">لطفاً منتظر بمانید...</div>
+      <div className="text-[#D4AF37] persian-text text-sm opacity-80">حاجی شبیر احمد شگری</div>
+    </div>
+  )
 });
 
 export default function LibraryPageFA() {

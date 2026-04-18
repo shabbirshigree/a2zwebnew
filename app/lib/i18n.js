@@ -33,6 +33,7 @@ export const dictionaries = {
       role2: "سی ای او: نور پروڈکشنز",
       role3: "سینئر صحافی",
       role4: "گولڈ میڈلسٹ",
+      role5: "ثقافتی امور کے ماہر",
     },
     footer: {
       subscribe: "سبسکرائب کریں",
@@ -100,6 +101,7 @@ export const dictionaries = {
       role2: "مدیرعامل نور پروڈکشنز",
       role3: "روزنامه‌نگار ارشد",
       role4: "مدال طلا",
+      role5: "کارشناس فرهنگی",
     },
     footer: {
       subscribe: "عضویت خبرنامه",
@@ -172,6 +174,7 @@ export const dictionaries = {
       role2: "CEO — Noor Productions",
       role3: "Senior Journalist",
       role4: "Gold Medalist",
+      role5: "Cultural Expert",
     },
     footer: {
       subscribe: "Subscribe",

@@ -340,11 +340,11 @@ export function HeroSlider() {
   }, [slides.length]);
 
   const navDir = locale === "en" ? "ltr" : "rtl";
-  const rolesLine = [dict.hero.role1, dict.hero.role2, dict.hero.role3, dict.hero.role4];
+  const rolesLine = [dict.hero.role1, dict.hero.role2, dict.hero.role3, dict.hero.role4, dict.hero.role5];
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className={`relative w-full ${isMobile ? "h-[6.5rem]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden`}>
+      <div className="relative w-full h-[6.5rem] md:h-[15rem] lg:h-[20rem] overflow-hidden">
         {slides.map((s, i) => (
           <div
             key={i}
@@ -362,9 +362,9 @@ export function HeroSlider() {
             />
           </div>
         ))}
-        <div className={`absolute inset-x-0 ${isMobile ? "top-0" : "top-0"} z-[25] pointer-events-none flex justify-center pt-0.5 px-1`}>
+        <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-0.5 px-1">
           <p
-            className={`${isMobile ? "text-[6px] opacity-40" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
+            className="text-[4px] md:hero-header-tight md:hero-mashallah font-kufi text-[#f3e5bc] font-normal opacity-20 md:opacity-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]"
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -372,8 +372,8 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className={`${isMobile ? "py-0.5 bg-[#0f4c75]" : "bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5"} px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center`}>
-        <p className={`${isMobile ? "text-[8px] leading-none" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5`}>
+      <div className="py-0.5 md:py-2 bg-[#0f4c75] md:bg-[#0f4c75]/80 px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center">
+        <p className="text-[6px] md:text-base hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 leading-none md:leading-normal">
           {HERO_NUR_AYAH_AR}
         </p>
 
@@ -384,23 +384,23 @@ export function HeroSlider() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-1 md:gap-1 mt-0.5">
+        <div className="flex flex-col items-center gap-0.5 md:gap-1 mt-0.5">
           <h1
-            className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${locale === "ur"
-                ? `urdu-text ${isMobile ? "text-[18px]" : "text-[20px] sm:text-[22px]"} md:text-[1.35rem] lg:text-[1.5rem] font-bold whitespace-nowrap`
+            className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight font-bold ${locale === "ur"
+                ? "urdu-text text-[19px] md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap"
                 : locale === "fa"
-                  ? "font-persian font-bold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem] max-w-[92vw]"
-                  : "font-hero-en font-bold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem]"
+                  ? "font-persian text-[1.1rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]"
+                  : "font-hero-en text-[1.1rem] md:text-[1.4rem] lg:text-[1.5rem]"
               }`}
           >
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${locale === "en"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 text-[7px] md:text-[12px] ${locale === "en"
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
-                  : `urdu-header-roles ${isMobile ? "text-[9px]" : ""}`
+                  : "urdu-header-roles"
               }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >
