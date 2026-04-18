@@ -364,7 +364,7 @@ export function HeroSlider() {
         ))}
         <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-0.5 px-1">
           <p
-            className="text-[3.5px] md:hero-header-tight md:hero-mashallah font-kufi text-[#f3e5bc] font-normal opacity-90 md:opacity-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]"
+            className={`${isMobile ? "text-[4px]" : "text-[5px] md:hero-header-tight md:hero-mashallah"} font-kufi text-[#f3e5bc] font-normal opacity-90 md:opacity-100 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -373,7 +373,7 @@ export function HeroSlider() {
       </div>
 
       <div className="py-0.5 md:py-2 bg-[#0f4c75] md:bg-[#0f4c75]/80 px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center">
-        <p className="text-[7px] md:text-base hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 leading-none md:leading-normal">
+        <p className={`${isMobile ? "text-[6.5px]" : "text-[7px] md:text-base"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 leading-none md:leading-normal`}>
           {HERO_NUR_AYAH_AR}
         </p>
 
@@ -387,16 +387,16 @@ export function HeroSlider() {
         <div className="flex flex-col items-center gap-0.5 md:gap-1 mt-0.5">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight font-black ${locale === "ur"
-                ? "urdu-text text-[24px] md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap"
+                ? `urdu-text ${isMobile ? "text-[26px]" : "text-[24px]"} md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap`
                 : locale === "fa"
-                  ? "font-persian text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]"
-                  : "font-hero-en text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem]"
+                  ? `${isMobile ? "text-[1.4rem]" : "text-[1.3rem]"} font-pers text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]`
+                  : `${isMobile ? "text-[1.4rem]" : "text-[1.3rem]"} font-hero-en md:text-[1.4rem] lg:text-[1.5rem]`
               }`}
           >
             {dict.hero.name}
           </h1>
           <p
-            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 text-[4.5px] md:text-[12px] ${locale === "en"
+            className={`hero-header-tight hero-roles text-white/90 font-normal tracking-tight border-t border-[#D4AF37]/25 pt-0.5 md:pt-1 mt-0.5 md:mt-1 flex flex-wrap justify-center content-center gap-x-0.5 gap-y-0 max-w-[40rem] px-0.5 ${isMobile ? "text-[5.5px]" : "text-[4.5px] md:text-[12px]"} ${locale === "en"
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
