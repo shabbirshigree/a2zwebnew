@@ -364,7 +364,7 @@ export function HeroSlider() {
         ))}
         <div className={`absolute inset-x-0 ${isMobile ? "top-0" : "top-0"} z-[25] pointer-events-none flex justify-center pt-0.5 px-1`}>
           <p
-            className={`${isMobile ? "text-[8px] opacity-50" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
+            className={`${isMobile ? "text-[6px] opacity-40" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -373,7 +373,7 @@ export function HeroSlider() {
       </div>
 
       <div className={`${isMobile ? "py-0.5 bg-[#0f4c75]" : "bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5"} px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center`}>
-        <p className={`${isMobile ? "text-[10px] leading-none" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5`}>
+        <p className={`${isMobile ? "text-[8px] leading-none" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5`}>
           {HERO_NUR_AYAH_AR}
         </p>
 
@@ -387,10 +387,10 @@ export function HeroSlider() {
         <div className="flex flex-col items-center gap-1 md:gap-1 mt-0.5">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight ${locale === "ur"
-                ? "urdu-text text-[20px] sm:text-[22px] md:text-[1.35rem] lg:text-[1.5rem] font-semibold whitespace-nowrap"
+                ? `urdu-text ${isMobile ? "text-[18px]" : "text-[20px] sm:text-[22px]"} md:text-[1.35rem] lg:text-[1.5rem] font-bold whitespace-nowrap`
                 : locale === "fa"
-                  ? "font-persian font-semibold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem] max-w-[92vw]"
-                  : "font-hero-en font-semibold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem]"
+                  ? "font-persian font-bold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem] max-w-[92vw]"
+                  : "font-hero-en font-bold text-[1.05rem] sm:text-[1.15rem] md:text-[1.3rem] lg:text-[1.4rem]"
               }`}
           >
             {dict.hero.name}
@@ -400,7 +400,7 @@ export function HeroSlider() {
                 ? "font-hero-en max-w-[34rem]"
                 : locale === "fa"
                   ? "font-persian"
-                  : "urdu-header-roles"
+                  : `urdu-header-roles ${isMobile ? "text-[9px]" : ""}`
               }`}
             dir={locale === "en" ? "ltr" : "rtl"}
           >
@@ -458,19 +458,19 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex ${isMobile ? "flex-col justify-center py-2 active:scale-110 active:bg-[#0f4c75]/60 active:shadow-lg active:z-50" : "flex-row px-3 py-1.5"
+                className={`group relative flex ${isMobile ? "flex-col justify-center py-1 active:scale-110 active:bg-[#0f4c75]/60 active:shadow-lg active:z-50" : "flex-row px-3 py-1.5"
                   } items-center gap-1 rounded-xl transition-all duration-300 ${isMobile ? "bg-[#0f4c75]/20 border border-[#D4AF37]/10" : "hover:bg-[#0f4c75]/55 hover:-translate-y-1"
                   } ${active
                     ? "text-[#D4AF37] bg-[#0f4c75]/50 border-[#D4AF37]/30 shadow-inner"
                     : "text-white/90 hover:text-white"
                   }`}
               >
-                <span className={`${isMobile ? "text-[16px] group-active:rotate-[360deg] transition-transform duration-500" : "text-[14px] lg:text-[16px]"
+                <span className={`${isMobile ? "text-[14px] group-active:rotate-[360deg] transition-transform duration-500" : "text-[14px] lg:text-[16px]"
                   } transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10`}>
                   <Icon />
                 </span>
                 <span
-                  className={`${isMobile ? "text-[11px]" : "text-[13px] md:text-[14px] lg:text-[15px]"
+                  className={`${isMobile ? "text-[9px]" : "text-[13px] md:text-[14px] lg:text-[15px]"
                     } leading-none tracking-tight text-center ${locale === "en"
                       ? "font-sans font-bold"
                       : locale === "fa"
