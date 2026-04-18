@@ -63,7 +63,17 @@ export function Navbar() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [isListening, setIsListening] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const recognitionRef = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const onSync = (e) => {
@@ -293,6 +303,16 @@ export function HeroSlider() {
   const { locale } = useLocale();
   const dict = getDictionary(locale);
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const slides = 
 [
@@ -410,12 +430,24 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className="bg-[#0b314d] py-1.5 px-1 md:py-2 border-t border-[#D4AF37]/30 shadow-md relative z-40">
+      <div className="bg-[#0b314d] py-2 px-1 md:py-2 border-t border-[#D4AF37]/30 shadow-lg relative z-40">
         <nav
-          className="flex flex-wrap justify-center gap-x-1 md:gap-x-1.5 gap-y-0.5 md:gap-y-1 items-center max-w-6xl mx-auto"
+          className={`${isMobile
+              ? "grid grid-cols-4 gap-x-1 gap-y-2 px-1"
+              : "flex flex-wrap justify-center gap-x-1.5 gap-y-1 items-center"
+            } max-w-6xl mx-auto`}
           dir={navDir}
         >
-          {MENU_CONFIG.map((item) => {
+          {(isMobile
+            ? [
+              MENU_CONFIG.find((i) => i.key === "home"),
+              MENU_CONFIG.find((i) => i.key === "about"),
+              MENU_CONFIG.find((i) => i.key === "articles"),
+              MENU_CONFIG.find((i) => i.key === "library"),
+              ...MENU_CONFIG.filter((i) => !["home", "about", "articles", "library"].includes(i.key)),
+            ]
+            : MENU_CONFIG
+          ).map((item) => {
             const Icon = item.icon;
             const name = dict.menu[item.key];
             const href =
@@ -427,28 +459,34 @@ export function HeroSlider() {
               <Link
                 key={item.key}
                 href={href}
-                className={`group relative flex flex-row items-center gap-0.5 rounded-lg px-1.5 md:px-3 py-0.5 md:py-1.5 transition-all duration-300 hover:-translate-y-1 hover:bg-[#0f4c75]/55 ${active
-                    ? "text-[#D4AF37] bg-[#0f4c75]/35"
-                    : "text-white/80 hover:text-white"
+                className={`group relative flex ${isMobile ? "flex-col justify-center py-2" : "flex-row px-3 py-1.5"
+                  } items-center gap-1 rounded-xl transition-all duration-300 ${isMobile ? "bg-[#0f4c75]/20 border border-[#D4AF37]/10" : "hover:bg-[#0f4c75]/55 hover:-translate-y-1"
+                  } ${active
+                    ? "text-[#D4AF37] bg-[#0f4c75]/50 border-[#D4AF37]/30 shadow-inner"
+                    : "text-white/90 hover:text-white"
                   }`}
               >
-                <span className="text-[10px] md:text-[14px] lg:text-[16px] transition-all duration-500 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:rotate-6 group-hover:text-[#D4AF37] z-10 [&>svg]:block">
+                <span className={`${isMobile ? "text-[16px]" : "text-[14px] lg:text-[16px]"
+                  } transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10`}>
                   <Icon />
                 </span>
                 <span
-                  className={`text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] leading-tight tracking-tight ${locale === "en"
-                      ? "font-sans font-medium"
+                  className={`${isMobile ? "text-[11px]" : "text-[13px] md:text-[14px] lg:text-[15px]"
+                    } leading-none tracking-tight text-center ${locale === "en"
+                      ? "font-sans font-bold"
                       : locale === "fa"
-                        ? "font-persian font-semibold"
-                        : "urdu-text font-normal"
+                        ? "font-persian font-bold"
+                        : "urdu-text font-bold"
                     }`}
                 >
                   {name}
                 </span>
-                <div
-                  className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${active ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                />
+                {!isMobile && (
+                  <div
+                    className={`absolute bottom-0 left-0 h-[1.5px] bg-[#D4AF37] transition-all duration-500 ${active ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                  />
+                )}
               </Link>
             );
           })}

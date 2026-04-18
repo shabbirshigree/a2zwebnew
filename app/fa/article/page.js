@@ -9,7 +9,7 @@ import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 
 // ✅ فقط داده‌های فارسی را برای این صفحه وارد کنید
-import { farsiData } from '../../article/farsi-data';
+import { farsiArticles } from '../../article/index';
 import FarsiArticleDetail from './data';
 
 export default function FarsiArticlesPage() {
@@ -40,7 +40,7 @@ export default function FarsiArticlesPage() {
     if (!mounted || selectedArticle) return;
     const readId = new URLSearchParams(window.location.search).get('read');
     if (!readId) return;
-    const matched = (farsiData || []).find((item) => String(item.id) === String(readId));
+    const matched = (farsiArticles || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
     const key = `${matched.id}-${matched.title}`;
     const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
@@ -51,7 +51,7 @@ export default function FarsiArticlesPage() {
 
   if (!mounted) return null;
 
-  const filteredArticles = (farsiData || [])
+  const filteredArticles = (farsiArticles || [])
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
@@ -93,6 +93,8 @@ export default function FarsiArticlesPage() {
     setArticleViews(updatedViews);
     localStorage.setItem('articleViews', JSON.stringify(updatedViews));
     setSelectedArticle(article);
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleArticleLike = (article) => {
@@ -220,8 +222,8 @@ export default function FarsiArticlesPage() {
                       <h3 className="text-xl font-bold text-[#0b314d] mb-3 leading-tight group-hover:text-[#D4AF37] transition-colors line-clamp-2">
                         {article.title}
                       </h3>
-                      <p className="text-gray-600 text-sm line-clamp-3 mb-6 flex-grow leading-relaxed">
-                        {article.excerpt}
+                      <p className="text-gray-600 text-sm mb-6 flex-grow leading-relaxed whitespace-pre-line text-justify line-clamp-3">
+                        {article.body || article.excerpt}
                       </p>
 
                       {/* نوار تعامل */}
