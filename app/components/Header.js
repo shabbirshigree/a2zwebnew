@@ -344,7 +344,7 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className="relative w-full h-[12rem] md:h-[18rem] lg:h-[20rem] overflow-hidden bg-[#0b314d]">
+      <div className={`relative w-full ${isMobile ? "h-auto aspect-[16/9]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden bg-[#0b314d]`}>
         {slides.map((s, i) => (
           <div
             key={i}
@@ -354,7 +354,7 @@ export function HeroSlider() {
             <img
               src={s.img}
               alt=""
-              className={`w-full h-full ${isMobile ? "object-contain" : "object-cover"} object-center block transition-all duration-[1200ms] ease-in-out ${i === current ? "scale-100" : "scale-[1.05]"}`}
+              className="w-full h-full object-cover object-center block transition-all duration-[1200ms] ease-in-out"
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
@@ -363,9 +363,9 @@ export function HeroSlider() {
             <div className={`absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-transparent transition-opacity duration-[1100ms] ${i === current ? 'opacity-100' : 'opacity-0'}`} />
           </div>
         ))}
-        <div className="absolute inset-x-0 top-0 z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1">
+        <div className={`absolute inset-x-0 ${isMobile ? "top-1" : "top-0"} z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1`}>
           <p
-            className="hero-header-tight hero-mashallah font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
+            className={`${isMobile ? "text-[10px] opacity-80" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
