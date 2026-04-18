@@ -344,28 +344,27 @@ export function HeroSlider() {
 
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
-      <div className={`relative w-full ${isMobile ? "h-[10rem]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden bg-[#0b314d]`}>
+      <div className={`relative w-full ${isMobile ? "h-[6.5rem]" : "h-[15rem] md:h-[18rem] lg:h-[20rem]"} overflow-hidden`}>
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100 animate-slide-glow" : "opacity-0 z-10 scale-[1.04]"
+            className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100" : "opacity-0 z-10"
               }`}
           >
             <img
               src={s.img}
               alt=""
-              className={`w-full h-full ${isMobile ? "object-contain" : "object-cover"} object-center block transition-all duration-[1200ms] ease-in-out`}
+              className="w-full h-full object-fill object-center block"
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
               fetchPriority={i === 0 ? "high" : "low"}
             />
-            <div className={`absolute inset-0 pointer-events-none bg-gradient-to-t from-black/30 via-transparent to-transparent transition-opacity duration-[1100ms] ${i === current ? 'opacity-100' : 'opacity-0'}`} />
           </div>
         ))}
-        <div className={`absolute inset-x-0 ${isMobile ? "top-1" : "top-0"} z-[25] pointer-events-none flex justify-center pt-1 md:pt-1.5 px-1`}>
+        <div className={`absolute inset-x-0 ${isMobile ? "top-0" : "top-0"} z-[25] pointer-events-none flex justify-center pt-0.5 px-1`}>
           <p
-            className={`${isMobile ? "text-[10px] opacity-70" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal tracking-normal max-w-[min(100%,19rem)] drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]`}
+            className={`${isMobile ? "text-[8px] opacity-50" : "hero-header-tight hero-mashallah"} font-kufi text-[#f3e5bc] font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]`}
             dir="rtl"
           >
             {HERO_MASHALLAH_AR}
@@ -373,8 +372,8 @@ export function HeroSlider() {
         </div>
       </div>
 
-      <div className={`${isMobile ? "py-1" : "bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5"} px-1.5 text-center border-t border-[#D4AF37]/30 relative z-40 flex flex-col items-center justify-center gap-1 md:gap-1.5`}>
-        <p className={`${isMobile ? "text-[12px] leading-tight" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5 max-w-[min(100%,19rem)]`}>
+      <div className={`${isMobile ? "py-0.5 bg-[#0f4c75]" : "bg-[#0f4c75]/80 py-1.5 md:py-2 px-1.5"} px-1.5 text-center border-t border-[#D4AF37]/20 relative z-40 flex flex-col items-center justify-center`}>
+        <p className={`${isMobile ? "text-[10px] leading-none" : "hero-header-tight hero-ayah"} hero-ayah font-kufi text-[#ffffff] font-normal tracking-wide stars-effect brightness-150 px-0.5`}>
           {HERO_NUR_AYAH_AR}
         </p>
 
