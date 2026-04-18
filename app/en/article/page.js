@@ -186,6 +186,10 @@ export default function EnglishArticlesPage() {
 
     setSelectedArticle(article);
 
+    // Scroll to top
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
   };
 
 
@@ -194,11 +198,11 @@ export default function EnglishArticlesPage() {
 
     const key = getArticleKey(article);
 
-    const updatedLikes = { ...likedArticles, [key]: !likedArticles[key] };
+    const newLiked = { ...likedArticles, [key]: !likedArticles[key] };
 
-    setLikedArticles(updatedLikes);
+    setLikedArticles(newLiked);
 
-    localStorage.setItem('articleLikes', JSON.stringify(updatedLikes));
+    localStorage.setItem('articleLikes', JSON.stringify(newLiked));
 
   };
 

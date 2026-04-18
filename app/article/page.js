@@ -107,9 +107,9 @@ export default function ArticlesPage() {
 
   const toggleArticleLike = (article) => {
     const key = getArticleKey(article);
-    const updatedLikes = { ...likedArticles, [key]: !likedArticles[key] };
-    setLikedArticles(updatedLikes);
-    localStorage.setItem('articleLikes', JSON.stringify(updatedLikes));
+    const newLiked = { ...likedArticles, [key]: !likedArticles[key] };
+    setLikedArticles(newLiked);
+    localStorage.setItem('articleLikes', JSON.stringify(newLiked));
   };
 
   const getArticleUrl = (article) => {
