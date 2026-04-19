@@ -63,5 +63,15 @@ export const ghaziData = {
     { title: "A Gathering at the Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
     { title: "A View of the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
     { title: "Scene from the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
+  ],
+  extraVideos: [
+    { title: "The Call of Courage, Loyalty, and Sacrifice - Hazrat Ghazi Abbas (AS)", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
+    { title: "Assalamu Alaika Ya Ghareeb Husaina - Shrine of Hazrat Abbas, Karbala", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
+    { title: "Miracle of Hazrat Abbas (AS) - How Mola Abbas Heals", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
+  ],
+  shorts: [
+    { title: "Bab al-Hawaij Hazrat Ghazi Abbas Alamdar (AS)", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
+    { title: "Ziyarat of Hazrat Ghazi Abbas Alamdar (AS) (Urdu)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
+    { title: "In the Presence of Ghazi Abbas Alamdar (AS)", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
   ]
 };

@@ -66,5 +66,15 @@ export const ghaziData = {
     { title: "حرم غازی عباس علیہ السلام کی ایک مجلس", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
     { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا ایک منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
     { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
+  ],
+  extraVideos: [
+    { title: "شجاعت، وفا و ایثار کی پکار - حضرت غازی عباس علمدار علیہ السلام", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
+    { title: "السلام علیک یا غریب حسینا - حرم حضرت عباس کربلا", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
+    { title: "معجزہ حضرت عباس علیہ السلام - مولا عباس کس طرح شفا دیتے ہیں", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
+  ],
+  shorts: [
+    { title: "باب الحوائج حضرت غازی عباس علمدار علیہ السلام", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
+    { title: "زیارت حضرت غازی عباس علمدار علیہ السلام (اردو)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
+    { title: "غازی عباس علمدار علیہ السلام کے حضور", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
   ]
 };

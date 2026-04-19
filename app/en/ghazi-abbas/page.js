@@ -34,6 +34,19 @@ export default function SadayEGhaziPage() {
     setSelectedVideo(video);
   };
 
+  const getYouTubeID = (url) => {
+    if (url.includes('youtu.be/')) {
+      return url.split('youtu.be/')[1]?.split('?')[0];
+    }
+    if (url.includes('youtube.com/watch')) {
+      return url.split('v=')[1]?.split('&')[0];
+    }
+    if (url.includes('youtube.com/shorts/')) {
+      return url.split('shorts/')[1]?.split('?')[0];
+    }
+    return null;
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 overflow-x-hidden" dir="ltr">
       <style>{`
@@ -212,50 +225,97 @@ export default function SadayEGhaziPage() {
                 className="inline-flex items-center justify-center gap-3 px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728] text-[#4a0000] font-bold shadow-lg hover:shadow-2xl hover:scale-105 transition-all border border-white/30"
               >
                 <FaPlay className="text-lg" />
-                Click the playlist to watch all Noor-e-Karbala videos
+                کربلا کی تمام ویڈیوز دیکھنے کے لئے کلک کریں
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. Video Gallery */}
+      {/* 6. Video Gallery (Main Videos) */}
       <section className="py-16 bg-gradient-to-b from-[#1a0000] to-[#3a0000] text-white">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-heading font-bold text-center text-[#D4AF37] mb-12 flex items-center justify-center gap-3">
-            <FaVideo /> <span className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4C1] bg-clip-text text-transparent">Video Gallery</span>
+          <h3 className="text-xl md:text-3xl font-heading font-bold text-center text-[#D4AF37] mb-12 flex items-center justify-center gap-3 leading-relaxed max-w-5xl mx-auto">
+            <FaVideo className="shrink-0" /> Some memorable moments from the shrine of the King of Loyalty, Ghazi Abbas Alamdar (AS), through the lens of Haji Shabbir Ahmed Shigri
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {[
-              { title: "The First Pilgrim of Karbala", url: "https://youtu.be/MYbMuu9sg3s?si=mj6qT5fkB-5n38FL" },
-              { title: "Khaimagah-e-Hussaini", url: "https://youtu.be/pw29b_Mqg8s?si=iJud14tKFG3g2MT6" },
-              { title: "Ziyarat of Imam Hussain (A.S)", url: "https://youtu.be/r2NUy3mYve4?si=4kVCb2RpkbBdRpxq" },
-              { title: "Tilla-e-Zainabia, Karbala", url: "https://youtu.be/diePDvkdzD0?si=PHdVfJQrFNsKsC5x" },
-              { title: "Garden of Imam Jafar Sadiq (A.S)", url: "https://youtu.be/RdZYvRzaZl4?si=5bboNMiizCB38mJv" },
-              { title: "Station of Sahib al-Zaman (ATFS)", url: "https://youtu.be/PIjyHnlj6s0?si=P6av1oV-GU5tkHay" },
-              { title: "River Euphrates (Al-Qamah)", url: "https://youtu.be/0J-Vn23WxyY?si=vAojdORkbH51AmLv" },
-              { title: "Sher-o-Fizza: Site & Story", url: "https://youtu.be/Q20yfyJu1Iw?si=U6X8eG9jmN2ejV3Y" },
-              { title: "Bohra Mourning at Khaimagah", url: "https://youtu.be/XERYBheJH30?si=9G-9_fj_md-L1yoD" }
-            ].map((video, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+             {/* Main Videos (YouTube + Cloudinary) */}
+             {[ghaziData.extraVideos[0], ...ghaziData.ziyaratVideos.slice(0, 6), ...ghaziData.extraVideos.slice(1)].map((video, i) => (
               <div 
                 key={i} 
                 className="rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]/60 bg-black hover:scale-105 transition-transform flex flex-col cursor-pointer touch-manipulation group"
-                onClick={() => openVideoPlayer(video)}
+                onClick={() => {
+                  if (video.url.includes('youtube.com') || video.url.includes('youtu.be')) {
+                    openVideoPlayer(video);
+                  } else {
+                    openLightbox(0, [video.url]);
+                  }
+                }}
               >
                 <div className="relative aspect-video bg-black">
-                  <img 
-                    src={`https://img.youtube.com/vi/${video.url.split('youtu.be/')[1]?.split('?')[0]}/maxresdefault.jpg`}
-                    alt={video.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => { e.target.src = 'https://via.placeholder.com/640x360/1a0000/D4AF37?text=Video'; }}
-                  />
+                  {video.url.includes('youtube.com') || video.url.includes('youtu.be') ? (
+                    <img 
+                      src={`https://img.youtube.com/vi/${getYouTubeID(video.url)}/maxresdefault.jpg`}
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.target.src = 'https://via.placeholder.com/640x360/1a0000/D4AF37?text=YouTube+Video'; }}
+                    />
+                  ) : (
+                    <video 
+                      src={video.url}
+                      className="w-full h-full object-cover pointer-events-none"
+                      muted
+                      onMouseOver={(e) => e.target.play()}
+                      onMouseOut={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+                    />
+                  )}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition-all">
                     <FaPlay className="text-5xl text-[#D4AF37] opacity-90 group-hover:scale-110 transition-transform" />
                   </div>
                 </div>
-                <div className="p-4 bg-gradient-to-b from-black/90 to-black text-center">
-                  <h4 className="text-lg md:text-xl font-heading font-bold text-[#D4AF37] mb-2">{video.title}</h4>
-                  <p className="text-sm text-gray-300 opacity-80">Click to watch on YouTube</p>
+                <div className="p-4 bg-gradient-to-b from-black/90 to-black text-center min-h-[80px] flex items-center justify-center">
+                  <h4 className="text-lg md:text-xl font-heading font-bold text-[#D4AF37] leading-relaxed">{video.title}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Short Video Clips (Shorts) */}
+      <section className="py-16 bg-[#2a0000] border-t border-[#D4AF37]/20">
+        <div className="container mx-auto px-4">
+          <h3 className="text-2xl md:text-3xl font-heading font-bold text-center text-[#D4AF37] mb-10 flex items-center justify-center gap-3">
+            <FaVideo className="text-xl" /> Short Video Clips (Shorts)
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[...ghaziData.shorts, ...ghaziData.ziyaratVideos.slice(6)].map((vid, i) => (
+              <div
+                key={i}
+                className="aspect-[9/16] rounded-xl overflow-hidden shadow-xl border border-[#D4AF37]/40 bg-black cursor-pointer group relative hover:scale-105 transition-transform"
+                onClick={() => {
+                  if (vid.url.includes('youtube.com') || vid.url.includes('youtu.be')) {
+                    openVideoPlayer(vid);
+                  } else {
+                    openLightbox(0, [vid.url]);
+                  }
+                }}
+              >
+                {vid.url.includes('youtube.com') || vid.url.includes('youtu.be') ? (
+                   <img 
+                    src={`https://img.youtube.com/vi/${getYouTubeID(vid.url)}/maxresdefault.jpg`}
+                    alt={vid.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => { e.target.src = 'https://via.placeholder.com/360x640/1a0000/D4AF37?text=Shorts'; }}
+                  />
+                ) : (
+                  <video src={vid.url} className="w-full h-full object-cover pointer-events-none" muted />
+                )}
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all flex items-center justify-center">
+                  <FaPlay className="text-3xl text-white opacity-60 group-hover:scale-125 transition-transform" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/80 to-transparent">
+                  <p className="text-[10px] md:text-xs text-white text-center line-clamp-2 leading-tight">{vid.title}</p>
                 </div>
               </div>
             ))}
@@ -303,29 +363,6 @@ export default function SadayEGhaziPage() {
         </div>
       </section>
 
-      {/* 8. Blessed Moments of the Loyal Emperor */}
-      <section className="py-20 bg-[#2a0000] text-white border-t-8 gold-border">
-        <div className="container mx-auto px-4">
-          <h3 className="text-xl md:text-3xl font-heading font-bold text-center text-[#D4AF37] mb-12 max-w-4xl mx-auto leading-relaxed">
-            Blessed moments from the shrine of Ghazi Abbas (AS), captured by Haji Shabbir Ahmed Shigri's camera
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ghaziData.ziyaratVideos.map((vid, i) => (
-              <div 
-                key={i} 
-                className="rounded-2xl overflow-hidden shadow-2xl border-2 gold-border bg-black hover:scale-105 transition-transform flex flex-col cursor-pointer touch-manipulation"
-                onClick={() => openLightbox(i, ghaziData.ziyaratVideos.map(v => v.url))}
-              >
-                <video src={vid.url} className="w-full aspect-video bg-black pointer-events-none" />
-                <div className="p-4 bg-black/90 text-center text-[#D4AF37] font-bold text-lg md:text-xl font-heading border-t border-[#D4AF37]/30 flex-grow flex items-center justify-center">
-                  {vid.title}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Footer />
 
       {/* 🔴 Video Player Lightbox 🔴 */}
@@ -344,7 +381,7 @@ export default function SadayEGhaziPage() {
             <div className="relative w-full bg-black rounded-2xl overflow-hidden shadow-2xl border-2 border-[#D4AF37]">
               <iframe
                 className="w-full aspect-video"
-                src={`https://www.youtube.com/embed/${selectedVideo.url.split('youtu.be/')[1]?.split('?')[0]}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${getYouTubeID(selectedVideo.url)}?autoplay=1`}
                 title={selectedVideo.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
