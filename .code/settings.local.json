@@ -1,0 +1,7 @@
+{
+  "api": {
+    "anthropicApiKey": "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",
+    "anthropicBaseUrl": "https://openrouter.ai/api/v1"
+  },
+  "defaultModel": "minimax/minimax-m2.5:free"
+}

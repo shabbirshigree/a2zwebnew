@@ -176,23 +176,18 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
             <div className="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-4"></div>
           </div>
 
-          {/* ایرانی یادگاری شیلڈ (New Entry) */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+          {/* آستان قدس رضوی کی سند */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.05)]">
             <div className="urdu-text">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 leading-snug">
-                <FaAward className="shrink-0" /> خصوصی یادگاری شیلڈ / اعزاز
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                <FaCertificate /> آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر
               </h3>
-              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
-                <p>
-                  سابق ایرانی سفیر سید محمد علی حسینی کی جانب سے شبیر احمد شگری کو ان کی بہترین کارکردگی اور علمی خدمات کے اعتراف میں پیش کیا گیا ایک خصوصی تحفہ اور اعزاز۔ یہ خوبصورت یادگاری شیلڈ ان کی تحقیقی کاوشوں اور بین الثقافتی تعلقات کے فروغ میں ان کے اہم کردار کی علامت ہے۔
-                </p>
-                <div className="pt-4 border-t border-[#D4AF37]/20">
-                  <p className="text-[#D4AF37] font-bold text-base md:text-lg">سفیرِ اسلامی جمہوریہ ایران برائے پاکستان</p>
-                </div>
-              </div>
+              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
+                یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
+              </p>
             </div>
-            <div className="img-wrap h-[350px] md:h-[550px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Special Commemorative Award from Iranian Ambassador" />
+            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>
@@ -223,18 +218,23 @@ title: "شعبہ اردوزائرین۔ حرم امام رضاؑ۔آقائ عل�
             </div>
           </div>
 
-          {/* آستان قدس رضوی کی سند */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.05)]">
+          {/* ایرانی یادگاری شیلڈ (New Entry) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-6 md:p-10 award-card border border-[#D4AF37]/30 bg-gradient-to-b from-[#0a0a0a] to-[#111] shadow-[0_0_30px_rgba(212,175,55,0.1)]">
             <div className="urdu-text">
-              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
-                <FaCertificate /> آستان قدس رضوی کی جانب سے اظہارِ تشکر و تقدیر
+              <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3 leading-snug">
+                <FaAward className="shrink-0" /> خصوصی یادگاری شیلڈ / اعزاز
               </h3>
-              <p className="text-gray-300 text-lg text-justify font-light leading-relaxed">
-                یہ اعزاز عالمِ اسلام کے عظیم علمی و روحانی مرکز آستان قدس رضوی (مشہد، ایران) کی جانب سے حاجی شبیر احمد شگری کو ان کے علمی تعاون اور دینی و فکری محافل کے کامیاب انعقاد و انتظام کے اعتراف میں پیش کیا گیا۔ اس مکتوب میں اسلامی تعلیمات کے فروغ اور انسانی معاشرے کی ترقی کے لیے ان کی کوششوں کو سراہتے ہوئے بارگاہِ امام رضا علیہ السلام کے سائے میں ان کی کامیابیوں کے لیے دعا کی گئی ہے۔
-              </p>
+              <div className="space-y-4 text-gray-300 text-lg text-justify font-light leading-relaxed">
+                <p>
+                  سابق ایرانی سفیر سید محمد علی حسینی کی جانب سے شبیر احمد شگری کو ان کی بہترین کارکردگی اور علمی خدمات کے اعتراف میں پیش کیا گیا ایک خصوصی تحفہ اور اعزاز۔ یہ خوبصورت یادگاری شیلڈ ان کی تحقیقی کاوشوں اور بین الثقافتی تعلقات کے فروغ میں ان کے اہم کردار کی علامت ہے۔
+                </p>
+                <div className="pt-4 border-t border-[#D4AF37]/20">
+                  <p className="text-[#D4AF37] font-bold text-base md:text-lg">سفیرِ اسلامی جمہوریہ ایران برائے پاکستان</p>
+                </div>
+              </div>
             </div>
-            <div className="img-wrap h-[300px] md:h-[450px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
-               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Astan Quds Razavi Certificate" />
+            <div className="img-wrap h-[350px] md:h-[550px] shadow-2xl border-2 border-[#D4AF37]/20 rounded-xl overflow-hidden group relative">
+               <img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776029658/iranian_safeer_gift.2png_slqrkw.png" className="w-full h-full object-contain bg-black/50 group-hover:scale-105 transition-transform duration-500" alt="Special Commemorative Award from Iranian Ambassador" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           </div>

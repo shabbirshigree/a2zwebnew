@@ -150,4 +150,4 @@ export default React.memo(function UrduFlipBook({ pdfUrl, title, onClose, isLand
       </div>
     </div>
   );
-}
+});
