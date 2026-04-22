@@ -203,9 +203,10 @@ const QuranIntroCard = ({ lang = 'ur', phase = 1 }) => {
             borderBottom: '3px solid #D4AF37',
             paddingBottom: '12px',
             margin: '0',
-            fontSize: '28px',
+            fontSize: '32px',
             fontWeight: 'bold',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
+            textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
+            fontFamily: "'Jameel Noori Nastaleeq', serif"
           }}>
             {data.title}
           </h2>
@@ -214,12 +215,13 @@ const QuranIntroCard = ({ lang = 'ur', phase = 1 }) => {
         {/* مواد */}
         <p style={{
           whiteSpace: 'pre-line',
-          fontSize: '18px',
-          lineHeight: '1.8',
+          fontSize: '20px',
+          lineHeight: '1.9',
           color: '#2d3748',
           marginBottom: '25px',
           textAlign: 'justify',
-          textShadow: '0 1px 1px rgba(0,0,0,0.05)'
+          textShadow: '0 1px 1px rgba(0,0,0,0.05)',
+          fontFamily: "'Jameel Noori Nastaleeq', serif"
         }}>
           {data.body}
         </p>

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLocale } from "../components/LocaleProvider";
 import { getDictionary } from "../lib/i18n";
@@ -396,34 +397,55 @@ export function HomeContent() {
         </section>
 
 
-        {/* 🎥 شخصیات سلائیڈر */}
-        <section className="bg-[#1a1a1a] py-10 relative overflow-hidden border-y-4 border-[#D4AF37]">
-          <div className="container mx-auto px-2 relative z-10 text-center">
-            <h2 className={`text-lg md:text-2xl font-bold text-[#D4AF37] text-center ${bodyFont(locale)} mb-6 border-b border-[#D4AF37]/30 pb-2 inline-block mx-auto leading-snug px-2`}>{labels.legendsHead}</h2>
-            <div className="relative w-full overflow-hidden" dir="ltr">
-              <div className="flex gap-6 w-max animate-scroll-left pause-on-hover px-4">
-                {infiniteLegends?.map((item, i) => (
-                  <div key={i} className="card-lift" onClick={() => setActiveVideo(item.video)}>
-                    <div className="min-w-[200px] md:min-w-[260px] h-[150px] relative rounded-xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/60 bg-black group shadow-lg">
-                      <img src={item.img} alt={item.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-transparent transition-all">
-                        <div className="bg-[#D4AF37]/80 p-3 rounded-full border-2 border-white group-hover:scale-125 transition-all shadow-[0_0_20px_rgba(212,175,55,0.6)]">
-                          <FaPlay size={18} className="text-white pl-1" />
-                        </div>
+        {/* 🎥 شخصیات گیلری (نامور شخصیات کے خیالات) */}
+        <section className="bg-[#0a0a0a] py-12 md:py-20 relative overflow-hidden border-y-4 border-[#D4AF37]">
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <h2 className={`text-2xl md:text-5xl font-bold text-[#D4AF37] text-center ${bodyFont(locale)} mb-12 border-b-2 border-[#D4AF37]/30 pb-4 inline-block mx-auto leading-snug px-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]`}>
+              {labels.legendsHead}
+            </h2>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 max-w-7xl mx-auto justify-items-center">
+              {legends?.map((item, i) => (
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="w-full group"
+                  onClick={() => setActiveVideo(item.video)}
+                >
+                  <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3">
+                    <img 
+                      src={item.img} 
+                      alt={item.name} 
+                      className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                    />
+                    <div className="absolute inset-0 flex items-end justify-start p-3 bg-gradient-to-t from-black/40 to-transparent group-hover:bg-transparent transition-all">
+                      <div className="bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10">
+                        <FaPlay size={12} className="text-black ml-0.5" />
                       </div>
-                      <div className={`absolute bottom-0 w-full bg-gradient-to-t from-black via-black/90 to-transparent p-2.5 text-center text-xs md:text-sm text-[#D4AF37] ${bodyFont(locale)} font-semibold tracking-wide leading-tight`}>{item.name}</div>
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className="text-center px-2">
+                    <div className={`text-[#D4AF37] text-sm md:text-base ${bodyFont(locale)} font-bold leading-tight drop-shadow-md group-hover:text-white transition-colors duration-300`}>
+                      {item.name}
+                    </div>
+                    <div className={`text-gray-400 text-[10px] md:text-xs mt-1 ${bodyFont(locale)} font-medium leading-relaxed`}>
+                      {item.role}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* 📚 تصانیف سلائیڈر */}
-        <section className="container mx-auto px-2 py-10 relative z-10">
-          <h2 className={`text-lg md:text-2xl font-bold text-[#0f4c75] text-center ${bodyFont(locale)} mb-6 border-b-2 border-[#D4AF37]/30 pb-2 inline-block mx-auto w-full leading-snug px-2`}>{labels.booksHead}</h2>
-          <div className="bg-white p-6 rounded-[2rem] shadow-xl border border-[#D4AF37]/20 overflow-hidden" dir="ltr">
+        <section className="container mx-auto px-4 py-16 relative z-10">
+          <div className="text-center mb-10">
+            <h2 className={`text-2xl md:text-5xl font-bold text-[#0f4c75] text-center ${bodyFont(locale)} mb-4 border-b-2 border-[#D4AF37]/30 pb-4 inline-block mx-auto leading-snug px-4`}>{labels.booksHead}</h2>
+          </div>
+          <div className="bg-white p-8 rounded-[3rem] shadow-2xl border-2 border-[#D4AF37]/20 overflow-hidden" dir="ltr">
             <div className="flex gap-8 w-max animate-scroll-right pause-on-hover px-4">
               {infiniteBooks?.map((item, i) => (
                 <div key={i} className="card-lift">

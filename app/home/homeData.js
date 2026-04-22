@@ -149,6 +149,34 @@ export const booksTitlesFa = [
 // 🔴 6. نامور شخصیات کا مکمل ڈیٹا
 export const legendsData = [
   {
+    name: "شیخ علی نوری نجفی",
+    role: "بین الحرمین کربلا، عراق",
+    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg",
+    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
+    quote: ""
+  },
+  {
+    name: "مولانا عبدالخالق جعفری",
+    role: "خطیب و خادم حرم مطهر امام رضا علیہ السلام",
+    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_5/v1776841560/Ag_jaffari_t487zc.jpg",
+    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841560/Ag_jaffari_t487zc.mp4",
+    quote: ""
+  },
+  {
+    name: "نجف علی سعادتی",
+    role: "قاری و خادم زائرین امام علی ابن موسیٰ الرضا علیہ السلام",
+    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_8/v1776841527/Najaf_Ali_Saadati_dsemnc.jpg",
+    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841527/Najaf_Ali_Saadati_dsemnc.mp4",
+    quote: ""
+  },
+  {
+    name: "مولانا محمد حسین اکبر",
+    role: "سربراہ ادارہ منھاج الحسین ،لاہور",
+    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_15/v1776841457/Molana-Akbar-about-Shigri_hwg7jg.jpg",
+    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841457/Molana-Akbar-about-Shigri_hwg7jg.mp4",
+    quote: ""
+  },
+  {
     name: "جعفر روہناس",
     role: "DG خانہ فرہنگ ایران، لاہور",
     img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1771770325/IMG20230623164017_Copy_ddz2fd.jpg",
@@ -221,6 +249,10 @@ export const legendsData = [
 ];
 
 const legendRolesEn = [
+  "Bayn al-Haramayn, Karbala, Iraq",
+  "Speaker & Servant of Imam Reza (A.S) Shrine",
+  "Reciter & Servant of Pilgrims at Imam Reza (A.S) Shrine",
+  "Head of Minhaj-ul-Hussain Institution, Lahore",
   "Director, Iran Culture House, Lahore",
   "Former Chief Minister of Punjab",
   "Peace Committee",
@@ -234,6 +266,10 @@ const legendRolesEn = [
 ];
 
 const legendNamesEn = [
+  "Sheikh Ali Noori Najafi",
+  "Maulana Abdul Khaliq Jafari",
+  "Najaf Ali Saadati",
+  "Maulana Muhammad Hussain Akbar",
   "Jafar Rohanas",
   "Manzoor Ahmed Watto",
   "Pir Usman Noori",
@@ -247,6 +283,10 @@ const legendNamesEn = [
 ];
 
 const legendRolesFa = [
+  "بین‌الحرمین کربلا، عراق",
+  "خطیب و خادم حرم مطهر امام رضا (ع)",
+  "قاری و خادم زائرین امام علی بن موسی الرضا (ع)",
+  "رئیس موسسه منهاج الحسین، لاهور",
   "رایزن فرهنگی ایران، لاهور",
   "استاندار سابق پنجاب",
   "کمیته صلح",
@@ -259,6 +299,23 @@ const legendRolesFa = [
   "عالم دینی",
 ];
 
+const legendNamesFa = [
+  "شیخ علی نوری نجفی",
+  "مولانا عبدالخالق جعفری",
+  "نجف علی سعادتی",
+  "مولانا محمد حسین اکبر",
+  "جعفر روهناس",
+  "منظور احمد وٹو",
+  "پیر عثمان نوری",
+  "پیر غلام رسول اویسی",
+  "پیر عثمان الدین برهانی",
+  "حافظ عبدالغفار روپڑی",
+  "سردار محمد خان لغاری",
+  "پیر معصوم نقوی",
+  "سردار سکندر سنگھ",
+  "دکتر محمد صداقت علی فریدی",
+];
+
 export const legendsDataEn = legendsData.map((l, i) => ({
   ...l,
   name: legendNamesEn[i] ?? l.name,
@@ -267,6 +324,7 @@ export const legendsDataEn = legendsData.map((l, i) => ({
 
 export const legendsDataFa = legendsData.map((l, i) => ({
   ...l,
+  name: legendNamesFa[i] ?? l.name,
   role: legendRolesFa[i] ?? l.role,
 }));
 

@@ -382,13 +382,15 @@ export default function UltimateAboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto" dir="ltr">
             {legendsData.map((item, i) => (
               <div key={i} className="bg-white/5 p-4 rounded-2xl border border-white/10 hover:border-[#D4AF37] transition-all text-center group cursor-pointer" onClick={() => setActiveVideo(item.video)}>
-                <div className="relative">
-                  <img src={item.img} className="w-full h-48 object-cover rounded-xl mb-4 grayscale group-hover:grayscale-0 transition-all" alt={item.name} />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
-                    <div className="bg-[#D4AF37] text-black p-4 rounded-full"><FaPlay /></div>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-4">
+                  <img src={item.img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt={item.name} />
+                  <div className="absolute inset-0 flex items-end justify-start p-3 bg-black/10 group-hover:bg-transparent transition-all">
+                    <div className="bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                      <FaPlay size={12} className="text-black ml-0.5" />
+                    </div>
                   </div>
                 </div>
-                <h4 className="text-[#D4AF37] font-bold urdu-text text-xl">{item.name}</h4>
+                <h4 className="text-[#D4AF37] font-bold urdu-text text-xl group-hover:text-white transition-colors duration-300">{item.name}</h4>
               </div>
             ))}
           </div>
