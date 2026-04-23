@@ -50,11 +50,36 @@ export const metadata = {
   title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
   description: 'حاجی شبیر احمد شگری کی علمی، تحقیقی اور صحافتی خدمات کا مجموعہ۔ نور القرآن پروجیکٹ اور اتحادِ امت کے لیے خصوصی کاوشیں۔',
   keywords: 'Shabbir Ahmed Shigri, Noor-ul-Quran, Visual Quran, Islamic Scholar, Journalist, Pakistan, Iran, Unity of Ummah',
+  alternates: {
+    canonical: 'https://www.shigri.info',
+  },
   openGraph: {
-    title: 'Haji Shabbir Ahmed Shigri | Official Website',
-    description: 'Explore 45 years of dedicated service in journalism, culture, and religious research by Haji Shabbir Ahmed Shigri.',
+    title: 'نورالقرآن پراجیکٹ | حاجی شبیر احمد شگری',
+    description: 'دنیا کا پہلا ویژول قرآن پراجیکٹ اور حاجی شبیر احمد شگری کی 45 سالہ خدمات۔',
+    url: 'https://www.shigri.info',
+    siteName: 'Haji Shabbir Ahmed Shigri',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
+        width: 1200,
+        height: 630,
+        alt: 'Noor-ul-Quran Project Logo',
+      },
+    ],
+    locale: 'ur_PK',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'نورالقرآن پراجیکٹ | حاجی شبیر احمد شگری',
+    description: 'دنیا کا پہلا ویژول قرآن پراجیکٹ اور حاجی شبیر احمد شگری کی 45 سالہ خدمات۔',
     images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
   },
+  whatsapp: {
+    title: 'نورالقرآن پراجیکٹ | آفیشل ویب سائٹ',
+    description: 'حاجی شبیر احمد شگری کی علمی و دینی خدمات اور دنیا کا پہلا ویژول قرآن۔',
+    status: 'online',
+  }
 }
 
 export default function RootLayout({ children }) {
