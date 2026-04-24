@@ -1,319 +1,48 @@
-"use client";
+import GalleryClient from './GalleryClient';
+import { GALLERY_ITEMS } from '../../gallery/galleryData';
 
-import { useState, useEffect } from "react";
-import { FaSearch, FaPlay, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
-import { Navbar, HeroSlider } from "../../components/Header";
-import Footer from "../../components/Footer";
-import { useLocale } from "../../components/LocaleProvider";
-import { GALLERY_ITEMS, CATEGORIES } from "../../gallery/galleryData";
-
-const CATEGORY_LABELS = {
-  all: "همه",
-  reza: "خادم امام رضا",
-  abbas: "خادم حضرت عباس",
-  "pak-iran": "دوستی ایران و پاکستان",
-  awards: "جوایز",
-  diplomacy: "روابط دیپلماتیک",
-  culture: "فرهنگ",
-  media: "رسانه",
-  meetings: "ملاقات‌ها",
-  places: "زیارت‌ها",
-  unity: "اتحاد اسلامی",
-  video: "ویدیوها",
-};
-
-const TAG_TRANSLATIONS = {
-  ویڈیو: "ویدیو",
-  یوٹیوب: "یوتیوب",
-  "خادمِ رضا": "خادم امام رضا",
-  "خادمِ عباس": "خادم حضرت عباس",
-  دوستی: "دوستی",
-  اعزاز: "افتخار",
-  سفارت: "دیپلماسی",
-  ثقافت: "فرهنگ",
-  میڈیا: "رسانه",
-  ملاقات: "دیدار",
-  زیارت: "زیارت",
-  سفر: "سفر",
-  اتحاد: "اتحاد",
-};
-
-const DESC_TRANSLATIONS = {
-  "قونصل جنرل ایران کی الوداعی ملاقات۔": "دیدار خداحافظی با کنسول عمومی ایران.",
-  "محافظ حرم حضرت عباسؑ ہونے کا اعزاز۔": "افتخار محافظت از حرم حضرت عباس علیه‌السلام.",
-  "مشہد مقدس میں حاضری۔": "زیارت مشهد مقدس.",
-  "حرم مطہر میں خدمت۔": "خدمت در حرم مطهر.",
-  "آستان قدس رضوی۔": "آستان قدس رضوی.",
-  "خدمت کا شرف۔": "افتخار خدمت.",
-  "خادم حرم۔": "خادم حرم.",
-  "مشہد یادگار۔": "یادگار مشهد.",
-  "صحن حرم۔": "صحن حرم.",
-  "اعزاز۔": "افتخار.",
-  "زیارت۔": "زیارت.",
-  "خادم حرم حضرت عباسؑ۔": "خادم حرم حضرت عباس علیه‌السلام.",
-  "کربلا معلیٰ۔": "کربلا معلی.",
-  "حرم کا اندرونی منظر۔": "نمای داخلی حرم.",
-  "ڈیوٹی کے دوران۔": "در حین انجام خدمت.",
-  "ضریح مبارک۔": "ضریح مبارک.",
-  "علمدارؑ کا در۔": "درگاه علمدار علیه‌السلام.",
-  "کربلا حاضری۔": "حضور در کربلا.",
-  "پاک ایران دوستی۔": "دوستی ایران و پاکستان.",
-  "دوستی تقریب۔": "مراسم دوستی.",
-  "وفد کے ساتھ۔": "با اعضای هیئت.",
-  "یادگار لمحہ۔": "لحظه ماندگار.",
-  "ملاقات۔": "دیدار.",
-  "گروپ فوٹو۔": "عکس گروهی.",
-  "سیمینار۔": "سمینار.",
-  "تقریب۔": "مراسم.",
-  "کانفرنس۔": "کنفرانس.",
-  "شرکاء۔": "شرکت‌کنندگان.",
-  "دوستی۔": "دوستی.",
-  "زندہ باد۔": "زنده باد.",
-  "مشترکہ تجارتی نمائش۔": "نمایشگاه تجاری مشترک.",
-  "بیسٹ میڈیا ایوارڈ 2025۔": "بهترین جایزه رسانه ۲۰۲۵.",
-  "غلاف کعبہ ٹوپی کا تحفہ۔": "هدیه کلاه با جلد کعبه.",
-  "ایوارڈ وصولی۔": "دریافت جایزه.",
-  "اعزازات۔": "افتخارات.",
-  "دستار بندی۔": "دستار بندی.",
-  "خصوصی اعزاز۔": "افتخار ویژه.",
-  "ثقافتی قونصلر کے ساتھ۔": "با رایزن فرهنگی.",
-  "سفیر ایران سے ملاقات۔": "دیدار با سفیر ایران.",
-  "سفارت خانہ۔": "سفارتخانه.",
-  "تحفہ وصولی۔": "دریافت هدیه.",
-  "قونصلیٹ۔": "کنسولگری.",
-  "میٹنگ۔": "جلسه.",
-  "سفارتی امور۔": "امور دیپلماتیک.",
-  "رائزن فرہنگی۔": "رایزن فرهنگی.",
-  "قونصل جنرل۔": "کنسول عمومی.",
-  "وفد۔": "هیئت.",
-  "پبلک ریلیشنز آفیسر۔": "افسر روابط عمومی.",
-  "پی آر او (لاہور)۔": "PRO (لاهور).",
-  "ثقافتی نمائش۔": "نمایشگاه فرهنگی.",
-  "کلچرل ہال۔": "سالن فرهنگی.",
-  "پروگرام آرگنائزر۔": "مجری برنامه.",
-  "ایرانی آرٹ۔": "هنر ایرانی.",
-  "گروپ فوٹو۔": "عکس گروهی.",
-  "PRO Services": "خدمات PRO.",
-  "ریڈیو پاکستان (FM 93)۔": "رادیو پاکستان (FM 93).",
-  "ٹی وی ٹاک شو۔": "برنامه گفتگو تلویزیونی.",
-  "میڈیا ڈسکشن۔": "بحث رسانه‌ای.",
-  "لائیو پروگرام۔": "پروگرام زنده.",
-  "اسٹوڈیو۔": "استودیو.",
-  "گفتگو۔": "گفتگو.",
-  "ریکارڈنگ۔": "ضبط.",
-  "پروگرام۔": "برنامه.",
-  "میزبانی۔": "مجریگری.",
-  "چینل۔": "کانال.",
-  "وزیر بیت المال۔": "وزیر بیت المال.",
-  "سیکرٹری اوقاف۔": "دبیر اوقاف.",
-  "حسن عسکری۔": "حسن عسکری.",
-  "منظور وٹو۔": "منظور وٹو.",
-  "سابق وزیر تعلیم۔": "وزیر سابق آموزش.",
-  "محسن نجفی مزار۔": "مزار محسن نجفی.",
-  "اسپیکر جی بی۔": "سخنگوی GB.",
-  "حج بیت اللہ۔": "حج بیت‌الله.",
-  "مدینہ منورہ۔": "مدینه منوره.",
-  "ایران کا سفر۔": "سفر ایران.",
-  "تاریخی مقام۔": "مکان تاریخی.",
-  "سیاحت۔": "گردشگری.",
-  "خوبصورت نظارہ۔": "منظره‌ای زیبا.",
-  "رات کا منظر۔": "نمای شب.",
-  "امام خمینیؒ ہاؤس۔": "خانه امام خمینی.",
-  "طبیعت پل۔": "پل طبیعت.",
-  "اقبالؒ کی جائے پیدائش۔": "محل تولد اقبال.",
-  "بین المذاہب ہم آہنگی۔": "هماهنگی بین مذاهب.",
-  "وحدت میٹنگ۔": "جلسه وحدت.",
-  "بین المسالک اتحاد۔": "اتحاد بین المذاهب.",
-  "میلاد مصطفیٰؐ۔": "میلاد مصطفی.",
-  "علمائے کرام کا اتحاد۔": "اتحاد علمای کرام.",
-};
-
-export default function FarsiGalleryPage() {
-  const { setLocale } = useLocale();
-  const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [filtered, setFiltered] = useState(GALLERY_ITEMS);
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-  useEffect(() => {
-    setLocale("fa");
-  }, [setLocale]);
-
-  useEffect(() => {
-    let result = GALLERY_ITEMS;
-    if (activeCategory !== "all") {
-      result = result.filter((item) => item.category.split(" ").includes(activeCategory));
+export async function generateMetadata({ searchParams }) {
+    const params = await searchParams;
+    const itemId = params.i;
+    
+    if (itemId) {
+        const item = GALLERY_ITEMS.find(it => it.id === itemId);
+        if (item) {
+            const title = `${item.tag} | گالری`;
+            const description = item.desc;
+            let imageUrl = item.src;
+            
+            if (item.type === 'yt') {
+                imageUrl = `https://img.youtube.com/vi/${item.id_yt}/maxresdefault.jpg`;
+            } else if (item.type === 'video') {
+                imageUrl = item.poster;
+            }
+            
+            return {
+                title,
+                description,
+                openGraph: {
+                    title,
+                    description,
+                    images: [{ url: imageUrl }],
+                    type: item.type === 'img' ? 'article' : 'video.other',
+                },
+                twitter: {
+                    card: 'summary_large_image',
+                    title,
+                    description,
+                    images: [imageUrl],
+                },
+            };
+        }
     }
-    if (query.trim()) {
-      const q = query.trim().toLowerCase();
-      result = result.filter(
-        (item) =>
-          item.desc.toLowerCase().includes(q) || item.tag.toLowerCase().includes(q)
-      );
-    }
-    setFiltered(result);
-  }, [query, activeCategory]);
 
-  const openLightbox = (index) => setSelectedIndex(index);
-  const closeLightbox = () => setSelectedIndex(null);
-  const currentItem = selectedIndex !== null ? filtered[selectedIndex] : null;
+    return {
+        title: 'گالری تصاویر | حاجی شبیر احمد شگری',
+        description: 'نکات برجسته تصویری و ویدیویی از ۴۵ سال خدمت حاجی شبیر احمد شگری.',
+    };
+}
 
-  const goNext = (e) => {
-    e?.stopPropagation();
-    if (selectedIndex !== null) setSelectedIndex((selectedIndex + 1) % filtered.length);
-  };
-
-  const goPrev = (e) => {
-    e?.stopPropagation();
-    if (selectedIndex !== null) setSelectedIndex(selectedIndex === 0 ? filtered.length - 1 : selectedIndex - 1);
-  };
-
-  const translatedCategories = CATEGORIES.map((cat) => ({
-    value: cat.value,
-    label: CATEGORY_LABELS[cat.value] || cat.label,
-  }));
-
-  const displayedItems = filtered.map((item) => ({
-    ...item,
-    tag: TAG_TRANSLATIONS[item.tag] || item.tag,
-    desc: DESC_TRANSLATIONS[item.desc] || item.desc,
-  }));
-
-  return (
-    <main className="min-h-screen bg-[#f4f7f9] overflow-x-hidden font-sans" dir="rtl">
-      <Navbar />
-      <HeroSlider />
-
-      <section className="bg-[#0b314d] py-16 md:py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]" />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#0b314d]/50" />
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
-          <h1 className="text-3xl md:text-6xl font-extrabold text-[#D4AF37] mb-4 text-center">سفر تصویری مستند</h1>
-          <p className="text-white/80 text-xl md:text-2xl font-light tracking-widest mb-4 text-center mx-auto max-w-3xl">لحظه‌هایی از خدمت ۴۵ ساله</p>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mt-8 rounded-full" />
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 -mt-10 relative z-20">
-        <div className="flex items-center bg-white border-b-4 border-[#D4AF37] rounded-2xl px-6 py-4 shadow-2xl max-w-3xl mx-auto backdrop-blur-md bg-white/90">
-          <FaSearch size={22} className="text-[#0b314d] mr-4 opacity-50" />
-          <input
-            type="text"
-            placeholder="جستجو در خاطرات..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="flex-1 outline-none text-gray-800 bg-transparent text-right text-lg md:text-xl placeholder:text-gray-400"
-          />
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-nowrap md:flex-wrap justify-start md:justify-center gap-3 overflow-x-auto scrollbar-hide">
-          {translatedCategories.map((cat) => (
-            <button
-              key={cat.value}
-              onClick={() => setActiveCategory(cat.value)}
-              className={`px-6 py-2.5 rounded-xl font-bold transition-all duration-500 text-base md:text-lg border-2 ${
-                activeCategory === cat.value
-                  ? "bg-[#0b314d] text-[#D4AF37] border-[#0b314d] shadow-[0_10px_20px_rgba(11,49,77,0.3)] scale-105"
-                  : "bg-white text-[#0b314d] border-gray-200 hover:border-[#D4AF37] hover:shadow-lg"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-8 relative z-10">
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6">
-          {displayedItems.map((item, i) => (
-            <div
-              key={i}
-              className="break-inside-avoid mb-6 inline-block w-full max-w-full align-top group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 cursor-pointer border border-gray-100"
-              onClick={() => openLightbox(i)}
-            >
-              <div className="relative overflow-hidden">
-                {item.type === "video" || item.type === "yt" ? (
-                  <div className="aspect-video bg-black flex items-center justify-center">
-                    <img
-                      src={item.poster || `https://img.youtube.com/vi/${item.id}/hqdefault.jpg`}
-                      className="w-full h-full object-cover opacity-60"
-                      alt=""
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="bg-[#D4AF37] p-5 rounded-full shadow-2xl group-hover:scale-125 transition-transform duration-500">
-                        <FaPlay size={25} className="text-[#0b314d] ml-1" />
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <img
-                    src={item.src}
-                    alt={item.desc}
-                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 flex flex-col justify-end p-6">
-                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span className="bg-[#D4AF37] text-[#0b314d] px-3 py-1 rounded-md text-xs font-bold mb-2 inline-block shadow-lg">{TAG_TRANSLATIONS[item.tag] || item.tag}</span>
-                    <p className="text-white font-bold text-lg leading-tight">{DESC_TRANSLATIONS[item.desc] || item.desc}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {currentItem && (
-        <div
-          className="fixed inset-0 z-[100] bg-[#0b314d]/98 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 animate-in fade-in"
-          onClick={closeLightbox}
-        >
-          <button
-            className="absolute top-6 right-6 text-white/50 hover:text-[#D4AF37] transition-all p-2 hover:rotate-90 duration-500"
-            onClick={closeLightbox}
-          >
-            <FaTimes size={40} />
-          </button>
-
-          <button onClick={goPrev} className="absolute left-2 md:left-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-2 md:p-4 z-50">
-            <FaChevronLeft size={34} />
-          </button>
-          <button onClick={goNext} className="absolute right-2 md:right-10 top-1/2 -translate-y-1/2 text-[#D4AF37] hover:text-white p-2 md:p-4 z-50">
-            <FaChevronRight size={34} />
-          </button>
-
-          <div className="w-full max-w-6xl h-[70vh] flex items-center justify-center p-4" onClick={(e) => e.stopPropagation()}>
-            {currentItem.type === "img" && (
-              <img
-                src={currentItem.src}
-                className="max-h-full max-w-full rounded-xl shadow-[0_0_50px_rgba(212,175,55,0.4)] border-4 border-white/10"
-              />
-            )}
-            {currentItem.type === "video" && (
-              <video autoPlay controls src={currentItem.src} className="max-h-full w-full rounded-xl shadow-2xl" />
-            )}
-            {currentItem.type === "yt" && (
-              <iframe
-                src={`https://www.youtube.com/embed/${currentItem.id}?autoplay=1`}
-                className="w-full h-full rounded-xl shadow-2xl"
-                allowFullScreen
-              />
-            )}
-          </div>
-
-          <div className="mt-8 text-center text-white px-10 max-w-3xl">
-            <h3 className="text-[#D4AF37] font-bold text-2xl md:text-3xl mb-2">{TAG_TRANSLATIONS[currentItem.tag] || currentItem.tag}</h3>
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed">{DESC_TRANSLATIONS[currentItem.desc] || currentItem.desc}</p>
-            <p className="mt-4 text-white/30 font-mono text-sm">{selectedIndex + 1} / {displayedItems.length}</p>
-          </div>
-        </div>
-      )}
-
-      <Footer />
-    </main>
-  );
+export default function Page() {
+    return <GalleryClient />;
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaWhatsapp, FaArrowUp, FaHome, FaArrowLeft } from "react-icons/fa";
+import { FaWhatsapp, FaArrowUp, FaHome, FaArrowLeft, FaShareAlt } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
@@ -48,15 +48,36 @@ export default function FloatingButtons() {
     window.open("https://wa.me/923334491715", "_blank");
   };
 
+  const handleShare = () => {
+    const title = document.title;
+    const url = window.location.href;
+    
+    if (navigator.share) {
+      navigator.share({ title, url }).catch(() => {});
+    } else {
+      window.open(`https://wa.me/?text=${encodeURIComponent(title + "\n" + url)}`, "_blank");
+    }
+  };
+
   return (
     <>
-      <button
-        onClick={handleWhatsapp}
-        className="fixed left-4 bottom-6 md:left-6 md:bottom-8 z-[9999] bg-green-500 text-white p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
-        title={f.waTitle}
-      >
-        <FaWhatsapp className="text-xl" />
-      </button>
+      <div className="fixed left-4 bottom-6 md:left-6 md:bottom-8 z-[9999] flex flex-col gap-3">
+        <button
+          onClick={handleWhatsapp}
+          className="bg-green-500 text-white p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
+          title={f.waTitle}
+        >
+          <FaWhatsapp className="text-xl" />
+        </button>
+
+        <button
+          onClick={handleShare}
+          className="bg-[#D4AF37] text-[#0b314d] p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
+          title="Share This Page"
+        >
+          <FaShareAlt className="text-xl" />
+        </button>
+      </div>
 
       {isLandingOrHomeFlow ? (
         <div className="fixed right-3 bottom-3 md:right-5 md:bottom-5 z-[9999] flex flex-col gap-2 w-auto max-w-[240px]">
