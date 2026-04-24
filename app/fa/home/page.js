@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HomeContent } from "../../home/HomeContent";
 import { legendsDataFa, booksData } from "../../home/homeData";
 
@@ -69,5 +70,9 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default function Home() {
-  return <HomeContent />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
+  );
 }

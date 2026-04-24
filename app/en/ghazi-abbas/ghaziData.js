@@ -8,8 +8,6 @@ export const ghaziData = {
     profileGif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif"
   },
 
-  // ... (The rest of the news, awards and media data remains unchanged.)
-
   news: {
     headline: '"Haji Shabbir Ahmed Shigri honored as Servant and Guardian of the Shrine of Hazrat Ghazi Abbas."',
     paragraph1: "After being honored as Servant of Imam Reza (AS), Haji Shabbir Ahmed Shigri received the Sada-e-Ghazi medal as a cultural service award from the Shrine of Hazrat Ghazi Abbas (AS) in Karbala. This honor was presented during the birth celebration of Imam Mahdi (AJ), when Hujjat al-Islam wal-Muslimeen Muhammad Abbas al-Husseini personally placed the medal on him. This medal is bestowed upon a special servant and guardian of the shrine and is a great honor for the believers.",
@@ -51,27 +49,27 @@ export const ghaziData = {
 
   // New videos section
   ziyaratVideos: [
-    { title: "Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399451/Zareeh_Mubarak_Ghazi_as_ra0vwn.mp4" },
-    { title: "Ziyarat of the Blessed Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399474/Ziarat_Roza_e_Mubarak_Ghazi_as_iwv6nb.mp4" },
-    { title: "Ziyarat of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399553/Ziarat_H_Ghazi_Abbas_as_qnn62m.mp4" },
-    { title: "Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399445/Haram_k_samney_Ghazi_Abbas_as_yviczc.mp4" },
-    { title: "River Euphrates", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
-    { title: "Site of Hazrat Ghazi Abbas (AS) First Arm Martyrdom", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
-    { title: "Site of Hazrat Ghazi Abbas (AS) Second Arm Martyrdom", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
-    { title: "Husseini Camp", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
-    { title: "Between the Two Shrines - Karbala", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
-    { title: "A Gathering at the Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
-    { title: "A View of the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
-    { title: "Scene from the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
+    { id: 'zv-zarih', title: "Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399451/Zareeh_Mubarak_Ghazi_as_ra0vwn.mp4" },
+    { id: 'zv-blessed', title: "Ziyarat of the Blessed Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399474/Ziarat_Roza_e_Mubarak_Ghazi_as_iwv6nb.mp4" },
+    { id: 'zv-ziyarat', title: "Ziyarat of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399553/Ziarat_H_Ghazi_Abbas_as_qnn62m.mp4" },
+    { id: 'zv-front', title: "Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399445/Haram_k_samney_Ghazi_Abbas_as_yviczc.mp4" },
+    { id: 'zv-euphrates', title: "River Euphrates", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
+    { id: 'zv-arm1', title: "Site of Hazrat Ghazi Abbas (AS) First Arm Martyrdom", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
+    { id: 'zv-arm2', title: "Site of Hazrat Ghazi Abbas (AS) Second Arm Martyrdom", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
+    { id: 'zv-camp', title: "Husseini Camp", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
+    { id: 'zv-between', title: "Between the Two Shrines - Karbala", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
+    { id: 'zv-majlis', title: "A Gathering at the Shrine of Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
+    { id: 'zv-view', title: "A View of the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
+    { id: 'zv-scene', title: "Scene from the Blessed Shrine of Hazrat Ghazi Abbas (AS)", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
   ],
   extraVideos: [
-    { title: "The Call of Courage, Loyalty, and Sacrifice - Hazrat Ghazi Abbas (AS)", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
-    { title: "Assalamu Alaika Ya Ghareeb Husaina - Shrine of Hazrat Abbas, Karbala", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
-    { title: "Miracle of Hazrat Abbas (AS) - How Mola Abbas Heals", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
+    { id: 'ex-loyalty', title: "The Call of Courage, Loyalty, and Sacrifice - Hazrat Ghazi Abbas (AS)", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
+    { id: 'ex-ghareeb', title: "Assalamu Alaika Ya Ghareeb Husaina - Shrine of Hazrat Abbas, Karbala", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
+    { id: 'ex-miracle', title: "Miracle of Hazrat Abbas (AS) - How Mola Abbas Heals", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
   ],
   shorts: [
-    { title: "Bab al-Hawaij Hazrat Ghazi Abbas Alamdar (AS)", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
-    { title: "Ziyarat of Hazrat Ghazi Abbas Alamdar (AS) (Urdu)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
-    { title: "In the Presence of Ghazi Abbas Alamdar (AS)", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
+    { id: 'sh-bab', title: "Bab al-Hawaij Hazrat Ghazi Abbas Alamdar (AS)", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
+    { id: 'sh-ziyarat', title: "Ziyarat of Hazrat Ghazi Abbas Alamdar (AS) (Urdu)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
+    { id: 'sh-presence', title: "In the Presence of Ghazi Abbas Alamdar (AS)", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
   ]
 };

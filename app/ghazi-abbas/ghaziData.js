@@ -5,13 +5,9 @@ export const ghaziData = {
     welcome: "صدائے غازی صفحے پر آپ کو خوش آمدید کہتا ہوں۔",
     text: "میں رب کریم کی عنایات کا جتنا بھی شکر ادا کروں کم ہے۔ بالخصوص ان عنایات کا جو دنیا میں بہت کم خوش نصیبوں کو نصیب ہوتی ہیں۔ ویسےتو گولڈ میڈل سمیت بے شمار دیگر ایوارڈز اور اعزازات رب کی مہربانی سے عطا ہوئے لیکن دو بڑے اہم اعزازات میری زندگی کا حاصل ہیں جو نہ صرف اس دنیا میں بلکہ دوسری دنیا میں بھی ان شااللہ کام دیں گے۔ 2011 میں خادم امام رضا علیہ السلام کا اعزاز پانے کے بعد 2024 میں حرم غازی عباس علیہ السلام کا تمغہ 'صدائے غازی' اور محافظ حرم کے اعزاز نے میری زندگی میں خیر و برکات کا راستہ کھول دیا۔ اور رب کی رحمتیں برسنے لگیں۔ میں اس قابل تو نہیں لیکن اللہ کی ان محبوب ہستیوں نے جو مجھ پر عنایات کی ہیں اس کا حق تو شاید ادا نہیں کرسکتا لیکن کوشش یہی ہے کہ رب کریم کی محبوب اوران پاک ہستیوں سمیت محمد و آل محمد کی تعلیمات پر جو کچھ ممکن ہو کام کرسکوں۔اور غازی باوفا کے ساتھ عملی طور پر وفا نبھا سکوں۔ اللہ پاک سے دعا ہے کہ مجھے ان نیک مقاصد میں کامیاب و کامران فرمائے۔ آمین یا رب العالمین",
     author: "حاجی شبیر احمد شگری",
-
-    // 👇 یہاں نیا ہائی ریزولوشن والا لنک "ٹھک" کر کے لگا دیا گیا ہے 👇
     profileGif: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771683490/Giff_for_saday_e_ghazi_page_aaugws.gif"
   },
   dir: 'rtl',
-
-  // ... (اس کے نیچے آپ کی خبروں، ایوارڈز اور ویڈیوز کا باقی سارا ڈیٹا ویسے کا ویسا ہی رہے گا، اسے نہیں چھیڑنا)
 
   news: {
     headline: '"حاجی شبیر احمد شگری کو خادم اور محافظ حرم حضرت عباس علمدار ھونے کا اعزاز حاصل ہوا."',
@@ -52,29 +48,28 @@ export const ghaziData = {
     "https://res.cloudinary.com/dlafcjt6z/image/upload/v1771399592/IMG_20240224_170250_Copy_xy2exi.jpg"
   ],
 
-  // نئی ویڈیوز کا سیکشن
   ziyaratVideos: [
-    { title: "ضریح مبارک غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399451/Zareeh_Mubarak_Ghazi_as_ra0vwn.mp4" },
-    { title: "زیارت حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399474/Ziarat_Roza_e_Mubarak_Ghazi_as_iwv6nb.mp4" },
-    { title: "زیارت غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399553/Ziarat_H_Ghazi_Abbas_as_qnn62m.mp4" },
-    { title: "حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399445/Haram_k_samney_Ghazi_Abbas_as_yviczc.mp4" },
-    { title: "نہر فرات", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
-    { title: "وہ مقام جہاں غازی عباس ؑ کا پہلا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
-    { title: "وہ مقام جہاں غازی عباس ؑ کا دوسرا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
-    { title: "خیمہ گاہ حسینی", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
-    { title: "بین الحرمین۔ کربلا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
-    { title: "حرم غازی عباس علیہ السلام کی ایک مجلس", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
-    { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا ایک منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
-    { title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
+    { id: 'zv-zareeh', title: "ضریح مبارک غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399451/Zareeh_Mubarak_Ghazi_as_ra0vwn.mp4" },
+    { id: 'zv-ziarat', title: "زیارت حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399474/Ziarat_Roza_e_Mubarak_Ghazi_as_iwv6nb.mp4" },
+    { id: 'zv-ghazi', title: "زیارت غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399553/Ziarat_H_Ghazi_Abbas_as_qnn62m.mp4" },
+    { id: 'zv-haram', title: "حرم غازی عباس علیہ السلام", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399445/Haram_k_samney_Ghazi_Abbas_as_yviczc.mp4" },
+    { id: 'zv-nehr', title: "نہر فرات", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399509/Nehr_e_Furaat_gm6olh.mp4" },
+    { id: 'zv-arm1', title: "وہ مقام جہاں غازی عباس ؑ کا پہلا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399441/Qata_Yaden_1_uniyap.mp4" },
+    { id: 'zv-arm2', title: "وہ مقام جہاں غازی عباس ؑ کا دوسرا بازو شہید کیا گیا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/Qata_Yaden_2_oejnit.mp4" },
+    { id: 'zv-kheema', title: "خیمہ گاہ حسینی", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399525/Kheemagah_dctfaj.mp4" },
+    { id: 'zv-bayn', title: "بین الحرمین۔ کربلا", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399440/BIn_al_haramen_Ghazi_BB_q37aay.mp4" },
+    { id: 'zv-majlis', title: "حرم غازی عباس علیہ السلام کی ایک مجلس", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399540/Majlis_Haram_Ghazi_Abbas_as_gedg6c.mp4" },
+    { id: 'zv-zview1', title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا ایک منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399437/Haram_Ghazi_as_lmvbut.mp4" },
+    { id: 'zv-zview2', title: "ضریح مبارک حضرت غازی عباس علیہ السلام کا منظر", url: "https://res.cloudinary.com/dlafcjt6z/video/upload/v1771399454/videoplayback_2_cjjoaa.mp4" }
   ],
   extraVideos: [
-    { title: "شجاعت، وفا و ایثار کی پکار - حضرت غازی عباس علمدار علیہ السلام", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
-    { title: "السلام علیک یا غریب حسینا - حرم حضرت عباس کربلا", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
-    { title: "معجزہ حضرت عباس علیہ السلام - مولا عباس کس طرح شفا دیتے ہیں", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
+    { id: 'ex-shujaat', title: "شجاعت، وفا و ایثار کی پکار - حضرت غازی عباس علمدار علیہ السلام", url: "https://www.youtube.com/watch?v=4PSqcMUWhVY" },
+    { id: 'ex-ghareeb', title: "السلام علیک یا غریب حسینا - حرم حضرت عباس کربلا", url: "https://www.youtube.com/watch?v=p3moSJlqheQ" },
+    { id: 'ex-mojiza', title: "معجزہ حضرت عباس علیہ السلام - مولا عباس کس طرح شفا دیتے ہیں", url: "https://www.youtube.com/watch?v=CfViy-1Q6N4" }
   ],
   shorts: [
-    { title: "باب الحوائج حضرت غازی عباس علمدار علیہ السلام", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
-    { title: "زیارت حضرت غازی عباس علمدار علیہ السلام (اردو)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
-    { title: "غازی عباس علمدار علیہ السلام کے حضور", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
+    { id: 'sh-bab', title: "باب الحوائج حضرت غازی عباس علمدار علیہ السلام", url: "https://res.cloudinary.com/dtqrziupt/video/upload/v1776616400/Ghazi_Abbas_Alamdar_a.s_luuf8t.mp4" },
+    { id: 'sh-ziarat', title: "زیارت حضرت غازی عباس علمدار علیہ السلام (اردو)", url: "https://www.youtube.com/watch?v=ta3moMf44s8" },
+    { id: 'sh-huzoor', title: "غازی عباس علمدار علیہ السلام کے حضور", url: "https://www.youtube.com/shorts/x6xkfr3Sc7g" }
   ]
 };
