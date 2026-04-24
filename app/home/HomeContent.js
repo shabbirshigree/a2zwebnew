@@ -245,7 +245,7 @@ export function HomeContent() {
     } else {
       const encodedUrl = encodeURIComponent(shareUrl);
       const encodedText = encodeURIComponent(text);
-      window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
+      window.open(`https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`, "_blank");
     }
   };
 

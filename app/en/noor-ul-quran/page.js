@@ -121,7 +121,7 @@ function EnglishProjectPageContent() {
         const text = `Noor Al-Quran Project: The world's first Visual Quran. Watch video on website:`;
         const encodedUrl = encodeURIComponent(shareUrl);
         const encodedText = encodeURIComponent(text);
-        window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
+        window.open(`https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`, "_blank");
     };
 
     const shareToPlatform = (platform, key) => {
@@ -140,7 +140,7 @@ function EnglishProjectPageContent() {
         const encodedUrl = encodeURIComponent(shareUrl);
         const encodedText = encodeURIComponent(text);
         const links = {
-            whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
+            whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`,
             facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
             telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
             email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor ul Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
@@ -164,17 +164,26 @@ function EnglishProjectPageContent() {
     };
 
     const VideoCard = ({ video }) => (
-        <div onClick={() => handleOpenYoutubeVideo(video)} className="bg-[#0a0a0a] rounded-lg overflow-hidden shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 cursor-pointer group border border-[#D4AF37]/50 flex flex-col h-full">
-            <div className="relative aspect-video bg-black overflow-hidden">
-            <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" />
-            <div className="absolute inset-0 flex items-end justify-start p-2.5 bg-black/10 group-hover:bg-transparent transition-all">
-                <div className="bg-[#D4AF37]/90 w-8 h-8 rounded-full border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-                    <FaPlay className="text-black text-[10px] ml-0.5" />
+        <div className="bg-[#0a0a0a] rounded-lg overflow-hidden shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 cursor-pointer group border border-[#D4AF37]/50 flex flex-col h-full relative">
+            <div onClick={() => handleOpenYoutubeVideo(video)} className="relative aspect-video bg-black overflow-hidden">
+                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" />
+                <div className="absolute inset-0 flex items-end justify-start p-2.5 bg-black/10 group-hover:bg-transparent transition-all">
+                    <div className="bg-[#D4AF37]/90 w-8 h-8 rounded-full border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                        <FaPlay className="text-black text-[10px] ml-0.5" />
+                    </div>
                 </div>
             </div>
-        </div>
-            <div className="p-2.5 border-t border-[#D4AF37]/30 flex-grow flex items-center justify-center bg-gradient-to-b from-[#111] to-black">
-                <p className="text-[#D4AF37] font-semibold text-[13px] md:text-sm leading-snug text-center" dir="ltr">{video.title}</p>
+
+            {/* Share Button on Card */}
+            <button 
+                onClick={(e) => { e.stopPropagation(); shareFromPopup(`yt-${video.id}`); }}
+                className="absolute top-2 right-2 w-7 h-7 bg-white/90 rounded-full flex items-center justify-center text-[#0f4c75] opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:scale-110 z-10"
+            >
+                <FaShareAlt size={10} />
+            </button>
+
+            <div onClick={() => handleOpenYoutubeVideo(video)} className="p-2.5 border-t border-[#D4AF37]/30 flex-grow flex items-center justify-center bg-gradient-to-b from-[#111] to-black">
+                <p className="text-[#D4AF37] font-semibold text-[13px] md:text-sm leading-snug text-center group-hover:text-white transition-colors" dir="ltr">{video.title}</p>
             </div>
         </div>
     );

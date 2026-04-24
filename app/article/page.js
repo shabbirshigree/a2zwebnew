@@ -119,10 +119,9 @@ export default function ArticlesPage() {
 
   const shareArticle = async (article, platform) => {
     const url = getArticleUrl(article);
-    const text = `haji shabbir ahmed shigri ki ye tehreer share karein: ${article.title}`;
-    const imageLine = article.image ? `\nimage: ${article.image}` : '';
+    const text = `حاجی شبیر احمد شگری کی یہ تحریر ویب سائٹ پر پڑھیں: ${article.title}`;
     const encodedUrl = encodeURIComponent(url);
-    const encodedText = encodeURIComponent(`${text}${imageLine}`);
+    const encodedText = encodeURIComponent(text);
 
     const links = {
       whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
@@ -134,7 +133,7 @@ export default function ArticlesPage() {
 
     if (platform === 'native' && navigator.share) {
       try {
-        await navigator.share({ title: article.title, text: `${text}${imageLine}`, url });
+        await navigator.share({ title: article.title, text: text, url });
       } catch {
         return;
       }
