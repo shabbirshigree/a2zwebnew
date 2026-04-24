@@ -1,7 +1,8 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useMemo, Suspense } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useSearchParams, useRouter } from 'next/navigation';
 import { useLocale } from "../components/LocaleProvider";
 import { getDictionary } from "../lib/i18n";
 import {
@@ -9,8 +10,12 @@ import {
   FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild,
   FaStar, FaArrowRight, FaArrowLeft, FaBookOpen, FaPlay, FaTimes,
   FaGlobe, FaTv, FaHandshake, FaTrophy, FaVideo, FaNewspaper,
-  FaBriefcase, FaUser, FaHeadphones, FaBook
+  FaBriefcase, FaUser, FaHeadphones, FaBook,
+  FaBullhorn, FaQuoteLeft, FaInfoCircle, FaChevronLeft, FaChevronRight,
+  FaPlayCircle, FaShareAlt, FaRegHeart, FaEye, FaWhatsapp, FaFacebookF,
+  FaTelegramPlane, FaEnvelope
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 // باقی ڈیٹا امپورٹ ویسے ہی رہے گا جیسے آپ نے بھیجا ہے
 import {
@@ -92,6 +97,8 @@ const globalStyles = `
 
 export function HomeContent() {
   const { locale } = useLocale();
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const { bismillah, welcome, honors, navCards, legends, books, journey, labels } =
     useMemo(() => {
@@ -133,7 +140,6 @@ export function HomeContent() {
       const bookTitles = isEn ? booksTitlesEn : booksTitlesFa;
 
       return {
-        /* تینوں زبانوں میں ویلکم باکس: عربی بسم اللہ */
         bismillah: welcomeData.bismillah,
         welcome: {
           greeting: currentWelcome.greeting,
@@ -184,6 +190,64 @@ export function HomeContent() {
   const [activeVideo, setActiveVideo] = useState(null);
   const [selectedHomeVideo, setSelectedHomeVideo] = useState(null);
   const [showHomeBooklet, setShowHomeBooklet] = useState(false);
+
+  // ✅ ڈیپ لنکنگ اور آٹو اوپن فنکشنلٹی
+  useEffect(() => {
+    const videoUrl = searchParams.get('v');
+    const type = searchParams.get('type');
+    const bookTitle = searchParams.get('book');
+
+    if (videoUrl) {
+      // چیک کریں کہ آیا یہ نامور شخصیات کی ویڈیو ہے
+      const foundLegend = legends.find(l => l.video.includes(videoUrl) || videoUrl.includes(l.name));
+      if (foundLegend) {
+        setActiveVideo(foundLegend.video);
+      } else if (videoUrl === 'pod-video') {
+        setSelectedHomeVideo('video');
+      } else if (videoUrl === 'pod-audio') {
+        setSelectedHomeVideo('audio');
+      }
+    } else if (bookTitle) {
+      // اسکرول ٹو بکس سیکشن
+      const el = document.getElementById('books-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (type === 'noor-ul-quran') {
+      // اسکرول ٹو پروجیکٹ سیکشن
+      const el = document.getElementById('noor-ul-quran-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [searchParams, legends]);
+
+  const handleShareItem = (item, type = 'video') => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : '';
+    let shareUrl = baseUrl;
+    
+    if (type === 'video') {
+      // ویڈیو کا منفرد حصہ نکالیں (مثلاً فائل کا نام)
+      const videoId = item.video.split('/').pop().split('.')[0];
+      shareUrl += `?v=${videoId}`;
+    } else if (type === 'book') {
+      shareUrl += `?book=${encodeURIComponent(item.title)}`;
+    } else if (type === 'pod-video') {
+      shareUrl += `?v=pod-video`;
+    } else if (type === 'pod-audio') {
+      shareUrl += `?v=pod-audio`;
+    }
+
+    const text = type === 'video' 
+      ? `${item.name} کے خیالات ویب سائٹ پر دیکھیں:`
+      : type === 'book'
+      ? `حاجی شبیر احمد شگری کی تصنیف "${item.title}" کے بارے میں جانئے:`
+      : `نورالقرآن پراجیکٹ کے بارے میں جانئے:`;
+
+    if (navigator.share) {
+      navigator.share({ title: "حاجی شبیر احمد شگری", text, url: shareUrl }).catch(() => { });
+    } else {
+      const encodedUrl = encodeURIComponent(shareUrl);
+      const encodedText = encodeURIComponent(text);
+      window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
+    }
+  };
 
   const mainDir = locale === "en" ? "ltr" : "rtl";
 
@@ -333,7 +397,7 @@ export function HomeContent() {
         </section>
 
         {/* 🚀 نور القرآن پراجیکٹ سیکشن (عالمی معیار کا ڈیزائن) */}
-        <section className="container mx-auto px-3 md:px-4 py-16 relative z-10">
+        <section id="noor-ul-quran-section" className="container mx-auto px-3 md:px-4 py-16 relative z-10">
           <div className="max-w-6xl mx-auto rounded-[3.5rem] p-8 md:p-16 shadow-[0_12px_48px_rgba(15,76,117,0.12)] relative overflow-hidden group border-2 border-[#b8860b]/50 bg-gradient-to-br from-[#fdf6e3] via-[#e8d5a0] to-[#c9a227]">
             
             {/* ہلکے hilights */}
@@ -374,21 +438,31 @@ export function HomeContent() {
                       <FaBookOpen className="text-lg text-[#fde68a]" /> {labels.btnRead}
                     </Link>
 
-                    <button
-                      type="button"
-                      onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
-                      className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#9f1239] text-white border-2 border-[#7f0d2d] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#be123c] transition-all flex items-center gap-3 text-sm md:text-base"
-                    >
-                      <FaPlay className="text-lg text-white" /> {labels.btnVideo}
-                    </button>
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028288/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1%D8%A7%D8%AC%DB%8C%DA%A9%D9%B9_%D9%BE%D8%B1_%D9%88%DB%8C%DA%88%DB%8C%D9%88_%D8%AA%D8%A8%D8%B5%D8%B1%DB%81_qfyz0i.mp4')}
+                        className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#9f1239] text-white border-2 border-[#7f0d2d] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#be123c] transition-all flex items-center gap-3 text-sm md:text-base"
+                      >
+                        <FaPlay className="text-lg text-white" /> {labels.btnVideo}
+                      </button>
+                      <button onClick={() => handleShareItem({}, 'pod-video')} className="bg-white text-[#9f1239] p-3 rounded-2xl border-2 border-[#9f1239] hover:bg-[#9f1239] hover:text-white transition-all shadow-md">
+                        <FaShareAlt />
+                      </button>
+                    </div>
 
-                    <button
-                      type="button"
-                      onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
-                      className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#047857] text-white border-2 border-[#065f46] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#059669] transition-all flex items-center gap-3 text-sm md:text-base"
-                    >
-                      <FaHeadphones className="text-lg text-[#d1fae5]" /> {labels.btnAudio}
-                    </button>
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedHomeVideo('https://res.cloudinary.com/dtqrziupt/video/upload/v1769028270/%D9%86%D9%88%D8%B1%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86_%D9%BE%D8%B1_%D9%BE%D9%88%DA%88_%DA%A9%D8%A7%D8%B3%D9%B9_wdodfp.mp4')}
+                        className="px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-bold bg-[#047857] text-white border-2 border-[#065f46] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#059669] transition-all flex items-center gap-3 text-sm md:text-base"
+                      >
+                        <FaHeadphones className="text-lg text-[#d1fae5]" /> {labels.btnAudio}
+                      </button>
+                      <button onClick={() => handleShareItem({}, 'pod-audio')} className="bg-white text-[#047857] p-3 rounded-2xl border-2 border-[#047857] hover:bg-[#047857] hover:text-white transition-all shadow-md">
+                        <FaShareAlt />
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -419,10 +493,14 @@ export function HomeContent() {
                       src={item.img} 
                       alt={item.name} 
                       className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                      onClick={() => setActiveVideo(item.video)}
                     />
-                    <div className="absolute inset-0 flex items-end justify-start p-3 bg-gradient-to-t from-black/40 to-transparent group-hover:bg-transparent transition-all">
-                      <div className="bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10">
+                    <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/40 to-transparent group-hover:bg-transparent transition-all pointer-events-none">
+                      <div className="bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 pointer-events-auto" onClick={() => setActiveVideo(item.video)}>
                         <FaPlay size={12} className="text-black ml-0.5" />
+                      </div>
+                      <div className="bg-white/90 w-9 h-9 rounded-full border-2 border-[#D4AF37] shadow-lg flex items-center justify-center transform hover:scale-110 transition-all duration-300 z-10 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
+                        <FaShareAlt size={12} className="text-[#0f4c75]" />
                       </div>
                     </div>
                   </div>
@@ -441,14 +519,14 @@ export function HomeContent() {
         </section>
 
         {/* 📚 تصانیف سلائیڈر */}
-        <section className="container mx-auto px-4 py-16 relative z-10">
+        <section id="books-section" className="container mx-auto px-4 py-16 relative z-10">
           <div className="text-center mb-10">
             <h2 className={`text-2xl md:text-5xl font-bold text-[#0f4c75] text-center ${bodyFont(locale)} mb-4 border-b-2 border-[#D4AF37]/30 pb-4 inline-block mx-auto leading-snug px-4`}>{labels.booksHead}</h2>
           </div>
           <div className="bg-white p-8 rounded-[3rem] shadow-2xl border-2 border-[#D4AF37]/20 overflow-hidden" dir="ltr">
             <div className="flex gap-8 w-max animate-scroll-right pause-on-hover px-4">
               {infiniteBooks?.map((item, i) => (
-                <div key={i} className="card-lift">
+                <div key={i} className="card-lift relative group/book">
                   <Link href={item.link || "#"} className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
                     <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
@@ -457,6 +535,13 @@ export function HomeContent() {
                       <div className="text-[10px] md:text-xs text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{labels.booksHint}</div>
                     </div>
                   </Link>
+                  {/* Share button for book */}
+                  <button 
+                    onClick={(e) => { e.preventDefault(); handleShareItem(item, 'book'); }}
+                    className="absolute top-2 right-2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-[#0f4c75] opacity-0 group-hover/book:opacity-100 transition-opacity shadow-md hover:scale-110 z-20"
+                  >
+                    <FaShareAlt size={12} />
+                  </button>
                 </div>
               ))}
             </div>

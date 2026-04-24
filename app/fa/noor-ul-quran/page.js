@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { FaPlay, FaTimes, FaChevronDown, FaMobileAlt, FaInfoCircle, FaCheckCircle, FaBookOpen, FaImages, FaFilm, FaHeadphones, FaShareAlt, FaHeart, FaRegHeart, FaEye, FaWhatsapp, FaFacebookF, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,8 +11,9 @@ import QuranIntroCard from '../../components/QuranIntroCard';
 import { useLocale } from '../../components/LocaleProvider';
 import { quranVideos } from '../../noor-ul-quran/noor-ul-quran-data';
 
-export default function FarsiProjectPage() {
+function FarsiProjectPageContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [localVideoUrl, setLocalVideoUrl] = useState('');
   const [isLocalVideoOpen, setIsLocalVideoOpen] = useState(false);
@@ -60,11 +61,33 @@ export default function FarsiProjectPage() {
       console.error("Error loading stats:", e);
     }
 
+    // ✅ یو آر ایل سے ویڈیو آئی ڈی چیک کریں اور پاپ اپ کھولیں
+    const videoId = searchParams.get('v');
+    const localType = searchParams.get('type');
+    
+    if (videoId) {
+      const allVideos = [
+        ...quranVideos.parat_arabic,
+        ...quranVideos.parat_urdu,
+        ...quranVideos.surahs,
+        ...quranVideos.stories,
+        ...quranVideos.tilawat
+      ];
+      const found = allVideos.find(v => v.id === videoId);
+      if (found) {
+        setSelectedVideo(found);
+      }
+    } else if (localType === 'audio') {
+      handlePlayLocalVideo(AUTHOR_REVIEW.audioUrl);
+    } else if (localType === 'video-analysis') {
+      handlePlayLocalVideo(AUTHOR_REVIEW.videoUrl);
+    }
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % projectSlides.length);
     }, 9000);
     return () => clearInterval(timer);
-  }, [projectSlides.length]);
+  }, [projectSlides.length, searchParams]);
 
   const handlePlayLocalVideo = (url) => {
     if (url) {
@@ -92,17 +115,37 @@ export default function FarsiProjectPage() {
   };
 
   const shareFromPopup = (key) => {
-    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : '';
+    let shareUrl = baseUrl;
+    
+    if (key.startsWith('yt-')) {
+      shareUrl += `?v=${key.replace('yt-', '')}`;
+    } else if (key.includes('audio')) {
+      shareUrl += `?type=audio`;
+    } else if (key.includes('video-analysis')) {
+      shareUrl += `?type=video-analysis`;
+    }
+
     const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
-    const encodedUrl = encodeURIComponent(url);
+    const encodedUrl = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
   };
 
   const shareToPlatform = (platform, key) => {
-    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : '';
+    let shareUrl = baseUrl;
+    
+    if (key.startsWith('yt-')) {
+      shareUrl += `?v=${key.replace('yt-', '')}`;
+    } else if (key.includes('audio')) {
+      shareUrl += `?type=audio`;
+    } else if (key.includes('video-analysis')) {
+      shareUrl += `?type=video-analysis`;
+    }
+
     const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
-    const encodedUrl = encodeURIComponent(url);
+    const encodedUrl = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(text);
     const links = {
       whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
@@ -115,12 +158,15 @@ export default function FarsiProjectPage() {
     if (target) window.open(target, "_blank", "noopener,noreferrer,width=700,height=700");
   };
 
-  const handleShare = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : '';
+  const handleShare = (type = '') => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin + window.location.pathname : '';
+    let shareUrl = baseUrl;
+    if (type) shareUrl += `?type=${type}`;
+
     if (navigator.share) {
-      navigator.share({ title: 'پروژه نورالقرآن', url: url }).catch(() => { });
+      navigator.share({ title: 'پروژه نورالقرآن', url: shareUrl }).catch(() => { });
     } else {
-      navigator.clipboard.writeText(url);
+      navigator.clipboard.writeText(shareUrl);
       alert('لینک کپی شد');
     }
   };
@@ -278,7 +324,7 @@ export default function FarsiProjectPage() {
                 <Link href="/library#Quran" className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm text-white bg-[#111] border border-[#D4AF37]/50 hover:bg-[#D4AF37] hover:text-black transition-colors shadow-sm">
                   <FaBookOpen className="ml-2" /> جزئیات را بخوانید
                 </Link>
-                <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#111] text-white border border-[#D4AF37]/50 border-r-0 hover:bg-[#D4AF37] hover:text-black transition-colors">
+                <button onClick={() => handleShare('library')} className="px-4 flex items-center justify-center bg-[#111] text-white border border-[#D4AF37]/50 border-r-0 hover:bg-[#D4AF37] hover:text-black transition-colors">
                   <FaShareAlt size={14} />
                 </button>
               </div>
@@ -286,13 +332,13 @@ export default function FarsiProjectPage() {
                 <button onClick={() => handlePlayLocalVideo(AUTHOR_REVIEW.audioUrl)} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm bg-gradient-to-r from-[#D4AF37] to-[#b8860b] text-[#0b314d] hover:shadow-lg transition-all">
                   <FaHeadphones className="ml-2" /> پادکست صوتی را گوش دهید
                 </button>
-                <button onClick={handleShare} className="px-4 flex items-center justify-center bg-[#D4AF37] text-[#0b314d] border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14} /></button>
+                <button onClick={() => handleShare('audio')} className="px-4 flex items-center justify-center bg-[#D4AF37] text-[#0b314d] border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14} /></button>
               </div>
               <div className="flex rounded-xl overflow-hidden shadow-sm">
                 <button onClick={() => handlePlayLocalVideo(AUTHOR_REVIEW.videoUrl)} className="flex-1 py-3 px-2 font-bold flex items-center justify-center text-xs md:text-sm bg-gradient-to-r from-red-700 to-red-900 text-white hover:shadow-lg transition-all">
                   <FaFilm className="ml-2" /> تحلیل ویدئو را ببینید
                 </button>
-                <button onClick={handleShare} className="px-4 flex items-center justify-center bg-red-800 text-white border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14} /></button>
+                <button onClick={() => handleShare('video-analysis')} className="px-4 flex items-center justify-center bg-red-800 text-white border-r border-black/20 hover:opacity-80 transition"><FaShareAlt size={14} /></button>
               </div>
             </div>
           </div>
@@ -459,5 +505,13 @@ export default function FarsiProjectPage() {
 
       <Footer />
     </main>
+  );
+}
+
+export default function FarsiProjectPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-[#D4AF37]">در حال بارگذاری...</div>}>
+      <FarsiProjectPageContent />
+    </Suspense>
   );
 }
