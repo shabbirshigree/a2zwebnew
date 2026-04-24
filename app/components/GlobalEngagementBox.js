@@ -58,14 +58,13 @@ export default function GlobalEngagementBox() {
   const totalLikes = 10 + (pageKey.length % 7) + (likes[pageKey] ? 1 : 0);
 
   const toggleLike = () => {
+    const nextViews = { ...views, [pageKey]: (views[pageKey] || 0) + 1 };
+    setViews(nextViews);
+    localStorage.setItem("globalPageViews", JSON.stringify(nextViews));
+
     const updated = { ...likes, [pageKey]: !likes[pageKey] };
     setLikes(updated);
     localStorage.setItem("globalPageLikes", JSON.stringify(updated));
-    
-    // فورا ویوز کو بھی اپڈیٹ کریں تاکہ صارف کو تبدیلی نظر آئے
-    const updatedViews = { ...views, [pageKey]: (views[pageKey] || 0) + 1 };
-    setViews(updatedViews);
-    localStorage.setItem("globalPageViews", JSON.stringify(updatedViews));
   };
 
   const shareCurrentPage = async (platform) => {
@@ -74,7 +73,7 @@ export default function GlobalEngagementBox() {
     const customMessage = pageKey.startsWith("/article")
       ? `${eg.shareArticle}: ${pageTitle}`
       : eg.sharePage;
-    const text = `${pageTitle} — ${customMessage}`;
+    const text = `${customMessage}`;
     const encodedUrl = encodeURIComponent(url);
     const encodedText = encodeURIComponent(text);
 

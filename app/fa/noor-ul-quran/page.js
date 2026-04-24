@@ -50,6 +50,16 @@ export default function FarsiProjectPage() {
   ];
 
   useEffect(() => {
+    // لائکس و بازدیدها را از فضای ذخیره‌سازی محلی بارگذاری کنید
+    try {
+      const storedLikes = JSON.parse(localStorage.getItem('noor-ul-quran-likes-fa') || '{}');
+      const storedViews = JSON.parse(localStorage.getItem('noor-ul-quran-views-fa') || '{}');
+      setPopupLikes(storedLikes);
+      setPopupViews(storedViews);
+    } catch (e) {
+      console.error("Error loading stats:", e);
+    }
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % projectSlides.length);
     }, 9000);
@@ -61,6 +71,7 @@ export default function FarsiProjectPage() {
       const key = `local-${url}`;
       const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
       setPopupViews(nextViews);
+      localStorage.setItem('noor-ul-quran-views-fa', JSON.stringify(nextViews));
       setLocalVideoUrl(url);
       setIsLocalVideoOpen(true);
     }
@@ -70,25 +81,27 @@ export default function FarsiProjectPage() {
     const key = `yt-${video.id}`;
     const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
     setPopupViews(nextViews);
+    localStorage.setItem('noor-ul-quran-views-fa', JSON.stringify(nextViews));
     setSelectedVideo(video);
   };
 
   const togglePopupLike = (key) => {
     const nextLikes = { ...popupLikes, [key]: !popupLikes[key] };
     setPopupLikes(nextLikes);
+    localStorage.setItem('noor-ul-quran-likes-fa', JSON.stringify(nextLikes));
   };
 
   const shareFromPopup = (key) => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
-    const text = `پروژه نورالقرآن را به اشتراک بگذارید (${key})`;
+    const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
     const encodedUrl = encodeURIComponent(url);
     const encodedText = encodeURIComponent(text);
-    window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, '_blank');
+    window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
   };
 
   const shareToPlatform = (platform, key) => {
     const url = typeof window !== 'undefined' ? window.location.href : '';
-    const text = `پروژه نورالقرآن را به اشتراک بگذارید (${key})`;
+    const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
     const encodedUrl = encodeURIComponent(url);
     const encodedText = encodeURIComponent(text);
     const links = {
@@ -99,7 +112,7 @@ export default function FarsiProjectPage() {
       x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
     };
     const target = links[platform];
-    if (target) window.open(target, '_blank', 'noopener,noreferrer,width=700,height=700');
+    if (target) window.open(target, "_blank", "noopener,noreferrer,width=700,height=700");
   };
 
   const handleShare = () => {

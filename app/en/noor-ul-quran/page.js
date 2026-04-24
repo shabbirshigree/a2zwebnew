@@ -42,6 +42,16 @@ export default function EnglishProjectPage() {
     ];
 
     useEffect(() => {
+        // Load likes and views from local storage
+        try {
+            const storedLikes = JSON.parse(localStorage.getItem('noor-ul-quran-likes-en') || '{}');
+            const storedViews = JSON.parse(localStorage.getItem('noor-ul-quran-views-en') || '{}');
+            setPopupLikes(storedLikes);
+            setPopupViews(storedViews);
+        } catch (e) {
+            console.error("Error loading stats:", e);
+        }
+
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % projectSlides.length);
         }, 9000);
@@ -53,6 +63,7 @@ export default function EnglishProjectPage() {
             const key = `local-${url}`;
             const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
             setPopupViews(nextViews);
+            localStorage.setItem('noor-ul-quran-views-en', JSON.stringify(nextViews));
             setLocalVideoUrl(url);
             setIsLocalVideoOpen(true);
         }
@@ -62,17 +73,19 @@ export default function EnglishProjectPage() {
         const key = `yt-${video.id}`;
         const nextViews = { ...popupViews, [key]: (popupViews[key] || 0) + 1 };
         setPopupViews(nextViews);
+        localStorage.setItem('noor-ul-quran-views-en', JSON.stringify(nextViews));
         setSelectedVideo(video);
     };
 
     const togglePopupLike = (key) => {
         const nextLikes = { ...popupLikes, [key]: !popupLikes[key] };
         setPopupLikes(nextLikes);
+        localStorage.setItem('noor-ul-quran-likes-en', JSON.stringify(nextLikes));
     };
 
     const shareFromPopup = (key) => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
-        const text = `Noor Al-Quran Project Video (${key})`;
+        const text = `Noor Al-Quran Project: The world's first Visual Quran. Watch full video on website:`;
         const encodedUrl = encodeURIComponent(url);
         const encodedText = encodeURIComponent(text);
         window.open(`https://wa.me/?text=${encodedText}%20${encodedUrl}`, "_blank");
@@ -80,14 +93,14 @@ export default function EnglishProjectPage() {
 
     const shareToPlatform = (platform, key) => {
         const url = typeof window !== 'undefined' ? window.location.href : '';
-        const text = `Noor Al-Quran Project Video (${key})`;
+        const text = `Noor Al-Quran Project: The world's first Visual Quran. Watch full video on website:`;
         const encodedUrl = encodeURIComponent(url);
         const encodedText = encodeURIComponent(text);
         const links = {
             whatsapp: `https://wa.me/?text=${encodedText}%20${encodedUrl}`,
             facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
             telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
-            email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor al Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
+            email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor ul Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
             x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
         };
         const target = links[platform];
