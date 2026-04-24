@@ -256,7 +256,7 @@ function ArticlesContent() {
                       </h3>
 
                       <p className="text-gray-500 text-sm md:text-base urdu-text leading-relaxed line-clamp-3 mb-6 flex-1">
-                        {article.content?.replace(/<[^>]*>/g, '').substring(0, 150)}...
+                        {article.excerpt || article.content?.replace(/<[^>]*>/g, '').substring(0, 150) + '...'}
                       </p>
 
                       <div className="flex items-center justify-between pt-6 border-t border-gray-50">
@@ -353,7 +353,11 @@ function ArticlesContent() {
 
                 <div
                   className="urdu-text text-lg md:text-xl leading-[2.2] text-gray-700 text-justify space-y-8 article-content"
-                  dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
+                  dangerouslySetInnerHTML={{ 
+                    __html: selectedArticle.content?.includes('<p') 
+                      ? selectedArticle.content 
+                      : selectedArticle.content?.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('')
+                  }}
                 />
 
                 <div className="mt-16 pt-12 border-t border-gray-100 flex flex-col items-center text-center">

@@ -22,7 +22,8 @@ export const allArticles = [
   ...(specialData || []),
   ...(unityData || []),
   ...(internationalData || []),
-  ...(englishData || [])
+  ...(englishData || []),
+  ...(farsiData || [])
 ];
 
 export const englishArticles = [
