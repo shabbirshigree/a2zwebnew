@@ -72,13 +72,13 @@ function ArticlesContent() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'special', label: 'سپیشل ایڈیشن ⭐' },
+    { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام 🔍' },
+    { id: 'special', label: locale === 'en' ? 'Special Edition ⭐' : locale === 'fa' ? 'نسخه ویژه ⭐' : 'سپیشل ایڈیشن ⭐' },
     { id: 'english', label: 'English 🅰️' },
-    { id: 'punjabi', label: 'پنجابی 📖' },
-    { id: 'column', label: 'اردو ✍️' },
-    { id: 'islamic_unity', label: 'اسلامی وحدت 🤝' },
-    { id: 'international', label: 'انٹرنیشنل 🌍' },
-    { id: 'all', label: 'تمام 🔍' }
+    { id: 'punjabi', label: locale === 'en' ? 'Punjabi 📖' : locale === 'fa' ? 'پنجابی 📖' : 'پنجابی 📖' },
+    { id: 'column', label: locale === 'en' ? 'Urdu ✍️' : locale === 'fa' ? 'اردو ✍️' : 'اردو ✍️' },
+    { id: 'islamic_unity', label: locale === 'en' ? 'Islamic Unity 🤝' : locale === 'fa' ? 'وحدت اسلامی 🤝' : 'اسلامی وحدت 🤝' },
+    { id: 'international', label: locale === 'en' ? 'International 🌍' : locale === 'fa' ? 'بین المللی 🌍' : 'انٹرنیشنل 🌍' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -147,17 +147,17 @@ function ArticlesContent() {
       {!selectedArticle && (
         <>
           <section className="bg-gradient-to-b from-[#0b314d] to-[#0f4c75] text-white py-10 md:py-14 text-center relative border-b-4 border-[#D4AF37] shadow-xl">
-            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/arabesque.png')" }}></div>
-            <div className="container mx-auto px-4 relative z-10">
-              <h1 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 urdu-text tracking-wide">
-                صحافت کے 45 سال
-              </h1>
-              <h2 className="text-lg md:text-xl text-[#fff7cc] font-light urdu-text tracking-widest">
-                ننھے لکھاری سے گولڈ میڈلسٹ تک کا شاندار سفر
-              </h2>
-              <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full mt-6"></div>
-            </div>
-          </section>
+                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/arabesque.png')" }}></div>
+                        <div className="container mx-auto px-4 relative z-10">
+                            <h1 className={`text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 tracking-wide ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                {locale === 'en' ? '45 Years of Journalism' : locale === 'fa' ? '۴۵ سال فعالیت در مطبوعات' : 'صحافت کے 45 سال'}
+                            </h1>
+                            <h2 className={`text-lg md:text-xl text-[#fff7cc] font-light tracking-widest ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                {locale === 'en' ? 'A Splendid Journey from a Child Writer to a Gold Medalist' : locale === 'fa' ? 'سفری درخشان از یک نویسنده کودک تا دریافت کننده مدال طلا' : 'ننھے لکھاری سے گولڈ میڈلسٹ تک کا شاندار سفر'}
+                            </h2>
+                            <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full mt-6"></div>
+                        </div>
+                    </section>
 
           <section className="container mx-auto px-4 py-12" dir="rtl">
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden relative">
@@ -200,12 +200,12 @@ function ArticlesContent() {
               <div className="relative w-full md:w-1/3 group">
                 <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#0b314d] transition-colors" />
                 <input
-                  type="text"
-                  placeholder="موضوع تلاش کریں..."
-                  className="w-full bg-white border-2 border-gray-100 rounded-2xl py-4 px-12 text-right urdu-text focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/5 transition-all shadow-sm"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
+                                            type="text"
+                                            placeholder={locale === 'en' ? 'Search topics...' : locale === 'fa' ? 'جستجوی موضوعات...' : 'موضوع تلاش کریں...'}
+                                            className={`w-full bg-white border-2 border-gray-100 rounded-2xl py-4 px-12 text-right focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/5 transition-all shadow-sm ${locale === 'ur' ? 'urdu-text' : ''}`}
+                                            value={searchTerm}
+                                            onChange={(e) => setSearchTerm(e.target.value)}
+                                        />
               </div>
 
               <div className="flex flex-wrap justify-center gap-3" dir="rtl">
@@ -240,13 +240,13 @@ function ArticlesContent() {
                         className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-1000"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <span className="text-white text-sm font-bold flex items-center gap-2">
-                           مطالعہ کریں <FaArrowLeft className="-translate-x-2 group-hover:translate-x-0 transition-transform" />
-                        </span>
-                      </div>
-                      <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-[#0b314d] px-3 py-1 rounded-lg text-[10px] font-bold urdu-text shadow-lg border border-[#D4AF37]/30">
-                        {categories.find(c => c.id === (Array.isArray(article.category) ? article.category[0] : article.category))?.label || 'تحریر'}
-                      </div>
+                                                        <span className="text-white text-sm font-bold flex items-center gap-2">
+                                                             {locale === 'en' ? 'Read Article' : locale === 'fa' ? 'مطالعه مقاله' : 'مطالعہ کریں'} <FaArrowLeft className="-translate-x-2 group-hover:translate-x-0 transition-transform" />
+                                                        </span>
+                                                    </div>
+                                                    <div className={`absolute top-4 right-4 bg-white/95 backdrop-blur-md text-[#0b314d] px-3 py-1 rounded-lg text-[10px] font-bold shadow-lg border border-[#D4AF37]/30 ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                                        {categories.find(c => c.id === (Array.isArray(article.category) ? article.category[0] : article.category))?.label || (locale === 'en' ? 'Article' : locale === 'fa' ? 'مقاله' : 'تحریر')}
+                                                    </div>
                     </div>
 
                     <div className="p-5 md:p-6 flex flex-col flex-1 bg-white">
@@ -255,21 +255,21 @@ function ArticlesContent() {
                         <span className="flex items-center gap-1 bg-gray-50 px-2 py-0.5 rounded border border-gray-100"><FaEye className="text-[#D4AF37] text-[10px]" /> {stats.views}</span>
                       </div>
 
-                      <h3 className="text-lg md:text-xl font-bold text-[#0f4c75] mb-3 urdu-text leading-tight group-hover:text-[#D4AF37] transition-colors cursor-pointer line-clamp-2 min-h-[3rem]" onClick={() => handleOpenArticle(article)}>
-                        {article.title}
-                      </h3>
+                      <h3 className={`text-lg md:text-xl font-bold text-[#0f4c75] mb-3 leading-tight group-hover:text-[#D4AF37] transition-colors cursor-pointer line-clamp-2 min-h-[3rem] ${locale === 'ur' ? 'urdu-text' : ''}`} onClick={() => handleOpenArticle(article)}>
+                                                        {article.title}
+                                                    </h3>
 
-                      <p className="text-gray-500 text-xs md:text-sm urdu-text leading-relaxed line-clamp-3 mb-4 flex-1 text-justify overflow-hidden">
-                        {article.excerpt || article.content?.replace(/<[^>]*>/g, '').substring(0, 150) + '...'}
-                      </p>
+                                                    <p className={`text-gray-500 text-xs md:text-sm leading-relaxed line-clamp-3 mb-4 flex-1 text-justify overflow-hidden ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                                        {article.excerpt || article.content?.replace(/<[^>]*>/g, '').substring(0, 150) + '...'}
+                                                    </p>
 
-                      <div className="flex items-center justify-between pt-4 border-t border-gray-50 mt-auto">
-                        <button
-                          onClick={() => handleOpenArticle(article)}
-                          className="bg-[#0b314d] text-white px-4 py-2 rounded-lg font-bold text-[10px] urdu-text flex items-center gap-2 hover:bg-[#D4AF37] transition-all duration-300 shadow-sm hover:shadow-md group/btn"
-                        >
-                          مکمل پڑھیں <FaArrowLeft className="group-hover/btn:-translate-x-1 transition-transform" />
-                        </button>
+                                                    <div className="flex items-center justify-between pt-4 border-t border-gray-50 mt-auto">
+                                                        <button
+                                                            onClick={() => handleOpenArticle(article)}
+                                                            className={`bg-[#0b314d] text-white px-4 py-2 rounded-lg font-bold text-[10px] flex items-center gap-2 hover:bg-[#D4AF37] transition-all duration-300 shadow-sm hover:shadow-md group/btn ${locale === 'ur' ? 'urdu-text' : ''}`}
+                                                        >
+                                                            {locale === 'en' ? 'Read Full' : locale === 'fa' ? 'ادامه مطلب' : 'مکمل پڑھیں'} <FaArrowLeft className="group-hover/btn:-translate-x-1 transition-transform" />
+                                                        </button>
 
                         <div className="flex items-center gap-3">
                           <button
@@ -298,14 +298,14 @@ function ArticlesContent() {
       {selectedArticle && (
         <section className="container mx-auto px-4 py-12 md:py-20 animate-fadeIn" dir="rtl">
           <button
-            onClick={() => {
-              setSelectedArticle(null);
-              router.push(window.location.pathname, { scroll: false });
-            }}
-            className="flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all urdu-text bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100"
-          >
-            <FaArrowLeft className="rotate-180" /> تمام مضامین پر واپس جائیں
-          </button>
+                                onClick={() => {
+                                    setSelectedArticle(null);
+                                    router.push(window.location.pathname, { scroll: false });
+                                }}
+                                className={`flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' ? 'urdu-text' : ''}`}
+                            >
+                                <FaArrowLeft className="rotate-180" /> {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
+                            </button>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100">
@@ -317,7 +317,7 @@ function ArticlesContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d] via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-10 right-10 left-10">
-                  <h1 className="text-3xl md:text-5xl font-extrabold text-white urdu-text leading-tight drop-shadow-lg">
+                  <h1 className={`text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg ${locale === 'ur' ? 'urdu-text' : ''}`}>
                     {selectedArticle.title}
                   </h1>
                 </div>
@@ -331,8 +331,8 @@ function ArticlesContent() {
                         <FaCalendar className="text-[#D4AF37]" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">تاریخ تحریر</span>
-                        <span className="text-[#0b314d] font-bold urdu-text">{selectedArticle.date || 'شبیر شگری'}</span>
+                        <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">{locale === 'en' ? 'Date' : locale === 'fa' ? 'تاریخ' : 'تاریخ تحریر'}</span>
+                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' ? 'urdu-text' : ''}`}>{selectedArticle.date || 'شبیر شگری'}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -340,8 +340,8 @@ function ArticlesContent() {
                         <FaEye className="text-[#D4AF37]" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">مشاہدات</span>
-                        <span className="text-[#0b314d] font-bold urdu-text">{getStats(selectedArticle).views}</span>
+                        <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">{locale === 'en' ? 'Views' : locale === 'fa' ? 'بازدید' : 'مشاہدات'}</span>
+                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' ? 'urdu-text' : ''}`}>{getStats(selectedArticle).views}</span>
                       </div>
                     </div>
                   </div>
@@ -365,12 +365,16 @@ function ArticlesContent() {
                 />
 
                 <div className="mt-16 pt-12 border-t border-gray-100 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-full border-4 border-[#D4AF37] p-1 mb-4 shadow-xl">
-                    <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png" className="w-full h-full rounded-full object-cover" alt="Author" />
-                  </div>
-                  <h4 className="text-2xl font-bold text-[#0b314d] urdu-text mb-2">حاجی شبیر احمد شگری</h4>
-                  <p className="text-gray-400 urdu-text max-w-md">گولڈ میڈلسٹ صحافی، کالم نگار اور سماجی و ثقافتی کارکن</p>
-                </div>
+                                            <div className="w-20 h-20 rounded-full border-4 border-[#D4AF37] p-1 mb-4 shadow-xl">
+                                                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png" className="w-full h-full rounded-full object-cover" alt="Author" />
+                                            </div>
+                                            <h4 className={`text-2xl font-bold text-[#0b314d] mb-2 ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                                {locale === 'en' ? 'Haji Shabbir Ahmed Shigri' : locale === 'fa' ? 'حاجی شبیر احمد شگری' : 'حاجی شبیر احمد شگری'}
+                                            </h4>
+                                            <p className={`text-gray-400 max-w-md ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                                                {locale === 'en' ? 'Gold Medalist Journalist, Columnist and Socio-Cultural Activist' : locale === 'fa' ? 'روزنامه‌نگار برنده مدال طلا، ستون‌نویس و فعال اجتماعی و فرهنگی' : 'گولڈ میڈلسٹ صحافی، کالم نگار اور سماجی و ثقافتی کارکن'}
+                                            </p>
+                                        </div>
               </div>
             </div>
           </div>
