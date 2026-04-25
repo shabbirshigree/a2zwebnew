@@ -179,9 +179,9 @@ function ArticlesContent() {
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl border-t-4 border-[#D4AF37] shadow-sm hover:shadow-lg transition-all duration-300">
                   <div className="text-[#0b314d] text-4xl mb-4 flex justify-center"><FaMedal /></div>
-                  <h3 className="text-xl font-bold text-[#0f4c75] mb-3 urdu-text text-center border-b border-gray-200 pb-2">پہلا گولڈ میڈل</h3>
+                  <h3 className="text-xl font-bold text-[#0f4c75] mb-3 urdu-text text-center border-b border-gray-200 pb-2">گولڈ میڈل</h3>
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed urdu-text text-justify">
-                    صحافت کے میدان میں میری محنت کا پہلا بڑا اعتراف اس وقت ہوا جب مجھے 1988 میں روزنامہ 'نوائے وقت' کی جانب سے 'بہترین لکھاری' کا گولڈ میڈل دیا گیا۔ یہ میڈل اس وقت کے چیف ایڈیٹر جناب مجید نظامی صاحب کے ہاتھوں سے وصول کرنا میرے لیے ایک عظیم اعزاز تھا۔ یہ کامیابی محض ایک انعام نہیں تھی بلکہ اس بات کا ثبوت تھی کہ دور دراز پہاڑوں میں رہنے والا ایک نوجوان بھی اپنی لگن اور قلم کی طاقت سے اپنا مقام بنا سکتا ہے۔
+                    علمی ادبی و فرہنگی خدمات کے اعتراف میں مجھے گولڈ میڈل سے نوازا گیا۔ حضرت اقبال ؒ کی زندگی پر ایران کی جانب سے بین الاقوامی فلم سیریز میں بنائی گئی۔ اور مجھے اس کا پروڈکشن مینیجر ہونے کا اعزاز حاصل ہوا۔ اس سیریز میں حضرت اقبالؒ کی پوری زندگی کے واقعات بتائے گئے ہیں۔ یہ گولڈ میڈل حضرت اقبالؒ کے پوتے منیب اقبال نے ایک تقریب میں اپنے ہاتھوں سے پہنایا۔
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl border-t-4 border-[#0b314d] shadow-sm hover:shadow-lg transition-all duration-300">
