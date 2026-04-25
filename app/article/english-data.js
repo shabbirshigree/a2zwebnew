@@ -6,7 +6,7 @@ export const englishData = [
 
     {
         "id": "123EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Victory of Hussainiyat",
         "date": "April 08, 2026",
         "paper": "Daily Mashriq, Zamana News, Islam Times",
@@ -80,7 +80,7 @@ Today, the enemy who set out to isolate Iran has itself become such an isolated 
     },
     {
         "id": "122EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Chess Pieces of the Iranian War",
         "date": "April 04, 2026",
         "paper": "Facebook",
@@ -145,7 +145,7 @@ If we are to understand Iran, we must understand its ancient civilization and cu
     },
     {
         "id": "121EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Gem of Hormuz",
         "date": "March 20, 2026",
         "paper": "Facebook",
@@ -201,7 +201,7 @@ Hormuz is currently the switch in Iran's hand that it can press whenever it want
     },
     {
         "id": "117EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Martyr Dr. Ali Larijani: Ambassador of Kashmir and Palestine",
         "date": "March 18, 2026",
         "paper": "Facebook",
@@ -280,7 +280,7 @@ Today, the Islamic Ummah has been deprived of this great leader. He attained the
     },
     {
         "id": "116EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Martyr Khamenei: The Center of Islamic Unity",
         "date": "March 14, 2026",
         "paper": "Zamana News, Islam Times, Public Power",
@@ -351,7 +351,7 @@ In my own view, the Leader's entire life remained a practical model of unity, bu
     },
     {
         "id": "115EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "From Nara-e-Haidari to Uswah-e-Haidari",
         "date": "March 12, 2026",
         "paper": "Zamana News",
@@ -398,7 +398,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "113EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Cultural Heritage Under the Shadow of Crimes",
         "date": "March 04, 2026",
         "paper": "Zamana News",
@@ -435,7 +435,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "111EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Great Leader of Islam, Martyr Ayatollah al-Uzma Ali Khamenei",
         "date": "March 04, 2026",
         "paper": "Mashriq, Zamana, Islam Times, Public Power, Sada-e-Watan, Aaj Ki Baat",
@@ -527,7 +527,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "110EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Life of Agha Ali Mousavi",
         "date": "February 08, 2026",
         "paper": "Zamana News / Islam Times / 5CN",
@@ -608,8 +608,123 @@ Our prayer is that just as he presented his great services for religion and the 
     `
     },
     {
+        "id": "84EN",
+        "category": ["english"],
+        "title": "The Wound of Suhail Mujtaba's Separation, Which Will Never Heal",
+        "date": "December 06, 2025",
+        "paper": "Social Media / Shigri's Diary",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770100668/594417754_895546226153996_8245514203811113249_n.jpg_f24euv.jpg",
+        "excerpt": "The death of a youth always leaves such wounds on hearts that never heal. The passing of a strong young man is not just the departure of an individual, but the setting of the shining sun of hopes, dreams, and the future.",
+        "content": `
+        <div style="font-family: sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
+            
+            <p><strong>Written by: Shabbir Ahmed Shigri</strong></p>
+            
+            <div style="background-color: #fdf2f2; border-left: 5px solid #c8102e; padding: 15px; margin: 15px 0;">
+                <p style="margin: 0; font-style: italic; color: #555;">
+                    "My relationship with the late Suhail Mujtaba was not just that of an elder, but like that of an affectionate father. This writing is an expression of my heartfelt agony."
+                </p>
+            </div>
+
+            <br>
+            <p><strong>December 2, 2025, became a day of never-ending grief for me. This was the day when the heart-wrenching news arrived that the beloved piece of the heart of our dear brother Maulana Muhammad Yusuf Johari, the innocent, well-mannered, and love-filled eighteen-year-old strong youth, Suhail Mujtaba, departed from this mortal world. This news struck like lightning. It felt as if the heartbeat had stopped.
+
+The death of a youth always leaves such wounds on hearts that never heal.
+The passing of a strong young man is not just the departure of an individual, but the setting of the shining sun of hopes, dreams, and the future.
+And when this tragedy happens to a loved one, the river of sorrow becomes many times wider and deeper.
+
+My relationship with Suhail was extraordinary. He loved me a lot, and I loved him like my own child. The news of his separation shook every corner of my heart. Then, the thought of what the parents must go through when an eighteen-year-old angelic son leaves the world—this very thought pierces the heart.
+
+The moments of the funeral that wound the heart
+When Suhail's funeral took place at the National Center Shadman, the scene was extremely soul-crushing. An extraordinary number of religious scholars and common people participated. Every eye was moist, every heart burdened with grief. I myself was suffering from a severe illness, but the love of this young man compelled me to come there.
+"Amoo... Amoo" (Uncle), that lovely face that used to return my love, was lying silent in front of me today.
+
+When hands were raised for the Takbeer, the flood of tears would not stop. All the people were also unable to control their condition. The funeral of a young son—this is a burden that shakes even the strongest shoulders in the world.
+
+Maulana Sahib's own condition was a witness to what a father goes through during this mountain of a trial. Suhail's elder brother—who was closer to him in age—with what heart must he have carried the coffin of his younger brother; even the thought of it makes the soul tremble.
+
+Amidst sighs and sobs, Suhail was laid to rest in the Firdousia Graveyard. Only these words were on my lips:
+"Amoo's life, goodbye..."
+Inna lillahi wa inna ilayhi raji'un (Indeed we belong to Allah, and indeed to Him we will return).
+
+The separation of a loved one is such a shock in which a person, despite being complete, remains incomplete.
+A youthful death is a scream that, even when silent, shakes the walls of hearts.
+
+The first meeting with Suhail—which was engraved in the heart
+This love was not of today. It was an affection spanning years.
+When I went from Tehran to Qom to the shrine of Hazrat Masuma (Peace be upon her) past midnight, Maulana Johari Sahib was waiting for me at the gate of the shrine. After being honored with the Ziyarat, I asked for permission to return because I had the responsibility of a delegation and had to participate in the anniversary program of Imam Khomeini (RA) in the morning and needed to reach Tehran early. But Maulana Sahib said, "Even if for a short while, come home."
+
+When I reached home, I was surprised that dawn was approaching, yet both his children—Muhammad Mustafa and Suhail Mujtaba—were waiting for me.
+This was my first meeting with Suhail. Those innocent eyes, that loving face, that existence glowing with happiness—all this made a home in my heart in a moment.
+
+Even later, after moving to Lahore, both brothers would run to me in every gathering.
+Because I used to converse with them in Persian, which was their mother tongue.
+They both used to call me "Amoo", and I would be sacrificed over this love of theirs. (In Persian, Amoo means uncle).
+
+Suhail's birth, life, and the miracle that Allah showed.
+Suhail's life itself was a miracle. He was an extraordinary human being, which is why he came into the world on July 8, 2008, in the holy city of Qom at the age of just seven and a half months (prematurely). After birth, he remained in the ICU for 18 days. Then, when he was brought home, he fell severely ill again after just 29 days.
+
+Maulana Sahib tells that during the second illness, the doctors had given up hope.
+Seeing the half-dead Suhail, hope was breaking.
+Maulana Sahib went to the Imam Hassan Askari (A.S) Mosque in Qom, took the prayers of Ayatollah Jazayeri, and then reaching the shrine of Hazrat Masuma (S.A), he prayed tearfully.
+
+At that very moment, a phone call came from home:
+"Do not worry, Suhail has recovered!"
+It was hard to believe, but when Maulana Sahib rushed back to the hospital, Suhail had opened his eyes.
+This was a miracle; this was the blessing of Bibi Masuma (S.A).
+After that, he never fell ill, until the illness two months ago separated him from us.
+
+Suhail's personality—love, manners, intelligence
+Suhail was a ninth-grade student. And he was incredibly intelligent. Intelligent, well-mannered, popular, and full of love.
+Whether teachers or classmates—everyone loved him.
+He would win people's hearts in just a few days.
+His smile was such that it illuminated hearts.
+There was such an attraction in his nature that anyone who saw him once could not help but love him.
+According to Maulana Sahib, he had memorized 17–18 lessons of the Quran.
+Despite being a child, his intelligence and understanding were unique.
+
+The separation of Suhail—a void that will never be filled
+Suhail's passing is not just a death; it is the closing of a chapter of love.
+A lamp has been extinguished that gave light to many hearts.
+A flower has withered whose fragrance still moistens the eyes today.
+Suhail's separation has left such a wound in the heart that may not heal for an entire lifetime.
+
+Certainly, death is an inevitable reality, but the separation of a young son is such a trial for which only Allah can grant patience.
+At this moment, this verse spontaneously comes to mind:
+"The flower could not get the praise for its delicacy
+It bloomed indeed, but could not smile after blooming"
+
+We pray in the court of the Lord:
+May Allah Almighty grant this innocent, lovely, pious youth Suhail Mujtaba a high rank in the vicinity of Hazrat Ali Akbar (A.S).
+May He transform his grave into the gardens of Paradise.
+May He cover his soul in His mercies.
+And may He grant beautiful patience (Sabr-e-Jameel) to his parents, siblings, and loved ones on this tragedy.
+Ameen, O Lord of the Worlds.
+</strong></p>
+            <br>
+
+            <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
+                <h4 style="color:var(--primary-color);">Online Link:</h4>
+                <ul style="list-style:none; padding:0;">
+                    <li style="margin-bottom:10px;">
+                        <a href="https://www.facebook.com/share/p/1MndxGb3KQ/" 
+                           target="_blank" 
+                           style="color:#0f4c75; text-decoration: underline; word-break: break-all;">
+                             https://www.facebook.com/share/p/1MndxGb3KQ/
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    `
+    },
+
+
+
+
+    {
         "id": "79EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Benefactor of the North: Agha Syed Ahmed Ali Shah (Written Column + Google Analysis)",
         "date": "January 26, 2026",
         "paper": "Daily Zamana / Yom-e-Takbeer",
@@ -755,7 +870,7 @@ This writing comprehensively covers the life and invaluable services of the reno
     },
     {
         "id": "82EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Great Spiritual Leader: Hazrat Agha Syed Ali Al-Hussaini Sabzwari (RA) (Shigri's Diary)",
         "date": "December 25, 2025",
         "paper": "Daily Baadeshimal",
@@ -819,7 +934,7 @@ May Allah accept and approve all his efforts and grant him successes and victori
     },
     {
         "id": "83EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "The Era of 'Jurm-e-Siasat' Ends: In Memory of the Late Mian Manzoor Ahmed Wattoo",
         "date": "December 16, 2025",
         "paper": "Daily Zamana / Yom-e-Takbeer / Siasiyat / 5CN",
@@ -900,7 +1015,7 @@ Today, Mian Manzoor Ahmed Wattoo is no longer with us, but his graciousness, adh
     },
     {
         "id": "85EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Social Media: A Blessing or a Curse? (In the Light of the Supreme Leader's Directives and Quranic Teachings)",
         "date": "October 12, 2025",
         "paper": "Daily Mashriq / Siasiyat / Islam Times",
@@ -992,7 +1107,7 @@ Today, Mian Manzoor Ahmed Wattoo is no longer with us, but his graciousness, adh
     },
     {
         "id": "86EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Unity Week: A Practical Formula for the Unity of the Muslim Ummah",
         "date": "September 10, 2025",
         "paper": "National and International Newspapers",
@@ -1071,7 +1186,7 @@ Amen, O Lord of the Worlds.</strong></p>
     },
     {
         "id": "81EN",
-        "category": ["column"],
+        "category": ["english"],
         "title": "Tribute to an Exemplary Civil Servant: In Memory of the Late G.M. Sikandar",
         "date": "August 13, 2025",
         "paper": "Daily Mashriq / Islam Times / Siasiyat",
@@ -1394,7 +1509,7 @@ Some masterpieces of the late Mahmoud Farshchian are also being shared here.</st
         </div>
     `
     },
-    
+
     {
 
         id: 105,
