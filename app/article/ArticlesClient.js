@@ -46,7 +46,7 @@ function ArticlesContent() {
     }
     const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
-    
+
     const key = `${matched.id}-${matched.title}`;
     const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
     setArticleViews(updatedViews);
@@ -69,7 +69,7 @@ function ArticlesContent() {
 
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => b.id - a.id); 
+    .sort((a, b) => b.id - a.id);
 
   const categories = [
     { id: 'special', label: 'سپیشل ایڈیشن ⭐' },
@@ -214,8 +214,8 @@ function ArticlesContent() {
                     key={cat.id}
                     onClick={() => setFilterCategory(cat.id)}
                     className={`px-6 py-2.5 rounded-xl font-bold urdu-text text-sm transition-all duration-300 ${filterCategory === cat.id
-                        ? 'bg-[#0b314d] text-white shadow-lg shadow-[#0b314d]/20 scale-105'
-                        : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
+                      ? 'bg-[#0b314d] text-white shadow-lg shadow-[#0b314d]/20 scale-105'
+                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
                       }`}
                   >
                     {cat.label}
@@ -274,7 +274,7 @@ function ArticlesContent() {
                           >
                             {likedArticles[getArticleKey(article)] ? <FaHeart /> : <FaRegHeart />}
                           </button>
-                          <button 
+                          <button
                             onClick={() => shareArticle(article, 'native')}
                             className="text-gray-300 hover:text-[#0b314d] transition-colors"
                           >
@@ -295,8 +295,8 @@ function ArticlesContent() {
         <section className="container mx-auto px-4 py-12 md:py-20 animate-fadeIn" dir="rtl">
           <button
             onClick={() => {
-                setSelectedArticle(null);
-                router.push(window.location.pathname, { scroll: false });
+              setSelectedArticle(null);
+              router.push(window.location.pathname, { scroll: false });
             }}
             className="flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all urdu-text bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100"
           >
@@ -353,9 +353,9 @@ function ArticlesContent() {
 
                 <div
                   className="urdu-text text-lg md:text-xl leading-[2.2] text-gray-700 text-justify space-y-8 article-content"
-                  dangerouslySetInnerHTML={{ 
-                    __html: selectedArticle.content?.includes('<p') 
-                      ? selectedArticle.content 
+                  dangerouslySetInnerHTML={{
+                    __html: selectedArticle.content?.includes('<p')
+                      ? selectedArticle.content
                       : selectedArticle.content?.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('')
                   }}
                 />
@@ -379,9 +379,9 @@ function ArticlesContent() {
 }
 
 export default function ArticlesPage() {
-    return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <ArticlesContent />
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ArticlesContent />
+    </Suspense>
+  );
 }
