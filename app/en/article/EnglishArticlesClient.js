@@ -45,10 +45,12 @@ function EnglishArticlesContent() {
     const matched = (englishArticles || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
     
-    const key = `${matched.id}-${matched.title}`;
-    const updatedViews = { ...articleViews, [key]: (articleViews[key] || 0) + 1 };
-    setArticleViews(updatedViews);
-    localStorage.setItem('articleViews', JSON.stringify(updatedViews));
+    const key = getArticleKey(matched);
+    setArticleViews(prev => {
+      const updated = { ...prev, [key]: (prev[key] || 0) + 1 };
+      localStorage.setItem('articleViews', JSON.stringify(updated));
+      return updated;
+    });
     setSelectedArticle(matched);
   }, [mounted, searchParams]);
 
@@ -64,8 +66,12 @@ function EnglishArticlesContent() {
     .sort((a, b) => b.id - a.id);
 
   const categories = [
-    { id: 'english', label: 'English' },
-    { id: 'all', label: 'All' }
+    { id: 'all', label: 'All Articles 🔍' },
+    { id: 'special', label: 'Special Edition ⭐' },
+    { id: 'english', label: 'English ✍️' },
+    { id: 'punjabi', label: 'Punjabi 📖' },
+    { id: 'islamic_unity', label: 'Islamic Unity 🤝' },
+    { id: 'international', label: 'International 🌍' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -84,9 +90,11 @@ function EnglishArticlesContent() {
 
   const toggleArticleLike = (article) => {
     const key = getArticleKey(article);
-    const newLiked = { ...likedArticles, [key]: !likedArticles[key] };
-    setLikedArticles(newLiked);
-    localStorage.setItem('articleLikes', JSON.stringify(newLiked));
+    setLikedArticles(prev => {
+      const updated = { ...prev, [key]: !prev[key] };
+      localStorage.setItem('articleLikes', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   const shareArticle = async (article, platform) => {
@@ -137,30 +145,48 @@ function EnglishArticlesContent() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {categories.map(cat => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setFilterCategory(cat.id)}
+                    className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 ${filterCategory === cat.id
+                        ? 'bg-[#0b314d] text-white shadow-lg'
+                        : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
+                      }`}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {filteredArticles.map((article) => {
                 const stats = getStats(article);
                 return (
-                  <div key={article.id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
-                    <div className="relative aspect-video cursor-pointer" onClick={() => handleOpenArticle(article)}>
-                      <img src={article.image || 'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&q=80'} alt={article.title} className="w-full h-full object-cover" />
+                  <div
+                    key={article.id}
+                    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full cursor-pointer"
+                    onClick={() => handleOpenArticle(article)}
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src={article.image || 'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&q=80'}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      <div className="flex items-center gap-4 text-gray-400 text-xs mb-4">
-                        <span className="flex items-center gap-1.5"><FaCalendar /> {article.date || 'By Shabbir Shigri'}</span>
-                        <span className="flex items-center gap-1.5"><FaEye /> {stats.views}</span>
+
+                    <div className="p-3 flex flex-col flex-1">
+                      <div className="flex items-center justify-between text-[10px] text-gray-400 mb-2">
+                        <span className="flex items-center gap-1"><FaCalendar className="text-[#D4AF37]" /> {article.date || 'By Shabbir Shigri'}</span>
+                        <span className="flex items-center gap-1"><FaEye className="text-[#D4AF37]" /> {stats.views}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-[#0f4c75] mb-4 hover:text-[#D4AF37] transition-colors cursor-pointer" onClick={() => handleOpenArticle(article)}>{article.title}</h3>
-                      <p className="text-gray-500 text-sm line-clamp-3 mb-6 flex-1">{article.content?.replace(/<[^>]*>/g, '').substring(0, 150)}...</p>
-                      <div className="flex items-center justify-between pt-6 border-t border-gray-50">
-                        <button onClick={() => handleOpenArticle(article)} className="text-[#0b314d] font-bold text-sm flex items-center gap-2">Read More <FaArrowLeft className="rotate-180" /></button>
-                        <div className="flex items-center gap-4">
-                          <button onClick={() => toggleArticleLike(article)} className={`transition-all ${likedArticles[getArticleKey(article)] ? 'text-red-500' : 'text-gray-300'}`}>{likedArticles[getArticleKey(article)] ? <FaHeart /> : <FaRegHeart />}</button>
-                          <button onClick={() => shareArticle(article, 'native')} className="text-gray-300 hover:text-[#0b314d]"><FaShareAlt /></button>
-                        </div>
-                      </div>
+
+                      <h3 className="text-sm md:text-base font-bold text-[#0f4c75] text-center line-clamp-2 leading-tight group-hover:text-[#D4AF37] transition-colors">
+                        {article.title}
+                      </h3>
                     </div>
                   </div>
                 );
@@ -196,6 +222,12 @@ function EnglishArticlesContent() {
                      </div>
                   </div>
                   <div className="flex items-center gap-3">
+                    <button 
+                      onClick={() => toggleArticleLike(selectedArticle)} 
+                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${likedArticles[getArticleKey(selectedArticle)] ? 'bg-red-500 text-white' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                    >
+                      {likedArticles[getArticleKey(selectedArticle)] ? <FaHeart /> : <FaRegHeart />}
+                    </button>
                     <button onClick={() => shareArticle(selectedArticle, 'whatsapp')} className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center"><FaWhatsapp /></button>
                     <button onClick={() => shareArticle(selectedArticle, 'facebook')} className="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center"><FaFacebookF /></button>
                     <button onClick={() => shareArticle(selectedArticle, 'native')} className="w-10 h-10 rounded-full bg-[#D4AF37] text-white flex items-center justify-center"><FaShareAlt /></button>
