@@ -150,7 +150,7 @@ export const booksTitlesFa = [
 export const legendsData = [
   {
 name: "شیخ صالح علی نوری کربلائی",    role: "بین الحرمین کربلا، عراق",
-    img: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777266505/2bd15dc4-0118-4c2d-928d-f3557ee38484.png",
+    img: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777267536/79e376e3-a5e6-4481-a917-eb1ff9280702.png",
     video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
     quote: ""
   },
