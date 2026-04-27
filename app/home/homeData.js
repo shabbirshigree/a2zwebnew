@@ -150,15 +150,14 @@ export const booksTitlesFa = [
 export const legendsData = [
   {
 name: "شیخ صالح علی نوری کربلائی",    role: "بین الحرمین کربلا، عراق",
-    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg",
+    img: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777266505/2bd15dc4-0118-4c2d-928d-f3557ee38484.png",
     video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
     quote: ""
   },
   {
     name: "شیخ اکرم جبار",
     role: "مبلغ شعبہ تبلیغات، حرم امام حسین علیہ السلام",
-    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg",
-    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4",
+    img: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777265902/0b065f01-e6b8-42b3-a1a6-036d71e905f4.png",    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4",
     quote: ""
   },
   {
