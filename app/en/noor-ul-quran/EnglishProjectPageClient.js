@@ -228,8 +228,8 @@ export default function EnglishProjectPageClient() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center">
                         {[
                             {
-                                name: "Sheikh Ali Noori Najafi",
-                                desc: "افتتاحی تقریب بین الحرمین کربلا عراق",
+                                name: "Sheikh Saleh Ali Noori Karbalai",
+                                desc: "Opening Ceremony at Bayn al-Haramayn, Karbala, Iraq",
                                 video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
                                 thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg"
                             },

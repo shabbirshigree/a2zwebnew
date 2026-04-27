@@ -149,8 +149,7 @@ export const booksTitlesFa = [
 // 🔴 6. نامور شخصیات کا مکمل ڈیٹا
 export const legendsData = [
   {
-    name: "شیخ علی نوری نجفی",
-    role: "بین الحرمین کربلا، عراق",
+name: "شیخ صالح علی نوری کربلائی",    role: "بین الحرمین کربلا، عراق",
     img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg",
     video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
     quote: ""
@@ -266,7 +265,7 @@ const legendRolesEn = [
 ];
 
 const legendNamesEn = [
-  "Sheikh Ali Noori Najafi",
+  "Sheikh Saleh Ali Noori Karbalai",
   "Maulana Abdul Khaliq Jafari",
   "Najaf Ali Saadati",
   "Maulana Muhammad Hussain Akbar",
@@ -300,7 +299,7 @@ const legendRolesFa = [
 ];
 
 const legendNamesFa = [
-  "شیخ علی نوری نجفی",
+  "شیخ صالح علی نوری کربلائی",
   "مولانا عبدالخالق جعفری",
   "نجف علی سعادتی",
   "مولانا محمد حسین اکبر",
