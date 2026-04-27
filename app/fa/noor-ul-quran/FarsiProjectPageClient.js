@@ -244,6 +244,12 @@ export default function FarsiProjectPageClient() {
                 thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg"
               },
               {
+                name: "شیخ اکرم جبار",
+                desc: "مبلغ بخش تبلیغات، آستان قدس حسینی (ع)",
+                video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4",
+                thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg"
+              },
+              {
                 name: "مولانا عبدالخالق جعفری",
                 desc: "خطیب و خادم حرم مطهر امام رضا (ع)",
                 video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841560/Ag_jaffari_t487zc.mp4",

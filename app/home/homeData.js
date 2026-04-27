@@ -155,6 +155,13 @@ name: "شیخ صالح علی نوری کربلائی",    role: "بین الح�
     quote: ""
   },
   {
+    name: "شیخ اکرم جبار",
+    role: "مبلغ شعبہ تبلیغات، حرم امام حسین علیہ السلام",
+    img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg",
+    video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4",
+    quote: ""
+  },
+  {
     name: "مولانا عبدالخالق جعفری",
     role: "خطیب و خادم حرم مطهر امام رضا علیہ السلام",
     img: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_5/v1776841560/Ag_jaffari_t487zc.jpg",
@@ -249,6 +256,7 @@ name: "شیخ صالح علی نوری کربلائی",    role: "بین الح�
 
 const legendRolesEn = [
   "Bayn al-Haramayn, Karbala, Iraq",
+  "Preacher, Holy Shrine of Imam Hussain (A.S)",
   "Speaker & Servant of Imam Reza (A.S) Shrine",
   "Reciter & Servant of Pilgrims at Imam Reza (A.S) Shrine",
   "Head of Minhaj-ul-Hussain Institution, Lahore",
@@ -266,6 +274,7 @@ const legendRolesEn = [
 
 const legendNamesEn = [
   "Sheikh Saleh Ali Noori Karbalai",
+  "Sheikh Ikram Jabar",
   "Maulana Abdul Khaliq Jafari",
   "Najaf Ali Saadati",
   "Maulana Muhammad Hussain Akbar",
@@ -283,6 +292,7 @@ const legendNamesEn = [
 
 const legendRolesFa = [
   "بین‌الحرمین کربلا، عراق",
+  "مبلغ آستان قدس حسینی",
   "خطیب و خادم حرم مطهر امام رضا (ع)",
   "قاری و خادم زائرین امام علی بن موسی الرضا (ع)",
   "رئیس موسسه منهاج الحسین، لاهور",
@@ -300,6 +310,7 @@ const legendRolesFa = [
 
 const legendNamesFa = [
   "شیخ صالح علی نوری کربلائی",
+  "شیخ اکرم جبار",
   "مولانا عبدالخالق جعفری",
   "نجف علی سعادتی",
   "مولانا محمد حسین اکبر",
