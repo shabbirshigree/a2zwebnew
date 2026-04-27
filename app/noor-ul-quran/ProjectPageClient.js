@@ -106,7 +106,7 @@ export default function ProjectPageClient() {
       shareUrl += `?type=video-analysis`;
     }
 
-    const itemTitle = title ? `"${title}"` : 'نورالقرآن پراجیکٹ کی یہ ویڈیو';
+    const itemTitle = title ? `${title} - شبیر احمد شگری کے نورالقرآن کے بارے میں خیالات` : 'نورالقرآن پراجیکٹ - شبیر احمد شگری';
     const text = `نورالقرآن پراجیکٹ: ${itemTitle} ویب سائٹ پر دیکھیں۔`;
     const encodedUrl = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(text);
@@ -115,12 +115,12 @@ export default function ProjectPageClient() {
       whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`,
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
       telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
-      email: `mailto:shigriinfo@gmail.com?subject=Noor ul Quran&body=${encodedText}%0A%0A${encodedUrl}`,
+      email: `mailto:shigriinfo@gmail.com?subject=Noor ul Quran - شبیر احمد شگری&body=${encodedText}%0A%0A${encodedUrl}`,
       x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
     };
 
     if (platform === 'native' && navigator.share) {
-      navigator.share({ title: "نورالقرآن پراجیکٹ", text, url: shareUrl }).catch(() => {});
+      navigator.share({ title: "نورالقرآن پراجیکٹ - شبیر احمد شگری", text, url: shareUrl }).catch(() => {});
     } else if (links[platform]) {
       window.open(links[platform], "_blank", "noopener,noreferrer,width=700,height=700");
     }

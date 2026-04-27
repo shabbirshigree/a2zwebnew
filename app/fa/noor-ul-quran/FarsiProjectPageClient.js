@@ -124,7 +124,7 @@ export default function FarsiProjectPageClient() {
       shareUrl += `?type=video-analysis`;
     }
 
-    const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
+    const text = `پروژه نورالقرآن - شبیر احمد شگری: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
     const encodedUrl = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`, "_blank");
@@ -142,14 +142,14 @@ export default function FarsiProjectPageClient() {
       shareUrl += `?type=video-analysis`;
     }
 
-    const text = `پروژه نورالقرآن: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
+    const text = `پروژه نورالقرآن - شبیر احمد شگری: اولین قرآن تصویری جهان. ویدیو را در سایت ببینید:`;
     const encodedUrl = encodeURIComponent(shareUrl);
     const encodedText = encodeURIComponent(text);
     const links = {
       whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`,
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
       telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
-      email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor ul Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
+      email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("پروژه نورالقرآن - شبیر احمد شگری")}&body=${encodedText}%0A%0A${encodedUrl}`,
       x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
     };
     const target = links[platform];
@@ -162,7 +162,7 @@ export default function FarsiProjectPageClient() {
     if (type) shareUrl += `?type=${type}`;
 
     if (navigator.share) {
-      navigator.share({ title: 'پروژه نورالقرآن', url: shareUrl }).catch(() => { });
+      navigator.share({ title: 'پروژه نورالقرآن - شبیر احمد شگری', url: shareUrl }).catch(() => { });
     } else {
       navigator.clipboard.writeText(shareUrl);
       alert('لینک کپی شد');

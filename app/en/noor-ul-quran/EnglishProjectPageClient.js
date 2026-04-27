@@ -116,7 +116,7 @@ export default function EnglishProjectPageClient() {
             shareUrl += `?type=video-analysis`;
         }
 
-        const text = `Noor Al-Quran Project: The world's first Visual Quran. Watch video on website:`;
+        const text = `Noor-ul-Quran Project by Shabbir Ahmed Shigri: The world's first Visual Quran. Watch video on website:`;
         const encodedUrl = encodeURIComponent(shareUrl);
         const encodedText = encodeURIComponent(text);
         window.open(`https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`, "_blank");
@@ -134,14 +134,14 @@ export default function EnglishProjectPageClient() {
             shareUrl += `?type=video-analysis`;
         }
 
-        const text = `Noor Al-Quran Project: The world's first Visual Quran. Watch video on website:`;
+        const text = `Noor-ul-Quran Project by Shabbir Ahmed Shigri: The world's first Visual Quran. Watch video on website:`;
         const encodedUrl = encodeURIComponent(shareUrl);
         const encodedText = encodeURIComponent(text);
         const links = {
             whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`,
             facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
             telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
-            email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor ul Quran")}&body=${encodedText}%0A%0A${encodedUrl}`,
+            email: `mailto:shigriinfo@gmail.com?subject=${encodeURIComponent("Noor-ul-Quran Project by Shabbir Ahmed Shigri")}&body=${encodedText}%0A%0A${encodedUrl}`,
             x: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
         };
         const target = links[platform];
@@ -154,7 +154,7 @@ export default function EnglishProjectPageClient() {
         if (type) shareUrl += `?type=${type}`;
 
         if (navigator.share) {
-            navigator.share({ title: "Noor Al-Quran Project", url: shareUrl }).catch(() => { });
+            navigator.share({ title: "Noor-ul-Quran Project by Shabbir Ahmed Shigri", url: shareUrl }).catch(() => { });
         } else {
             navigator.clipboard.writeText(shareUrl);
             alert('Link copied to clipboard');
