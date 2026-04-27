@@ -241,13 +241,13 @@ export default function FarsiProjectPageClient() {
                 name: "شیخ صالح علی نوری کربلائی",
                 desc: "مراسم افتتاحیه در بین‌الحرمین کربلا، عراق",
                 video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4",
-                thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg"
+                thumb: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777267536/79e376e3-a5e6-4481-a917-eb1ff9280702.png"
               },
               {
                 name: "شیخ اکرم جبار",
                 desc: "مبلغ بخش تبلیغات، آستان قدس حسینی (ع)",
                 video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4",
-                thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg"
+                thumb: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777265902/0b065f01-e6b8-42b3-a1a6-036d71e905f4.png"
               },
               {
                 name: "مولانا عبدالخالق جعفری",
@@ -283,14 +283,20 @@ export default function FarsiProjectPageClient() {
                   <img 
                     src={item.thumb} 
                     alt={item.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-100"
                   />
-                  <div className="absolute inset-0 flex items-end justify-start p-4 bg-black/10 group-hover:bg-black/5 transition-all cursor-pointer" onClick={() => handlePlayLocalVideo(item.video)}>
-                    <div className="w-10 h-10 bg-[#D4AF37]/90 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all z-10">
+                  <div className="absolute inset-0 flex items-end justify-start p-4 bg-black/10 group-hover:bg-black/40 transition-all cursor-pointer" onClick={() => handlePlayLocalVideo(item.video)}>
+                    <div className="w-10 h-10 bg-[#D4AF37]/70 group-hover:bg-[#D4AF37]/90 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all z-10 opacity-60 group-hover:opacity-100">
                       <FaPlay className="text-[#000] text-sm ml-0.5" />
                     </div>
                   </div>
                 </div>
+                <button 
+                  onClick={(e) => { e.stopPropagation(); shareFromPopup(`local-${item.video}`); }} 
+                  className="absolute top-2 right-2 w-8 h-8 bg-white/70 group-hover:bg-white/90 rounded-full flex items-center justify-center text-[#0f4c75] opacity-60 group-hover:opacity-100 transition-all shadow-md hover:scale-110 z-20 border-2 border-[#D4AF37]/50 group-hover:border-[#D4AF37]"
+                >
+                  <FaShareAlt size={12} />
+                </button>
                 <div className="p-6 text-center bg-black">
                   <h4 className="text-[#D4AF37] text-xl font-bold mb-2">{item.name}</h4>
                   <p className="text-gray-400 text-sm leading-relaxed h-10 flex items-center justify-center px-4">{item.desc}</p>

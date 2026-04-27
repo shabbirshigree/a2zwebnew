@@ -171,8 +171,8 @@ export default function ProjectPageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center">
             {[
-              { name: "شیخ صالح علی نوری کربلائی", desc: "افتتاحی تقریب بین الحرمین کربلا عراق", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg" },
-              { name: "شیخ اکرم جبار", desc: "مبلغ شعبہ تبلیغات، حرم امام حسین علیہ السلام", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_10/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.jpg" },
+              { name: "شیخ صالح علی نوری کربلائی", desc: "افتتاحی تقریب بین الحرمین کربلا عراق", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840008/Iftitah--NoorulQuran-Karbala_tpwvtf.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777267536/79e376e3-a5e6-4481-a917-eb1ff9280702.png" },
+              { name: "شیخ اکرم جبار", desc: "مبلغ شعبہ تبلیغات، حرم امام حسین علیہ السلام", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1777263262/Shiekh_Ikram_Jabar_Karbala_compressed_zshkqv.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/image/upload/v1777265902/0b065f01-e6b8-42b3-a1a6-036d71e905f4.png" },
               { name: "مولانا عبدالخالق جعفری", desc: "خطیب و خادم حرم مطهر امام رضا علیہ السلام", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841560/Ag_jaffari_t487zc.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_5/v1776841560/Ag_jaffari_t487zc.jpg" },
               { name: "نجف علی سعادتی", desc: "قاری و خادم زائرین امام علی ابن موسیٰ الرضا علیہ السلام", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776841527/Najaf_Ali_Saadati_dsemnc.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_8/v1776841527/Najaf_Ali_Saadati_dsemnc.jpg" },
               { name: "مولانا محمد حسین اکبر", desc: "سربراہ ادارہ منھاج الحسین ،لاہور", video: "https://res.cloudinary.com/drlg0dr9y/video/upload/v1776840084/Molana-Akbar-about-NoorulQuran_ucs1ho.mp4", thumb: "https://res.cloudinary.com/drlg0dr9y/video/upload/c_fill,g_auto,h_360,w_640,so_15/v1776840084/Molana-Akbar-about-NoorulQuran_ucs1ho.jpg" },
@@ -180,12 +180,14 @@ export default function ProjectPageClient() {
             ].map((item, idx) => (
               <motion.div key={idx} whileHover={{ y: -5 }} className="bg-[#0a0a0a] border border-[#D4AF37]/20 rounded-3xl overflow-hidden shadow-xl hover:shadow-[#D4AF37]/10 transition-all group w-full max-w-[380px] relative">
                 <div className="aspect-video relative bg-black overflow-hidden">
-                  <img src={item.thumb} alt={item.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
-                  <div className="absolute inset-0 flex items-end justify-start p-4 bg-black/10 group-hover:bg-black/5 transition-all cursor-pointer" onClick={() => handlePlayLocalVideo(item.video)}>
-                    <div className="w-10 h-10 bg-[#D4AF37]/90 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all z-10"><FaPlay className="text-[#000] text-sm ml-0.5" /></div>
+                  <img src={item.thumb} alt={item.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-100" />
+                  <div className="absolute inset-0 flex items-end justify-start p-4 bg-black/10 group-hover:bg-black/40 transition-all cursor-pointer" onClick={() => handlePlayLocalVideo(item.video)}>
+                    <div className="w-10 h-10 bg-[#D4AF37]/70 group-hover:bg-[#D4AF37]/90 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all z-10 opacity-60 group-hover:opacity-100"><FaPlay className="text-[#000] text-sm ml-0.5" /></div>
                   </div>
                 </div>
-                <button onClick={(e) => { e.stopPropagation(); shareItem('whatsapp', `local-${item.video}`, item.name); }} className="absolute top-2 right-2 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-[#0f4c75] opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:scale-110 z-20"><FaShareAlt size={12} /></button>
+                <button onClick={(e) => { e.stopPropagation(); shareItem('whatsapp', `local-${item.video}`, item.name); }} className="absolute top-2 right-2 w-8 h-8 bg-white/70 group-hover:bg-white/90 rounded-full flex items-center justify-center text-[#0f4c75] opacity-60 group-hover:opacity-100 transition-all shadow-md hover:scale-110 z-20 border-2 border-[#D4AF37]/50 group-hover:border-[#D4AF37]">
+                  <FaShareAlt size={12} />
+                </button>
                 <div className="p-6 text-center bg-black"><h4 className="text-[#D4AF37] text-xl font-bold urdu-text mb-2">{item.name}</h4><p className="text-gray-400 urdu-text text-sm leading-relaxed h-10 flex items-center justify-center px-4">{item.desc}</p></div>
               </motion.div>
             ))}

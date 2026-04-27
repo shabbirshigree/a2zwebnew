@@ -492,14 +492,14 @@ export function HomeContent() {
                     <img 
                       src={item.img} 
                       alt={item.name} 
-                      className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                      className="w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" 
                       onClick={() => setActiveVideo(item.video)}
                     />
-                    <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/40 to-transparent group-hover:bg-transparent transition-all pointer-events-none">
-                      <div className="bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 pointer-events-auto" onClick={() => setActiveVideo(item.video)}>
+                    <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/40 transition-all pointer-events-none">
+                      <div className="bg-[#D4AF37]/70 group-hover:bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white/50 group-hover:border-white shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 opacity-60 group-hover:opacity-100 pointer-events-auto" onClick={() => setActiveVideo(item.video)}>
                         <FaPlay size={12} className="text-black ml-0.5" />
                       </div>
-                      <div className="bg-white/90 w-9 h-9 rounded-full border-2 border-[#D4AF37] shadow-lg flex items-center justify-center transform hover:scale-110 transition-all duration-300 z-10 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
+                      <div className="bg-white/70 group-hover:bg-white/90 w-9 h-9 rounded-full border-2 border-[#D4AF37]/50 group-hover:border-[#D4AF37] shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 opacity-60 group-hover:opacity-100 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
                         <FaShareAlt size={12} className="text-[#0f4c75]" />
                       </div>
                     </div>
