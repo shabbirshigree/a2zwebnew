@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ImamRezaClient from "./ImamRezaClient";
 import { allData } from "./data";
 
@@ -44,5 +45,9 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default function Page() {
-  return <ImamRezaClient />;
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#0b314d] text-[#D4AF37] urdu-text">لوڈ ہو رہا ہے...</div>}>
+      <ImamRezaClient />
+    </Suspense>
+  );
 }
