@@ -293,9 +293,20 @@ export function HomeContent() {
     <>
       <main
         dir={mainDir}
-        className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden"
+        className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden iranian-bg"
       >
         <Navbar />
+
+        {/* 🕊️ پرندوں کی اینیمیشن */}
+        <div className="bird-container bird-container--one">
+          <div className="bird bird--one"></div>
+        </div>
+        <div className="bird-container bird-container--two">
+          <div className="bird bird--two"></div>
+        </div>
+        <div className="bird-container bird-container--three">
+          <div className="bird bird--three"></div>
+        </div>
 
         <div className="block w-full p-0 m-0 border-none outline-none overflow-hidden relative">
           <HeroSlider />
@@ -478,14 +489,14 @@ export function HomeContent() {
               {labels.legendsHead}
             </h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 max-w-7xl mx-auto justify-items-center">
-              {legends?.map((item, i) => (
+            <div className="flex gap-6 w-max animate-scroll-left pause-on-hover px-4">
+              {infiniteLegends?.map((item, i) => (
                 <motion.div 
                   key={i} 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="w-full group"
+                  className="w-[200px] md:w-[280px] group flex-shrink-0"
                   onClick={() => setActiveVideo(item.video)}
                 >
                   <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3">
