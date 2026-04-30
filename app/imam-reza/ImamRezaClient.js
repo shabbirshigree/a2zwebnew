@@ -149,7 +149,7 @@ export default function ImamRezaClient() {
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-gray-800 relative overflow-hidden urdu-text" dir="rtl">
       <Navbar />
-      <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
+      <div className="fixed inset-0 z-0 opacity-10"><img src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto,f_auto/v1768104581/1_shgdib.png" alt="BG" className="w-full h-full object-cover" /></div>
       
       {/* Navigation */}
       <div className="absolute top-20 md:top-24 right-4 z-[60] flex gap-3">
@@ -162,7 +162,7 @@ export default function ImamRezaClient() {
         <div className="bg-white/80 backdrop-blur-md border-2 border-[#D4AF37] rounded-[2rem] p-6 md:p-10 shadow-xl max-w-5xl mx-auto animate-float">
            <div className="flex justify-center -mt-20 mb-6">
              <div className="p-2 bg-white rounded-full border-8 border-[#D4AF37] animate-ripple shadow-2xl">
-                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-24 h-24 md:w-40 md:h-40 rounded-full object-cover" />
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto,f_auto/v1771166146/Imam_Reza_a.s_giff_qliprh.gif" alt="Reza" className="w-24 h-24 md:w-40 md:h-40 rounded-full object-cover" />
              </div>
            </div>
            <h1 className="text-2xl md:text-5xl font-extrabold text-[#0f4c75] mb-2 font-extra-bold">حاجی شبیر احمد شگری — خادمِ سلطانِ خراسانؑ</h1>

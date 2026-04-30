@@ -72,7 +72,7 @@ export default function GhaziAbbasClient() {
         <div className="relative z-10 px-4 w-full max-w-5xl mx-auto -mt-4 flex flex-col items-center justify-center text-center">
           <div className="flex flex-col items-center justify-center text-center">
             <div className="h-28 w-28 md:h-36 md:w-36 mx-auto rounded-full border-4 gold-border bg-white animate-ripple mb-8 relative">
-              <img src={ghaziData.intro.profileGif} alt="پروفائل" className="w-full h-full object-cover rounded-full" />
+              <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto,f_auto/v1771166145/Ghazi_Abbas_a.s_giff_mlyw24.gif" alt="پروفائل" className="w-full h-full object-cover rounded-full" />
             </div>
 
             <h1 className="text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 font-extra-bold">
