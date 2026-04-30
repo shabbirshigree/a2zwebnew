@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useLocale } from "../components/LocaleProvider";
-import { getDictionary } from "../lib/i18n";
+import { getDictionary, getLocalizedPath } from "../lib/i18n";
 import {
   FaHeart, FaMicrophone, FaAward, FaQuran, FaLandmark,
   FaPenNib, FaMedal, FaQuoteRight, FaHistory, FaChild,
@@ -112,11 +112,11 @@ export function HomeContent() {
             name: welcomeData.name,
             honorsHint: dict.home.honorsHint,
           },
-          honors: honorsData,
-          navCards: navCardsData,
+          honors: honorsData.map(h => ({ ...h, link: getLocalizedPath(h.link, locale) })),
+          navCards: navCardsData.map(c => ({ ...c, link: c.link.startsWith('http') ? c.link : getLocalizedPath(c.link, locale) })),
           legends: legendsData,
-          books: booksData,
-          journey: journeyData,
+          books: booksData.map(b => ({ ...b, link: getLocalizedPath(b.link, locale) })),
+          journey: journeyData.map(j => ({ ...j, link: getLocalizedPath(j.link, locale) })),
           labels: {
             projBadge: "WORLD'S FIRST VISUAL QURAN",
             projTitle: "نور القرآن پراجیکٹ: دنیا کا پہلا ویژول قرآن",
@@ -147,14 +147,15 @@ export function HomeContent() {
           name: currentWelcome.name,
           honorsHint: dict.home.honorsHint,
         },
-        honors: isEn ? honorsDataEn : honorsDataFa,
-        navCards: isEn ? navCardsDataEn : navCardsDataFa,
+        honors: (isEn ? honorsDataEn : honorsDataFa).map(h => ({ ...h, link: getLocalizedPath(h.link, locale) })),
+        navCards: (isEn ? navCardsDataEn : navCardsDataFa).map(c => ({ ...c, link: c.link.startsWith('http') ? c.link : getLocalizedPath(c.link, locale) })),
         legends: isEn ? legendsDataEn : legendsDataFa,
         books: booksData.map((b, i) => ({
           ...b,
           title: bookTitles[i] ?? b.title,
+          link: getLocalizedPath(b.link, locale)
         })),
-        journey: isEn ? journeyDataEn : journeyDataFa,
+        journey: (isEn ? journeyDataEn : journeyDataFa).map(j => ({ ...j, link: getLocalizedPath(j.link, locale) })),
         labels: isEn ? {
           projBadge: "WORLD'S FIRST VISUAL QURAN",
           projTitle: "Noor-ul-Quran Project: World's First Visual Quran",
@@ -369,7 +370,7 @@ export function HomeContent() {
             {navCards?.map((card, i) => (
               <Link 
                 key={i} 
-                href={i === 2 ? (locale === "fa" ? "https://pakiiranassociation.wixsite.com/farsee/main" : "https://pakiiranassociation.wixsite.com/pira") : (card.link || '#')} 
+                href={card.link || '#'} 
                 className="group relative bg-white rounded-[1.65rem] sm:rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-7 md:p-9 border-2 border-[#D4AF37]/20 text-center flex flex-col items-center justify-center min-h-0 shadow-lg sm:shadow-xl hover:shadow-[0_30px_60px_rgba(15,76,117,0.1)] hover:-translate-y-2 sm:hover:-translate-y-4 transition-all duration-500 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.15}s` }}
               >
@@ -434,7 +435,7 @@ export function HomeContent() {
 
                   <div className="flex flex-wrap gap-4 md:gap-5 justify-center lg:justify-start">
                     <Link
-                      href={projectSectionData?.bookletUrl || "/library#Quran"}
+                      href={getLocalizedPath(projectSectionData?.bookletUrl || "/library#Quran", locale)}
                       className="px-7 md:px-9 py-3 md:py-3.5 rounded-2xl font-bold bg-[#0f4c75] text-white border-2 border-[#0a3a5c] shadow-md hover:scale-[1.03] hover:shadow-lg hover:bg-[#134b7a] transition-all flex items-center gap-3 text-sm md:text-base"
                     >
                       <FaBookOpen className="text-lg text-[#fde68a]" /> {labels.btnRead}

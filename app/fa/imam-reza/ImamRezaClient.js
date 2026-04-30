@@ -153,8 +153,8 @@ export default function ImamRezaClient() {
       
       {/* Navigation */}
       <div className="absolute top-20 md:top-24 right-4 z-[60] flex gap-3">
-         <Link href="/fa/" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
-         <Link href="/fa/" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowRight size={18} /></Link>
+         <Link href="/home" className="bg-[#D4AF37] text-white p-2 rounded-full shadow-lg border-2 border-white hover:scale-110 transition-transform"><FaHome size={18} /></Link>
+         <Link href="/home" className="bg-white text-[#D4AF37] p-2 rounded-full shadow-lg border-2 border-[#D4AF37] hover:scale-110 transition-transform"><FaArrowRight size={18} /></Link>
       </div>
 
       {/* Header */}
