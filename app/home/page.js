@@ -30,10 +30,21 @@ export async function generateMetadata({ searchParams }) {
     
     const legend = legendsData.find(l => l.video.includes(videoId));
     if (legend) {
+      const title = `${legend.name} کے خیالات | حاجی شبیر احمد شگری`;
+      const description = `${legend.name} (${legend.role}): "${legend.quote || 'حاجی شبیر احمد شگری کی خدمات کے بارے میں اظہارِ خیال'}"۔ ویب سائٹ پر ویڈیو دیکھیں۔`;
       return {
-        title: `${legend.name} کے خیالات | حاجی شبیر احمد شگری`,
-        description: `${legend.name} (${legend.role}) کے حاجی شبیر احمد شگری کے بارے میں تاثرات۔`,
+        title,
+        description,
         openGraph: {
+          title,
+          description,
+          images: [legend.img],
+          type: 'video.other',
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title,
+          description,
           images: [legend.img],
         }
       };

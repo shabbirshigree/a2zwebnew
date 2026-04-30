@@ -223,7 +223,6 @@ export function HomeContent() {
     let shareUrl = baseUrl;
     
     if (type === 'video') {
-      // ویڈیو کا منفرد حصہ نکالیں (مثلاً فائل کا نام)
       const videoId = item.video.split('/').pop().split('.')[0];
       shareUrl += `?v=${videoId}`;
     } else if (type === 'book') {
@@ -234,11 +233,14 @@ export function HomeContent() {
       shareUrl += `?v=pod-audio`;
     }
 
-    const text = type === 'video' 
-      ? `${item.name} کے خیالات ویب سائٹ پر دیکھیں:`
-      : type === 'book'
-      ? `حاجی شبیر احمد شگری کی تصنیف "${item.title}" کے بارے میں جانئے:`
-      : `نورالقرآن پراجیکٹ کے بارے میں جانئے:`;
+    let text = "";
+    if (type === 'video') {
+      text = `*نامور شخصیت:* ${item.name}\n*عہدہ:* ${item.role}\n\n*حاجی شبیر احمد شگری کے بارے میں اظہارِ خیال:*\n"${item.quote || 'ویڈیو دیکھیں'}"\n\nویب سائٹ پر ویڈیو دیکھنے کے لیے لنک پر کلک کریں:`;
+    } else if (type === 'book') {
+      text = `حاجی شبیر احمد شگری کی تصنیف *"${item.title}"* کے بارے میں جانئے:`;
+    } else {
+      text = `نورالقرآن پراجیکٹ کے بارے میں جانئے:`;
+    }
 
     if (navigator.share) {
       navigator.share({ title: "حاجی شبیر احمد شگری", text, url: shareUrl }).catch(() => { });
@@ -489,15 +491,14 @@ export function HomeContent() {
               {labels.legendsHead}
             </h2>
             
-            <div className="flex gap-6 w-max animate-scroll-left pause-on-hover px-4">
-              {infiniteLegends?.map((item, i) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+              {legends?.map((item, i) => (
                 <motion.div 
                   key={i} 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="w-[200px] md:w-[280px] group flex-shrink-0"
-                  onClick={() => setActiveVideo(item.video)}
+                  className="group relative"
                 >
                   <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3">
                     <img 
@@ -506,12 +507,24 @@ export function HomeContent() {
                       className="w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" 
                       onClick={() => setActiveVideo(item.video)}
                     />
-                    <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/40 transition-all pointer-events-none">
-                      <div className="bg-[#D4AF37]/70 group-hover:bg-[#D4AF37]/90 w-9 h-9 rounded-full border-2 border-white/50 group-hover:border-white shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 opacity-60 group-hover:opacity-100 pointer-events-auto" onClick={() => setActiveVideo(item.video)}>
+                    <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                      {/* پلے بٹن (Dim by default) */}
+                      <div className="bg-[#D4AF37] w-9 h-9 rounded-full border-2 border-white shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 pointer-events-auto" onClick={() => setActiveVideo(item.video)}>
                         <FaPlay size={12} className="text-black ml-0.5" />
                       </div>
-                      <div className="bg-white/70 group-hover:bg-white/90 w-9 h-9 rounded-full border-2 border-[#D4AF37]/50 group-hover:border-[#D4AF37] shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 z-10 opacity-60 group-hover:opacity-100 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
+                      {/* شیئر بٹن (Dim by default) */}
+                      <div className="bg-white w-9 h-9 rounded-full border-2 border-[#D4AF37] shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
                         <FaShareAlt size={12} className="text-[#0f4c75]" />
+                      </div>
+                    </div>
+
+                    {/* ڈیفالٹ میں ہلکے نظر آنے والے بٹنز (Dimmed state) */}
+                    <div className="absolute bottom-3 left-3 right-3 flex justify-between pointer-events-none group-hover:opacity-0 transition-opacity">
+                      <div className="w-7 h-7 rounded-full bg-[#D4AF37]/30 border border-white/30 flex items-center justify-center">
+                        <FaPlay size={8} className="text-black/50" />
+                      </div>
+                      <div className="w-7 h-7 rounded-full bg-white/30 border border-[#D4AF37]/30 flex items-center justify-center">
+                        <FaShareAlt size={8} className="text-[#0f4c75]/50" />
                       </div>
                     </div>
                   </div>
