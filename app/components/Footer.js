@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <>
-      <GlobalEngagementBox />
+      {/* <GlobalEngagementBox /> */}
       <footer
         dir={footerDir}
         className="bg-gradient-to-r from-[#0f4c75] via-[#0a3552] to-[#0f4c75] text-white pt-10 pb-6 border-t-4 border-[#D4AF37] relative z-10 mt-0"

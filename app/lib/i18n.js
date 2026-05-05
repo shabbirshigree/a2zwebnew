@@ -234,21 +234,27 @@ export function getHomePath(locale) {
 /** @param {string} pathname - موجودہ راستہ 
  @param {SiteLocale} locale - ہدف لینگویج */
 export function getLocalizedPath(pathname, locale) {
-  // `/fa/...` یا `/en/...` سے لینگویج prefix ہٹائیں
+  // Step 1: پہلے سے موجودہ prefix ہٹا دیں
   let basePath = pathname;
+  
   if (pathname.startsWith("/fa/")) {
-    basePath = pathname.slice(3); // `/fa/` ہٹائیں
+    basePath = pathname.slice(3);
   } else if (pathname.startsWith("/en/")) {
-    basePath = pathname.slice(3); // `/en/` ہٹائیں
+    basePath = pathname.slice(3);
+  } else if (pathname === "/fa" || pathname === "/en") {
+    basePath = "/home";
+  } else if (pathname === "/") {
+    basePath = "/home";
   }
 
-  // اب basePath ہے جیسے `/noor-ul-quran`, `/about`, `/home` وغیرہ
+  // Step 2: نیا prefix جوڑیں
   if (locale === "fa") {
     return `/fa${basePath}`;
   } else if (locale === "en") {
     return `/en${basePath}`;
   }
-  // اردو کے لیے prefix نہیں
+  
+  // اردو کے لیے کوئی prefix نہیں
   return basePath;
 }
 

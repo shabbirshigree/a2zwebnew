@@ -8,6 +8,23 @@ export const AUTHOR_REVIEW = {
 
 export const BOOKS_DATA = [
   {
+    id: 'book-karamat-rizvi',
+    title: 'Karamat-e-Rizvi',
+    englishTitle: 'Karamat-e-Rizvi',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
+    badge: 'HARAM IMAM REZA (A.S)',
+    orientation: 'portrait',
+    descUrdu: `کرامات رضوی آسمان ولایت کے آٹھویں ستارے امام علی ابن موسیٰ الرضا علیہ السلام کے زندہ کرامات پر مشتمل کتاب ہے۔امام روؤف کے حرم میں بےشمار معجزات و کرامات رونما ہوتے رہتے ہیں۔ جب نقارہ بجتا ہے تو معلوم ہوتا ہے کہ کسی دکھی، کسی بیمار اورکسی مجبور کی فریاد سُن لی گئی ہے۔ کرامات کا یہ خوبصورت گلدستہ آپ کی روح اور ایمان کو یقیناً معطر کردےگا۔ یہ تحفہ امام ضامن ؑ کے جشن ولادت باسعادت کے موقع پر اپنے امام کی حضور پیش کرنے کی جسارت کررہا ہوں۔ امید ہے مولا قبول فرمائیں گے۔
+مصنف: حاجی شبیر احمد شگری`,
+    descEn: `Karamat-e-Rizvi is a book containing the living miracles of Imam Ali ibn Musa al-Ridha (AS), the eighth star of the sky of Wilayat. Countless miracles and wonders continue to occur in the holy shrine of the revered Imam. When the drum beats, it is known that the plea of a distressed, a sick, or a helpless person has been heard. This beautiful bouquet of miracles will surely perfume your soul and faith. I am daring to present this gift in the presence of my Imam on the auspicious occasion of the blessed birth anniversary of Imam al-Askari (AS). I hope the Master will accept it.
+Author: Hajji Shabbir Ahmed Shigri`,
+    actions: [
+      { type: 'read', label: 'Read Book', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958496/%DA%A9%D8%AA%D8%A7%D8%A8_%DA%A9%D8%B1%D8%A7%D9%85%D8%A7%D8%AA%D9%90_%D8%B1%D8%B6%D9%88%DB%8C__compressed_gonugn.pdf', color: 'theme-read', disabled: false },
+      { type: 'audio', label: 'Google Audio Podcast', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777973131/Karamat-e-Rizvi-audeo-compressed_y8qxis.mp3', color: 'theme-urdu-aud', disabled: false },
+      { type: 'video', label: 'Google Video Podcast', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777972704/Miracles_of_Imam_Reza_1_nrnqyy.mp4', color: 'theme-urdu-vid', disabled: false }
+    ]
+  },
+  {
     id: 'book-booy',
     title: 'Biography of Fatima Zahra (SA): Scent of Paradise',
     englishTitle: 'Biography of Fatima Zahra (SA): Scent of Paradise',

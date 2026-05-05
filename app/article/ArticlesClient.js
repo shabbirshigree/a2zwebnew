@@ -54,9 +54,22 @@ function ArticlesContent() {
       return updated;
     });
     setSelectedArticle(matched);
-  }, [mounted, searchParams, allArticles]);
+  }, [mounted, searchParams]);
 
   if (!mounted) return null;
+
+  // Function to parse date string (e.g., "15-05-2026") into a Date object for sorting
+  const parseArticleDate = (dateStr) => {
+    if (!dateStr) return new Date(0);
+    const parts = dateStr.split('-');
+    if (parts.length === 3) {
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1; // Months are 0-indexed
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
+    }
+    return new Date(0);
+  };
 
   const filteredArticles = (allArticles || [])
     .filter(article => {
@@ -71,7 +84,18 @@ function ArticlesContent() {
 
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => b.id - a.id);
+    .sort((a, b) => {
+      // Sort by date descending (newest first)
+      const dateA = parseArticleDate(a.date);
+      const dateB = parseArticleDate(b.date);
+      
+      if (dateB.getTime() !== dateA.getTime()) {
+        return dateB.getTime() - dateA.getTime();
+      }
+      
+      // If dates are same, fallback to ID sorting
+      return b.id - a.id;
+    });
 
   const categories = [
     { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام 🔍' },

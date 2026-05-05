@@ -8,6 +8,20 @@ export const AUTHOR_REVIEW = {
 
 export const BOOKS_DATA = [
   {
+    id: 'book-karamat-rizvi',
+    title: 'کرامات رضوی',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
+    badge: 'حرم امام رضا (ع)',
+    orientation: 'portrait',
+    descUrdu: `کرامات رضوی آسمان ولایت کے آٹھویں ستارے امام علی ابن موسیٰ الرضا علیہ السلام کے زندہ کرامات پر مشتمل کتاب ہے۔امام روؤف کے حرم میں بےشمار معجزات و کرامات رونما ہوتے رہتے ہیں۔ جب نقارہ بجتا ہے تو معلوم ہوتا ہے کہ کسی دکھی، کسی بیمار اورکسی مجبور کی فریاد سُن لی گئی ہے۔ کرامات کا یہ خوبصورت گلدستہ آپ کی روح اور ایمان کو یقیناً معطر کردےگا۔ یہ تحفہ امام ضامن ؑ کے جشن ولادت باسعادت کے موقع پر اپنے امام کی حضور پیش کرنے کی جسارت کررہا ہوں۔ امید ہے مولا قبول فرمائیں گے۔
+نویسنده: حاجی شبیر احمد شگری`,
+    actions: [
+      { type: 'read', label: 'کتاب را بخوانید', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958496/%DA%A9%D8%AA%D8%A7%D8%A8_%DA%A9%D8%B1%D8%A7%D9%85%D8%A7%D8%AA%D9%90_%D8%B1%D8%B6%D9%88%DB%8C__compressed_gonugn.pdf', color: 'theme-read', disabled: false },
+      { type: 'audio', label: 'پادکاست صوتی گوگل', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777966592/Karamat-e-Rizvi-audeo-farsi.compressed_if3m9g.mp3', color: 'theme-urdu-aud', disabled: false },
+      { type: 'video', label: 'پادکاست ویدیویی گوگل', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777966741/Karamat-e-Razavi-farsi-compressed_oh9b9e.mp4', color: 'theme-urdu-vid', disabled: false }
+    ]
+  },
+  {
     id: 'book-booy',
     title: 'سیره فاطمه زهرا (س): بوی بهشت',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768063213/Booy-e-Bahisht_iv282m.png',

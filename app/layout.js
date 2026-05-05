@@ -4,11 +4,8 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import FloatingButtons from './components/FloatingButtons';
 import LocaleProvider from './components/LocaleProvider';
-
-// 🔴 آپ کا نیا سیکیورٹی گارڈ یہاں امپورٹ ہو گیا ہے
 import SecurityLock from './components/SecurityLock';
 
-// اردو نستعلیق فونٹ — swap تاکہ صفحہ جلد دکھے، موبائل پر ناگوار "روک" کم ہو
 const nastaliq = Gulzar({
   subsets: ["arabic"],
   weight: ["400"],
@@ -16,7 +13,6 @@ const nastaliq = Gulzar({
   display: "swap",
 });
 
-// اردو نسخ فونٹ
 const naskh = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   weight: ["400", "700"],
@@ -45,7 +41,6 @@ const kufi = Reem_Kufi({
   display: "swap",
 });
 
-// ویب سائٹ کی مکمل ایس ای او (SEO) سیٹنگ
 export const metadata = {
   title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
   description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
@@ -86,11 +81,6 @@ export const metadata = {
     description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
     images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
   },
-  whatsapp: {
-    title: 'نورالقرآن پراجیکٹ | آفیشل ویب سائٹ',
-    description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
-    status: 'online',
-  }
 }
 
 export default function RootLayout({ children }) {
@@ -99,17 +89,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${nastaliq.variable} ${naskh.variable} ${vazirmatn.variable} ${amiri.variable} ${kufi.variable} bg-gray-50 text-gray-800 font-sans antialiased`}
       >
-
         <LocaleProvider>
-          {/* 🔴 یہ رہا آپ کا سیکیورٹی گارڈ جو پوری ویب سائٹ کو رائٹ کلک اور کاپی سے بچائے گا */}
           <SecurityLock />
-
-          {/* فلوٹنگ بٹنز اب باڈی کے اندر محفوظ طریقے سے کام کریں گے */}
           <FloatingButtons />
-
           <main>{children}</main>
-
-          {/* گوگل اینالیٹکس آئی ڈی */}
           <GoogleAnalytics gaId="G-YSSSMV99G6" />
         </LocaleProvider>
       </body>

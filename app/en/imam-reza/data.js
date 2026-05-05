@@ -100,6 +100,32 @@ export const allData = {
   ],
   books: [
     {
+      id: 'book-karamat-rizvi',
+      title: 'Karamat-e-Rizvi',
+      image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
+      desc: 'Karamat-e-Rizvi is a book containing the living miracles of Imam Ali ibn Musa al-Ridha (AS).',
+      actions: [
+        {
+          type: 'read',
+          label: 'View Details',
+          url: '/library#book-karamat-rizvi',
+          disabled: false
+        },
+        {
+          type: 'audio',
+          label: 'Audio Podcast',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777973131/Karamat-e-Rizvi-audeo-compressed_y8qxis.mp3',
+          disabled: false
+        },
+        {
+          type: 'video',
+          label: 'Video Comment',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777972704/Miracles_of_Imam_Reza_1_nrnqyy.mp4',
+          disabled: false
+        }
+      ]
+    },
+    {
       id: 'book-anees',
       title: 'انیس النفوس',
       image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',

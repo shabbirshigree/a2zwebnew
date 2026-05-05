@@ -102,6 +102,32 @@ export const allData = {
   ],
   books: [
     {
+      id: 'book-karamat-rizvi',
+      title: 'کرامات رضوی',
+      image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
+      desc: 'کرامات رضوی آسمان ولایت کے آٹھویں ستارے امام علی ابن موسیٰ الرضا علیہ السلام کے زندہ کرامات پر مشتمل کتاب ہے۔',
+      actions: [
+        {
+          type: 'read',
+          label: 'کتاب کی تفصیلات',
+          url: '/library#book-karamat-rizvi',
+          disabled: false
+        },
+        {
+          type: 'audio',
+          label: 'آڈیو پوڈکاسٹ',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777964088/Karamat-e-Rizvi-audeo-compressed_jeavyi.mp3',
+          disabled: false
+        },
+        {
+          type: 'video',
+          label: 'ویڈیو تبصرہ',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777964149/Karamat-e-Rizvi_video_podcast_compressed_a5zih7.mp4',
+          disabled: false
+        }
+      ]
+    },
+    {
       id: 'book-anees',
       title: 'انیس النفوس',
       image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',

@@ -37,6 +37,23 @@ const HERO_MASHALLAH_AR =
 const HERO_NUR_AYAH_AR =
   "اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ";
 
+const SLIDES = [
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/5_stvhcf.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/2_seh6lj.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/3_lsnc0p.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/6_ikke94.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/1_jo1rdp.jpg" },
+  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/4_tpy60y.jpg" }
+];
+
+const SOCIAL_LINKS = [
+  { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
+  { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
+  { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
+  { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
+  { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
+];
+
 const MENU_CONFIG = [
   { key: "home", link: "/home", icon: FaHome },
   { key: "about", link: "/about", icon: FaUserAlt },
@@ -268,7 +285,6 @@ export function Navbar() {
                 title={label}
                 aria-label={`${label} — ${dict.nav.languagesLabel}`}
                 onClick={() => {
-                  setLocale(/** @type {'ur'|'fa'|'en'} */(code));
                   const newPath = getLocalizedPath(pathname, code);
                   router.push(newPath);
                 }}
@@ -314,30 +330,12 @@ export function HeroSlider() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const slides = 
-[
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/5_stvhcf.jpg" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/2_seh6lj.jpg" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/3_lsnc0p.jpg" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/6_ikke94.jpg" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/1_jo1rdp.jpg" },
-  { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/4_tpy60y.jpg" }
-];
-
-  const socialLinks = [
-    { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
-    { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
-    { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
-    { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
-    { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
-  ];
-
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrent((prev) => (prev === SLIDES.length - 1 ? 0 : prev + 1));
     }, 6000);
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, []);
 
   const navDir = locale === "en" ? "ltr" : "rtl";
   const rolesLine = [dict.hero.role1, dict.hero.role2, dict.hero.role3, dict.hero.role4, dict.hero.role5];
@@ -345,7 +343,7 @@ export function HeroSlider() {
   return (
     <div className="flex flex-col w-full bg-[#0b314d] overflow-hidden relative">
       <div className="relative w-full h-[6.5rem] md:h-[15rem] lg:h-[20rem] overflow-hidden">
-        {slides.map((s, i) => (
+        {SLIDES.map((s, i) => (
           <div
             key={i}
             className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100" : "opacity-0 z-10"
@@ -414,7 +412,7 @@ export function HeroSlider() {
         </div>
 
         <div className="flex gap-4 md:gap-5 mt-1.5 md:mt-1.5 justify-center z-50">
-          {socialLinks.map((s, i) => (
+          {SOCIAL_LINKS.map((s, i) => (
             <Link
               key={i}
               href={s.link}

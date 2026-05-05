@@ -102,6 +102,32 @@ export const allData = {
   ],
   books: [
     {
+      id: 'book-karamat-rizvi',
+      title: 'کرامات رضوی',
+      image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
+      desc: 'این کتاب بر اساس معجزات زنده امام علی ابن موسی الرضا علیه‌السلام (هشتمین ستاره آسمان ولایت) است.',
+      actions: [
+        {
+          type: 'read',
+          label: 'جزئیات کتاب',
+          url: '/library#book-karamat-rizvi',
+          disabled: false
+        },
+        {
+          type: 'audio',
+          label: 'پادکست صوتی',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777966592/Karamat-e-Rizvi-audeo-farsi.compressed_if3m9g.mp3',
+          disabled: false
+        },
+        {
+          type: 'video',
+          label: 'ویدیو توضیح',
+          url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1777966741/Karamat-e-Razavi-farsi-compressed_oh9b9e.mp4',
+          disabled: false
+        }
+      ]
+    },
+    {
       id: 'book-anees',
       title: 'انیس النفوس',
       image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1768016591/Anees-an-nafoos_vb0ljq.png',
