@@ -173,8 +173,8 @@ function LibraryContentEN() {
             className="mb-12 flex flex-col md:flex-row items-stretch gap-8 bg-[#0a0a0a] border border-gray-800 hover:border-[#D4AF37]/40 rounded-[2rem] p-6 md:p-8 shadow-2xl transition-all duration-500 cursor-pointer group"
           >
             <div className="w-full md:w-56 flex-shrink-0 flex flex-col gap-4">
-              <div className="relative h-[320px] overflow-hidden rounded-lg border border-gray-800 shadow-2xl bg-black">
-                <img src={book.image} alt={book.title} className="w-full h-full object-fill transition-transform duration-700 group-hover:scale-105" />
+              <div className="relative h-[350px] overflow-hidden rounded-lg border border-gray-800 shadow-2xl bg-black">
+                <img src={book.image} alt={book.title} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
               </div>
 
               <div className="space-y-2">
