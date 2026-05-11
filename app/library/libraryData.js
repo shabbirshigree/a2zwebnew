@@ -8,6 +8,21 @@ export const AUTHOR_REVIEW = {
 
 export const BOOKS_DATA = [
   {
+    id: 'book-madina',
+    title: 'مدینۃ الاھلبیتؑ',
+    englishTitle: 'Madinat al-Ahlulbayt (AS)',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502649/d916bd6e-a393-42b1-a677-84493f3ce9f9.png',
+    badge: 'سفرنامہ حجاز',
+    orientation: 'portrait',
+    descUrdu: `زیرِ نظر کتاب 'مدینۃ الاھلبیتؑ' محض ایک سفرنامہ یا مناسکِ حج کی روایتی ڈائری نہیں، بلکہ عشقِ رسول ﷺ اور آلِ رسولؑ میں ڈوبی ہوئی ایک ایسی روحانی دستاویز ہے جو قاری کو براہِ راست حجازِ مقدس کی ان گلیوں میں لے جاتی ہے یہ کتاب ایک طرف انسان کو اپنی 'میں' کو مار کر خود کو رب کے حوالے کر دینے کی ایک عظیم تربیت فراہم کرتی ہے، تو دوسری طرف بقیع کی ویرانیوں، فدک کے باغات، خیبر کے قلعوں، مکہ کی گمشدہ تاریخ اور کوہِ حرا کی بلندیوں کو ایک محقق اور عاشق کی نظر سے پیش کرتی ہے۔ حاجی شبیر احمد شگری نے اپنے عدسے اور قلم کے ذریعے ان مقامات کو اس باریک بینی سے قید کیا ہے کہ قاری خود کو اس سفر کا حصہ محسوس کرتا ہے۔
+مصنف: حاجی شبیر احمد شگری`,
+    actions: [
+      { type: 'read', label: 'کتاب پڑھیں', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502647/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA%D8%91_%D9%85%D8%A6%DB%8C_2_2026_compressed_z6gf1o.pdf', color: 'theme-read', disabled: false },
+      { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-aud', disabled: true },
+      { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-vid', disabled: true }
+    ]
+  },
+  {
     id: 'book-karamat-rizvi',
     title: 'کرامات رضوی',
     englishTitle: 'Karamat-e-Rizvi',

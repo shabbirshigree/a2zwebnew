@@ -8,6 +8,20 @@ export const AUTHOR_REVIEW = {
 
 export const BOOKS_DATA = [
   {
+    id: 'book-madina',
+    title: 'مدینة اهل‌بیت (ع)',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502649/d916bd6e-a393-42b1-a677-84493f3ce9f9.png',
+    badge: 'سفرنامه حجاز',
+    orientation: 'portrait',
+    descUrdu: `کتاب 'مدینة اهل‌بیت (ع)' صرفاً یک سفرنامه یا دفترچه خاطرات سنتی از مناسک حج نیست، بلکه یک سند معنوی غرق در عشق رسول خدا (ص) و آل رسول (ع) است که خواننده را مستقیماً به کوچه‌های حجاز مقدس می‌برد. این کتاب از یک سو آموزشی بزرگ برای انسان فراهم می‌کند تا 'من' خود را بکشد و خود را به پروردگار بسپارد، و از سوی دیگر، ویرانی‌های بقیع، باغ‌های فدک، قلعه‌های خیبر، تاریخ گمشده مکه و بلندی‌های کوه حرا را از نگاه یک محقق و عاشق ارائه می‌دهد. حاجی شبیر احمد شگری این مکان‌ها را با چنان ظرافتی از طریق لنز و قلم خود ثبت کرده است که خواننده خود را بخشی از این سفر احساس می‌کند.
+نویسنده: حاجی شبیر احمد شگری`,
+    actions: [
+      { type: 'read', label: 'کتاب را بخوانید', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502647/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA%D8%91_%D9%85%D8%A6%DB%8C_2_2026_compressed_z6gf1o.pdf', color: 'theme-read', disabled: false },
+      { type: 'audio', label: 'پادکاست صوتی گوگل', url: '', color: 'theme-urdu-aud', disabled: true },
+      { type: 'video', label: 'پادکاست ویدیویی گوگل', url: '', color: 'theme-urdu-vid', disabled: true }
+    ]
+  },
+  {
     id: 'book-karamat-rizvi',
     title: 'کرامات رضوی',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1777958754/b8ad9129-beb7-4733-aaf6-d58d451d5f57.png',
