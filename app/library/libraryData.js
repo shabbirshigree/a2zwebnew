@@ -18,8 +18,8 @@ export const BOOKS_DATA = [
 مصنف: حاجی شبیر احمد شگری`,
     actions: [
       { type: 'read', label: 'کتاب پڑھیں', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502647/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA%D8%91_%D9%85%D8%A6%DB%8C_2_2026_compressed_z6gf1o.pdf', color: 'theme-read', disabled: false },
-      { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-aud', disabled: true },
-      { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', url: '', color: 'theme-urdu-vid', disabled: true }
+      { type: 'audio', label: 'گوگل آڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778518423/Madinatul-Ahlbait.Audeopodcast_qlksle.mp4', color: 'theme-urdu-aud', disabled: false },
+      { type: 'video', label: 'گوگل ویڈیو پوڈکاسٹ', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778518361/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA__%DA%AF%D9%85%D8%B4%D8%AF%DB%81_%D9%88%D8%B1%D8%AB%DB%81_1_fj6x3w.mp4', color: 'theme-urdu-vid', disabled: false }
     ]
   },
   {
