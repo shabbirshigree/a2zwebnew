@@ -9,16 +9,16 @@ export const AUTHOR_REVIEW = {
 export const BOOKS_DATA = [
   {
     id: 'book-madina',
-    title: 'مدینة اهل‌بیت (ع)',
+    title: '«مدینة اهل‌البیت (ع)»',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502649/d916bd6e-a393-42b1-a677-84493f3ce9f9.png',
     badge: 'سفرنامه حجاز',
     orientation: 'portrait',
-    descUrdu: `کتاب 'مدینة اهل‌بیت (ع)' صرفاً یک سفرنامه یا دفترچه خاطرات سنتی از مناسک حج نیست، بلکه یک سند معنوی غرق در عشق رسول خدا (ص) و آل رسول (ع) است که خواننده را مستقیماً به کوچه‌های حجاز مقدس می‌برد. این کتاب از یک سو آموزشی بزرگ برای انسان فراهم می‌کند تا 'من' خود را بکشد و خود را به پروردگار بسپارد، و از سوی دیگر، ویرانی‌های بقیع، باغ‌های فدک، قلعه‌های خیبر، تاریخ گمشده مکه و بلندی‌های کوه حرا را از نگاه یک محقق و عاشق ارائه می‌دهد. حاجی شبیر احمد شگری این مکان‌ها را با چنان ظرافتی از طریق لنز و قلم خود ثبت کرده است که خواننده خود را بخشی از این سفر احساس می‌کند.
+    descUrdu: `«کتاب پیش رو با عنوان "مدینة اهل‌البیت (ع)" تنها یک سفرنامه یا یادداشت‌های روزمره‌ی سنتی از مناسک حج نیست، بلکه سندی معنوی است که در عشق به رسول خدا (ص) و آل پاکش (ع) غوطه‌ور شده و خواننده را مستقیماً به کوچه‌های حجاز مقدس می‌برد. این کتاب از یک سو، آموزشی بزرگ برای کشتنِ "منیت" و تسلیمِ محض در برابر پروردگار فراهم می‌کند، و از سوی دیگر، ویرانه‌های بقیع، باغ‌های فدک، قلعه‌های خیبر، تاریخ گم‌گشته‌ی مکه و بلندی‌های کوه حرا را از نگاه یک محقق و یک عاشق ارائه می‌دهد. حاجی شبیر احمد شگری با لنز دوربین و قلم خود، این مکان‌ها را چنان با ظرافت ثبت کرده است که خواننده خود را بخشی از این سفر احساس می‌کند.»
 نویسنده: حاجی شبیر احمد شگری`,
     actions: [
       { type: 'read', label: 'کتاب را بخوانید', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502647/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA%D8%91_%D9%85%D8%A6%DB%8C_2_2026_compressed_z6gf1o.pdf', color: 'theme-read', disabled: false },
-      { type: 'audio', label: 'پادکاست صوتی گوگل', url: '', color: 'theme-urdu-aud', disabled: true },
-      { type: 'video', label: 'پادکاست ویدیویی گوگل', url: '', color: 'theme-urdu-vid', disabled: true }
+      { type: 'audio', label: 'پادکاست صوتی گوگل', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778543289/Karamat-e-Rizvi-english-audeopodcast-mp3_1_kbwp1f.mp3', color: 'theme-urdu-aud', disabled: false },
+      { type: 'video', label: 'پادکاست ویدیویی گوگل', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778543484/Madina-tul-Ahlbait_aw4evn.mp4', color: 'theme-urdu-vid', disabled: false }
     ]
   },
   {

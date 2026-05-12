@@ -9,19 +9,19 @@ export const AUTHOR_REVIEW = {
 export const BOOKS_DATA = [
   {
     id: 'book-madina',
-    title: 'Madinat al-Ahlulbayt (AS)',
-    englishTitle: 'Madinat al-Ahlulbayt (AS)',
+    title: 'Madinat-ul-Ahlulbayt (AS)',
+    englishTitle: 'Madinat-ul-Ahlulbayt (AS)',
     image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502649/d916bd6e-a393-42b1-a677-84493f3ce9f9.png',
     badge: 'TRAVELOGUE OF HIJAZ',
     orientation: 'portrait',
-    descUrdu: `زیرِ نظر کتاب 'مدینۃ الاھلبیتؑ' محض ایک سفرنامہ یا مناسکِ حج کی روایتی ڈائری نہیں، بلکہ عشقِ رسول ﷺ اور آلِ رسولؑ میں ڈوبی ہوئی ایک ایسی روحانی دستاویز ہے جو قاری کو براہِ راست حجازِ مقدس کی ان گلیوں میں لے جاتی ہے یہ کتاب ایک طرف انسان کو اپنی 'میں' کو مار کر خود کو رب کے حوالے کر دینے کی ایک عظیم تربیت فراہم کرتی ہے، تو دوسری طرف بقیع کی ویرانیوں، فدک کے باغات، خیبر کے قلعوں، مکه کی گمشدہ تاریخ اور کوہِ حرا کی بلندیوں کو ایک محقق اور عاشق کی نظر سے پیش کرتی ہے۔ حاجی شبیر احمد شگری نے اپنے عدسے اور قلم کے ذریعے ان مقامات کو اس باریک بینی سے قید کیا ہے کہ قاری خود کو اس سفر کا حصہ محسوس کرتا ہے۔
+    descUrdu: `زیرِ نظر کتاب 'مدینۃ الاھلبیتؑ' محض ایک سفرنامہ یا مناسکِ حج کی روایتی ڈائری نہیں، بلکہ عشقِ رسول ﷺ اور آلِ رسولؑ میں ڈوبی ہوئی ایک ایسی روحانی دستاویز ہے جو قاری کو براہِ راست حجازِ مقدس کی ان گلیوں میں لے جاتی ہے یہ کتاب ایک طرف انسان کو اپنی 'میں' کو مار کر خود کو رب کے حوالے کر دینے کی ایک عظیم تربیت فراہم کرتی ہے، تو دوسری طرف بقیع کی ویرانیوں، فدک کے باغات، خیبر کے قلعوں، مکہ کی گمشدہ تاریخ اور کوہِ حرا کی بلندیوں کو ایک محقق اور عاشق کی نظر سے پیش کرتی ہے۔ حاجی شبیر احمد شگری نے اپنے عدسے اور قلم کے ذریعے ان مقامات کو اس باریک بینی سے قید کیا ہے کہ قاری خود کو اس سفر کا حصہ محسوس کرتا ہے۔
 مصنف: حاجی شبیر احمد شگری`,
-    descEn: `The book 'Madinat al-Ahlulbayt (AS)' is not just a travelogue or a traditional diary of Hajj rituals, but a spiritual document immersed in the love of the Prophet (PBUH) and the progeny of the Prophet (AS), which takes the reader directly to the streets of the Holy Hijaz. On one hand, this book provides a great training for a person to kill their 'ego' and surrender themselves to the Lord, and on the other hand, it presents the desolation of Baqi, the gardens of Fadak, the forts of Khaybar, the lost history of Makkah, and the heights of Mount Hira from the perspective of a researcher and a lover. Hajji Shabbir Ahmed Shigri has captured these places with such detail through his lens and pen that the reader feels themselves to be a part of this journey.
-Author: Hajji Shabbir Ahmed Shigri`,
+    descEn: `"The book ‘Madinat-ul-Ahlulbayt’ is not merely a travelogue or a conventional diary of Hajj rituals; rather, it is a spiritual document immersed in the love of the Prophet (PBUH) and his Progeny (AS) that transports the reader directly into the sacred streets of Hejaz. On one hand, this book provides profound guidance on conquering the 'ego' and surrendering oneself to the Creator; on the other, it presents the desolation of Al-Baqi, the gardens of Fadak, the fortresses of Khaybar, the lost history of Makkah, and the heights of Mount Hira through the eyes of both a researcher and a devotee. Haji Shabbir Ahmed Shagri has captured these sites through his lens and pen with such precision that the reader feels themselves an integral part of this journey."
+Author: Haji Shabbir Ahmed Shagri`,
     actions: [
       { type: 'read', label: 'Read Book', url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1778502647/%D9%85%D8%AF%DB%8C%D9%86%DB%83_%D8%A7%D9%84%D8%A7%DB%81%D9%84%D8%A8%DB%8C%D8%AA%D8%91_%D9%85%D8%A6%DB%8C_2_2026_compressed_z6gf1o.pdf', color: 'theme-read', disabled: false },
-      { type: 'audio', label: 'Google Audio Podcast', url: '', color: 'theme-urdu-aud', disabled: true },
-      { type: 'video', label: 'Google Video Podcast', url: '', color: 'theme-urdu-vid', disabled: true }
+      { type: 'audio', label: 'Google Audio Podcast', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778546776/Madinatul-Ahlbait-Audiopodcast_ciatf7.mp3', color: 'theme-urdu-aud', disabled: false },
+      { type: 'video', label: 'Google Video Podcast', url: 'https://res.cloudinary.com/drlg0dr9y/video/upload/v1778546987/Madinatul-Ahlbait-vediopodcast_xhmo9a.mp4', color: 'theme-urdu-vid', disabled: false }
     ]
   },
   {
