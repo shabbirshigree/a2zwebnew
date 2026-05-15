@@ -18,10 +18,10 @@ const EnglishProfileCard = () => {
     }}>
       
       {/* Profile Image with Water Ripple Effect */}
-      <div style={{ textAlign: 'center', marginBottom: '30px', position: 'relative' }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
         <div style={{
-          width: '180px',
-          height: '180px',
+          width: '140px',
+          height: '140px',
           margin: '0 auto',
           position: 'relative',
           display: 'flex',
@@ -33,13 +33,11 @@ const EnglishProfileCard = () => {
           <div className="ripple-wave"></div>
           {/* Ripple 2 */}
           <div className="ripple-wave" style={{ animationDelay: '1s' }}></div>
-          {/* Ripple 3 */}
-          <div className="ripple-wave" style={{ animationDelay: '2s' }}></div>
 
           {/* Actual Profile Image */}
           <div style={{
-            width: '180px',
-            height: '180px',
+            width: '140px',
+            height: '140px',
             borderRadius: '50%',
             border: '4px solid #D4AF37',
             overflow: 'hidden',
@@ -56,12 +54,12 @@ const EnglishProfileCard = () => {
           </div>
         </div>
         
-        {/* CSS for Ripples - اسے فائل میں کہیں بھی ڈال دیں */}
+        {/* CSS for Ripples */}
         <style jsx>{`
           .ripple-wave {
             position: absolute;
-            width: 180px;
-            height: 180px;
+            width: 140px;
+            height: 140px;
             border: 2px solid #D4AF37;
             border-radius: 50%;
             opacity: 0;
@@ -75,7 +73,7 @@ const EnglishProfileCard = () => {
               opacity: 0.8;
             }
             100% {
-              transform: scale(1.6);
+              transform: scale(1.4);
               opacity: 0;
             }
           }
@@ -83,15 +81,15 @@ const EnglishProfileCard = () => {
         
         {/* Name and Title */}
         <h1 style={{ 
-          fontSize: '28px', 
+          fontSize: '24px', 
           color: '#1a472a', 
-          margin: '15px 0 5px 0',
+          margin: '10px 0 2px 0',
           fontWeight: 'bold'
         }}>
           Haji Shabbir Ahmed Shigri
         </h1>
         <p style={{ 
-          fontSize: '16px', 
+          fontSize: '14px', 
           color: '#666', 
           margin: '0',
           marginBottom: '10px',
@@ -105,146 +103,117 @@ const EnglishProfileCard = () => {
       <div style={{
         background: 'linear-gradient(135deg, #fafafa, #f5f5f5)',
         borderRadius: '10px',
-        padding: '15px',
-        marginBottom: '15px'
+        padding: '12px',
+        marginBottom: '12px'
       }}>
         
         {/* Name */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Name:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
             Haji Shabbir Ahmed Shigri
           </span>
         </div>
 
         {/* Identity */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Identity:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
             Senior Journalist, Researcher, Author and Producer
           </span>
         </div>
 
         {/* Honors */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Honors:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Khadim-e-Imam Reza (AS) Mashhad, and Khadim-e-Haram-e-Abbas (AS) Karbala.
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Unique honor of being the first official representative of Astan Quds Razvi (Mashhad, Iran) in Pakistan.
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            Khadim of Imam Reza (AS) and Haram-e-Abbas (AS).
           </span>
         </div>
 
         {/* Education */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Education:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Government Degree College Skardu. MBA (Diploma in Business Administration) and Diploma in Electronics.
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
+            MBA and Diploma in Electronics.
           </span>
         </div>
 
         {/* Positions */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Positions:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder and President: Anjuman-e-Dosti Pakistan Iran (Nominated: Iranian Consul).
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Retirement: Public Relation Officer, Khana Farhang Iran Lahore
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            Founder & President Pak-Iran Friendship Association.
           </span>
         </div>
 
         {/* Publications */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Publications:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
             Author of 7+ scholarly and literary books.
           </span>
         </div>
         
         {/* Editorship */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Editorship:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Editor of national and international academic journals, newspapers Daily Havi, Akth (Punjabi) and Prachar as Deputy Editor.
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
+            Editor Iranology, Deputy Editor Daily Havi, Parchar.
           </span>
         </div>
 
         {/* Column Writing */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Column Writing:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            Columns:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            300+ columns, articles and travelogues published in Daily Nawa-e-Waqt, Pakistan and Mashriq.
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
+            300+ published articles and columns.
           </span>
         </div>
         
         {/* Founder */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Founder:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder Noor-ul-Quran Project.CEO (CEO): Noor Productions.
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            Founder Pak Iran Ziyarati and Siyahi Tourism.
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            Noor-ul-Quran Visual Project and Noor Productions.
           </span>
         </div>
         
         {/* Media Career */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Media Career:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            Media:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Senior Radio Broadcaster, TV Anchor Person and Producer.
-          </span>
-        </div>
-
-        {/* Cultural and Diplomatic Services */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Cultural and Diplomatic Services:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Expert in Cultural Affairs: 25 years of long academic and cultural services at Khana Farhang Iran, Lahore.
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
+            Senior Radio Broadcaster, TV Host and Producer.
           </span>
         </div>
 
-        {/* Awards */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            Awards:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            "Taqdeer Nama" (Astan Quds Razvi), Sada-e-Ghazi Award, Gold Medalist, and 50+ national and international awards.
-          </span>
-        </div>
-        
-        {/* Titles */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        {/* Cultural Services */}
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             Titles:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            Khadim-e-Saqalain, Cultural Expert.
+          <span style={{ fontSize: '13px', color: '#333', marginLeft: '5px' }}>
+            Khadim-e-Thaqalain | Cultural Expert (25 years service).
           </span>
         </div>
 
@@ -254,7 +223,7 @@ const EnglishProfileCard = () => {
       <div style={{
         background: 'linear-gradient(135deg, #1a472a, #2d5a3c)',
         borderRadius: '10px',
-        padding: '15px',
+        padding: '10px',
         textAlign: 'center'
       }}>
         

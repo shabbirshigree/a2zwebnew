@@ -8,6 +8,7 @@ import {
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
+import FarsiProfileCard from '../../components/FarsiProfileCard';
 
 // 🔴 واردات داده‌ها
 import { founderItems, mediaRoles, services } from './aboutData-fa';
@@ -131,78 +132,85 @@ export default function UltimateAboutPageFA() {
             </section>
 
             {/* 🧩 3. بنیانگذاران و سرپرستان */}
-            <section className="container mx-auto px-4 py-10 relative z-10">
-                <h2 className="text-center text-xl md:text-2xl font-bold text-[#0f4c75] mb-8 border-b-2 border-[#D4AF37] inline-block pb-2 mx-auto flex justify-center">بنیانگذاران و سرپرستان</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
-                    {founderItems.map((item, i) => {
-                        const title = item.title || "";
-                        const linkHref = item.link || "#";
-                        const isExternalLink = typeof linkHref === "string" && linkHref.startsWith("http");
-
-                        const isFederationCard = title === "فدراسیون تجارت و فرهنگ";
-
-                        const CardContent = (
-                            <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full cursor-pointer">
-                                <div className="text-3xl md:text-4xl text-[#D4AF37] mb-3 group-hover:text-[#0a1f30] transition">{React.createElement(iconMap[item.icon])}</div>
-                                <h3 className="font-bold text-white group-hover:text-[#0a1f30] text-[9px] md:text-[10px] mb-1 md:mb-2 leading-tight text-center w-full break-words">{title}</h3>
-                                <p
-                                    dir="ltr"
-                                    className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-[10px] md:text-[11px] uppercase tracking-wide font-sans text-center w-full max-w-[95%] mx-auto leading-snug px-1"
-                                >
-                                    {item.desc}
-                                </p>
-                            </div>
-                        );
-
-                        if (isFederationCard) {
-                            return (
-                                <div key={i} className="w-full h-full block" onClick={() => setShowFederationPopup(true)}>
-                                    {CardContent}
-                                </div>
-                            );
-                        }
-
-                        if (isExternalLink) {
-                            return (
-                                <a href={linkHref} key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
-                                    {CardContent}
-                                </a>
-                            );
-                        }
-
-                        return (
-                            <Link href={linkHref} key={i} className="w-full h-full block">
-                                {CardContent}
-                            </Link>
-                        );
-                    })}
+            <section className="container mx-auto px-4 py-10 relative z-10" dir="rtl">
+                <div className="flex justify-center w-full mb-8">
+                    <h2 className="text-center text-xl md:text-2xl font-bold text-[#0f4c75] border-b-2 border-[#D4AF37] inline-block pb-2 mx-auto">بنیانگذاران و سرپرستان</h2>
                 </div>
-            </section>
 
-            {/* 📺 4. رسانه‌ها و روزنامه‌نگاری الکترونیکی */}
-            <section className="bg-gradient-to-r from-[#0a1f30] to-[#163b55] py-12 relative z-10 border-y-4 border-[#D4AF37]">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-10">رسانه و روزنامه‌نگاری الکترونیکی</h2>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                        {mediaRoles.map((role, i) => {
-                            const mediaLink = getMediaLink(role.title);
-                            const isExternal = mediaLink.startsWith("http");
+                <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto items-stretch">
+                    {/* سمت راست: کارت معرفی (کارت بزرگ) */}
+                    <div className="lg:w-1/3 w-full">
+                        <FarsiProfileCard />
+                    </div>
 
-                            return (
-                                <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                                    <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-4 md:p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center flex flex-col items-center">
-                                        <div className="text-3xl md:text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{React.createElement(iconMap[role.icon])}</div>
-                                        <h3
+                    {/* سمت چپ: کارت‌های بنیانگذار و بخش رسانه */}
+                    <div className="lg:w-2/3 w-full flex flex-col gap-8">
+                        {/* گرید کارت‌های بنیانگذار */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                            {founderItems.map((item, i) => {
+                                const title = item.title || "";
+                                const linkHref = item.link || "#";
+                                const isExternalLink = typeof linkHref === "string" && linkHref.startsWith("http");
+
+                                const isFederationCard = title === "فدراسیون تجارت و فرهنگ";
+
+                                const CardContent = (
+                                    <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-4 md:p-5 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[140px] md:min-h-[180px] w-full cursor-pointer">
+                                        <div className="text-3xl md:text-4xl text-[#D4AF37] mb-3 group-hover:text-[#0a1f30] transition">{React.createElement(iconMap[item.icon])}</div>
+                                        <h3 className="font-bold text-white group-hover:text-[#0a1f30] text-[10px] md:text-xs mb-1 leading-tight text-center w-full break-words">{title}</h3>
+                                        <p
                                             dir="ltr"
-                                            className="text-white group-hover:text-[#0a1f30] font-bold text-xs md:text-sm mb-2 font-sans text-center w-full max-w-full px-1 leading-tight break-words"
+                                            className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-[10px] md:text-[11px] uppercase tracking-wide font-sans text-center w-full max-w-[95%] mx-auto leading-snug px-1"
                                         >
-                                            {role.title}
-                                        </h3>
-                                        <p className="hidden md:block text-gray-300 group-hover:text-[#0a1f30]/90 text-xs md:text-sm text-center w-full">{role.desc}</p>
+                                            {item.desc}
+                                        </p>
                                     </div>
-                                </Link>
-                            );
-                        })}
+                                );
+
+                                if (isFederationCard) {
+                                    return (
+                                        <div key={i} className="w-full h-full block" onClick={() => setShowFederationPopup(true)}>
+                                            {CardContent}
+                                        </div>
+                                    );
+                                }
+
+                                if (isExternalLink) {
+                                    return (
+                                        <a href={linkHref} key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
+                                            {CardContent}
+                                        </a>
+                                    );
+                                }
+
+                                return (
+                                    <Link href={linkHref} key={i} className="w-full h-full block">
+                                        {CardContent}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+
+                        {/* 📺 رسانه و روزنامه‌نگاری الکترونیکی (اب اینجا زیر کارت‌های بنیانگذار نمایش داده می‌شود) */}
+                        <div className="mt-2">
+                            <h3 className="text-xl md:text-2xl font-bold text-[#0f4c75] mb-6 text-center border-b-2 border-[#D4AF37] w-fit mx-auto pb-1">رسانه و روزنامه‌نگاری الکترونیکی</h3>
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                {mediaRoles.map((role, i) => {
+                                    const mediaLink = getMediaLink(role.title);
+                                    const isExternal = mediaLink.startsWith("http");
+                                    return (
+                                        <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
+                                            <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/30 rounded-2xl p-4 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center flex flex-col items-center justify-center min-h-[120px]">
+                                                <div className="text-2xl text-[#D4AF37] mb-2 group-hover:text-[#0a1f30]">{React.createElement(iconMap[role.icon])}</div>
+                                                <h4 dir="ltr" className="text-white group-hover:text-[#0a1f30] font-bold text-[10px] md:text-xs font-sans leading-tight break-words w-full">
+                                                    {role.title}
+                                                </h4>
+                                            </div>
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

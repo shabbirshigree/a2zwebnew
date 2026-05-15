@@ -18,10 +18,10 @@ const FarsiProfileCard = () => {
     }}>
       
       {/* Profile Image with Water Ripple Effect */}
-      <div style={{ textAlign: 'center', marginBottom: '30px', position: 'relative' }}>
+      <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
         <div style={{
-          width: '180px',
-          height: '180px',
+          width: '140px',
+          height: '140px',
           margin: '0 auto',
           position: 'relative',
           display: 'flex',
@@ -33,13 +33,11 @@ const FarsiProfileCard = () => {
           <div className="ripple-wave"></div>
           {/* Ripple 2 */}
           <div className="ripple-wave" style={{ animationDelay: '1s' }}></div>
-          {/* Ripple 3 */}
-          <div className="ripple-wave" style={{ animationDelay: '2s' }}></div>
 
           {/* Actual Profile Image */}
           <div style={{
-            width: '180px',
-            height: '180px',
+            width: '140px',
+            height: '140px',
             borderRadius: '50%',
             border: '4px solid #D4AF37',
             overflow: 'hidden',
@@ -56,12 +54,12 @@ const FarsiProfileCard = () => {
           </div>
         </div>
         
-        {/* CSS for Ripples - اسے فائل میں کہیں بھی ڈال دیں */}
+        {/* CSS for Ripples */}
         <style jsx>{`
           .ripple-wave {
             position: absolute;
-            width: 180px;
-            height: 180px;
+            width: 140px;
+            height: 140px;
             border: 2px solid #D4AF37;
             border-radius: 50%;
             opacity: 0;
@@ -75,7 +73,7 @@ const FarsiProfileCard = () => {
               opacity: 0.8;
             }
             100% {
-              transform: scale(1.6);
+              transform: scale(1.4);
               opacity: 0;
             }
           }
@@ -83,15 +81,15 @@ const FarsiProfileCard = () => {
         
         {/* Name and Title */}
         <h1 style={{ 
-          fontSize: '28px', 
+          fontSize: '24px', 
           color: '#1a472a', 
-          margin: '15px 0 5px 0',
+          margin: '10px 0 2px 0',
           fontWeight: 'bold'
         }}>
           حاجی شبیر احمد شگری
         </h1>
         <p style={{ 
-          fontSize: '16px', 
+          fontSize: '14px', 
           color: '#666', 
           margin: '0',
           marginBottom: '10px',
@@ -105,146 +103,117 @@ const FarsiProfileCard = () => {
       <div style={{
         background: 'linear-gradient(135deg, #fafafa, #f5f5f5)',
         borderRadius: '10px',
-        padding: '15px',
-        marginBottom: '15px'
+        padding: '12px',
+        marginBottom: '12px'
       }}>
         
         {/* Name */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             نام:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
             حاجی شبیر احمد شگری
           </span>
         </div>
 
         {/* Identity */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             معرفی:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
             روزنامه‌نگار ارشد، پژوهشگر، نویسنده و تهیه‌کننده
           </span>
         </div>
 
         {/* Honors */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۱. افتخارات و خدمات مذهبی:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۱. افتخارات:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            خادم آستان قدس رضوی (مشهد مقدس، ایران) و خادم حرم حضرت عباس (علیه السلام) کربلا.
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            دارنده افتخار اولین نماینده رسمی آستان قدس رضوی در پاکستان.
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            خادم آستان قدس رضوی (ع) و حرم حضرت عباس (ع).
           </span>
         </div>
 
         {/* Education */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۲. سوابق تحصیلی:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۲. تحصیلات:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            فارغ‌التحصیل کالج دولتی سکردو. دارای مدرک MBA (مدیریت بازرگانی) و دیپلم الکترونیک.
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
+            فارغ‌التحصیل MBA و دارای دیپلم الکترونیک.
           </span>
         </div>
 
         {/* Positions */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۳. مسئولیت‌ها و عناوین اجرایی:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۳. مسئولیت‌ها:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            بنیانگذار و رئیس: انجمن دوستی ایران و پاکستان (منصوب شده از سوی کنسولگری ایران).
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            مدیر روابط عمومی (سابق): خانه فرهنگ جمهوری اسلامی ایران - لاهور.
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            بنیانگذار و رئیس انجمن دوستی ایران و پاکستان.
           </span>
         </div>
 
         {/* Publications */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۴. فعالیت‌های تالیفی و ادبی:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۴. تالیفات:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            تالیفات: نویسنده بیش از ۷ کتاب علمی و ادبی.
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
+            نویسنده بیش از ۷ کتاب علمی و ادبی.
           </span>
         </div>
         
         {/* Editorship */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            سردبیری:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۵. سردبیری:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            سردبیر مجلات علمی ملی و بین‌المللی؛ نایب سردبیر روزنامه‌های حاوی، اکٹھ (پنجابی) و پرچار.
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
+            سردبیر ایران‌شناسی، نایب سردبیر روزنامه‌های حاوی و پرچار.
           </span>
         </div>
 
         {/* Column Writing */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            مقاله نویسی:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۶. مقالات:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            انتشار بیش از ۳۰۰ مقاله، ستون و سفرنامه در روزنامه‌های نوای وقت، پاکستان و مشرق.
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
+            انتشار بیش از ۳۰۰ مقاله و ستون در روزنامه‌های معتبر.
           </span>
         </div>
         
         {/* Founder */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۵. بنیانگذاری و پروژه‌ها:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۷. بنیانگذاری:
           </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            بنیانگذار پروژه بصری نورالقرآن (اولین پروژه ویژوال قرآن).
-          </span>
-          <span style={{ fontSize: '14px', color: '#333', display: 'block', marginTop: '2px' }}>
-            مدیرعامل (CEO) نور پروداکشنز. بنیانگذار گردشگری زیارتی و سیاحتی پاک-ایران.
+          <span style={{ fontSize: '13px', color: '#333', display: 'block', marginTop: '1px' }}>
+            پروژه بصری نورالقرآن و نور پروداکشنز.
           </span>
         </div>
         
         {/* Media Career */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۶. سوابق رسانه‌ای:
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
+            ۸. رسانه:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
             گوینده ارشد رادیو، مجری تلویزیون و تهیه‌کننده.
           </span>
         </div>
 
         {/* Cultural Services */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۷. خدمات فرهنگی و دیپلماتیک:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            کارشناس امور فرهنگی: ۲۵ سال خدمات علمی و فرهنگی در خانه فرهنگ ایران (لاهور) و کارشناس امور دیپلماتیک فرهنگی.
-          </span>
-        </div>
-
-        {/* Awards */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
-            ۸. جوایز و افتخارات:
-          </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            دریافت‌کننده "تقدیرنامه" از سوی آستان قدس رضوی. برنده جایزه صدای غازی، مدال طلا و بیش از ۵۰ جایزه ملی و بین‌المللی.
-          </span>
-        </div>
-        
-        {/* Titles */}
-        <div style={{ marginBottom: '10px' }}>
-          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '16px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <span style={{ fontWeight: 'bold', color: '#1a472a', fontSize: '15px' }}>
             ۹. القاب:
           </span>
-          <span style={{ fontSize: '14px', color: '#333' }}>
-            خادم الثقلین | کارشناس فرهنگی (Cultural Expert)
+          <span style={{ fontSize: '13px', color: '#333', marginRight: '5px' }}>
+            خادم الثقلین | کارشناس فرهنگی (۲۵ سال خدمت).
           </span>
         </div>
 
@@ -254,7 +223,7 @@ const FarsiProfileCard = () => {
       <div style={{
         background: 'linear-gradient(135deg, #1a472a, #2d5a3c)',
         borderRadius: '10px',
-        padding: '15px',
+        padding: '10px',
         textAlign: 'center'
       }}>
         

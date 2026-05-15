@@ -8,6 +8,7 @@ import {
 import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
+import MobileProfileCard from '../components/MobileProfileCard';
 
 // 🔴 ڈیٹا امپورٹس
 import { founderItems, mediaRoles, services } from './aboutData-ur';
@@ -126,86 +127,90 @@ export default function UltimateAboutPage() {
       </section>
 
 {/* 🧩 3. بانی اور سرپرست */}
-      <section className="container mx-auto px-4 py-10 relative z-10">
-<div className="flex justify-center w-full my-8">
-  <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] border-b-4 border-[#D4AF37] pb-2 px-4 urdu-text w-fit">
-    بانی اور سرپرست
-  </h2>
-</div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-6xl mx-auto">
-          {founderItems.map((item, i) => {
-            const linkHref = item.link || "#";
-            const isExternalLink = typeof linkHref === "string" && linkHref.startsWith("http");
-
-            const isFederationCard = item.title === "تجارت و ثقافت فیڈریشن";
-
-            const CardContent = (
-              <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-3 md:p-6 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[145px] md:min-h-[220px] w-full cursor-pointer">
-                <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] transition">{item.icon}</div>
-                <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[11px] md:text-base mb-1 md:mb-2 leading-tight text-center w-full break-words">{item.title}</h3>
-                <p
-                  dir="ltr"
-                  className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-[10px] md:text-xs uppercase tracking-wide font-sans text-center w-full max-w-[95%] mx-auto leading-snug px-1"
-                >
-                  {item.desc}
-                </p>
-              </div>
-            );
-
-            if (isFederationCard) {
-              return (
-                <div key={i} className="w-full h-full block" onClick={() => setShowFederationPopup(true)}>
-                  {CardContent}
-                </div>
-              );
-            }
-
-            if (isExternalLink) {
-              return (
-                <a href={linkHref} key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
-                  {CardContent}
-                </a>
-              );
-            }
-
-            return (
-              <Link href={linkHref} key={i} className="w-full h-full block">
-                {CardContent}
-              </Link>
-            );
-          })}
+      <section className="container mx-auto px-4 py-10 relative z-10" dir="rtl">
+        <div className="flex justify-center w-full my-8">
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c75] border-b-4 border-[#D4AF37] pb-2 px-4 urdu-text w-fit">
+            بانی اور سرپرست
+          </h2>
         </div>
-      </section>
-
-      {/* 📺 4. میڈیا، ریڈیو اور ٹی وی کیریئر */}
-      <section className="bg-gradient-to-r from-[#0a1f30] to-[#163b55] py-12 relative z-10 border-y-4 border-[#D4AF37]">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#D4AF37] mb-10 urdu-text">میڈیا اور الیکٹرانک جرنلزم</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {mediaRoles.map((role, i) => {
-              const mediaLink = getMediaLink(role.title);
-              const isExternal = mediaLink.startsWith("http");
-
-              return (
-                <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
-                  <div className="bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-2xl p-4 md:p-6 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center flex flex-col items-center">
-                    <div className="text-4xl text-[#D4AF37] mb-4 group-hover:text-[#0a1f30] flex justify-center">{role.icon}</div>
-                    <h3
-                      dir="ltr"
-                      className="text-white group-hover:text-[#0a1f30] font-bold text-base md:text-lg mb-2 font-sans text-center w-full max-w-full px-1 leading-tight break-words"
-                    >
-                      {role.title}
-                    </h3>
-                    <p className="hidden md:block text-gray-300 group-hover:text-[#0a1f30]/90 text-sm urdu-text text-center w-full">{role.desc}</p>
-                  </div>
-                </Link>
-              );
-            })}
+        
+        <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto items-stretch">
+          {/* دائیں طرف: تعارفی کارڈ (بڑا کارڈ) */}
+          <div className="lg:w-1/3 w-full">
+            <MobileProfileCard />
           </div>
-        </div>
-      </section>
 
-      {/* 📖 5. تفصیلی آپ بیتی */}
+          {/* بانی کارڈز اور میڈیا کارڈز کا کالم */}
+          <div className="lg:w-2/3 w-full flex flex-col gap-8">
+            {/* بانی کارڈز کا گرڈ */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+              {founderItems.map((item, i) => {
+                const linkHref = item.link || "#";
+                const isExternalLink = typeof linkHref === "string" && linkHref.startsWith("http");
+                const isFederationCard = item.title === "تجارت و ثقافت فیڈریشن";
+
+                const CardContent = (
+                  <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/50 rounded-2xl p-4 md:p-5 hover:bg-gradient-to-br hover:from-[#D4AF37] hover:to-[#B8860B] transition duration-300 group transform hover:scale-105 shadow-lg flex flex-col items-center justify-center h-full min-h-[140px] md:min-h-[180px] w-full cursor-pointer">
+                    <div className="text-3xl text-[#D4AF37] mb-3 group-hover:text-[#0a1f30] transition">{item.icon}</div>
+                    <h3 className="urdu-text font-bold text-white group-hover:text-[#0a1f30] text-[11px] md:text-sm mb-1 leading-tight text-center w-full break-words">{item.title}</h3>
+                    <p
+                      dir="ltr"
+                      className="hidden md:block text-gray-400 group-hover:text-[#0a1f30]/90 text-[10px] uppercase tracking-wide font-sans text-center w-full max-w-[95%] mx-auto leading-snug px-1"
+                    >
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+
+                if (isFederationCard) {
+                  return (
+                    <div key={i} className="w-full h-full block" onClick={() => setShowFederationPopup(true)}>
+                      {CardContent}
+                    </div>
+                  );
+                }
+
+                if (isExternalLink) {
+                  return (
+                    <a href={linkHref} key={i} target="_blank" rel="noopener noreferrer" className="w-full h-full block">
+                      {CardContent}
+                    </a>
+                  );
+                }
+
+                return (
+                  <Link href={linkHref} key={i} className="w-full h-full block">
+                    {CardContent}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* 📺 میڈیا اور الیکٹرانک جرنلزم (اب یہاں بانی کارڈز کے نیچے نظر آئے گا) */}
+             <div className="mt-2">
+               <h3 className="text-xl md:text-2xl font-bold text-[#0f4c75] mb-6 text-center urdu-text border-b-2 border-[#D4AF37] w-fit mx-auto pb-1">رسانہ اور الیکٹرانک صحافت</h3>
+               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                 {mediaRoles.map((role, i) => {
+                   const mediaLink = getMediaLink(role.title);
+                   const isExternal = mediaLink.startsWith("http");
+                   return (
+                     <Link href={mediaLink} key={i} target={isExternal ? "_blank" : "_self"} rel={isExternal ? "noopener noreferrer" : ""}>
+                       <div className="bg-gradient-to-br from-[#0a1f30] to-[#1c3b57] border border-[#D4AF37]/30 rounded-2xl p-4 hover:bg-[#D4AF37] transition duration-300 group shadow-lg h-full cursor-pointer text-center flex flex-col items-center justify-center min-h-[120px]">
+                         <div className="text-2xl text-[#D4AF37] mb-2 group-hover:text-[#0a1f30]">{role.icon}</div>
+                         <h4 dir="ltr" className="text-white group-hover:text-[#0a1f30] font-bold text-[10px] md:text-xs font-sans leading-tight break-words w-full">
+                           {role.title}
+                         </h4>
+                       </div>
+                     </Link>
+                   );
+                 })}
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+
+      {/*  5. تفصیلی آپ بیتی */}
       <section className="container mx-auto px-3 md:px-4 py-12 md:py-16 relative z-10" dir="rtl">
         <div className="max-w-5xl mx-auto bg-white rounded-[2rem] md:rounded-[3rem] shadow-2xl border-t-8 border-[#0b314d] p-4 md:p-16">
           <div className="text-center mb-12">
