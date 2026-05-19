@@ -60,10 +60,21 @@ function EnglishArticlesContent() {
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
-      const matchesCategory = filterCategory === 'all' || article.category === filterCategory;
+      
+      const isMultiCategory = Array.isArray(article.category);
+      const matchesCategory = filterCategory === 'all' ||
+        (isMultiCategory
+          ? article.category.includes(filterCategory)
+          : article.category === filterCategory);
+          
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => b.id - a.id);
+    .sort((a, b) => {
+      // Extract numeric part of ID for sorting if it's a string like "202E"
+      const idA = typeof a.id === 'string' ? parseInt(a.id) : a.id;
+      const idB = typeof b.id === 'string' ? parseInt(b.id) : b.id;
+      return idB - idA;
+    });
 
   const categories = [
     { id: 'all', label: 'All Articles 🔍' },

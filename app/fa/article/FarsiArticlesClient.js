@@ -59,12 +59,21 @@ function FarsiArticlesContent() {
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
+      
       const isMultiCategory = Array.isArray(article.category);
       const matchesCategory = filterCategory === 'all' ||
-        (isMultiCategory ? article.category.includes(filterCategory) : article.category === filterCategory);
+        (isMultiCategory
+          ? article.category.includes(filterCategory)
+          : article.category === filterCategory);
+          
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => b.id - a.id);
+    .sort((a, b) => {
+      // Extract numeric part of ID for sorting if it's a string like "202F"
+      const idA = typeof a.id === 'string' ? parseInt(a.id) : a.id;
+      const idB = typeof b.id === 'string' ? parseInt(b.id) : b.id;
+      return idB - idA;
+    });
 
   const categories = [
     { id: 'all', label: 'همه مقالات 🔍' },

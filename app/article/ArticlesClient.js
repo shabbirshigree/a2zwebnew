@@ -93,8 +93,10 @@ function ArticlesContent() {
         return dateB.getTime() - dateA.getTime();
       }
       
-      // If dates are same, fallback to ID sorting
-      return b.id - a.id;
+      // If dates are same, fallback to ID sorting (handling strings like "202E")
+      const idA = typeof a.id === 'string' ? parseInt(a.id) : a.id;
+      const idB = typeof b.id === 'string' ? parseInt(b.id) : b.id;
+      return idB - idA;
     });
 
   const categories = [
