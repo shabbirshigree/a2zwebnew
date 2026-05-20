@@ -5,6 +5,41 @@
 export const englishData = [
 
     {
+        "id": "203-EN",
+        "category": ["english"], 
+        "title": "Al-Masjid an-Nabawi (PBUH)",
+        "date": "May 20, 2026",
+        "paper": "Daily Zamana News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779250638/2.Madiney_ki_Masajid_Zamana_news_2026-05-20_lefxc1.jpg",
+        "excerpt": "Al-Masjid an-Nabawi (PBUH) is the second holiest site among Muslims after Al-Masjid al-Haram...",
+        "content": `
+        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+             <p><strong>Al-Masjid an-Nabawi (PBUH)</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
+
+            <p>At the exact time when the Holy Prophet (PBUH) entered Yathrib, his mount was left free, and it was decided that wherever his mount stopped would be his place of residence. Thus, where his mount stopped, a mosque and a residence for him were constructed. And this mosque came to be called Al-Masjid an-Nabawi. Al-Masjid an-Nabawi is the second holiest site among Muslims after Al-Masjid al-Haram. Al-Masjid an-Nabawi or Masjid an-Nabi refers to this historical mosque which also contains the holy shrine of the Holy Prophet (PBUH). The foundation of Al-Masjid an-Nabawi was laid by the blessed hand of the Holy Prophet (PBUH) himself in the year 1 AH, after which the work of its construction and expansion continued across different eras. The holy residence of the Holy Prophet (PBUH) and Hazrat Ali (AS) was also built adjacent to this mosque, but later when Al-Masjid an-Nabawi was expanded, these houses were also included in the mosque.</p>
+
+<p>Various places inside and around Al-Masjid an-Nabawi have doubled its significance, including the holy shrine of the Prophet (PBUH), his holy residence, and the Baqi cemetery where important personalities of early Islam are buried. According to one narration, Hazrat Fatima (SA) is buried in Al-Masjid an-Nabawi between the Prophet's grave and the pulpit. Describing the reward of praying in this mosque, the Messenger of Allah (PBUH) stated: 'One prayer in this mosque of mine is equal to ten thousand prayers in the sight of God, but one prayer in Al-Masjid al-Haram is equal to one hundred thousand prayers.'</p>
+
+<p>When you enter Al-Masjid an-Nabawi through Bab Jibril (AS), you will see a chamber on the left hand. This was the house of Hazrat Bibi Fatima (SA). When you pass in front of it, immediately after on the left hand is the part of Al-Masjid an-Nabawi which is Riyad al-Jannah. It is stated in a holy Hadith: "The place between my house and my pulpit is one of the gardens of Paradise." Meaning, this place is actually a piece of Paradise. In this very Riyad al-Jannah is the prayer mat (Musalla) of the Holy Prophet (PBUH), where he (PBUH) used to stand and lead the congregation. After the passing of the Holy Prophet (PBUH), in order to maintain the reverence of such a blessed place like the Musalla of the Messenger, a wall was built over the place where the Prophet (PBUH) prayed, except leaving the spot for his blessed feet, so that the place of his prostration remained protected from people's feet. Today, a beautiful mihrab (niche) is built at this place, which is called the Mihrab an-Nabawi. The sacred mihrab currently constructed is made of a single 9-foot piece of marble on which beautiful enameling with gold water has been executed. Above the mihrab, the 56th verse of Surah Al-Ahzab is written, which commands the recitation of blessings (Darood Sharif).</p>
+
+<p>The door of the house of Hazrat Fatima (SA), the only daughter of the Prophet of God Hazrat Muhammad (PBUH), opened into the western wall of the chamber of the Holy Prophet (PBUH). In the current era, there is no trace or sign of this house; rather, it has been incorporated into the chamber and the holy shrine of the Holy Prophet (PBUH). The majority of Muslims believe that Hazrat Fatima (SA) was buried in Baqi; but according to most Ahadith, her burial place is declared to be her house, which has now become part of Al-Masjid an-Nabawi. This place is adjacent to the holy shrine of the Prophet (PBUH) and is situated at an elevation compared to other places in the mosque, being slightly higher than the general floor of the mosque.</p>
+
+<p>From early Islam to the present day, the number of doors of Al-Masjid an-Nabawi and their shapes and appearances have been changing. Initially, Al-Masjid an-Nabawi had three doors; currently, Al-Masjid an-Nabawi has approximately 86 doors and 2104 pillars. In the beginning, the Holy Prophet (PBUH) used to deliver sermons in Al-Masjid an-Nabawi leaning against a date palm tree. In the seventh or eighth year of Hijri, a pulpit (minbar) was made for him.</p>
+
+<p>Along with the Tahajjud pillar is the place where the Holy Prophet (PBUH) used to offer night prayers, worship, and keep night vigils. The Mihrab of Fatima (SA) was located to the south of the Tahajjud Mihrab or within the residence of Hazrat Fatima (SA), which was later included in the mosque. Imam Hasan al-Mujtaba (AS) narrates: "Once on a Friday night, I saw my revered mother Hazrat Fatima (SA) standing in the mihrab until morning, praying for believing men and women by name. I asked, 'Why don't you pray for yourself?' At that time, she (SA) said: 'My son, first the neighbors, then the household.'"</p>
+
+<p>In the year 678 AH, a dome was constructed over the shrine of the Prophet (PBUH) for the first time. And the color of this dome, which was blue until then, was changed to green, after which this dome became famous by the name Gumbad-e-Khizra (The Green Dome).</p>
+
+<p>On the ancient parts of Al-Masjid an-Nabawi (Riyad al-Jannah and the pillars and walls near the Rawdah of the Messenger of Allah PBUH), the names of the Twelve Imams (AS) are written in extremely beautiful golden letters. If you enter through Bab-e-Jibril (AS) or move towards the Muwajahah Sharif, these names are clearly visible on the arches and walls near the ceiling. Not only the names of the Imams (AS), but their titles are also written alongside. For example: Imam Ali al-Murtaza (AS), Imam Hasan al-Mujtaba (AS), Imam Husain ash-Shaheed (AS), Imam Ali Zayn al-Abidin (AS), and similarly up to Imam Muhammad al-Mahdi (AS), the names of all twelve Imams are present there.</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779250638/2.Madiney_ki_Masajid_Zamana_news_2026-05-20_lefxc1.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+    {
         "id": "202E",
         "category": ["english"],
         "title": "Hajj Diary. From the book 'Madinat-ul-Ahl al-Bayt (A.S)' by Haji Shabbir Ahmed Shigri",
