@@ -5,6 +5,70 @@
 export const englishData = [
 
     {
+        "id": "204-EN",
+        "category": ["english"], 
+        "title": "A Journey Through the Other Mosques of Medina",
+        "date": "May 21, 2026",
+        "paper": "Daily Zamana News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg",
+        "excerpt": "A Journey Through the Other Mosques of Medina",
+        "content": `
+        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+             <p><strong>Al-Masjid an-Nabawi (PBUH)</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
+
+            <p>Beyond Al-Masjid an-Nabawi: A Journey Through the Other Mosques of Medina
+
+After Al-Masjid an-Nabawi (PBUH), today we will describe the other sacred mosques of Medina.
+
+Masjid Quba:
+Masjid Quba is the first mosque in Islam, the foundation of which was laid by Prophet Muhammad (PBUH) with his own blessed hands. The Holy Prophet (PBUH) stated: "Whoever offers two Rak'ahs of prayer in this mosque, Allah Almighty will grant him the reward of an accepted Umrah." This blessed saying of the Prophet (PBUH) is also inscribed on the Mihrab of Masjid Quba. According to the holy Hadith, if a Muslim offers two obligatory or supererogatory (Nafl) Rak'ahs in Masjid Quba, the reward of an accepted Umrah will be written in his record of deeds. This mosque also holds the unique honor that the blessed marriage of Hazrat Ali (AS) and Hazrat Fatima Zahra (SA) took place at this very site.
+
+Masjid Radd al-Shams:
+The event regarding this place is renowned. During the Battle of Bani Nadir, while besieging the fortress of Bani Nadir at the time of Asr, the Holy Prophet (PBUH) fell asleep resting his head on the lap of Imam Ali (AS). The Prophet (PBUH) woke up near sunset and realized that Hazrat Ali (AS) had not yet offered his Asr prayer. The Prophet (PBUH) supplicated to Allah to return the sun so that Hazrat Ali (AS) could perform his Asr prayer.
+
+Masjid Ali (AS):
+It is narrated that during the days of the Battle of Ahzab (Trench), while Medina was under siege, Imam Ali (AS) used to offer his prayers in this mosque.
+
+Masjid Fatima Zahra (SA) Transformed into a Park:
+Some time ago, Masjid Fatima Zahra (SA) was situated here. This was a mosque that had become dilapidated due to a lack of maintenance and repair. The Al Saud administration, under the pretext of preserving the beauty of a park, unjustly interfered with this House of God—which was a memorial of the Prophet's Daughter (SA)—and destroyed it. Thus, another valuable relic among the remaining heritage of Islamic civilization was erased from the face of the earth.
+
+Masjid Noor and the Well of Hazrat Ali's (AS) Miracle:
+Masjid Noor and the miraculous well of Hazrat Ali (AS) (Bi'r al-Hujaym) still exist. Polytheists used to live here. When the Holy Prophet (PBUH) and Moula Ali (AS) visited this place, the polytheists embraced Islam. Hazrat Ali (AS) struck his foot on the ground, and a well sprang up, which is known as Bi'r al-Hujaym. This well is still in excellent condition and contains abundant water. The mosque here also remains in its ancient state.
+
+Masjid Salman Farsi (RA):
+The name of this mosque is Masjid Salman Farsi, located just 20 meters south of Masjid Al-Fath. It is named after the renowned companion Hazrat Salman Farsi (RA), who proposed the strategic idea of digging a trench to defend Medina.
+
+Masjid Qiblatayn:
+Here, during the congregational prayer, the divine command to change the Qibla was revealed. Prophet Muhammad (PBUH) and his companions turned their faces from Bait al-Maqdis (Jerusalem) toward the Kaaba in the middle of the prayer. Because a single prayer was offered facing two different Qiblas, this mosque is called "Masjid Qiblatayn" (The Mosque of the Two Qiblas).
+
+Masjid Fajr:
+When the Holy Prophet (PBUH) arrived in Medina after migrating from Mecca, it was the time of Fajr. Upon reaching this spot, the Holy Prophet offered his first prayer here. Since this was the first prayer offered on the soil of Medina and it was the time of dawn, it is called Masjid Fajr.
+
+Masjid Fasah:
+Masjid Fasah is one of the mosques situated at the foothills of Mount Uhud. During the Battle of Uhud, the Holy Prophet (PBUH) took refuge in a mountain pass here, while Hazrat Ali (AS) was fighting with immense bravery outside. At that time, Moula Ali's body sustained severe wounds, and it was here that Jibraeel (AS) descended bringing the sword Zulfiqar. The Messenger of Allah (PBUH) offered his Dhuhr and Asr prayers here. This place later became a mosque and became famous as "Masjid Fasah".
+
+Masjid Abu Dhar al-Ghifari (RA):
+Following a monumental event involving the Holy Prophet (PBUH) here, it is also known as Masjid Sajdah. The Messenger of Allah (PBUH) went into a prolonged prostration (Sajdah). The Prophet (PBUH) explained: "Jibraeel had brought a message from Allah. 'He who sends peace and blessings upon you, I will send mercy upon him.' I thanked Allah for this profound grace and favor."
+
+Masjid Ghamama ("The Mosque of Clouds") and the Memorial of the Imams (AS):
+In Arabic, "Ghamama" means cloud. When a severe drought struck Medina, the Messenger of Allah (PBUH) came here to pray for rain. He carried Imam Husayn (AS) on his shoulders and supplicated using him as an intercessor. Immediately following his prayer, thick clouds (Ghamama) covered the sky.
+
+Masjid Suqya and Bi'r Suqya:
+At this very spot, the Holy Prophet (PBUH) faced the Qibla and prayed: "O Allah! Ibrahim (AS) was Your servant and Khalil (friend); he prayed for blessings for Mecca. I, Muhammad (PBUH), am Your servant and Messenger, and I ask You to grant Medina the same blessings, rather double the blessings."
+Besides these, other notable mosques located in Medina include Masjid Fath, Masjid Umrah, Masjid Bilal (RA), Masjid Jummah, Masjid Utban bin Malik, Al-Rayah Mosque, Masjid Dira, Masjid Taubah, and Masjid Ijabah.
+
+Kucha Bani Hashim and the Birthplace of Hasnain Kareemain (AS):
+If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al-Baqi, you come across the historical path that was known as "Kucha Bani Hashim" (The Alley of Bani Hashim). This is where the residences of the Holy Prophet's (PBUH) family, Moula Ali (AS), Sayyida Fatima Zahra (SA), and other elders of the Bani Hashim were located.
+The Birth of Hasnain Kareemain (AS): The greatest blessing of this sacred alley was the pure household where the Leaders of Paradise, Imam Hasan (AS) and Imam Husayn (AS), were born. This was the very threshold where the Mercy to the Worlds (PBUH) held his grandsons in his arms for the first time, recited the Adhan in their ears, and named them under divine revelation. The Master of both worlds (PBUH) would pass through this alley every morning, stand at the door of his beloved daughter, and recite the Verse of Purification (Ayat al-Tatheer). It was here that the Angel Jibraeel (AS) would descend to present the offering of blessings and peace upon the Progeny of Muhammad (PBUH)..</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+    {
         "id": "203-EN",
         "category": ["english"], 
         "title": "Al-Masjid an-Nabawi (PBUH)",
