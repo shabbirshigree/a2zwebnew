@@ -291,7 +291,7 @@ function ArticlesContent() {
       )}
 
       {selectedArticle && (
-        <section className="container mx-auto px-4 py-12 md:py-20 animate-fadeIn" dir="rtl">
+        <section className="container mx-auto px-4 py-12 md:py-20 animate-fadeIn" dir={locale === 'en' ? 'ltr' : 'rtl'}>
           <button
                                 onClick={() => {
                                     setSelectedArticle(null);
@@ -299,7 +299,7 @@ function ArticlesContent() {
                                 }}
                                 className={`flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' ? 'urdu-text' : ''}`}
                             >
-                                <FaArrowLeft className="rotate-180" /> {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
+                                {locale === 'en' ? <FaArrowLeft /> : <FaArrowLeft className="rotate-180" />} {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
                             </button>
 
           <div className="max-w-4xl mx-auto">
@@ -357,7 +357,7 @@ function ArticlesContent() {
                 </div>
 
                 <div
-                  className="urdu-text text-lg md:text-xl leading-[2.2] text-gray-700 text-justify space-y-8 article-content"
+                  className={`${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''} text-lg md:text-xl leading-[2.2] text-gray-700 text-justify space-y-8 article-content`}
                   dangerouslySetInnerHTML={{
                     __html: selectedArticle.content?.includes('<p')
                       ? selectedArticle.content

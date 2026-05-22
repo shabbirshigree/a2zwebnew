@@ -5,8 +5,53 @@
 export const englishData = [
 
     {
+        "id": "205-EN",
+        "category": ["column"], 
+        "title": "Jannat al-Baqi: The First and Oldest Islamic Cemetery of Medina",
+        "date": "22-05-2026",
+        "paper": "Daily Zamana News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779425001/4.Janat_ul_Baqee_Zamana_news_2026-05-22_nbdrcj.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+             <p><strong>Jannat al-Baqi: The First and Oldest Islamic Cemetery of Medina</strong></p>
+<p><strong>Written By Haji Shabbir Ahmed Shigri</strong></p>
+
+            <p>
+Jannat al-Baqi is the first and oldest Islamic cemetery in Medina. Before Islam, this area consisted of a garden on the outskirts of the Hijazi city of Yathrib. Since the first century of the Hijrah, Muslims began burying their deceased here, and the most significant and revered figures of Islam rest in this very ground. According to narrations from the pure Imams (Peace Be Upon Them), alongside the graves of the Leader of the Women of the Worlds, Hazrat Fatima al-Zahra (SA), Imam Hasan (AS), Imam Zain ul Abideen (AS), Imam Muhammad Baqir (AS), and Imam Jafar Sadiq (AS), the cemetery also houses the grave of the Holy Prophet’s (PBUH) noble father, Hazrat Abdullah (AS). Furthermore, the graves of the Prophet's (PBUH) relatives—his uncles, aunts, wives, and children—along with his companions, the Ansar, Muhajirun, Tabi'in, scholars, martyrs, prominent political and social figures, and noble women are all located in Jannat al-Baqi. In various periods of history, shrines were built over the graves of certain personalities. Some individuals were buried within the houses located in Baqi. The shrine of the Imams of Baqi was one of them, which was later demolished. The Imams of Baqi and the Prophet’s uncle, Abbas bin Abdul Muttalib (AS), were buried in the house of Hazrat Aqeel.
+
+According to a tradition, the Holy Prophet (PBUH) was divinely commanded to pray for the forgiveness of those buried in Baqi. Consequently, the Prophet (PBUH) would visit Baqi every Thursday night (Shab-e-Juma) to pray for the deceased. A narration attributed to him states that on the Day of Judgment, seventy thousand people with noble attributes will be resurrected from Baqi, and he will give the glad tidings of his intercession to those buried there. Several Hadiths also recount the Prophet's (PBUH) presence in Baqi to perform specific prayers, such as the prayer for rain (Salat al-Istisqa) and the Eid prayer. According to another Hadith, during the final year of his life, the Prophet (PBUH) visited Baqi with a group of his companions, addressed the deceased, and gave the news of his impending passing.
+
+In his travelogue, the famous traveler Ibn Battuta highlighted the shrines of several noble personalities here and described the domes and ornamentation present over them.
+
+Imam Hasan (AS): The grandson of the Holy Prophet (PBUH) and the eldest son of Hazrat Ali (AS) and Fatima (SA). Imam Husain (AS) laid him to rest in Baqi.
+Imam Zain ul Abideen (AS): The son of Imam Husain (AS). He was present with his father at Karbala. He was incredibly devout and, due to his immense worship, was given the title 'Zain ul Abideen' (The Adornment of the Worshippers). He was martyred on the 25th of Muharram, 94 AH, and was buried in Baqi next to his uncle, Imam Hasan (AS).
+Imam Muhammad Baqir (AS): He is the third among the Imams resting in this sacred enclosure. From Imam Muhammad Baqir (AS), such springs of knowledge, divine recognition, truths of Islamic rulings, wisdom, and subtleties flowed that only a person devoid of insight, bad-natured, or ignorant could deny them.
+Imam Jafar Sadiq (AS): Regarding him, Imam Abu Hanifa stated, "I have not seen anyone more knowledgeable than Imam Jafar Sadiq (AS)." Similarly, Imam Malik, the founder of the Maliki school of thought, said, "No eye has seen, no ear has heard, and no mind can conceive of anyone greater than Imam Jafar Sadiq (AS) in knowledge, worship, and piety." The world-renowned personality and inventor of Algebra, Jabir bin Hayyan, was also his student.
+
+It is stated that Hazrat Fatima (SA) was buried in Baqi, though her burial place is also said to be her own house. It is also narrated that the grave situated alongside the Imams belongs to Hazrat Fatima bint Asad (SA), the honorable mother of Hazrat Ali (AS). Right in front of the graves of the four pure Imams lies the grave of Hazrat Abbas ibn Muttalib, the uncle of the Holy Prophet (PBUH).
+
+There are several graves of the wives of the Prophet (PBUH) in Jannat al-Baqi, whose names are: Zainab bint Khuzaymah, Rayhana bint Zaid, Zainab bint Jahsh, Aisha bint Abu Bakr, Umm Habiba, Hafsa bint Umar, Sawda bint Zam'a, Safiyya bint Huyayy, Juwayriya bint Harith, Umm Salama, and Maria al-Qibtiyya. Regarding Maria al-Qibtiyya, it is also said that her grave is located elsewhere in Medina alongside Hazrat Najma Khatun, the wife of Imam Musa Kazim (AS).
+
+Hazrat Aqeel ibn Abi Talib was the elder brother of Hazrat Ali (AS). After his passing, he was buried in his own house (Dar Aqeel). Hazrat Abdullah ibn Jafar was the eldest son of Hazrat Jafar Tayyar, the son-in-law of Imam Ali (AS), and the husband of Hazrat Zainab (SA). He passed away in 80 AH and was buried in Baqi next to his uncle Aqeel.
+
+Hazrat Umm ul Banin (SA) is the wife of Hazrat Ali (AS) and the mother of Hazrat Abolfazl Al-Abbas (AS), whose grave is also in Baqi. In the tragedy of Karbala, her four sons sacrificed their lives for Imam Husain (AS).
+
+Hazrat Atika bint Abdul Muttalib was the paternal aunt of the Holy Prophet (PBUH). She passed away in Medina and was buried next to her sister Safiyya. Hazrat Ibrahim, the son of the Holy Prophet (PBUH) born to Hazrat Maria al-Qibtiyya, is also buried here.
+
+Although exactly seventy companions were martyred on the battlefield of Uhud, some succumbed to their severe wounds after returning to Medina. These martyrs were laid to rest together in a single place within Baqi.
+</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779425001/4.Janat_ul_Baqee_Zamana_news_2026-05-22_nbdrcj.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },  
+    
+    {
         "id": "204-EN",
-        "category": ["english"], 
+        "category": ["column"], 
         "title": "A Journey Through the Other Mosques of Medina",
         "date": "May 21, 2026",
         "paper": "Daily Zamana News",
@@ -14,53 +59,53 @@ export const englishData = [
         "excerpt": "A Journey Through the Other Mosques of Medina",
         "content": `
         <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
-             <p><strong>Al-Masjid an-Nabawi (PBUH)</strong></p>
+             <p><strong>A Journey Through the Other Mosques of Medina</strong></p>
 <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
 
-            <p>Beyond Al-Masjid an-Nabawi: A Journey Through the Other Mosques of Medina
+            <p>Beyond Al-Masjid an-Nabawi: A Journey Through the Other Mosques of Medina. After Al-Masjid an-Nabawi (PBUH), today we will describe the other sacred mosques of Medina.</p>
 
-After Al-Masjid an-Nabawi (PBUH), today we will describe the other sacred mosques of Medina.
+<p><strong>Masjid Quba:</strong><br>
+Masjid Quba is the first mosque in Islam, the foundation of which was laid by Prophet Muhammad (PBUH) with his own blessed hands. The Holy Prophet (PBUH) stated: "Whoever offers two Rak'ahs of prayer in this mosque, Allah Almighty will grant him the reward of an accepted Umrah." This blessed saying of the Prophet (PBUH) is also inscribed on the Mihrab of Masjid Quba. According to the holy Hadith, if a Muslim offers two obligatory or supererogatory (Nafl) Rak'ahs in Masjid Quba, the reward of an accepted Umrah will be written in his record of deeds. This mosque also holds the unique honor that the blessed marriage of Hazrat Ali (AS) and Hazrat Fatima Zahra (SA) took place at this very site.</p>
 
-Masjid Quba:
-Masjid Quba is the first mosque in Islam, the foundation of which was laid by Prophet Muhammad (PBUH) with his own blessed hands. The Holy Prophet (PBUH) stated: "Whoever offers two Rak'ahs of prayer in this mosque, Allah Almighty will grant him the reward of an accepted Umrah." This blessed saying of the Prophet (PBUH) is also inscribed on the Mihrab of Masjid Quba. According to the holy Hadith, if a Muslim offers two obligatory or supererogatory (Nafl) Rak'ahs in Masjid Quba, the reward of an accepted Umrah will be written in his record of deeds. This mosque also holds the unique honor that the blessed marriage of Hazrat Ali (AS) and Hazrat Fatima Zahra (SA) took place at this very site.
+<p><strong>Masjid Radd al-Shams:</strong><br>
+The event regarding this place is renowned. During the Battle of Bani Nadir, while besieging the fortress of Bani Nadir at the time of Asr, the Holy Prophet (PBUH) fell asleep resting his head on the lap of Imam Ali (AS). The Prophet (PBUH) woke up near sunset and realized that Hazrat Ali (AS) had not yet offered his Asr prayer. The Prophet (PBUH) supplicated to Allah to return the sun so that Hazrat Ali (AS) could perform his Asr prayer.</p>
 
-Masjid Radd al-Shams:
-The event regarding this place is renowned. During the Battle of Bani Nadir, while besieging the fortress of Bani Nadir at the time of Asr, the Holy Prophet (PBUH) fell asleep resting his head on the lap of Imam Ali (AS). The Prophet (PBUH) woke up near sunset and realized that Hazrat Ali (AS) had not yet offered his Asr prayer. The Prophet (PBUH) supplicated to Allah to return the sun so that Hazrat Ali (AS) could perform his Asr prayer.
+<p><strong>Masjid Ali (AS):</strong><br>
+It is narrated that during the days of the Battle of Ahzab (Trench), while Medina was under siege, Imam Ali (AS) used to offer his prayers in this mosque.</p>
 
-Masjid Ali (AS):
-It is narrated that during the days of the Battle of Ahzab (Trench), while Medina was under siege, Imam Ali (AS) used to offer his prayers in this mosque.
+<p><strong>Masjid Fatima Zahra (SA) Transformed into a Park:</strong><br>
+Some time ago, Masjid Fatima Zahra (SA) was situated here. This was a mosque that had become dilapidated due to a lack of maintenance and repair. The Al Saud administration, under the pretext of preserving the beauty of a park, unjustly interfered with this House of God—which was a memorial of the Prophet's Daughter (SA)—and destroyed it. Thus, another valuable relic among the remaining heritage of Islamic civilization was erased from the face of the earth.</p>
 
-Masjid Fatima Zahra (SA) Transformed into a Park:
-Some time ago, Masjid Fatima Zahra (SA) was situated here. This was a mosque that had become dilapidated due to a lack of maintenance and repair. The Al Saud administration, under the pretext of preserving the beauty of a park, unjustly interfered with this House of God—which was a memorial of the Prophet's Daughter (SA)—and destroyed it. Thus, another valuable relic among the remaining heritage of Islamic civilization was erased from the face of the earth.
+<p><strong>Masjid Noor and the Well of Hazrat Ali's (AS) Miracle:</strong><br>
+Masjid Noor and the miraculous well of Hazrat Ali (AS) (Bi'r al-Hujaym) still exist. Polytheists used to live here. When the Holy Prophet (PBUH) and Moula Ali (AS) visited this place, the polytheists embraced Islam. Hazrat Ali (AS) struck his foot on the ground, and a well sprang up, which is known as Bi'r al-Hujaym. This well is still in excellent condition and contains abundant water. The mosque here also remains in its ancient state.</p>
 
-Masjid Noor and the Well of Hazrat Ali's (AS) Miracle:
-Masjid Noor and the miraculous well of Hazrat Ali (AS) (Bi'r al-Hujaym) still exist. Polytheists used to live here. When the Holy Prophet (PBUH) and Moula Ali (AS) visited this place, the polytheists embraced Islam. Hazrat Ali (AS) struck his foot on the ground, and a well sprang up, which is known as Bi'r al-Hujaym. This well is still in excellent condition and contains abundant water. The mosque here also remains in its ancient state.
+<p><strong>Masjid Salman Farsi (RA):</strong><br>
+The name of this mosque is Masjid Salman Farsi, located just 20 meters south of Masjid Al-Fath. It is named after the renowned companion Hazrat Salman Farsi (RA), who proposed the strategic idea of digging a trench to defend Medina.</p>
 
-Masjid Salman Farsi (RA):
-The name of this mosque is Masjid Salman Farsi, located just 20 meters south of Masjid Al-Fath. It is named after the renowned companion Hazrat Salman Farsi (RA), who proposed the strategic idea of digging a trench to defend Medina.
+<p><strong>Masjid Qiblatayn:</strong><br>
+Here, during the congregational prayer, the divine command to change the Qibla was revealed. Prophet Muhammad (PBUH) and his companions turned their faces from Bait al-Maqdis (Jerusalem) toward the Kaaba in the middle of the prayer. Because a single prayer was offered facing two different Qiblas, this mosque is called "Masjid Qiblatayn" (The Mosque of the Two Qiblas).</p>
 
-Masjid Qiblatayn:
-Here, during the congregational prayer, the divine command to change the Qibla was revealed. Prophet Muhammad (PBUH) and his companions turned their faces from Bait al-Maqdis (Jerusalem) toward the Kaaba in the middle of the prayer. Because a single prayer was offered facing two different Qiblas, this mosque is called "Masjid Qiblatayn" (The Mosque of the Two Qiblas).
+<p><strong>Masjid Fajr:</strong><br>
+When the Holy Prophet (PBUH) arrived in Medina after migrating from Mecca, it was the time of Fajr. Upon reaching this spot, the Holy Prophet offered his first prayer here. Since this was the first prayer offered on the soil of Medina and it was the time of dawn, it is called Masjid Fajr.</p>
 
-Masjid Fajr:
-When the Holy Prophet (PBUH) arrived in Medina after migrating from Mecca, it was the time of Fajr. Upon reaching this spot, the Holy Prophet offered his first prayer here. Since this was the first prayer offered on the soil of Medina and it was the time of dawn, it is called Masjid Fajr.
+<p><strong>Masjid Fasah:</strong><br>
+Masjid Fasah is one of the mosques situated at the foothills of Mount Uhud. During the Battle of Uhud, the Holy Prophet (PBUH) took refuge in a mountain pass here, while Hazrat Ali (AS) was fighting with immense bravery outside. At that time, Moula Ali's body sustained severe wounds, and it was here that Jibraeel (AS) descended bringing the sword Zulfiqar. The Messenger of Allah (PBUH) offered his Dhuhr and Asr prayers here. This place later became a mosque and became famous as "Masjid Fasah".</p>
 
-Masjid Fasah:
-Masjid Fasah is one of the mosques situated at the foothills of Mount Uhud. During the Battle of Uhud, the Holy Prophet (PBUH) took refuge in a mountain pass here, while Hazrat Ali (AS) was fighting with immense bravery outside. At that time, Moula Ali's body sustained severe wounds, and it was here that Jibraeel (AS) descended bringing the sword Zulfiqar. The Messenger of Allah (PBUH) offered his Dhuhr and Asr prayers here. This place later became a mosque and became famous as "Masjid Fasah".
+<p><strong>Masjid Abu Dhar al-Ghifari (RA):</strong><br>
+Following a monumental event involving the Holy Prophet (PBUH) here, it is also known as Masjid Sajdah. The Messenger of Allah (PBUH) went into a prolonged prostration (Sajdah). The Prophet (PBUH) explained: "Jibraeel had brought a message from Allah. 'He who sends peace and blessings upon you, I will send mercy upon him.' I thanked Allah for this profound grace and favor."</p>
 
-Masjid Abu Dhar al-Ghifari (RA):
-Following a monumental event involving the Holy Prophet (PBUH) here, it is also known as Masjid Sajdah. The Messenger of Allah (PBUH) went into a prolonged prostration (Sajdah). The Prophet (PBUH) explained: "Jibraeel had brought a message from Allah. 'He who sends peace and blessings upon you, I will send mercy upon him.' I thanked Allah for this profound grace and favor."
+<p><strong>Masjid Ghamama ("The Mosque of Clouds") and the Memorial of the Imams (AS):</strong><br>
+In Arabic, "Ghamama" means cloud. When a severe drought struck Medina, the Messenger of Allah (PBUH) came here to pray for rain. He carried Imam Husayn (AS) on his shoulders and supplicated using him as an intercessor. Immediately following his prayer, thick clouds (Ghamama) covered the sky.</p>
 
-Masjid Ghamama ("The Mosque of Clouds") and the Memorial of the Imams (AS):
-In Arabic, "Ghamama" means cloud. When a severe drought struck Medina, the Messenger of Allah (PBUH) came here to pray for rain. He carried Imam Husayn (AS) on his shoulders and supplicated using him as an intercessor. Immediately following his prayer, thick clouds (Ghamama) covered the sky.
+<p><strong>Masjid Suqya and Bi'r Suqya:</strong><br>
+At this very spot, the Holy Prophet (PBUH) faced the Qibla and prayed: "O Allah! Ibrahim (AS) was Your servant and Khalil (friend); he prayed for blessings for Mecca. I, Muhammad (PBUH), am Your servant and Messenger, and I ask You to grant Medina the same blessings, rather double the blessings."</p>
 
-Masjid Suqya and Bi'r Suqya:
-At this very spot, the Holy Prophet (PBUH) faced the Qibla and prayed: "O Allah! Ibrahim (AS) was Your servant and Khalil (friend); he prayed for blessings for Mecca. I, Muhammad (PBUH), am Your servant and Messenger, and I ask You to grant Medina the same blessings, rather double the blessings."
-Besides these, other notable mosques located in Medina include Masjid Fath, Masjid Umrah, Masjid Bilal (RA), Masjid Jummah, Masjid Utban bin Malik, Al-Rayah Mosque, Masjid Dira, Masjid Taubah, and Masjid Ijabah.
+<p>Besides these, other notable mosques located in Medina include Masjid Fath, Masjid Umrah, Masjid Bilal (RA), Masjid Jummah, Masjid Utban bin Malik, Al-Rayah Mosque, Masjid Dira, Masjid Taubah, and Masjid Ijabah.</p>
 
-Kucha Bani Hashim and the Birthplace of Hasnain Kareemain (AS):
-If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al-Baqi, you come across the historical path that was known as "Kucha Bani Hashim" (The Alley of Bani Hashim). This is where the residences of the Holy Prophet's (PBUH) family, Moula Ali (AS), Sayyida Fatima Zahra (SA), and other elders of the Bani Hashim were located.
-The Birth of Hasnain Kareemain (AS): The greatest blessing of this sacred alley was the pure household where the Leaders of Paradise, Imam Hasan (AS) and Imam Husayn (AS), were born. This was the very threshold where the Mercy to the Worlds (PBUH) held his grandsons in his arms for the first time, recited the Adhan in their ears, and named them under divine revelation. The Master of both worlds (PBUH) would pass through this alley every morning, stand at the door of his beloved daughter, and recite the Verse of Purification (Ayat al-Tatheer). It was here that the Angel Jibraeel (AS) would descend to present the offering of blessings and peace upon the Progeny of Muhammad (PBUH)..</p>
+<p><strong>Kucha Bani Hashim and the Birthplace of Hasnain Kareemain (AS):</strong><br>
+If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al-Baqi, you come across the historical path that was known as "Kucha Bani Hashim" (The Alley of Bani Hashim). This is where the residences of the Holy Prophet's (PBUH) family, Moula Ali (AS), Sayyida Fatima Zahra (SA), and other elders of the Bani Hashim were located.</p>
+
+<p><strong>The Birth of Hasnain Kareemain (AS):</strong> The greatest blessing of this sacred alley was the pure household where the Leaders of Paradise, Imam Hasan (AS) and Imam Husayn (AS), were born. This was the very threshold where the Mercy to the Worlds (PBUH) held his grandsons in his arms for the first time, recited the Adhan in their ears, and named them under divine revelation. The Master of both worlds (PBUH) would pass through this alley every morning, stand at the door of his beloved daughter, and recite the Verse of Purification (Ayat al-Tatheer). It was here that the Angel Jibraeel (AS) would descend to present the offering of blessings and peace upon the Progeny of Muhammad (PBUH).</p>
             <br>
             <div style="text-align: center;">
                 <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
@@ -70,7 +115,7 @@ The Birth of Hasnain Kareemain (AS): The greatest blessing of this sacred alley 
     },
     {
         "id": "203-EN",
-        "category": ["english"], 
+        "category": ["column"], 
         "title": "Al-Masjid an-Nabawi (PBUH)",
         "date": "May 20, 2026",
         "paper": "Daily Zamana News",
@@ -105,7 +150,7 @@ The Birth of Hasnain Kareemain (AS): The greatest blessing of this sacred alley 
     },
     {
         "id": "202E",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Hajj Diary. From the book 'Madinat-ul-Ahl al-Bayt (A.S)' by Haji Shabbir Ahmed Shigri",
         "date": "May 19, 2026",
         "paper": "Daily Zamana News",
@@ -131,7 +176,7 @@ The Birth of Hasnain Kareemain (AS): The greatest blessing of this sacred alley 
     },
     {
         "id": "123EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Victory of Hussainiyat",
         "date": "April 08, 2026",
         "paper": "Daily Mashriq, Zamana News, Islam Times",
@@ -205,7 +250,7 @@ Today, the enemy who set out to isolate Iran has itself become such an isolated 
     },
     {
         "id": "122EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Chess Pieces of the Iranian War",
         "date": "April 04, 2026",
         "paper": "Facebook",
@@ -270,7 +315,7 @@ If we are to understand Iran, we must understand its ancient civilization and cu
     },
     {
         "id": "121EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Gem of Hormuz",
         "date": "March 20, 2026",
         "paper": "Facebook",
@@ -326,7 +371,7 @@ Hormuz is currently the switch in Iran's hand that it can press whenever it want
     },
     {
         "id": "117EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Martyr Dr. Ali Larijani: Ambassador of Kashmir and Palestine",
         "date": "March 18, 2026",
         "paper": "Facebook",
@@ -405,7 +450,7 @@ Today, the Islamic Ummah has been deprived of this great leader. He attained the
     },
     {
         "id": "116EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Martyr Khamenei: The Center of Islamic Unity",
         "date": "March 14, 2026",
         "paper": "Zamana News, Islam Times, Public Power",
@@ -476,7 +521,7 @@ In my own view, the Leader's entire life remained a practical model of unity, bu
     },
     {
         "id": "115EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "From Nara-e-Haidari to Uswah-e-Haidari",
         "date": "March 12, 2026",
         "paper": "Zamana News",
@@ -523,7 +568,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "113EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Cultural Heritage Under the Shadow of Crimes",
         "date": "March 04, 2026",
         "paper": "Zamana News",
@@ -560,7 +605,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "111EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Great Leader of Islam, Martyr Ayatollah al-Uzma Ali Khamenei",
         "date": "March 04, 2026",
         "paper": "Mashriq, Zamana, Islam Times, Public Power, Sada-e-Watan, Aaj Ki Baat",
@@ -652,7 +697,7 @@ In these days of Ramadan, the blood of the Martyr of Kufa shed in the mihrab of 
     },
     {
         "id": "110EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Life of Agha Ali Mousavi",
         "date": "February 08, 2026",
         "paper": "Zamana News / Islam Times / 5CN",
@@ -734,7 +779,7 @@ Our prayer is that just as he presented his great services for religion and the 
     },
     {
         "id": "84EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Wound of Suhail Mujtaba's Separation, Which Will Never Heal",
         "date": "December 06, 2025",
         "paper": "Social Media / Shigri's Diary",
@@ -849,7 +894,7 @@ Ameen, O Lord of the Worlds.
 
     {
         "id": "79EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Benefactor of the North: Agha Syed Ahmed Ali Shah (Written Column + Google Analysis)",
         "date": "January 26, 2026",
         "paper": "Daily Zamana / Yom-e-Takbeer",
@@ -995,7 +1040,7 @@ This writing comprehensively covers the life and invaluable services of the reno
     },
     {
         "id": "82EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Great Spiritual Leader: Hazrat Agha Syed Ali Al-Hussaini Sabzwari (RA) (Shigri's Diary)",
         "date": "December 25, 2025",
         "paper": "Daily Baadeshimal",
@@ -1059,7 +1104,7 @@ May Allah accept and approve all his efforts and grant him successes and victori
     },
     {
         "id": "83EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "The Era of 'Jurm-e-Siasat' Ends: In Memory of the Late Mian Manzoor Ahmed Wattoo",
         "date": "December 16, 2025",
         "paper": "Daily Zamana / Yom-e-Takbeer / Siasiyat / 5CN",
@@ -1140,7 +1185,7 @@ Today, Mian Manzoor Ahmed Wattoo is no longer with us, but his graciousness, adh
     },
     {
         "id": "85EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Social Media: A Blessing or a Curse? (In the Light of the Supreme Leader's Directives and Quranic Teachings)",
         "date": "October 12, 2025",
         "paper": "Daily Mashriq / Siasiyat / Islam Times",
@@ -1232,7 +1277,7 @@ Today, Mian Manzoor Ahmed Wattoo is no longer with us, but his graciousness, adh
     },
     {
         "id": "86EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Unity Week: A Practical Formula for the Unity of the Muslim Ummah",
         "date": "September 10, 2025",
         "paper": "National and International Newspapers",
@@ -1311,7 +1356,7 @@ Amen, O Lord of the Worlds.</strong></p>
     },
     {
         "id": "81EN",
-        "category": ["english"],
+        "category": ["column"],
         "title": "Tribute to an Exemplary Civil Servant: In Memory of the Late G.M. Sikandar",
         "date": "August 13, 2025",
         "paper": "Daily Mashriq / Islam Times / Siasiyat",
