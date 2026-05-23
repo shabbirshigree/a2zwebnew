@@ -22,7 +22,7 @@ export { specialDataFa };
 // Combined collections
 export const allArticles = [
   ...(urduData || []).map(a => ({ ...a, lang: 'ur' })),
-  ...(punjabiData || []).map(a => ({ ...a, lang: 'ur' })), // Punjabi is mostly viewed on Urdu page
+  ...(punjabiData || []).map(a => ({ ...a, lang: 'ur' })), 
   ...(specialData || []).map(a => ({ ...a, lang: 'ur' })),
   ...(specialDataFa || []).map(a => ({ ...a, lang: 'fa' })),
   ...(specialDataEn || []).map(a => ({ ...a, lang: 'en' })),
