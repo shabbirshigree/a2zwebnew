@@ -22,6 +22,15 @@ function ArticlesContent() {
   const [articleComments] = useState({});
 
   const [filterCategory, setFilterCategory] = useState('all');
+
+  // Set default category based on locale
+  useEffect(() => {
+    if (locale === 'ur') {
+      setFilterCategory('column');
+    } else {
+      setFilterCategory('all');
+    }
+  }, [locale]);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -73,6 +82,9 @@ function ArticlesContent() {
 
   const filteredArticles = (allArticles || [])
     .filter(article => {
+      // Filter by language
+      if (article.lang && article.lang !== locale) return false;
+
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
 
@@ -100,13 +112,11 @@ function ArticlesContent() {
     });
 
   const categories = [
-    { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام 🔍' },
-    { id: 'special', label: locale === 'en' ? 'Special Edition ⭐' : locale === 'fa' ? 'نسخہ ھای ویژہ ⭐' : 'سپیشل ایڈیشن ⭐' },
-    { id: 'english', label: 'English 🅰️' },
-    { id: 'punjabi', label: locale === 'en' ? 'Punjabi 📖' : locale === 'fa' ? 'پنجابی 📖' : 'پنجابی 📖' },
-    { id: 'column', label: locale === 'en' ? 'Urdu ✍️' : locale === 'fa' ? 'اردو ✍️' : 'اردو ✍️' },
-    { id: 'islamic_unity', label: locale === 'en' ? 'Islamic Unity 🤝' : locale === 'fa' ? 'وحدت اسلامی 🤝' : 'اسلامی وحدت 🤝' },
-    { id: 'international', label: locale === 'en' ? 'International 🌍' : locale === 'fa' ? 'بین المللی 🌍' : 'انٹرنیشنل 🌍' }
+    { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام مضامین 🔍' },
+    { id: 'column', label: locale === 'en' ? 'Columns ✍️' : locale === 'fa' ? 'ستون‌ها ✍️' : 'کالمز ✍️' },
+    { id: 'special', label: locale === 'en' ? 'Special ⭐' : locale === 'fa' ? 'ویژه ⭐' : 'خصوصی مضامین ⭐' },
+    { id: 'islamic_unity', label: locale === 'en' ? 'Unity 🤝' : locale === 'fa' ? 'وحدت 🤝' : 'اتحادِ امت 🤝' },
+    { id: 'international', label: locale === 'en' ? 'International 🌍' : locale === 'fa' ? 'بین‌الملل 🌍' : 'عالمی حالات 🌍' },
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;

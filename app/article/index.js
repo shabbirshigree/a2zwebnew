@@ -21,15 +21,15 @@ export { specialDataFa };
 
 // Combined collections
 export const allArticles = [
-  ...(urduData || []),
-  ...(punjabiData || []),
-  ...(specialData || []),
-  ...(specialDataFa || []),
-  ...(specialDataEn || []),
-  ...(unityData || []),
-  ...(internationalData || []),
-  ...(englishData || []),
-  ...(farsiData || [])
+  ...(urduData || []).map(a => ({ ...a, lang: 'ur' })),
+  ...(punjabiData || []).map(a => ({ ...a, lang: 'ur' })), // Punjabi is mostly viewed on Urdu page
+  ...(specialData || []).map(a => ({ ...a, lang: 'ur' })),
+  ...(specialDataFa || []).map(a => ({ ...a, lang: 'fa' })),
+  ...(specialDataEn || []).map(a => ({ ...a, lang: 'en' })),
+  ...(unityData || []).map(a => ({ ...a, lang: 'ur' })),
+  ...(internationalData || []).map(a => ({ ...a, lang: 'ur' })),
+  ...(englishData || []).map(a => ({ ...a, lang: 'en' })),
+  ...(farsiData || []).map(a => ({ ...a, lang: 'fa' }))
 ];
 
 export const englishArticles = [
