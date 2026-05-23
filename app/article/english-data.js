@@ -3,6 +3,58 @@
 
 
 export const englishData = [
+ {
+        "id": "206-EN",
+        "category": ["column"], 
+        "title": "Some Important Places in Medina",
+        "date": "23-05-2026",
+        "paper": "Daily Zamana News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779514919/5.Madiney_k_ahahm_maqamat-_Zamana_news_2026-05-22_w4vpy8.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+             <p><strong>Some Important Places in Medina</strong></p>
+<p><strong>Written By Haji Shabbir Ahmed Shigri</strong></p>
+
+            <p>
+<strong>Maqam-e-Zulfiqar:</strong> This is the place where the Holy Prophet's (PBUH) forehead was wounded and his blessed tooth was martyred. Hazrat Ali (AS) fought so fiercely that his sword broke. On this occasion, a voice came from the sky: "La Fata Illa Ali, La Sayf Illa Zulfiqar" (There is no youth like Ali, and no sword like Zulfiqar). And it was here that Gabriel descended with a sword for Hazrat Ali (AS). The Cave of Taqiyyah, or Shaqq of Uhud, is the place where the Messenger of Allah (PBUH) rested his head, so that rock was under his head at that time. In this cave, the Prophet's daughter, the respected Hazrat Fatima (SA), treated the Holy Prophet (PBUH) and his family, washed his blood, and healed them.</p>
+
+            <p><strong>The House of Hazrat Fatima (SA):</strong> Imam Ali (AS) asked for the hand of Hazrat Fatima (SA) in marriage at the house of Umm Salama, and after that, Imam Ali (AS) arranged a permanent home for their shared life. This house was located to the east of Al-Masjid an-Nabawi (PBUH) among the chambers of the Messenger of God (PBUH).</p>
+
+            <p><strong>Bayt al-Ahzan:</strong> Bayt al-Ahzan is the name of a demolished building in the Baqi cemetery of Medina city. It is said that Hazrat Fatima (SA) used to worship and mourn her father's passing at this place for some time. One possibility is that Bayt al-Ahzan is the burial place of Hazrat Fatima (SA).</p>
+
+            <p><strong>Garden of Imam Hasan (AS):</strong> For Shias, having such a center in a place like Medina is unbelievable, and holding congregational prayers and Majalis here is a great blessing. This beautiful garden, attributed to Imam Hasan (AS), has countless date palm trees.</p>
+
+            <p><strong>Mashraba Umm Ibrahim in Medina Munawwarah:</strong> "Mashraba Umm Ibrahim" is a house of the Ahl al-Bayt (AS). The holy shrine of Imam Reza's (AS) grandmother and mother, and Imam Musa al-Kazim's (AS) mother and respected wife, is also located here. The house of the Mother of the Believers, Hazrat Maria Qibtiyya (SA), the mother of the Prophet's son Ibrahim (AS), was also here, and Ibrahim, the son of the Messenger of Allah (PBUH), was born here. The Prophet of God (PBUH) stayed here for a long time and offered many prayers. The respected wife of Imam Sadiq (AS) and grandmother of Imam Reza (AS), Hazrat Hamida Khatun (SA), and the respected wife of Imam Musa al-Kazim (AS) and mother of Imam Reza (AS), Hazrat Najma Khatun (SA), are also buried at this spot, and Imam Sadiq (AS) instructed to visit this place. According to narrations, this was the first house of the Commander of the Faithful, Ali (AS), and Hazrat Syeda Fatima Zahra (SA), and these two great personalities started their spiritual and blessed life from here. However, other historical events also took place in Mashraba Umm Ibrahim. The birth of the seventh Imam and the ninth infallible, Hazrat Imam Musa al-Kazim (AS), took place here.</p>
+
+            <p><strong>Garden of Hazrat Salman Farsi (RA):</strong> This is the very place where the Messenger of Allah (PBUH) planted date palms with his own blessed hands so that the condition for the freedom of Hazrat Salman Farsi (RA) could be fulfilled.</p>
+
+            <p><strong>House and Garden of Imam Baqir (AS) and Imam Ja'far al-Sadiq (AS):</strong> Wadi al-Areez, located on the eastern side of Medina Munawwarah, is the blessed region where Imam Muhammad Baqir (AS) and Imam Ja'far Sadiq (AS) not only resided but also made it a great center for agriculture and knowledge. Even today, the fragrance of the hard work and knowledge of the Imams of Ahl al-Bayt (AS) permeates the atmosphere here. The wells present in these historical gardens of Wadi al-Areez are still considered reservoirs of the sweetest water in Medina Munawwarah. Due to the blessings of the Infallibles (AS), the water from their wells is still used today to quench the thirst of pilgrims and major hotels in the city.</p>
+
+            <p><strong>Maqam of Hazrat Muslim bin Aqeel (AS):</strong> Here is also the mosque where Hazrat Muslim bin Aqeel (AS) used to sit. This mosque was built during that time, and the stones and walls within it are still preserved in their original state from that era.</p>
+
+            <p><strong>Bayt al-Sabaya - Place of the Captives (The place where the caravan stopped upon returning from Karbala):</strong> This is the house and place where the plundered and captive caravan of oppressed Sadat returning from Karbala stayed for four days upon reaching Medina. This place was outside the city of Medina at that time.</p>
+
+            <p><strong>Palace of Urwah bin Zubayr - An academic and agricultural masterpiece of Wadi al-Aqiq:</strong> Located on the western side of Medina Munawwarah, "Wadi al-Aqiq" has always been distinguished due to its beauty and sweet water springs.</p>
+
+            <p><strong>Dar al-Imam al-Sadiq (AS) - The house from which four thousand students emerged:</strong> This place was the house of Imam Ja'far Sadiq (AS), located right next to Al-Masjid an-Nabawi (PBUH), which was not just a residence but the first formal international university of the Islamic world. Sitting in the courtyard of this very house, the sixth Imam (AS) bestowed those sciences whose echoes can still be heard in the world's major laboratories and educational institutions today.</p>
+
+            <p><strong>The oases watered by the sweat of Maula Ali (AS):</strong> In the history of Medina Munawwarah, among the most prominent memorials of Maula Ali (AS) are the gardens and wells that he developed with his hard work.</p>
+
+            <p><strong>Bustan-e-Aimmah (Orchard of the Imams):</strong> A major part of Imam Ali al-Naqi al-Hadi's (AS) life was spent in Medina Munawwarah, where he personally supervised his ancestral lands and gardens.</p>
+
+            <p><strong>The site of the famous story of Khatun-e-Jannat (SA):</strong> In the Indo-Pak subcontinent, there is a famous story and miracle of Khatun-e-Jannat (SA) which is recited for the fulfillment of vows, wherein the incident of Hazrat Fatima al-Zahra (SA) attending the wedding of Jewish women is read and narrated. The place mentioned in it exists in Medina. A madrasa has now been built at this location.
+</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779514919/5.Madiney_k_ahahm_maqamat-_Zamana_news_2026-05-22_w4vpy8.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    }, 
+
+
+
 
     {
         "id": "205-EN",
