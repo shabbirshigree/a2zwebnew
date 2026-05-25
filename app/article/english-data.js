@@ -4,6 +4,47 @@
 
 export const englishData = [
  {
+        "id": "207-EN",
+        "category": ["column"], 
+        "title": "Abyar Ali (The Wells of Ali AS)",
+        "date": "25-05-2026",
+        "paper": "روزنامہ زمانہ نیوز",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+             <p><strong>Abyar Ali (The Wells of Ali AS)</strong></p>
+<p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
+
+            <p>"Abyar Ali (The Wells of Ali AS) stand today as witnesses to the water drawn by the hands of the Conqueror of Khaibar for the thirsty. Located approximately 7 to 9 kilometers south of Medina in the Valley of Aqiq, this area is known as "Abyar Ali" (The Wells of Ali AS). The primary reason for this place's fame is the wells attributed to Maula Ali (AS). According to historical traditions, during his time, Imam Ali (AS) dug several wells with his own blessed hands in this barren and desert region so that pilgrims and travelers journeying between Mecca and Medina could quench their thirst. According to some sources, before the migration to Medina, rebellious tribes of Jinn held influence here, whom Hazrat Ali (AS) defeated upon the command of the Messenger of Allah (PBUH), making the area safe for human settlement and travelers. He then dedicated them for the pleasure of Allah as a continuous charity (Sadaqah Jariyah). This act reflects Maula Ali's (AS) attribute of generosity, the marks of which remain to this day.
+
+Bir Salman Farsi (The Well of Salman the Persian RA): This well is part of the historical garden in Medina that remained in the ownership of Hazrat Salman Farsi (RA) and which the Messenger of Allah (PBUH) freed by planting saplings with his own blessed hands. In the present day, this site has been enclosed by a high iron fence, and an official board is installed outside detailing strict laws for the protection of antiquities. However, the other side of the picture is that inside the fence, the condition of this well is extremely deplorable.
+
+Bir Ghars: One of the Springs of Paradise: Bir Ghars is located in the Al-Awali neighborhood on "Qurban Road," south of Medina. It is situated approximately 1500 meters northeast of Masjid Quba. In ancient times, this area was part of the homes and gardens of the Banu Nadir, where pilgrims still come today to visit this great memorial. The Messenger of Allah (PBUH) immensely loved the water of this well, and He (PBUH) frequently performed ablution and drank from it. According to Sunan Ibn Majah and other books of Seerah, the Holy Prophet (PBUH) said: "This is one of the springs of Paradise, and its water is the best of water."
+
+Bir Ruma: An Everlasting Charity: Bir Ruma is a living testament to the fertility of Medina and the blessings of this endowment. The modern protective wall built around the well, the iron fence, and the greenery thriving in its shade indicate that this historical site has been beautifully preserved in the form of an agricultural farm and garden.
+
+Bir Al-Ahn (Bir Yusra): The Prophetic Blessing and Traditions: The Messenger of Allah (PBUH) stood by this well, prayed for blessings, and put His blessed saliva into it. This is the very well that is included as the seventh among the seven wells from which the Messenger of Allah (PBUH) performed ablution or requested water for a bath during His illness.
+
+Ain Ali AS (Medina): At the foot of the mountain range in Medina, a historical spring once flowed which is called "Ain Ali" (The Spring of Ali). This spring is a memorial of the era when Maula Ali (AS) cultivated and populated this barren land through his hard work and administration.
+
+Ain Ali AS (Khaibar): At the foot of Marhab's famous fort "Qamus," an ancient spring can be seen, which is called "Ain Ali" (The Spring of Ali) in local traditions. This is the place where the blessed footsteps of the Conqueror of Khaibar, Maula Ali (AS), landed, and this spring emerged from this rocky valley. Amidst the black mountains (Harrah) of Khaibar, this water emerged as a special blessing from Allah.
+
+Bir Aris (Bir Khatam): It is also called the "Well of the Prophet (PBUH)" because the Master of Both Worlds (PBUH) frequently visited here and drank its water. The Messenger of Allah (PBUH) had a ring made to seal diplomatic letters, engraved with "Muhammad Rasulullah." After Him (PBUH), this sacred trust remained with the Rightly Guided Caliphs. In the sixth year of the Uthmanic caliphate, while Hazrat Uthman Ghani (RA) was sitting on the edge of this well, gesturing with the ring, it suddenly slipped from his hand and fell into the deep water of the well. Despite continuous searching for three days and draining all the water from the well, that blessed seal could never be found again.
+
+Bir Bida'ah (Bir Shifa): The greatest virtue of this well is that the Mercy to the Worlds (PBUH) put His blessed saliva into its water, drank from here, and chose this very blessed well for ablution. During the blessed life of the Prophet (PBUH), whenever someone fell ill, upon His (PBUH) guidance and command, they would be bathed with the water of Bir Bida'ah. Through the blessing of the Prophetic saliva, the sick person would instantly recover.
+
+Fadak: The Garden of Batool (AS) - Historical Background: Fadak was a highly fertile region located approximately 140 to 160 kilometers north of Medina, famous for its sweet water springs and dense date palm orchards. The Messenger of Allah (PBUH) called His beloved daughter, Syeda Fatima-tuz-Zahra (Peace Be Upon Her), and gifted Fadak to her. During her pure life, Syeda (AS) used to distribute its produce and income among the poor, the destitute, and the needy of Banu Hashim. Today, this area is known as "Al-Hait." Although geographical boundaries have changed over time, the ancient date orchards and springs there still serve as a reminder of that pure connection which is an indelible part of the history of the Ahl al-Bayt (AS).
+</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    }, 
+ 
+    {
         "id": "206-EN",
         "category": ["column"], 
         "title": "Some Important Places in Medina",
