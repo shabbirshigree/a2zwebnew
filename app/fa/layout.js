@@ -1,11 +1,20 @@
 export const metadata = {
   title: 'حاجی شبیر احمد شگری | وب سایت رسمی',
   description: 'مجموعه خدمات علمی، پژوهشی و مطبوعاتی حاجی شبیر احمد شگری. تلاش‌های ویژه برای پروژه نورالقرآن و وحدت امت.',
-  keywords: 'Shabbir Ahmed Shigri, Noor-ul-Quran, Visual Quran, Islamic Scholar, Journalist, Pakistan, Iran, Unity of Ummah',
+  keywords: ['حاجی شبیر احمد شگری', 'نورالقرآن', 'قرآن بصری', 'پژوهشگر اسلامی', 'روزنامه نگار', 'پاکستان', 'ایران', 'وحدت امت'],
+  alternates: {
+    canonical: '/fa',
+    languages: {
+      'ur-PK': '/',
+      'en-US': '/en',
+      'fa-IR': '/fa',
+    },
+  },
   openGraph: {
-    title: 'Haji Shabbir Ahmed Shigri | Official Website',
-    description: 'Explore 45 years of dedicated service in journalism, culture, and religious research by Haji Shabbir Ahmed Shigri.',
+    title: 'حاجی شبیر احمد شگری | وب سایت رسمی',
+    description: '۴۵ سال فعالیت درخشان در مطبوعات، فرهنگ و پژوهش‌های دینی توسط حاجی شبیر احمد شگری را کاوش کنید.',
     images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
+    locale: 'fa_IR',
   },
 }
 

@@ -42,16 +42,25 @@ const kufi = Reem_Kufi({
 });
 
 export const metadata = {
-  title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+  metadataBase: new URL('https://www.shigri.info'),
+  title: {
+    default: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+    template: '%s | حاجی شبیر احمد شگری'
+  },
   description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
-  keywords: 'Shabbir Ahmed Shigri, Noor-ul-Quran, Visual Quran, Islamic Scholar, Journalist, Pakistan, Iran, Unity of Ummah',
+  keywords: ['حاجی شبیر احمد شگری', 'نورالقرآن پراجیکٹ', 'بصری قرآن', 'صحافی', 'گلگت بلتستان', 'اتحاد امت', 'Shabbir Ahmed Shigri', 'Noor-ul-Quran', 'Visual Quran', 'Islamic Scholar', 'Journalist'],
   icons: {
     icon: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772106162/fe64b922-ae4d-4243-b541-9849b90c34df.png',
     shortcut: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772106162/fe64b922-ae4d-4243-b541-9849b90c34df.png',
     apple: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772106162/fe64b922-ae4d-4243-b541-9849b90c34df.png',
   },
   alternates: {
-    canonical: 'https://www.shigri.info',
+    canonical: '/',
+    languages: {
+      'ur-PK': '/',
+      'en-US': '/en',
+      'fa-IR': '/fa',
+    },
   },
   openGraph: {
     title: 'نورالقرآن پراجیکٹ | حاجی شبیر احمد شگری',
@@ -65,12 +74,6 @@ export const metadata = {
         height: 630,
         alt: 'Noor-ul-Quran Project Cover',
       },
-      {
-        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1772106162/fe64b922-ae4d-4243-b541-9849b90c34df.png',
-        width: 800,
-        height: 800,
-        alt: 'Noor-ul-Quran Logo',
-      },
     ],
     locale: 'ur_PK',
     type: 'website',
@@ -81,11 +84,36 @@ export const metadata = {
     description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
     images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
   },
+  verification: {
+     google: 'uAYKUlFgUW167XqUGrBpdq3444sAWJ4jPeLBgpgh9GU',
+   }
 }
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haji Shabbir Ahmed Shigri",
+    "alternateName": ["حاجی شبیر احمد شگری", "Shabbir Ahmed Shigri"],
+    "url": "https://www.shigri.info",
+    "image": "https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png",
+    "jobTitle": "Journalist and Islamic Scholar",
+    "description": "Founder of Noor-ul-Quran Project, with 45 years of service in journalism and Islamic research.",
+    "sameAs": [
+      "https://www.facebook.com/shabbirahmed.shigri",
+      "https://twitter.com/shabbirshigri",
+      "https://www.youtube.com/@shigriinfo"
+    ]
+  };
+
   return (
     <html lang="ur" dir="rtl" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${nastaliq.variable} ${naskh.variable} ${vazirmatn.variable} ${amiri.variable} ${kufi.variable} bg-gray-50 text-gray-800 font-sans antialiased`}
       >
