@@ -156,6 +156,72 @@ export default function ProjectPageClient() {
         </div>
       </section>
 
+      <section className="py-12 bg-black border-y border-[#D4AF37]/20" dir="rtl">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto bg-[#0a0a0a] rounded-[2rem] p-6 md:p-10 border border-[#D4AF37]/30 shadow-2xl overflow-hidden relative group">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[100px]"></div>
+            <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+              <div className="w-full lg:w-1/2 order-2 lg:order-1">
+                <div className="space-y-6 text-right">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] urdu-text leading-tight drop-shadow-sm">بانیِ نور القرآن، حاجی شبیر احمد شگری کا پیغام</h3>
+                  <div className="h-1 w-20 bg-[#D4AF37] rounded-full"></div>
+                  <div className="space-y-4 text-gray-200 urdu-text text-base md:text-lg leading-relaxed text-justify">
+                    <p className="font-bold text-[#fff7cc]">بانیِ نور القرآن، حاجی شبیر احمد شگری کا صرف تین منٹ کا یہ پیغام آپ کی دنیا و آخرت دونوں سنوار سکتا ہے!</p>
+                    <p>قرآن پاک کی دعوت کا ایک بالکل نیا اور انوکھا انداز — دنیا کا پہلا 8K بصری قرآن! 📖✨</p>
+                    <p className="italic text-[#D4AF37]/90 text-sm md:text-base bg-white/5 p-4 rounded-xl border-r-4 border-[#D4AF37]">
+                      (ذرا تصور کریں کہ ایک عام انسان بھی آسانی کے ساتھ قرآن کریم کو سمجھنے لگے تو اس کے اندر کیسا انقلاب آئے گا، اس کا کردار اور اخلاق کیسے بدل جائے گا؟۔۔۔۔)
+                    </p>
+                    <p className="font-bold">السلام علیکم ورحمۃ اللہ وبرکاتہ!</p>
+                    <p>ایک ایسے دور میں جب ہماری نوجوان نسل اور دنیا بھر کے لوگوں کی توجہ سکرینز اور ڈیجیٹل میڈیا پر ہے، اور قرآن فہمی کے لیے ہمارے پاس کوئی موثر ذریعہ موجود نہیں ہے جس سے عام افراد مستفید ہو سکیں۔ اس لیے ہم نے قرآن پاک کے آفاقی پیغام کو دلوں میں اتارنے کے لیے ایک بالکل منفرد اور تاریخی قدم اٹھایا ہے۔</p>
+                    <p>ہم "نورالقرآن ویژول پراجیکٹ" کے تحت دنیا کا پہلا سینیمیٹک (بصری) قرآن تیار کر رہے ہیں۔ جس میں مکمل قرآن پاک کو آیت بہ آیت ویڈیو کی شکل میں تیار کیا جائے گا۔ اس انداز میں کہ ترجمے کو ساتھ سنتے اور مناظر کو دیکھتے ہوئے آسانی سے قرآنی آیات کے مطالب سمجھ میں آ جائیں۔ جو تاریخ میں واقعی پہلی مرتبہ ہے اور ایک انقلابی قدم ہے۔</p>
+                    <p>یہ کوئی عام ویڈیو سیریز نہیں ہے! ہم جدید ترین AI ٹیکنالوجی کا استعمال کرتے ہوئے قرآنی واقعات، انبیاء کے قصے اور تاریخی مقامات کو بالکل حقیقت پسندانہ انداز میں بصری (Visual) شکل دے رہے ہیں۔</p>
+                    <p>ہم چاہتے ہیں کہ اس پروجیکٹ کی روشنی دنیا کے ہر کونے تک پہنچ سکے۔</p>
+                    <p className="text-[#D4AF37] font-bold text-xl">ہمیں آپ کے ساتھ اور تعاون کی ضرورت کیوں ہے؟</p>
+                    <p>اس قدر اعلیٰ معیار کی ویڈیوز بنانے، ریسرچ کرنے اور ایک عالمی ڈیجیٹل لائبریری چلانے کے لیے مہنگے سافٹ ویئرز اور طاقتور کلاؤڈ سسٹمز اور سٹوڈیو کے اخراجات کی ضرورت ہے۔</p>
+                    <p>میں آپ سب کو دعوت دیتا ہوں کہ اس عظیم صدقہ جاریہ میں ہمارا ساتھ دیں۔ جب تک دنیا کا کوئی بھی انسان ان ویڈیوز کو دیکھ کر قرآن پاک کو سمجھے گا، ہمارے مرنے کے بعد بھی جب ہم ایک ایک نیکی کو ترسیں گے، اس کا ثواب ہمارے نامہ اعمال میں لکھا جاتا رہے گا۔ میرا خیال ہے عقلمند ہے وہ انسان جو ابھی اس بارے میں سوچ لے۔</p>
+                    <p>آپ کا تھوڑا سا تعاون اس بصری قرآن کو لاکھوں دلوں تک پہنچانے کا ذریعہ بنے گا۔ براہِ کرم اس میسج کو اپنے دوستوں اور اہل خانہ کے ساتھ ضرور شیئر کریں۔ جزاک اللہ!</p>
+                  </div>
+                  
+                  <div className="pt-8 border-t border-[#D4AF37]/20">
+                    <div className="flex flex-col md:flex-row items-center gap-6">
+                      <div className="flex-1 space-y-3 text-right w-full">
+                        <h4 className="text-[#D4AF37] font-bold text-lg urdu-text">اس عظیم پروجیکٹ میں اپنا حصہ ڈالنے کے لیے رابطہ کریں:</h4>
+                        <div className="bg-white/5 p-4 rounded-xl border border-white/10 font-mono text-sm md:text-base space-y-1 text-white">
+                          <p><span className="text-gray-400">IBAN:</span> PK09ABPA0010031602830015</p>
+                          <p><span className="text-gray-400">Title:</span> Shabbir Ahmad</p>
+                          <p><span className="text-gray-400">Allied Bank:</span> 05300010031602830015</p>
+                          <p><span className="text-gray-400">Jazz/Easy/Sada:</span> 03334491715</p>
+                        </div>
+                      </div>
+                      <div className="w-32 h-32 bg-white p-2 rounded-xl shadow-lg border-2 border-[#D4AF37]">
+                        <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1779700074/6f0a48b4-871e-45ed-98f3-68389302d250.png" alt="Donation QR Code" className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="w-full lg:w-1/2 order-1 lg:order-2">
+                <div className="relative aspect-video rounded-2xl overflow-hidden border-4 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.3)] group-hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-all">
+                  <iframe 
+                    src="https://www.youtube.com/embed/qfC_wgt_Dtk?rel=0" 
+                    className="absolute inset-0 w-full h-full" 
+                    allowFullScreen
+                    title="Noor-ul-Quran Message"
+                  ></iframe>
+                </div>
+                <div className="mt-4 text-center">
+                  <Link href="/noor-ul-quran" className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-white transition-colors urdu-text font-bold">
+                    <span>ہمارے کام کی جھلک (ٹیزر) یہاں دیکھیں!</span>
+                    <FaChevronDown className="-rotate-90" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-8 md:py-12 bg-gradient-to-b from-[#000] via-[#051525] to-[#000] relative overflow-hidden" dir="rtl">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">

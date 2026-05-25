@@ -211,7 +211,72 @@ export default function FarsiProjectPageClient() {
         </div>
       </section>
 
-      <section className="py-8 md:py-12 bg-gradient-to-b from-[#000] via-[#051525] to-[#000] relative overflow-hidden" dir="rtl">
+            <section className="py-12 bg-black border-y border-[#D4AF37]/20" dir="rtl">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto bg-[#0a0a0a] rounded-[2rem] p-6 md:p-10 border border-[#D4AF37]/30 shadow-2xl overflow-hidden relative group">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[100px]"></div>
+                        <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                            <div className="w-full lg:w-1/2 order-2 lg:order-1">
+                                <div className="space-y-6 text-right">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] leading-tight drop-shadow-sm">پیام بنیانگذار نورالقرآن، حاجی شبیر احمد شگری</h3>
+                                    <div className="h-1 w-20 bg-[#D4AF37] rounded-full"></div>
+                                    <div className="space-y-4 text-gray-200 text-base md:text-lg leading-relaxed text-justify">
+                                        <p className="font-bold text-[#fff7cc]">فقط پیام سه دقیقه‌ای بنیانگذار نورالقرآن، حاجی شبیر احمد شگری، می‌تواند دنیا و آخرت شما را زیبا کند!</p>
+                                        <p>نورالقرآن ویژوال (قرآن بصری) رویکردی کاملاً جدید و منحصربه‌فرد برای دعوت قرآن پاک — اولین قرآن بصری 8K جهان! 📖✨</p>
+                                        <p className="italic text-[#D4AF37]/90 text-sm md:text-base bg-white/5 p-4 rounded-xl border-r-4 border-[#D4AF37]">
+                                            (فقط تصور کنید، اگر یک انسان معمولی نیز به راحتی شروع به فهمیدن قرآن کریم کند، چه انقلابی در درون او رخ خواهد داد، شخصیت و اخلاق او چگونه تغییر خواهد کرد؟...)
+                                        </p>
+                                        <p className="font-bold">السلام علیکم و رحمه الله و برکاته!</p>
+                                        <p>در عصری که توجه نسل جوان ما و مردم سراسر جهان به صفحات نمایش و رسانه‌های دیجیتال جلب شده است، ما هیچ وسیله موثری برای فهم قرآن نداریم که افراد عادی بتوانند از آن بهره‌مند شوند. بنابراین، برای نشاندن پیام جهانی قرآن پاک در دل‌ها، ما گامی کاملاً منحصربه‌فرد و تاریخی برداشته‌ایم.</p>
+                                        <p>تحت "پروژه بصری نورالقرآن"، ما در حال تهیه اولین قرآن سینمایی (بصری) جهان هستیم. در این پروژه، کل قرآن پاک آیه به آیه در قالب ویدیو تهیه خواهد شد. به گونه‌ای که با شنیدن همزمان ترجمه و تماشای صحنه‌ها، مفاهیم آیات قرآنی به راحتی درک شود. این واقعاً برای اولین بار در تاریخ اتفاق می‌افتد و یک گام انقلابی است.</p>
+                                        <p>این یک مجموعه ویدیویی معمولی نیست! ما با استفاده از جدیدترین فناوری هوش مصنوعی (AI)، رویدادهای قرآنی، داستان‌های پیامبران و مکان‌های تاریخی را به شکلی کاملاً واقع‌گرایانه به تصویر می‌کشیم. ما می‌خواهیم نور این پروژه به هر گوشه‌ای از جهان برسد.</p>
+                                        <p className="text-[#D4AF37] font-bold text-xl">چرا به همراهی و همکاری شما نیاز داریم؟</p>
+                                        <p>برای ساخت ویدیوهایی با این کیفیت بالا، انجام تحقیقات و اداره یک کتابخانه دیجیتال جهانی، به نرم‌افزارهای گران‌قیمت، سیستم‌های ابری قدرتمند و هزینه‌های استودیو نیاز است.</p>
+                                        <p>من از همه شما دعوت می‌کنم که در این صدقه جاریه عظیم با ما همراه شوید. تا زمانی که هر انسانی در جهان با تماشای این ویدیوها قرآن پاک را بفهمد، حتی پس از مرگ ما زمانی که برای یک ثواب حسرت خواهیم خورد، پاداش آن در نامه اعمال ما نوشته خواهد شد. به نظر من، خردمند کسی است که اکنون به این موضوع فکر کند.</p>
+                                        <p>کمک اندک شما وسیله‌ای برای رساندن این قرآن بصری به میلیون‌ها دل خواهد شد. لطفاً این پیام را حتماً با دوستان و خانواده خود به اشتراک بگذارید. جزاک الله!</p>
+                                    </div>
+                                    
+                                    <div className="pt-8 border-t border-[#D4AF37]/20">
+                                        <div className="flex flex-col md:flex-row items-center gap-6">
+                                            <div className="flex-1 space-y-3 text-right w-full">
+                                                <h4 className="text-[#D4AF37] font-bold text-lg">برای مشارکت (اهدا) در این پروژه عظیم تماس بگیرید:</h4>
+                                                <div className="bg-white/5 p-4 rounded-xl border border-white/10 font-mono text-sm md:text-base space-y-1 text-white">
+                                                    <p><span className="text-gray-400">IBAN:</span> PK09ABPA0010031602830015</p>
+                                                    <p><span className="text-gray-400">Title:</span> Shabbir Ahmad</p>
+                                                    <p><span className="text-gray-400">Allied Bank:</span> 05300010031602830015</p>
+                                                    <p><span className="text-gray-400">Jazz/Easy/Sada:</span> 03334491715</p>
+                                                </div>
+                                            </div>
+                                            <div className="w-32 h-32 bg-white p-2 rounded-xl shadow-lg border-2 border-[#D4AF37]">
+                                                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1779700074/6f0a48b4-871e-45ed-98f3-68389302d250.png" alt="Donation QR Code" className="w-full h-full object-contain" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="w-full lg:w-1/2 order-1 lg:order-2">
+                                <div className="relative aspect-video rounded-2xl overflow-hidden border-4 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.3)] group-hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-all">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/LydIFQv2ps4?rel=0" 
+                                        className="absolute inset-0 w-full h-full" 
+                                        allowFullScreen
+                                        title="Noor-ul-Quran Message"
+                                    ></iframe>
+                                </div>
+                                <div className="mt-4 text-center">
+                                    <Link href="/fa/noor-ul-quran" className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-white transition-colors font-bold">
+                                        <span>نگاهی اجمالی به کار ما (تیزر) را اینجا ببینید!</span>
+                                        <FaChevronDown className="-rotate-90" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8 md:py-12 bg-gradient-to-b from-[#000] via-[#051525] to-[#000] relative overflow-hidden" dir="rtl">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <motion.div

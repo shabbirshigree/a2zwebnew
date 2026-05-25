@@ -201,6 +201,71 @@ export default function EnglishProjectPageClient() {
                 </div>
             </section>
 
+            <section className="py-12 bg-black border-y border-[#D4AF37]/20" dir="ltr">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto bg-[#0a0a0a] rounded-[2rem] p-6 md:p-10 border border-[#D4AF37]/30 shadow-2xl overflow-hidden relative group">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-[100px]"></div>
+                        <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                            <div className="w-full lg:w-1/2">
+                                <div className="relative aspect-video rounded-2xl overflow-hidden border-4 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.3)] group-hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-all">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/z3olkzvoYhA?rel=0" 
+                                        className="absolute inset-0 w-full h-full" 
+                                        allowFullScreen
+                                        title="Noor-ul-Quran Message"
+                                    ></iframe>
+                                </div>
+                                <div className="mt-4 text-center">
+                                    <Link href="/en/noor-ul-quran" className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-white transition-colors font-bold">
+                                        <span>Watch a glimpse of our work (teaser) here!</span>
+                                        <FaChevronDown className="-rotate-90" />
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="w-full lg:w-1/2">
+                                <div className="space-y-6 text-left">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#D4AF37] leading-tight drop-shadow-sm">A Message from the Founder of Noor-ul-Quran</h3>
+                                    <div className="h-1 w-20 bg-[#D4AF37] rounded-full"></div>
+                                    <div className="space-y-4 text-gray-200 text-base md:text-lg leading-relaxed text-justify">
+                                        <p className="font-bold text-[#fff7cc]">A mere three-minute message from the Founder of Noor-ul-Quran, Haji Shabbir Ahmed Shigri, can beautify both your worldly life and the Hereafter!</p>
+                                        <p>Noor-ul-Quran Visual (The Visual Quran) A completely new and unique approach to the invitation of the Holy Quran — The world's first 8K Visual Quran! 📖✨</p>
+                                        <p className="italic text-[#D4AF37]/90 text-sm md:text-base bg-white/5 p-4 rounded-xl border-l-4 border-[#D4AF37]">
+                                            (Just imagine, if a common person begins to easily understand the Holy Quran, what kind of revolution would occur within them, how would their character and morals change?...)
+                                        </p>
+                                        <p className="font-bold">Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh!</p>
+                                        <p>In an era where the attention of our younger generation and people worldwide is fixed on screens and digital media, we lack an effective medium for understanding the Quran that common individuals can benefit from. Therefore, to embed the universal message of the Holy Quran into hearts, we have taken a completely unique and historic step.</p>
+                                        <p>Under the "Noor-ul-Quran Visual Project," we are developing the world's first cinematic (visual) Quran. In this, the entire Holy Quran will be produced verse by verse in video format. In such a way that by listening to the translation and watching the scenes simultaneously, the meanings of the Quranic verses can be easily understood. This is truly happening for the first time in history and is a revolutionary step.</p>
+                                        <p>This is no ordinary video series! We are using the latest AI technology to give a completely realistic visual form to Quranic events, the stories of the Prophets, and historical places. We want the light of this project to reach every corner of the world.</p>
+                                        <p className="text-[#D4AF37] font-bold text-xl">Why do we need your support and cooperation?</p>
+                                        <p>To create videos of such high quality, conduct research, and run a global digital library, there is a need for expensive software, powerful cloud systems, and studio expenses.</p>
+                                        <p>I invite you all to join us in this great Sadaqah Jariyah (continuous charity). As long as any person in the world understands the Holy Quran by watching these videos, even after our death when we will yearn for a single good deed, its reward will continue to be written in our book of deeds. I believe wise is the person who thinks about this now.</p>
+                                        <p>Your small contribution will become a means to deliver this visual Quran to millions of hearts. Please do share this message with your friends and family. JazakAllah!</p>
+                                    </div>
+                                    
+                                    <div className="pt-8 border-t border-[#D4AF37]/20">
+                                        <div className="flex flex-col md:flex-row items-center gap-6">
+                                            <div className="w-32 h-32 bg-white p-2 rounded-xl shadow-lg border-2 border-[#D4AF37]">
+                                                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1779700074/6f0a48b4-871e-45ed-98f3-68389302d250.png" alt="Donation QR Code" className="w-full h-full object-contain" />
+                                            </div>
+                                            <div className="flex-1 space-y-3 text-left w-full">
+                                                <h4 className="text-[#D4AF37] font-bold text-lg">To contribute (Donate) to this great project, please contact:</h4>
+                                                <div className="bg-white/5 p-4 rounded-xl border border-white/10 font-mono text-sm md:text-base space-y-1 text-white">
+                                                    <p><span className="text-gray-400">IBAN:</span> PK09ABPA0010031602830015</p>
+                                                    <p><span className="text-gray-400">Title:</span> Shabbir Ahmad</p>
+                                                    <p><span className="text-gray-400">Allied Bank:</span> 05300010031602830015</p>
+                                                    <p><span className="text-gray-400">Jazz/Easy/Sada:</span> 03334491715</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className="py-8 md:py-16 bg-gradient-to-b from-[#000] via-[#051525] to-[#000] relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="max-w-4xl mx-auto text-center mb-12">
