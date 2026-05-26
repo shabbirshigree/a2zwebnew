@@ -4,6 +4,36 @@
 
 export const englishData = [
  {
+        "id": "208EN",
+        "category": ["column"], 
+        "title": "The Great Lesson of Hajj: Sacrifice of the Ego",
+        "date": "26-05-2026",
+        "paper": "Daily Zamana News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+            <p><strong>Abyaar-e-Ali (A.S)</strong></p>
+            <p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>"Masjid Dhul Hulayfah is one of the historical mosques of Madinah, located near Abyaar Ali. Other names for this place are Masjid Shajarah and Masjid al-Ihram. The Holy Prophet (PBUH) also entered the state of Ihram at this Miqat during his journeys for Umrah and Hajj al-Tamattu. Masjid Shajarah is one of the important mosques outside Madinah and a significant Miqat and mosque for wearing the Ihram. Anyone intending to go to Makkah for the pilgrimage of the House of Allah, whether a traveler or a resident, cannot enter the city without wearing the Ihram. On his way to Makkah, the Holy Prophet (PBUH) prayed under a Samurah tree located where the mosque stands, which is why it was named Masjid Shajarah.</p>
+            <p>We wore our Ihram here and then boarded the bus, departing for Makkah. From here, we had become Muhrim (in the state of Ihram), and our Hajj journey had begun. In the comfortable bus, we hardly felt the journey and soon entered Makkah.</p>
+            <p>It was the time of true dawn. With the immense desire to see the Kaaba for the first time in our lives and to offer the Fajr prayer, we quickly got ready, sat in the waiting bus, and headed towards Masjid al-Haram. You are dropped off by buses at some distance from the Kaaba and have to walk the rest of the way. What a state of ecstasy it was! Finally, the moment arrived when we entered this grandest mosque in the world; the Kaaba was right in front of us. It is said that whatever prayer you make when your eyes first fall upon the Kaaba is accepted. Reaching there, it felt as if we were closer to the Lord, even though the Lord is always closer than the jugular vein. We prayed for everything we could.</p>
+            <p><em>When the first glance fell upon the Kaaba, I forgot what the world is<br>Sense and reason were so paralyzed, the heart forgot the desire for spectacle</em></p>
+            <p>After that, it was just us and a continuous series of worship. Just imagine, whenever your heart desires, you get up, board a bus, and reach the Kaaba. You are here solely for worship. You have left behind the whole world, your home, wife and children, business, and all worldly affairs. Here, you just have to belong to Allah. You have to walk only according to His will. Based on my personal experience, I say that although Hajj is an obligation, in reality, it is a tremendous training. Allah Almighty has not created anything without a purpose; there is profound wisdom hidden in every command. As soon as you put on the Ihram, consider this white dress a garment akin to a shroud. You are in the Haram, your hotel is also part of it; your sitting, standing, sleeping, and waking are all acts of worship. Your own will does not operate here. While Hajj is a supreme act of worship, it is also very delicate. According to God's law, every misstep here can result in a penalty.</p>
+            <p>The most important thing I personally learned from Hajj is to kill one's 'I' or ego, to completely finish it. And you truly understand this reality during Hajj. Hajj teaches that your own being is nothing; only the Being of Allah is everything and everlasting. Here, our 'ego' cannot prevail, only Allah and His will. Believe me, if we apply all of this to our normal lives outside of Hajj, a person can live a life full of spiritual meaning. Allama Iqbal says:</p>
+            <p><em>Dive deep into your own heart and find the secret of life<br>If you do not become Mine, so be it, but at least become your own</em></p>
+            <p>Whatever context Allama said this verse for is correct in its place, but the lesson we understand here is: whether you become your own or not, become the Lord's. Become the Lord's and find the secret of existence. And find the true reality of life. The greatest lesson of Hajj is to kill one's 'ego' and 'I'. It was this same 'I' that caused Iblis (Satan) to be thrown from the heavens to the earth. Satan used this word 'I', claiming 'I am superior', and was humiliated in the court of the Lord. Therefore, kill your 'ego', and Allah will bestow great honor upon you. I have tried my best to adhere to this since Hajj. Believe me, the joy of surrendering oneself to the Lord is greater than achieving everything else in the world.</p>
+            <p>Therefore, based on personal experience, I learned a lot from Hajj. I do not claim to have become a perfectly pious person, but I have certainly tried to prioritize the Lord's will. Hajj is such a worship and training that if you do not change yourself after it, what is the point? Therefore, a Haji should specifically transform himself after Hajj, and others should also see these changes in his character, morals, and life."</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779773669/7.ana_ki_qurbani_-_Zamana_news_2026-05-22_jjabi8.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+ 
+    {
         "id": "207-EN",
         "category": ["column"], 
         "title": "Abyar Ali (The Wells of Ali AS)",
