@@ -3,7 +3,42 @@
 
 
 export const englishData = [
- {
+{
+    "id": "209EN",
+    "category": ["column"], 
+    "title": "The Greatest Sacrifice", 
+    "date": "27-05-2026",
+    "paper": "Daily Mashriq News",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
+    "excerpt": "A deep philosophical look into the true spirit of sacrifice, comparing the legacy of Prophet Ibrahim (A.S) and the tragedy of Karbala, while addressing human ego, arrogance, and family relationships.",
+    "content": `
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+        <p><strong>The Greatest Sacrifice</strong></p>
+        <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
+
+        <p>It is the occasion of Eid al-Adha; someone is sacrificing a goat, another a bull, and another a camel. Offering the greatest possible sacrifice with sincerity in the path of God is a very noble deed. However, in today's society, we observe that the trend of purchasing animals for showing off and outdoing one another is continuously rising. Neither the blood, nor the meat, nor the skin of our animals reaches God. In reality, it is the Sunnah of Ibrahim that we must fulfill. But in this modern era, the philosophy of the Sunnah of Ibrahim seems to be fading, given that Prophet Ibrahim (peace be upon him) sacrificed his own self (ego) and, for the sake of God's pleasure, suppressed his personal desires and placed a knife on the throat of his beloved son. Allah, accepting the sacrifice of His beloved prophet, temporarily accepted it by replacing his dear son with a ram. However, the completion of this sacrifice took place in Karbala when another son from the lineage of Ibrahim, Hazrat Hussain (peace be upon him), was slaughtered.</p>
+        
+        <p>But the difference between these two sacrifices was that Hazrat Ibrahim intended to sacrifice his son for the sake of God's pleasure. However, in Karbala, for the sake of human greed, pride, and arrogance, Imam Hussain was slaughtered hungry and thirsty on the scorching sands of Karbala. There in Mina, Hazrat Ibrahim (peace be upon him) only presented Hazrat Ismail (peace be upon him) for sacrifice, but in Karbala, Imam Hussain (peace be upon him) sacrificed his entire household and companions. These sacrifices ranged from the six-month-old Hazrat Ali Asghar (peace be upon him) to the elderly Habib ibn Muzahir, for which the human race remains ashamed to this day. Today in Karbala, near the grave of Hazrat Imam Hussain (peace be upon him), stands the place of martyrdom (Maqtal) where the Imam was slaughtered. Even the heart of the most wretched human begins to weep tears of blood here. This was the time of Hajj, when pilgrims were going to Makkah in search of Paradise, while the Leader of the Youth of Paradise was heading to Karbala to save Islam and sacrifice his family and companions.</p>
+        
+        <p>What lesson do we derive from this? That we must sacrifice our most beloved possessions for the pleasure of God. Today, our greatest problem is ego, pride, and arrogance. Over trivial matters, and sometimes for no reason at all, we sever ties with our relatives just to keep our heads high. Although there are clear commandments from God and the Prophet regarding maintaining family ties (Silah Rahmi), we sit as slaves to our ego, arrogance, and greed. We consider ourselves superior to others, whereas in the eyes of God, the one who excels in piety (Taqwa) is the most superior. How beautifully Allama Iqbal stated:</p>
+        
+        <p style="text-align: center; font-style: italic; color: #555;">"Whenever I bowed in prostration, a voice began to echo from the earth:<br>Your heart is familiar with idols, what will you gain from prayer?"</p>
+        
+        <p>What is the benefit of prayers and prostrations after selling one's soul to ego, pride, and arrogance? Have we prayed or prostrated more than Iblis (Satan)? This very disease of pride, arrogance, and ego transformed Iblis into what he became. So what are we? Why do we consider ourselves superior to others, and why do we not look at ourselves through the lens of reality? Moula Ali (peace be upon him) says: "This human is wondrous; he sees through fat, speaks through a lump of flesh, hears through a bone, and breathes through a hole." This is our reality. The body and power we boast about can wither away within days; it only takes a single illness. No matter how renowned or famous a person is who takes pride in his name, when he departs from this world, the very first thing stripped from him is his name. "Give baths to the deceased. Lift the deceased." The name ends in this world.</p>
+        
+        <p>And the body with which he used to intimidate the weak and oppress the poor using his strength, can no longer move and is at the mercy of others. Out of fear of decomposition, his own close relatives will rush to bury him. So what are we? What are we proud of? What is our status? If this truth is understood, perhaps many misunderstandings among close relatives would be resolved, and they would come closer to one another. Mistakes are made by everyone; considering oneself an angel does not make anyone an angel. It depends on human actions: if one desires, they can become superior to angels, otherwise, they can fall lower than animals. But what can we do, our arrogance never fades. Such strong rods of ego have been driven into our necks that we can only seek God's refuge.</p>
+        
+        <p>The discussion was about sacrifice and the slaughter of animals. A man brings a goat home to raise. There is a famous Persian proverb: "Gham nadari, boz bekhar" (If you have no worries, buy a goat). Because as you know, the goat makes life miserable with its constant bleating ("Me Me"). The same happened with this man; ever since he brought the goat home, his life became difficult. Whether he fed it grass or took care of it, he tried everything, but the goat did not stop its bleating. Finally, following the proverb "Tang amad ba jang amad" (Driven to the wall, one turns to fight), the man picked up a knife and slaughtered the goat. He enjoyed the meat for several days. After many days, he made a string out of the goat's dried intestine, and as soon as he touched it to play it, a sound came: "You..." The man laughed and said, "Now 'You'? Your 'Me Me' (ego) would never stop, and now when everything is finished, you say 'You'?" This is a highly instructive parable. No matter how much 'Me Me' (egoism) we practice, it will end one day. Therefore, let us make the greatest sacrifice—the sacrifice of our ego, our desires, and our greed, so that both God and His creation are pleased. Be of service to people, maintain family ties, take care of your relatives, neighbors, loved ones, and friends. This world will become beautiful, and perhaps the Hereafter as well.</p>
+
+        <br>
+        <div style="text-align: center;">
+            <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg" alt="Zamana News Newspaper Clipping" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+        </div>
+    </div>
+    `
+},
+
+    {
         "id": "208EN",
         "category": ["column"], 
         "title": "The Great Lesson of Hajj: Sacrifice of the Ego",
