@@ -1,4 +1,3 @@
-import localFont from "next/font/local"; // گوگل فونٹ کی جگہ لوکل فونٹ امپورٹ کیا
 import { Noto_Naskh_Arabic, Vazirmatn, Amiri, Reem_Kufi, Gulzar } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
@@ -6,26 +5,14 @@ import FloatingButtons from './components/FloatingButtons';
 import LocaleProvider from './components/LocaleProvider';
 import SecurityLock from './components/SecurityLock';
 
-// جمیل نوری نستعلیق کو مقامی طور پر سیٹ کرنے کی کوشش
-// نوٹ: اگر آپ کے پاس JameelNooriNastaleeq.woff2 فائل public/fonts/ میں موجود ہے 
-// تو یہ خود بخود اسے استعمال کرے گا، ورنہ گوگل فونٹ 'گلزار' متبادل کے طور پر چلے گا
+// عارضی طور پر گوگل فونٹ 'گلزار' کو بطور جمیل نوری متبادل استعمال کر رہے ہیں
+// جب آپ کے پاس اصل JameelNooriNastaleeq.woff2 فائل (10MB+) آ جائے، تو اسے دوبارہ سیٹ کریں گے
 const jameelNoori = Gulzar({
   subsets: ["arabic"],
   weight: ["400"],
   variable: "--font-jameel",
   display: "swap",
 });
-
-// اگر آپ مقامی فانٹ فائل استعمال کرنا چاہتے ہیں تو اس سیکشن کو ان کمنٹ کریں 
-// لیکن یقینی بنائیں کہ فائل 10MB سے زیادہ سائز کی ہو (14 bytes والی فائل ایرر دے گی)
-/*
-const jameelNooriLocal = localFont({
-  src: '../public/fonts/JameelNooriNastaleeq.woff2',
-  variable: '--font-jameel',
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-});
-*/
 
 const naskh = Noto_Naskh_Arabic({
   subsets: ["arabic"],

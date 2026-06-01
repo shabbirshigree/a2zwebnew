@@ -122,7 +122,7 @@
 }
 
 html, body {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-jameel), var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif !important;
+  font-family: var(--font-jameel), var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif !important;
   line-height: 1.8;
   font-style: normal;
   font-weight: 500;
@@ -132,6 +132,18 @@ html, body {
 
 h1, h2, h3, h4, h5, h6, .urdu-text, .welcome-heading {
   font-family: var(--font-jameel), var(--font-nastaliq), serif !important;
+}
+
+/* ❌ آئیکنز اور نمبرز سے بھاری فانٹ ہٹانا تاکہ TBT کم ہو سکے */
+.no-urdu-font, 
+.fa, 
+.fas, 
+.far, 
+svg, 
+span[class*="Fa"],
+.text-xs,
+.text-sm {
+  font-family: system-ui, -apple-system, sans-serif !important;
 }
 
 /* موبائل کے لیے خصوصی سیٹنگز */

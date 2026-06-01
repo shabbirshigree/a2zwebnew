@@ -430,6 +430,7 @@ export function HomeContent() {
                     alt="نور القرآن پراجیکٹ کا کور امیج - حاجی شبیر احمد شگری"
                     width={800}
                     height={450}
+                    sizes="(max-width: 768px) 100vw, 800px"
                     className="w-full h-auto transition-transform group-hover:scale-105 duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d]/50 via-transparent to-transparent opacity-40 pointer-events-none" />
@@ -520,6 +521,7 @@ export function HomeContent() {
                       alt={`${item.name} کا حاجی شبیر احمد شگری کے بارے میں اظہار خیال`} 
                       width={400}
                       height={225}
+                      sizes="(max-width: 768px) 50vw, 300px"
                       className="w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" 
                     />
                     <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">

@@ -372,7 +372,7 @@ export function HeroSlider() {
               src={s.img}
               alt={`Slide ${i + 1}`}
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               className="object-fill object-center block"
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
               priority={i === 0}

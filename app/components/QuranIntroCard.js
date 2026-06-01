@@ -86,7 +86,7 @@ const QuranIntroCard = ({ lang = 'ur', phase = 1 }) => {
         title: "نورِ قصص القرآن",
         body: "قرآن مجید ہماری ہدایت کا سرچشمہ ہے اور اس میں بیان کیے گئے واقعات ہمارے لیے بہترین سبق آموز درس رکھتے ہیں۔ یہ صرف قصے نہیں بلکہ عملی زندگی کے لیے مشعلِ راہ ہیں۔ اسی مقصد کے پیشِ نظر ہم نے \"نورِ قصص القرآن\" کے نام سے قرآنی قصوں کی ویڈیوز بنانے کا سلسلہ شروع کیا ہے۔\nان ویڈیوز میں قرآن کریم کے مشہور واقعات کو بصری مناظر (Visuals) کی شکل میں پیش کیا گیا ہے۔ ہماری کوشش ہے کہ ان شاء اللہ قرآن کریم کے تمام اہم واقعات کو اسی طرح ویڈیوز کی صورت میں محفوظ کیا جائے۔ یہاں ہماری تیار کی گئی چند جھلکیاں ملاحظہ فرمائیں:",
         cta: "چینل سبسکرائب کرنے کے لئے یہاں کلک کریں",
-        link: "https://youtube.com/playlist?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-",
+        link: "https://www.youtube.com/playlist?list=PLv2RK6Z1UOXc2OPbBzV_h1BclLmgYNGM2",
         ceo: "حاجی شبیر احمد شگری (سی ای او نور القرآن پراجیکٹ)",
         dir: "rtl"
       },
@@ -94,7 +94,7 @@ const QuranIntroCard = ({ lang = 'ur', phase = 1 }) => {
         title: "Noor-e-Qisas-ul-Quran",
         body: "The Holy Quran is the source of our guidance, and the stories mentioned in it hold great moral lessons for us. These are not just stories but a roadmap for practical life. With this goal, we have started the series of producing videos of Quranic stories named Noor-e-Qisas-ul-Quran.\nIn this series, we have prepared videos of several famous events from the Quran where these stories are presented through visuals. Insha'Allah, the aim is to prepare videos for all stories of the Holy Quran. Watch some of our produced videos here.",
         cta: "Click here to subscribe to the channel",
-        link: "https://youtube.com/playlist?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-",
+        link: "https://www.youtube.com/playlist?list=PLv2RK6Z1UOXc2OPbBzV_h1BclLmgYNGM2",
         ceo: "Haji Shabbir Ahmed Shigri (CEO Noor-ul-Quran Project)",
         dir: "ltr"
       },
@@ -102,7 +102,7 @@ const QuranIntroCard = ({ lang = 'ur', phase = 1 }) => {
         title: "نورِ قصص القرآن",
         body: "قرآن کریم چشمه هدایت ماست و داستان‌های بیان شده در آن درس‌های بسیار آموزنده‌ای برای ما دارد. این‌ها فقط قصه نیستند، بلکه الگویی برای زندگی عملی هستند. با همین هدف، ما مجموعه‌ای از ویدیوهای داستان‌های قرآنی را با نام \"نورِ قصص القرآن\" آغاز کرده‌ایم.\nدر این سلسله، ویدیوهای چندین واقعه مشهور قرآنی را تهیه کرده‌ایم که در آن‌ها داستان‌ها به صورت تصویری ارائه شده‌اند. ان‌شاءالله تلاش ما این است که ویدیوهای تمام داستان‌های قرآن کریم را آماده کنیم. چند نمونه از ویدیوهای ما را اینجا ملاحظه فرمایید.",
         cta: "برای سابسکرایب کانال اینجا کلیک کنید",
-        link: "https://youtube.com/playlist?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-",
+        link: "https://www.youtube.com/playlist?list=PLv2RK6Z1UOXc2OPbBzV_h1BclLmgYNGM2",
         ceo: "حاجی شبیر احمد شگری (مدیر پروژه نورالقرآن)",
         dir: "rtl"
       }
