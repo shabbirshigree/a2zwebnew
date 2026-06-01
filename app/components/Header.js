@@ -25,6 +25,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import CldImage from "./CldImage";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
 import { getDictionary, getHomePath, getLocalizedPath } from "../lib/i18n";
@@ -38,6 +39,7 @@ const HERO_MASHALLAH_AR =
 const HERO_NUR_AYAH_AR =
   "اَللّٰهُ نُوْرُ السَّمٰوٰتِ وَالْاَرْضِ";
 
+// 🖼️ سلائیڈر کی تصاویر (Cloudinary)
 const SLIDES = [
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476592/5_stvhcf.jpg" },
   { img: "https://res.cloudinary.com/dtqrziupt/image/upload/v1776476591/2_seh6lj.jpg" },
@@ -366,7 +368,7 @@ export function HeroSlider() {
             className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100" : "opacity-0 z-10"
               }`}
           >
-            <Image
+            <CldImage
               src={s.img}
               alt={`Slide ${i + 1}`}
               fill

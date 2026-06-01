@@ -1,11 +1,12 @@
 "use client";
-import { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { FaSearch, FaPlay, FaChevronLeft, FaChevronRight, FaExpand, FaVideo, FaShareAlt } from 'react-icons/fa';
 import { FaXmark } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { GALLERY_ITEMS, CATEGORIES } from './galleryData';
+import CldImage from '../components/CldImage';
 
 function GalleryContent() {
   const searchParams = useSearchParams();
@@ -151,7 +152,13 @@ function GalleryContent() {
               <div className="relative overflow-hidden">
                 {item.type === 'video' || item.type === 'yt' ? (
                   <div className="aspect-video bg-black flex items-center justify-center">
-                    <img src={item.poster || `https://img.youtube.com/vi/${item.id_yt}/hqdefault.jpg`} className="w-full h-full object-cover opacity-60" alt="" />
+                    <CldImage 
+                      src={item.poster || `https://img.youtube.com/vi/${item.id_yt}/hqdefault.jpg`} 
+                      width={400}
+                      height={225}
+                      className="w-full h-full object-cover opacity-60" 
+                      alt={item.desc} 
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="bg-[#D4AF37] p-5 rounded-full shadow-2xl group-hover:scale-125 transition-transform duration-500">
                         <FaPlay size={25} className="text-[#0b314d] ml-1" />
@@ -159,7 +166,13 @@ function GalleryContent() {
                     </div>
                   </div>
                 ) : (
-                  <img src={item.src} alt={item.desc} className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <CldImage 
+                    src={item.src} 
+                    alt={item.desc} 
+                    width={400}
+                    height={600}
+                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700" 
+                  />
                 )}
                 
                 {/* Overlay on hover */}
@@ -210,13 +223,25 @@ function GalleryContent() {
           {/* Image/Video Display */}
           <div className="w-full max-w-6xl h-[70vh] flex items-center justify-center p-4" onClick={e => e.stopPropagation()}>
             {currentItem.type === 'img' && (
-              <img src={currentItem.src} className="max-h-full max-w-full rounded-xl shadow-[0_0_50px_rgba(212,175,55,0.4)] border-4 border-white/10" />
+              <CldImage 
+                src={currentItem.src} 
+                width={1200}
+                height={800}
+                className="max-h-full max-w-full rounded-xl shadow-[0_0_50px_rgba(212,175,55,0.4)] border-4 border-white/10 object-contain" 
+                alt={currentItem.desc}
+              />
             )}
             {currentItem.type === 'video' && (
               <video autoPlay controls src={currentItem.src} className="max-h-full w-full rounded-xl shadow-2xl" />
             )}
             {currentItem.type === 'yt' && (
-              <iframe src={`https://www.youtube.com/embed/${currentItem.id_yt}?autoplay=1`} className="w-full h-full rounded-xl shadow-2xl" allowFullScreen />
+              <iframe 
+                src={`https://www.youtube.com/embed/${currentItem.id_yt}?autoplay=1`} 
+                className="w-full h-full rounded-xl shadow-2xl" 
+                allowFullScreen 
+                loading="lazy"
+                title="Gallery YouTube Video Player"
+              />
             )}
           </div>
 

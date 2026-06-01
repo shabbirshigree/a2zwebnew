@@ -1,6 +1,7 @@
 "use client";
 import { useLocale } from '../components/LocaleProvider';
 import { dictionaries } from '../lib/i18n';
+import CldImage from '../components/CldImage';
 
 export default function AstanAppreciationComponent() {
   const { locale } = useLocale();
@@ -31,9 +32,11 @@ export default function AstanAppreciationComponent() {
           <div className={`flex justify-center ${isRTL ? 'md:order-2' : 'md:order-1'}`}>
             <div className="relative">
               <div className="absolute inset-0 bg-[#D4AF37] rounded-[1.5rem] blur-xl opacity-30"></div>
-              <img
+              <CldImage
                 src="https://res.cloudinary.com/dtqrziupt/image/upload/v1776068815/d7363b70-ea09-4604-949c-68c6dc2e2672.png"
                 alt="Astan Quds Razavi Appreciation Certificate"
+                width={400}
+                height={550}
                 className="relative rounded-[1.5rem] shadow-2xl border-4 border-[#D4AF37] w-full max-w-sm object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>

@@ -122,12 +122,16 @@
 }
 
 html, body {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif;
+  font-family: 'Jameel Noori Nastaleeq', var(--font-jameel), var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif !important;
   line-height: 1.8;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0;
   transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .urdu-text, .welcome-heading {
+  font-family: var(--font-jameel), var(--font-nastaliq), serif !important;
 }
 
 /* موبائل کے لیے خصوصی سیٹنگز */
@@ -167,9 +171,8 @@ main:dir(ltr), main[dir="ltr"] {
   font-display: swap;
 }
 
-/* اس کلاس کو جہاں بھی لگائیں گے، تحریر اخبار جیسی خوبصورت ہو جائے گی */
-.urdu-text {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), serif;
+html, body, h1, h2, h3, h4, h5, h6, p, span, div, .urdu-text, .welcome-heading {
+  font-family: 'Jameel Noori Nastaleeq', var(--font-jameel), var(--font-nastaliq), serif !important;
 }
 
 .persian-text, .font-persian {

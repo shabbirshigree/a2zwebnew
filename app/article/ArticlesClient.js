@@ -10,6 +10,7 @@ import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
 import { allArticles } from './index.js';
+import CldImage from '../components/CldImage';
 
 function ArticlesContent() {
   const { locale } = useLocale();
@@ -278,9 +279,11 @@ function ArticlesContent() {
                     onClick={() => handleOpenArticle(article)}
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <img
+                      <CldImage
                         src={article.image || 'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&q=80'}
                         alt={article.title}
+                        width={400}
+                        height={300}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
@@ -318,9 +321,11 @@ function ArticlesContent() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100">
               <div className="relative aspect-video">
-                <img
+                <CldImage
                   src={selectedArticle.image || 'https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?auto=format&fit=crop&q=80'}
                   alt={selectedArticle.title}
+                  width={1200}
+                  height={675}
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d] via-transparent to-transparent opacity-80" />
@@ -380,7 +385,7 @@ function ArticlesContent() {
 
                 <div className="mt-16 pt-12 border-t border-gray-100 flex flex-col items-center text-center">
                                             <div className="w-20 h-20 rounded-full border-4 border-[#D4AF37] p-1 mb-4 shadow-xl">
-                                                <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png" className="w-full h-full rounded-full object-cover" alt="Author" />
+                                                <CldImage src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png" width={80} height={80} className="w-full h-full rounded-full object-cover" alt="Author" />
                                             </div>
                                             <h4 className={`text-2xl font-bold text-[#0b314d] mb-2 ${locale === 'ur' ? 'urdu-text' : ''}`}>
                                                 {locale === 'en' ? 'Haji Shabbir Ahmed Shigri' : locale === 'fa' ? 'حاجی شبیر احمد شگری' : 'حاجی شبیر احمد شگری'}

@@ -632,7 +632,13 @@ export function HomeContent() {
             </button>
             <div className="responsive-video-container w-full">
               {activeVideo.includes('youtu') ? (
-                <iframe src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1`} frameBorder="0" allowFullScreen></iframe>
+                <iframe 
+                  src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1`} 
+                  frameBorder="0" 
+                  allowFullScreen
+                  loading="lazy"
+                  title="YouTube Video Player"
+                ></iframe>
               ) : (
                 <video src={activeVideo} controls autoPlay className="w-full h-full object-contain max-h-[60vh]"></video>
               )}
@@ -654,12 +660,17 @@ export function HomeContent() {
       )}
 
       {showHomeBooklet && (
-        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setShowHomeBooklet(false)}>
+        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setShowHomeBooklet(null)}>
           <div className="relative w-full max-w-4xl h-[70vh]" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setShowHomeBooklet(false)}>
+            <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setShowHomeBooklet(null)}>
               <FaTimes /> {labels.btnClose}
             </button>
-            <iframe src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" className="w-full h-full bg-white rounded-2xl border-4 border-[#D4AF37]"></iframe>
+            <iframe 
+              src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" 
+              className="w-full h-full bg-white rounded-2xl border-4 border-[#D4AF37]"
+              loading="lazy"
+              title="Noor-ul-Quran Booklet PDF"
+            ></iframe>
           </div>
         </div>
       )}

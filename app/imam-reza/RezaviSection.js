@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaYoutube, FaFacebook } from "react-icons/fa";
 import { rezaviData } from './data'; // یقینی بنائیں کہ data.js کا پاتھ درست ہو
+import CldImage from '../components/CldImage';
 
 export default function RezaviSection() {
   const [rezaviSlide, setRezaviSlide] = useState(0);
@@ -28,10 +29,12 @@ export default function RezaviSection() {
             {/* 🖼️ سلائیڈر */}
             <div className="w-full md:w-1/2 h-80 md:h-[500px] relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#D4AF37] bg-gray-50">
                 {rezaviData.images?.map((img, index) => (
-                    <img 
+                    <CldImage 
                         key={index} 
                         src={img} 
                         alt="Rezavi Product" 
+                        width={600}
+                        height={500}
                         className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${index === rezaviSlide ? "opacity-100" : "opacity-0"}`} 
                     />
                 ))}

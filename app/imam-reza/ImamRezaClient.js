@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { Navbar } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
+import CldImage from '../components/CldImage';
 
 // Import the separate page sections (components)
 import BooksSection from './BooksSection';
@@ -115,7 +116,14 @@ export default function ImamRezaClient() {
         if (!videoId && activeVideo.includes('youtu.be')) { videoId = activeVideo.split('/').pop(); }
         return (
             <div className="relative pt-[56.25%]">
-                <iframe className="absolute inset-0 w-full h-full" src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameBorder="0" allowFullScreen></iframe>
+                <iframe 
+                  className="absolute inset-0 w-full h-full" 
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} 
+                  frameBorder="0" 
+                  allowFullScreen
+                  loading="lazy"
+                  title="YouTube Video Player"
+                ></iframe>
             </div>
         );
     } else {
@@ -279,7 +287,7 @@ export default function ImamRezaClient() {
          <div className="text-center mb-10"><h2 className="text-2xl md:text-3xl font-extrabold text-[#0f4c75] border-b-4 border-[#D4AF37] inline-block pb-2">آنلائن خدمات اور ویبنارز</h2></div>
          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl border-2 border-[#D4AF37] overflow-hidden flex flex-col md:flex-row">
             <div className="md:w-1/2 relative h-64 md:h-auto">
-               <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771275651/webinar._m4jyic.png" alt="Webinar" className="absolute inset-0 w-full h-full object-cover" />
+               <CldImage src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1771275651/webinar._m4jyic.png" alt="Webinar" width={600} height={400} className="absolute inset-0 w-full h-full object-cover" />
                <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-md animate-pulse">لائیو ویبنار</div>
             </div>
             <div className="md:w-1/2 p-8 flex flex-col justify-center space-y-4">
@@ -329,7 +337,7 @@ export default function ImamRezaClient() {
            <div className="relative w-full max-w-4xl flex items-center justify-center">
               <button onClick={prevImage} className="absolute right-0 md:-right-12 text-white text-3xl md:text-5xl hover:text-[#D4AF37] z-50 p-2"><FaChevronRight /></button>
               <div className="rounded-2xl overflow-hidden border-2 border-[#D4AF37] shadow-xl bg-black">
-                 <img src={imamRezaImages[currentImageIndex]} alt="Gallery" className="max-h-[80vh] w-auto object-contain" />
+                 <CldImage src={imamRezaImages[currentImageIndex]} alt="Gallery" width={1200} height={800} className="max-h-[80vh] w-auto object-contain" />
               </div>
               <button onClick={prevImage} className="absolute left-0 md:-left-12 text-white text-3xl md:text-5xl hover:text-[#D4AF37] z-50 p-2"><FaChevronLeft /></button>
            </div>
@@ -345,7 +353,7 @@ export default function ImamRezaClient() {
                     <button onClick={() => setSelectedArticle(null)} className="hover:text-red-400 transition-colors"><FaTimes size={24} /></button>
                 </div>
                 <div className="p-6 overflow-y-auto">
-                    <img src={selectedArticle.image} alt={selectedArticle.title} className="w-full h-64 md:h-80 object-cover rounded-xl mb-6 shadow-md" />
+                    <CldImage src={selectedArticle.image} alt={selectedArticle.title} width={800} height={600} className="w-full h-64 md:h-80 object-cover rounded-xl mb-6 shadow-md" />
                     <div className="flex justify-between items-center mb-6 text-sm text-gray-500 font-bold border-b pb-4">
                         <span>📅 {selectedArticle.date}</span>
                         <span className="bg-[#f0f9ff] text-[#0f4c75] px-3 py-1 rounded-full">{selectedArticle.paper || selectedArticle.newspaper}</span>

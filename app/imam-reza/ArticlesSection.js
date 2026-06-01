@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { allData } from './data';
+import CldImage from '../components/CldImage';
 
 export default function ArticlesSection({ setSelectedArticle }) {
   const displayArticles = allData?.articles || [];
@@ -12,7 +13,7 @@ export default function ArticlesSection({ setSelectedArticle }) {
             {displayArticles.map((art, idx) => (
                <div key={idx} onClick={() => setSelectedArticle(art)} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden cursor-pointer hover:shadow-2xl transition-all hover:-translate-y-2 group">
                   <div className="relative h-48 overflow-hidden">
-                     <img src={art.image} alt={art.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                     <CldImage src={art.image} alt={art.title} width={400} height={200} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                      <div className="absolute top-0 right-0 bg-[#D4AF37] text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md">{art.date}</div>
                   </div>
                   <div className="p-5 text-center">

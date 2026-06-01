@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaEnvelope, FaGlobe } from 'react-icons/fa';
+import CldImage from './CldImage';
 
 const FarsiProfileCard = () => {
   return (
@@ -46,9 +47,11 @@ const FarsiProfileCard = () => {
             position: 'relative',
             backgroundColor: '#fff'
           }}>
-            <img 
+            <CldImage 
               src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
               alt="Haji Shabbir Ahmed Shigri" 
+              width={140}
+              height={140}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />
           </div>

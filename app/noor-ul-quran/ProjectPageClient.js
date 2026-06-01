@@ -276,7 +276,13 @@ export default function ProjectPageClient() {
               <div className="inline-flex items-center gap-2 bg-[#111] text-[#D4AF37] px-4 py-1.5 rounded-full mb-3 text-sm font-bold border border-[#D4AF37]/30 urdu-text shadow-inner"><FaMobileAlt /> آج کا قرآنی کلپ</div>
               <div className="w-[220px] md:w-[240px] h-[400px] md:h-[430px] border-[10px] border-gray-800 rounded-[2rem] overflow-hidden relative shadow-[0_0_20px_rgba(212,175,55,0.3)] bg-black">
                 <div className="absolute top-0 w-24 h-4 bg-gray-800 rounded-b-lg z-20 left-1/2 transform -translate-x-1/2"></div>
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-" className="w-full h-full absolute inset-0 z-10" allowFullScreen></iframe>
+                <iframe 
+                  src="https://www.youtube.com/embed/videoseries?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-" 
+                  className="w-full h-full absolute inset-0 z-10" 
+                  allowFullScreen
+                  loading="lazy"
+                  title="Daily Quranic Clip Playlist"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -323,7 +329,13 @@ export default function ProjectPageClient() {
             <h3 className="text-2xl md:text-4xl font-bold text-[#D4AF37] text-center urdu-text mb-4 drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">✨ اردو ترجمے کے ساتھ مکمل قرآن پاک کا افتتاح ✨</h3>
             <p className="text-center text-gray-300 urdu-text mb-6 text-sm md:text-lg !text-center">یکم رمضان المبارک کو علامہ شیخ محسن علی نجفیؒ کی قبر مطہر پر (جامعہ کوثر اسلام آباد) میں اس تاریخی پروجیکٹ کا افتتاح۔</p>
             <div className="aspect-video rounded-lg overflow-hidden border border-[#D4AF37]/50 relative">
-              <iframe src="https://www.youtube.com/embed/ah0OXlnDw2k?rel=0&modestbranding=1&showinfo=0" allowFullScreen className="w-full h-full" title="Noor ul Quran Project Launch"></iframe>
+              <iframe 
+                src="https://www.youtube.com/embed/ah0OXlnDw2k?rel=0&modestbranding=1&showinfo=0" 
+                allowFullScreen 
+                className="w-full h-full" 
+                title="Noor ul Quran Project Launch Video"
+                loading="lazy"
+              ></iframe>
               <button onClick={() => shareItem('whatsapp', 'yt-ah0OXlnDw2k', 'نورالقرآن پراجیکٹ افتتاحی ویڈیو')} className="absolute top-4 right-4 bg-white/90 p-2 rounded-full text-[#0f4c75] shadow-lg hover:scale-110 transition-all z-10"><FaShareAlt size={16} /></button>
             </div>
           </div>

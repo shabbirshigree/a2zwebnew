@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useLocale } from '../components/LocaleProvider';
 import { dictionaries } from '../lib/i18n';
+import CldImage from '../components/CldImage';
 
 const aiArtImages = [
   "https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1776010421/84935d36-b673-4e7f-8b13-acadd76cf260.png",
@@ -71,9 +72,11 @@ export default function AIArtGallery() {
                   idx === currentIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'
                 }`}
               >
-                <img 
+                <CldImage 
                   src={img} 
                   alt={`AI Art ${idx + 1}`} 
+                  width={600}
+                  height={600}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
