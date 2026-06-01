@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useMemo, Suspense } from "react";
+import { useState, useEffect, useRef, useMemo, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -63,6 +63,43 @@ const getYouTubeId = (url) => {
 
 // 🎨 گلوبل اسٹائلز (Moved to globals.css for performance)
 const globalStyles = "";
+
+// 🎥 یوٹیوب لیزی لوڈ پلیئر
+function YouTubeLazyPlayer({ videoId, title }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  if (!isLoaded) {
+    return (
+      <div 
+        className="relative w-full h-full bg-black cursor-pointer group flex items-center justify-center"
+        onClick={() => setIsLoaded(true)}
+      >
+        <CldImage 
+          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+          alt={title}
+          fill
+          className="object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+            <FaPlay className="text-white text-2xl ml-1" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <iframe 
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} 
+      className="w-full h-full"
+      frameBorder="0" 
+      allowFullScreen
+      allow="autoplay; encrypted-media"
+      title={title}
+    ></iframe>
+  );
+}
 
 export function HomeContent() {
   const { locale } = useLocale();
@@ -630,15 +667,9 @@ export function HomeContent() {
             <button onClick={() => setActiveVideo(null)} className="mb-4 flex items-center justify-center gap-2 bg-[#D4AF37] text-black px-5 py-2 rounded-full font-bold">
               {locale === 'en' ? <FaArrowRight className="rotate-180" /> : <FaArrowLeft size={14} />} {labels.btnBack}
             </button>
-            <div className="responsive-video-container w-full">
+            <div className="responsive-video-container w-full aspect-video rounded-xl overflow-hidden bg-black shadow-2xl">
               {activeVideo.includes('youtu') ? (
-                <iframe 
-                  src={`https://www.youtube.com/embed/${getYouTubeId(activeVideo)}?autoplay=1`} 
-                  frameBorder="0" 
-                  allowFullScreen
-                  loading="lazy"
-                  title="YouTube Video Player"
-                ></iframe>
+                <YouTubeLazyPlayer videoId={getYouTubeId(activeVideo)} title="YouTube Video Player" />
               ) : (
                 <video src={activeVideo} controls autoPlay className="w-full h-full object-contain max-h-[60vh]"></video>
               )}
@@ -661,17 +692,17 @@ export function HomeContent() {
 
       {showHomeBooklet && (
         <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4" onClick={() => setShowHomeBooklet(null)}>
-          <div className="relative w-full max-w-4xl h-[70vh]" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 bg-red-600 text-white px-4 py-2 rounded-full font-bold" onClick={() => setShowHomeBooklet(null)}>
-              <FaTimes /> {labels.btnClose}
-            </button>
-            <iframe 
-              src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" 
-              className="w-full h-full bg-white rounded-2xl border-4 border-[#D4AF37]"
-              loading="lazy"
-              title="Noor-ul-Quran Booklet PDF"
-            ></iframe>
-          </div>
+            <div className="relative w-full max-w-4xl h-[70vh] bg-white rounded-2xl overflow-hidden border-4 border-[#D4AF37]" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold z-50 shadow-lg hover:scale-110 transition-transform" onClick={() => setShowHomeBooklet(null)}>
+                <FaTimes />
+              </button>
+              <iframe 
+                src="https://bktkwypcufsmdpvueotw.supabase.co/storage/v1/object/public/books/noorulquran-proj-without.exp.pdf" 
+                className="w-full h-full"
+                loading="lazy"
+                title="Noor-ul-Quran Booklet PDF"
+              ></iframe>
+            </div>
         </div>
       )}
 
