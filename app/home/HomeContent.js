@@ -299,20 +299,21 @@ export function HomeContent() {
                 </span>
               </div>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mt-8 w-full border-t border-[#D4AF37]/10 pt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mt-8 w-full border-t border-[#D4AF37]/10 pt-10">
                 {honors?.map((btn, i) => (
                   <div key={i} className="w-full md:w-auto flex justify-center">
                     <Link
                       href={btn.link}
+                      aria-label={`صفحہ دیکھیں: ${btn.title}`}
                       className="group relative inline-flex items-center gap-4 gold-gradient text-[#4a0000] rounded-2xl shadow-xl hover:scale-105 hover:shadow-[0_20px_40px_rgba(212,175,55,0.3)] transition-all duration-500 w-full max-w-[340px] md:w-[320px] px-4 py-2.5 border border-white/50 overflow-hidden"
                     >
                       {/* ✨ شائن ایفیکٹ */}
                       <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine-effect z-0 pointer-events-none"></div>
                       
-                      <div className="relative h-14 w-14 rounded-xl border-2 border-white shadow-lg overflow-hidden flex-shrink-0 z-10 bg-white p-0.5">
+                    <div className="relative h-14 w-14 rounded-xl border-2 border-white shadow-lg overflow-hidden flex-shrink-0 z-10 bg-white p-0.5">
                         <CldImage 
                           src={btn.gif} 
-                          alt={btn.title} 
+                          alt={`اعزاز: ${btn.title}`} 
                           width={56} 
                           height={56} 
                           className="w-full h-full object-cover rounded-lg" 
@@ -342,6 +343,7 @@ export function HomeContent() {
               <Link 
                 key={i} 
                 href={card.link || '#'} 
+                aria-label={`سیکشن دیکھیں: ${card.title}`}
                 className="group relative bg-white rounded-[1.65rem] sm:rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-7 md:p-9 border-2 border-[#D4AF37]/20 text-center flex flex-col items-center justify-center min-h-0 shadow-lg sm:shadow-xl hover:shadow-[0_30px_60px_rgba(15,76,117,0.1)] hover:-translate-y-2 sm:hover:-translate-y-4 transition-all duration-500 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.15}s` }}
               >
@@ -388,7 +390,7 @@ export function HomeContent() {
                 <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-[#0f4c75]/25 shadow-[0_20px_50px_rgba(11,49,77,0.2)] group-hover:border-[#0f4c75]/45 transition-all duration-700">
                   <CldImage
                     src="https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png"
-                    alt={labels.projTitle}
+                    alt="نور القرآن پراجیکٹ کا کور امیج - حاجی شبیر احمد شگری"
                     width={800}
                     height={450}
                     className="w-full h-auto transition-transform group-hover:scale-105 duration-1000"
@@ -399,9 +401,9 @@ export function HomeContent() {
 
                 {/* مواد اور بٹنز — سنہری پس‌منظر پر گہرا متن */}
                 <div className={`lg:w-3/5 ${locale === 'en' ? 'text-left' : 'text-right'}`} dir={mainDir}>
-                  <h2 className={`text-3xl md:text-5xl font-black text-[#0b314d] mb-8 ${bodyFont(locale)} leading-tight tracking-tight text-center lg:text-inherit drop-shadow-sm`}>
+                  <h1 className={`text-3xl md:text-5xl font-black text-[#0b314d] mb-8 ${bodyFont(locale)} leading-tight tracking-tight text-center lg:text-inherit drop-shadow-sm`}>
                     {labels.projTitle}
-                  </h2>
+                  </h1>
                   <p className={`text-[#2a2310] text-base md:text-lg leading-relaxed ${bodyFont(locale)} mb-10 font-normal ${locale === 'fa' ? 'text-justify' : ''} text-center lg:text-inherit`}>
                     {labels.projDesc}
                   </p>
@@ -471,14 +473,17 @@ export function HomeContent() {
                   transition={{ delay: i * 0.05 }}
                   className="group relative"
                 >
-                  <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3"
+                    onClick={() => setActiveVideo(item.video)}
+                    role="button"
+                    aria-label={`${item.name} کی ویڈیو چلائیں`}
+                  >
                     <CldImage 
                       src={item.img} 
-                      alt={item.name} 
+                      alt={`${item.name} کا حاجی شبیر احمد شگری کے بارے میں اظہار خیال`} 
                       width={400}
                       height={225}
                       className="w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" 
-                      onClick={() => setActiveVideo(item.video)}
                     />
                     <div className="absolute inset-0 flex items-end justify-between p-3 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                       {/* پلے بٹن (Dim by default) */}
@@ -527,7 +532,13 @@ export function HomeContent() {
               {infiniteBooks?.map((item, i) => (
                 <div key={i} className="card-lift relative group/book">
                   <Link href={item.link || "#"} className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
-                    <CldImage src={item.img} alt={item.title} width={180} height={260} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <CldImage 
+                      src={item.img} 
+                      alt={`کتاب کا ٹائٹل: ${item.title} - حاجی شبیر احمد شگری`} 
+                      width={180} 
+                      height={260} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                     <div className="absolute bottom-0 w-full p-4 text-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
                       <div className={`text-xs md:text-sm text-[#D4AF37] ${bodyFont(locale)} font-semibold drop-shadow-md leading-snug`}>{item.title}</div>
@@ -554,10 +565,10 @@ export function HomeContent() {
         >
           <div className="container mx-auto px-4 max-w-7xl">
 
-            <div className="text-center mb-12 relative">
-              <h2
-                className={`text-2xl md:text-3xl font-bold text-[#0f4c75] ${bodyFont(locale)} mb-3 leading-snug px-2`}
-              >
+          <div className="text-center mb-12 relative">
+            <h2
+              className={`text-2xl md:text-3xl font-bold text-[#0f4c75] ${bodyFont(locale)} mb-3 leading-snug px-2`}
+            >
                 <span
                   className="inline-block"
                   dir={locale === "en" ? "ltr" : "rtl"}
@@ -570,7 +581,7 @@ export function HomeContent() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-stretch">
               {journey?.map((item, i) => (
-                <Link key={i} href={item.link || '#'} className="flex group relative">
+                <Link key={i} href={item.link || '#'} aria-label={`خدمت کی تفصیل: ${item.title}`} className="flex group relative">
 
                   <div className={`relative bg-white rounded-2xl p-4 md:p-5 border-2 border-[#D4AF37]/30 shadow-sm transition-all duration-500 overflow-hidden transform group-hover:-translate-y-2 group-hover:shadow-[0_15px_35px_rgba(212,175,55,0.25)] w-full h-full flex flex-col items-start group-hover:bg-[#0f4c75] group-hover:border-[#D4AF37] cursor-pointer`} dir={locale === 'ur' ? mainDir : locale === 'en' ? 'ltr' : 'rtl'}>
 

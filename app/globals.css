@@ -122,7 +122,7 @@
 }
 
 html, body {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif !important;
+  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif;
   line-height: 1.8;
   font-style: normal;
   font-weight: 500;
@@ -169,19 +169,19 @@ main:dir(ltr), main[dir="ltr"] {
 
 /* اس کلاس کو جہاں بھی لگائیں گے، تحریر اخبار جیسی خوبصورت ہو جائے گی */
 .urdu-text {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), serif !important;
+  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), serif;
 }
 
 .persian-text, .font-persian {
-  font-family: var(--font-vazirmatn), var(--font-naskh), serif !important;
+  font-family: var(--font-vazirmatn), var(--font-naskh), serif;
 }
 
 .font-hero-en {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .font-kufi {
-  font-family: var(--font-kufi), 'Reem Kufi', sans-serif !important;
+  font-family: var(--font-kufi), 'Reem Kufi', sans-serif;
 }
 
 /* ==================================================================== */

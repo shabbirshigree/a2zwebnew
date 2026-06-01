@@ -38,7 +38,12 @@ export async function generateMetadata({ searchParams }) {
         openGraph: {
           title,
           description,
-          images: [legend.img],
+          images: [{
+            url: legend.img,
+            width: 800,
+            height: 450,
+            alt: legend.name,
+          }],
           type: 'video.other',
         },
         twitter: {
@@ -75,8 +80,25 @@ export async function generateMetadata({ searchParams }) {
   }
 
   return {
-    title: 'ہوم | حاجی شبیر احمد شگری',
-    description: 'حاجی شبیر احمد شگری کی 45 سالہ صحافتی، ثقافتی، سماجی اور دینی خدمات کا آفیشل پورٹل۔',
+    title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+    description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
+    openGraph: {
+      title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+      description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
+      images: [{
+        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png',
+        width: 1200,
+        height: 630,
+        alt: 'حاجی شبیر احمد شگری - نور القرآن پراجیکٹ',
+      }],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'حاجی شبیر احمد شگری | آفیشل ویب سائٹ',
+      description: 'دنیا کے پہلے ویژول(بصری)قرآن پراجیکٹ اور اس کے بانی حاجی شبیر احمد شگری کی 45 سالہ خدمات کے بارے میں جانئے',
+      images: ['https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png'],
+    }
   };
 }
 
