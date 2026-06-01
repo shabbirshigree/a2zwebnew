@@ -1,21 +1,26 @@
 import React from 'react';
 import { FaEnvelope, FaGlobe } from 'react-icons/fa';
+import CldImage from './CldImage';
 
 const MobileProfileCard = () => {
   return (
-    <div style={{
-      border: '3px solid #D4AF37', 
-      borderRadius: '15px',
-      backgroundColor: '#fff', 
-      fontFamily: 'Jameel Noori Nastaleeq, serif',
-      direction: 'rtl',
-      boxShadow: '0px 15px 40px rgba(212,175,55,0.2)',
-      margin: '20px auto',
-      lineHeight: '1.7',
-      position: 'relative',
-      maxWidth: '600px',
-      padding: '20px'
-    }}>
+    <div 
+      role="article"
+      aria-label="Haji Shabbir Ahmed Shigri Profile"
+      style={{
+        border: '3px solid #D4AF37', 
+        borderRadius: '15px',
+        backgroundColor: '#fff', 
+        fontFamily: 'inherit',
+        direction: 'rtl',
+        boxShadow: '0px 15px 40px rgba(212,175,55,0.2)',
+        margin: '20px auto',
+        lineHeight: '1.7',
+        position: 'relative',
+        maxWidth: '600px',
+        padding: '20px'
+      }}
+    >
       
       {/* Profile Image with Water Ripple Effect */}
       <div style={{ textAlign: 'center', marginBottom: '20px', position: 'relative' }}>
@@ -30,9 +35,9 @@ const MobileProfileCard = () => {
         }}>
           
           {/* Ripple 1 */}
-          <div className="ripple-wave"></div>
+          <div className="ripple-wave-effect"></div>
           {/* Ripple 2 */}
-          <div className="ripple-wave" style={{ animationDelay: '1s' }}></div>
+          <div className="ripple-wave-effect" style={{ animationDelay: '1s' }}></div>
 
           {/* Actual Profile Image */}
           <div style={{
@@ -46,9 +51,11 @@ const MobileProfileCard = () => {
             position: 'relative',
             backgroundColor: '#fff'
           }}>
-            <img 
+            <CldImage 
               src="https://res.cloudinary.com/dtqrziupt/image/upload/q_auto/f_auto/v1768281422/555555-pica_Copy_kawpaf.png" 
               alt="Haji Shabbir Ahmed Shigri" 
+              width={140}
+              height={140}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />
           </div>
@@ -56,7 +63,7 @@ const MobileProfileCard = () => {
 
         {/* CSS for Ripples */}
         <style jsx>{`
-          .ripple-wave {
+          .ripple-wave-effect {
             position: absolute;
             width: 140px;
             height: 140px;

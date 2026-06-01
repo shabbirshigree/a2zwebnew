@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import MobileProfileCard from '../components/MobileProfileCard';
+import CldImage from '../components/CldImage';
 
 // 🔴 ڈیٹا امپورٹس
 import { founderItems, mediaRoles, services } from './aboutData-ur';
@@ -76,9 +77,11 @@ export default function UltimateAboutPage() {
           {/* تصویر */}
           <div className="relative mb-8 mt-4">
             <div className="animate-ripple bg-white p-1 rounded-full">
-              <img
+              <CldImage
                 src="https://res.cloudinary.com/dtqrziupt/image/upload/v1768008780/757657567_xgnsri.png"
                 alt="Haji Shabbir Ahmed Shigri"
+                width={224}
+                height={224}
                 className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-[#D4AF37] object-cover"
               />
             </div>

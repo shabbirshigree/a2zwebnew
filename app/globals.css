@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .font-heading {
-  font-family: 'Amiri', serif !important;
+  font-family: var(--font-amiri), serif;
 }
 
 .text-body {
@@ -97,20 +97,44 @@
   background: #D4AF37;
 }
 
-html, body, *, *::before, *::after {
-  font-family: 'Jameel Noori Nastaleeq', serif !important;
-  line-height: 1.8 !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  letter-spacing: 0 !important;
-  transition: all 0.3s ease; /* ہر چیز کے لیے ہموار ٹرانزیشن */
+/* 🎨 ہوم پیج اور دیگر حصوں کے لیے مشترکہ اسٹائلز */
+.islamic-pattern { 
+  background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.25) 20px, rgba(212, 175, 55, 0.25) 40px);
+  animation: patternMove 20s linear infinite; 
+}
+@keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
+
+.card-lift { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.card-lift:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+
+@keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+.animate-scroll-left { animation: scrollLeft 150s linear infinite; }
+.animate-scroll-right { animation: scrollRight 150s linear infinite; }
+.pause-on-hover:hover { animation-play-state: paused; }
+
+@keyframes shine { 0% { left: -100%; } 100% { left: 200%; } }
+.animate-shine-effect { position: relative; overflow: hidden; }
+.animate-shine-effect::after {
+  content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg); animation: shine 3s infinite;
+}
+
+html, body {
+  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), var(--font-vazirmatn), var(--font-naskh), sans-serif !important;
+  line-height: 1.8;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: all 0.3s ease;
 }
 
 /* موبائل کے لیے خصوصی سیٹنگز */
 @media (max-width: 768px) {
-  html, body, p, span, div, h1, h2, h3, h4, h5, h6 {
-    line-height: 1.9 !important; /* لائنوں کے درمیان فاصلہ بڑھایا گیا ہے تاکہ پڑھنے میں آسانی ہو */
-    font-weight: 600 !important; /* موبائل پر تحریر کو مزید بولڈ کیا گیا ہے */
+  html, body {
+    line-height: 1.9;
+    font-weight: 600;
   }
 }
 
@@ -118,7 +142,7 @@ html, body, *, *::before, *::after {
 body {
   user-select: none;
   -webkit-user-select: none;
-  font-family: 'Jameel Noori Nastaleeq', serif !important;
+  background-color: #f9fafb;
 }
 
 main:dir(rtl), main[dir="rtl"] {
@@ -145,11 +169,19 @@ main:dir(ltr), main[dir="ltr"] {
 
 /* اس کلاس کو جہاں بھی لگائیں گے، تحریر اخبار جیسی خوبصورت ہو جائے گی */
 .urdu-text {
-  font-family: 'Jameel Noori Nastaleeq', serif !important;
+  font-family: 'Jameel Noori Nastaleeq', var(--font-nastaliq), serif !important;
 }
 
-.persian-text {
-  font-family: 'Jameel Noori Nastaleeq', serif !important;
+.persian-text, .font-persian {
+  font-family: var(--font-vazirmatn), var(--font-naskh), serif !important;
+}
+
+.font-hero-en {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-kufi {
+  font-family: var(--font-kufi), 'Reem Kufi', sans-serif !important;
 }
 
 /* ==================================================================== */

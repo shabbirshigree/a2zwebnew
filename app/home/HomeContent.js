@@ -45,6 +45,7 @@ import Footer from "../components/Footer";
 import MobileProfileCard from "../components/MobileProfileCard";
 import EnglishProfileCard from "../components/EnglishProfileCard";
 import FarsiProfileCard from "../components/FarsiProfileCard";
+import CldImage from "../components/CldImage";
 
 /** فارسی / انگریزی / اردو کے لیے مرکزی متن کلاس */
 function bodyFont(locale) {
@@ -60,40 +61,8 @@ const getYouTubeId = (url) => {
   return (match && match[2].length === 11) ? match[2] : null;
 };
 
-// 🎨 گلوبل اسٹائلز
-const globalStyles = `
-  @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-  .font-amiri { font-family: 'Amiri', serif; }
-  
-  @keyframes shine { 0% { left: -100%; } 100% { left: 200%; } }
-  .animate-shine { position: relative; overflow: hidden; }
-  .animate-shine::after {
-    content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
-    transform: skewX(-20deg); animation: shine 3s infinite;
-  }
-
-  @keyframes ripple {
-    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.8), 0 0 0 0 rgba(212, 175, 55, 0.6), 0 0 0 0 rgba(212, 175, 55, 0.4); }
-    100% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0), 0 0 0 30px rgba(212, 175, 55, 0), 0 0 0 45px rgba(212, 175, 55, 0); }
-  }
-  .animate-ripple { animation: ripple 2.5s infinite linear; border-radius: 50%; }
-
-  @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: -60px 0; } }
-  .islamic-pattern { 
-    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(212, 175, 55, 0.25) 20px, rgba(212, 175, 55, 0.25) 40px);
-    animation: patternMove 20s linear infinite; 
-  }
-  .card-lift { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-  .card-lift:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
-  .animate-scroll-left { animation: scrollLeft 150s linear infinite; }
-  .animate-scroll-right { animation: scrollRight 150s linear infinite; }
-  @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-  .pause-on-hover:hover { animation-play-state: paused; }
-  .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
-  @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-`;
+// 🎨 گلوبل اسٹائلز (Moved to globals.css for performance)
+const globalStyles = "";
 
 export function HomeContent() {
   const { locale } = useLocale();
@@ -338,10 +307,17 @@ export function HomeContent() {
                       className="group relative inline-flex items-center gap-4 gold-gradient text-[#4a0000] rounded-2xl shadow-xl hover:scale-105 hover:shadow-[0_20px_40px_rgba(212,175,55,0.3)] transition-all duration-500 w-full max-w-[340px] md:w-[320px] px-4 py-2.5 border border-white/50 overflow-hidden"
                     >
                       {/* ✨ شائن ایفیکٹ */}
-                      <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine z-0 pointer-events-none"></div>
+                      <div className="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shine-effect z-0 pointer-events-none"></div>
                       
                       <div className="relative h-14 w-14 rounded-xl border-2 border-white shadow-lg overflow-hidden flex-shrink-0 z-10 bg-white p-0.5">
-                        <img src={btn.gif} alt={btn.title} className="w-full h-full object-cover rounded-lg" />
+                        <CldImage 
+                          src={btn.gif} 
+                          alt={btn.title} 
+                          width={56} 
+                          height={56} 
+                          className="w-full h-full object-cover rounded-lg" 
+                          unoptimized={true} 
+                        />
                       </div>
                       <div className="flex-1 text-center flex flex-col justify-center gap-0.5 min-h-0 py-0.5 relative z-10">
                         <span className={`block leading-tight text-lg md:text-xl font-bold drop-shadow-sm ${honorTitleClass}`}>
@@ -410,9 +386,11 @@ export function HomeContent() {
                   {labels.projBadge}
                 </div>
                 <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-[#0f4c75]/25 shadow-[0_20px_50px_rgba(11,49,77,0.2)] group-hover:border-[#0f4c75]/45 transition-all duration-700">
-                  <img
+                  <CldImage
                     src="https://res.cloudinary.com/dtqrziupt/image/upload/v1774145249/noorulquran-proj-cover_bhvb0d.png"
                     alt={labels.projTitle}
+                    width={800}
+                    height={450}
                     className="w-full h-auto transition-transform group-hover:scale-105 duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d]/50 via-transparent to-transparent opacity-40 pointer-events-none" />
@@ -444,7 +422,11 @@ export function HomeContent() {
                       >
                         <FaPlay className="text-lg text-white" /> {labels.btnVideo}
                       </button>
-                      <button onClick={() => handleShareItem({}, 'pod-video')} className="bg-white text-[#9f1239] p-3 rounded-2xl border-2 border-[#9f1239] hover:bg-[#9f1239] hover:text-white transition-all shadow-md">
+                      <button 
+                        onClick={() => handleShareItem({}, 'pod-video')} 
+                        aria-label="Share Video"
+                        className="bg-white text-[#9f1239] p-3 rounded-2xl border-2 border-[#9f1239] hover:bg-[#9f1239] hover:text-white transition-all shadow-md"
+                      >
                         <FaShareAlt />
                       </button>
                     </div>
@@ -457,7 +439,11 @@ export function HomeContent() {
                       >
                         <FaHeadphones className="text-lg text-[#d1fae5]" /> {labels.btnAudio}
                       </button>
-                      <button onClick={() => handleShareItem({}, 'pod-audio')} className="bg-white text-[#047857] p-3 rounded-2xl border-2 border-[#047857] hover:bg-[#047857] hover:text-white transition-all shadow-md">
+                      <button 
+                        onClick={() => handleShareItem({}, 'pod-audio')} 
+                        aria-label="Share Audio"
+                        className="bg-white text-[#047857] p-3 rounded-2xl border-2 border-[#047857] hover:bg-[#047857] hover:text-white transition-all shadow-md"
+                      >
                         <FaShareAlt />
                       </button>
                     </div>
@@ -486,9 +472,11 @@ export function HomeContent() {
                   className="group relative"
                 >
                   <div className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer border-2 border-[#D4AF37]/40 bg-black shadow-2xl transition-all duration-500 hover:border-[#D4AF37] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-2 mb-3">
-                    <img 
+                    <CldImage 
                       src={item.img} 
                       alt={item.name} 
+                      width={400}
+                      height={225}
                       className="w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" 
                       onClick={() => setActiveVideo(item.video)}
                     />
@@ -498,7 +486,9 @@ export function HomeContent() {
                         <FaPlay size={12} className="text-black ml-0.5" />
                       </div>
                       {/* شیئر بٹن (Dim by default) */}
-                      <div className="bg-white w-9 h-9 rounded-full border-2 border-[#D4AF37] shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 pointer-events-auto" onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
+                      <div className="bg-white w-9 h-9 rounded-full border-2 border-[#D4AF37] shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 pointer-events-auto cursor-pointer" 
+                        aria-label="Share"
+                        onClick={(e) => { e.stopPropagation(); handleShareItem(item, 'video'); }}>
                         <FaShareAlt size={12} className="text-[#0f4c75]" />
                       </div>
                     </div>
@@ -537,7 +527,7 @@ export function HomeContent() {
               {infiniteBooks?.map((item, i) => (
                 <div key={i} className="card-lift relative group/book">
                   <Link href={item.link || "#"} className="block min-w-[140px] md:min-w-[180px] h-[220px] md:h-[260px] relative rounded-xl overflow-hidden border-2 border-[#D4AF37]/50 bg-white shadow-lg group hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all cursor-pointer">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <CldImage src={item.img} alt={item.title} width={180} height={260} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
                     <div className="absolute bottom-0 w-full p-4 text-center transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
                       <div className={`text-xs md:text-sm text-[#D4AF37] ${bodyFont(locale)} font-semibold drop-shadow-md leading-snug`}>{item.title}</div>

@@ -16,7 +16,7 @@ const CldImage = ({ src, isColumn, ...props }) => {
     }
 
     // اب props کے اندر isColumn نہیں ہے، اس لیے ری ایکٹ کوئی وارننگ نہیں دے گا
-    return <Image {...props} src={imageUrl} unoptimized={true} />;
+    return <Image {...props} src={imageUrl} />;
 };
 
 export default CldImage;

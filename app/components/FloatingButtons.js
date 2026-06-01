@@ -66,6 +66,7 @@ export default function FloatingButtons() {
           onClick={handleWhatsapp}
           className="bg-green-500 text-white p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
           title={f.waTitle}
+          aria-label={f.waTitle}
         >
           <FaWhatsapp className="text-xl" />
         </button>
@@ -74,6 +75,7 @@ export default function FloatingButtons() {
           onClick={handleShare}
           className="bg-[#D4AF37] text-[#0b314d] p-3 rounded-full shadow-lg opacity-70 backdrop-blur-sm hover:opacity-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center focus:outline-none"
           title="Share This Page"
+          aria-label="Share This Page"
         >
           <FaShareAlt className="text-xl" />
         </button>

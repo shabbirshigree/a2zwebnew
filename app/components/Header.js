@@ -24,6 +24,7 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "./LocaleProvider";
 import { getDictionary, getHomePath, getLocalizedPath } from "../lib/i18n";
@@ -47,12 +48,12 @@ const SLIDES = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500" },
-  { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600" },
-  { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500" },
-  { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500" },
-  { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400" },
-];
+  { icon: <FaYoutube />, link: "https://youtube.com/@noorproduction", color: "hover:text-red-500", label: "YouTube" },
+    { icon: <FaFacebook />, link: "https://facebook.com/shigri51214", color: "hover:text-blue-600", label: "Facebook" },
+    { icon: <FaWhatsapp />, link: "https://wa.me/923334491715", color: "hover:text-green-500", label: "WhatsApp" },
+    { icon: <FaTiktok />, link: "https://www.tiktok.com/@noorproductions786?_r=1&_t=ZS-947NqSEZDCZ", color: "hover:text-pink-500", label: "TikTok" },
+    { icon: <FaTwitter />, link: "https://x.com/shigri41215", color: "hover:text-sky-400", label: "Twitter" },
+  ];
 
 const MENU_CONFIG = [
   { key: "home", link: "/home", icon: FaHome },
@@ -180,8 +181,7 @@ export function Navbar() {
       className="bg-[#0b314d] text-[#D4AF37] px-2 md:px-6 border-b border-[#D4AF37]/30 relative z-50 flex items-center justify-between h-[45px]"
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap');
-        .font-kufi { font-family: 'Reem Kufi', sans-serif; }
+        .font-kufi { font-family: var(--font-kufi), 'Reem Kufi', sans-serif !important; }
         @keyframes wave-grow { 0%, 100% { height: 4px; } 50% { height: 14px; } }
         .wave-bar { width: 2px; background-color: #ef4444; margin: 0 1px; border-radius: 2px; animation: wave-grow 1s infinite ease-in-out; }
         @keyframes star-out {
@@ -219,6 +219,7 @@ export function Navbar() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label={isListening ? dict.nav.listening : dict.nav.searchPlaceholder}
             placeholder={
               isListening ? dict.nav.listening : dict.nav.searchPlaceholder
             }
@@ -296,20 +297,36 @@ export function Navbar() {
                   ${active ? "lang-flag-active-ring z-[1]" : "opacity-95 hover:opacity-100"}
                 `}
               >
-                <img
+                <Image
                   src={src}
-                  alt=""
-                  width={60}
-                  height={40}
-                  className={`max-h-full max-w-full object-contain object-center pointer-events-none ${active ? "brightness-105" : ""}`}
-                  loading="lazy"
-                  decoding="async"
+                  alt={label}
+                  width={30}
+                  height={16}
+                  className="object-cover rounded-[1px]"
                 />
               </button>
             );
           })}
         </div>
       </div>
+
+      {/* سوشل میڈیا لنکس: موبائل پر غائب، ڈیسک ٹاپ پر ظاہر */}
+      {!isMobile && (
+        <div className="flex items-center gap-1.5 md:gap-3 shrink-0">
+          {SOCIAL_LINKS.map((item, idx) => (
+            <Link
+              key={idx}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.label}
+              className={`text-[#D4AF37] transition-all duration-200 hover:scale-125 ${item.color} flex items-center justify-center p-1 md:p-1.5`}
+            >
+              <span className="text-[14px] md:text-lg drop-shadow-md">{item.icon}</span>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -349,14 +366,14 @@ export function HeroSlider() {
             className={`absolute inset-0 w-full h-full transition-all duration-[1200ms] ease-in-out ${i === current ? "opacity-100 z-20 scale-100" : "opacity-0 z-10"
               }`}
           >
-            <img
+            <Image
               src={s.img}
-              alt=""
-              className="w-full h-full object-fill object-center block"
+              alt={`Slide ${i + 1}`}
+              fill
+              sizes="100vw"
+              className="object-fill object-center block"
               style={{ filter: i === current ? 'brightness(1.04) saturate(1.08)' : 'brightness(0.88) saturate(0.95)' }}
-              loading={i === 0 ? "eager" : "lazy"}
-              decoding="async"
-              fetchPriority={i === 0 ? "high" : "low"}
+              priority={i === 0}
             />
           </div>
         ))}

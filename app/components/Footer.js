@@ -57,6 +57,21 @@ export default function Footer() {
             </a>
           </div>
 
+          <div className="flex justify-center gap-6 mb-8">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                className={`text-2xl transition-all duration-300 transform hover:scale-150 ${social.color} drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]`}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+
           <div className="flex flex-col items-center gap-4 mb-6">
             <a
               href={waLink}
