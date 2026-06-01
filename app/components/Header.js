@@ -427,21 +427,6 @@ export function HeroSlider() {
             ))}
           </p>
         </div>
-
-        <div className="flex gap-4 md:gap-5 mt-1.5 md:mt-1.5 justify-center z-50">
-          {SOCIAL_LINKS.map((s, i) => (
-            <Link
-              key={i}
-              href={s.link}
-              target="_blank"
-              className="text-white transition-all duration-700 hover:rotate-[360deg] hover:-translate-y-2 hover:scale-125"
-            >
-              <span className={`text-sm md:text-base block drop-shadow-md ${s.color}`}>
-                {s.icon}
-              </span>
-            </Link>
-          ))}
-        </div>
       </div>
 
       <div className="bg-[#0b314d] py-2 px-1 md:py-2 border-t border-[#D4AF37]/30 shadow-lg relative z-40">
