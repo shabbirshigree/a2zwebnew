@@ -4,6 +4,107 @@
 
 export const englishData = [
 {
+    "id": "210_EN",
+    "category": ["column"], 
+    "title": "Gilgit-Baltistan Electoral Battle 2026: The End of Obsolete Traditions and the Rising Sun of New Leadership", 
+    "date": "03-06-2026",
+    "paper": "Daily Mashriq News & Daily Yome-e-Takbeer",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg",
+    "excerpt": "The 2026 Gilgit-Baltistan general elections mark a historic turning point, as educated youth and independent candidates rise against decades of traditional dynastic politics to address Skardu's critical crises.",
+    "content": `
+        <div style="font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>Gilgit-Baltistan Electoral Battle 2026: The End of Obsolete Traditions and the Rising Sun of New Leadership</strong></p>
+             <p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+            It is said that when the soil calls, ideologies are born, and when problems exceed limits, revolution knocks on the door. At this moment, the paradise-like northern region of Pakistan, Gilgit-Baltistan, stands at such a historic crossroads. The 2026 general elections in Gilgit-Baltistan are not merely about a transfer of power; they represent an open declaration of war against the obsolete, traditional, and dynastic politics that has deprived these brave and patriotic people of their fundamental rights for decades.
+            The most welcoming and beautiful aspect of this electoral battle is that this time, the conscious youth, educated class, and sincere social figures of Gilgit-Baltistan are breaking free from the shackles of hereditary parties to step into the field as independent candidates. These new faces are a breath of fresh air in the region's politics, emerging not with living-room politics, but with a public manifesto and the true call of the soil.
+            </p>
+
+            <p><strong>Skardu City: Suffering Crises under the Shadow of Beauty</strong></p>
+            <p>
+            If we talk about the heart of Baltistan, Skardu city, tourists from all over the world come to witness its breathtaking beauty, but the hardships endured by its residents are a painful lash on the face of time. The city's roads are dilapidated, severely disrupting local transportation and dealing a heavy blow to tourism.
+            During the winter season, when the temperature drops well below freezing, Skardu city does not get to see electricity for days on end. In the biting cold, darkness and freezing weather have been made the destiny of these people.
+            The severe crisis of clean drinking water, an underdeveloped transport system, and the non-availability of medicines and modern machinery in hospitals have made the lives of citizens miserable.
+            </p>
+
+            <p><strong>The Tyranny of Airfares: A 40-Minute Journey and a 50,000 Rupees Ticket!</strong></p>
+            <p>
+            On one hand, Gilgit-Baltistan has not yet been granted the status of a full constitutional province, and on the other hand, a worst-case economic burden has been imposed on the poor local public and tourists in the form of astronomical airfares. While international flight tickets in neighboring countries start from 30,000 to 35,000 PKR, a one-way ticket for a mere 40-minute flight to Pakistan's own territory, Skardu, costs 40,000, 45,000, and sometimes up to 50,000 PKR!
+            Previously, it was only the monopoly of the national airline (PIA); now other private airlines have also started exploiting the situation to make a fortune. There is no concession for local patients, students, or poor residents, nor for tourists. This is sheer injustice and economic exploitation of the people of Gilgit-Baltistan, upon which the silence of the ruling authorities is criminal.
+            </p>
+
+            <p><strong>GBA-7, Skardu-1: Muhammad Ilyas—A New Ray of Hope</strong></p>
+            <p>
+            Against these darknesses and public deprivations, a highly active, vibrant, and sincere youth leader, Muhammad Ilyas, has entered the field of action as an independent candidate from the constituency of GBA-7 (Skardu-1). Unlike traditional politicians, Muhammad Ilyas does not believe in mere rhetoric; rather, he has brought an revolutionary and practical manifesto for the 2026 elections that possesses the potential to transform the destiny of Skardu.
+            Muhammad Ilyas's 21-point manifesto is not just a collection of promises, but a scientific and practical solution to every single problem of Skardu:
+            </p>
+
+            <ul>
+                <li><strong>Ending the Energy Crisis:</strong> To eliminate power outages, his top priority is to install modern machinery on the Hargisa Nullah for small hydro projects and to resolve defects to gain approval for the 5 MW project above Satpara Village, which has been delayed for fifteen years.</li>
+                <li><strong>Redressing Injustice in Solar Power:</strong> To raise a strong voice against the injustice where Skardu's share in the federally approved 100 MW solar project was reduced to just 6 MW, and to enforce Skardu city's master plan, which has been stuck for the past 5 years.</li>
+                <li><strong>Modern Drinking Water and Environment:</strong> Providing clean water through modern filtration plants and water lifting from the Hargisa Nullah and the river, alongside upgrading the Phyalong Water Diversion project to prevent water wastage.</li>
+                <li><strong>Health and Education Revolution:</strong> Ensuring the deployment of at least one medical doctor in every dispensary of Skardu, bringing medicines to hospitals, training teachers on modern lines, and providing personal patronage to educational institutions.</li>
+                <li><strong>Constitutional Rights and National Finance Commission (NFC):</strong> Struggling for Gilgit-Baltistan's share in the NFC award based on area and backwardness, and advancing toward a new Social Contract with the Federation of Pakistan on constitutional matters. This is the strongest and most far-reaching point of his manifesto.</li>
+                <li><strong>Inter-sectarian Harmony:</strong> Remaining ready at all times to promote love and mutual brotherhood among different sects on the soil of Skardu is the core principle of Muhammad Ilyas.</li>
+            </ul>
+
+            <p><strong>The Decision is Now in the Hands of the People!</strong></p>
+            <p>
+            O proud residents of Gilgit-Baltistan, especially Skardu! For the past several years, the plundering and dynastic politicians who engaged in mere lip-service will stand before you again with folded hands. But remember, if we do not support educated, capable, and sincere independent youth candidates like Muhammad Ilyas today, our future generations will continue to burn in the same hell of electricity, water, road crises, and expensive flights.
+            The 2026 elections are the day to change Skardu's destiny. The time has come to smash the idols of hereditary politics and enter Skardu into a new era of development by electing sincere youth like Muhammad Ilyas based on "manifesto and character."
+            Support Muhammad Ilyas in changing the destiny of the area and make him successful by voting for the electoral symbol 'Scooter'.
+            </p>
+            <br>
+            <div style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "20px",
+                justifyContent: "center",
+                alignItems: "stretch",
+                margin: "20px 0"
+            }}>
+                {/* Zamana News */}
+                <div style={{
+                    flex: "1 1 300px",
+                    maxWidth: "500px",
+                    textAlign: "center"
+                }}>
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg" 
+                        alt="Zamana News Newspaper Clipping" 
+                        style={{
+                            width: "100%", 
+                            height: "auto", 
+                            borderRadius: "12px", 
+                            boxShadow: "0 4px 15px rgba(0,0,0,0.15)"
+                        }}
+                    />
+                </div>
+
+                {/* Daily Yome-e-Takbeer */}
+                <div style={{
+                    flex: "1 1 300px",
+                    maxWidth: "500px",
+                    textAlign: "center"
+                }}>
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464289/GB_Election_daily_yome_e_Takbeer_2026-06-03.jpeg_uobdsv.jpg" 
+                        alt="Daily Yome-e-Takbeer Newspaper Clipping" 
+                        style={{
+                            width: "100%", 
+                            height: "auto", 
+                            borderRadius: "12px", 
+                            boxShadow: "0 4px 15px rgba(0,0,0,0.15)"
+                        }}
+                    />
+                </div>
+            </div>
+        </div>
+        `
+},
+
+    {
     "id": "209EN",
     "category": ["column"], 
     "title": "The Greatest Sacrifice", 

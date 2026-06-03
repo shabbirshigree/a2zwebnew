@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 // 🔴 ہم نے یہاں 'isColumn' کو باقی props سے الگ کر لیا ہے
 const CldImage = ({ src, isColumn, ...props }) => {
-    let imageUrl = src;
+    // تصویر کے یو آر ایل سے خالی جگہیں ختم کریں تاکہ ایرر نہ آئے
+    let imageUrl = typeof src === 'string' ? src.trim() : src;
 
     // اگر تصویر کلاؤڈنری کی ہے، تو چیک کریں کہ وہ کالم ہے یا عام تصویر
     if (typeof imageUrl === 'string' && imageUrl.includes("cloudinary")) {

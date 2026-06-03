@@ -169,11 +169,11 @@ function FarsiArticlesContent() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {filteredArticles.map((article) => {
+              {filteredArticles.map((article, index) => {
                 const stats = getStats(article);
                 return (
                   <div
-                    key={article.id}
+                    key={article.id || index}
                     className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full cursor-pointer"
                     dir="rtl"
                     onClick={() => handleOpenArticle(article)}
