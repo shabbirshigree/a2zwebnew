@@ -38,19 +38,25 @@ A deeply reassuring and soul-stirring aspect of this conference was witnessing r
 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
 <p style="text-align: center; font-weight: bold;">
-    <a href="https://www.islamtimes.com/ur/article/1285861/%D8%B4%D9%81%D9%8A%D8%AF-%D8%A7%D9%85%D8%AA-%DA%A6%DB%8C-%D8%AA%D8%B3%D8%A1%D9%8A%D8%AD-%D9%88%D8%AD%D8%AF%D8%AA" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;">
+    <a href="https://www.islamtimes.com/ur/article/1285861/%D8%B4%D9%81%D9%8A%D8%AF-%D8%A7%D9%85%D8%AA-%DA%A6%DB%8C-%D8%AA%D8%B3%D8%A1%D9%8I%D8%AD-%D9%8步%D8%AD%D8%AF%D8%AA" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;">
         👉 Click here to read online on Islam Times
     </a>
 </p>
-            <br>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
-                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
-                    <img 
-                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1781519972/shaheed_e_umat_ki_tasbih_zamana_news_2026-06-15_bsdcue.jpg" 
-                        alt="Zamana News Newspaper Clipping" 
-                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
-                    />
-        </div>
+
+<p style="text-align: center; font-weight: bold; margin-top: 15px;">
+    🎬 View Google's insightful analysis of this article — watch the video podcast below
+</p>
+
+<div style="text-align: center; margin: 20px 0;">
+    <video controls style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+        <source src="https://res.cloudinary.com/drlg0dr9y/video/upload/v1781531831/The_Rosary_of_Unity_1_n3dm4b.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+                    <br>
+                </div>
+            </div>
         `
     },
 
@@ -63,7 +69,7 @@ A deeply reassuring and soul-stirring aspect of this conference was witnessing r
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
         "excerpt": "A deep philosophical look into the true spirit of sacrifice, comparing the legacy of Prophet Ibrahim (A.S) and the tragedy of Karbala, while addressing human ego, arrogance, and family relationships.",
         "content": `
-    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+            < div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;" >    
         <p><strong>The Greatest Sacrifice</strong></p>
         <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
 
@@ -98,7 +104,7 @@ A deeply reassuring and soul-stirring aspect of this conference was witnessing r
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
         "excerpt": "...",
         "content": `
-        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+    < div style = "font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;" >    
             <p><strong>Abyaar-e-Ali (A.S)</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
 
@@ -128,7 +134,7 @@ A deeply reassuring and soul-stirring aspect of this conference was witnessing r
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
         "excerpt": "...",
         "content": `
-        <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+    < div style = "font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;" >    
              <p><strong>Abyar Ali (The Wells of Ali AS)</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
 
@@ -169,7 +175,7 @@ Fadak: The Garden of Batool (AS) - Historical Background: Fadak was a highly fer
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779514919/5.Madiney_k_ahahm_maqamat-_Zamana_news_2026-05-22_w4vpy8.jpg",
         "excerpt": "...",
         "content": `
-        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+    < div style = "font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;" >    
              <p><strong>Some Important Places in Medina</strong></p>
 <p><strong>Written By Haji Shabbir Ahmed Shigri</strong></p>
 
@@ -222,7 +228,7 @@ Fadak: The Garden of Batool (AS) - Historical Background: Fadak was a highly fer
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779425001/4.Janat_ul_Baqee_Zamana_news_2026-05-22_nbdrcj.jpg",
         "excerpt": "...",
         "content": `
-        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+    < div style = "font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;" >    
              <p><strong>Jannat al-Baqi: The First and Oldest Islamic Cemetery of Medina</strong></p>
 <p><strong>Written By Haji Shabbir Ahmed Shigri</strong></p>
 
@@ -267,7 +273,7 @@ Although exactly seventy companions were martyred on the battlefield of Uhud, so
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg",
         "excerpt": "A Journey Through the Other Mosques of Medina",
         "content": `
-        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+    < div style = "font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;" >    
              <p><strong>A Journey Through the Other Mosques of Medina</strong></p>
 <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
 
@@ -331,7 +337,7 @@ If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779250638/2.Madiney_ki_Masajid_Zamana_news_2026-05-20_lefxc1.jpg",
         "excerpt": "Al-Masjid an-Nabawi (PBUH) is the second holiest site among Muslims after Al-Masjid al-Haram...",
         "content": `
-        <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
+    < div style = "font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;" >    
              <p><strong>Al-Masjid an-Nabawi (PBUH)</strong></p>
 <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
 
@@ -366,7 +372,7 @@ If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779175200/Zamana_news_2026-05-19_ywf3l4.jpg",
         "excerpt": "The day of our departure for Hajj to the House of Allah was a memorable day of our lives. We set off for the Lahore airport amidst heavy rain...",
         "content": `
-        <div style="font-family: sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+    < div style = "font-family: sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;" >    
             <p><strong>By: Haji Shabbir Ahmed Shigri</strong></p>
 
             <p>The day of our departure for Hajj to the House of Allah was a memorable day of our lives. We set off for the Lahore airport amidst heavy rain. The clouds of mercy poured down so abundantly that blessings continued to shower throughout the entire Hajj journey. Especially the sight of rain during the Tawaf at the Kaaba and the torrential rain in Arafat and Mina. Subhan Allah, what a magnificent sight it was. Our flight landed at the Medina al-Munawwarah airport at night. It was quite late, and when we boarded the bus from the airport, we kept looking out of the bus with eager, searching eyes and beating hearts all along the way, hoping to catch a glimpse of the Green Dome (Gumbad-e-Khizra). And finally, this longing was soon fulfilled. The magnificent and blessed sight of Al-Masjid an-Nabawi was right before us.</p>
@@ -392,7 +398,7 @@ If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al
         "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152729/images_lwhvar.jpg",
         "excerpt": "Big claims were made that the defense system here would fall in moments and that this nation would be pushed back to the 'Stone Age,' altering the course of history. But contrary to this, the enemy itself is being forced to withdraw from the region and lose its key bases.",
         "content": `
-        <div style="font-family: sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+    < div style = "font-family: sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;" >    
             <p><strong>Written by: Shabbir Ahmed Shigri</strong></p>
 
             <p>The Victory of Hussainiyat

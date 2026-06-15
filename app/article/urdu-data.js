@@ -41,6 +41,18 @@ export const urduData = [
         👉 اسلام ٹائمز پر آن لائن پڑھنے کے لیے یہاں کلک کریں
     </a>
 </p>
+
+            <br>
+            <p style="text-align: center; font-weight: bold;">
+                <a href="https://www.youtube.com/watch?v=0jhC4zyzRns&feature=youtu.be" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;">
+                    حاجی شبیر احمد شگری کی اس تحریر پر گوگل کا زبردست تجزیہ اور ویڈیو پوڈ کاسٹ دیکھنے کے لئے کلک کریں۔
+                </a>
+            </p>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <iframe width="100%" height="420" src="https://www.youtube.com/embed/0jhC4zyzRns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.15);"></iframe>
+            </div>
+
             <br>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
                 {/* زمانہ نیوز */}

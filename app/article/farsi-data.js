@@ -42,7 +42,18 @@ export const farsiData = [
         👉 برای مطالعه آنلاین در اسلام تایمز اینجا کلیک کنید
     </a>
 </p>
+
             <br>
+         
+                        برای مشاهده تحلیل عالی گوگل و ویدیو پادکست درباره این اثر از حاجی شبیر احمد شگری اینجا کلیک کنید.
+                    </a>
+                </p>
+                <div style="text-align: center; margin: 20px 0;">
+                    <video controls style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <source src="https://res.cloudinary.com/drlg0dr9y/video/upload/v1781531953/%D8%AA%D8%B3%D8%A8%DB%8C%D8%AD_%D9%88%D8%AD%D8%AF%D8%AA__%D8%A8%D8%B1%D8%B1%D8%B3%DB%8C_%D8%B4%D9%87%DB%8C%D8%AF_%D8%A7%D9%85%D8%AA_1__1_j42ti0.mp4" type="video/mp4" />
+                        مرورگر شما این ویدیو را پشتیبانی نمی‌کند.
+                    </video>
+                </div>
             <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
                 <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
                     <img 
