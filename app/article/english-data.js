@@ -1,118 +1,68 @@
-// File Name: english-data.js
-
-
-
 export const englishData = [
-{
-    "id": "210_EN",
-    "category": ["column"], 
-    "title": "Gilgit-Baltistan Electoral Battle 2026: The End of Obsolete Traditions and the Rising Sun of New Leadership", 
-    "date": "03-06-2026",
-    "paper": "Daily Mashriq News & Daily Yome-e-Takbeer",
-    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg",
-    "excerpt": "The 2026 Gilgit-Baltistan general elections mark a historic turning point, as educated youth and independent candidates rise against decades of traditional dynastic politics to address Skardu's critical crises.",
-    "content": `
-        <div style="font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
-             <p><strong>Gilgit-Baltistan Electoral Battle 2026: The End of Obsolete Traditions and the Rising Sun of New Leadership</strong></p>
-             <p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+    {
+        "id": "211EN",
+        "category": ["column"],
+        "title": "The Rosary of Unity of the Ummah's Martyr",
+        "date": "14-06-2026",
+        "paper": "On Daily Zamana News and Islam Times",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1781519972/shaheed_e_umat_ki_tasbih_zamana_news_2026-06-15_bsdcue.jpg",
+        "excerpt": "The soil of the sub-continent bears witness that its history is not merely a chronicle of kingly conquests, but a timeless saga of the confluence of diverse civilizations and philosophies, where the followers of Hussain acted as a foundational link...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>The Rosary of Unity of the Ummah's Martyr</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
 
             <p>
-            It is said that when the soil calls, ideologies are born, and when problems exceed limits, revolution knocks on the door. At this moment, the paradise-like northern region of Pakistan, Gilgit-Baltistan, stands at such a historic crossroads. The 2026 general elections in Gilgit-Baltistan are not merely about a transfer of power; they represent an open declaration of war against the obsolete, traditional, and dynastic politics that has deprived these brave and patriotic people of their fundamental rights for decades.
-            The most welcoming and beautiful aspect of this electoral battle is that this time, the conscious youth, educated class, and sincere social figures of Gilgit-Baltistan are breaking free from the shackles of hereditary parties to step into the field as independent candidates. These new faces are a breath of fresh air in the region's politics, emerging not with living-room politics, but with a public manifesto and the true call of the soil.
-            </p>
+The soil of the sub-continent bears witness that its history is not merely a chronicle of kingly conquests, but a timeless saga of the confluence of diverse civilizations and philosophies. In this narrative, the role of Hussain's followers stands as a foundational link that gave a new direction to the religious, social, and political structure of this region. The arrival of Husseinis in the sub-continent is directly connected to Husseinism and the scorching desert of Karbala. Following the tragedy of Karbala, the noble Sadata-e-Izam and the devotees of the Ahl al-Bayt (peace be upon them) chose the path of migration to protect the true faith and turned towards this land.
+</p>
+<p>
+This fragrance of Hussaini thought later became the logical fruit of the Pakistan Movement, where all Muslims rose above sectarian and communal divides to pursue a single destination. Although Sir Syed Ahmed Khan launched the 'Aligarh Movement' after the 1857 War of Independence, which was a magnificent educational and intellectual movement, and later Nawab Abdul Latif founded the 'Mohammedan Literary Society' in Calcutta in 1863, which served as an excellent academic and social forum; yet, the very first architect to awaken political consciousness among the Muslims of the sub-continent and practically organize them as a distinct 'political nation' was Justice Syed Ameer Ali, the shining light of the Sadat of Mashhad. By establishing the 'Central National Mohammedan Association' in 1877, he laid the foundation of the first formal Muslim political party in the sub-continent, a credit that history eternally attributes to him. The empathetic and awakened heart of the Muslims who infused color into this revolutionary spirit was Hakim-ul-Ummat Allama Muhammad Iqbal Lahori. And when the final moment arrived to shape this long struggle into a sovereign state, the principled stance and fearless political sagacity of the Founder of Pakistan, Quaid-e-Azam Muhammad Ali Jinnah, united this scattered nation under one flag. The financial backbone of the Pakistan Movement became the loyal leader Raja Amir Ahmed Khan of Mahmudabad, who laid his ancestral estate worth millions at the feet of the newborn state, while Mirza Abol Hassan Ispahani became the Quaid's trusted confidant on the economic and diplomatic fronts. Madar-e-Millat Mohtarma Fatima Jinnah and Begum Ra'ana Liaquat Ali Khan, among other revered women, proved that the Hussaini resolve and the universal message of Karbala run like a soul through the roots of this country. This was the core composition of this soil, where everyone, transcending sectarian divisions, pledged to live under the shadow of a monotheistic system, and in 1947, an independent country, 'Pakistan', emerged on the map of the world.
+</p>
+<p>
+Nearly a century later, Hussain's followers have once again repeated history under the sacred shadow of Minar-e-Pakistan. By organizing the "Shaheed-e-Ummat Conference," the zealous nation of Pakistan demonstrated unity, breaking free from the shackles of cultural onslaught by taghuti (tyrannical) powers, imperialism, and global adversaries. The grand "Shaheed-e-Ummat Conference" held under the shadow of Minar-e-Pakistan was practically a historic, immensely successful, and central hub for the unity of the Muslim Ummah. In this conference, individuals from all sects across Pakistan, political leaders, eminent scholars, mashaikh (spiritual leaders), respected reciters, and hundreds of thousands of passionate citizens belonging to every school of thought participated with unparalleled grandeur to send a message to global tyranny that all your conspiracies of division have failed, presenting an undeniable proof of being an "Ummah Wahida" (One Unified Nation) in the practical field. Overall, this conference was one that warmed the hearts; perhaps, like me, it is the heartfelt desire of the entire empathetic nation that these awakened hearts remain warm and never grow cold. Although this conference was organized through the efforts of the Shia community, serving as a supreme example of Muslim unity, maintaining this unity is not the task of a single sect alone—everyone must step forward. This is not merely the responsibility of any single party or group, but rather our collective national and religious duty.
+</p>
+<p style="text-align: center; font-style: italic; font-weight: bold;">
+Hum bikhray hue moti hain bas aik laree kay... Maloom hua ja kay yeh Mashhad ki zameen par
+(We are scattered pearls belonging to a single string; this truth was revealed upon reaching the soil of Mashhad.)
+</p>
+<p>
+The sight at Minar-e-Pakistan during the Shaheed-e-Ummat Conference was exactly the same; where scattered pearls appeared strung together in a single rosary. Individuals from all sects, political leaders, scholars, mashaikh, reciters, and hundreds of thousands of zealous citizens from every school of thought were seen gathered together. These individuals did not gather merely in a material sense, but were drawn together by a shared Hussaini ideology and vision. Here, the reality that a martyr never dies but lives eternally became vividly apparent. The martyrdom of the Shaheed-e-Ummat, Ayatollah Seyed Ali Hosseini Khamenei—his pure blood and his elevated soul, which are truly the collective asset of the entire Ummah—has shattered all idols of division and hatred. His supreme sacrifice has made Shias and Sunnis "one soul in two bodies," stringing them together in a single rosary. This is the "Rosary of the Ummah's Martyr!" If we continue to remain the rosary of this martyred leader, preventing its beads from scattering, and hold fast to this strong garment of unity, the coming times will serve as a precursor to a new revolution of unity on the global map.
+</p>
+<p>
+At Minar-e-Pakistan, all Husseinis, without any sectarian discrimination, raised the collective slogan of 'Labbaik ya Hussain (as)' with one voice, proving that the persona and path of Imam Hussain (peace be upon him) serve as such a guiding light that allows us to reject contemporary Yazidism and move unitedly toward the Hussaini objective. The nation of Pakistan proved at Minar-e-Pakistan that it is a zealous nation. By virtue of the martyr's blood, God has accomplished a masterpiece within the hearts that usually takes centuries of waiting to realize. The fragrance of divine mercy is blowing through the winds, announcing the glad tidings of the reappearance and arrival of the Hujjat-e-Qaim, Imam Mahdi (may Allah hasten his holy advent). Only one solution remains for our tribulations, which is the shared belief of all Muslims that Imam Mahdi (as) will arrive and fill the world with justice and equity, just as it will be filled with oppression and tyranny.
+</p>
+<p>
+A deeply reassuring and soul-stirring aspect of this conference was witnessing renowned and eminent scholars and personalities sitting side by side. I extend my heartiest congratulations to all these respected scholars who, on this occasion, set aside their various personal and ideological differences to sit together. For a long time, the nation had been dreaming this dream, which found a beautiful interpretation in this conference, shattering the designs of the adversaries. It is hoped that this sequence will continue in the future, as this conference has dismantled the hateful desires and malicious dreams of the enemies of Pakistan and Islam. Insha'Allah! As long as the fragrance of Husseinism and this spirit of unity exist within this soil, the green crescent flag of Pakistan will remain elevated and steadfast before every taghuti (oppressive) system.
+</p>
 
-            <p><strong>Skardu City: Suffering Crises under the Shadow of Beauty</strong></p>
-            <p>
-            If we talk about the heart of Baltistan, Skardu city, tourists from all over the world come to witness its breathtaking beauty, but the hardships endured by its residents are a painful lash on the face of time. The city's roads are dilapidated, severely disrupting local transportation and dealing a heavy blow to tourism.
-            During the winter season, when the temperature drops well below freezing, Skardu city does not get to see electricity for days on end. In the biting cold, darkness and freezing weather have been made the destiny of these people.
-            The severe crisis of clean drinking water, an underdeveloped transport system, and the non-availability of medicines and modern machinery in hospitals have made the lives of citizens miserable.
-            </p>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
-            <p><strong>The Tyranny of Airfares: A 40-Minute Journey and a 50,000 Rupees Ticket!</strong></p>
-            <p>
-            On one hand, Gilgit-Baltistan has not yet been granted the status of a full constitutional province, and on the other hand, a worst-case economic burden has been imposed on the poor local public and tourists in the form of astronomical airfares. While international flight tickets in neighboring countries start from 30,000 to 35,000 PKR, a one-way ticket for a mere 40-minute flight to Pakistan's own territory, Skardu, costs 40,000, 45,000, and sometimes up to 50,000 PKR!
-            Previously, it was only the monopoly of the national airline (PIA); now other private airlines have also started exploiting the situation to make a fortune. There is no concession for local patients, students, or poor residents, nor for tourists. This is sheer injustice and economic exploitation of the people of Gilgit-Baltistan, upon which the silence of the ruling authorities is criminal.
-            </p>
-
-            <p><strong>GBA-7, Skardu-1: Muhammad Ilyas—A New Ray of Hope</strong></p>
-            <p>
-            Against these darknesses and public deprivations, a highly active, vibrant, and sincere youth leader, Muhammad Ilyas, has entered the field of action as an independent candidate from the constituency of GBA-7 (Skardu-1). Unlike traditional politicians, Muhammad Ilyas does not believe in mere rhetoric; rather, he has brought an revolutionary and practical manifesto for the 2026 elections that possesses the potential to transform the destiny of Skardu.
-            Muhammad Ilyas's 21-point manifesto is not just a collection of promises, but a scientific and practical solution to every single problem of Skardu:
-            </p>
-
-            <ul>
-                <li><strong>Ending the Energy Crisis:</strong> To eliminate power outages, his top priority is to install modern machinery on the Hargisa Nullah for small hydro projects and to resolve defects to gain approval for the 5 MW project above Satpara Village, which has been delayed for fifteen years.</li>
-                <li><strong>Redressing Injustice in Solar Power:</strong> To raise a strong voice against the injustice where Skardu's share in the federally approved 100 MW solar project was reduced to just 6 MW, and to enforce Skardu city's master plan, which has been stuck for the past 5 years.</li>
-                <li><strong>Modern Drinking Water and Environment:</strong> Providing clean water through modern filtration plants and water lifting from the Hargisa Nullah and the river, alongside upgrading the Phyalong Water Diversion project to prevent water wastage.</li>
-                <li><strong>Health and Education Revolution:</strong> Ensuring the deployment of at least one medical doctor in every dispensary of Skardu, bringing medicines to hospitals, training teachers on modern lines, and providing personal patronage to educational institutions.</li>
-                <li><strong>Constitutional Rights and National Finance Commission (NFC):</strong> Struggling for Gilgit-Baltistan's share in the NFC award based on area and backwardness, and advancing toward a new Social Contract with the Federation of Pakistan on constitutional matters. This is the strongest and most far-reaching point of his manifesto.</li>
-                <li><strong>Inter-sectarian Harmony:</strong> Remaining ready at all times to promote love and mutual brotherhood among different sects on the soil of Skardu is the core principle of Muhammad Ilyas.</li>
-            </ul>
-
-            <p><strong>The Decision is Now in the Hands of the People!</strong></p>
-            <p>
-            O proud residents of Gilgit-Baltistan, especially Skardu! For the past several years, the plundering and dynastic politicians who engaged in mere lip-service will stand before you again with folded hands. But remember, if we do not support educated, capable, and sincere independent youth candidates like Muhammad Ilyas today, our future generations will continue to burn in the same hell of electricity, water, road crises, and expensive flights.
-            The 2026 elections are the day to change Skardu's destiny. The time has come to smash the idols of hereditary politics and enter Skardu into a new era of development by electing sincere youth like Muhammad Ilyas based on "manifesto and character."
-            Support Muhammad Ilyas in changing the destiny of the area and make him successful by voting for the electoral symbol 'Scooter'.
-            </p>
+<p style="text-align: center; font-weight: bold;">
+    <a href="https://www.islamtimes.com/ur/article/1285861/%D8%B4%D9%81%D9%8A%D8%AF-%D8%A7%D9%85%D8%AA-%DA%A6%DB%8C-%D8%AA%D8%B3%D8%A1%D9%8A%D8%AD-%D9%88%D8%AD%D8%AF%D8%AA" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;">
+        👉 Click here to read online on Islam Times
+    </a>
+</p>
             <br>
-            <div style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "20px",
-                justifyContent: "center",
-                alignItems: "stretch",
-                margin: "20px 0"
-            }}>
-                {/* Zamana News */}
-                <div style={{
-                    flex: "1 1 300px",
-                    maxWidth: "500px",
-                    textAlign: "center"
-                }}>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
                     <img 
-                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg" 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1781519972/shaheed_e_umat_ki_tasbih_zamana_news_2026-06-15_bsdcue.jpg" 
                         alt="Zamana News Newspaper Clipping" 
-                        style={{
-                            width: "100%", 
-                            height: "auto", 
-                            borderRadius: "12px", 
-                            boxShadow: "0 4px 15px rgba(0,0,0,0.15)"
-                        }}
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
                     />
-                </div>
-
-                {/* Daily Yome-e-Takbeer */}
-                <div style={{
-                    flex: "1 1 300px",
-                    maxWidth: "500px",
-                    textAlign: "center"
-                }}>
-                    <img 
-                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464289/GB_Election_daily_yome_e_Takbeer_2026-06-03.jpeg_uobdsv.jpg" 
-                        alt="Daily Yome-e-Takbeer Newspaper Clipping" 
-                        style={{
-                            width: "100%", 
-                            height: "auto", 
-                            borderRadius: "12px", 
-                            boxShadow: "0 4px 15px rgba(0,0,0,0.15)"
-                        }}
-                    />
-                </div>
-            </div>
         </div>
         `
-},
+    },
 
     {
-    "id": "209EN",
-    "category": ["column"], 
-    "title": "The Greatest Sacrifice", 
-    "date": "27-05-2026",
-    "paper": "Daily Mashriq News",
-    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
-    "excerpt": "A deep philosophical look into the true spirit of sacrifice, comparing the legacy of Prophet Ibrahim (A.S) and the tragedy of Karbala, while addressing human ego, arrogance, and family relationships.",
-    "content": `
+        "id": "209EN",
+        "category": ["column"],
+        "title": "The Greatest Sacrifice",
+        "date": "27-05-2026",
+        "paper": "Daily Mashriq News",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
+        "excerpt": "A deep philosophical look into the true spirit of sacrifice, comparing the legacy of Prophet Ibrahim (A.S) and the tragedy of Karbala, while addressing human ego, arrogance, and family relationships.",
+        "content": `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
         <p><strong>The Greatest Sacrifice</strong></p>
         <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
@@ -137,11 +87,11 @@ export const englishData = [
         </div>
     </div>
     `
-},
+    },
 
     {
         "id": "208EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "The Great Lesson of Hajj: Sacrifice of the Ego",
         "date": "26-05-2026",
         "paper": "Daily Zamana News",
@@ -168,10 +118,10 @@ export const englishData = [
         </div>
         `
     },
- 
+
     {
         "id": "207-EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "Abyar Ali (The Wells of Ali AS)",
         "date": "25-05-2026",
         "paper": "روزنامہ زمانہ نیوز",
@@ -208,11 +158,11 @@ Fadak: The Garden of Batool (AS) - Historical Background: Fadak was a highly fer
             </div>
         </div>
         `
-    }, 
- 
+    },
+
     {
         "id": "206-EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "Some Important Places in Medina",
         "date": "23-05-2026",
         "paper": "Daily Zamana News",
@@ -258,14 +208,14 @@ Fadak: The Garden of Batool (AS) - Historical Background: Fadak was a highly fer
             </div>
         </div>
         `
-    }, 
+    },
 
 
 
 
     {
         "id": "205-EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "Jannat al-Baqi: The First and Oldest Islamic Cemetery of Medina",
         "date": "22-05-2026",
         "paper": "Daily Zamana News",
@@ -306,11 +256,11 @@ Although exactly seventy companions were martyred on the battlefield of Uhud, so
             </div>
         </div>
         `
-    },  
-    
+    },
+
     {
         "id": "204-EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "A Journey Through the Other Mosques of Medina",
         "date": "May 21, 2026",
         "paper": "Daily Zamana News",
@@ -374,7 +324,7 @@ If you proceed from Bab Jibril (AS) of Masjid an-Nabawi (PBUH) towards Jannat al
     },
     {
         "id": "203-EN",
-        "category": ["column"], 
+        "category": ["column"],
         "title": "Al-Masjid an-Nabawi (PBUH)",
         "date": "May 20, 2026",
         "paper": "Daily Zamana News",
