@@ -37,8 +37,8 @@ function ArticlesContent() {
   useEffect(() => {
     setMounted(true);
     try {
-      const storedLikes = JSON.parse(localStorage.getItem('articleLikes') || '{}');
-      const storedViews = JSON.parse(localStorage.getItem('articleViews') || '{}');
+      const storedLikes = JSON.parse(localStorage.getItem('articleLikesV2') || '{}');
+      const storedViews = JSON.parse(localStorage.getItem('articleViewsV2') || '{}');
       setLikedArticles(storedLikes);
       setArticleViews(storedViews);
     } catch {
@@ -60,7 +60,7 @@ function ArticlesContent() {
     const key = getArticleKey(matched);
     setArticleViews(prev => {
       const updated = { ...prev, [key]: (prev[key] || 0) + 1 };
-      localStorage.setItem('articleViews', JSON.stringify(updated));
+      localStorage.setItem('articleViewsV2', JSON.stringify(updated));
       return updated;
     });
     setSelectedArticle(matched);
@@ -124,9 +124,37 @@ function ArticlesContent() {
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
-  const getBaseViews = (article) => 120 + ((Number(article.id) || 1) * 7);
-  const getBaseLikes = (article) => 15 + ((Number(article.id) || 1) * 2);
-  const getBaseComments = (article) => 3 + ((Number(article.id) || 1) % 9);
+  
+  // Consistent pseudo-random generator for varied but fixed views/likes/comments per article
+  const seededRandom = (seed) => {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      hash |= 0; // Convert to 32bit integer
+    }
+    return Math.abs(hash % 10000) / 10000;
+  };
+
+  const getBaseViews = (article) => {
+    const seed = `${article.id}-${article.title}`;
+    const rand = seededRandom(seed);
+    // Base views between 200 and 2000
+    return Math.floor(200 + rand * 1800);
+  };
+
+  const getBaseLikes = (article) => {
+    const seed = `${article.id}-${article.title}-likes`;
+    const rand = seededRandom(seed);
+    // Base likes between 20 and 200
+    return Math.floor(20 + rand * 180);
+  };
+
+  const getBaseComments = (article) => {
+    const seed = `${article.id}-${article.title}-comments`;
+    const rand = seededRandom(seed);
+    // Base comments between 3 and 50
+    return Math.floor(3 + rand * 47);
+  };
 
   const getStats = (article) => {
     const key = getArticleKey(article);
@@ -146,7 +174,7 @@ function ArticlesContent() {
     const key = getArticleKey(article);
     setLikedArticles(prev => {
       const updated = { ...prev, [key]: !prev[key] };
-      localStorage.setItem('articleLikes', JSON.stringify(updated));
+      localStorage.setItem('articleLikesV2', JSON.stringify(updated));
       return updated;
     });
   };

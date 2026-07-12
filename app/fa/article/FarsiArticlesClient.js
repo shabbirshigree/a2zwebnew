@@ -24,8 +24,8 @@ function FarsiArticlesContent() {
   useEffect(() => {
     setMounted(true);
     try {
-      const storedLikes = JSON.parse(localStorage.getItem('articleLikes') || '{}');
-      const storedViews = JSON.parse(localStorage.getItem('articleViews') || '{}');
+      const storedLikes = JSON.parse(localStorage.getItem('articleLikesV2') || '{}');
+      const storedViews = JSON.parse(localStorage.getItem('articleViewsV2') || '{}');
       setLikedArticles(storedLikes);
       setArticleViews(storedViews);
     } catch {
@@ -47,7 +47,7 @@ function FarsiArticlesContent() {
     const key = getArticleKey(matched);
     setArticleViews(prev => {
       const updated = { ...prev, [key]: (prev[key] || 0) + 1 };
-      localStorage.setItem('articleViews', JSON.stringify(updated));
+      localStorage.setItem('articleViewsV2', JSON.stringify(updated));
       return updated;
     });
     setSelectedArticle(matched);
@@ -85,11 +85,36 @@ function FarsiArticlesContent() {
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
+  
+  // Consistent pseudo-random generator for varied but fixed views/likes per article
+  const seededRandom = (seed) => {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      hash |= 0; // Convert to 32bit integer
+    }
+    return Math.abs(hash % 10000) / 10000;
+  };
+
+  const getBaseViews = (article) => {
+    const seed = `${article.id}-${article.title}`;
+    const rand = seededRandom(seed);
+    // Base views between 200 and 2000
+    return Math.floor(200 + rand * 1800);
+  };
+
+  const getBaseLikes = (article) => {
+    const seed = `${article.id}-${article.title}-likes`;
+    const rand = seededRandom(seed);
+    // Base likes between 20 and 200
+    return Math.floor(20 + rand * 180);
+  };
+  
   const getStats = (article) => {
     const key = getArticleKey(article);
     return {
-      views: 120 + (articleViews[key] || 0),
-      likes: 15 + (likedArticles[key] ? 1 : 0),
+      views: getBaseViews(article) + (articleViews[key] || 0),
+      likes: getBaseLikes(article) + (likedArticles[key] ? 1 : 0),
     };
   };
 
@@ -102,7 +127,7 @@ function FarsiArticlesContent() {
     const key = getArticleKey(article);
     setLikedArticles(prev => {
       const updated = { ...prev, [key]: !prev[key] };
-      localStorage.setItem('articleLikes', JSON.stringify(updated));
+      localStorage.setItem('articleLikesV2', JSON.stringify(updated));
       return updated;
     });
   };
