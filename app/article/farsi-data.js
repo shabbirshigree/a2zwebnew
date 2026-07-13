@@ -1,6 +1,304 @@
 export const farsiData = [
+    
     {
-        "id": "211FA",
+        "id": "224F",
+        "category": ["column"],
+        "title": "خداحافظ ای رهبر اسلام",
+        "date": "09-07-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>خداحافظ ای رهبر اسلام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>شهید سید علی خامنه‌ای (ره) آن رهبر بزرگ جهان اسلام است که در دلش همدردی، عشق، محبت و برادری موج می‌زد. به همین دلیل است که امروز تمام جهان در تشییع پیکر او گرد هم آمدند. نمایندگان بیش از صد کشور در مراسم تشییع وی شرکت کردند. تنها در تهران، حضور حدود ۲۰ میلیون نفر در این مراسم گزارش شده است...</p>
+            <br>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg" alt="روزنامه مشرق" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" />
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/islamtimes_2026-07-10_174650_fcv545.jpg" alt="اسلام تایمز" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" />
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931842/Alwida_a_Rehbar_e_Islam_siasiat_2026-07-10_ktbcbr.jpg" alt="سیاسیات" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" />
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931844/Alwida_Rebar_Zamana_ews_2026-07-11_at_8.31.59_AM_hhkcfs.jpg" alt="زمانه نیوز" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);" />
+                </div>
+            </div>
+            <br>
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; border: 1px solid #e0e0e0; text-align: center;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">لینک‌های مطالعه آنلاین:</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://mashriqakhbar.com.pk/page/p4/2026-07-10/1" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">🔗 روزنامه مشرق</a>
+                    <a href="https://siasiyat.com/%da%a9%d8%a7%d9%8الوداع-اے-رہبر-اسلام/" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">🔗 سیاسیات</a>
+                    <a href="https://www.islamtimes.com/ur/article/1291117/%D8%A7%D9%84%D9%88%D8%AF%D8%A7%D8%B9" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">🔗 اسلام تایمز</a>
+                </div>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "214F",
+        "category": ["column"],
+        "title": "خاطرات کربلا - اول محرم الحرام",
+        "date": "17-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>خاطرات کربلا - اول محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>چندی پیش زائران ما پس از کسب فیض زیارت سرزمین کربلا بازگشتند، اما آن درد و بی‌قراری که در سرزمین مقدس کربلا احساس کردیم هنوز در دل‌ها تازه است. از نظر جسمی به خانه‌های خود بازگشته‌ایم، اما رشته‌ای بی‌نظیر از ارادت و عشق روح ما را همچنان به کربلا پیوند داده است...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">ستون چاپ شده در روزنامه زمانه نیوز امروز:</p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg" alt="ستون روزنامه زمانه نیوز" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s ease;">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "215F",
+        "category": ["column"],
+        "title": "دوم محرم الحرام",
+        "date": "20-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>دوم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>ورود به کربلا و ذکر سقای سکینه (س). سفر ارادت سرشار از معنویت در سرزمین کربلا ادامه دارد. کاروان ما در دشت نینوا خیمه گزیده است و یاد و خاطره فداکاری‌های بی‌نظیر حضرت ابوالفضل العباس (ع) دل‌ها را مالامال از اندوه می‌کند...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">ستون چاپ شده در روزنامه زمانه نیوز امروز:</p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg" alt="روزنامه زمانه نیوز" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "216F",
+        "category": ["column"],
+        "title": "سوم محرم الحرام",
+        "date": "21-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>سوم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>روزها و شب‌های ارادت در خاک نینوا جاری است و ما در بخشی از ضریح مطهر مولا امام حسین (ع) قرار داریم که غمناک‌ترین خاطرات تاریخ در آن نهفته است. ضریح حبیب بن مظاهر و یاد فداکاری‌های پیر غلام کربلا در این روز دل‌ها را می‌لرزاند...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png" alt="کالم" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "217F",
+        "category": ["column"],
+        "title": "چهارم محرم الحرام",
+        "date": "22-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>چهارم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>فداکاری‌های عون و محمد (ع). تداوم شب‌ها و روزهای ارادت در سرزمین نینوا برقرار است و کاروان ما افتخار دارد که به پیشگاه فرزندان حضرت زینب کبری (س) یعنی حضرت عون و حضرت محمد (ع) سلام و درود بفرستد...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png" alt="کالم" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "218F",
+        "category": ["column"],
+        "title": "پنجم محرم الحرام",
+        "date": "22-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>پنجم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>جوانمردی حبیب بن مظاهر پیرِ میدان عشق. زمین نینوا شاهد حضور لشکریان باطل در برابر ۷۲ تن از یاران وفادار امام حسین (ع) است. عبیدالله بن زیاد در کوفه شرایط را بر مردم سخت‌تر کرده تا کسی به یاری جبهه حق نشتابد اما عزم اصحاب اباعبدالله راسخ‌تر می‌شود...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">ستون چاپ شده در روزنامه زمانه نیوز امروز:</p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg" alt="روزنامه زمانه نیوز" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "219F",
+        "category": ["column"],
+        "title": "ششم محرم الحرام",
+        "date": "22-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>ششم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>حضرت قاسم بن حسن (علیه السلام). روزهای امتحان الهی در سرزمین نینوا سخت‌تر و سنگین‌تر می‌شود. یاد شهادت مظلومانه قاسم بن حسن و نامه‌ای که از پدرش امام حسن مجتبی (ع) در بازو داشت دل هر عزاداری را به درد می‌آورد...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">ستون چاپ شده در روزنامه زمانه نیوز امروز:</p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" alt="روزنامه زمانه نیوز" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "220F",
+        "category": ["column"],
+        "title": "هفتم محرم الحرام",
+        "date": "23-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>هفتم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>نور کربلا و سفر روحانی هفتم محرم. قطع کامل آب بر خیمه‌گاه حسینی آغاز شد. خطبه‌ها و اتمام حجت‌های امام با لشکریان کوفه و فداکاری بی‌نظیر علمدار کربلا برای آوردن آب از رود فرات در تاریخ ثبت شده است...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" alt="روزنامه زمانه نیوز" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "221F",
+        "category": ["column"],
+        "title": "هشتم محرم الحرام",
+        "date": "24-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>هشتم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد Shigree</strong></p>
+            <p>مصائب شبیه‌ترین فرد به پیامبر، حضرت علی اکبر (ع). این بخش از دفتر خاطرات نینوا به نام شجاعت و مظلومیت حضرت علی اکبر (ع) اختصاص دارد، جوانی که آینه تمام‌نمای رسول خدا بود و امام با چه دلی او را روانه میدان کرد...</p>
+            <br>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" target="_blank" rel="noopener noreferrer">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg" alt="کالم" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                </a>
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "223F",
+        "category": ["column"],
+        "title": "روز عاشورا",
+        "date": "26-06-2026",
+        "paper": "روزنامه مشرق نیوز",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>روز عاشورا</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>امروز روز عاشوراست؛ دردناک‌ترین روز در تاریخ بشریت که سرور شهیدان امام حسین (ع) غریب و تنها در میان سیل تشنه‌کامان کارزار عشق حماسه‌ای ابدی آفرید و سر مبارکش مظلومانه از تن جدا شد تا اسلام زنده بماند...</p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg" alt="روزنامه مشرق" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+        `
+    },
+    {
+        "id": "222F",
+        "category": ["column"],
+        "title": "نور کربلا و سفر روحانی - نهم محرم الحرام",
+        "date": "25-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Vazirmatn', Tahoma, serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>نور کربلا و سفر روحانی - نهم محرم الحرام</strong></p>
+            <p><strong>نوشته: حاجی شبیر احمد شگری</strong></p>
+            <p>شب‌های غم در سرزمین نینوا به اوج خود می‌رسد و نهم محرم متعلق به سپهسالار و علمدار لشکر حسینی، باب الحوائج حضرت عباس (ع) است که با لب تشنه بر لب رود فرات حماسه‌ساز وفا شد...</p>
+        </div>
+        `
+    },
+
+                {
+        "id": "212F",
+        "category": ["column"],
+        "title": "مرکزِ اصحابِ کساء",
+        "date": "16-06-2026",
+        "paper": "روزنامہ زمانہ نیوز",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
+            <p><strong>مرکزِ اصحابِ کساء</strong></p>
+            <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
+
+            <p>کربلا تنها نام یک بقعه جغرافیایی نیست که شاهد یک رویداد تاریخی گذرا بوده باشد، بلکه مدرسه‌ای ابدی برای بازسازی اندیشه، اخلاق و روح انسانی است؛ مدرسه‌ای که ارکان آن بر ایثار، فداکاری، جود و سخاوت بنا شده است. در سال ۶۱ هجری، در گرمای سوزان بیابان کربلا، یزیدیت با تحریم آب بر آل رسول اکرم (صلی الله علیه و آله و سلم)، به اوج وحشی‌گری و طغیان خود رسید، چندان که انسانیت بر رنجِ کودکانی که از تشنگی به خود می‌پیچیدند، گریست. اما تاریخ شاهدی ابدی است بر این که یزیدیت، با وجود قطع کردن آب، شکست خورد و در هم شکست، در حالی که حسینیت با تشنگی خود پیروز شد تا امروز و هر روز بر تخت دل‌های کائنات تکیه زند. پس از گذشت چهارده قرن، اینک همان ذهنیت حسینی بار دیگر در قالب یکی از مؤسسات آستان مقدس حسینی، یعنی «مرکز اصحاب الکساء علیهم السلام» تجسم یافته است تا مرهم و فریادرسی باشد که تشنگی تشنه‌کامان را سیراب کند و نیازهای اساسی را در دورافتاده‌ترین و فقیرترین کشورهای جهان برآورده سازد. این بزرگ‌ترین پارادوکس تاریخ است؛ در حالی که یزیدیت با قطع آب، مرگ را توزیع می‌کرد، حسینیت امروز در آن نقاط دوردست که کودکانش از تشنگی می‌پیچند، ایستاده است تا صدها چاه آب زلال حفر کند و به آنان زندگی ببخشد. گوهر حقیقی اندیشه حسینی در حضور فعال و پاسخگویی فوری نهفته است؛ هر جا انسانی تشنه، محروم یا هدف تهاجم فکری و عقیدتی قرار گرفت، پیروان حسین لبیک‌گویان شتافتند. این مسیر عشق از کربلا آغاز شد و امروز برای خدمت به انسانیت در نقاط مختلف جهان جاری است.</p>
+
+            <p>تبلیغ و ارشاد در دین مبین اسلام از والاترین مسئولیت‌های اجتماعی و شرعی، و بلکه رکن اساسی و نخستین رسالت انبیا، مرسلین و اولیای صالحین است. همان‌طور که در قرآن کریم در سوره توبه به صراحت آمده است، تفقه در دین و کسب بصیرت در آن، و سپس انذار و ارشاد، فریضه‌ای واجب کفایی بر امت است. در عصر مادی و دیجیتال کنونی ما، که شک‌ها و شبهات بر عقول سایه افکنده و موج‌های تهاجم فکری و نظریه‌های باطل، ایمان را هدف قرار داده‌اند، نشر معارف اهل بیت علیهم السلام و علوم حقّه آنان، والاترین فراخوان و مؤکدترین واجب گشته است. چنان‌که از امام علی بن موسی الرضا علیه السلام در سخن شریفشان روایت شده است که: «اگر مردم زیبایی‌های کلام ما را می‌دانستند، از ما پیروی می‌کردند». از این منظر فکری الهی و روش مبارک حسینی، این بعثه جهانی تأسیس شد تا از سرزمین کربلای معلی در جهت تحقق اهداف آگاهی‌بخشی فکری و ارشاد جهانی حرکت کند.</p>
+
+            <p>مرکز جهانی ارشاد بین‌المللی اصحاب الکساء در سال ۲۰۱۶ میلادی مصادف با سال ۱۴۳۷ هجری قمری تحت رهبری جناب شیخ احمد الطرفی (دامت توفیقاته) تأسیس شد. با توجه به تلاش‌های مخلصانه و اهمیت والای این مرکز، این نهاد مشمول عنایت کریمانه مستمر و حمایت ویژه تولیت شرعی آستان مقدس حسینی، جناب شیخ عبدالمهدی الکربلائی (دام عزه) قرار گرفت، تا اینکه در سال ۲۰۲۲ میلادی مصادف با سال ۱۴۴۴ هجری قمری به طور رسمی در ساختار سازمانی و اداری آستان مقدس حسینی ادغام شد. هدف اساسی مرکز، ساختن پل‌های ارتباطی قوی، هدفمند و مؤثر با مؤمنان در سراسر جهان و نشر معارف حقه با حکمت و موعظه حسنه است. تمام مسیر این مرکز مستند به عهدنامه تاریخی و جاودان مولایمان امیرالمؤمنین علی بن ابی طالب علیه السلام به مالک اشتر است آن‌گاه که فرمود: «چرا که آنان دو دسته‌اند: یا برادر دینی تو هستند، یا هم‌نوع تو در آفرینش».</p>
+
+            <p>این مرکز در کنار اینکه دژی استوار برای پاسداری از مرزهای فکری و عقیدتی است، در خطوط مقدم خدمت عملی به انسانیت ایستاده است. در قاره آفریقا و در مناطق دورافتاده‌ای چون کشور ساحل عاج، جایی که خشکسالی و محرومیت جان ساکنان را می‌گیرد و هر ساله جان‌های بسیاری به دلیل کمبود آب از دست می‌رود، این مرکز با الهام از یاد تشنگی امام حسین و برادرش سقا و اسوه فضایل، ابوالفضل العباس علیهما السلام، به پا خاست تا صدها چاه ارتواز برای تأمین آب آشامیدنی سالم و برآوردن نیازهای سخت معیشتی حفر کند. تأمین آب در روستاها و بخش‌های محروم، تنها یک کار خیریه گذرا نیست، بلکه پیامی زنده به جهانیان است که پیروان مکتب حسینی هرگز نمی‌توانند انسانیت را در حال ناله زیر بار تشنگی یا محرومیت رها کنند.</p>
+
+            <p>راهبرد فعال مرکز جهانی اصحاب الکساء در مسیرهای متعددی توزیع شده است که از طریق آن‌ها مأموریت‌های بین‌المللی خود را انجام می‌دهد؛ مبلغان مرکز میان شهرها و روستاهای دوردست سفر می‌کنند تا از مساجد، مدارس و خانه‌های مؤمنان بازدید کرده و از احوال روحی و انسانی آنان باخبر شوند و نشست‌های فکری در زمینه‌های عقیده، فقه، اخلاق و سیره اهل‌بیت اطهار برگزار نمایند. همچنین این مرکز بر مدارس دینی وابسته به خود مانند مدرسه امام حسین علیه السلام نظارت دارد و برای تدوین برنامه‌های آموزشی و تربیتی استوار تلاش می‌کند، در حالی که تمامی امکانات و منابع مادی و مالی را برای تداوم آن‌ها فراهم می‌سازد. افزون بر این، مدیریت وفود بین‌المللی را بر عهده دارد؛ به گونه‌ای که مرکز وظیفه استقبال از هیئت‌های قادم از کشورهای مختلف جهان به عراق و کربلای معلی، تأمین مسکن آنان، تنظیم جلسات علمی و فرهنگی برای آن‌ها و آشنا کردن آنان با اماکن مقدس و تاریخ کهن آن را بر عهده دارد. این فعالیت فراتر رفته و شامل ارتباط فکری و عقیدتی با علمای بزرگوار و شخصیت‌های تأثیرگذار جهانی که به عراق سفر می‌کنند می‌شود، تا درباره پروژه‌های مشترک با هدف نشر رسالت هدایت در سطح بین‌المللی گسترده گفتگو شود.</p>
+
+            <p>مرکز جهانی ارشاد بین‌المللی اصحاب الکساء، که تحت لوای آستان مقدس حسینی فعالیت می‌کند، به مشعلی درخشان بدل شده است که جهان را برای نشر رستگاری انسانی، هدایت اخلاقی و آگاهی فکری می‌پیماید. از حفر چاه‌های آب سیراب‌کننده تا روشن کردن مشعل‌های علم و هدایت، هر گام از گام‌های این مرکز با عزم حسینی و تپش اصیل کربلایی سخن می‌گوید. این خدمات مخلصانه بهترین دلیل است بر اینکه تا زمانی که نام و شعله فروزان حسین در جهان می‌تپد، انسانیت هرگز تنها رها نخواهد شد. از خداوند علی قدیر خواستاریم که بر توفیقات مؤسسان این مرکز، حامیان و کادر آن بیفزاید و این تلاش‌های علمی و انسانی را به بهترین وجه در میان برکات فراوان خود پذیرا باشد.</p>
+
+            <br>
+            <div style="text-align: center;">
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg" alt="مرکز اصحاب کساء" style="max-width: 100%; border-radius: 8px;">
+            </div>
+            <br>
+
+            <p style="text-align: center; font-weight: bold;">
+                <a href="https://res.cloudinary.com/drlg0dr9y/video/upload/v1783923481/Markaz-eAshab-e-kisa-farsi-ezgif.com-gif-maker_cqymni.webm" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;">
+                    حاجی شبیر احمد شگری کی اس تحریر پر گوگل کا زبردست تجزیہ اور ویڈیو پوڈ کاسٹ دیکھنے کے لئے کلک کریں۔
+                </a>
+            </p>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <video width="100%" height="420" controls playsinline style="border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                    <source src="https://res.cloudinary.com/drlg0dr9y/video/upload/v1783923481/Markaz-eAshab-e-kisa-farsi-ezgif.com-gif-maker_cqymni.webm" type="video/webm">
+                    <source src="https://res.cloudinary.com/drlg0dr9y/video/upload/v1783923481/Markaz-eAshab-e-kisa-farsi-ezgif.com-gif-maker_cqymni.mp4" type="video/mp4">
+                    آپ کا براؤزر ویڈیو ٹیگ کو سپورٹ نہیں کرتا۔
+                </video>
+            </div>
+        </div>
+        `
+    },
+    
+    {
+        "id": "211F",
         "category": ["column"],
         "title": "تسبیح وحدتِ شهید امت",
         "date": "14-06-2026",
