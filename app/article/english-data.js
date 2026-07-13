@@ -1,5 +1,254 @@
 export const englishData = [
     {
+        "id": "224EN",
+        "category": ["column"],
+        "title": "Farewell, O Leader of Islam",
+        "date": "09-07-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>Farewell, O Leader of Islam</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+Martyr Ayatollah Seyyed Ali Khamenei is that great leader of the Islamic world whose heart was filled with compassion, love, affection, and brotherhood for everyone. That is why today the entire world gathered in his funeral. Representatives from over one hundred countries participated in his funeral ceremony. In Tehran alone, approximately twenty million people are said to have taken part. For this ceremony, Tehran's metro alone reported transporting over seven million people. It may not be possible to estimate the number of people in other cities, including Iraq. Such a great funeral, which took place several months after his martyrdom, has no precedent in history. The norm of the world is that people forget someone's death within a few days. But who is Khamenei, who has won the hearts of the entire world, especially the entire Muslim world? There are two major reasons for this: first, he fully supported the oppressed of the entire world, especially Palestine; second, he rendered great services for the unity of the Muslim world. But that is not all; behind this lies a great series of training and services that makes him truly effective. A few days ago, his assets were revealed; apart from a pickup truck, he owned nothing. Not even a bank account. Such a humble personality, to whom billions of rupees came, but he lived a simple life. I remember, many years ago, a picture of him in torn shoes in a meeting with some head of state became very famous. In this simplicity, his parents' training had a big role. Martyr Ayatollah Khamenei himself says about his father: "My father was a famous and renowned religious scholar and very pious and abstinent. He was often reclusive and secluded. Our life was very difficult; sometimes we didn't have dinner at home! My mother would prepare dinner for us with great hardship, and that dinner would be 'bread and raisins'. The place where I was born was a house of about sixty or seventy square meters, which was a neighborhood of the poor people of Mashhad. And we see that this simplicity continued until his last days.
+Although due to limitations, it is not possible to publish writing about his entire life here, but listening to the things that his old companion, Hujjat al-Islam wa al-Muslimin Mohammadi Golpayegani, has told about his personal life also makes the heart and eyes bow in reverence for Martyr Ayatollah Khamenei.
+Agha Golpayegani says that he was an extraordinary and wise scholar and a very capable preacher. His personal life is a lesson for all of us. His life was so simple that he would say to me: "All the belongings of my personal life (apart from books) can fit in a pickup truck, including the kitchen and fridge." The allure of the world misled many, but when the whole world was looking towards him, he would push it back. He acted on the saying of Amir al-Mu'minin Ali (peace be upon him): "O world, I have divorced you three times." Valuable gifts would come from all over the world for him, but he wouldn't even look at them. He would take according to ordinary need and send the rest to the aid committee or the poor.
+He was bound by this that if he officiated someone's marriage, the mahr (dowry) would not be more than 14 gold coins. Ayatollah Golpayegani says that at the time of my daughter's marriage, who is his eldest daughter, I said: "Agha, write whatever you want for the mahr." He said: "Meaning, what I preach to people, should I set more than that for myself? No, my daughter's mahr will also be those same 14 coins." All four of his sons are religious scholars, and he has two daughters. My granddaughter was mostly in his lap. He was very affectionate towards that child. Once, in his presence, the topic of martyrdom came up. He became tearful. He said: "Insha'Allah, we will all be martyred together."
+Ayatollah says that in official meetings, I was often with him; he would appear the most prominent and superior. He would speak a few words and they would have an impact. Russian President Putin, who met him for the first time, was advising me after the meeting: "Take care of Agha."
+The martyr leader's memory was very exceptional and strong. Memories of the distant past were preserved in his mind, and he was unparalleled in the science of rijal (biographical evaluation). He was very familiar with the Quran. He would complete the recitation of the Quran twice every Ramadan. He had complete mastery over the Holy Quran.
+Golpayegani says that in the last two or three months, I was feeling that he was preparing himself. Whenever any military officer would come and give a report, he would say with full courage: "There is nothing, you rest assured that you will be victorious." His words had a great impact on military officers. He himself would perform the duties of the Supreme Commander of the Armed Forces; today, thanks to his leadership, our armed forces are at a position where America and Israel are trembling.
+He always maintained trust in Allah and recourse to the Ahl al-Bayt (peace be upon them). Among the Fourteen Infallibles (peace be upon them), his most attention was towards Hazrat Fatima Zahra (peace be upon her), Imam Hussain (peace be upon him), and Hazrat Imam Mahdi (may Allah hasten his reappearance). In the Jamkaran Mosque, he would perform long prostrations in seclusion and weep. He was a true lover of Imam Khomeini (peace be upon him). The saying of the Prophet of Allah (peace and blessings be upon him) is: "The death of a scholar is heavier than the death of an entire nation," and he was a very majestic scholar. Imam Khomeini (peace be upon him) did his work and left, and after him, Agha took those works one by one to completion.
+Pakistani officials have played an important role in recent negotiations and peace efforts, but on the martyrdom of this great leader, the people of all circles and schools of thought of Pakistan have intense devotion to him, and the reaction to his martyrdom is not the same. Ayatollah Khamenei (peace be upon him) also loved the Pakistani people very much; he openly expressed this in his life. He also gave a strong reaction on the Kashmir issue. Once, when there were severe floods in Pakistan, he wept and stressed to the officials to provide all possible help to the flood victims of Pakistan. He had intense devotion to Allama Iqbal (peace be upon him); he used to say that I am a follower of Iqbal. And he had 2000 verses of Iqbal memorized. Before the Islamic Revolution of Iran, he also wrote a book on Allama Iqbal. Although his political leadership was prominent, he was also an excellent poet. Every year during the journey to Mashhad, he would dedicate one day specifically to meeting with old and prominent poets. He would spend two or three hours with them, recite poetry, and listen. He would also invite several Pakistani poets to those gatherings. We do not know more about these things because the responsibility of his political leadership had hidden his other unparalleled virtues (poet, preacher, sage, jurist).
+Ayatollah Khamenei (peace be upon him) also visited Pakistan four decades ago when he was the President of Iran. Which was not only a political journey but also a glimpse of a luminous caravan of spirit and heart. At that time, he was given a grand welcome. It was a strange devotion-filled welcome in which many elderly men and women from the suburbs of Lahore walked a distance of forty kilometers on foot just with the hope that they would be blessed with the sight of Ayatollah Khamenei. The streets of Allama Iqbal's (peace be upon him) city were resounding with the slogans of "Labbaik Khamenei". It was estimated that it would take 45 minutes to reach Iqbal's tomb, but the rush of affection made that journey take four hours. Today, that same love and devotion is also seen in his funeral, wherever his funeral procession reached, an unprecedented welcome was given. And finally, in the holy Mashhad, his final resting place was established in the shrine of his ancestor, Imam Ali ibn Musa al-Ridha (peace be upon him), of which shrine he was also the custodian for some time. Imam Reza (peace be upon him) must also have embraced him with open arms. May Allah Almighty grant this great martyr leader of the Muslim world a place in His special proximity of mercy, from whose entire life the enemy was afraid, and now from his martyrdom, the palaces of those tyrants are trembling.
+
+</p>
+         <br>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg" 
+                        alt="Daily Mashriq Clipping" 
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
+                    />
+                </div>
+            </div>
+        </div>
+
+           <br>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/islamtimes_2026-07-10_174650_fcv545.jpg" 
+                        alt="Islamtimes Clipping" 
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
+                    />
+                </div>
+            </div>
+        </div>
+
+
+            <br>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931842/Alwida_a_Rehbar_e_Islam_siasiat_2026-07-10_ktbcbr.jpg" 
+                        alt="Siasat Newspaper Clipping" 
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
+                    />
+                </div>
+            </div>
+        </div>
+  
+            <br>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+                <div style="flex: 1 1 300px; max-width: 500px; text-align: center;">
+                    <img 
+                        src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931844/Alwida_Rebar_Zamana_ews_2026-07-11_at_8.31.59_AM_hhkcfs.jpg" 
+                        alt="Zamana News Newspaper Clipping" 
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);"
+                    />
+                </div>
+            </div>
+        </div>
+        <br>
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; border: 1px solid #e0e0e0; text-align: center;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">
+                    Links to read online:
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://mashriqakhbar.com.pk/page/p4/2026-07-10/1" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                        🔗 Daily Mashriq
+                    </a>
+                    
+                    <a href="https://siasiyat.com/%da%a9%d8%a7%d9%84%d9%85%d8%b2/%d8%a7%d9%84%d9%88%d8%af%d8%a7%d8%b9-%d8%a7%db%92-%d8%b1%db%81%d8%a8%d8%b1-%d8%a7%d8%b3%d9%84%d8%a7%d9%85/" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                        🔗 Siasat
+                    </a>
+                    
+                    <a href="https://www.islamtimes.com/ur/article/1291117/%D8%A7%D9%84%D9%88%D8%AF%D8%A7%D8%B9-%D8%A7%DB%92-%D8%B1%DB%81%D8%A7%D8%B1-%D8%A7%D8%B3%D9%84%D8%A7%D9%85" target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                        🔗 Islam Times
+                    </a>
+                </div>
+            </div>
+            <br>
+`
+    },
+
+    {
+        "id": "214EN",
+        "category": ["column"],
+        "title": "Karbala Diary - 1st Muharram al-Haram",
+        "date": "17-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>Karbala Diary - 1st Muharram al-Haram</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+Some time ago, our pilgrims returned after being blessed with the visitation of the land of Karbala, but the pain and restlessness are still fresh in our hearts, which we felt on the sacred land of Karbala. Physically, we have returned to our homes, but a unique thread of devotion and love still connects our souls to Karbala. The heart's only wish and prayer is that until the moment of death, this thread of devotion never breaks, and this restlessness keeps pulling us again and again to the sacred threshold of Karbala.
+Our journey of love started from Islamabad, from where we reached Najaf al-Ashraf via airplane. After landing at Najaf Airport, we immediately left for Karbala Mu'alla. This long route from Najaf to Karbala (the Road of the Pilgrims) is filled with countless processions on both sides of the road, where countless lovers of Hussain (peace be upon him) are present day and night to serve the pilgrims of the Imam.
+There is a strange sight there; the people of the processions request the pilgrims: "Take something from us to eat and give us the opportunity to serve and earn reward." All kinds of food from around the world are presented in front of the pilgrims, and those who cannot do anything must at least offer water. Someone is polishing the shoes of the pilgrims of Hussain (peace be upon him), someone is pressing their feet with devotion, and someone is kissing their feet; because all of them know the high status of a Hussaini pilgrim. A Hussaini pilgrim is one on whose feet the dust falls, from which the Most Merciful forgives the sins of a human being.
+We have seen at the time of Hajj that there are only 2.5 or 3 million pilgrims, and the entire government machinery is in motion to handle them, but in Karbala, at the time of Ashura and Arbaeen, an ocean of millions of pilgrims surges. Here, all arrangements are made by people 'self-help' sincerely, but Alhamdulillah, no untoward incident occurs. This is an invitation to thought and a living miracle for the world.
+When we reached the land of Karbala, although a considerable part of the night had passed, how can a lover sleep without greeting the Master? Therefore, first of all, we went to present ourselves and greet at the holy shrine of Ghazi Abbas Alamdar (peace be upon him).
+For the visitation of those Infallibles (peace be upon them), the enthusiasm and fervor with which a person comes, that is worth seeing, but when the time of return (farewell) comes, that scene is the scene of the Day of Judgment. According to the poet, it is exactly like a suckling (milk-drinking) child being separated from his mother; saying farewell to the holy shrine is equally agonizing and difficult for a human being. A person leaves from there only with the hope that "Insha'Allah, the Master will soon bless us with the honor of visitation again."
+Now that the moon of Muharram al-Haram has been sighted and the month of grief has begun, history tells us that as soon as Imam Hussain (peace be upon him) set foot on the land of Karbala, the earth of Karbala turned yellow and a dust arose that made the signs of distress apparent on his (peace be upon him) holy face. Seeing this, his (peace be upon him) companions became frightened and Lady Umm Kulthum (peace be upon her) began to weep.
+The author of 'Makhzan al-Buka' writes that immediately after entering Karbala, Lady Umm Kulthum (peace be upon her) submitted to Imam Hussain (peace be upon him): "Brother! What kind of land is this that as soon as we come here, our hearts are trembling?" Imam Hussain (peace be upon him) said: "Sister! This is exactly that place where Father (Amir al-Mu'minin, peace be upon him) saw a dream during the journey of Siffin, meaning this is that place where our blood will be shed."
+Imam Hussain (peace be upon him) formally announced: "This is the place to unload our camels and belongings, and this is the place where our blood will be shed." And after that, he ordered that the belongings be unloaded right here. And it was done so. That was Thursday, the day of 2nd Muharram, while according to another narration, that was Wednesday, i.e., 1st Muharram, 61 AH.
+It is narrated that after encamping in Karbala, Imam Hussain (peace be upon him) gathered his sons, brothers, and family, cast a glance at all of them, he (peace be upon him) wept and submitted in the court of the Almighty: "O Lord! We are the progeny of Your Prophet (peace and blessings be upon him), we have been expelled from our city and abode (Medina), and we have been evicted confused and distraught from the shrine of our grandfather, the Messenger of Allah (peace and blessings be upon him). O Lord! The Banu Umayyah have committed aggression against us. O Lord! Then take our right from them and grant us help (assistance) against the tyrants."
+After that, he (peace be upon him) turned towards the companions and spoke that historic sentence: "People are slaves of the world, and religion is only on their tongues..."
+After Imam Hussain (peace be upon him) and the companions of Karbala dismounted on the ground, Hur ibn Yazid Riyahi wrote a letter to Ubayd Allah ibn Ziyad and informed him of the Imam's (peace be upon him) encampment. As soon as the letter was received, Ubayd Allah sent a harsh and severe letter in the name of Imam Hussain (peace be upon him), in which he had written:
+"Now then! O Hussain, we have received news of your encampment in Karbala. The Commander of the Faithful, Yazid ibn Muawiyah, has ordered me that I should not sleep in comfort nor eat my fill until I kill you or make you agree to obey his and Yazid's orders. And peace."
+It is narrated that after reading the letter, Imam Hussain (peace be upon him) threw it aside and said: "Those who have preferred the pleasure and approval of the creation over the pleasure of Allah will never attain salvation."
+Ibn Ziyad's messenger said: "O Aba Abd Allah! Will you not give a reply to the letter?"
+The Imam (peace be upon him) said: "The reply to this letter is the painful punishment of Allah, which will soon seize him."
+The messenger returned to Ibn Ziyad and repeated the words of Imam Hussain (peace be upon him) in front of him. Hearing this, Ubayd Allah immediately issued an order to form an army for war against Imam (peace be upon him).
+To be continued.
+
+</p>
+<br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">
+                    Today's column published in Daily Zamana News:
+                </p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg" alt="Today's column published in Daily Zamana News" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s ease;">
+                </a>
+            </div>
+            <br>
+
+`
+    },
+
+
+    {
+        "id": "215EN",
+        "category": ["column"],
+        "title": "2nd Muharram al-Haram",
+        "date": "20-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>2nd Muharram al-Haram</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+Entering Karbala and the mention of the quenching of Sakina's (peace be upon her) thirst.
+A journey of devotion filled with spirituality continues on the land of Karbala. Today's visitation in Karbala began with presenting the gift of greetings at the shrine of the Lion of the Universe, the Victorious, Abbas ibn Ali Alamdar (peace be upon him). In this spirit-filled beginning of the visitation of Ghazi Abbas (peace be upon him), we included in our representation all those believers, believing women, and especially those deceased who had requested us that whenever we stand at the sacred threshold of Karbala, we should not forget them in our prayers.
+Ghazi Abbas (peace be upon him) is that great personality about whose unparalleled loyalty and courage, the family of Muhammad (peace and blessings be upon him) themselves were proud. History is a witness that between Mola Hasan (peace be upon him), Mola Hussain (peace be upon him), and Abbas (peace be upon him), there was only a difference of "Imamate"; otherwise, the splendor, beauty, and perfection of Mustafa (peace and blessings be upon him) and Ali (peace be upon him) were fully present in the being of the Alamdar of Karbala.
+When, one by one, all the supporters and martyrs of Mola Hussain (peace be upon him) were sacrificed in the plain of Nineveh, then the incarnation of loyalty, Ghazi Abbas (peace be upon him), came to his oppressed brother and Imam (peace be upon him) and requested permission for war in a poignant tone. The oppressed Imam (peace be upon him) looked at the face of his dear brother, his heart filled, and said: "Abbas! You are the standard-bearer of my army; from the fluttering of your standard, the innocent children in the tents find solace, their hearts remain bound. But brother, if now it is decided to go, then just see, bring a little water from somewhere for my thirsty Sakina (peace be upon her)."
+When Hazrat Abbas (peace be upon him) came to leave from the door of the tent, then the partner of al-Hussain, Lady Zainab al-Kubra (peace be upon her), remembered that terrible night of 21 Ramadan in Kufa, when Father, Hazrat Ali (peace be upon him), while in an injured state, sitting on the bed of martyrdom, mentioned to his daughter the tribulations of Karbala and the unveiling of the curtain. Lady Zainab (peace be upon her) thought at that time that the sister whose guardian is a brother like Abbas (peace be upon him), well, who dares to even look towards her curtain? But alas! Today that same Ghazi was leaving.
+Ghazi Abbas (peace be upon him), with the splendor of the Lion of God, reached the Euphrates River, tearing through the enemy ranks. He took control of the water, filled the waterskin, but did not drink a single drop of water himself. When the journey back began, then by the order of Ibn Sa'd, thousands of thirsty ones of the Yazidi army surrounded the water-carrier of Karbala from all four sides. A wretched accursed, hiding behind a tree, struck in such a way that Mola Abbas's (peace be upon him) right arm was severed. He (peace be upon him) held the standard in his left hand, then from another strike, the left arm was also severed. But the Ghazi's (peace be upon him) courage did not break; he clenched the waterskin in his teeth so that somehow the water would reach the tents.
+But oh, alas! When an arrow struck the waterskin and all the water spilled out, then Abbas's (peace be upon him) hope was broken. At that very moment, an arrow struck his (peace be upon him) pure forehead and eye, and there was a strike of an iron mace on the holy head, after which the Alamdar of Karbala started falling from the horse's saddle to the ground and, trembling, presented his final salutation to his Imam and brother: "Peace be upon you, O Aba Abd Allah!"
+According to historical references, on 2nd Muharram al-Haram, 61 AH, this holy caravan of Imam Hussain (peace be upon him) formally entered the boundaries of Karbala. The Imam (peace be upon him) had sent a letter to the people of Kufa via Qays ibn Musahir Sa'dawi about his arrival, so that they could be invited to the truth, but he was captured on the way by the agents of Ibn Ziyad and martyred with oppression.
+Due to the severe resistance and insistence of Hur's army on the land of Karbala, Imam Hussain (peace be upon him) ordered to pitch the tents in the scorching desert, far enough from the Euphrates River (at a distance of about 3 to 5 miles). While pitching the tents, some such heart-rending verses came to the tongue of the Imam (peace be upon him) which were indicating the disloyalty of the times and martyrdom. Hearing those verses, such a shock befell the heart of Lady Zainab the Pure (peace be upon her) that she (peace be upon her) fainted and became unconscious, and the Imam (peace be upon him) consoled his grieving sister.
+Today, when we walk in the plain of Karbala, history is scattered at every step. Here, for the pilgrims of Hussain (peace be upon him), there are those places at every step that make the hearts weep:
+Maqam al-Kaf al-Abbas (peace be upon him): Those separate places where the right and left arms of Mola Abbas (peace be upon him) were severed and fell; beautiful symbolic shrines have now been built there where pilgrims shed tears.
+Ganj al-Shuhada: That place where Imam Hussain (peace be upon him) brought the bodies of all the loyal martyrs from the battlefield and gathered them in one place.
+The inner view of the holy shrine of Imam Hussain (peace be upon him): Where, towards the feet of the Imam (peace be upon him), is the holy grave of the young son, Hazrat Ali Akbar (peace be upon him), and on the holy chest of the Imam (peace be upon him) is the grave of the six-month-old innocent infant, Hazrat Ali Asghar (peace be upon him).
+The shrine of Habib ibn Muzahir: The shrine of the loyal and elder companion of the Imam (peace be upon him), which welcomes the pilgrims near the inner door.
+Maqtal (Place of Martyrdom) and Tents Place: That agonizing place where Mola Hussain's (peace be upon him) luminous head was severed from the body, and that tents place where the tents of the Ahl al-Bayt (peace be upon them) were burned.
+Talla Zainabiya: That high place where, standing, Lady Zainab (peace be upon her) kept watching her oppressed brother being slaughtered and would say: "O Muhammad! O Ali! This is your Hussain (peace be upon him) being slaughtered on the scorching sand of Karbala..."
+To be continued.
+
+</p>
+<br>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #2c3e50;">
+                    Today's column published in Daily Zamana News:
+                </p>
+                <a href="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg">
+                    <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg" alt="Today's column published in Daily Zamana News" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 1px solid #e0e0e0; transition: transform 0.3s ease;">
+                </a>
+            </div>
+            <br>
+`
+    },
+
+
+    {
+        "id": "216EN",
+        "category": ["column"],
+        "title": "3rd Muharram al-Haram",
+        "date": "21-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>3rd Muharram al-Haram</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+The days and nights of devotion continue on the land of Nineveh, and we are present in this part of the sacred shrine of Mola Imam Hussain (peace be upon him) where the most terrible memories of history are scattered.
+Inside the holy shrine, in this same corridor, right in front of the Mola's shrine, is the sacred tomb of the sincere, elderly, and loyal companion of the oppressed Imam (peace be upon him), Hazrat Habib ibn Muzahir, who seems to be stationed as an eternal guard in the presence of his Master. Along with Hazrat Habib's shrine is that heart-wrenching place where the greatest oppressed of the universe was martyred thirsty; meaning "the Place of Martyrdom of Imam Hussain (peace be upon him)" is part of this same building. Right next to it is located "Ganj al-Shuhada" where all the loyal and true devotees of the plain of Karbala were buried together collectively.
+When we look at the structure of the holy shrine of Mola Hussain (peace be upon him), we see a straight wall like the shrine of Mola Abbas (peace be upon him). But after remaining straight from the side of the head, when it comes towards these pure feet, there is a small beautiful curve and a raised part. This is that same place where there is the pure grave of the moon-like young son of the Master of Martyrs (peace be upon him), Prince Ali Akbar (peace be upon him). According to the narration, Prince Ali Akbar (peace be upon him) is resting towards his father's feet, and the innocent infant Ali Asghar (peace be upon him) is buried on the Mola's holy chest.
+The great and credible personality of the Islamic world, Ayatollah Marashi Najafi (may Allah have mercy on him), is that high-ranking personality who was blessed with direct meetings with the Infallibles (peace be upon them) in a state of wakefulness and also recorded this incident in his "Book of Meetings".
+He (may Allah have mercy on him) says: "Once I had to ask some scholarly question from Mola Imam Hussain (peace be upon him) and I wanted some guidance. I came to Karbala and, sitting by the side of the head (head side) of the holy shrine, became occupied in weeping, lamentation, and supplication so that I could attract the Mola's attention. Suddenly I felt a holy hand on my shoulder. I raised my head and looked; a special servant of the Imam (peace be upon him) was standing there. He said to me: 'Marashi! Do you want to meet Imam Hussain (peace be upon him)?' I said eagerly: 'Yes, I absolutely want to meet!' Then the Mola (peace be upon him) himself spoke to me and said: 'Marashi! If you want to meet me, then do not sit on the head side, rather come to this side where the grave of my young son Ali Akbar (peace be upon him) is, i.e., towards my feet.'
+Ayatollah Marashi Najafi (may Allah have mercy on him) says that I immediately stood up and came towards the feet, where the Mola (peace be upon him) blessed me with the honor of visitation and I got satisfaction by asking all my questions from the Mola. Finally, I asked curiously: 'Mola! If you were going to bless me with the honor of seeing you anyway, then I was sitting on the head side; that could also have been this blessing. What was the reason for calling me to this side, i.e., towards the grave of Prince Ali Akbar (peace be upon him)?'
+Then the oppressed Imam (peace be upon him) spoke such a sentence that makes the heart of every mourner weep. The Mola (peace be upon him) said: 'Marashi! Whenever you come to meet me, then come to this same side where the grave of Ali Akbar (peace be upon him) is; because even today, I am weeping with my face resting on the wounded chest of my young one...'
+Undoubtedly, among all the visitations of the Infallible Imams (peace be upon them), the reward for visiting the Master of Martyrs (peace be upon him) is written as the most superior and greatest, which has no substitute.
+In the pages of history, the reason for the fame of Umar ibn Sa'd (may the curse of Allah be upon him) is only and only his criminal participation in this bloody incident of Karbala, which put him in the ranks of the dirty and hateful faces of history.
+On 3rd Muharram al-Haram, 61 AH, Umar ibn Sa'd reached Karbala with an army of four thousand cavalrymen on horseback. Then Imam Hussain (peace be upon him) spoke that historic sentence which was proof of his (peace be upon him) peacefulness: "The people of your city (Kufa) themselves wrote me countless letters and invited me to come here. Now if they do not want me here and have broken their pledge of allegiance, then I will go back from here."
+The reply from Ibn Ziyad came, "Either fight with Hussain (peace be upon him) or tell him to accept the obedience of Yazid."
+Alhamdulillah, the Lord has blessed us with the honor of visiting the oppressed Imam (peace be upon him) and the martyrs of Karbala. Here, it is necessary for all of us pilgrims to remember one of the most important moral and religious points that whenever you go to the shrine and holy grave of any infallible or loyal martyr, then, standing right outside, you must recite the "Adhan al-Dukhul" (permission to enter).
+It is the requirement of the etiquette of devotion and sonship that we set foot on this pure earth after taking permission. After that, we presented ourselves at the shrine of Hazrat Habib ibn Muzahir, recited salutations for his high status, and offered two rak'ahs of the prayer of the gift of visitation.
+On this pure land of Karbala, the pilgrim should recite the tribulations and the elegy of the infallible princes, especially Hazrat Ali Akbar (peace be upon him) and Ali Asghar (peace be upon him), because this is that restlessness which takes a human being towards true Hussaini salvation and recognition of the Truth. May the Lord accept this presence of all of us. Amen.
+To be continued.
+
+</p>
+`
+    },
+
+    {
+        "id": "217EN",
+        "category": ["column"],
+        "title": "4th Muharram al-Haram",
+        "date": "22-06-2026",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+        "excerpt": "...",
+        "content": `
+        <div style="font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">    
+             <p><strong>4th Muharram al-Haram</strong></p>
+<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>
+
+            <p>
+
+
+The sacrifices of Awn and Muhammad (peace be upon them).
+The sequence of days and nights of devotion continues on the land of Nineveh, and our caravan is blessed with presenting the gift of greetings at the sacred shrine of the nephews of the Lion of God, the dearly beloved of Islam, and the brave young sons of Lady Zainab al-Kubra (peace be upon her), i.e., Hazrat Awn and Hazrat Muhammad (peace be upon both of them).
+On this burning land of Karbala, there exists the sacred tomb of those infallible princes whom the Second Zahra (peace be upon her) sacrificed for her oppressed brother. It is mentioned in the narrations that when this caravan of love was about to depart from Medina Munawwara, then the renowned husband of Lady Zainab (peace be upon her), Hazrat Abdullah ibn Ja'far al-Tayyar (peace be upon him), graced us with his presence. He held the hand of Awn (peace be upon him) with one hand and the hand of Muhammad (peace be upon him) with the other, and making both of those infallible ones stand in front of the Second Zahra (peace be upon her), said: "Zainab! I have heard that severe calamity is about to befall our Master Hussain (peace be upon him) in the desert of Karbala, and the command of the grandfather, the Messenger of Allah (peace and blessings be upon him), is that whenever any calamity comes, it can be warded off with a sacrifice. Zainab! I am entrusting these two of my sons to you; sacrifice one on behalf of me for Brother Hussain (peace be upon him), and sacrifice the other on behalf of me (Abdullah) for Hussain (peace be upon him)."
+According to historical sources, on 4th Muharram al-Haram, Ubayd Allah ibn Ziyad (may the curse of Allah be upon him) delivered a very cunning and inciting speech in the Kufa Mosque. Inciting the Muslim speakers against the grandson of the Messenger (peace and blessings be upon him), he said: "By the order of Yazid, the doors of the treasury have been opened for you; therefore, all of you get ready to fight his enemy Hussain (peace be upon him). First of all, Shamr ibn Dhi al-Jawshan requested to depart.
+Meanwhile, in the desert of Karbala, Imam Hussain (peace be upon him) said to one of his companions: "Go and tell Ibn Sa'd that I want to meet him between the two armies." That historic meeting began, in which the Imam's (peace be upon him) guardian Mola Abbas (peace be upon him) and Prince Ali Akbar (peace be upon him) were present.
+Umar ibn Sa'd said to the Imam (peace be upon him): "Ibn Ziyad has strictly insisted that you pledge allegiance to Yazid, and if you do not pledge allegiance, then water will be blocked from you and you will be martyred by fighting."
+The Imam (peace be upon him), the One of High Status, advised him in a very compassionate manner: "Woe be upon you, O Ibn Sa'd! Do you not fear Allah the Exalted? Do you not have certainty of the Day of Judgment? Have you girded your loins to kill me in obedience to Ibn Marjana, even though you know who I am? If your hands are stained with my blood, then you will never find salvation."
+Ibn Sa'd confessed in a low voice: "Mola! I may be sacrificed, I know you well that you are the grandson of the Pure Grandfather (peace and blessings be upon him), the son of Haider-e-Karrar (peace be upon him), and the fruit of the heart of Lady Fatima (peace be upon her), but you yourself think of some solution so that both of us can save ourselves from the wrath and anger of Ibn Ziyad."
+`
+    },
+
+    {
         "id": "211EN",
         "category": ["column"],
         "title": "The Rosary of Unity of the Ummah's Martyr",
