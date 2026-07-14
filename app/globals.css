@@ -176,8 +176,7 @@ main:dir(ltr), main[dir="ltr"] {
 /* ==================================================================== */
 @font-face {
   font-family: 'Jameel Noori Nastaleeq';
-  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/urdu-fonts@master/fonts/JameelNooriNastaleeq/JameelNooriNastaleeq.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/rastikerdar/urdu-fonts@master/fonts/JameelNooriNastaleeq/JameelNooriNastaleeq.ttf') format('truetype');
+  src: url('/fonts/JameelNooriNastaleeq.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
