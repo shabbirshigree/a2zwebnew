@@ -1,12 +1,12 @@
 import ArticlesClient from './ArticlesClient';
-import { allArticles } from './index.js';
+import { urduArticles } from './index.js';
 
 export async function generateMetadata({ searchParams }) {
     const params = await searchParams;
     const readId = params.read;
     
     if (readId) {
-        const article = (allArticles || []).find((item) => String(item.id) === String(readId));
+        const article = (urduArticles || []).find((item) => String(item.id) === String(readId));
         if (article) {
             const title = `${article.title} | مضامین و کالمز`;
             const description = article.content?.replace(/<[^>]*>/g, '').substring(0, 150) + '...';

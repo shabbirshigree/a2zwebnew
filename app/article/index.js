@@ -32,6 +32,14 @@ export const allArticles = [
   ...(farsiData || []).map(a => ({ ...a, lang: 'fa' }))
 ];
 
+export const urduArticles = [
+  ...(urduData || []),
+  ...(punjabiData || []),
+  ...(specialData || []),
+  ...(unityData || []),
+  ...(internationalData || [])
+];
+
 export const englishArticles = [
   ...(englishData || []),
   ...(specialDataEn || [])
@@ -54,6 +62,7 @@ export const articleData = {
   farsiData,
   specialDataFa,
   allArticles,
+  urduArticles,
   englishArticles,
   farsiArticles
 };

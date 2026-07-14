@@ -49,8 +49,6 @@ export const unityData = [
                          alt="News Clip 1">
                 </div>
 
-                </div>
-
             </div>
 
             <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
@@ -128,17 +126,17 @@ export const unityData = [
     `
     },
     {
-        id: 120,
-        category: ["islamic_unity"],
-        title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ",
-        date: "10 ستمبر 2025",
-        paper: "ملکی و غیر ملکی اخبارات",
+        "id": 120,
+        "category": ["islamic_unity"],
+        "title": "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ",
+        "date": "10 ستمبر 2025",
+        "paper": "ملکی و غیر ملکی اخبارات",
 
         // ہیڈر امیج (پہلی تصویر)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770103349/546884771_824969799878306_135211653109535469_n.jpg_u6akk7.jpg",
+        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770103349/546884771_824969799878306_135211653109535469_n.jpg_u6akk7.jpg",
 
-        excerpt: "ماہ ربیع الاول اور ہفتہ وحدت کے موقع پر لکھی گئی یہ خصوصی تحریر امت مسلمہ کے درمیان اتحاد اور یگانگت کا درس دیتی ہے۔ یہ کالم ملکی اور غیر ملکی میڈیا میں نمایاں طور پر شائع ہوا۔",
-        content: `
+        "excerpt": "ماہ ربیع الاول اور ہفتہ وحدت کے موقع پر لکھی گئی یہ خصوصی تحریر امت مسلمہ کے درمیان اتحاد اور یگانگت کا درس دیتی ہے۔ یہ کالم ملکی اور غیر ملکی میڈیا میں نمایاں طور پر شائع ہوا۔",
+        "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>

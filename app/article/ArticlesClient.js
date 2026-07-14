@@ -9,7 +9,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
-import { allArticles } from './index.js';
+import { urduArticles } from './index.js';
 import CldImage from '../components/CldImage';
 
 function ArticlesContent() {
@@ -54,7 +54,7 @@ function ArticlesContent() {
       setSelectedArticle(null);
       return;
     }
-    const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
+    const matched = (urduArticles || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
 
     const key = getArticleKey(matched);
@@ -81,12 +81,8 @@ function ArticlesContent() {
     return new Date(0);
   };
 
-  const filteredArticles = (allArticles || [])
+  const filteredArticles = (urduArticles || [])
     .filter(article => {
-      // Filter by language: If 'all' is selected, only show articles for the current locale
-      // If a specific category is selected, allow articles from that category
-      if (filterCategory === 'all' && article.lang && article.lang !== locale) return false;
-      
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
 
@@ -115,7 +111,7 @@ function ArticlesContent() {
 
   const categories = [
     { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام 🔍' },
-    { id: 'special', label: locale === 'en' ? 'Special Edition ⭐' : locale === 'fa' ? 'نسخہ ھای ویژہ ⭐' : 'سپیشل ایڈیشن ⭐' },
+    { id: 'special', label: locale === 'en' ? 'Special Edition ⭐' : locale === 'fa' ? 'نسخه ھای ویژه ⭐' : 'سپیشل ایڈیشن ⭐' },
     { id: 'english', label: 'English 🅰️' },
     { id: 'punjabi', label: locale === 'en' ? 'Punjabi 📖' : locale === 'fa' ? 'پنجابی 📖' : 'پنجابی 📖' },
     { id: 'column', label: locale === 'en' ? 'Urdu ✍️' : locale === 'fa' ? 'اردو ✍️' : 'اردو ✍️' },
@@ -237,7 +233,7 @@ function ArticlesContent() {
 
               <div className="bg-[#0b314d] text-white p-8 md:p-10 border-b-4 border-[#D4AF37]">
                 <p className="text-lg md:text-2xl leading-relaxed urdu-text font-light text-justify italic">
-                  "شاید قدرت نے مجھے صحافت اور ادب کے لیے ہی تخلیق کیا تھا۔ بچپن ہی سے مجھے لکھنے، ڈرائنگ اور آرٹ سے جنون کی حد تک لگاؤ تھا۔ ریڈیو پاکستان کے پروگراموں میں شرکت کی بدولت اسکول اور معاشرے میں ایک خاص پہچان بن چکی تھی۔ اسکول کے دور میں، میں 'بزمِ ادب' اور ڈراموں کی جان ہوا کرتا تھا۔ ڈرائنگ میں ہمیشہ اول آتا اور تعلیمی میدان میں بھی نمایاں پوزیشن حاصل کرتا۔ گویا، فرہنگ اور صحافت کی صلاحیتیں کم عمری ہی سے میری روح میں رچی بسی تھیں۔"
+                  "شاید قدرت نے مجھے صحافت اور ادب کے لیے ہی تخلیق کیا تھا۔ بچپن ہی سے مجھے لکھنے، ڈرائنگ اور آرٹ سے جنون کی حد تک لگاؤ تھا۔ ریڈیو پاکستان کے پروگراموں میں شرکت کی بدولت اسکول اور معاشرے میں ایک خاص پہچان بن چکی تھی۔ اسکول کے دور میں، میں 'بزمِ ادب' اور ڈراموں کی جان ہوا کرتا تھا۔ ڈرائنگ میں ہمیشہ اول آتا اور تعلیمی میدان میں بھی نمایاں پوزیشن حاصل کرتا تھا۔ گویا، فرہنگ اور صحافت کی صلاحیتیں کم عمری ہی سے میری روح میں رچی بسی تھیں۔"
                 </p>
               </div>
 
@@ -246,7 +242,7 @@ function ArticlesContent() {
                   <div className="text-[#0b314d] text-4xl mb-4 flex justify-center"><FaPenNib /></div>
                   <h3 className="text-xl font-bold text-[#0f4c75] mb-3 urdu-text text-center border-b border-gray-200 pb-2">ابتدائی جدوجہد اور سکردو کا کٹھن دور</h3>
                   <p className="text-gray-700 text-sm md:text-base leading-relaxed urdu-text text-justify">
-                    میں نے بہت چھوٹی عمر میں روزنامہ 'نوائے وقت' کے بچوں کے مقبول رسالے 'پھول اور کلیاں' کے لیے لکھنا شروع کر دیا تھا۔ یہ وہ دور تھا جب سکردو کا رابطہ اسلام آباد سے صرف پی آئی اے کے 'فوکر طیارے' کے ذریعے ہوتا تھا، اور وہ بھی مکمل طور پر موسم کا محتاج تھا۔ کبھی پندرہ بیس دن تک پرواز نہ ہوتی تو اخبارات کی شکل تک دیکھنے کو نہ ملتی۔ ان کٹھن حالات میں، میں اپنی تحریریں، لطیفے، اقوال زریں اور کارٹون اخبار کو بھیجتا اور پھر ان کے شائع ہو کر مجھ تک پہنچنے کا ہفتوں انتظار کرتا۔ پاکستان کے انتہائی شمال میں رہ کر اخبار تک رسائی اور اس میں اپنی تحریر چھپوانا واقعی 'جوئے شیر لانے' کے مترادف تھا۔
+                    میں نے بہت چھوٹی عمر میں روزنامہ 'نوائے وقت' کے بچوں کے مقبول رسالے 'پھول اور کلیاں' کے لیے لکھنے شروع کر دیا تھا۔ یہ وہ دور تھا جب سکردو کا رابطہ اسلام آباد سے صرف پی آئی اے کے 'فوکر طیارے' کے ذریعے ہوتا تھا، اور وہ بھی مکمل طور پر موسم کا محتاج تھا۔ کبھی پندرہ بیس دن تک پرواز نہ ہوتی تو اخبارات کی شکل تک دیکھنے کو نہ ملتا۔ ان کٹھن حالات میں، میں اپنی تحریریں، لطیفے، اقوال زریں اور کارٹون اخبار کو بھیجتا اور پھر ان کے شائع ہو کر مجھ تک پہنچنے کا ہفتوں انتظار کرتا۔ پاکستان کے انتہائی شمال میں رہ کر اخبار تک رسائی اور اس میں اپنی تحریر چھپوانا واقعی 'جوئے شیر لانے' کے مترادف تھا۔
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl border-t-4 border-[#D4AF37] shadow-sm hover:shadow-lg transition-all duration-300">
@@ -419,7 +415,7 @@ function ArticlesContent() {
                                                 {locale === 'en' ? 'Haji Shabbir Ahmed Shigri' : locale === 'fa' ? 'حاجی شبیر احمد شگری' : 'حاجی شبیر احمد شگری'}
                                             </h4>
                                             <p className={`text-gray-400 max-w-md ${locale === 'ur' ? 'urdu-text' : ''}`}>
-                                                {locale === 'en' ? 'Gold Medalist Journalist, Columnist and Socio-Cultural Activist' : locale === 'fa' ? 'روزنامه‌نگار برنده مدال طلا، ستون‌نویس و فعال اجتماعی و فرهنگی' : 'گولڈ میڈلسٹ صحافی، کالم نگار اور سماجی و ثقافتی کارکن'}
+                                                {locale === 'en' ? 'Gold Medalist Journalist, Columnist and Socio-Cultural Activist' : locale === 'fa' ? 'روزنامه نگار برنده مدال طلا، ستون نویس و فعال اجتماعی و فرهنگی' : 'گولڈ میڈلسٹ صحافی، کالم نگار اور سماجی و ثقافتی کارکن'}
                                             </p>
                                         </div>
               </div>
