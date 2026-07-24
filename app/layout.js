@@ -1,30 +1,14 @@
-import { Noto_Naskh_Arabic, Vazirmatn, Amiri, Reem_Kufi, Gulzar } from "next/font/google";
+import { Noto_Naskh_Arabic, Vazirmatn, Amiri, Reem_Kufi } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import FloatingButtons from './components/FloatingButtons';
 import LocaleProvider from './components/LocaleProvider';
 import SecurityLock from './components/SecurityLock';
 
-// عارضی طور پر گوگل فونٹ 'گلزار' کو بطور جمیل نوری متبادل استعمال کر رہے ہیں
-// جب آپ کے پاس اصل JameelNooriNastaleeq.woff2 فائل (10MB+) آ جائے، تو اسے دوبارہ سیٹ کریں گے
-const jameelNoori = Gulzar({
-  subsets: ["arabic"],
-  weight: ["400"],
-  variable: "--font-jameel",
-  display: "swap",
-});
-
 const naskh = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   weight: ["400", "700"],
   variable: "--font-naskh",
-  display: "swap",
-});
-
-const nastaliq = Gulzar({
-  subsets: ["arabic"],
-  weight: ["400"],
-  variable: "--font-nastaliq",
   display: "swap",
 });
 
@@ -123,7 +107,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${jameelNoori.variable} ${nastaliq.variable} ${naskh.variable} ${vazirmatn.variable} ${amiri.variable} ${kufi.variable} bg-gray-50 text-gray-800 font-sans antialiased`}
+        className={`${naskh.variable} ${vazirmatn.variable} ${amiri.variable} ${kufi.variable} bg-gray-50 text-gray-800 font-sans antialiased`}
       >
         <LocaleProvider>
           <SecurityLock />

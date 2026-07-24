@@ -404,9 +404,9 @@ export function HeroSlider() {
         <div className="flex flex-col items-center gap-0.5 md:gap-1 mt-0.5">
           <h1
             className={`text-fluid-reset text-[#D4AF37] tracking-tight leading-tight font-black ${locale === "ur"
-                ? `urdu-text ${isMobile ? "text-[32px]" : "text-[24px]"} md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap`
+                ? `urdu-text ${isMobile ? "text-[22px]" : "text-[24px]"} md:text-[1.5rem] lg:text-[1.7rem] whitespace-nowrap`
                 : locale === "fa"
-                  ? `${isMobile ? "text-[1.8rem]" : "text-[1.3rem]"} font-pers text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]`
+                  ? `${isMobile ? "text-[1.6rem]" : "text-[1.3rem]"} font-persian text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] max-w-[92vw]`
                   : `${isMobile ? "text-[1.8rem]" : "text-[1.3rem]"} font-hero-en md:text-[1.4rem] lg:text-[1.5rem]`
               }`}
           >
@@ -471,8 +471,10 @@ export function HeroSlider() {
                   } transition-all duration-500 group-hover:scale-110 group-hover:text-[#D4AF37] z-10`}>
                   <Icon />
                 </span>
+                
+                {/* 👈 یہاں موبائل کا سائز 11px اور font-bold کو font-normal کر دیا گیا ہے */}
                 <span
-                  className={`${isMobile ? "text-[10px] font-bold" : "text-[13px] md:text-[14px] lg:text-[15px]"
+                  className={`${isMobile ? "text-[11px] font-normal" : "text-[13px] md:text-[14px] lg:text-[15px]"
                     } leading-none tracking-tight text-center ${locale === "en"
                       ? "font-sans"
                       : locale === "fa"

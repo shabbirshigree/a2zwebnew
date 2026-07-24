@@ -146,11 +146,11 @@ span[class*="Fa"],
   font-family: system-ui, -apple-system, sans-serif !important;
 }
 
-/* موبائل کے لیے خصوصی سیٹنگز */
+/* 👈 موبائل کے لیے خصوصی سیٹنگز (یہاں 600 کو 400 کر دیا گیا ہے) */
 @media (max-width: 768px) {
   html, body {
     line-height: 1.9;
-    font-weight: 600;
+    font-weight: 400; 
   }
 }
 
@@ -171,23 +171,20 @@ main:dir(ltr), main[dir="ltr"] {
   text-align: left;
 }
 
-/* ==================================================================== */
-/* 👇 جمیل نوری نستعلیق فانٹ (نوری کا دیا ہوا تحفہ) 👇                */
-/* ==================================================================== */
 @font-face {
   font-family: 'Jameel Noori Nastaleeq';
   src: url('/fonts/JameelNooriNastaleeq.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* 👈 یہاں 'swap' کی جگہ 'block' کر دیں */
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, span, div, .urdu-text, .welcome-heading {
-  font-family: 'Jameel Noori Nastaleeq', var(--font-jameel), var(--font-nastaliq), serif !important;
+  font-family: 'Jameel Noori Nastaleeq', serif !important;
 }
 
 .persian-text, .font-persian {
-  font-family: var(--font-vazirmatn), var(--font-naskh), serif;
+  font-family: var(--font-vazirmatn), var(--font-naskh), serif !important;
 }
 
 .font-hero-en {
@@ -199,7 +196,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, div, .urdu-text, .welcome-heading {
 }
 
 /* ==================================================================== */
-/* 👇 پوری سائٹ کے لیے بہتر Urdu Typography (PC + Mobile)         👇  */
+/* 👇 پوری سائٹ کے لیے بہتر Urdu Typography (PC + Mobile)        👇  */
 /* ==================================================================== */
 main {
   direction: rtl;
