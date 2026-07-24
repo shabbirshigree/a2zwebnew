@@ -7,6 +7,28 @@ export const AUTHOR_REVIEW = {
 };
 
 export const BOOKS_DATA = [
+{
+    id: 'columns book',
+    title: 'Writings of Shagri',
+    englishTitle: 'Writings of Shagri',
+    image: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1784888607/1901f03f-272d-46ef-bdd7-842c526d727e.png',
+    badge: 'Writings of Shagri',
+    orientation: 'portrait',
+    descEn: `This voluminous scholarly collection is the distillation of Haji Shabbir Ahmed Shagri's thought-provoking journalism, academic endeavors, and intellectual insight over the past many years. The pages of this book serve as a credible document of contemporary social, intellectual, and historical realities. For the convenience of readers, this collection has been beautifully divided into thematic chapters (such as Islamic, cultural, biographical, and research topics). This delightful blend of history and themes takes the reader on a captivating journey from the windows of the past to the intellectual discourses of the present.
+This digital edition is a priceless scholarly gift for students and serious readers associated with literature, journalism, and research. You can easily read this book and utilize it for your research.
+
+Author: Haji Shabbir Ahmed Shagri`,
+    actions: [
+      { 
+        type: 'read', 
+        label: 'Read Book', 
+        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1784888516/%DA%A9%D8%AA%D8%A7%D8%A8_%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA%D9%90_%D8%B4%DA%AF%D8%B1%DB%8C__compressed_1_gw7zuw.pdf', 
+        color: 'theme-read', 
+        disabled: false 
+      }
+    ]
+  },
+ 
   {
     id: 'book-madina',
     title: 'Madinat-ul-Ahlulbayt (AS)',
