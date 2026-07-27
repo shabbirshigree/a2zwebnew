@@ -134,8 +134,8 @@ function ArticlesContent() {
         { id: 'other_personalities', label: 'دیگر اہم شخصیات' }
       ]
     },
-    { id: 'culture', label: 'ثقافت' },
-    { id: 'pakistan', label: 'پاکستان' },
+    { id: 'culture_columns', label: 'ثقافت' },
+    { id: 'pakistan_columns', label: 'پاکستان' },
     { 
       id: 'iran', 
       label: 'ایران',
