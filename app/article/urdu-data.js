@@ -54,11 +54,10 @@ export const urduData = [
 {
     id: 'pakistan_columns_2',
     title: 'حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       ',
-    date: '2016', 
+    date: '02 sep 2022', 
     category: ['pakistan_columns'],
     excerpt: 'حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-    content: `
+image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1_%D9%85%DB%8C%DA%BA_%DA%A9%D8%B1%D9%BE%D8%B4%D9%86_%D9%85%D8%B4%D8%B1%D9%82_ttl5sp.jpg',    content: `
       <p><strong>حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
 حضرت رقیہ بنت علی علیہ السلام کا مزار اور وہ بھی لاہور میں یہ سن کردل خوشی سے دھڑک اٹھتا ہے اور نظریں احترا ماً جھک جاتی ہیں۔اس میں کوئی شک نہیں کہ لاکھوں کی تعداد میں سنی شیعہ افراد اس مقدس دربار پر حاضری دیتے ہیں یہاں کی نسبت سے مرادیں مانگتے ہیں اور جھولیاں بھر بھر کر لے جاتے ہیں۔
@@ -106,7 +105,7 @@ export const urduData = [
     date: '2016', 
     category: ['pakistan_columns'],
     excerpt: 'گلگت بلتستان کا انتخابی معرکہ       ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+        image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785224831/54a233c8-6736-479f-a715-6ab4e8d401b0.png',
     content: `
       <p><strong>گلگت بلتستان کا انتخابی معرکہ       <strong><p>
 <p><strong>فرسودہ روایات کا خاتمہ اور نئی قیادت کا ابھرتا سورج       <strong><p>
@@ -181,7 +180,7 @@ export const urduData = [
     date: '2016', 
     category: ['pakistan_columns'],
     excerpt: 'دربار بی بی پاک دامن میں اربعین کے انتظامات نہ ہونے پرزائرین کو مشکلات ۔       ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225079/daily_mashriq_column_13_aug_2022_3_1_efsh65.jpg',
     content: `
       <p><strong>دربار بی بی پاک دامن میں اربعین کے انتظامات نہ ہونے پرزائرین کو مشکلات ۔       <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
@@ -206,7 +205,7 @@ export const urduData = [
     date: '2016', 
     category: ['pakistan_columns'],
     excerpt: 'جنتِ ارضی اسکردو و بلتستان       ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225787/22866603-c55c-476c-8287-b34844455bf1.png',
     content: `
       <p><strong>جنتِ ارضی اسکردو و بلتستان       <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
@@ -243,7 +242,8 @@ export const urduData = [
     date: '2016', 
     category: ['pakistan_columns'],
     excerpt: 'علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+        image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225445/5fef5b10-831a-4d6f-a1db-0bda610c76d5.png',
+
     content: `
       <p><strong>علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       <strong><p>
 <p><strong>دنیا کے بلند ترین پہاڑوں والا پاکستان اور دنیا کا  علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       <strong><p>
@@ -424,8 +424,7 @@ export const urduData = [
     date: '2016', 
     category: ['culture_columns'],
     excerpt: 'چایخانہ رضوی، حرمِ امام رضا علیہ السلام    ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-    content: `
+image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%86%D9%82%D8%B4%D9%87-%D8%AD%D8%B1%D9%85-%D8%A7%D9%85%D8%A7%D9%85-%D8%B1%D8%B6%D8%A7-%D9%88-%D8%B5%D8%AD%D9%86-%D9%87%D8%A7-1632899068_fhm8rv.jpg",    content: `
       <p><strong>چایخانہ رضوی، حرمِ امام رضا علیہ السلام    <strong><p>
 <p><strong>چایخانہ رضوی، حرمِ امام رضا (ع) میں عقیدت، شفا اور محبت کی ایک منفرد ضیافت     <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
@@ -463,7 +462,8 @@ export const urduData = [
     date: '2016', 
     category: ['culture_columns'],
     excerpt: 'انقلاب اسلامی ایران کے بعد کاایرانی سینما     ',
-    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+            image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226941/4572d8b7-9fae-4296-b94c-9e936963aa6f.png',
+
     content: `
       <p><strong>انقلاب اسلامی ایران کے بعد کاایرانی سینما     <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
@@ -8284,7 +8284,7 @@ export const urduData = [
         title: "محسنِ شمال: آغا سید احمد علی شاہ (تحریری کالم + گوگل تجزیہ)",
         date: "26 جنوری 2026",
         paper: "روزنامہ زمانہ / یوم تکبیر",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770027106/23421342323243_n14ojw.png",
+        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226069/25_jan_2026_zamana_news_ozicb1.jpg",
         excerpt: "گلگت بلتستان کے عظیم محسن آغا سید احمد علی شاہ کی خدمات پر ایک مکمل ڈیجیٹل پیکج۔ اس میں شامل ہے: اخباری کالم، دستاویزی فلم، اور گوگل (Google) کا حیران کن تجزیاتی مباحثہ...",
         content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
