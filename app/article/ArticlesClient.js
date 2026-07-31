@@ -24,12 +24,12 @@ function ArticlesContent() {
 
   const [filterCategory, setFilterCategory] = useState('all');
   const [mounted, setMounted] = useState(false);
-
-  // صفحہ کھلنے پر ہمیشہ "تمام" مضامین نظر آئیں گے
+  
+  // حل: ہر بار جب locale بدلے، تو filterCategory کو reset کریں (localKey ہٹا دیا گیا ہے)
   useEffect(() => {
     setFilterCategory('all');
   }, [locale]);
-  
+
   useEffect(() => {
     setMounted(true);
     try {
@@ -101,19 +101,18 @@ function ArticlesContent() {
       const idB = typeof b.id === 'string' ? parseInt(b.id) : b.id;
       return idB - idA;
     });
-
-  // اپڈیٹ شدہ کیٹیگریز (اردو اور انگلش ہٹا دیے گئے، اسلامی وحدت شامل کر دی گئی)
+// سادہ اور صاف اردو کیٹیگریز کا ڈیٹا
   const categories = [
-    { id: 'all', label: locale === 'en' ? 'All Articles 🔍' : locale === 'fa' ? 'همه مقالات 🔍' : 'تمام 🔍' },
+    { id: 'all', label: 'تمام 🔍' },
     { 
       id: 'islamic_writings', 
       label: 'اسلامی تحریریں',
       subcategories: [
-         { id: 'islamic_writings', label: 'اسلامی موضوعات' },
-{ id: 'aimah_ahle_bait', label: 'ائمہ و اہل بیتؑ' },
+        { id: 'islamic_writings', label: 'اسلامی موضوعات' },
+        { id: 'aimah_ahle_bait', label: 'ائمہ و اہل بیتؑ' },
         { id: 'munasibat', label: 'مناسبات' },
         { id: 'palestine', label: 'فلسطین' },
-        { id: 'islamic_unity', label: 'اسلامی وحدت 🤝' } // پرانا ڈیٹا محفوظ رکھنے کے لیے پرانی آئی ڈی
+        { id: 'islamic_unity', label: 'اسلامی وحدت 🤝' }
       ]
     },
     { 
@@ -145,9 +144,9 @@ function ArticlesContent() {
         { id: 'iran_others', label: 'ایران کے بارے میں دیگر تحریریں' }
       ]
     },
-    { id: 'special', label: locale === 'en' ? 'Special Edition ⭐' : locale === 'fa' ? 'نسخه ھای ویژه ⭐' : 'سپیشل ایڈیشن ⭐' },
-    { id: 'punjabi', label: locale === 'en' ? 'Punjabi 📖' : locale === 'fa' ? 'پنجابی 📖' : 'پنجابی 📖' },
-    { id: 'international', label: locale === 'en' ? 'International 🌍' : locale === 'fa' ? 'بین المللی 🌍' : 'انٹرنیشنل 🌍' }
+    { id: 'special', label: 'سپیشل ایڈیشن ⭐' },
+    { id: 'punjabi', label: 'پنجابی 📖' },
+    { id: 'international', label: 'انٹرنیشنل 🌍' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -244,17 +243,17 @@ function ArticlesContent() {
           <section className="bg-gradient-to-b from-[#0b314d] to-[#0f4c75] text-white py-10 md:py-14 text-center relative border-b-4 border-[#D4AF37] shadow-xl">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/arabesque.png')" }}></div>
             <div className="container mx-auto px-4 relative z-10">
-              <h1 className={`text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 tracking-wide ${locale === 'ur' ? 'urdu-text' : ''}`}>
+              <h1 className={`text-3xl md:text-5xl font-extrabold text-[#D4AF37] drop-shadow-lg mb-4 tracking-wide ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                 {locale === 'en' ? '45 Years of Journalism' : locale === 'fa' ? '۴۵ سال فعالیت در مطبوعات' : 'صحافت کے 45 سال'}
               </h1>
-              <h2 className={`text-lg md:text-xl text-[#fff7cc] font-light tracking-widest ${locale === 'ur' ? 'urdu-text' : ''}`}>
+              <h2 className={`text-lg md:text-xl text-[#fff7cc] font-light tracking-widest ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                 {locale === 'en' ? 'A Splendid Journey from a Child Writer to a Gold Medalist' : locale === 'fa' ? 'سفری درخشان از یک نویسنده کودک تا دریافت کننده مدال طلا' : 'ننھے لکھاری سے گولڈ میڈلسٹ تک کا شاندار سفر'}
               </h2>
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto rounded-full mt-6"></div>
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-12" dir="rtl">
+          <section className="container mx-auto px-4 py-12" dir={locale === 'en' ? 'ltr' : 'rtl'}>
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37] rounded-full blur-[80px] opacity-20"></div>
 
@@ -297,24 +296,25 @@ function ArticlesContent() {
                 <input
                   type="text"
                   placeholder={locale === 'en' ? 'Search topics...' : locale === 'fa' ? 'جستجوی موضوعات...' : 'موضوع تلاش کریں...'}
-                  className={`w-full bg-white border-2 border-gray-100 rounded-2xl py-4 px-12 text-right focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/5 transition-all shadow-sm ${locale === 'ur' ? 'urdu-text' : ''}`}
+                  className={`w-full bg-white border-2 border-gray-100 rounded-2xl py-4 px-12 ${locale === 'en' ? 'text-left' : 'text-right'} focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/5 transition-all shadow-sm ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3" dir="rtl">
+              {/* ڈراپ ڈاؤن مینو کے لیے hover:z-50 اور focus-within:z-50 کا اضافہ کیا گیا ہے */}
+              <div className="flex flex-wrap justify-center gap-3" dir={locale === 'en' ? 'ltr' : 'rtl'}>
                 {categories.map(cat => {
                   const isActiveCategory = filterCategory === cat.id || (cat.subcategories && cat.subcategories.some(sub => sub.id === filterCategory));
                   return (
-                    <div key={cat.id} className="relative group">
+                    <div key={cat.id} className="relative group hover:z-50 focus-within:z-50">
                       <button
                         onClick={() => setFilterCategory(cat.id)}
-                        className={`px-6 py-2.5 rounded-xl font-bold urdu-text text-sm transition-all duration-300 flex items-center gap-2 ${
+                        className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${
                           isActiveCategory
                             ? 'bg-[#0b314d] text-white shadow-lg shadow-[#0b314d]/20 scale-105'
                             : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
-                        }`}
+                        } ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
                       >
                         {cat.label}
                         {cat.subcategories && (
@@ -323,7 +323,7 @@ function ArticlesContent() {
                       </button>
 
                       {cat.subcategories && (
-                        <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 flex flex-col py-2 z-50">
+                        <div className={`absolute mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 flex flex-col py-2 z-50 ${locale === 'en' ? 'left-0' : 'right-0'}`}>
                           {cat.subcategories.map(sub => (
                             <button
                               key={sub.id}
@@ -331,9 +331,9 @@ function ArticlesContent() {
                                 e.stopPropagation();
                                 setFilterCategory(sub.id);
                               }}
-                              className={`text-right px-5 py-3 text-sm urdu-text transition-colors hover:bg-gray-50 border-b border-gray-50 last:border-0 ${
+                              className={`px-5 py-3 text-sm transition-colors hover:bg-gray-50 border-b border-gray-50 last:border-0 ${
                                 filterCategory === sub.id ? 'text-[#D4AF37] font-bold bg-gray-50' : 'text-gray-700'
-                              }`}
+                              } ${locale === 'en' ? 'text-left' : 'text-right'} ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
                             >
                               {sub.label}
                             </button>
@@ -353,7 +353,7 @@ function ArticlesContent() {
                   <div
                     key={article.id || index}
                     className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full cursor-pointer"
-                    dir="rtl"
+                    dir={locale === 'en' ? 'ltr' : 'rtl'}
                     onClick={() => handleOpenArticle(article)}
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
@@ -372,7 +372,7 @@ function ArticlesContent() {
                         <span className="flex items-center gap-1"><FaEye className="text-[#D4AF37]" /> {stats.views}</span>
                       </div>
 
-                      <h3 className={`text-sm md:text-base font-bold text-[#0f4c75] text-center line-clamp-2 leading-tight group-hover:text-[#D4AF37] transition-colors ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                      <h3 className={`text-sm md:text-base font-bold text-[#0f4c75] text-center line-clamp-2 leading-tight group-hover:text-[#D4AF37] transition-colors ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                         {article.title}
                       </h3>
                     </div>
@@ -391,7 +391,7 @@ function ArticlesContent() {
               setSelectedArticle(null);
               router.push(window.location.pathname, { scroll: false });
             }}
-            className={`flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' ? 'urdu-text' : ''}`}
+            className={`flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
           >
             {locale === 'en' ? <FaArrowLeft /> : <FaArrowLeft className="rotate-180" />} {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
           </button>
@@ -408,7 +408,7 @@ function ArticlesContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b314d] via-transparent to-transparent opacity-80" />
                 <div className="absolute bottom-10 right-10 left-10">
-                  <h1 className={`text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                  <h1 className={`text-3xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-lg ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                     {selectedArticle.title}
                   </h1>
                 </div>
@@ -423,7 +423,7 @@ function ArticlesContent() {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">{locale === 'en' ? 'Date' : locale === 'fa' ? 'تاریخ' : 'تاریخ تحریر'}</span>
-                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' ? 'urdu-text' : ''}`}>{selectedArticle.date || 'شبیر شگری'}</span>
+                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>{selectedArticle.date || 'شبیر شگری'}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -432,7 +432,7 @@ function ArticlesContent() {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-gray-400 text-[10px] uppercase tracking-wider font-bold">{locale === 'en' ? 'Views' : locale === 'fa' ? 'بازدید' : 'مشاہدات'}</span>
-                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' ? 'urdu-text' : ''}`}>{getStats(selectedArticle).views}</span>
+                        <span className={`text-[#0b314d] font-bold ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>{getStats(selectedArticle).views}</span>
                       </div>
                     </div>
                   </div>
@@ -465,10 +465,10 @@ function ArticlesContent() {
                   <div className="w-20 h-20 rounded-full border-4 border-[#D4AF37] p-1 mb-4 shadow-xl">
                     <CldImage src="https://res.cloudinary.com/dtqrziupt/image/upload/v1772598628/shabbir_ahmed_shigri_bgzwvt.png" width={80} height={80} className="w-full h-full rounded-full object-cover" alt="Author" />
                   </div>
-                  <h4 className={`text-2xl font-bold text-[#0b314d] mb-2 ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                  <h4 className={`text-2xl font-bold text-[#0b314d] mb-2 ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                     {locale === 'en' ? 'Haji Shabbir Ahmed Shigri' : locale === 'fa' ? 'حاجی شبیر احمد شگری' : 'حاجی شبیر احمد شگری'}
                   </h4>
-                  <p className={`text-gray-400 max-w-md ${locale === 'ur' ? 'urdu-text' : ''}`}>
+                  <p className={`text-gray-400 max-w-md ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
                     {locale === 'en' ? 'Gold Medalist Journalist, Columnist and Socio-Cultural Activist' : locale === 'fa' ? 'روزنامه نگار برنده مدال طلا، ستون نویس و فعال اجتماعی و فرهنگی' : 'گولڈ میڈلسٹ صحافی، کالم نگار اور سماجی و ثقافتی کارکن'}
                   </p>
                 </div>

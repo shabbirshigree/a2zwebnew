@@ -70,29 +70,67 @@ function EnglishArticlesContent() {
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
-      // Extract numeric part of ID for sorting if it's a string like "202E"
       const idA = typeof a.id === 'string' ? parseInt(a.id) : a.id;
       const idB = typeof b.id === 'string' ? parseInt(b.id) : b.id;
       return idB - idA;
     });
 
+  // اپڈیٹ شدہ کیٹیگریز ڈراپ ڈاؤن کے ساتھ (انگلش میں)
   const categories = [
     { id: 'all', label: 'All Articles 🔍' },
+    { 
+      id: 'islamic_writings', 
+      label: 'Islamic Writings',
+      subcategories: [
+        { id: 'islamic_writings', label: 'Islamic Topics' },
+        { id: 'aimah_ahle_bait', label: 'Imams & Ahl al-Bayt' },
+        { id: 'munasibat', label: 'Religious Occasions' },
+        { id: 'palestine', label: 'Palestine' },
+        { id: 'islamic_unity', label: 'Islamic Unity 🤝' }
+      ]
+    },
+    { 
+      id: 'pak_iran_relations', 
+      label: 'Pak-Iran Relations',
+      subcategories: [
+        { id: 'pak_iran_friendship', label: 'Pak-Iran Friendship' },
+        { id: 'pak_iran_general', label: 'Pak-Iran Ties' },
+        { id: 'pak_iran_trade', label: 'Pak-Iran Trade' }
+      ]
+    },
+    { 
+      id: 'personalities', 
+      label: 'Personalities',
+      subcategories: [
+        { id: 'imam_khomeini', label: 'Imam Khomeini (RA)' },
+        { id: 'rahbar_moazzam', label: 'Supreme Leader Khamenei' },
+        { id: 'other_personalities', label: 'Other Personalities' }
+      ]
+    },
+    { id: 'culture_columns', label: 'Culture' },
+    { id: 'pakistan_columns', label: 'Pakistan' },
+    { 
+      id: 'iran', 
+      label: 'Iran',
+      subcategories: [
+        { id: 'islamic_revolution', label: 'Islamic Revolution' },
+        { id: 'iran_war_conditions', label: 'Iran War Conditions' },
+        { id: 'iran_others', label: 'Other Iran Topics' }
+      ]
+    },
     { id: 'special', label: 'Special Edition ⭐' },
     { id: 'english', label: 'English ✍️' },
     { id: 'punjabi', label: 'Punjabi 📖' },
-    { id: 'islamic_unity', label: 'Islamic Unity 🤝' },
     { id: 'international', label: 'International 🌍' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
   
-  // Consistent pseudo-random generator for varied but fixed views/likes per article
   const seededRandom = (seed) => {
     let hash = 0;
     for (let i = 0; i < seed.length; i++) {
       hash = ((hash << 5) - hash) + seed.charCodeAt(i);
-      hash |= 0; // Convert to 32bit integer
+      hash |= 0;
     }
     return Math.abs(hash % 10000) / 10000;
   };
@@ -100,14 +138,12 @@ function EnglishArticlesContent() {
   const getBaseViews = (article) => {
     const seed = `${article.id}-${article.title}`;
     const rand = seededRandom(seed);
-    // Base views between 200 and 2000
     return Math.floor(200 + rand * 1800);
   };
 
   const getBaseLikes = (article) => {
     const seed = `${article.id}-${article.title}-likes`;
     const rand = seededRandom(seed);
-    // Base likes between 20 and 200
     return Math.floor(20 + rand * 180);
   };
   
@@ -169,7 +205,7 @@ function EnglishArticlesContent() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-12">
+          <section className="container mx-auto px-4 py-12 relative z-50">
             <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-12">
               <div className="relative w-full md:w-1/3">
                 <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -181,23 +217,51 @@ function EnglishArticlesContent() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
+              
               <div className="flex flex-wrap justify-center gap-3">
-                {categories.map(cat => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setFilterCategory(cat.id)}
-                    className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 ${filterCategory === cat.id
-                        ? 'bg-[#0b314d] text-white shadow-lg'
-                        : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
-                      }`}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
+                {categories.map(cat => {
+                  const isActiveCategory = filterCategory === cat.id || (cat.subcategories && cat.subcategories.some(sub => sub.id === filterCategory));
+                  return (
+                    <div key={cat.id} className="relative group hover:z-50 focus-within:z-50">
+                      <button
+                        onClick={() => setFilterCategory(cat.id)}
+                        className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${
+                          isActiveCategory
+                            ? 'bg-[#0b314d] text-white shadow-lg scale-105'
+                            : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
+                        }`}
+                      >
+                        {cat.label}
+                        {cat.subcategories && (
+                          <span className="text-[10px] opacity-70">▼</span>
+                        )}
+                      </button>
+
+                      {cat.subcategories && (
+                        <div className="absolute mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 flex flex-col py-2 z-50 left-0">
+                          {cat.subcategories.map(sub => (
+                            <button
+                              key={sub.id}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setFilterCategory(sub.id);
+                              }}
+                              className={`px-5 py-3 text-sm transition-colors hover:bg-gray-50 border-b border-gray-50 last:border-0 text-left ${
+                                filterCategory === sub.id ? 'text-[#D4AF37] font-bold bg-gray-50' : 'text-gray-700'
+                              }`}
+                            >
+                              {sub.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 relative z-10">
               {filteredArticles.map((article, index) => {
                 const stats = getStats(article);
                 return (

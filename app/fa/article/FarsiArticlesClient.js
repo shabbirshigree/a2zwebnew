@@ -75,13 +75,53 @@ function FarsiArticlesContent() {
       return idB - idA;
     });
 
+  // اپڈیٹ شدہ کیٹیگریز (فارسی ڈراپ ڈاؤن کے ساتھ)
   const categories = [
     { id: 'all', label: 'همه مقالات 🔍' },
-    { id: 'special', label: 'نسخہ ھای ویژہ ⭐' },
+    { 
+      id: 'islamic_writings', 
+      label: 'نوشته‌های اسلامی',
+      subcategories: [
+        { id: 'islamic_writings', label: 'موضوعات اسلامی' },
+        { id: 'aimah_ahle_bait', label: 'ائمه و اهل بیت' },
+        { id: 'munasibat', label: 'مناسبت‌ها' },
+        { id: 'palestine', label: 'فلسطین' },
+        { id: 'islamic_unity', label: 'وحدت اسلامی 🤝' }
+      ]
+    },
+    { 
+      id: 'pak_iran_relations', 
+      label: 'روابط پاکستان و ایران',
+      subcategories: [
+        { id: 'pak_iran_friendship', label: 'دوستی پاکستان و ایران' },
+        { id: 'pak_iran_general', label: 'روابط عمومی' },
+        { id: 'pak_iran_trade', label: 'تجارت پاکستان و ایران' }
+      ]
+    },
+    { 
+      id: 'personalities', 
+      label: 'شخصیت‌ها',
+      subcategories: [
+        { id: 'imam_khomeini', label: 'امام خمینی (ره)' },
+        { id: 'rahbar_moazzam', label: 'رهبر معظم خامنه‌ای' },
+        { id: 'other_personalities', label: 'دیگر شخصیت‌ها' }
+      ]
+    },
+    { id: 'culture_columns', label: 'فرهنگ' },
+    { id: 'pakistan_columns', label: 'پاکستان' },
+    { 
+      id: 'iran', 
+      label: 'ایران',
+      subcategories: [
+        { id: 'islamic_revolution', label: 'انقلاب اسلامی' },
+        { id: 'iran_war_conditions', label: 'شرایط جنگی ایران' },
+        { id: 'iran_others', label: 'دیگر موضوعات ایران' }
+      ]
+    },
+    { id: 'special', label: 'نسخه ویژه ⭐' },
     { id: 'column', label: 'فارسی ✍️' },
     { id: 'punjabi', label: 'پنجابی 📖' },
-    { id: 'islamic_unity', label: 'وحدت اسلامی 🤝' },
-    { id: 'international', label: 'بین المللی 🌍' }
+    { id: 'international', label: 'بین‌المللی 🌍' }
   ];
 
   const getArticleKey = (article) => `${article.id}-${article.title}`;
@@ -168,7 +208,7 @@ function FarsiArticlesContent() {
             </div>
           </section>
 
-          <section className="container mx-auto px-4 py-12">
+          <section className="container mx-auto px-4 py-12 relative z-50">
             <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-12">
               <div className="relative w-full md:w-1/3">
                 <FaSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -180,20 +220,51 @@ function FarsiArticlesContent() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
+              
               <div className="flex flex-wrap justify-center gap-3">
-                {categories.map(cat => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setFilterCategory(cat.id)}
-                    className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all ${filterCategory === cat.id ? 'bg-[#0b314d] text-white shadow-lg' : 'bg-white text-gray-600 border border-gray-100'}`}
-                  >
-                    {cat.label}
-                  </button>
-                ))}
+                {categories.map(cat => {
+                  const isActiveCategory = filterCategory === cat.id || (cat.subcategories && cat.subcategories.some(sub => sub.id === filterCategory));
+                  return (
+                    <div key={cat.id} className="relative group hover:z-50 focus-within:z-50">
+                      <button
+                        onClick={() => setFilterCategory(cat.id)}
+                        className={`px-6 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 flex items-center gap-2 ${
+                          isActiveCategory
+                            ? 'bg-[#0b314d] text-white shadow-lg scale-105'
+                            : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-100'
+                        }`}
+                      >
+                        {cat.label}
+                        {cat.subcategories && (
+                          <span className="text-[10px] opacity-70">▼</span>
+                        )}
+                      </button>
+
+                      {cat.subcategories && (
+                        <div className="absolute mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 flex flex-col py-2 z-50 right-0">
+                          {cat.subcategories.map(sub => (
+                            <button
+                              key={sub.id}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setFilterCategory(sub.id);
+                              }}
+                              className={`px-5 py-3 text-sm transition-colors hover:bg-gray-50 border-b border-gray-50 last:border-0 text-right ${
+                                filterCategory === sub.id ? 'text-[#D4AF37] font-bold bg-gray-50' : 'text-gray-700'
+                              }`}
+                            >
+                              {sub.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 relative z-10">
               {filteredArticles.map((article, index) => {
                 const stats = getStats(article);
                 return (
