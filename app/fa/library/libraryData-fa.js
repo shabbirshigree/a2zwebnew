@@ -22,7 +22,7 @@ export const BOOKS_DATA = [
       { 
         type: 'read', 
         label: 'مطالعه کتاب', 
-        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1784888516/%DA%A9%D8%AA%D8%A7%D8%A8_%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA%D9%90_%D8%B4%DA%AF%D8%B1%DB%8C__compressed_1_gw7zuw.pdf', 
+        url: 'https://res.cloudinary.com/dtqrziupt/image/upload/v1785755522/%DA%A9%D8%AA%D8%A7%D8%A8_%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA%D9%90_%D8%B4%DA%AF%D8%B1%DB%8C__compressed_j43c6n.pdf', 
         color: 'theme-read', 
         disabled: false 
       },

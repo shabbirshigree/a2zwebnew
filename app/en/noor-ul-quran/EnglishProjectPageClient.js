@@ -382,7 +382,13 @@ export default function EnglishProjectPageClient() {
                             </div>
                             <div className="w-[220px] md:w-[240px] h-[400px] md:h-[430px] border-[10px] border-gray-800 rounded-[2rem] overflow-hidden relative shadow-[0_0_20px_rgba(212,175,55,0.3)] bg-black">
                                 <div className="absolute top-0 w-24 h-4 bg-gray-800 rounded-b-lg z-20 left-1/2 transform -translate-x-1/2"></div>
-                                <iframe src="https://www.youtube.com/embed/videoseries?list=PLVLSFOIjQLcKg6NISQO33OXnk8JyOJET-" className="w-full h-full absolute inset-0 z-10" allowFullScreen></iframe>
+                                <iframe
+                                    src="https://www.youtube.com/embed/videoseries?list=PLv2RK6Z1UOXc2OPbBzV_h1BclLmgYNGM2"
+                                    className="w-full h-full absolute inset-0 z-10"
+                                    allowFullScreen
+                                    loading="lazy"
+                                    title="Daily Quranic Clip Playlist"
+                                ></iframe>
                             </div>
                         </div>
                     </div>

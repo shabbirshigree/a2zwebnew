@@ -1,6 +1,12 @@
 import React from 'react';
 
 export const defaultColumnData = 
+
+
+
+
+
+
 {
   id: "122-FA",
   title: "مهره‌های شطرنج جنگ ایران",
