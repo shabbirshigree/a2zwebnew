@@ -4,7 +4,121 @@ export const englishData = [
 
   
 
+{
+        id: 225-E,
+        category: "column",
+        title: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
+        date: "06-08-2026",
+        paper: "Daily Mashriq / Baad-e-Shimal / Zamana News / 5Cn",
 
+        // Header Image (Mashriq)
+        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg",
+
+        excerpt: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
+        content: `
+        <div style="font-family: 'Times New Roman', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
+            
+<p><strong>The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri</strong></p>
+            <p><strong>By: Shabbir Ahmed Shigri</strong></p>
+
+            <br>
+            In the rugged and harsh corridors of the bureaucracy, where the human heart often turns to stone and the tone becomes merely formal amidst the halls of authority and power, occasionally such extraordinary personalities are born whose healing touch clothes the traditional and dry environment of the civil service with humanity, sincerity, and selfless devotion. This not only guarantees their rule in the halls of power but also in people's hearts even after they have departed from this world. Ghulam Muhammad Sikandar—whom the world affectionately, respectfully, and reverently calls 'G.M. Sikandar Shigri'—was a shining, golden, and unforgettable chapter in the history of our beloved country's bureaucracy. The fragrance of his memories still surrounds every compassionate Pakistani, government circles, journalistic spheres, and the general public today. He was not just an officer confined to a specific post or the halls of power, but through his selfless service, unparalleled humility, and immense care for the poor, he was the heartbeat of every Pakistani, from the sky-high mountains of Gilgit-Baltistan to the vast plains of Punjab.
+            
+            The late G.M. Sikandar hailed from the historical and enchanting valley district of 'Shigar' in Gilgit-Baltistan. He held the unique distinction of being the first 'DMG' (District Management Group) officer from Gilgit-Baltistan, who not only elevated the prestige of the bureaucracy to its zenith but also transformed its traditional and authoritative meaning through his selfless and memorable services. His thirst and struggle for knowledge began at High School No. 1, Skardu. After acquiring his primary education there, he headed to his alma mater, Punjab University, and earned an M.A. degree in Political Science. His thirst for knowledge took him abroad, where he enhanced his skills by obtaining a diploma in 'Development Administration' from the University of Birmingham (UK). Later, completing specialized courses from prestigious institutions like the Advanced National Management Course and the Administrative Staff College Lahore further polished his God-given administrative abilities.
+            
+            The late officer's magnificent and unblemished public service, spanning nearly four decades, bears witness that whichever position G.M. Sikandar held, he proved to be a true standard-bearer of "public service." Wherever he went, he left such memorable and indelible marks of public welfare that even today stand as a living testament to his foresight. While serving in the key positions of Assistant Commissioner and Deputy Commissioner in various districts, he rendered invaluable services. As Deputy Commissioner of Kasur, through his personal effort, dedication, and compassion, he established a government school that has now evolved into a grand degree college, guaranteeing a bright future for more than 5,000 students.
+            
+            The renowned and grand welfare project 'Rescue 1122', established for the protection and rescue of human lives across the country, is also a monument of his brilliant tenure, which flourished and was implemented under his patronage. He concluded his illustrious career at the highest and most prestigious post of Secretary 'Housing and Works' in the federal government, considered the pinnacle of any civil servant's professional life. In addition, he highly amicably led crucial departments such as Establishment, Information, Tourism, Physical Planning, Bait-ul-Mal, Social Security, and Cooperatives in Punjab and Khyber Pakhtunkhwa.
+            
+            What greater proof of his administrative acumen could there be than the fact that the deceased served as the Principal Secretary to five different Chief Ministers of Punjab, a unique and unprecedented honor in the bureaucratic history of Pakistan. On the occasion of the inauguration of the new and magnificent building of the Punjab Assembly, former Speaker Chaudhry Pervaiz Elahi specially invited him to the assembly and paid tribute to him in golden words that are forever preserved in the pages of history:
+            "We used to learn from Sikandar Sahib. He would help us out of every tangled situation. The current Principal Secretary should also learn from him."
+            
+            The most brilliant and radiant aspect of the life of the sympathizer and savior of the poor, the late G.M. Sikandar, was that he was truly an exemplary officer of an Islamic and welfare state, a concept envisioned by our ancestors. In this traditional bureaucratic environment, where a common and poor man's access to high-ranking officers is tantamount to bringing a river of milk, access to the blessed person of G.M. Sikandar was unhindered for every poor, helpless, and needy person. He had strictly bound his staff not to turn away any petitioner or needy person at the door. It was his routine of utmost compassion that before leaving for the office, he would meet the petitioners at his home, listen to their difficulties, and resolve their grievances on the spot. The lush green lawn of his house presented a charming scene of a small public "Secretariat," where chairs and tables were set up, and the incoming needy not only received immediate justice and redressal but were also treated to tea. By providing honorable means of employment to thousands of destitute, poor, and unemployed youth and securing jobs in various institutions purely on merit, it would not be an exaggeration to rightly call him the "economic father" of thousands of families in Gilgit-Baltistan and other underprivileged areas of the country.
+            
+            Even after retiring from government posts, his selfless mission of service did not stop. He dedicated his remaining breaths and energies to suffering humanity. He became an active trustee of the 'Hamza Foundation,' where he worked day and night for the education and training of children deprived of hearing and speech (deaf and mute). He also remained a permanent member of the 'Ma'arfi Foundation Pakistan,' which is rendering valuable services in the fields of social welfare and public health. Furthermore, as the Executive Director and Chairman of the HR Committee of National Fertilizer Marketing Limited and JS Bank, he excellently fulfilled the duty of intellectual and administrative guidance for national institutions.
+            
+            The late G.M. Sikandar Shigri is counted among those select few officers who, on the strength of their humility, modesty, and compassion, established a unique and exemplary identity not only at the national but also at the global level. Sikandar Shigri was not merely the name of a mortal body or an ordinary government officer; he was a complete system of thought, an ideology, and a walking mission of service to humanity. Through his actions, he proved that true and real officialdom does not lie in the pomp, show, and arrogance of positions, but is hidden in the selfless service of God's creation and ruling over their hearts.
+            
+            Today, on the occasion of his first death anniversary, as we remember him, even though he is not present among us, and the great void created by his departure may perhaps never be filled by the passage of time, his valuable services, fatherly affection, honesty, and pure character will forever shine as a beacon of light on the golden pages of history and in the heart of every conscientious citizen of this land.
+            
+            May God Almighty grant acceptance to all his manifest and hidden good deeds and efforts, and elevate his ranks in the neighborhood of His mercy, Ameen!
+            "It is a reality that he who makes service his motto is the true officer!"
+
+            <br>
+<br>
+                <h4 style="color:#0f4c75; margin-bottom:15px; font-family: sans-serif;">Daily Mashriq</h4>
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Daily Mashriq">
+
+                <br>
+ <br>
+                <h4 style="color:#0f4c75; margin-bottom:15px; font-family: sans-serif;">Baad-e-Shimal</h4>
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087169/baad-e-shimal-08-07-2026_ksgcir.png" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Baad-e-Shimal">
+
+                <br>
+ <br>
+                <h4 style="color:#0f4c75; margin-bottom:15px; font-family: sans-serif;">Zamana News</h4>
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/WhatsApp_Image_2026-08-07_at_10.48.00_AM_ou7osd.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Zamana News">
+
+                <br>
+ <br>
+                <h4 style="color:#0f4c75; margin-bottom:15px; font-family: sans-serif;">5Cn</h4>
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087166/gmsikandar-5cn-6aug2016_uqtj5l.webp" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="5Cn">
+
+                <br>
+
+
+            <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
+                <h4 style="color:var(--primary-color);">Visit Online Links:</h4>
+                <ul style="list-style:none; padding:0;">
+                    
+                    <li style="margin-bottom:15px;">
+                        <strong>Daily Mashriq:</strong><br>
+                        <a href="https://mashriqakhbar.com.pk/page/p4/2026-08-07/1" 
+                           target="_blank" 
+                           style="color:#0f4c75; text-decoration: underline; word-break: break-all; font-family: sans-serif; font-size: 0.9em;">
+                             https://mashriqakhbar.com.pk/page/p1/2025-08-13/1
+                        </a>
+                    </li>
+
+                    <li style="margin-bottom:15px;">
+                        <strong>Facebook Post:</strong><br>
+                        <a href="https://www.facebook.com/share/v/1TcZrmhcAr/" 
+                           target="_blank" 
+                           style="color:#0f4c75; text-decoration: underline; word-break: break-all; font-family: sans-serif; font-size: 0.9em;">
+                             https://www.facebook.com/share/p/14T4FgF1sNn/
+                        </a>
+                    </li>
+
+                    <li style="margin-bottom:15px;">
+                        <strong>Baad-e-Shimal</strong><br>
+                        <a href="https://www.dailybaadeshimal.com/news/08-07-2026/pages/08-07-2026page-2.gif" 
+                           target="_blank" 
+                           style="color:#0f4c75; text-decoration: underline; word-break: break-all; font-family: sans-serif; font-size: 0.9em;">
+                            (Baad-e-Shimal Link)
+                        </a>
+                    </li>
+                    
+                     <li style="margin-bottom:10px;">
+                        <strong>5Cn</strong><br>
+                        <a href="https://5cntv.com/humble-soul-of-the-halls-of-authority/" 
+                           target="_blank" 
+                           style="color:#0f4c75; text-decoration: underline; word-break: break-all; font-family: sans-serif; font-size: 0.9em;">
+                            (5Cn Link)
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+    `
+    },
 
 
   {
