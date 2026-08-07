@@ -1,11 +1,9 @@
 export const englishData = [
 
 
-
-  
-
 {
-        id: 225-E,
+       // صحیح طریقہ
+id: "225-E",
         category: "column",
         title: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
         date: "06-08-2026",

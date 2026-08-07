@@ -1,8 +1,9 @@
 export const farsiData = [
     
   {
-        id: 225-F,
-        category: "column",
+// صحیح طریقہ
+id: "225-F",    
+    category: "column",
         title: "درویش متواضع ایوان قدرت، مرحوم جی ام سکندر شگری",
         date: "06-08-2026",
         paper: "روزنامه مشرق / بادشمال / زمانہ نیوز / 5Cn",
