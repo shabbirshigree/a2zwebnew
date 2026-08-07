@@ -7,6 +7,26 @@ import Footer from '../components/Footer';
 import { BOOKS_DATA, AUTHOR_REVIEW } from './libraryData';
 import dynamic from 'next/dynamic';
 
+const __openBookAudio = typeof window !== 'undefined' ? (() => {
+  try {
+    const a = new Audio('/page-flip.mp3');
+    a.preload = 'auto';
+    a.volume = 0.9;
+    a.load();
+    return a;
+  } catch (e) { return null; }
+})() : null;
+
+const playOpenSoundNow = () => {
+  try {
+    if (__openBookAudio) {
+      try { __openBookAudio.currentTime = 0; } catch (e) {}
+      const p = __openBookAudio.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    }
+  } catch (e) {}
+};
+
 const UrduFlipBook = dynamic(() => import('./UrduFlipBook'), {
   ssr: false,
   loading: () => (
@@ -74,6 +94,7 @@ function LibraryContent() {
 
   const handleOpenBook = (url, title, orientation) => {
     if (url) {
+      playOpenSoundNow();
       setBookUrl(url);
       setBookOrientation(orientation || 'portrait');
       setActiveBookTitle(title);

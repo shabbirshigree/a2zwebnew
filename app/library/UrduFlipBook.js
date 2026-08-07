@@ -4,9 +4,18 @@ import HTMLFlipBook from 'react-pageflip';
 import { pdfjs, Document, Page } from 'react-pdf';
 import { FaShareAlt, FaExpand, FaTimes } from 'react-icons/fa';
 
-// PDF worker stylesheets
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+
+const __pageFlipAudio = typeof window !== 'undefined' ? (() => {
+  try {
+    const a = new Audio('/page-flip.mp3');
+    a.preload = 'auto';
+    a.volume = 1.0;
+    a.load();
+    return a;
+  } catch (e) { return null; }
+})() : null;
 
 export default React.memo(function UrduFlipBook({ pdfUrl, title, onClose, isLandscape }) {
   const [numPages, setNumPages] = useState(null);
@@ -15,7 +24,6 @@ export default React.memo(function UrduFlipBook({ pdfUrl, title, onClose, isLand
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // ورژن کے تضاد کو ختم کرنے کے لیے خودکار ورژن کا استعمال
     pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
   }, []);
 
@@ -23,9 +31,21 @@ export default React.memo(function UrduFlipBook({ pdfUrl, title, onClose, isLand
   const bookHeight = isLandscape ? 300 : 450;
 
   const playFlipSound = () => {
-    const audio = new Audio('/page-flip.mp3');
-    audio.volume = 1.0;
-    audio.play().catch(e => console.log("آڈیو پلے نہیں ہو سکی"));
+    try {
+      if (__pageFlipAudio) {
+        try { __pageFlipAudio.currentTime = 0; } catch (e) {}
+        const p = __pageFlipAudio.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      }
+    } catch (e) {
+      // Fallback (very rare) — create a new audio on the fly
+      try {
+        const fb = new Audio('/page-flip.mp3');
+        fb.volume = 1.0;
+        const p = fb.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      } catch (err) { console.log("آڈیو پلے نہیں ہو سکی"); }
+    }
   };
 
   const toggleFullscreen = () => {
