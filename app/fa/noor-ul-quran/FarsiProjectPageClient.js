@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Navbar, HeroSlider } from '../../components/Header';
 import Footer from '../../components/Footer';
 import QuranIntroCard from '../../components/QuranIntroCard';
+import ClipViewsCounter from '../../components/ClipViewsCounter';
 import { useLocale } from '../../components/LocaleProvider';
 import { quranVideos } from '../../noor-ul-quran/noor-ul-quran-data';
 
@@ -400,6 +401,7 @@ export default function FarsiProjectPageClient() {
                   title="Daily Quranic Clip Playlist"
                 ></iframe>
               </div>
+              <ClipViewsCounter lang="fa" />
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import QuranIntroCard from '../components/QuranIntroCard';
+import ClipViewsCounter from '../components/ClipViewsCounter';
 import { quranVideos } from './noor-ul-quran-data';
 
 export default function ProjectPageClient() {
@@ -284,6 +285,7 @@ export default function ProjectPageClient() {
                    title="Daily Quranic Clip Playlist"
                  ></iframe>
               </div>
+              <ClipViewsCounter lang="ur" />
             </div>
           </div>
         </div>
