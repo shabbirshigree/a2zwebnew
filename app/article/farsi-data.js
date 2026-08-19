@@ -108,7 +108,7 @@ export const farsiData = [
   },
    {
   id: "226-F",
-        category: "column",
+        category: ["other_personalities", "column"],
         title: "نصرت فاطمه نقوی، بانوی عظیمی که در خدمت به خلق، مجاهدتی مستمر و دلی دردمند دارد",
         date: "08-10-2026",
 

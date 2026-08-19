@@ -130,7 +130,7 @@ export const englishData = [
  
  {
   id: "226-E",
-        category: "column",
+        category: ["other_personalities", "column"],
         title: "Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
         date: "08-10-2026",
 
