@@ -1,6 +1,197 @@
 export const englishData = [
 
+{
+  id: "227-E",
+  category: "column",
+  title: "Indelible Marks of Hussainiyat on the Subcontinent",
+  date: "08-19-2026",
+  // ہیڈر امیج (مشرق والی تصویر)
+  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+  excerpt: "The roots of the influence of the Shia school of thought in the Indian subcontinent are linked to the very first century of the Hijri calendar.",
+  content: `
+    <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
+            
+      <h2 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">Indelible Marks of Hussainiyat on the Subcontinent</h2>
+      <p style="text-align: center; color: #555;"><strong>Research and Writing: Shabbir Ahmed Shigri</strong></p>
+      <hr style="margin: 20px 0;">
 
+      <p>The roots of the influence of the Shia school of thought in the Indian subcontinent are linked to the very first century of the Hijri calendar. After the tragedy of Karbala in 61 AH, when the Umayyad and later the Abbasid caliphs made life unbearable for the Syeds (progeny of the Prophet PBUH), the followers of the Ahl al-Bayt (AS) and the revered Syeds turned to various regions to protect their beliefs and propagate the religion. (Reference: Tarikh-e-Farishta / Futuh al-Buldan by Al-Baladhuri) [1] According to historical traditions, caravans of Syeds began migrating and entering the subcontinent via Khorasan, Makran, and Sindh as early as the era of Imam Zain-ul-Abideen (AS). Long before the arrival of Muhammad bin Qasim in Sindh, there were already tribes present here whose hearts were brimming with the love of the Ahl al-Bayt (AS).</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Arrival of Bibi Pak Daman (SA): The First Migration</h3>
+      <p>According to historical traditions, when the Syeds migrated after the tragedy of Karbala, among them was the daughter of Commander of the Faithful Imam Ali (AS), Hazrat Ruqayyah bint Ali (SA) (locally known as 'Bibi Pak Daman'), who migrated along with other noble ladies and arrived in Lahore via Sindh. This was a time when Islam had no existence in this region, and idolatry and Hinduism reigned supreme. Centuries before the arrival of Mahmud of Ghazni and other Sufi saints, it was Bibi Pak Daman (SA) who lit the very first candle of monotheism and love for the Ahl al-Bayt (AS) in this dark region.</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Misconception of Ibn-e-Tukhta and the Author's Research:</h3>
+      <p>Here it is extremely necessary to dispel an important historical misconception propagated by certain circles, claiming that these shrines do not belong to the daughters of Hazrat Ali (AS) but to the daughters of Syed Ahmed Tukhta (Ibn-e-Tukhta), whose shrine is located near Masjid Khawajgan in Mochi Gate, Lahore. In refutation of this historical fallacy, the author's research states that when the great Sufi saint of the subcontinent, Hazrat Syed Ali Hujwiri (Data Ganj Bakhsh), arrived in Lahore in the 11th century AD, he paid his respects at the shrine of Bibi Pak Daman with deep devotion and observed a Chilla (spiritual retreat). The most authentic biographical accounts of the history of Lahore (such as Noor Ahmed Chishti's Tahqiqat-e-Chishti and Mufti Ghulam Sarwar Lahori's Khazinat-ul-Asfiya) clearly mention that Data Sahib frequently visited this shrine and stayed there to attain spiritual grace. The greatest practical and irrefutable proof of this is the historical Chilla Gah (place of retreat) which is still preserved within the premises of the Bibi Pak Daman shrine. [2] It is also said that Data Sahib used to pay his respects at this sacred shrine on his knees.</p>
+      
+      <p>A historical point of utmost importance here is that the lifetime of Data Ganj Bakhsh predates the era of Syed Ahmed Tukhta by at least a century or a century and a half. When such an eminent personality (Data Sahib) visited and observed a retreat there—centuries before Ibn-e-Tukhta even came into this world—how could these shrines belong to the daughters of Ibn-e-Tukhta? This deduction of logic and history is solid proof that these noble ladies of the Ahl al-Bayt (AS) graced this place centuries before the arrival of Data Sahib.</p>
+      
+      <p>Furthermore, in addition to our personal research, the institution of 'Astan Quds Razavi' at the Holy Shrine of Imam Reza (AS) in Iran has also confirmed in writing that these shrines undoubtedly belong to the progeny of Commander of the Faithful Imam Ali (AS) and the noble Syeds. [3] Therefore, historically, it is evident that these were the earliest Hussaini (AS) footprints that later provided the strong foundations of Islam in this region, and it was through them that the light of Islam was kindled here.</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The First Political Footprints in Multan and Sindh (4th Century AH)</h3>
+      <p>The formal political and social emergence of the Hussaini school of thought in the subcontinent occurred in the 4th century AH (10th century AD) in the regions of Multan and Mansura (Sindh). A formal Ismaili/Fatimid state was established in Multan, which promoted tolerance, knowledge, and literature in the region. Although it was later dismantled by the invasions of Mahmud of Ghazni, devotion to the Ahl al-Bayt (AS) became eternally ingrained in the soil of this region (present-day South Punjab and Sindh). This is why, even today, Sindh and Multan remain the strongest hubs of Azadari (mourning) and Sufi traditions in the subcontinent. [4]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Establishment of the Mughal Empire and the Key Role of Shia Luminaries:</h3>
+      <p>As we enter the Medieval period, the role of Shia luminaries in the foundations of the Mughal Empire is highly prominent.</p>
+      <p><strong>• Bairam Khan:</strong> When the Mughal Emperor Humayun was defeated by Sher Shah Suri and took refuge in Iran, it was the military and diplomatic strategy of the Shah of Iran (Shah Tahmasp) and Humayun's immensely loyal Shia commander, Bairam Khan, that restored the Mughal Empire in India.</p>
+      <p><strong>• Scholarly and Jurisprudential Services:</strong> In the Mughal court, the role of Qazi Noorullah Shustari (also known as 'Shaheed-e-Salis' or the Third Martyr) is of extreme significance. During the reigns of Akbar and Jahangir, he formally introduced Shia jurisprudence (Fiqh-e-Jafaria) on scholarly foundations in the subcontinent and authored monumental books like Ihqaq-ul-Haq and Majalis-ul-Momineen. As a reward for his truthfulness, he attained the status of martyrdom during Jahangir's reign. [5]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Shia States of Deccan and the State Patronage of Azadari (16th and 17th Centuries)</h3>
+      <p>In South India (Deccan), the Shia school of thought established formal independent states, prominently the Qutb Shahi Sultanate (Golconda) and the Adil Shahi Sultanate (Bijapur). (Reference: Tarikh-e-Deccan / History of Urdu Literature) [6]</p>
+      <p><strong>• Initiation and Promotion of Azadari:</strong> The formal organization and state patronage of Azadari in Deccan were initiated by the founder of the Qutb Shahi Sultanate, Sultan Quli Qutb Shah. He and his successors were followers of the Shia school; they provided official state patronage to the observance of Muharram and Azadari in Hyderabad Deccan and constructed several historic Ashurkhanas, including the 'Badshahi Ashurkhana' in Golconda, where Majalis and Azadari were held at the state level.</p>
+      <p><strong>• Literature and Elegy Writing (Marsiya):</strong> The first published Urdu poet (Sahib-e-Diwan) and ruler of Golconda, Muhammad Quli Qutb Shah, not only promoted Azadari but also wrote the first formal Urdu Marsiya (elegy). By granting equal rights to Hindus and Muslims, these states set a magnificent example of sectarian harmony that left deep impacts on the civilization and culture of the subcontinent.</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Nawabs of Awadh and Bengal (18th Century - Forefront Against the British)</h3>
+      <p>During the decline of the Mughal Empire, the state of Awadh (Lucknow) in the north and Bengal in the east emerged as two major political and cultural centers.</p>
+      <p><strong>• Lucknow (Awadh):</strong> The Nawabs of Awadh (Nawab Shuja-ud-Daula, Asaf-ud-Daula, etc.) transformed Lucknow into the "Najaf" of the subcontinent. Not only did they build massive Imambargahs (like the Asafi Imambargah), but by patronizing great elegy writers like Mir Anees and Mirza Dabeer, they also took Urdu literature to its pinnacle.</p>
+      <p><strong>• First Resistance Against British Imperialism:</strong> The last independent Nawab of Bengal who blocked the path of the British East India Company in the Battle of Plassey in 1757, Nawab Siraj-ud-Daulah (Mirza Muhammad Siraj-ud-Daulah), was also a follower of the Shia school of thought. Despite betrayals, this young Nawab preferred to fight and die on the battlefield (the Hussaini principle) rather than bow down to the British. [7]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Interim Period from 1757 to 1857: Continuity of Resistance and the Talpur Mirs of Sindh</h3>
+      <p>Following the martyrdom of Nawab Siraj-ud-Daulah, this resistance against the British did not cease. Just a few years later, in the decisive 'Battle of Buxar' in 1764, the Shia Nawab of Awadh, Shuja-ud-Daula, allied with Mir Qasim of Bengal and the Mughal Emperor Shah Alam II to fiercely combat British imperialism. Although the Muslims were defeated in this battle, the Nawabs of Awadh did not easily accept British dominance. During this same hundred-year period, looking towards Sindh, the rule of the Talpur dynasty was established in 1783, who were followers of the Shia school. The Talpur Mirs established a magnificent, peaceful, and tolerant government in Sindh and vigorously promoted Azadari in the region. When the British attempted to occupy Sindh, the Talpur Mirs put up a bloody military resistance against General Charles Napier in the 'Battle of Miani' in 1843. This century was not merely limited to the battlefield; rather, it was the era when, under the patronage of the Nawabs in Lucknow, great elegy writers like Mir Anees and Mirza Dabeer sowed the seed of the memory of Karbala and freedom (Hurriyat) in the consciousness of the Muslims of the subcontinent, keeping them alive even in the darkness of slavery. The ultimate result of this intellectual and military resistance emerged in the form of the 1857 War of Independence, where the Queen of Awadh, Begum Hazrat Mahal, scripted the history of the longest and most arduous resistance against the British. [8]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The First Architect of Political Awakening Before Sir Syed: Justice Syed Ameer Ali</h3>
+      <p>After the disastrous failure in the 1857 War of Independence, the Muslims of the subcontinent suffered from a severe inferiority complex and British wrath. In such times, Sir Syed Ahmed Khan attracted Muslims toward modern education through the 'Aligarh Movement', but Sir Syed's movement was initially strictly "non-political." He wanted to keep Muslims away from politics. Here comes the great turning point in history that is often ignored. The immortal credit for organizing the Muslims of the subcontinent not only educationally but for the first time as a separate "political nation" goes to a great Shia thinker, jurist, and historian, Justice Syed Ameer Ali (1849–1928).</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Family Background and Migration from Mashhad:</h3>
+      <p>Justice Syed Ameer Ali’s ancestors hailed from the Iranian city of Mashhad. His forefathers, who were from the lineage of Imam Ali Reza (AS) (Razavi Syeds), migrated from Mashhad (Khorasan) to India during Nader Shah's invasion in 1739. They first associated with the court of Awadh and later settled in Bengal. Thus, the spirituality of Mashhad and the political insight of the Syeds were embedded in his nature.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">1877 - Establishment of the Central National Mohammedan Association:</h3>
+      <p>Justice Syed Ameer Ali had realized that mere education was not enough; if Muslims did not organize themselves politically like the Hindus, they would be crushed under the British Raj. Therefore, 8 years before the founding of the Indian National Congress in 1885, he established the 'Central National Mohammedan Association' in 1877. This was the very first formal political organization of the Muslims in the subcontinent.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Separate Electorates - The True Foundation of the Pakistan Movement:</h3>
+      <p>Justice Syed Ameer Ali’s greatest and most decisive achievement was getting the right of "Separate Electorates" recognized for Muslims. He founded the 'London Muslim League' in 1908 and, sitting in the British capital, convinced British parliamentarians that Muslims were a separate nation. The pages of history bear witness that this was the very right of 'Separate Electorates' approved in the 1909 Minto-Morley Reforms, and it was this right that later provided the solid constitutional foundation for the creation of Pakistan. [9]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Establishment of the All India Muslim League, the Shimla Deputation, and Shia Leaders (1906)</h3>
+      <p>The seed of a separate political identity sown by Justice Syed Ameer Ali was now ready to be molded into a formal political party. In October 1906, the historic 'Shimla Deputation', comprising 35 prominent Muslim leaders of the subcontinent, met Viceroy Lord Minto and formally demanded separate electorates for Muslims. Historical integrity demands that this fact be preserved here: Shia leaders were heavily included in this most important delegation of Muslims. This historic delegation was led by the spiritual leader of the Ismaili Shia school, Sir Sultan Muhammad Shah, Aga Khan III. Alongside him, other great Shia leaders were also present in the delegation, notably Nawab Sir Fateh Ali Khan Qizilbash from Punjab, prominent jurist Syed Nabiullah from Lucknow, and Raja Sir Muhammad Ali Muhammad Khan of Mahmudabad from Awadh (the father of the Pakistan Movement hero, Raja Amir Ahmed Khan). It is also interesting to note here that the current Qizilbash Nawab family of Lahore (which is still associated with Mubarak Haveli and Nawab Palace and organizes Lahore’s central Shabih-e-Zuljanah procession during the Ashura of Muharram) is actually descended from the very same Nawab Sir Fateh Ali Khan Qizilbash of the Shimla Deputation.</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Background and Migration of Sir Aga Khan III:</h3>
+      <p>Sir Aga Khan's ancestors also belonged to Iran. His grandfather, Aga Khan I (Hasan Ali Shah), migrated from the Mahallat region of Iran to the subcontinent in the 1840s. His family tree traces back directly to Imam Jafar Sadiq (AS) through the Fatimid caliphs.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Details of Political and Educational Services:</h3>
+      <p>As a result of the success of the Shimla Deputation, when the 'All India Muslim League' was established in Dhaka on December 30, 1906, Sir Aga Khan III was elected as its very first President and held this position until 1913. His greatest achievement was securing the status of a formal 'Aligarh Muslim University' for Aligarh College. He toured all of India for the university fund and, in addition to giving a substantial amount from his own pocket, collected a fund of 3 million rupees, which established the institution that later became the nursery of the Pakistan Movement. [10]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Quaid-e-Azam's Right-Hand Man: Raja Sahib of Mahmudabad (Amir Ahmed Khan)</h3>
+      <p>The history of the Pakistan Movement will always remain incomplete without mentioning this great young leader, who, offering a true interpretation of the Hussaini (AS) spirit, sacrificed his immense wealth and ancestral state for a separate homeland for Muslims.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Migration from Iraq and Family Background:</h3>
+      <p>The state of Mahmudabad was the second largest and wealthiest Shia state in Awadh. The ancestors of this family migrated to India from Baghdad (Iraq) in the thirteenth century AD. Despite the passage of centuries, this family kept their Hussaini (AS) identity and the magnificent traditions of Azadari alive.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Financial Patronage of the Muslim League and Establishment of MSF:</h3>
+      <p>When Raja Sahib became the ruler of the state in 1931, he was merely 17 years old. He dedicated his royal palace in Lucknow, 'Mahmudabad House', as the headquarters of the All India Muslim League for years. He was the youngest member of the Muslim League's Working Committee. In 1937, he laid the foundation of the 'All India Muslim Students Federation' (MSF) and, by organizing Muslim students, prepared a tempestuous army that carried the Quaid-e-Azam's message to every home.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Unparalleled Sacrifice:</h3>
+      <p>When the Congress offered that his vast state in India would be protected if he left the Muslim League, this leader nurtured by the Hussaini (AS) school kicked away worldly wealth and migrated to Pakistan, leaving behind his entire state and palaces. [11]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">The Mujahid of the Financial and Diplomatic Front and the Foundation of PIA: Mirza Abolhassan Ispahani</h3>
+      <p>The companion of the Quaid-e-Azam who played the most active and solid role on the diplomatic and economic fronts was Mirza Abolhassan Ispahani.</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Migration from Iran (Isfahan) and Background:</h3>
+      <p>His family had migrated from the historic city of 'Isfahan' in Iran to the subcontinent and established a huge commercial network in Calcutta named 'M.A. Ispahani & Sons'. This was a purely Iranian-origin Shia family that wielded deep influence in the economy of the subcontinent.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Orient Airways and the Transfer of Refugees:</h3>
+      <p>During the Pakistan Movement, when Hindus owned dozens of airlines, the Muslims had no aviation company of their own. On the special instructions of Quaid-e-Azam, Mirza Abolhassan Ispahani, in collaboration with Adamjee, laid the foundation of the Muslims' only airline, 'Orient Airways', in 1946. During the tumultuous period of the Partition of India, when the massacre of Muslims was taking place in trains, this same Orient Airways safely transported thousands of Muslim refugees from Delhi and other areas to Pakistan by air. Later, in 1955, this very airline was merged into the current Pakistan International Airlines (PIA), which is today the national airline of Pakistan.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Confidant of the Quaid-e-Azam:</h3>
+      <p>He provided a major portion of the funds for the Muslim League's newspaper 'Dawn'. In 1946, he visited America and presented the case for the creation of Pakistan for the first time, and after independence, he was appointed as Pakistan's first ambassador to the United States. [12]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Establishment of Habib Bank and the Survival of the Newborn State:</h3>
+      <p>The role of another great Shia (Khoja Asna Ashari) family in the economic foundations of Pakistan is unforgettable. On the directive of Quaid-e-Azam, to liberate the Muslims of the subcontinent from Hindu moneylenders, Seth Muhammad Ali Habib and his family established 'Habib Bank' in 1941. Immediately after the creation of Pakistan, when the Reserve Bank of India withheld Pakistan's share of funds and the newborn state did not even have the money to pay salaries to its government employees, it was this very Seth Muhammad Ali Habib who presented a 'Blank Cheque' to the Quaid-e-Azam, saving Pakistan from bankruptcy. [13]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px;">Creation of Pakistan and the State Continuity of Azadari</h3>
+      <p>As a result of this long struggle, an independent Islamic state, 'Pakistan', emerged on the map of the world in 1947. Quaid-e-Azam Muhammad Ali Jinnah's historic speech on August 11, 1947, was a guarantee that every school of thought in this new state would have the freedom to live according to their beliefs. The luminaries who sacrificed their all in the creation of Pakistan also played a fundamental role in the promotion of the Ahl al-Bayt (AS) school and the protection of Azadari in this new state:</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">Scholarly Patronage by Raja Sahib of Mahmudabad:</h3>
+      <p>After the creation of Pakistan, Raja Sahib focused his influence on establishing Shia scholarly institutions and patronizing the prominent scholars of the subcontinent, which gave a modern and academic color to oratory and Majalis in Pakistan.</p>
+      
+      <h3 style="color: #2980b9; margin-top: 25px;">The Qizilbash Family and the Promotion of Azadari:</h3>
+      <p>In Lahore, the remnants of Nawab Sir Fateh Ali Khan Qizilbash (Mubarak Haveli and Nisar Haveli) bestowed a new grandeur upon the continuity of Azadari in the new state, from where the central Shabih-e-Zuljanah procession became the cultural and religious identity of Pakistan.</p>
+      <p>It is the fruit of the ideological steadfastness, financial sacrifices, and intellectual insight of these very luminaries that today Pakistan, after Iran, hosts the world's second-largest Shia population, where the Azadari of Syed-ul-Shuhada (AS) continues with full state splendor and freedom. [14]</p>
+
+      <h3 style="color: #2980b9; margin-top: 25px; border-top: 1px solid #ccc; padding-top: 10px;">References</h3>
+      <p style="font-size: 0.9em; line-height: 2;">
+        [1] Tarikh-e-Farishta (Muhammad Qasim Farishta) and Futuh al-Buldan (Ahmad bin Yahya al-Baladhuri)<br>
+        [2] Tahqiqat-e-Chishti (Noor Ahmed Chishti) and Khazinat-ul-Asfiya (Mufti Ghulam Sarwar Lahori)<br>
+        [3] Letter and Certificate of Verification, Astan Quds Razavi Institution, Mashhad, Iran<br>
+        [4] Tarikh-e-Sindh (Aijaz-ul-Haq Quddusi) and Tarikh-e-Multan<br>
+        [5] Akbarnama (Abu'l-Fazl) and Majalis-ul-Momineen (Qazi Noorullah Shustari)<br>
+        [6] Tarikh-e-Deccan and Tarikh Adab-e-Urdu (Dr. Jameel Jalibi)<br>
+        [7] Siyar-ul-Mutakhirin (Syed Ghulam Husain Tabatabai)<br>
+        [8] Tarikh-e-Hind and historical facts of the 1857 War of Independence<br>
+        [9] Memoirs and Other Writings of Syed Ameer Ali<br>
+        [10] The Memoirs of Aga Khan and historical documents of the All India Muslim League<br>
+        [11] Some Memories (Memoirs of Raja Amir Ahmed Khan of Mahmudabad)<br>
+        [12] Quaid-e-Azam As I Knew Him (by Mirza Abolhassan Ispahani)<br>
+        [13] Economic History of Pakistan and documentary history of Habib Bank<br>
+        [14] Tarikh-e-Shiayan-e-Pakistan and historical facts post-creation of Pakistan
+      </p>
+
+    </div>
+  `
+},
+ 
+ {
+  id: "226-E",
+        category: "column",
+        title: "Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
+        date: "08-10-2026",
+
+        // ہیڈر امیج (مشرق والی تصویر)
+image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+        excerpt: " Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
+        content: `
+        <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
+            
+<p><strong> Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity</strong></p>
+            <p><strong>Written by: Haji Shabbir Ahmed Shigri</strong></p>
+
+            <br>
+In human history, such personalities are always looked upon with utmost respect who, despite reaching the heights of worldly success, keep their souls connected to the Creator of the universe and the service of humanity. Madam Nusrat Fatima Naqvi's life is one such shining example; even today she is proving her mettle as a successful international business and social personality. By generously spending her wealth for philanthropic, social, and religious purposes, she is also preparing the best 'Baqiyat as-Salihat' (everlasting good deeds) for herself.
+
+Madam Nusrat Fatima Naqvi was born in 1958 in Karachi, Pakistan. Her father's name is Syed Muhammad Naqvi and her mother's name is Meher Bano. Opening her eyes in an educated and practicing family, Nusrat Fatima had made a firm resolve to advance in the fields of knowledge and action right from the beginning, and even today she is actively working with the same zeal. Her husband was Ghulam Sarwar Chaudhry (late), who passed away on October 31, 2005, in Lahore. Her children include Javed, Hajra, and Fawad Haider. Her permanent address in Pakistan is Gulberg III, Lahore. Her husband had so much trust in her administrative abilities that in 2004, he granted her complete legal authority (Special Power of Attorney) to manage the business, children's education, and travel matters.
+
+She is an extremely active, courageous, and world-class business and social personality. The scope of her business activities is spread across most countries of the world, and she has proved that a courageous woman can plant the flags of her success in every field.
+
+She started various businesses in Dubai and Sharjah right from the 1970s. Her business ownerships have included a block factory in Sharjah, 'Al-Rafidain General Decor' (1977), a vehicle repair garage named 'Garage Al-Rafidain' (1980), and a partnership in 'Mat'am Al-Ta'ma' (restaurant) in Ajman. Furthermore, in 1997, she also managed high-level administrative affairs as a Sales Manager at 'Asali General Trading'.
+
+A major portion of her business is present in Syria, where she owns a magnificent hotel and various flats in the historic city of Damascus. According to the documents of the Damascus Chamber of Commerce in 2010, she is the owner of a massive import-export network, which includes extensive trade of clothing, electronics, books, computers, medical and laser equipment, and construction materials.
+
+According to a Pakistani embassy document (2025), she is currently residing in the UK and Spain, and Masha'Allah, she is successfully running her global business and social activities from there.
+
+The author personally knows Madam Nusrat Fatima Naqvi for several decades. This is from the time when I was performing my professional duties in the embassy. She used to visit the embassy often. Being a highly scholarly, sagacious, and dignified woman, her relations with top diplomatic and cultural representatives of various countries were established at a high level, and all diplomats respected and honored her immensely. I have always found her to be a highly religious, sincere, compassionate, and dignified veiled lady. Her excellent morals are unparalleled, and her conversation is so meaningful and impactful that it leaves a deep impression on the listener.
+
+I have also had the honor of listening to her speeches at various events and programs. When she speaks, her perspective is completely different from the usual path, highly eye-opening, and realistic. Behind this mesmerizing personality, impactful oratory, and broad-mindedness, actually speaks the essence and immense experience of her life that she has gained by traveling to different countries of the world and closely observing their societies and civilizations.
+
+The brightest aspect of Nusrat Fatima Naqvi's life is her generosity and active participation in charitable works. Worldly wealth never made her oblivious to her true purpose.
+
+Grand Official Donation:
+In 1982, she gifted land worth 25 million (2.5 crore) Syrian Liras in the area of Sayyida Zainab (SA) to the Syrian government for philanthropic works, for which the Ministry of Awqaf officially thanked her.
+
+Establishment of Hussainiya and Religious Centers:
+In 1981, she undertook the construction of 'Hussainiya Zainab Al-Zahra' in Damascus and obtained formal permission from the Dubai court for this grand project. In January 1994, she gifted another valuable piece of land to the Ahl Al-Bayt World Assembly so that a grand library, Hussainiya, guest house, and office could be built there.
+
+Medical and Social Aid:
+In 1983, she donated land to the Red Crescent for a hospital and orphanage. Later, in 2007, she generously donated medical equipment and essential household items for the needy to 'Mustawsaf Al-Zahra' (charity clinic).
+
+Charity Project in the United Arab Emirates:
+In 1989, she formally offered the UAE Ministry of Awqaf to build a mosque, clinic, staff accommodation, and a Quran memorization center, which is proof of her broad philanthropic vision.
+
+Global Expansion of Philanthropic Vision (Reach to Europe):
+Nusrat Fatima Naqvi's philanthropic thinking is not limited merely to the Middle East. Her heart beats for the lovers of Ahl al-Bayt (AS) living all over the world. Under this great purpose, she also turned to Europe to build a Hussainiya and a Madrassah to improve the plight of the Shia community residing there. She desires that strong centers be established in Europe as well for the propagation of the religion and the rightful school of thought.
+
+Madam Nusrat Fatima Naqvi's life is a practical example of how a courageous woman is gathering business successes in different countries of the world on the strength of her abilities, and then spending the same wealth in the path of Allah, for the sponsorship of orphans, the construction of hospitals, and the establishment of religious centers. These Sadqa-e-Jariya (continuous charities) and philanthropic works done by her are still ongoing today. We pray for the health, safety, and long life of Madam Nusrat Fatima Naqvi so that this benevolence of hers continues just like this.            <br>
+<br>
+            
+
+
+            <div style="margin-top:30px; border-top:1px solid #ddd; padding-top:20px;">
+                <h4 style="color:var(--primary-color);">آن لائن :</h4>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/m7ZjzyU5LYg?si=ZSGfw-BhaAl-Kvxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+    `
+    }, 
 {
        // صحیح طریقہ
 id: "225-E",
