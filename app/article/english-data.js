@@ -6,7 +6,7 @@ export const englishData = [
   title: "Indelible Marks of Hussainiyat on the Subcontinent",
   date: "08-19-2026",
   // ہیڈر امیج (مشرق والی تصویر)
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
   excerpt: "The roots of the influence of the Shia school of thought in the Indian subcontinent are linked to the very first century of the Hijri calendar.",
   content: `
     <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
@@ -123,7 +123,15 @@ export const englishData = [
         [13] Economic History of Pakistan and documentary history of Habib Bank<br>
         [14] Tarikh-e-Shiayan-e-Pakistan and historical facts post-creation of Pakistan
       </p>
+<br>
 
+            <div style="text-align:center; margin-bottom:30px; background:#f9f9f9; padding:15px; border-radius:10px; border:1px solid #ddd;">
+                
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Column Page 1">
+                
+                <br>
     </div>
   `
 },

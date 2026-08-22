@@ -6,7 +6,7 @@ export const farsiData = [
   title: "نقش‌های ماندگار حسینیت بر شبه‌قاره",
   date: "08-19-2026",
   // ہیڈر امیج (مشرق والی تصویر)
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
   excerpt: "نقش‌های ماندگار حسینیت بر شبه‌قاره",
   content: `
     <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
@@ -102,7 +102,15 @@ export const farsiData = [
         [13] تاریخ اقتصادی پاکستان و تاریخ مستند حبیب بانک<br>
         [14] تاریخ شیعیان پاکستان و حقایق تاریخی پس از تأسیس پاکستان
       </p>
+<br>
 
+            <div style="text-align:center; margin-bottom:30px; background:#f9f9f9; padding:15px; border-radius:10px; border:1px solid #ddd;">
+                
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Column Page 1">
+                
+                <br>
     </div>
     `
   },
