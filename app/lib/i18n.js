@@ -67,7 +67,7 @@ export const dictionaries = {
     },
     newAstanAppreciation: {
       title: "حرم امام رضاؑ کی جانب سے ایک اور اعزاز اور تعارفی سند۔",
-      subtitle: "جشن مولود کعبہ کے موقع پر خصوصی قدردانی",
+      subtitle: "حرم امام رضاؑ کی جانب سے ایک اور اعزاز اور تعارفی سند۔",
       description: "جشن مولود کعبہ کے موقع پر حرم مطہر امام رضا علیہ السلام سے لائیو پروگرام دکھانے اور حرم کی جانب سے تبرکات تقسیم کرنے پر قدر دانی کی گئی۔",
       badge: "اعزاز و تعارفی سند",
     },
@@ -146,7 +146,7 @@ export const dictionaries = {
     },
     newAstanAppreciation: {
       title: "افتخار و گواهی معرفی دیگری از حرم امام رضا علیه السلام",
-      subtitle: "قدردانی ویژه به مناسبت جشن میلاد کعبه",
+      subtitle: "افتخار و گواهی معرفی دیگری از حرم امام رضا علیه السلام",
       description: "به مناسبت جشن میلاد کعبه، از نمایش برنامهٔ زنده از حرم مطهر امام رضا علیه السلام و توزیع تبرکات حرم قدردانی شد.",
       badge: "افتخار و گواهی معرفی",
     },
@@ -225,7 +225,7 @@ export const dictionaries = {
     },
     newAstanAppreciation: {
       title: "Another Honour and Certificate of Recognition from the Holy Shrine of Imam Reza (A.S.)",
-      subtitle: "Special appreciation on the occasion of the Birth of the Kaaba",
+      subtitle: "Another Honour and Certificate of Recognition from the Holy Shrine of Imam Reza (A.S.)",
       description: "On the occasion of the celebration of the Birth of the Kaaba, appreciation was expressed for broadcasting a live programme from the Holy Shrine of Imam Reza (A.S.) and distributing sacred offerings from the shrine.",
       badge: "Honour and Certificate of Recognition",
     },
