@@ -4,10 +4,32 @@ import { dictionaries } from '../../lib/i18n';
 export default function AstanAppreciationComponent() {
   const dict = dictionaries['fa'];
   const astanText = dict.astanAppreciation || {};
+  const newAstanText = dict.newAstanAppreciation || {};
 
   return (
     <div className="relative z-10 container mx-auto px-4 py-12">
       <div className="bg-gradient-to-br from-[#fff9e6] via-white to-[#f8f9fa] border-4 border-[#D4AF37] rounded-[2rem] p-8 md:p-12 shadow-2xl">
+        <div className="mb-12 border-b-4 border-[#D4AF37]/20 pb-12">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-[#0f4c75] mb-2 font-amiri text-right">{newAstanText.title}</h2>
+            <div className="w-40 h-[3px] bg-gradient-to-l from-[#D4AF37] to-transparent mx-auto mt-4"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center md:flex-row-reverse">
+            <div className="flex justify-center md:order-2">
+              <img src="https://res.cloudinary.com/dtqrziupt/image/upload/v1787918623/1938de3a-55b2-47c3-98ab-b509aad95267.png" alt={newAstanText.title} className="relative rounded-[1.5rem] shadow-2xl border-4 border-[#D4AF37] w-full max-w-sm object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="md:order-1">
+              <div className="bg-white border-4 border-[#D4AF37] rounded-2xl p-6 md:p-8 shadow-xl">
+                <h3 className="text-xl md:text-2xl font-extrabold text-[#D4AF37] font-amiri text-right mb-6">{newAstanText.subtitle}</h3>
+                <p className="text-sm md:text-base font-semibold text-[#0f4c75] leading-relaxed text-right font-amiri">{newAstanText.description}</p>
+                <div className="mt-8 pt-6 border-t-2 border-[#D4AF37]/30 flex items-center gap-3 flex-row-reverse justify-start">
+                  <div className="w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center"><span className="text-white font-extrabold text-lg">✓</span></div>
+                  <span className="font-extrabold text-[#0f4c75] text-sm md:text-base font-amiri text-left">{newAstanText.badge}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className={`text-2xl md:text-4xl font-extrabold text-[#0f4c75] mb-2 font-amiri text-right`}>
