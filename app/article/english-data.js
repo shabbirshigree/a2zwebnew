@@ -1,14 +1,76 @@
 export const englishData = [
 
-{
-  id: "227-E",
-  category: "column",
-  title: "Indelible Marks of Hussainiyat on the Subcontinent",
-  date: "08-19-2026",
-  // ہیڈر امیج (مشرق والی تصویر)
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
-  excerpt: "The roots of the influence of the Shia school of thought in the Indian subcontinent are linked to the very first century of the Hijri calendar.",
-  content: `
+
+
+
+  {
+    id: "228-E",
+    category: "column",
+    title: "The Blessed Being of the Holy Prophet (PBUH): The Center of Unity for the Muslim Ummah",
+    date: "08-28-2026",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787914211/67a80788-7814-45d7-bd30-94ac51f7d255.png',
+    excerpt: "The Blessed Being of the Holy Prophet (PBUH): The Center of Unity for the Muslim Ummah",
+    content: `
+    <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.2em; line-height: 2; text-align: justify; direction: rtl;">
+            
+      <h2 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">The Blessed Being of the Holy Prophet (PBUH): The Center of Unity for the Muslim Ummah</h2>
+      <p style="text-align: center; color: #555;"><strong>By: Shabbir Ahmed Shigri</strong></p>
+      <hr style="margin: 20px 0;">
+      <p>Allah, the Lord of Majesty, sent His Beloved, Prophet Muhammad (PBUH), as a mercy to all the worlds. This mercy is not limited to human beings alone; rather, the sacred being of the Holy Prophet (PBUH) is an infinite mercy for the entire universe, all creatures, and all the worlds. We, the people of faith, take pride in this great blessing that we have been included in the Ummah of that being, without whose auspicious existence the completion of the universe would not have been possible.
+
+In these luminous days, as we celebrate the birth of the Holy Prophet (PBUH), the blessed birth of Imam Ja'far al-Sadiq (AS) also falls in the same week. These blessed days further highlight the reality that the message of the Prophet's birth is, in essence, a message of love, brotherhood, and unity of the Ummah. If we truly incorporate the pure character of the Holy Prophet (PBUH) and the Ahl al-Bayt (AS) into our actions, both our worldly and spiritual lives can be reformed.
+
+But alas! Today, the greatest weakness of the Muslim Ummah is that we have wrapped the Holy Quran in covers, placed it on high shelves merely as a blessing, without understanding it and acting upon it, and have confined the character of the Holy Prophet (PBUH) only to emotional attachment. Whereas true love is to read the Quran, understand it, and make it a way of life. A sincere connection with the Holy Prophet (PBUH) demands that his commandments be implemented in every aspect of life. Lies, injustice, abandonment of prayer, deceit, and oppression—all these evils are clear deviations from the teachings of the Holy Prophet (PBUH), and these are the very reasons for our wretched condition and deprivation from Allah's pleasure.
+
+In these blessed days, when we see gatherings of Darood-o-Salam and Naat sessions, our hearts are filled with joy. Muslims congratulating each other and this scene of brotherhood is heartwarming. Although there is a minor difference among the Ummah regarding the exact date of the Holy Prophet's (PBUH) birth—some brothers believe it to be the 12th of Rabi' al-Awwal and others the 17th—the founder of the Islamic Revolution, Imam Khomeini (RA), performed an unparalleled feat by turning this scholarly difference into unity. He proposed that instead of getting entangled in this debate, Muslims should celebrate the entire week from the 12th to the 17th of Rabi' al-Awwal as "Unity Week." This brilliant and practical proposal is like a magical formula for the Muslim world today that can string Muslims together in the thread of brotherhood.
+
+The Muslim Ummah must remember that the command of the Holy Quran is clear:
+"And hold firmly to the rope of Allah all together and do not become divided." (Surah Al-Imran, 3:103)
+
+The spirit of this divine command is that Muslims should hold onto the rope of Allah both individually and collectively. This collective strength is the true and invincible asset of the Ummah.
+
+If Muslims truly make the Quran, the character of the Holy Prophet (PBUH), and Islamic Shariah their axis and center, no false power in the world can subdue them. Today, the atrocities being committed around the world, especially on Islamic countries, are in fact the result of our weak faith and mutual disunity. The enemy has cut us and weakened us with the scissors of sectarianism, nationalism, and linguistic prejudices. Wars have been imposed in some places, while webs of conspiracies have been woven in others. The only way out of this scattered and chaotic state is that we firmly hold onto the rope of Allah and string the Muslim Ummah together in the thread of unity.
+
+Allah, the Lord of Majesty, has made a firm promise in the Holy Quran:
+"And Allah will surely support those who support Him." (Surah Muhammad, 47:7)
+
+If today, despite having material resources, we are weak and helpless, it is the fruit of our own shortcomings and negligence. Otherwise, the generous nature of Allah has blessed Muslims with abundant bounties. Success will kiss our feet only when we sincerely follow the teachings of Allah and His Messenger (PBUH) and make trust in God and piety our provision for the journey.
+
+In the current global situation, the importance of "Islamic unity" has multiplied manifold. The enemies of Islam are at war against Islam with all their might and are openly announcing that 'in the 21st century, the Islamic world is the most important target of US foreign policy' and 'the real clash of the future is the confrontation of Islamic and Western cultures'. In the enemy's eyes, there is no difference between Shia and Sunni; their target is solely the "Muslim." So why don't we also unite and prove that we are true Muslims?
+
+Fomenting divisive issues in the ranks of Muslims is tantamount to consciously weakening oneself. The unity of Shia and Sunni does not at all mean that anyone should abandon their basic beliefs or established principles; rather, its true meaning is that despite differences in subsidiary issues, there should be mutual cooperation and a unified approach in global and common issues of the Ummah. Getting entangled in differences only results in wastage of resources and benefiting the enemy.
+
+In Surah Al-Anbiya, Allah Almighty states:
+"Indeed this, your Ummah, is one Ummah, and I am your Lord, so worship Me." (Surah Al-Anbiya, 21:92)
+
+Similarly, Imam Ja'far al-Sadiq (AS) said: "A Muslim is the brother of a Muslim." Islam even teaches us to treat followers of other divine religions with justice, tolerance, and to unite on common grounds:
+"Say, 'O People of the Scripture, come to a word that is equitable between us and you - that we will not worship except Allah and not associate anything with Him and not take one another as lords instead of Allah.'" (Surah Al-Imran, 3:64)
+
+Let us! On this joyous occasion of the birth of the Prophet (PBUH), pledge that we will make the Quran and the Prophet's character our real strength and firmly hold onto the rope of unity, because this is our only path to salvation.
+
+We pray that Allah Almighty grants us the ability to act upon the Quran and Sunnah through the blessedness of this holy month, to adopt true and practical love for the Holy Prophet (PBUH), and to bind the Muslim Ummah in the bond of unity. Ameen, O Lord of the worlds. </p>
+<br>
+
+            <div style="text-align:center; margin-bottom:30px; background:#f9f9f9; padding:15px; border-radius:10px; border:1px solid #ddd;">
+                
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1787914322/Daily_Mashriq_2026-08-28_at_1.21.25_AM_uzjdxi.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Column Page 1">
+                
+                <br>
+    </div>
+  `
+  },
+  {
+    id: "227-E",
+    category: "column",
+    title: "Indelible Marks of Hussainiyat on the Subcontinent",
+    date: "08-19-2026",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
+    excerpt: "The roots of the influence of the Shia school of thought in the Indian subcontinent are linked to the very first century of the Hijri calendar.",
+    content: `
     <div style="font-family: Arial, sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
             
       <h2 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">Indelible Marks of Hussainiyat on the Subcontinent</h2>
@@ -134,18 +196,18 @@ export const englishData = [
                 <br>
     </div>
   `
-},
- 
- {
-  id: "226-E",
-        category: ["other_personalities", "column"],
-        title: "Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
-        date: "08-10-2026",
+  },
 
-        // ہیڈر امیج (مشرق والی تصویر)
-image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-        excerpt: " Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
-        content: `
+  {
+    id: "226-E",
+    category: ["other_personalities", "column"],
+    title: "Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
+    date: "08-10-2026",
+
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    excerpt: " Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
 <p><strong> Nusrat Fatima Naqvi: A Great Woman with a Compassionate Heart and Continuous Struggle in Serving Humanity</strong></p>
@@ -199,20 +261,20 @@ Madam Nusrat Fatima Naqvi's life is a practical example of how a courageous woma
                 </ul>
             </div>
     `
-    }, 
-{
-       // صحیح طریقہ
-id: "225-E",
-        category: "column",
-        title: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
-        date: "06-08-2026",
-        paper: "Daily Mashriq / Baad-e-Shimal / Zamana News / 5Cn",
+  },
+  {
+    // صحیح طریقہ
+    id: "225-E",
+    category: "column",
+    title: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
+    date: "06-08-2026",
+    paper: "Daily Mashriq / Baad-e-Shimal / Zamana News / 5Cn",
 
-        // Header Image (Mashriq)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg",
+    // Header Image (Mashriq)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg",
 
-        excerpt: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
-        content: `
+    excerpt: "The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri",
+    content: `
         <div style="font-family: 'Times New Roman', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;">
             
 <p><strong>The Humble Dervish of the Halls of Power, the Late G.M. Sikandar Shigri</strong></p>
@@ -315,17 +377,17 @@ id: "225-E",
                 </ul>
             </div>
     `
-    },
+  },
 
 
   {
-        "id": "218E",
-        "category": ["column"],
-        "title": "5th Muharram",
-        "date": "22-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg",
-        "excerpt": "...",
-        "content": `
+    "id": "218E",
+    "category": ["column"],
+    "title": "5th Muharram",
+    "date": "22-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>5th Muharram</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -358,15 +420,15 @@ id: "225-E",
             <br>
         </div>
         `
-    },
-    {
-        "id": "219E",
-        "category": ["column"],
-        "title": "6th Muharram",
-        "date": "22-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "219E",
+    "category": ["column"],
+    "title": "6th Muharram",
+    "date": "22-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>6th Muharram</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -394,15 +456,15 @@ id: "225-E",
             <br>
         </div>
         `
-    },
-    {
-        "id": "220E",
-        "category": ["column"],
-        "title": "7th Muharram",
-        "date": "23-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "220E",
+    "category": ["column"],
+    "title": "7th Muharram",
+    "date": "23-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>7th Muharram</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -419,15 +481,15 @@ id: "225-E",
             <p>When Imam Hussain (AS) heard the call, reached the battlefield, and embraced his trampled nephew to his chest, the scene was like the Day of Judgment. As soon as the prince fell, the Yazidi soldiers mercilessly ran their horses over his delicate body, so much so that the body was torn to pieces due to the trampling, and when the Imam (AS) was lifting the body, both of the prince's feet were dragging and drawing lines on the land of Karbala. The oppressed Hussain (AS) brought this trampled body to the camp. On one side he laid the body of his young son Ali Akbar (AS), on the other side the pieces of his nephew Qasim (AS), and sitting alone between these two youths, the oppressed Hussain (AS) would look at Akbar (AS) and then at Qasim (AS), praising their bravery and weeping... O Lord! For the sake of the travelers of Karbala and for the sake of the thirsty martyrs, accept this humble mourning and attendance of ours. O Master! Make our world and hereafter good, grant blessings in sustenance and firmness in faith, and grant us the honor of visiting these holy places again and again. Amen. To be continued...</p>
         </div>
         `
-    },
-    {
-        "id": "221E",
-        "category": ["column"],
-        "title": "8th Muharram",
-        "date": "24-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "221E",
+    "category": ["column"],
+    "title": "8th Muharram",
+    "date": "24-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>8th Muharram</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -453,15 +515,15 @@ id: "225-E",
             <br>
         </div>
         `
-    },
-    {
-        "id": "223E",
-        "category": ["column"],
-        "title": "The Day of Ashura",
-        "date": "26-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "223E",
+    "category": ["column"],
+    "title": "The Day of Ashura",
+    "date": "26-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>The Day of Ashura</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -494,15 +556,15 @@ id: "225-E",
             </div>
         </div>
         `
-    },
-    {
-        "id": "222E",
-        "category": ["column"],
-        "title": "The Light of Karbala and Spiritual Journey - 9th Muharram",
-        "date": "25-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "222E",
+    "category": ["column"],
+    "title": "The Light of Karbala and Spiritual Journey - 9th Muharram",
+    "date": "25-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>The Light of Karbala and Spiritual Journey - 9th Muharram</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -518,7 +580,7 @@ id: "225-E",
             <p>Meanwhile, in the camp, when the four-year-old innocent Lady Sakina (AS) saw the standard of her Uncle Ghazi dipping and fluttering on the distant horizon, the innocent's heart trembled; she cried out in agony and, turning towards the battlefield, called out: "Dear Uncle! For God's sake come back, I don't want water anymore, I will never ask you for water again, just let my uncle come back..." When the Yazidis saw that Abbas (AS) had no arms left, they unleashed a rain of arrows. One cruel arrow hit the forehead of Ghazi Abbas (AS), a poisoned arrow pierced his pure eye, and another arrow tore through the waterskin and struck his blessed chest. Having no arms, Master Abbas (AS) could not pull those arrows from his eye and chest. In this state of helplessness, a wretched accursed man stepped forward and struck the heavy iron mace on the illuminated head of Ghazi (AS), cleaving the blessed head. Due to having no arms, when Ghazi (AS) fell from the horse's saddle onto the burning sand, he called out to his Master in agony: "Master! Accept my last salutation..." When Imam Hussain (AS) arrived, lifting his brother's body was not possible; the body of Abbas (AS) remained there on the bank of the river, and Hussain (AS) returned to the tents alone with his hand on his back... Under the shadow of this painful memory of the 9th of Muharram and the standard-bearing of Ghazi Abbas (AS), special prayers were offered for all attendees, pilgrims, and believers. To be continued...</p>
         </div>
         `
-    },
+  },
   {
     "id": "210EN",
     "category": [
@@ -624,15 +686,15 @@ id: "225-E",
     "excerpt": "...",
     "content": "\n        <div style=\"font-family: 'Arial', 'Helvetica', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: ltr;\">    \n             <p><strong>4th Muharram al-Haram</strong></p>\n<p><strong>Written by: Haji Shabbir Ahmad Shigri</strong></p>\n\n            <p>\n\n\nThe sacrifices of Awn and Muhammad (peace be upon them).\nThe sequence of days and nights of devotion continues on the land of Nineveh, and our caravan is blessed with presenting the gift of greetings at the sacred shrine of the nephews of the Lion of God, the dearly beloved of Islam, and the brave young sons of Lady Zainab al-Kubra (peace be upon her), i.e., Hazrat Awn and Hazrat Muhammad (peace be upon both of them).\nOn this burning land of Karbala, there exists the sacred tomb of those infallible princes whom the Second Zahra (peace be upon her) sacrificed for her oppressed brother. It is mentioned in the narrations that when this caravan of love was about to depart from Medina Munawwara, then the renowned husband of Lady Zainab (peace be upon her), Hazrat Abdullah ibn Ja'far al-Tayyar (peace be upon him), graced us with his presence. He held the hand of Awn (peace be upon him) with one hand and the hand of Muhammad (peace be upon him) with the other, and making both of those infallible ones stand in front of the Second Zahra (peace be upon her), said: \"Zainab! I have heard that severe calamity is about to befall our Master Hussain (peace be upon him) in the desert of Karbala, and the command of the grandfather, the Messenger of Allah (peace and blessings be upon him), is that whenever any calamity comes, it can be warded off with a sacrifice. Zainab! I am entrusting these two of my sons to you; sacrifice one on behalf of me for Brother Hussain (peace be upon him), and sacrifice the other on behalf of me (Abdullah) for Hussain (peace be upon him).\"\nAccording to historical sources, on 4th Muharram al-Haram, Ubayd Allah ibn Ziyad (may the curse of Allah be upon him) delivered a very cunning and inciting speech in the Kufa Mosque. Inciting the Muslim speakers against the grandson of the Messenger (peace and blessings be upon him), he said: \"By the order of Yazid, the doors of the treasury have been opened for you; therefore, all of you get ready to fight his enemy Hussain (peace be upon him). First of all, Shamr ibn Dhi al-Jawshan requested to depart.\nMeanwhile, in the desert of Karbala, Imam Hussain (peace be upon him) said to one of his companions: \"Go and tell Ibn Sa'd that I want to meet him between the two armies.\" That historic meeting began, in which the Imam's (peace be upon him) guardian Mola Abbas (peace be upon him) and Prince Ali Akbar (peace be upon him) were present.\nUmar ibn Sa'd said to the Imam (peace be upon him): \"Ibn Ziyad has strictly insisted that you pledge allegiance to Yazid, and if you do not pledge allegiance, then water will be blocked from you and you will be martyred by fighting.\"\nThe Imam (peace be upon him), the One of High Status, advised him in a very compassionate manner: \"Woe be upon you, O Ibn Sa'd! Do you not fear Allah the Exalted? Do you not have certainty of the Day of Judgment? Have you girded your loins to kill me in obedience to Ibn Marjana, even though you know who I am? If your hands are stained with my blood, then you will never find salvation.\"\nIbn Sa'd confessed in a low voice: \"Mola! I may be sacrificed, I know you well that you are the grandson of the Pure Grandfather (peace and blessings be upon him), the son of Haider-e-Karrar (peace be upon him), and the fruit of the heart of Lady Fatima (peace be upon her), but you yourself think of some solution so that both of us can save ourselves from the wrath and anger of Ibn Ziyad.\"\n"
   },
-    {
-       "id": "212E",
-        "category": ["column"],
-        "title": "Markaz-e-Ashab-e-Kisa",
-        "date": "16-06-2026",
-        "paper": "Daily Zamana News",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": "212E",
+    "category": ["column"],
+    "title": "Markaz-e-Ashab-e-Kisa",
+    "date": "16-06-2026",
+    "paper": "Daily Zamana News",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Arial', sans-serif; font-size: 1.1em; line-height: 1.8; text-align: left; direction: ltr;">    
             <p><strong>Markaz-e-Ashab-e-Kisa</strong></p>
             <p><strong>Written by: Haji Shabbir Ahmed Shigree</strong></p>
@@ -646,7 +708,7 @@ id: "225-E",
             </div>
             <br>'
         `
-    },
+  },
   {
     "id": "211EN",
     "category": [
@@ -1013,14 +1075,14 @@ id: "225-E",
 
 
 
-{
-  id: 'pakistan_important_powerful_country_1',
-  title: 'Pakistan: An Important and Powerful Country in the World',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A comprehensive overview of Pakistan, detailing its diverse geography, rich history, cultural heritage, languages, UNESCO world heritage sites, and national symbols.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Pakistan: An Important and Powerful Country in the World</strong></p>
+  {
+    id: 'pakistan_important_powerful_country_1',
+    title: 'Pakistan: An Important and Powerful Country in the World',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A comprehensive overview of Pakistan, detailing its diverse geography, rich history, cultural heritage, languages, UNESCO world heritage sites, and national symbols.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Pakistan: An Important and Powerful Country in the World</strong></p>
 
 <p>Geographically, Pakistan is located in the northwestern part of South Asia. The geography and climate of Pakistan are extremely diverse. It is home to countless living creatures; in fact, there are many animals and birds that are exclusively found only in Pakistan across the entire world.</p>
 
@@ -1072,17 +1134,17 @@ The architecture of Pakistan points towards the various buildings that were cons
 <li><strong>National Food:</strong> Nihari (unofficially).</li>
 <li><strong>National Slogan:</strong> "Pakistan Ka Matlab Kya, La Ilaha Illallah". This slogan was coined by the famous poet Asghar Sodai (who hailed from Sialkot) in 1944, and it very quickly became a household phrase during the Pakistan Movement.</li>
 </ul>`
-},
+  },
 
 
-{
-  id: 'shrine_of_hazrat_ruqayyah_pakistan_columns_1',
-  title: 'The Construction of the Shrine of Hazrat Ruqayyah bint Ali (AS) Should Be Befitting Her Dignity',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A detailed historical account and current analysis of the shrine of Bibi Pak Daman (Hazrat Ruqayyah bint Ali) in Lahore, highlighting its religious significance, architectural heritage, and the pressing issues of corruption and mismanagement in its ongoing construction.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Construction of the Shrine of Hazrat Ruqayyah bint Ali (AS) Should Be Befitting Her Dignity</strong></p>
+  {
+    id: 'shrine_of_hazrat_ruqayyah_pakistan_columns_1',
+    title: 'The Construction of the Shrine of Hazrat Ruqayyah bint Ali (AS) Should Be Befitting Her Dignity',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A detailed historical account and current analysis of the shrine of Bibi Pak Daman (Hazrat Ruqayyah bint Ali) in Lahore, highlighting its religious significance, architectural heritage, and the pressing issues of corruption and mismanagement in its ongoing construction.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Construction of the Shrine of Hazrat Ruqayyah bint Ali (AS) Should Be Befitting Her Dignity</strong></p>
 
 <p>Hearing about the shrine of Hazrat Ruqayyah bint Ali (AS), and that too in Lahore, makes the heart beat with joy, and the eyes lower in respect. There is no doubt that millions of Sunni and Shia individuals pay their respects at this sacred court, seek the fulfillment of their wishes through its association, and return with their laps full of blessings.</p>
 
@@ -1153,16 +1215,16 @@ The architecture of Pakistan points towards the various buildings that were cons
 <li>In the narrow streets and pathways, there is absolutely no separate purdah, resting place, or basic facilities for men and women.</li>
 <li>Amidst the coming and going of millions of people, there is no pathway for an emergency exit, ambulance, or fire brigade.</li>
 </ul>`
-},
+  },
 
-{
-  id: 'gb_electoral_battle_pakistan_columns_2',
-  title: 'Gilgit-Baltistan\'s Electoral Battle, the End of Obsolete Traditions, and the Rising Sun of New Leadership',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'An in-depth look at the 2026 general elections in Gilgit-Baltistan, highlighting the severe public issues in Skardu, the exploitation through high airfares, and the emergence of independent youth leader Muhammad Ilyas.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Gilgit-Baltistan's Electoral Battle, the End of Obsolete Traditions, and the Rising Sun of New Leadership</strong></p>
+  {
+    id: 'gb_electoral_battle_pakistan_columns_2',
+    title: 'Gilgit-Baltistan\'s Electoral Battle, the End of Obsolete Traditions, and the Rising Sun of New Leadership',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'An in-depth look at the 2026 general elections in Gilgit-Baltistan, highlighting the severe public issues in Skardu, the exploitation through high airfares, and the emergence of independent youth leader Muhammad Ilyas.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Gilgit-Baltistan's Electoral Battle, the End of Obsolete Traditions, and the Rising Sun of New Leadership</strong></p>
 
 <p>They say that when the soil calls, ideologies are born, and when problems exceed limits, revolution knocks. At this moment, the heaven-like region located in the north of Pakistan, Gilgit-Baltistan, stands at one such historical turning point. The general elections of 2026 taking place in Gilgit-Baltistan are not merely the name of a transfer of power, but rather an open declaration of war against the obsolete, traditional, and hereditary politics that has deprived this proud and patriotic public of their fundamental rights for decades.</p>
 
@@ -1198,16 +1260,16 @@ Against these very darknesses and public deprivations, a highly active, dynamic,
 O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and hereditary politicians who have been doing lip service for the past many years will once again stand before you with folded hands. But remember, if today we do not support educated, capable, and sincere independent young candidates like Muhammad Ilyas, then our coming generations will also continue to burn in this same agony of electricity, water, roads, and expensive flights.</p>
 
 <p>The 2026 elections are the day to change the destiny of Skardu. The time has come for us to shatter the idols of hereditary politics and, on the basis of "manifesto and character," make sincere youths like Muhammad Ilyas successful to enter Skardu into a new era of development.</p>`
-},
+  },
 
-{
-  id: 'braldu_election_pakistan_columns_3',
-  title: 'Braldu Election: Residents of K2 Valley Must Wake Up',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A passionate appeal to the residents and youth of Braldu and K2 Valley to reject hereditary politics, evaluate past neglect during natural disasters, and vote for genuine leadership in the upcoming elections.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Braldu Election: Residents of K2 Valley Must Wake Up</strong></p>
+  {
+    id: 'braldu_election_pakistan_columns_3',
+    title: 'Braldu Election: Residents of K2 Valley Must Wake Up',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A passionate appeal to the residents and youth of Braldu and K2 Valley to reject hereditary politics, evaluate past neglect during natural disasters, and vote for genuine leadership in the upcoming elections.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Braldu Election: Residents of K2 Valley Must Wake Up</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Once again, election time has arrived. If the people of K2 Valley and Braldu do not act wisely at this time, years will pass in the same agony as before. For God's sake, put emotional and hereditary politics behind and give a chance to individuals who might actually bring about some change. There is no doubt that no one has control over natural disasters, but before casting your vote, see who you are voting for. When destruction and floods hit Braldu, when the river washed away bridges, when flood torrents washed away parts of the already dilapidated K2 highway, and people's fields and livestock fell prey to these torrents—when the residents here were in extreme pain, which political representative came to soothe your pain? If no one tried to cure your pain at that time, then today, even if they make a thousand false promises, do not fall for their words.</p>
@@ -1219,16 +1281,16 @@ O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and 
 <p>Nature has enriched this region with endless blessings. And for Pakistan, K2 Valley is a hen that lays golden eggs. Here, alongside the world's second highest peak K2, other mountains are also present. The world's longest glaciers are present. Mountaineers and tourists from across the globe head here. The river here spews gold and the mountains here spew diamonds and gems. In short, your region Braldu is enriched with nature's bounties. It is beyond your imagination that this region is a massive source of revenue for Pakistan. It can become an even greater and better source, but if that is not happening, it is due to the negligence of political representatives and the government.</p>
 
 <p>But today, the residents here in such a crucial region are living a life below the most difficult standard. Therefore, for God's sake, shake your conscience this time and vote only for someone who can think for you. Select a new and determined politician who can bring real change to your area in the true sense. If you commit negligence this time as well, you will again have to spend years in past agonies. Therefore, think of changing the area. Do not let the decisions of your internationally important region be made in the drawing rooms of a few individuals. Raise your voice. For God's sake, completely reject personal relationships, self-interest, any kind of pressure, or false promises of those already tested. Voting is your fundamental right and a trust placed with you. Wake up Braldu, wake up...</p>`
-},
+  },
 
-{
-  id: 'issues_of_braldu_pakistan_columns_4',
-  title: 'Issues of Braldu',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'An in-depth article highlighting the severe lack of basic facilities, healthcare, education, drinking water, electricity, and road infrastructure in Braldu and its surrounding upper areas.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Issues of Braldu</strong></p>
+  {
+    id: 'issues_of_braldu_pakistan_columns_4',
+    title: 'Issues of Braldu',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'An in-depth article highlighting the severe lack of basic facilities, healthcare, education, drinking water, electricity, and road infrastructure in Braldu and its surrounding upper areas.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Issues of Braldu</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Today we will talk about that area in the extreme north of Pakistan, which is not only important for Pakistan but for the entire world. Here, alongside K2—the second highest peak in the world—there are also eight mountain peaks ranging between two thousand and eight thousand meters in height. Here lie the longest glaciers outside the polar regions: Hispar, Batura, and Baltoro. The longest Indus River originating from here flows across the entirety of Pakistan before falling into the Arabian Sea in Sindh. For these historical and beautiful places, tourists, adventurers, and mountaineers arrive not just from Pakistan but from countries across the globe. Surely, the Government of Pakistan generates a massive revenue from this. In this respect, this area is not a burden on Pakistan, but is equivalent to a hen laying golden eggs for Pakistan.</p>
@@ -1248,16 +1310,16 @@ O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and 
 <p>The condition of the roads is also very bad. The only unpaved dirt road to the upper areas generally gets blocked during the monsoon season, but to date, no effective plan of action has been devised for it.</p>
 
 <p>Why was the road project from Chhoqpo site dating back to 2014 not completed? The condition of the bridges is also dilapidated.</p>`
-},
+  },
 
-{
-  id: 'bibi_pak_daman_arbaeen_arrangements_pakistan_columns_5',
-  title: 'Difficulties Faced by Pilgrims at Bibi Pak Daman Shrine During Arbaeen Due to Lack of Arrangements',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A critical account of the severe difficulties faced by pilgrims during Chehlum/Arbaeen at the shrine of Bibi Pak Daman (Hazrat Ruqayyah bint Ali) in Lahore due to mismanagement and negligence by the Auqaf Department.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Difficulties Faced by Pilgrims at Bibi Pak Daman Shrine During Arbaeen Due to Lack of Arrangements</strong></p>
+  {
+    id: 'bibi_pak_daman_arbaeen_arrangements_pakistan_columns_5',
+    title: 'Difficulties Faced by Pilgrims at Bibi Pak Daman Shrine During Arbaeen Due to Lack of Arrangements',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A critical account of the severe difficulties faced by pilgrims during Chehlum/Arbaeen at the shrine of Bibi Pak Daman (Hazrat Ruqayyah bint Ali) in Lahore due to mismanagement and negligence by the Auqaf Department.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Difficulties Faced by Pilgrims at Bibi Pak Daman Shrine During Arbaeen Due to Lack of Arrangements</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>In this entire region, Lahore holds the distinct honor that Hazrat Ruqayyah (SA) bint Ali (AS), the daughter of Hazrat Ali (AS), rests here alongside other pure ladies. Fourteen hundred years ago, after the tragedy of Karbala took place, these pure ladies graced this region with their blessed steps. When these ladies arrived in Lahore, there was no sign of Islam in this entire region. Today, whatever prominence Islam enjoys across this region is due to the blessings of these holy ladies. To salute the greatness of these pure ladies belonging to the household of the Ahl al-Bayt (AS) and to seek spiritual blessings, Hazrat Data Ali Hujwiri and other saints of the religion have paid their respects here in every era. During various periods under kings and nobles, great importance was given to this court, and space was specifically allocated for this sacred place. However, with the passage of time, where a dense forest existed before the arrival of Bibi Pak, after her arrival, the vibrancy of this area grew, and today this locality of Lahore exists as a heavily populated area. In official records, the boundaries and space of this shrine are quite large. But due to sheer negligence, illegal encroachers kept occupying this land. Because of houses and shops, the shrine area became extremely narrow. Naturally, the Auqaf Department is responsible for this mismanagement, which is why pilgrims face countless difficulties here today.</p>
@@ -1271,16 +1333,16 @@ O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and 
 <p>The state of such a great place is beyond comprehension. Auqaf has focused its entire attention on the Urs of Hazrat Data Ali Hujwiri, and splendid arrangements are made at Data Sahib's shrine, which is a good thing. But it is extremely regrettable that where saints like Data Sahib attained spiritual grace, no attention is being paid there. On the occasion of the Chehlum of the grandson of the Prophet (PBUH), at the only unique shrine of the daughter of Ali (AS) in this region, where caravans of thousands of men and women are arriving from across the country, basic facilities—even washrooms and space for ablution—do not exist. This clearly displays blatant mismanagement and incompetence. A major portion of the shrine has been enclosed under the name of construction using a large, rusted steel structure. A large portion is allocated in the name of a bazaar. But in reality, regarding the actual work that should have been performed, no facility exists for pilgrims whatsoever. The question arises: is the Auqaf Department's responsibility here merely to collect offerings? In the narrow street and shrine premises, there are no security arrangements either; if God forbid an accident occurs, there is no emergency exit route, nor can any fire brigade vehicle or ambulance reach there. Is the Auqaf Department waiting for an accident to happen before taking these basic and crucial steps?</p>
 
 <p>The shrine of the daughter of Ali (AS) certainly holds greater importance than other places. But it is deeply tragic that this importance has been continuously ignored, which is extremely painful and intolerable for the lovers of the Ahl al-Bayt, causing deep concern in their hearts. Despite the resolution unanimously passed in the Punjab Assembly and the government project, it is not being implemented, and for years, pilgrims have been tormented by displaying the unacceptable form of a flawed steel structure. Lovers of the Ahl al-Bayt respectfully request the Chief Justice of the High Court to order measures according to the original construction plan of this court and befitting the dignity of the great personality resting here, so that ease is created for pilgrims, for which we shall be grateful.</p>`
-},
+  },
 
-{
-  id: 'earthly_paradise_skardu_baltistan_pakistan_columns_6',
-  title: 'Earthly Paradise: Skardu and Baltistan',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A comprehensive travel guide to Skardu and Baltistan, exploring its breathtaking natural beauty, historic forts, high-altitude lakes, cold deserts, and the majestic Deosai National Park.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Earthly Paradise: Skardu and Baltistan</strong></p>
+  {
+    id: 'earthly_paradise_skardu_baltistan_pakistan_columns_6',
+    title: 'Earthly Paradise: Skardu and Baltistan',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A comprehensive travel guide to Skardu and Baltistan, exploring its breathtaking natural beauty, historic forts, high-altitude lakes, cold deserts, and the majestic Deosai National Park.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Earthly Paradise: Skardu and Baltistan</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Allah Almighty has enriched Pakistan with countless qualities and potentials. It is home to rare and beautiful tourist destinations. While every region of our beloved country is beautiful, the northern areas of Pakistan are exquisite reflections of nature, in every piece of which the colors of nature are seen scattered. At this time, when the intensity of summer has begun, let us talk about the beautiful weather and destinations of Baltistan.</p>
@@ -1322,16 +1384,16 @@ Shigar is an extremely vast and beautiful valley situated in Baltistan. It start
 While going from Skardu to Shigar Valley, a road turning to the left takes us towards the beautiful lake of Shigar, "Jarba Tso". In the Balti language, it means 'Blind Lake'. This lake is situated at an altitude of 7,000 feet above sea level. A farm for trout fish has also been established in the middle of this lake. Ancient and historical Buddhist relics are also found on the way to this lake.</p>
 
 <p>Every place in Baltistan is no less than an earthly paradise and is an example unto itself in beauty in the world. In terms of vastness, it is much larger even than Switzerland. There are still countless destinations left; you will have to come here yourself to enjoy the beautiful sceneries of these places. Come! With an open heart, we invite you here. We advise you to spend these few days of intense heat here. I think your heart must be restless by now, and surely now you cannot stay without touring here.</p>`
-},
+  },
 
-{
-  id: 'braldu_k2_valley_issues_pakistan_columns_7',
-  title: 'Pakistan, Home to the World\'s Highest Mountains, and Braldu—a Global Region Deprived of Basic Facilities',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A critical exposition on the severely neglected Braldu region in Pakistan, highlighting its immense tourism potential, treacherous K2 route, and the total lack of basic healthcare, education, and infrastructure.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Pakistan, Home to the World's Highest Mountains, and Braldu—a Global Region Deprived of Basic Facilities</strong></p>
+  {
+    id: 'braldu_k2_valley_issues_pakistan_columns_7',
+    title: 'Pakistan, Home to the World\'s Highest Mountains, and Braldu—a Global Region Deprived of Basic Facilities',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A critical exposition on the severely neglected Braldu region in Pakistan, highlighting its immense tourism potential, treacherous K2 route, and the total lack of basic healthcare, education, and infrastructure.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Pakistan, Home to the World's Highest Mountains, and Braldu—a Global Region Deprived of Basic Facilities</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Pakistan, featuring the world's second-highest peak, K2, along with other towering peaks and the world's longest glaciers, is the most important region globally. It has remained the center of desires and dreams for renowned mountaineers and tourists from all over the world. Additionally, this region is enriched with reserves of precious stones, gold, uranium, sapphires, and other natural minerals; Alhamdulillah, Allah has blessed the Braldu region with every bounty. The land of this region is also highly suitable for the internationally valuable crop, Buckwheat. With these characteristics of immense international significance, this Shigar region of Braldu is a hen that lays golden eggs for Pakistan. It is that crucial area in all of Baltistan which provides billions in annual revenue to the Federal Government. Undoubtedly, the government can transform this area into a spectacular tourist industry. But only if the government pays special attention to this area; failure to do so would be the government's incompetence, not a lack of bounties bestowed upon our beloved country by Allah Almighty. And contrary to this, if the government ignores it, basic facilities are simply non-existent here.</p>
@@ -1349,16 +1411,16 @@ While going from Skardu to Shigar Valley, a road turning to the left takes us to
 <p>Yes, the dilapidated road I am talking about is no ordinary road; tourists from most countries of the world, besides Pakistan, and the soldiers of the Pakistan Army pass through here day and night. The name of this road should have been K2 Highway, but if you ask any random person, they will call this road 'Danger Point Road'. Even though this road takes travelers to the world's second-highest mountain K2, other towering peaks, and the longest glaciers outside the poles—if they reach safely. If these highest peaks, glaciers, and mountain ranges of the world were in any other country, not only would excellent and magnificent roads and tunnels be constructed here, but the government could change the destiny of its economy from this one region alone. At this time, the Government of Pakistan is earning billions and trillions from this route, but in return, the people living here receive death, distress, and deprivation of the basic amenities of life.</p>
 
 <p>And this will continue to happen until awareness is awakened among the public of this dilapidated area. Until they realize that the massive vote bank of this area can turn the defeat of any representative of the region into victory and victory into defeat. Until they understand that representatives serving terms of several years are not solving the problems of this area. And until they think beyond personal interests and use their vote correctly. Until the representatives of this area put aside mutual personal interests and raise their true voice against these issues. Until then, this road of my Braldu, the basic problems here, and the issues of health and education will never be solved. Therefore, wake up, leave your mutual quarrels for favorite representatives, and raise your voice for your rights. Use your vote correctly. Voting is your right; cast it upon the voice of your conscience, not for the sake of pleasing favorite individuals. Because when development comes to the area, your circumstances will change.</p>`
-},
+  },
 
-{
-  id: 'issues_of_braldu_region_pakistan_columns_8',
-  title: 'The Issues of the Braldu Region',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'An extensive overview of the Braldu region\'s unparalleled geographical importance, its tourism potential, and the harsh realities of its severely neglected infrastructure, healthcare, and education.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Issues of the Braldu Region</strong></p>
+  {
+    id: 'issues_of_braldu_region_pakistan_columns_8',
+    title: 'The Issues of the Braldu Region',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'An extensive overview of the Braldu region\'s unparalleled geographical importance, its tourism potential, and the harsh realities of its severely neglected infrastructure, healthcare, and education.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Issues of the Braldu Region</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Nature has indeed blessed our beloved homeland with immense beauty and invaluable bounties. However, right now we will talk about a region that is home to the highest peaks, the world's longest glaciers, rich in minerals, and possesses an ancient culture—making it the most important region in terms of tourism—and the issues it faces. First of all, on behalf of myself and the people here, I express my gratitude for the recent announcement by the Prime Minister of Pakistan, Imran Khan, regarding giving Gilgit-Baltistan the status of a province. But this comes with the request and hope that practical steps will be taken on this. Otherwise, to this day, attempts are constantly made to hand over this region sometimes to Kashmir and sometimes to India. The freedom of this region is not indebted to anyone except God. The proud people of this region liberated it themselves by force. Therefore, the decision regarding its destiny will also be made solely by the will of the people here.</p>
@@ -1384,17 +1446,17 @@ While going from Skardu to Shigar Valley, a road turning to the left takes us to
 <p>No matter how much I tell you about this road, words cannot describe it, and pictures or videos cannot do justice to it. While traveling here, also remember that phone service is available in some places and not in others. And that too only from 8:00 AM to 10:00 PM. And you can completely forget about internet service here. Yes, the dilapidated road I am talking about is no ordinary road; tourists from most countries of the world, besides Pakistan, and the soldiers of the Pakistan Army pass through here day and night. The name of this road should have been K2 Highway, but if you ask any random person, they will call this road 'Danger Zone'. Even though this road takes travelers to the world's second-highest mountain K2, other towering peaks, and the longest glaciers outside the poles—if they reach safely. If these highest peaks, glaciers, and mountain ranges of the world were in any other country, not only would excellent and magnificent roads and tunnels be constructed here, but the government could change the destiny of its economy from this one region alone. At this time, instead of providing facilities to tourists on this road, the Government of Pakistan offers them death, distress, and deprivation of the basic amenities of life. And this will continue to happen until awareness is awakened among the public of this dilapidated area. Until they realize that the massive vote bank of this area can turn the defeat of any representative of the region into victory and victory into defeat. Until they understand that representatives serving terms of several years are not solving the problems of this area. Until they think beyond personal interests and use their vote correctly. Until the representatives of this area put aside mutual personal interests and raise their true voice against these issues.</p>
 
 <p>Until then, this road of my Braldu, the basic problems here regarding health, education, farmers, and electricity will never be solved. Therefore, wake up, leave your mutual quarrels for favorite representatives, and raise your voice for your rights. Use your vote correctly. Voting is your right; cast it upon the voice of your conscience, not for the sake of pleasing favorite individuals. Because when development comes to the area, your circumstances will change.</p>`
-},
+  },
 
 
-{
-  id: 'k2_valley_tourism_survival_pakistan_columns_9',
-  title: 'The K2 Valley: Tourism and the Struggle for Survival',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A compelling account of the K2 Valley\'s struggle against devastating natural disasters, failing infrastructure, and governmental neglect, urging immediate action for the survival of locals and the future of tourism.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The K2 Valley, Tourism, and the Struggle for Survival</strong></p>
+  {
+    id: 'k2_valley_tourism_survival_pakistan_columns_9',
+    title: 'The K2 Valley: Tourism and the Struggle for Survival',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A compelling account of the K2 Valley\'s struggle against devastating natural disasters, failing infrastructure, and governmental neglect, urging immediate action for the survival of locals and the future of tourism.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The K2 Valley, Tourism, and the Struggle for Survival</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>"Mountains possess a language even in their silence. They stand with grandeur and majesty, but the human lives residing at their foothills face nature's trials at every moment. The K2 Valley — where the world's highest mountains and beautiful glaciers exist — is not only a paradise for tourists and mountaineers but also the pillar of life and survival for its residents. But nowadays, this valley is fighting a dual war: on one side, the wrath of natural disasters like flood torrents and cloudbursts, and on the other, the agony of deprivation from basic facilities and broken roads. This is the region that is both the pride of Pakistan and our national responsibility."</p>
@@ -1437,16 +1499,16 @@ While going from Skardu to Shigar Valley, a road turning to the left takes us to
 <p>We make a strong appeal to the Government of Pakistan and relevant institutions to pay immediate and serious attention to these areas. Provide justice, help, and support to the affected families. Redress their grievances. Because this is not just the issue of a village or a valley… this is the matter of the land of K2 and other important mountains. It is a matter of Pakistan. This is the future of our coming generations.</p>
 
 <p>Come! Let us all together protect these valleys, make the people here prosperous so that these mountains always remain a metaphor for life and hope. So that a ray of hope awakens in the eyes of the poor residents here as well. And their future becomes bright.</p>`
-},
+  },
 
-{
-  id: 'important_tourism_region_facing_difficulties_pakistan_columns_10',
-  title: 'An Important Tourism Region Facing Difficulties',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'An article highlighting the severe difficulties faced by the tourism sector in Gilgit-Baltistan, focusing on the high cost of air travel, road construction delays, and terrible internet connectivity issues.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>An Important Tourism Region Facing Difficulties</strong></p>
+  {
+    id: 'important_tourism_region_facing_difficulties_pakistan_columns_10',
+    title: 'An Important Tourism Region Facing Difficulties',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'An article highlighting the severe difficulties faced by the tourism sector in Gilgit-Baltistan, focusing on the high cost of air travel, road construction delays, and terrible internet connectivity issues.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>An Important Tourism Region Facing Difficulties</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>I extend my heartfelt congratulations to the newly elected Chief Minister of Gilgit-Baltistan and all the ministers. Especially, I congratulate Assembly Speaker Amjad Zaidi from Baltistan, Raja Zakaria Khan Maqpoon from Skardu, and Raja Azam Khan from the Shigar region on their landslide victories and assuming ministries. With the hope that they will meet the public's expectations. In this article, I am trying to draw attention to three important issues of Baltistan.</p>
@@ -1460,16 +1522,16 @@ While going from Skardu to Shigar Valley, a road turning to the left takes us to
 <p>I am describing this condition for Skardu city, but if you step just outside Skardu, based on my experiences, I will mention Braldu, an important area regarding tourism. Where, on one hand, beautiful and captivating places exist, and on the other, the highest peaks of the world starting from K2 and the longest glaciers attract tourists and mountaineers from all over the world. Here, the internet facility does not extend beyond Hyderabad. Only mobile signals are present, and that too in some places like Dasu, Nida, Baha, Askole, Teste, and Korfe. But these areas are deprived of the internet. And in some intermediate areas, for example, beyond Biafo, there are not even signals. Recently, my video report and writing on these issues showed results, and SCOM officials have started the installation work of a 4G tower in Askole, for which I and the public of Braldu are grateful, and the tourists who come here will also breathe a sigh of relief. But I request that this service be restored in these areas as soon as possible.</p>
 
 <p>Because nowadays, due to Corona, all students have returned to their respective areas. With the provision of internet, the students of Braldu here will also be able to take classes. Not only students, but for the Ehsaas Program or similar biometric facilities, due to the lack of internet facilities, all the upper areas of the city have to travel long distances to come to Skardu. Therefore, it is requested to the SCOM authorities that this facility be provided in these areas as soon as possible so that the poor public can be facilitated. If the internet facility comes to Askole, it will only be effective up to the adjoining areas. For example, being a mountainous area, the internet will not reach nearby areas like Chogo and Hoto. The need of the hour is to install more boosters for the intermediate areas so that these facilities can reach all areas. Insha'Allah, the authorities will pay attention to this article of mine.</p>`
-},
+  },
 
-{
-  id: 'k2_valley_masterpiece_or_neglect_pakistan_columns_11',
-  title: 'K2 Valley: A Masterpiece of Nature, a Victim of Neglect?',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'An urgent plea highlighting the infrastructural collapse in the K2 Valley, where the destruction of vital bridges has left thousands stranded, exposing the harsh realities of neglect amid world-class tourism.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>K2 Valley: A Masterpiece of Nature, a Victim of Neglect?</strong></p>
+  {
+    id: 'k2_valley_masterpiece_or_neglect_pakistan_columns_11',
+    title: 'K2 Valley: A Masterpiece of Nature, a Victim of Neglect?',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'An urgent plea highlighting the infrastructural collapse in the K2 Valley, where the destruction of vital bridges has left thousands stranded, exposing the harsh realities of neglect amid world-class tourism.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>K2 Valley: A Masterpiece of Nature, a Victim of Neglect?</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The world's second-highest peak, "K2", is not only a dream for mountaineers, tourists, and nature lovers from Pakistan but from all over the world. But the route to reach this dream presents a terrifying picture of reality. In recent days, the only bridge on the K2 Highway has been washed away by the river, severing the area's land connection with the rest of the world. Thousands of local residents, women, the elderly, patients, and tourists are left stranded.</p>
@@ -1495,17 +1557,17 @@ While going from Skardu to Shigar Valley, a road turning to the left takes us to
 </ul>
 
 <p>If we want Pakistan to achieve a prominent place on the global tourism map, we must not ignore these beautiful yet deprived valleys. K2 is not just a mountain; it is a symbol of our national dignity, natural heritage, and local lives.</p>`
-},
+  },
 
 
-{
-  id: 'did_you_know_gb_elections_pakistan_columns_12',
-  title: 'Did You Know?',
-  date: '2026',
-  category: ['pakistan_columns'],
-  excerpt: 'A compelling call to action exposing the systemic neglect of Gilgit-Baltistan, the exorbitant airfares, and the lack of basic amenities, while rallying support for independent candidate Muhammad Ilyas in the 2026 elections.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Did You Know?</strong></p>
+  {
+    id: 'did_you_know_gb_elections_pakistan_columns_12',
+    title: 'Did You Know?',
+    date: '2026',
+    category: ['pakistan_columns'],
+    excerpt: 'A compelling call to action exposing the systemic neglect of Gilgit-Baltistan, the exorbitant airfares, and the lack of basic amenities, while rallying support for independent candidate Muhammad Ilyas in the 2026 elections.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Did You Know?</strong></p>
 <p><strong>By: Haji Shabbir Ahmed Shigri</strong></p>
 
 <p>Did you know that our beloved country Pakistan's and the world's most beautiful region, Skardu and Gilgit-Baltistan, remains plunged in darkness for almost the entire year?</p>
@@ -1562,7 +1624,7 @@ Against these very darknesses and public deprivations, a highly active, dynamic,
 O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and hereditary politicians who have been doing lip service for the past many years will once again stand before you with folded hands. But remember, if today we do not support educated, capable, and sincere independent young candidates like Muhammad Ilyas, then our coming generations will also continue to burn in this same agony of electricity, water, roads, and expensive flights.</p>
 
 <p>The 2026 elections are the day to change the destiny of Skardu. The time has come for us to shatter the idols of hereditary politics and, on the basis of "manifesto and character," make sincere youths like Muhammad Ilyas successful to enter Skardu into a new era of development.</p>`
-},
+  },
 
 
 
@@ -1574,14 +1636,14 @@ O proud residents of Gilgit-Baltistan and especially Skardu! The plunderers and 
 
 
 
-{
-  id: 'chaykhana_e_razavi_culture_1',
-  title: 'Chaykhana-e-Razavi: A Unique Feast of Devotion, Healing, and Love at the Shrine of Imam Reza (AS)',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful account of Chaykhana-e-Razavi at the holy shrine of Imam Reza (AS) in Mashhad, highlighting its history, services, and the spiritual experience of the pilgrims.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Chaykhana-e-Razavi: A Unique Feast of Devotion, Healing, and Love at the Shrine of Imam Reza (AS)</strong></p>
+  {
+    id: 'chaykhana_e_razavi_culture_1',
+    title: 'Chaykhana-e-Razavi: A Unique Feast of Devotion, Healing, and Love at the Shrine of Imam Reza (AS)',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful account of Chaykhana-e-Razavi at the holy shrine of Imam Reza (AS) in Mashhad, highlighting its history, services, and the spiritual experience of the pilgrims.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Chaykhana-e-Razavi: A Unique Feast of Devotion, Healing, and Love at the Shrine of Imam Reza (AS)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The Holy Shrine of Imam Reza (AS) is such a blessed place where the mercy of the Almighty descends day and night. This sacred shrine holds an impressive expanse and spiritual attraction for pilgrims 24 hours a day. In every part of it, some excellent deed is performed day and night, and polite attendants throughout the shrine are always ready to serve and guide pilgrims with smiling faces. In addition to attending the sacred Zarih, if a pilgrim desires the solitude of worship, the soul-stirring porches of Goharshad Mosque are present; if one needs to quench the thirst for knowledge, the central library is available; and if interested in history and culture, the museum is present. For the convenience of Urdu-speaking pilgrims, a special Urdu section has also been established in Sahn-e-Ghadir where various cultural programs are held. In short, the interests and spiritual needs of the guests of the Imam of Ra'uf (AS) are taken care of from every angle.</p>
@@ -1631,16 +1693,16 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 (Except for your skirt, my hands are empty of every wealth; O Shah of Khorasan! Do not forget me in the solitudes of the Mahshar.)</p>
 
 <p>These verses reflect the truth that in this world we have nothing except the love, grace, and kindness of Imam Reza (AS), and even in the difficult stages of the Hereafter, we have the hope of his intercession and assistance.</p>`
-},
+  },
 
-{
-  id: 'iranian_cinema_after_islamic_revolution_culture_2',
-  title: 'Iranian Cinema After the Islamic Revolution: How the Neighboring Country Created Its Unique Identity Against Western Cultural Invasion in the Film Industry',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful analysis of the evolution of Iranian cinema after the Islamic Revolution, its transition towards Islamic and human values, international acclaim, and its contrast with Western commercialism.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Iranian Cinema After the Islamic Revolution: How the Neighboring Country Created Its Unique Identity Against Western Cultural Invasion in the Film Industry</strong></p>
+  {
+    id: 'iranian_cinema_after_islamic_revolution_culture_2',
+    title: 'Iranian Cinema After the Islamic Revolution: How the Neighboring Country Created Its Unique Identity Against Western Cultural Invasion in the Film Industry',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful analysis of the evolution of Iranian cinema after the Islamic Revolution, its transition towards Islamic and human values, international acclaim, and its contrast with Western commercialism.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Iranian Cinema After the Islamic Revolution: How the Neighboring Country Created Its Unique Identity Against Western Cultural Invasion in the Film Industry</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The unpleasant factors that may lead a person to isolation or distance from acquaintance and exchange of ideas with others include rising above one's own self ("Khudi"). No nation or tribe can ever achieve success in its development and progress without contact with other nations and societies. An individual learns from a group, and groups learn from other groups and societies. This is a continuous process that has been ongoing and will continue.</p>
@@ -1681,17 +1743,17 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 <p>When the topic is Iranian cinema, it would be an injustice not to mention external and Islamic television series, because like Iranian films, drama series are watched with great enthusiasm not only in Iran but in other countries as well. These series provide excellent entertainment alongside Islamic themes, and they contain fine training in Islamic, moral, and human values. Recently, you must have watched the beautiful Urdu-dubbed Iranian television drama series "Prophet Joseph" (Yousef-e-Payambar). Similarly, the series "The Martyr of Kufa" is based on the life events of Hazrat Ali (RA). In addition, another very interesting series "Avicenna" (Bu Ali Sina) is also available in Urdu dubbing, which is built upon the life of the famous Muslim scientist Avicenna.</p>
 
 <p>In Lahore, the Cultural Center of the Islamic Republic of Iran (Khana-e-Farhang) is an institution that performs prominent services in introducing Iranian culture in Pakistan. Here, alongside various arts such as calligraphy, painting, and wood carving, Persian language learning classes are also held, from which a large number of people benefit. Moreover, for fans of Iranian films, there is also a video library here containing films dubbed in Persian and Urdu. If you wish to benefit from these facilities, upon entering the beautiful building of Khana-e-Farhang Islamic Republic of Iran Lahore, the polite staff will welcome you with a smiling face, and the library and audio-video section also offer great services. This institution needs no introduction for Iranian, Islamic, and cultural references. Here you can find almost all Iranian films in Persian and Urdu (dubbed). Furthermore, in various Islamic documentaries, this institution's name is counted at the forefront.</p>`
-},
+  },
 
 
-{
-  id: 'iranian_films_in_hollywood_market_culture_3',
-  title: 'Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful article published in Daily Mashriq International in September 2011, discussing the global success, evolution, state support, and cultural impact of Iranian cinema after the Islamic Revolution.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology</strong></p>
+  {
+    id: 'iranian_films_in_hollywood_market_culture_3',
+    title: 'Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful article published in Daily Mashriq International in September 2011, discussing the global success, evolution, state support, and cultural impact of Iranian cinema after the Islamic Revolution.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The unpleasant factors that may lead a person to isolation or distance from acquaintance and exchange of ideas with others include rising above one's own self ("Khudi"). No nation or tribe can ever achieve success in its development and progress without contact with other nations and societies. An individual learns from a group, and groups learn from other groups and societies. This is a continuous process that has been ongoing and will continue.</p>
@@ -1730,17 +1792,17 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 <p>Some of the famous directors of Iranian films are: Majid Majidi, Mohsen Makhmalbaf, Abbas Kiarostami, Ebrahim Hatamikia, Kamal Tabrizi, Dariush Mehrjui, Jafar Panahi, and Kiumars Pourahmad, etc. A few famous actors popular worldwide include: Ezzatollah Entezami, Fakhreddin, Niki Karimi, Hanieh Tehrani, Khosrow Shakibai, and Akbar Abdi, etc.</p>
 
 <p>When the topic is Iranian cinema, it would be an injustice not to mention external and Islamic television series, because like Iranian films, drama series are watched with great enthusiasm not only in Iran but in other countries as well. These series provide excellent entertainment alongside Islamic themes, and they contain fine training in Islamic, moral, and human values. Recently, you must have watched the beautiful Urdu-dubbed Iranian television drama series "Prophet Joseph" (Yousef-e-Payambar). Similarly, the series "The Martyr of Kufa" is based on the life events of Hazrat Ali (RA). In addition, another very interesting series "Avicenna" (Bu Ali Sina) is also available in Urdu dubbing, which is built upon the life of the famous Muslim scientist Avicenna.</p>`
-},
+  },
 
 
-{
-  id: 'iranian_films_in_hollywood_market_culture_4',
-  title: 'Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful article published in Daily Mashriq International in September 2011, discussing the global success, evolution, state support, and cultural impact of Iranian cinema after the Islamic Revolution.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology</strong></p>
+  {
+    id: 'iranian_films_in_hollywood_market_culture_4',
+    title: 'Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful article published in Daily Mashriq International in September 2011, discussing the global success, evolution, state support, and cultural impact of Iranian cinema after the Islamic Revolution.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Iranian Films in the Hollywood Market: World-Class Films in Terms of Production, Script, Plot, and Use of Modern Technology</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The unpleasant factors that may lead a person to isolation or distance from acquaintance and exchange of ideas with others include rising above one's own self ("Khudi"). No nation or tribe can ever achieve success in its development and progress without contact with other nations and societies. An individual learns from a group, and groups learn from other groups and societies. This is a continuous process that has been ongoing and will continue.</p>
@@ -1779,17 +1841,17 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 <p>Some of the famous directors of Iranian films are: Majid Majidi, Mohsen Makhmalbaf, Abbas Kiarostami, Ebrahim Hatamikia, Kamal Tabrizi, Dariush Mehrjui, Jafar Panahi, and Kiumars Pourahmad, etc. A few famous actors popular worldwide include: Ezzatollah Entezami, Fakhreddin, Niki Karimi, Hanieh Tehrani, Khosrow Shakibai, and Akbar Abdi, etc.</p>
 
 <p>When the topic is Iranian cinema, it would be an injustice not to mention external and Islamic television series, because like Iranian films, drama series are watched with great enthusiasm not only in Iran but in other countries as well. These series provide excellent entertainment alongside Islamic themes, and they contain fine training in Islamic, moral, and human values. Recently, you must have watched the beautiful Urdu-dubbed Iranian television drama series "Prophet Joseph" (Yousef-e-Payambar). Similarly, the series "The Martyr of Kufa" is based on the life events of Hazrat Ali (RA). In addition, another very interesting series "Avicenna" (Bu Ali Sina) is also available in Urdu dubbing, which is built upon the life of the famous Muslim scientist Avicenna.</p>`
-},
+  },
 
 
-{
-  id: 'nowroz_alam_afrooz_culture_5',
-  title: 'Nowroz Alam Afrooz',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful piece on Nowroz Alam Afrooz, exploring the history, cultural significance, traditions like Haft-Sin and Khana Takouni, and its celebration across regions.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Nowroz Alam Afrooz</strong></p>
+  {
+    id: 'nowroz_alam_afrooz_culture_5',
+    title: 'Nowroz Alam Afrooz',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful piece on Nowroz Alam Afrooz, exploring the history, cultural significance, traditions like Haft-Sin and Khana Takouni, and its celebration across regions.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Nowroz Alam Afrooz</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><em>Ya Muqallib al-qulubi wal-absar, ya Mudabbir al-layli wan-nahar. Ya Muhawwil al-hawli wal-ahwal, hawwil halana ila ahsan al-hal.</em></p>
@@ -1812,16 +1874,16 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 <p>In Iran, the joys of Eid Nowroz this year could not be celebrated in the usual manner. Firstly, it is the martyrdom anniversary of the seventh Imam, Hazrat Imam Musa al-Kazim (AS), and secondly, Iran is currently passing through a difficult time due to coronavirus, while due to economic sanctions, medical facilities and external aid are also not reaching Iran.</p>
 
 <p>We pray to Allah Almighty that from this new day of the year, a new era of real change begins, and our Iranian brothers emerge from this difficult time, and that Allah Almighty showers His mercy upon all the Islamic Ummah, including our Iranian brothers, and protects all of us from calamities and disasters. Ameen Ya Rabb-ul-Alameen.</p>`
-},
+  },
 
-{
-  id: 'teachers_respect_and_pakistani_society_culture_6',
-  title: 'Pakistani Society is in Decline Due to Disrespecting Teachers',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A report on a tribute ceremony held at Khana-e-Farhang Iran, Lahore, honoring prominent Persian scholars Dr. Zaheer Ahmed Siddiqui and Dr. Zahoor-ud-Din Ahmad for their lifelong services.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Pakistani Society is in Decline Due to Disrespecting Teachers</strong></p>
+  {
+    id: 'teachers_respect_and_pakistani_society_culture_6',
+    title: 'Pakistani Society is in Decline Due to Disrespecting Teachers',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A report on a tribute ceremony held at Khana-e-Farhang Iran, Lahore, honoring prominent Persian scholars Dr. Zaheer Ahmed Siddiqui and Dr. Zahoor-ud-Din Ahmad for their lifelong services.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Pakistani Society is in Decline Due to Disrespecting Teachers</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><strong>Tribute Ceremony in Honor of Dr. Zaheer Ahmed Siddiqui and Dr. Zahoor-ud-Din Ahmad at Khana-e-Farhang, Islamic Republic of Iran.</strong></p>
@@ -1847,16 +1909,16 @@ Mokon ey shah dar tanhayee mahshar faramosham</em><br>
 <p>Paying tribute to the services of Dr. Zaheer Ahmed and Dr. Zahoor-ud-Din Ahmad, the speakers said that just as we love our blood relations, these teachers teach Persian students like parents. Dr. Zaheer Ahmed Siddiqui remarked that Iran and Pakistan are not only two neighboring countries, but their historical and cultural ties are very deep—meaning two countries and one soul. Iran's culture and Persian literature are very rich, and the Urdu language has evolved from Persian. In this regard, Persian literature constitutes a prominent part of Urdu literature.</p>
 
 <p>Dr. Ejaz Butt, Principal of Kamran Shab College Lahore, along with other speakers, thanked Khana-e-Farhang of the Islamic Republic of Iran, Lahore, for organizing the tribute ceremony for these two teachers and appreciating their invaluable services for the promotion of Persian.</p>`
-},
+  },
 
-{
-  id: 'historical_and_cultural_museums_of_iran_culture_7',
-  title: 'Historical and Cultural Museums of Iran',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An overview of Iran’s prominent historical and cultural museums, showcasing ancient artifacts, architectural masterpieces, and rich heritage from Tehran, Shiraz, and Tabriz.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Historical and Cultural Museums of Iran</strong></p>
+  {
+    id: 'historical_and_cultural_museums_of_iran_culture_7',
+    title: 'Historical and Cultural Museums of Iran',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An overview of Iran’s prominent historical and cultural museums, showcasing ancient artifacts, architectural masterpieces, and rich heritage from Tehran, Shiraz, and Tabriz.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Historical and Cultural Museums of Iran</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Iran, which has been the cradle of civilization and culture, encompasses thousands of years of history within itself. The various museums established in Tehran and other cities are not only a living proof of Iranian art and craft, but they are also the echo of the past for future generations. Below is a mention of some of the important and historical museums of Iran:</p>
@@ -1891,16 +1953,16 @@ This approximately 200-year-old palace was the residence of Qajar monarchs. This
 
 <p>10. Qasr Museum (The Palace That Became a Prison)<br>
 Qasr Prison was the first prison in Tehran, constructed as a palace during the Qajar period, but Reza Shah Pahlavi converted it into a prison for inmates. This building is a masterpiece of the renowned architect 'Nikolai Markov'. After the Islamic Revolution, when many mujahideen were released from this prison, it became an important center of the revolution. Now it has been converted into the "Qasr Garden Museum", which is a living picture of Tehran city's 214-year history.</p>`
-},
+  },
 
-{
-  id: 'museums_of_iran_part1_culture_8',
-  title: 'Museums of Iran (Part 1)',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive and detailed exploration of Part 1 of the historical and cultural museums of Tehran, detailing rich collections of ancient manuscripts, coins, arts, and royal heritage.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Museums of Iran (Part 1)</strong></p>
+  {
+    id: 'museums_of_iran_part1_culture_8',
+    title: 'Museums of Iran (Part 1)',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive and detailed exploration of Part 1 of the historical and cultural museums of Tehran, detailing rich collections of ancient manuscripts, coins, arts, and royal heritage.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Museums of Iran (Part 1)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><strong>Museums in Tehran:</strong> Iran holds a prominent place in world history and culture, and museums play a vital role in preserving and passing down historical knowledge to future generations. Although there are countless museums across Iran that highlight the historical greatness of the region, Tehran holds special significance in this regard as it houses the highest concentration of museums. These museums are of immense recreational and informational value, offering countless tourists and historians the opportunity to benefit from them. In this writing, we shed light on several key museums in Tehran.</p>
@@ -1929,16 +1991,16 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p><strong>Sizdah Aban Museum:</strong> This museum was established in 1325 Solar Hijri, and the Red Crescent along with Master Ali Akbar Sanati played a very important role in its construction and development. Statues and painting specimens of scientific, literary, and other prominent personalities are displayed in this museum. This museum is also located a short distance from Imam Khomeini Square, so whenever you visit other recreational spots in this area, do not forget to view Sizdah Aban.</p>
 
 <p><strong>Museum of Painting Behind Glass:</strong> This museum is situated on Hedayat Street, where countless beautiful specimens of painting framed and arranged can be found. Paintings of natural landscapes and framed Quranic manuscripts can be seen here.</p>`
-},
+  },
 
-{
-  id: 'museums_of_iran_part2_culture_9',
-  title: 'Museums of Iran (Part 2)',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive and detailed exploration of Part 2 of the historical and cultural museums of Iran, covering the Ebrat Museum, carpet weaving, traditional architecture, wildlife conservation, and Tabriz Museum.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Museums of Iran (Part 2)</strong></p>
+  {
+    id: 'museums_of_iran_part2_culture_9',
+    title: 'Museums of Iran (Part 2)',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive and detailed exploration of Part 2 of the historical and cultural museums of Iran, covering the Ebrat Museum, carpet weaving, traditional architecture, wildlife conservation, and Tabriz Museum.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Museums of Iran (Part 2)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><strong>Iran's Most Terrifying Museum (Ebrat Museum):</strong> This museum building was known during the Pahlavi government era as the women's prison and later as the Joint Committee against Subversives. This prison is located within the enclosure of Bagh-e-Melli Iran, and in 1381 Solar Hijri, it was converted into the Ebrat Museum. This is Iran's first modern prison, which was completed by German engineers during the time of Reza Shah. This prison was built in 1311 Solar Hijri and thus began to be used for prisoners in Iran. Later, this prison was designated exclusively for women. During the reign of Reza Shah Pahlavi, SAVAK began using this prison for political prisoners. Reza Shah Pahlavi ruled Iranians through brute force and employed all kinds of tactics to suppress anti-government individuals. Political prisoners began to be kept in this prison, and all sorts of atrocities were inflicted upon them. Individuals working in this prison stated that when cruelty was committed against prisoners in the prison, their screams could be heard from afar; these conditions were unbearable for any ordinary human being. A former employee there stated that he could not bear staying there and requested high authorities to have himself transferred elsewhere. The following sections comprise this museum: 1. Cloakroom/Wardrobe Area: Upon entering this place, the clothing and other belongings of prisoners were taken into custody. 2. Main Courtyard: This is a circular area where pathways from all three sides open up. 3. Interrogation and Torture Room: Prisoners were brought into this room for investigation and restraint, and prisoners were tortured using various types of machines and instruments. Prisoners were subjected to electric shocks in this room. 4. Prisoners' Visitation Area: In this place, prisoners were permitted to meet their family members, and generally, a guard used to accompany them.</p>
@@ -1954,16 +2016,16 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p><strong>Museum of Nature and Wildlife of Iran:</strong> The establishment of the "Museum of Nature and Wildlife of Iran" took place in 1372 Solar Hijri by the urban administration of Tehran. The purpose of its establishment was to foster awareness among people regarding their culture and cultivate an attachment to natural landscapes and green environments. This museum received membership in ICOM and IUCN (CEC) in 1376 Solar Hijri and was connected to the internet that same year. The total area of this museum is 12,000 square meters, and it is housed in a two-story building. It has many sections, a few of which are as follows: * Bird and Mammal Section, which consists of 6 halls. Various species of birds and animals are kept here, which are a source of immense interest for children and adults. These animals and birds are of very rare types collected here from different parts of the world. * A very large library is also part of this museum, containing approximately 15,000 books related to the environment so that individuals interested in biology and ecology can easily come here and quench the thirst of their knowledge. This library is counted among the most authoritative libraries holding books related to plants and animals. This library is located at the beginning of Niavaran Street. * There is also a theater here where films and conferences are organized to raise awareness regarding animals, birds, and other biological creatures. This theater has seating capacity for approximately 60 people. * A cinema where films are screened. * A veterinary clinic where examination and treatment of animals are carried out.</p>
 
 <p><strong>Azerbaijan Museum (Tabriz Museum):</strong> The 3,000 sq portion of this museum is currently under construction. The total number of various items kept inside the museum is approximately 4,600. In addition, about 100 hand-written books and around 2,500 printed books are also lying in its library. The books present here are for tourists interested in the history and civilization of Iran.</p>`
-},
+  },
 
-{
-  id: 'museums_of_iran_part3_culture_10',
-  title: 'Museums of Iran (Part 3)',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive and detailed exploration of Part 3 of the historical and cultural museums of Iran, covering the continuation of the Azerbaijan Museum, Bank Sepah, Golestan Palace, and the historical transformation of Qasr Prison into a garden museum.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Museums of Iran (Part 3)</strong></p>
+  {
+    id: 'museums_of_iran_part3_culture_10',
+    title: 'Museums of Iran (Part 3)',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive and detailed exploration of Part 3 of the historical and cultural museums of Iran, covering the continuation of the Azerbaijan Museum, Bank Sepah, Golestan Palace, and the historical transformation of Qasr Prison into a garden museum.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Museums of Iran (Part 3)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><strong>Continuation of Azerbaijan Museum (Tabriz Museum):</strong> The Azerbaijan Museum holds great attraction for visitors. All three halls of the museum, the basement, the first floor, and the second floor are utilized for exhibitions, where art, samples of ancient antiquities, and numerous items belonging to ancient human eras are present. The first and second floors, which are prominent sections of the museum, are packed with pottery. These vessels belong to the 5th millennium BCE.</p>
@@ -1976,17 +2038,17 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p><strong>History of Qasr Prison:</strong> Many high government officials of that era were imprisoned in this prison; even during the Pahlavi ruling era in year 32, following the events of 28 Mordad, Ezzatollah انتظامی and Ahmad Shamloo also became prisoners of this prison due to some of their active pursuits. The layout/map of this prison was prepared by Nikolai Markov. He was among the very renowned architects of Iran. His other works include Darol-Moallimin, Alborz High School, Varamin Sugar Factory, etc. The political prisoners' prison was constructed during the second part of the Pahlavi era, and many prominent personalities of contemporary times remained imprisoned in this prison.</p>
 <p><strong>Islamic Revolution:</strong> Qasr Prison was the first prison in which countless mujahideen striving for the attainment of the Islamic Revolution were imprisoned. In those days, numerous religious and political leaders were jailed in this prison. When the people liberated this prison, it enabled the release of many revolutionary workers and leaders, which was great news in the struggle of the Islamic Revolution.</p>
 <p><strong>Qasr Prison Garden Museum:</strong> Qasr Prison was handed over in 1386 Solar Hijri to a company working for the development of cultural environment, which was later transferred in 1386 itself to the municipal administration of Tehran city. Now the garden-style museum of this prison has been inaugurated and remains open for people to view. This garden is a living picture of Tehran city's 214-year history as the seat of government.</p>`
-},
+  },
 
 
-{
-  id: 'fans_of_iranian_films_increasing_worldwide_culture_11',
-  title: 'Fans of Iranian Films Are Increasing Worldwide',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive discussion on the evolution of Iranian cinema, its transition post-Islamic Revolution, state support policies, international film festival achievements, and popular TV series.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Fans of Iranian Films Are Increasing Worldwide</strong></p>
+  {
+    id: 'fans_of_iranian_films_increasing_worldwide_culture_11',
+    title: 'Fans of Iranian Films Are Increasing Worldwide',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive discussion on the evolution of Iranian cinema, its transition post-Islamic Revolution, state support policies, international film festival achievements, and popular TV series.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Fans of Iranian Films Are Increasing Worldwide</strong></p>
 <p><strong>Iran's Film Industry Encapsulates History Within Itself</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
@@ -2013,16 +2075,16 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>Some of the famous directors of Iranian films are: Majid Majidi, Mohsen Makhmalbaf, Abbas Kiarostami, Ebrahim Hatamikia, Kamal Tabrizi, Dariush Mehrjui, Jafar Panahi, and Kiumars Pourahmad, etc. A few famous actors popular worldwide include: Ezzatollah Entezami, Fakhreddin, Niki Karimi, Hanieh Tehrani, Khosrow Shakibai, and Akbar Abdi, etc.</p>
 
 <p>When the topic is Iranian cinema, it would be an injustice not to mention external and Islamic television series, because like Iranian films, drama series are watched with great enthusiasm not only in Iran but in other countries as well. These series provide excellent entertainment alongside Islamic themes, and they contain fine training in Islamic, moral, and human values. Recently, you must have watched the beautiful Urdu-dubbed Iranian television drama series "Prophet Joseph" (Yousef-e-Payambar). Similarly, the series "The Martyr of Kufa" is based on the life events of Hazrat Ali (RA). In addition, another very interesting series "Avicenna" (Bu Ali Sina) is also available in Urdu dubbing, which is built upon the life of the famous Muslim scientist Avicenna.</p>`
-},
+  },
 
-{
-  id: 'fifa_president_statement_culture_12',
-  title: 'The Echo of the FIFA President\'s Statement',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful article on FIFA President Gianni Infantino\'s passionate defense of Qatar against Western criticism, highlighting European hypocrisy, migrant worker rights, and double standards ahead of the 2022 World Cup.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Echo of the FIFA President's Statement</strong></p>
+  {
+    id: 'fifa_president_statement_culture_12',
+    title: 'The Echo of the FIFA President\'s Statement',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful article on FIFA President Gianni Infantino\'s passionate defense of Qatar against Western criticism, highlighting European hypocrisy, migrant worker rights, and double standards ahead of the 2022 World Cup.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Echo of the FIFA President's Statement</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The head of FIFA exposed the hollow claims of humanitarian benevolence by the Western world. His statement created a wave of buzz on social media. FIFA chief Gianni Infantino, himself a European, burst out in support of Qatar. Severely criticizing Western nations regarding the ongoing hostile campaign in European countries concerning human rights in Qatar, he stated that for what we Europeans have been doing to human beings for the past 3,000 years, we should apologize to humanity for the next 3,000 years to make amends. He expressed these views during his first official 45-minute press conference. The FIFA chief practically exploded at critics of Europe in this first press conference in Qatar, unmasking the Western world's claims of benevolence towards humanity. It is worth noting that FIFA chief Gianni Infantino is himself a resident of Europe, which is why he criticized Europe quite openly. Feeling himself to be an Arab and a Qatari individual, he said that European countries should stop their lecturing. If they care so much about the rights of laborers and youth, they should provide opportunities in their own lands instead of showing verbal sympathies.</p>
@@ -2036,17 +2098,17 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>It is noteworthy that Qatar, which was granted the right to host the global football tournament in 2010, has been under fire due to the treatment of migrant workers and human rights violations.</p>
 
 <p>Italian-born FIFA President Gianni Infantino stated that the Middle Eastern nation has played a significant role in improving the rights of migrant workers. He said, "I came here six years ago and raised the issue of migrant workers directly in my very first meeting." The FIFA president added, "How many of these European or Western business companies earn millions and billions every year from Qatar and other countries in the region, but how many of these companies have discussed the rights of migrant workers with the authorities?" The FIFA chief stated, "I have answers for the critics, and none of them do that. Giving one-sided moral lectures..."</p>`
-},
+  },
 
 
-{
-  id: 'ancient_festival_nowroz_culture_13',
-  title: 'The Ancient Festival of Nowroz',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive exploration of the ancient festival of Nowroz, its historical roots, cultural significance across regions, traditions like Haft-Sin and Khana Takouni, and its deep connection with history and poetry.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Ancient Festival of Nowroz</strong></p>
+  {
+    id: 'ancient_festival_nowroz_culture_13',
+    title: 'The Ancient Festival of Nowroz',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive exploration of the ancient festival of Nowroz, its historical roots, cultural significance across regions, traditions like Haft-Sin and Khana Takouni, and its deep connection with history and poetry.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Ancient Festival of Nowroz</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Nowroz is a Persian word meaning "New Day". Because it is the solar calendar used in Iran, it is also the first day of the year. In West Asia, Central Asia, the Caucasus, the Black Sea region, and the Balkans, this festival has been celebrated for 3,000 years.</p>
@@ -2082,17 +2144,17 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>Regarding Nowroz, the most authoritative book is *Nowruz-nameh*, written by Hakim Omar Khayyam Nishapuri in 480 Solar Hijri corresponding to 1101 CE. This book is about the birth of the Nowroz festival and its customs and traditions, pointing to historical and legendary events related to Nowroz.</p>
 
 <p>In *Nowruz-nameh*, Khayyam made Nowroz the subject and wrote, after praising Almighty God, that he wrote it at the request of a friend. It states that Jamshid named it Nowroz and celebrated it, after which other kings and people followed him. Thus, the name of Nowroz is linked with Khayyam. Despite being an intellectual and philosopher, he focused on the circulation of the world in his poetry and made it his fundamental concept. Indeed, he is a person who witnessed this circulation and perceived it fully; he completely grasped the arrival of years and months, the aging of humans, the passing of times, and their mortality. Therefore, the verses Khayyam composed about life and the spring of Nowroz differ fundamentally from the verses of others. He uttered philosophical and profound quatrains about life and death—quatrains that only a person who has pondered the world with great precision and minute detail can utter. For this reason, with the arrival of every year, Khayyam is remembered—he who compiled the most precise calendar of the world, gifted us the most beautiful poetry, and wrote the history of Nowroz so that subsequent generations, when celebrating Nowroz, could proudly remember this magnificent and ancient festival of Nowroz.</p>`
-},
+  },
 
 
-{
-  id: 'digital_imperialism_and_social_media_hypocrisy_culture_14',
-  title: 'Digital Imperialism, the Mirage of Freedom of Expression, and the Hypocrisy of Social Media',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A strong critique of the double standards, digital dictatorship, and ideological censorship imposed by major social media platforms against Muslims and digital creators.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Digital Imperialism, the Mirage of Freedom of Expression, and the Hypocrisy of Social Media</strong></p>
+  {
+    id: 'digital_imperialism_and_social_media_hypocrisy_culture_14',
+    title: 'Digital Imperialism, the Mirage of Freedom of Expression, and the Hypocrisy of Social Media',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A strong critique of the double standards, digital dictatorship, and ideological censorship imposed by major social media platforms against Muslims and digital creators.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Digital Imperialism, the Mirage of Freedom of Expression, and the Hypocrisy of Social Media</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>In the 21st century, when the internet and social media were introduced globally, they were declared the world's biggest platforms for "freedom of expression" and a global village. The claim was that every voice would find an equal place here without discrimination of color, race, or religion. But today, two decades later, this bitter reality has been completely exposed: platforms like Facebook and YouTube are not the flag-bearers of freedom of expression, but have rather become tools of a specific Western imperialism and "digital dictatorship."</p>
@@ -2106,17 +2168,17 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>The biggest hypocrisy of these global institutions is their business model. Today, billions of Muslims use social media. These companies earn billions of dollars by showing advertisements to our own people, shine their businesses, and breach our privacy by selling our private data. If you cannot respect the sentiments of Muslims, their beliefs, and their history, why don't you simply end the facility for them to create accounts on your platforms? You want to earn from us while simultaneously imposing restrictions on our heroes! If your policies are only for a specific community, then announce it openly.</p>
 
 <p>When we protest against these excesses, the reply we receive is that it was a "misunderstanding" or that we should take "policy training." The reality is that it is not we who need training, but rather the policymakers of these platforms, who need to learn the lessons of humanity, justice, and equality. The time has come for the Muslim Ummah and conscious creators to raise their voices against this digital imperialism; otherwise, these one-sided policies will completely distort and erase our identity tomorrow.</p>`
-},
+  },
 
 
-{
-  id: 'social_media_blessing_or_nuisance_culture_15',
-  title: 'Social Media: A Blessing or a Nuisance',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An in-depth analysis of the impact of social media, its potential as a blessing when guided by Islamic and moral principles, and the dangers of its misuse and Western double standards.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Social Media: A Blessing or a Nuisance</strong></p>
+  {
+    id: 'social_media_blessing_or_nuisance_culture_15',
+    title: 'Social Media: A Blessing or a Nuisance',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An in-depth analysis of the impact of social media, its potential as a blessing when guided by Islamic and moral principles, and the dangers of its misuse and Western double standards.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Social Media: A Blessing or a Nuisance</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p><em>"Wa qooloo lin-naasi husna."</em> "And speak to people good [words]." (Surah Al-Baqarah)</p>
@@ -2136,16 +2198,16 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>Islam does not forbid us from using social media; rather, it clarifies its moral principles and regulations. The Quran teaches us to think before speaking and research before sharing. Avoid slander. If we use social media for knowledge, love, justice, and good, this very platform can become the greatest medium for the invitation to truth (Dawat-e-Haq).</p>
 
 <p>Allah Almighty states in Surah At-Takathur: "Then, on that Day, you will definitely be questioned about the worldly favors [blessings]." Social media is also a blessing given by Allah. Considering it a boon, take full advantage of it. Just as one will be questioned about the tongue, wealth, knowledge, and other things, similarly, there will be a question about this digital power: did you use it for good or for evil?</p>`
-},
+  },
 
-{
-  id: 'the_new_year_culture_16',
-  title: 'The New Year: Reflection, Accountability, and Prayers',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'An insightful reflection on the Islamic and Gregorian New Years, emphasizing introspection, moral accountability, and heartfelt prayers for the Muslim Ummah, especially Palestine and Kashmir.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The New Year</strong></p>
+  {
+    id: 'the_new_year_culture_16',
+    title: 'The New Year: Reflection, Accountability, and Prayers',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'An insightful reflection on the Islamic and Gregorian New Years, emphasizing introspection, moral accountability, and heartfelt prayers for the Muslim Ummah, especially Palestine and Kashmir.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The New Year</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Allah Almighty states in Surah At-Tawbah, Verse 36:<br>
@@ -2168,16 +2230,16 @@ Qasr Prison was the first prison in Tehran, constructed as a palace during the Q
 <p>Since the Gregorian year is also included in all our worldly affairs, and we use the dates of this year in everything from the date of birth to death, it is also, in a way, a new year according to our affairs. Therefore, instead of wasting time in frivolities at the end and beginning of the year, it should be started in a good manner. Express good wishes with your relatives and loved ones, and pray to your Lord for blessings and goodness for the new year.</p>
 
 <p>My prayer to Allah Almighty is that this year becomes a source of goodness for you and me. May we be able to evaluate the past and formulate a better plan of action for the future. May there be stability in our beloved country Pakistan. May a new sun of progress rise in Pakistan with the new year. And the enemies of Pakistan and whoever is trying to hollow out the roots of this country, may the Merciful Lord destroy and ruin them all right at the beginning of this year. O Allah, have mercy on the people of Pakistan. Remove their worries. Instead of holding us accountable according to our deeds, forgive our shortcomings and shower us with Your mercy and grace. Remove our troubles. Grant success and ascension to the Muslims of the entire world. Especially grant success to the Muslims of Gaza, Palestine, and Kashmir. Grant freedom to the First Qibla and Kashmir. Ameen, O Lord of the Worlds.</p>`
-},
+  },
 
-{
-  id: 'khana_e_farhang_iran_lahore_culture_17',
-  title: 'Khana-e-Farhang, Islamic Republic of Iran, Lahore',
-  date: '2026',
-  category: ['culture_columns'],
-  excerpt: 'A comprehensive overview of Khana-e-Farhang Iran in Lahore, exploring its historical roots, its role in promoting Persian language and Islamic art, and its celebrations of major cultural and religious events.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Khana-e-Farhang, Islamic Republic of Iran, Lahore</strong></p>
+  {
+    id: 'khana_e_farhang_iran_lahore_culture_17',
+    title: 'Khana-e-Farhang, Islamic Republic of Iran, Lahore',
+    date: '2026',
+    category: ['culture_columns'],
+    excerpt: 'A comprehensive overview of Khana-e-Farhang Iran in Lahore, exploring its historical roots, its role in promoting Persian language and Islamic art, and its celebrations of major cultural and religious events.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Khana-e-Farhang, Islamic Republic of Iran, Lahore</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Both brotherly countries, Pakistan and Iran, are tied together in strong bonds of ancient friendship. Iran was the first country to recognize Pakistan, and similarly, after the Islamic Revolution, Pakistan was the first country to recognize Iran. Not only do these two countries share long borders, but the hearts of the people on both sides beat for each other. Iranians call Urdu the beautiful daughter of Persian because more than 70 percent of words in Urdu are from the Persian language. In our national anthem, only the word "ka" belongs to the Urdu language; the rest of the entire anthem consists of the Persian language. Deep religious, geographical, commercial, academic, literary, and cultural ties exist between both countries. Since Iranian culture is very ancient, it holds an important status of its own. Iranians pay great attention to their culture, and for this purpose, they are prominently highlighting their culture all over the world. A major reason for this is the numerous cultural centers present in more than sixty countries of the world, which are actively promoting Iranian culture. Besides the Iranian embassy in Islamabad, Iranian consulates are also present in the cities of Lahore, Karachi, Quetta, and Peshawar. These serve as a source of facilitation for pilgrims, a large number of whom head from Pakistan to Iran for pilgrimages, trade, tourism, and education. In Pakistan alone, 8 Iranian cultural centers are operating, with their central institution located in Islamabad.</p>
@@ -2223,7 +2285,7 @@ In recognition of their prominent services, teachers who have rendered distingui
 <p>Besides this, events are organized for Iranian and Pakistani brothers on the occasion of Muharram al-Haram, the arrival of Iranian Qaris (Quran reciters) in Pakistan during the blessed month of Ramadan, and the 15th of Shaban along with the birth and martyrdom anniversaries of the infallible Imams (AS).</p>
 
 <p>Khana-e-Farhang of the Islamic Republic of Iran appears practically active not only in promoting Iranian culture but also Islamic culture. A large number of Pakistanis are eager to participate in the programs held at Khana-e-Farhang Iran. Thus, Khana-e-Farhang Iran is playing an important role in Pakistan-Iran friendship and mutual relations.</p>`
-},
+  },
 
 
 
@@ -2232,14 +2294,14 @@ In recognition of their prominent services, teachers who have rendered distingui
 
 
 
-{
-  id: 'hafiz_shirazi_1',
-  title: 'Hafiz Shirazi: The Tongue of the Unseen – A Poet of Divine Love',
-  date: '2016',
-  category: ['other_personalities'],
-  excerpt: 'The story of the poet who brought the Persian ghazal to its pinnacle of perfection — Hafiz Shirazi, the Tongue of the Unseen.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `Hafiz Shirazi's name was Muhammad, his title Shams al-Din, and his pen-name (takhallus) was Hafiz. Hafiz himself recorded his name as: Muhammad ibn al-mulaqqab bi Shams al-Hafiz al-Shirazi.
+  {
+    id: 'hafiz_shirazi_1',
+    title: 'Hafiz Shirazi: The Tongue of the Unseen – A Poet of Divine Love',
+    date: '2016',
+    category: ['other_personalities'],
+    excerpt: 'The story of the poet who brought the Persian ghazal to its pinnacle of perfection — Hafiz Shirazi, the Tongue of the Unseen.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `Hafiz Shirazi's name was Muhammad, his title Shams al-Din, and his pen-name (takhallus) was Hafiz. Hafiz himself recorded his name as: Muhammad ibn al-mulaqqab bi Shams al-Hafiz al-Shirazi.
 
 Scholars differ on the year of Hafiz's birth. The Encyclopedia of Islam states that Hafiz was born at the beginning of the eighth century. Based on various testimonies, Hafiz's birth year is considered to be 726 AH. Thus, his year of death is recorded as 792 AH. At the time of his death, Hafiz was 65 years old. Hafiz's grandfather was titled Ghiyas al-Din, while his father's title has been recorded by some biographers as Baha al-Din and by others as Kamal al-Din.
 
@@ -2268,17 +2330,17 @@ The entire harvest of Hafiz's life is this single Divan, which has achieved wide
 The Khwaja's Divan is not voluminous, but the truth is that if you pick up the Divan of any famous poet besides the Khwaja and go through page after page, you will find here and there two, two, four, four verses worth copying into your notebook, while the rest are ordinary. In contrast, look at the Khwaja's Divan: wherever you cast your eye, you will find a high example of delicacy, refinement, literary embellishments, and elegance of style. The next verse will be even better. From the opening (Bismillah) to the end (Tammat bi al-Khayr), you will not find a single verse that is not captivating, delightful, and worthy of remembrance.
 
 Shaykh Sa'di Shirazi has also been called the Prophet of the Ghazal in Persian.`
-},
+  },
 
 
-{
-  id: 'saadi_shirazi_2',
-  title: 'Shaykh Sa\'di Shirazi: The Rose Garden and the Orchard — A Moral Philosopher of Persia',
-  date: '2016',
-  category: ['other_personalities'],
-  excerpt: 'Shaykh Sa\'di Shirazi, the Prophet of Persian Ghazal, whose Gulistan and Bustan have taught humanity ethics, love, and wisdom for centuries.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `The city of Shiraz in the Islamic Republic of Iran is a highly historical and beautiful city. Its soil has produced many renowned figures, among whom Shaykh Sa'di Shirazi stands foremost. There are varying opinions about his birth, education, travels, and works. Some scholars believe he was born in 585 AH, while others say 606 AH. Sa'di's father was named 'Abdullah. Sa'di's real name was Sharaf al-Din. When he began composing poetry, he adopted the pen-name "Sa'di" in reference to the then-ruler Sa'd ibn Zangi. Sa'di received his early education in Shiraz itself.
+  {
+    id: 'saadi_shirazi_2',
+    title: 'Shaykh Sa\'di Shirazi: The Rose Garden and the Orchard — A Moral Philosopher of Persia',
+    date: '2016',
+    category: ['other_personalities'],
+    excerpt: 'Shaykh Sa\'di Shirazi, the Prophet of Persian Ghazal, whose Gulistan and Bustan have taught humanity ethics, love, and wisdom for centuries.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `The city of Shiraz in the Islamic Republic of Iran is a highly historical and beautiful city. Its soil has produced many renowned figures, among whom Shaykh Sa'di Shirazi stands foremost. There are varying opinions about his birth, education, travels, and works. Some scholars believe he was born in 585 AH, while others say 606 AH. Sa'di's father was named 'Abdullah. Sa'di's real name was Sharaf al-Din. When he began composing poetry, he adopted the pen-name "Sa'di" in reference to the then-ruler Sa'd ibn Zangi. Sa'di received his early education in Shiraz itself.
 
 Shaykh Sa'di was born in 1194 CE and hailed from Shiraz. In 1226 CE, he went to Baghdad, where he studied at the Nizamiyya Seminary. There, he studied jurisprudence, hadith, and Islamic history under distinguished scholars. After completing his education at the Nizamiyya, he began an extensive journey, traveling to Syria, Egypt, Iraq, Anatolia, and many other regions. During his travels, he met various people and learned from their experiences. His journeys deeply influenced his thoughts and ideas. Most of his travels were undertaken in a state of asceticism and poverty.
 
@@ -2297,17 +2359,17 @@ Shaykh Sa'di wrote many poems and ghazals during his long life. His verses invit
 **Shaykh Sa'di's Philosophy of Life** — The central idea of Sa'di's poetry and writings is based on humanity, ethics, and tolerance. He always urged people to live with love and brotherhood toward one another. In his view, true religion lies in sharing the pains of others and helping them. His verses also teach the transience of the world and the importance of the hereafter. Through his poetry, he reminds people that worldly life is temporary and that one should always perform good deeds.
 
 **Sa'diyya (The Mausoleum of Sa'di)** — After Shaykh Sa'di's death, he was buried in Shiraz at a site now known as "Sa'diyya." His tomb is a beautiful example of Iranian architecture and attracts tourists. The complex includes a pool associated with Sa'di. People from around the world still visit Sa'di's tomb to pay their respects. Shaykh Sa'di's poetry remains alive, and his teachings will continue to show humanity the right path for ages to come.`
-},
+  },
 
 
-{
-  id: 'mir_sayyid_ali_hamadani_conference_3',
-  title: 'International Conference on Mir Sayyid Ali Hamadani — A Tribute to the Sultan of the Gnostics',
-  date: '2016',
-  category: ['other_personalities'],
-  excerpt: 'A two-day international conference on Mir Sayyid Ali Hamadani was held at Punjab University, Lahore, under the auspices of the Cultural House of Iran and Punjab University.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `A two-day international conference on "Mir Sayyid Ali Hamadani" was held at Al-Razi Hall, Punjab University, under the auspices of the Khana-e-Farhang (Cultural House) of the Islamic Republic of Iran, Lahore, and Punjab University. The conference was chaired by Punjab University Vice-Chancellor Prof. Dr. Mujahid Kamran.
+  {
+    id: 'mir_sayyid_ali_hamadani_conference_3',
+    title: 'International Conference on Mir Sayyid Ali Hamadani — A Tribute to the Sultan of the Gnostics',
+    date: '2016',
+    category: ['other_personalities'],
+    excerpt: 'A two-day international conference on Mir Sayyid Ali Hamadani was held at Punjab University, Lahore, under the auspices of the Cultural House of Iran and Punjab University.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `A two-day international conference on "Mir Sayyid Ali Hamadani" was held at Al-Razi Hall, Punjab University, under the auspices of the Khana-e-Farhang (Cultural House) of the Islamic Republic of Iran, Lahore, and Punjab University. The conference was chaired by Punjab University Vice-Chancellor Prof. Dr. Mujahid Kamran.
 
 Addressing the inaugural session, Vice-Chancellor Prof. Dr. Mujahid Kamran said that Islam is a religion of love and peace, aimed at uniting humanity. Emphasizing the need for unity in the present era, he stated that Mir Sayyid Ali Hamadani also spread this same message throughout his life. He also announced that all papers received at the conference would be published by Punjab University.
 
@@ -2330,17 +2392,17 @@ Other speakers at the event included Iran's Cultural Counselor based in Islamaba
 This two-day conference was attended by a large number of guests from Pakistan, Iran, Tajikistan, Afghanistan, and Bangladesh, with the largest contingent coming from the Islamic Republic of Iran, who also presented their research papers. Several months prior, in collaboration with Khana-e-Farhang and Punjab University, an international call for papers on the services of Mir Sayyid Ali Hamadani had been issued, resulting in the submission of over 100 papers.
 
 In addition to various academic and literary figures, a large number of male and female students also participated in the event. At the conclusion of the conference, shields were distributed among the paper presenters and participants.`
-},
+  },
 
 
-{
-  id: 'sheikh_saadi_shirazi_4',
-  title: 'Musleh al-Din Sheikh Saadi Shirazi (RA): Life, Thoughts, and Global Literary Impact',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'Sheikh Saadi (RA) is that priceless gem of the pure soil of Shiraz who taught morality to the entire world. He was not merely a poet or a prose writer, but a builder of humanity whose profound impact has encompassed both the East and the West.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `The Blessing of Shiraz's Soil and the Arrival of Saadi (RA)
+  {
+    id: 'sheikh_saadi_shirazi_4',
+    title: 'Musleh al-Din Sheikh Saadi Shirazi (RA): Life, Thoughts, and Global Literary Impact',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'Sheikh Saadi (RA) is that priceless gem of the pure soil of Shiraz who taught morality to the entire world. He was not merely a poet or a prose writer, but a builder of humanity whose profound impact has encompassed both the East and the West.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `The Blessing of Shiraz's Soil and the Arrival of Saadi (RA)
 Shiraz, a historical, civilizational, and cultural center of Iran, has been a cradle of knowledge and wisdom for centuries. The climate, geographical location, and the subtlety of its environment have bestowed upon its inhabitants a special aesthetic sense and vision. Sheikh Saadi (RA) is that priceless gem of the pure soil of Shiraz who taught morality to the entire world. Sheikh Saadi (RA) was not merely a poet or a prose writer, but a builder of humanity who illuminated every segment of society with his writings. His poetry is not just a collection of words, but an ocean of wisdom and sagacity from which the thirsty have been quenching their thirst for centuries. He is a personality whose profound impact has encompassed both the East and the West.
 
 Musleh al-Din Sheikh Saadi was born in Shiraz in 1210 AD. His name was Sharaf al-Din, his title was Musleh, and his pen name was "Saadi." His father, Abdullah Shirazi, was associated with the court of Atabak Saad Zangi and was a pious and righteous man. Sheikh Saadi's (RA) early upbringing included the strict supervision and spiritual grace of his father. In Bustan, he himself mentions how he developed a passion for worship, night vigils, and the recitation of the Quran in his childhood. After his father's death, his mother and close relatives took care of him. Mentioning his father's strict training, he states that even on Eids and festivals, he was not allowed to roam around freely, which played a crucial role in his character building. It was this early environment that kept him pure from worldly impurities and ignited a yearning for spirituality within him.
@@ -2360,15 +2422,15 @@ The works of Sheikh Saadi (RA) have been read for centuries not only in Iran but
 Sheikh Saadi (RA) passed away in 1291 or 1293 AD in Shiraz. His tomb is still a peaceful and spiritual place in Shiraz today. This tomb was rebuilt several times. The current building was constructed in 1331, which is a prime example of Iranian architecture and tile work. This tomb is not just a building but a focal point for devotees and literary enthusiasts. Ceremonies are held around the world, including Iran, to pay tribute to his services. His shrine invites visitors to peace, thought, and reflection. This historical heritage of his is the legacy of humanity.
 
 Sheikh Saadi (RA) was a teacher of morality who used his pen for the reformation of society. His writings are as alive today as they were seven hundred years ago. He taught us that the real secret of success lies in obedience to Allah and serving God's creation. His message of love, humanity, and truth-telling will endure until the Day of Judgment. Today's era, which has become blind in the materialistic race, is in greater need of Saadi's (RA) fables and his moral lessons. We should read, understand, and incorporate his works into our practical lives. Sheikh Saadi's (RA) message actually reflects the true spirit of Islam. His literature teaches us how a human being can maintain the status of the noblest of creations (Ashraf al-Makhluqat).`
-},
+  },
 
-{
-  id: 'dr_ali_larijani_shaheed_5',
-  title: 'Dr. Ali Larijani Shaheed: Ambassador of Kashmir and Palestine',
-  date: '2026',
-  category: ['other_personalities'],
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `"To me, Mr. Larijani's departure is a loss in itself. We have a friendship with him, we are his brothers, we are his companions. Nevertheless, this is a loss for us, but well, what can be done now, the nature of the work is somewhat like this." Although these words were spoken by the martyred Supreme Leader Ayatollah Syed Ali Khamenei about Dr. Ali Larijani when Dr. Larijani was stepping down from the presidency of Iran's state radio and television network, it seems as if the martyred Leader has spoken this sentence for him just today.
+  {
+    id: 'dr_ali_larijani_shaheed_5',
+    title: 'Dr. Ali Larijani Shaheed: Ambassador of Kashmir and Palestine',
+    date: '2026',
+    category: ['other_personalities'],
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `"To me, Mr. Larijani's departure is a loss in itself. We have a friendship with him, we are his brothers, we are his companions. Nevertheless, this is a loss for us, but well, what can be done now, the nature of the work is somewhat like this." Although these words were spoken by the martyred Supreme Leader Ayatollah Syed Ali Khamenei about Dr. Ali Larijani when Dr. Larijani was stepping down from the presidency of Iran's state radio and television network, it seems as if the martyred Leader has spoken this sentence for him just today.
 
 Two days ago, when a bounty was placed on the head of martyr Ali Larijani, he tweeted this saying of Hazrat Imam Hussain (AS): "I consider death a felicity and living with oppressors a humiliation." In addition, martyr Larijani had also warned that a 9/11-like conspiracy could be hatched to defame Iran.
 
@@ -2401,18 +2463,18 @@ In his long political career, Ali Larijani made several important visits to Paki
 In every visit, he made sure to meet prominent religious scholars, intellectuals, and media representatives of Pakistan. During his last visit to Pakistan, he gave a detailed interview to the Pakistani media, in which he declared the unity of the Muslim Ummah and Pak-Iran friendship indispensable for the survival of the region.
 
 Today, the Islamic Ummah has been deprived of this great leader. He attained the great rank of martyrdom, but there is certainly deep sorrow and anger that bounties are being publicly announced for such personalities, and this is being systematically acted upon. May Allah Almighty accept all these efforts of this great martyr for the Islamic world and elevate his ranks. Ameen.`
-},
+  },
 
 
 
-{
-  id: 'sardar_qasem_soleimani_6',
-  title: 'Sardar Qasem Soleimani Shaheed, An Epoch-Making Commander',
-  date: '2020',
-  category: ['other_personalities'],
-  excerpt: 'Sardar Qasem Soleimani was a charismatic leader and an epoch-making commander who dedicated his life to the defense of the Islamic world. His legacy and character have built a permanent home in the hearts of Muslims globally.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `Sardar Qasem Soleimani Shaheed, at the age of only 19, like many other youths, was attracted to the revolutionaries and the Sepah (IRGC). His entry into the army was the first step of his fame and progress.
+  {
+    id: 'sardar_qasem_soleimani_6',
+    title: 'Sardar Qasem Soleimani Shaheed, An Epoch-Making Commander',
+    date: '2020',
+    category: ['other_personalities'],
+    excerpt: 'Sardar Qasem Soleimani was a charismatic leader and an epoch-making commander who dedicated his life to the defense of the Islamic world. His legacy and character have built a permanent home in the hearts of Muslims globally.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `Sardar Qasem Soleimani Shaheed, at the age of only 19, like many other youths, was attracted to the revolutionaries and the Sepah (IRGC). His entry into the army was the first step of his fame and progress.
 
 His first mission in life was to protect the planes stationed in Kerman. Later, he became the commander of the training barracks and participated in the Iran-Iraq war in the same year.
 
@@ -2461,16 +2523,16 @@ In Tehran, Iran's Supreme Leader Ayatollah Khamenei led the funeral prayers over
 I believe that if he had stayed alive, the one task that was left would also have been accomplished, and that was the liberation of Al-Quds. This was God's will. But as a Muslim, it is my belief that for the liberation of Al-Quds, God willing, He will send another Soleimani soon.
 
 Qasem Soleimani was such a Muslim Mujahid leader whose name made the enemies of Islam tremble. The enemies of the Islamic world declared him a terrorist, but he was a true martyr and hero of the Islamic world. Today, the enemy can remove or block posts with his name from social media, but they can never erase the home that Qasem Soleimani's character and personality have built in the hearts of the Islamic world. Never ever.`
-},
+  },
 
-{
-  id: 'syed_ebrahim_raisi_7',
-  title: 'The Life of Syed Ebrahim Raisi',
-  date: '2021',
-  category: ['other_personalities'],
-  excerpt: 'A detailed look at the life of Syed Ebrahim Raisi, his services after the Islamic Revolution, his victory in the presidential elections, and its positive impact on Iran-Pakistan relations.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `First of all, we congratulate Syed Ebrahim Raisi himself, the Supreme Leader of Iran, Ayatollah al-Uzma Syed Ali Khamenei, and the entire Iranian nation on his victory with a huge majority. Besides congratulating Syed Ebrahim Raisi, Prime Minister of Pakistan Imran Khan has also expressed good wishes for further improvement in relations between the two countries and peace in the region. It is hoped that under the leadership of Syed Ebrahim Raisi, even better relations between Iran and Pakistan will emerge. Iran is our brotherly Islamic country with which we have deep-rooted ancient and strong cultural, religious, commercial, tourism, and academic ties.
+  {
+    id: 'syed_ebrahim_raisi_7',
+    title: 'The Life of Syed Ebrahim Raisi',
+    date: '2021',
+    category: ['other_personalities'],
+    excerpt: 'A detailed look at the life of Syed Ebrahim Raisi, his services after the Islamic Revolution, his victory in the presidential elections, and its positive impact on Iran-Pakistan relations.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `First of all, we congratulate Syed Ebrahim Raisi himself, the Supreme Leader of Iran, Ayatollah al-Uzma Syed Ali Khamenei, and the entire Iranian nation on his victory with a huge majority. Besides congratulating Syed Ebrahim Raisi, Prime Minister of Pakistan Imran Khan has also expressed good wishes for further improvement in relations between the two countries and peace in the region. It is hoped that under the leadership of Syed Ebrahim Raisi, even better relations between Iran and Pakistan will emerge. Iran is our brotherly Islamic country with which we have deep-rooted ancient and strong cultural, religious, commercial, tourism, and academic ties.
 
 In today's article, we will look at the life of Syed Ebrahim Raisi, who has served in important positions after the Islamic Revolution of Iran. Iran's recent presidential elections have once again proven to the world that despite the passage of four decades, the Iranian nation remains steadfastly committed to the Islamic Revolution and the Islamic system. And the world could not harm Iran despite false propaganda, conspiracies, and sanctions. Because in these elections, the people have elected with a heavy majority a person who is not only a soldier of the founder of the Islamic Revolution, Imam Khomeini (RA), but also a close companion of the Supreme Leader of the Islamic Revolution, Ayatollah Khamenei. While the heavy votes received by Hujjat al-Islam wal-Muslimeen Syed Ebrahim Raisi prove the people's love for the Supreme Leader of the Islamic Revolution and his companion on the one hand, on the other hand, the false claims of the outsiders have been exposed by the very low number of votes received by the other presidential candidates. The clear margin of public voting has also severely discouraged the false propaganda and incorrect coverage of some international media. But we have to see why a personality who got such a heavy majority is so popular among the people. For this, we have to look at his services from a young age and the Islamic Revolution until now.
 
@@ -2518,17 +2580,17 @@ At this time, the conditions in Iran are favorable for a major and serious chang
 Several political and religious figures of Pakistan also congratulated Syed Raisi on his victory in the Iranian presidential elections in their messages. Similarly, goodwill and best wishes have also been expressed by the new Iranian President for his brotherly country Pakistan.
 
 The most important development in the region after the Tehran presidential elections is the clear refusal made to America by Prime Minister Imran Khan during an important interview. Thus, Imran Khan has openly and categorically expressed his stance against fighting others' wars and against American policy. In my opinion, Prime Minister Imran Khan's anti-American statement and Ebrahim Raisi's assumption of power in Iran can prove helpful in bringing Pakistan and Iran closer to each other, because the brotherly Islamic country Iran has also firmly stood by this stance for a long time, and will inevitably support Pakistan's stance. On the other hand, Pakistan would also like to see Iran standing alongside it in case of opposition to America, hence this situation can prove to be a precursor to bringing both brotherly Islamic countries closer to each other and a new era of strengthening relations. In this regard too, Syed Ebrahim Raisi's election as the President of Iran can prove to be important and helpful for Pakistan. Along with this, China's massive investment in Iran will also directly prove helpful in Pakistan's development. Pakistan and Iran are also coming closer to each other due to the opening of new border crossings between the two countries and the program of opening more crossings. It is our prayer that the relations between the two brotherly Islamic countries, Pakistan and Iran, become further consolidated and both these countries play their role together in changing the destiny of the region. Insha'Allah.`
-},
+  },
 
 
-{
-  id: 'mahmoud_farshchian_8',
-  title: 'Lover of Imam Hussain (AS) Mahmoud Farshchian — An Eternal Journey of Art, Love, and Service',
-  date: '2025',
-  category: ['other_personalities'],
-  excerpt: 'The great painter and master of art, Mahmoud Farshchian, designer of the shrines of Imam Hussain (AS) and Imam Reza (AS), immortalized love, devotion, and history through his masterpieces like "The Evening of Ashura".',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `The architect of the shrine of Imam Hussain (AS), the shrine of Imam Reza (AS), and the creator of world-renowned masterpieces like "The Evening of Ashura" and "Guarantee of the Gazelle," the great painter and master of art Mahmoud Farshchian, departed from this world after completing his journey of art and spirituality. He was not only a great artist but such a lover of the Ahl al-Bayt (AS) who immortalized love, devotion, and history through his art.
+  {
+    id: 'mahmoud_farshchian_8',
+    title: 'Lover of Imam Hussain (AS) Mahmoud Farshchian — An Eternal Journey of Art, Love, and Service',
+    date: '2025',
+    category: ['other_personalities'],
+    excerpt: 'The great painter and master of art, Mahmoud Farshchian, designer of the shrines of Imam Hussain (AS) and Imam Reza (AS), immortalized love, devotion, and history through his masterpieces like "The Evening of Ashura".',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `The architect of the shrine of Imam Hussain (AS), the shrine of Imam Reza (AS), and the creator of world-renowned masterpieces like "The Evening of Ashura" and "Guarantee of the Gazelle," the great painter and master of art Mahmoud Farshchian, departed from this world after completing his journey of art and spirituality. He was not only a great artist but such a lover of the Ahl al-Bayt (AS) who immortalized love, devotion, and history through his art.
 
 Mahmoud Farshchian was a renowned painter and master of art from Iran who gained worldwide fame for his mastery in traditional Iranian painting and for revolutionizing modern painting. He strengthened Iran's cultural identity on a global level by giving Iranian miniature art a new soul and a modern look. His art was highly respected not only in Iran but also in major art circles of the East and the West.
 
@@ -2574,18 +2636,18 @@ This couplet of Maulana Jalaluddin Rumi (RA) encapsulates the essence of his lif
 Khushtar aan bashad ke sirr-e dilbaran
 Gofta ayad dar hadith-e digaran
 (It is better that the secret of the beloveds is told [metaphorically] in the tales of others.)`
-},
+  },
 
 
 
-{
-  id: 'quds_commander_qasem_soleimani_9',
-  title: 'Quds Commander Sardar Qasem Soleimani Shaheed',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A tribute to Quds Commander Sardar Qasem Soleimani Shaheed, highlighting his life, his crucial role in eradicating ISIS, and his eternal legacy in the hearts of the Islamic world.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `**Quds Commander Sardar Qasem Soleimani Shaheed**
+  {
+    id: 'quds_commander_qasem_soleimani_9',
+    title: 'Quds Commander Sardar Qasem Soleimani Shaheed',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A tribute to Quds Commander Sardar Qasem Soleimani Shaheed, highlighting his life, his crucial role in eradicating ISIS, and his eternal legacy in the hearts of the Islamic world.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `**Quds Commander Sardar Qasem Soleimani Shaheed**
 **Written by Shabbir Ahmed Shugri**
 
 Gaza is currently facing grave circumstances. The usurping Israel has crossed all limits of oppression and barbarism. In the current situation, Israel faces severe threats from Iran. Iran and Hezbollah have set Israel's teeth on edge. Given the current situation, the memory of the Quds Commander repeatedly comes to mind.
@@ -2605,16 +2667,16 @@ During Israel's attack on Lebanon and the 33-day war, Qasem Soleimani remained i
 On his martyrdom, the Muslims of the world protested completely. Protests and demonstrations took place in different countries, and programs and condolence meetings were held in his memory and to offer condolences, not only in Iran but all over the world. Political and religious figures from different countries reacted to his martyrdom and issued condolence messages. Iran's Supreme Leader Ayatollah Khamenei, in his condolence message, called him the international face of the resistance block and announced three days of mourning in Iran on the occasion of his martyrdom. Similarly, the foreign ministers of various countries also expressed sympathy and condemned this US action. And the funeral procession of Qasem Soleimani Shaheed was declared the largest funeral in history after Imam Khomeini's. According to the spokesperson of the Islamic Revolutionary Guard Corps, 25 million people participated in the funeral procession. Thus ended a pledge of continuous struggle with the martyred commander Qasem Soleimani. But his character remains alive forever.
 
 I believe that if he had stayed alive, the one task that was left would also have been accomplished, and that was the liberation of Al-Quds. This was God's will. But as a Muslim, it is my belief that for the liberation of Al-Quds, God willing, He will send another Soleimani soon. Qasem Soleimani was such a Muslim Mujahid leader whose name made the enemies of Islam tremble. The enemies of the Islamic world declared him a terrorist, but he was a true martyr and hero of the Islamic world. Today, the enemy can remove or block posts with his name from social media, but they can never erase the home that Qasem Soleimani's character and personality have built in the hearts of the Islamic world. Never ever.`
-},
+  },
 
-{
-  id: 'agha_syed_ali_al_husseini_10',
-  title: 'The Great Spiritual Leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA)',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heartfelt tribute to the great spiritual leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA), highlighting his piety, spiritual insight, and monumental contributions to the people of Baltistan.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `**The Great Spiritual Leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA)**
+  {
+    id: 'agha_syed_ali_al_husseini_10',
+    title: 'The Great Spiritual Leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA)',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heartfelt tribute to the great spiritual leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA), highlighting his piety, spiritual insight, and monumental contributions to the people of Baltistan.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `**The Great Spiritual Leader Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA)**
 **Written by Shabbir Ahmed Shugri**
 
 Whenever the illustrious name or good mention of Hazrat Agha Syed Ali Al-Husseini Sabzwari (RA) comes up, the heart becomes filled with devotion. In imagination, the luminous face of a practicing scholar, an affectionate, kind, and noble personality holding the highest position of piety emerges, and the eyes automatically lower in respect. Since today is the death anniversary of this great personality, I have been compelled to turn the pages of the diary of memories. I am sharing a few words and incidents here in his memory.
@@ -2638,16 +2700,16 @@ When I had the chance to visit Skardu after many years, I had the honor of meeti
 Today, Agha Syed Baqir Al-Husseini is the president of 'Markaz-e-Imamia', and in his form, the personality of Agha Syed Ali Al-Husseini Sabzwari (RA) and his knowledge and practice are present in a practical form. Agha Baqir Al-Husseini Sahib is also a great personality like his respected father. The "Phyalong Water Supply" project was such an impossible dream that could not be implemented even at the government level, but Agha Syed Baqir Al-Husseini made it possible at the public level through his personal efforts, which is undoubtedly a huge achievement and a continuous charity (Sadaqah Jariyah), which deserves to be written in golden words in history.
 
 May Allah Almighty accept all his efforts and bless him with success and triumphs while walking in the footsteps of his late father, who was a great spiritual personality. I pray that Allah Almighty elevates the ranks of the late Agha Syed Ali Al-Husseini Sabzwari (RA) and grants him a high place in Jannat-ul-Firdous. Ameen Ya Rabb-ul-Alameen.`
-},
+  },
 
-{
-  id: 'agha_syed_ali_al_mousavi_11',
-  title: 'The Late Agha Syed Ali Al-Mousavi',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A comprehensive tribute to the life, services, and enduring legacy of the late Agha Syed Ali Al-Mousavi and the Mousavi family’s four generations of religious devotion.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Late Agha Syed Ali Al-Mousavi</strong></p>
+  {
+    id: 'agha_syed_ali_al_mousavi_11',
+    title: 'The Late Agha Syed Ali Al-Mousavi',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A comprehensive tribute to the life, services, and enduring legacy of the late Agha Syed Ali Al-Mousavi and the Mousavi family’s four generations of religious devotion.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Late Agha Syed Ali Al-Mousavi</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 The Mousavi Family: Active in Religious Services for Four Generations
@@ -2678,16 +2740,16 @@ The late Allama Mousavi was the founder and patron of several Shia organizations
 I am proud that the late Agha Syed Ali Mousavi also patronized a unique institution like our Islamic Media Center "Noor Productions". Only Noor Productions has the honor of conducting detailed interviews with him about his life, in which he narrated the events from his childhood to the end in his own words. For this interview, the late Agha Asif was also present with me. Thus, Noor Productions released three DVDs on his life during his lifetime, in which he himself narrated his interesting life events.
 
 It is our prayer that just as he presented his great services for the religion and the nation, the Merciful Lord grants him a great position and status in the next world in return. Ameen. After his death, his son Agha Haider Ali Mousavi performed the duties of Imamate and oratory of Masjid Kashmirian very well. And after him, his son Syed Jawad Mousavi is performing these duties. In this regard, the Mousavi family has not disappointed the residents of Mochi Gate, Lahore. The late Agha Syed Ali Mousavi not only served the religion himself his whole life but also left behind scholars among his sons and offspring. Among them Agha Syed Mazahar Mousavi, the late Agha Syed Haider Mousavi, Agha Syed Razi Mousavi, Agha Syed Raza Mousavi, Agha Syed Abbas Mousavi, and Agha Haider Mousavi's son Agha Jawad Mousavi are rendering services to the religion and nation, following in the footsteps of their elders.`
-},
+  },
 
-{
-  id: 'agha_syed_haider_mousavi_12',
-  title: 'The Embodiment of Eloquence and Rhetoric: The Life and Services of the Late Agha Syed Haider Mousavi',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A detailed tribute to the life, academic achievements, and immense religious services of the late Agha Syed Haider Mousavi, a prominent scholar from a great scholarly family.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Embodiment of Eloquence and Rhetoric: The Life and Services of the Late Agha Syed Haider Mousavi</strong></p>
+  {
+    id: 'agha_syed_haider_mousavi_12',
+    title: 'The Embodiment of Eloquence and Rhetoric: The Life and Services of the Late Agha Syed Haider Mousavi',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A detailed tribute to the life, academic achievements, and immense religious services of the late Agha Syed Haider Mousavi, a prominent scholar from a great scholarly family.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Embodiment of Eloquence and Rhetoric: The Life and Services of the Late Agha Syed Haider Mousavi</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The late Agha Syed Haider Mousavi was such an extraordinary and practicing personality whose life was a beautiful blend of eloquence, rhetoric, and oratory, as well as knowledge and action. He belonged to that great scholarly family which, upon setting foot on the land of Lahore, wrote a new chapter in the academic and spiritual circles here.</p>
@@ -2713,16 +2775,16 @@ It is our prayer that just as he presented his great services for the religion a
 <p>In his final days, when his illness worsened, he sought guidance from the Holy Quran (Istikhara) regarding his health. The verse of the Istikhara contained the glad tidings that "You will be in the gardens of Paradise, adorned in the best attire, and will be benefiting from the blessings." Upon receiving this glad tiding, he smiled and closed the Quran.</p>
 
 <p>Finally, after being under treatment for a few days in the intensive care unit of a hospital in Islamabad, this sun of knowledge and grace set forever. His mortal remains were brought to Jamia Masjid Skardu where the funeral prayer was offered under the leadership of Maulana Sheikh Hasan Jafari. Amidst the sighs and sobs of thousands of mourners, he was laid to rest in his ancestral village Hussainabad, near the graves of his grandparents and beside his respected father.</p>`
-},
+  },
 
-{
-  id: 'gm_sikandar_13',
-  title: 'Ideal Civil Servant and Humanitarian Leader G.M. Sikandar',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heartfelt tribute to the late G.M. Sikandar, an exemplary civil servant and humanitarian who dedicated his forty-year career to public service and the welfare of the people.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Ideal Civil Servant and Humanitarian Leader G.M. Sikandar</strong></p>
+  {
+    id: 'gm_sikandar_13',
+    title: 'Ideal Civil Servant and Humanitarian Leader G.M. Sikandar',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heartfelt tribute to the late G.M. Sikandar, an exemplary civil servant and humanitarian who dedicated his forty-year career to public service and the welfare of the people.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Ideal Civil Servant and Humanitarian Leader G.M. Sikandar</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Some people come into this world and set such an example with their character, service, humility, and compassion that a void is created after their departure — the late G.M. Sikandar Shigri was one of them. A humanitarian, kind, and a messiah for the poor — G.M. Sikandar Shigri was under treatment for several days. His demise has caused deep sorrow not only in Gilgit-Baltistan but to his admirers all over the country. May Allah Almighty grant him a place in the vicinity of His mercy, accept his overt and hidden good deeds, and elevate his ranks. Ameen.</p>
@@ -2754,16 +2816,16 @@ It is our prayer that just as he presented his great services for the religion a
 <p>The deceased proved that: "The one who makes service his motto is the real officer!"</p>
 
 <p>May Allah Almighty forgive him, elevate his ranks, and grant patience to his family. Ameen.</p>`
-},
+  },
 
-{
-  id: 'mian_manzoor_ahmed_wattoo_14',
-  title: 'The Era of the Crime of Politics has Ended: In Memory of the Late Mian Manzoor Ahmed Wattoo',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heartfelt tribute to the late Mian Manzoor Ahmed Wattoo, reflecting on his political struggle, his famous book "Jurm-e-Siasat", and his enduring contributions to Pak-Iran friendship.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Era of the Crime of Politics has Ended: In Memory of the Late Mian Manzoor Ahmed Wattoo</strong></p>
+  {
+    id: 'mian_manzoor_ahmed_wattoo_14',
+    title: 'The Era of the Crime of Politics has Ended: In Memory of the Late Mian Manzoor Ahmed Wattoo',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heartfelt tribute to the late Mian Manzoor Ahmed Wattoo, reflecting on his political struggle, his famous book "Jurm-e-Siasat", and his enduring contributions to Pak-Iran friendship.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Era of the Crime of Politics has Ended: In Memory of the Late Mian Manzoor Ahmed Wattoo</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>A powerful voice echoing in the corridors of politics has gone silent. The news of Mian Manzoor Ahmed Wattoo's passing struck like a lightning bolt. When the message from his secretary was received that Wattoo Sahib is no longer among us, "Inna Lillahi wa inna ilayhi raji'un" involuntarily escaped the tongue. This news plunged the heart into the depths of sorrow, and I was intensely reminded of those verses of Faiz Ahmed Faiz which Wattoo Sahib had penned at the beginning of his world-renowned book "Jurm-e-Siasat" (The Crime of Politics):</p>
@@ -2790,16 +2852,16 @@ A tongue in every ring of the chain."</p>
 <p>Taking a bold step in 1999, he published the asset declarations of his entire family in newspapers and challenged that his family's property is 1507 acres of agricultural land which is inherited, and they do not own a single dollar or any property abroad. He had said in clear words: "Our living and dying is for Pakistan." According to the deceased, he did not build any factory or estate during his tenure in power, nor did he allot any plot to anyone as Chief Minister. He always kept offering himself for accountability.</p>
 
 <p>Today, Mian Manzoor Ahmed Wattoo is no longer among us; in my heart, his steadfastness, adherence to principles, and his services for Pak-Iran friendship will always be remembered. His book "Jurm-e-Siasat" and his political insight will remain a source of guidance in the coming eras. May Allah Almighty elevate the ranks of the deceased and grant beautiful patience to the bereaved. Ameen.</p>`
-},
+  },
 
-{
-  id: 'agha_syed_ahmad_ali_shah_15',
-  title: 'Benefactor of the North: Agha Syed Ahmad Ali Shah',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A glowing tribute to Agha Syed Ahmad Ali Shah, a prominent religious scholar, political leader, and the first Advisor to the Prime Minister from Gilgit-Baltistan, highlighting his lifelong public service.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Benefactor of the North: Agha Syed Ahmad Ali Shah</strong></p>
+  {
+    id: 'agha_syed_ahmad_ali_shah_15',
+    title: 'Benefactor of the North: Agha Syed Ahmad Ali Shah',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A glowing tribute to Agha Syed Ahmad Ali Shah, a prominent religious scholar, political leader, and the first Advisor to the Prime Minister from Gilgit-Baltistan, highlighting his lifelong public service.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Benefactor of the North: Agha Syed Ahmad Ali Shah</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Every day, thousands of caravans pass along the highway of life, countless faces come into view and fade away. But there are some personalities who, despite being out of sight, remain forever alive in hearts. History can never forget those people who stepped out of the enclosure of their self and learned to live for others, who supported the weak and helpless members of society. Agha Syed Ahmad Ali Shah, a prominent personality of the Northern Areas (Gilgit-Baltistan), was one of those chosen personalities who illuminated his region like a "bright mind".</p>
@@ -2815,18 +2877,18 @@ A tongue in every ring of the chain."</p>
 <p>Tragedy of Departure: Agha Syed Ahmad Ali Shah was not just an individual but an institution. The doors of his house and office remained open for everyone special and common, even for his opponents. On January 24, 1989, this great personality met his Creator in Islamabad due to a cardiac arrest at the age of 74. The news of his death spread like wildfire in the Northern Areas. When his mortal remains were brought to Skardu via a special plane of the President of Pakistan, an ocean of humanity was present from the airport to his residence. Every eye was tearful, and every face was a picture of grief. The devotion and respect with which the public welcomed him is granted to very few people.</p>
 
 <p>Death is a certainty, and even great rulers cannot escape it, but the services, words, and achievements of Agha Syed Ahmad Ali Shah are still alive. The void created in the scholarly, literary, religious, social, and political circles of the Northern Areas by his demise may perhaps never be filled.</p>`
-},
+  },
 
 
 
-{
-  id: 'professor_ghulam_hussain_saleem_16',
-  title: 'Professor Ghulam Hussain Saleem was a Great Asset of the Nation',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A comprehensive tribute to the late Professor Ghulam Hussain Saleem, a prominent religious, literary, political, and social figure of Baltistan, highlighting his lifelong services to education, public infrastructure, and unity.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Professor Ghulam Hussain Saleem was a Great Asset of the Nation</strong></p>
+  {
+    id: 'professor_ghulam_hussain_saleem_16',
+    title: 'Professor Ghulam Hussain Saleem was a Great Asset of the Nation',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A comprehensive tribute to the late Professor Ghulam Hussain Saleem, a prominent religious, literary, political, and social figure of Baltistan, highlighting his lifelong services to education, public infrastructure, and unity.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Professor Ghulam Hussain Saleem was a Great Asset of the Nation</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The late Professor Ghulam Hussain Saleem was a well-known religious, literary, political, and social personality of Baltistan. He began his educational career in 1977 from Degree College Skardu. In the intermediate college, he took the position of a librarian and within a short period was appointed as an assistant professor. The deceased also performed his services on ministerial posts in Islamabad. In 1994, the deceased was also elected as a member of the Northern Areas Council. As a councilor for Skardu Constituency Number 1, he got a large and fundamental infrastructure built for its development. The late person also has a fundamental role in turning today's Skardu town from a village-like settlement into a civilized city. Among these, the Greater Water Supply and the 65 Link Road are at the top. These two schemes changed not only the map but also the destiny of Skardu city. In addition, he also served as an advisor for health. After the 2009 reforms, he also became a member of the Gilgit-Baltistan Council and worked as an advisor to the Prime Minister.</p>
@@ -2852,16 +2914,16 @@ A tongue in every ring of the chain."</p>
 <p>Scholarly, literary, and religious circles have termed his demise a major loss for the nation. The late Professor Ghulam Hussain Saleem has left indelible marks on politics, oratory, education, teaching, literature and culture, religion, and sociology. Not only his family but the entire nation has been affected by the death of the deceased.</p>
 
 <p>The deceased has left behind a grieving widow, 6 sons, and 5 daughters. Offering condolences to all of them, we pray to Allah Almighty to grant this matchless personality of the country and nation a place in the vicinity of His mercy, and in reward for the deceased's great services, make his grave one of the gardens of Paradise. Ameen Ya Rabb-ul-Alameen.</p>`
-},
+  },
 
-{
-  id: 'agha_muhammad_asif_qazilbash_17',
-  title: 'Companion on the Path of God: A Tribute in Memory of the Late Agha Muhammad Asif Qazilbash',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heartfelt tribute to the late Agha Muhammad Asif Qazilbash, highlighting his sincere friendship, lifelong dedication to religious services and archiving, and his noble character.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Companion on the Path of God: A Tribute in Memory of the Late Agha Muhammad Asif Qazilbash</strong></p>
+  {
+    id: 'agha_muhammad_asif_qazilbash_17',
+    title: 'Companion on the Path of God: A Tribute in Memory of the Late Agha Muhammad Asif Qazilbash',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heartfelt tribute to the late Agha Muhammad Asif Qazilbash, highlighting his sincere friendship, lifelong dedication to religious services and archiving, and his noble character.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Companion on the Path of God: A Tribute in Memory of the Late Agha Muhammad Asif Qazilbash</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>In this materialistic and selfish world of today, finding sincere, devoted, and selfless humans is no less than a miracle. Some people do not merely live in this world, but leave behind such an everlasting imprint of character, love, and religious services that continue to fragrance the world even after their departure. My dear and longtime friend, companion on the path of truth, the late Agha Muhammad Asif, was also the owner of such an angelic personality whose memory remains the most precious asset of my heart today.</p>
@@ -2929,16 +2991,16 @@ A tongue in every ring of the chain."</p>
 <p>A passionate request to all readers and believers is to read Surah Al-Fatihah once and Surah Al-Ikhlas (Qul Huwallahu Ahad) three times for the thawab of the late Agha Muhammad Asif and oblige us.</p>
 
 <p>Jazakumullahu Khairan Jaza.</p>`
-},
+  },
 
-{
-  id: 'tribute_to_zaheer_uddin_babar_18',
-  title: 'Tribute to the Pioneer of Islamic Unity Zaheeruddin Babar',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A poetic tribute dedicated to Zaheeruddin Babar, highlighting his unique character, high morals, and enduring memory.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Tribute to the Pioneer of Islamic Unity Zaheeruddin Babar</strong></p>
+  {
+    id: 'tribute_to_zaheer_uddin_babar_18',
+    title: 'Tribute to the Pioneer of Islamic Unity Zaheeruddin Babar',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A poetic tribute dedicated to Zaheeruddin Babar, highlighting his unique character, high morals, and enduring memory.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Tribute to the Pioneer of Islamic Unity Zaheeruddin Babar</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>You were unique in the entire world, Zaheeruddin Babar,<br>
@@ -2976,16 +3038,16 @@ They prick the heart like a thorn, Zaheeruddin Babar.</p>
 
 <p>You were unique in the entire world, Zaheeruddin Babar,<br>
 None is seen like you, Zaheeruddin Babar.</p>`
-},
+  },
 
-{
-  id: 'pakistan_iran_friendship_and_tribute_19',
-  title: 'Long Live Pakistan-Iran Friendship and Tribute to Raisi & Amir-Abdollahian',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A poetic expression celebrating the enduring ties between Pakistan and Iran, honoring the martyrdom and services of President Ebrahim Raisi and Foreign Minister Amir-Abdollahian.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Long Live Pakistan-Iran Friendship</strong></p>
+  {
+    id: 'pakistan_iran_friendship_and_tribute_19',
+    title: 'Long Live Pakistan-Iran Friendship and Tribute to Raisi & Amir-Abdollahian',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A poetic expression celebrating the enduring ties between Pakistan and Iran, honoring the martyrdom and services of President Ebrahim Raisi and Foreign Minister Amir-Abdollahian.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Long Live Pakistan-Iran Friendship</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>Long live the friendship of Iran and Pakistan,<br>
@@ -3013,17 +3075,17 @@ Shigri prays that we always remain with grace and glory,<br>
 Long live the two brotherly countries, Iran and Pakistan!<br>
 Long live the friendship of Iran and Pakistan,<br>
 Long live Raisi and Amir-Abdollahian!</p>`
-},
+  },
 
 
-{
-  id: 'sohail_mujtaba_tribute_20',
-  title: 'The Wound of Separation of Sohail Mujtaba, Which Will Never Heal',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heart-wrenching tribute by Shabbir Ahmed Shigri to the late Sohail Mujtaba, son of Maulana Mohammad Yousuf Jauhari, highlighting his brief life, miraculous childhood recovery, and deeply missed presence.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Wound of Separation of Sohail Mujtaba, Which Will Never Heal</strong></p>
+  {
+    id: 'sohail_mujtaba_tribute_20',
+    title: 'The Wound of Separation of Sohail Mujtaba, Which Will Never Heal',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heart-wrenching tribute by Shabbir Ahmed Shigri to the late Sohail Mujtaba, son of Maulana Mohammad Yousuf Jauhari, highlighting his brief life, miraculous childhood recovery, and deeply missed presence.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Wound of Separation of Sohail Mujtaba, Which Will Never Heal</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The day of December 2, 2025, became a day of unending sorrow for me. This was the day when this heart-shattering news was received that the apple of our dear brother Maulana Mohammad Yousuf Jauhari's eye, the innocent, good-natured, and love-filled eighteen-year-old strapping youth Sohail Mujtaba, departed from this mortal world. This news struck like lightning. The heartbeat seemed to stop.</p>
@@ -3132,16 +3194,16 @@ It bloomed indeed, but blooming, it could not smile.</p>
 <p>And may He grant beautiful patience to his parents, siblings, and loved ones over this shock.</p>
 
 <p>Ameen Ya Rabb-ul-Alameen.</p>`
-},
+  },
 
-{
-  id: 'ghazi_ilm_ud_din_shaheed_21',
-  title: '31 October: The Day of Martyrdom of Ghazi Ilm-ud-Din Shaheed, Defender of the Honor of Prophethood',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A detailed historical account of Ghazi Ilm-ud-Din Shaheed, his defense of the honor of the Holy Prophet (PBUH), his trial, martyrdom, and the historic events surrounding his funeral.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>31 October: The Day of Martyrdom of Ghazi Ilm-ud-Din Shaheed, Defender of the Honor of Prophethood</strong></p>
+  {
+    id: 'ghazi_ilm_ud_din_shaheed_21',
+    title: '31 October: The Day of Martyrdom of Ghazi Ilm-ud-Din Shaheed, Defender of the Honor of Prophethood',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A detailed historical account of Ghazi Ilm-ud-Din Shaheed, his defense of the honor of the Holy Prophet (PBUH), his trial, martyrdom, and the historic events surrounding his funeral.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>31 October: The Day of Martyrdom of Ghazi Ilm-ud-Din Shaheed, Defender of the Honor of Prophethood</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>On October 31, 2017, seminars and various events were held across Pakistan to pay tribute to Ghazi Ilm-ud-Din Shaheed.</p>
@@ -3177,16 +3239,16 @@ Qadar-o-qeemat mein hai jiska khoon haram se barh kar.</em></p>
 The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 <p>The will that the Ghazi made to his relatives is worthy of attention: "By my climbing the gallows, they will not be forgiven; rather, everyone will be entitled to reward and punishment according to their deeds," and he emphasized to them not to leave prayers, pay Zakat regularly, and remain steadfast upon the Sharia of Muhammad.</p>`
-},
+  },
 
-{
-  id: 'agha_syed_ali_al_mousavi_life_and_services_22',
-  title: 'The Late Practicing Scholar Agha Syed Ali Al-Mousavi: A Look at His Life and Services',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A comprehensive biographical tribute to the late Agha Syed Ali Al-Mousavi, highlighting his lifelong dedication to religious propagation, establishment of institutions, and his foundational role in various organizations like ISO Pakistan.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Late Practicing Scholar Agha Syed Ali Al-Mousavi: A Look at His Life and Services</strong></p>
+  {
+    id: 'agha_syed_ali_al_mousavi_life_and_services_22',
+    title: 'The Late Practicing Scholar Agha Syed Ali Al-Mousavi: A Look at His Life and Services',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A comprehensive biographical tribute to the late Agha Syed Ali Al-Mousavi, highlighting his lifelong dedication to religious propagation, establishment of institutions, and his foundational role in various organizations like ISO Pakistan.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Late Practicing Scholar Agha Syed Ali Al-Mousavi: A Look at His Life and Services</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>The late Agha Syed Ali Mousavi was a well-known scholarly and religious personality and a prominent religious scholar. I am proud that I had a personal interaction with him. My father-in-law, Haji Mehdi Sahib, was raised like a son by the late Agha Syed Ali Mousavi, and he also patronized my marriage. Therefore, many such things are within my knowledge which are only known to a close associate. On my own, I have concluded that undoubtedly, behind the successful life of the late Agha Syed Ali Mousavi is his tireless hard work, but behind the scenes are the great services of his parents, who made many sacrifices and provided an excellent environment that took the late Agha Syed Ali Mousavi to a high position. The late respected mother used to say that she always breastfed the late Agha Syed Ali Mousavi while in a state of ablution (Wudu). From this, you can gauge the style of the parents' upbringing. Here, based on my information, I will try to present a few things about the life of the late Agha Syed Ali Mousavi.</p>
@@ -3216,17 +3278,17 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>I am proud that the late Agha Syed Ali Mousavi also patronized a unique institution like our Islamic Media Center "Noor Productions". Only Noor Productions has the honor of conducting detailed interviews with him about his life, in which he narrated all the events from his childhood to the end in his own words.</p>
 
 <p>May Allah Almighty grant the soul of the deceased a high place in Jannat-ul-Firdous and always keep him joyful. Ameen.</p>`
-},
+  },
 
 
-{
-  id: 'dr_amjad_hussain_chishti_23',
-  title: 'Advocate of Islamic Unity, Lover of Ahl al-Bayt, and Ideological Mujahid Dr. Amjad Hussain Chishti',
-  date: '2026',
-  category: ['other_personalities'],
-  excerpt: 'A heartfelt tribute to the late Dr. Amjad Hussain Chishti, highlighting his lifelong struggle for Islamic unity, love for the Ahl al-Bayt, inter-faith and sectarian harmony, and his deep attachment to the Islamic Revolution of Iran.',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Advocate of Islamic Unity, Lover of Ahl al-Bayt, and Ideological Mujahid Dr. Amjad Hussain Chishti</strong></p>
+  {
+    id: 'dr_amjad_hussain_chishti_23',
+    title: 'Advocate of Islamic Unity, Lover of Ahl al-Bayt, and Ideological Mujahid Dr. Amjad Hussain Chishti',
+    date: '2026',
+    category: ['other_personalities'],
+    excerpt: 'A heartfelt tribute to the late Dr. Amjad Hussain Chishti, highlighting his lifelong struggle for Islamic unity, love for the Ahl al-Bayt, inter-faith and sectarian harmony, and his deep attachment to the Islamic Revolution of Iran.',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Advocate of Islamic Unity, Lover of Ahl al-Bayt, and Ideological Mujahid Dr. Amjad Hussain Chishti</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 
 <p>When a person loses such an old, sincere, and strong companion with whom a major part of life has been spent in ideological and practical struggle, words fail. Our very dear and old comrade, General Secretary of Jamiat Ulema-e-Pakistan (Niazi) and the passionate standard-bearer of Islamic unity, Dr. Amjad Hussain Chishti, has surrendered his soul to the Creator and passed away to his ultimate abode. His demise has left not only his admirers but the entire religious and national community in mourning.</p>
@@ -3256,7 +3318,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>Humans like Dr. Amjad Hussain Chishti are not born every day. His services, his sincerity, that love-filled smile on his face, and his yearning for Islamic unity will always remain alive in our hearts.</p>
 
 <p>May Almighty Allah accept all his religious services, forgive his shortcomings, grant him a high station in Jannat-ul-Firdous and Shafa'at-e-Kubra, and grant patience to the bereaved. Ameen Ya Rabb-ul-Alameen!</p>`
-},
+  },
 
 
 
@@ -3264,14 +3326,14 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 
 
-{
-  id: 'rahbar_moazzam_1',
-  title: 'Farewell, O Leader of Islam',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'Farewell, O Leader of Islam',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Farewell, O Leader of Islam</strong></p>
+  {
+    id: 'rahbar_moazzam_1',
+    title: 'Farewell, O Leader of Islam',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'Farewell, O Leader of Islam',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Farewell, O Leader of Islam</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The martyred Seyyed Ali Khamenei (RA) was a great leader of the Islamic world whose heart was filled with compassion, love, affection, and brotherhood for everyone. That is why the whole world gathered at his funeral today. Representatives from more than a hundred countries participated in his funeral ceremony. In Tehran alone, approximately twenty million people attended the funeral. The Tehran Metro reported transporting over seven million people just for this ceremony. The number of people in other cities, including Iraq, was perhaps impossible to estimate. Such a grand funeral, held several months after his martyrdom, has no precedent in history. The world's norm is to forget someone's death within a few days. But who was Khamenei (RA) that won the hearts of the entire world, especially the entire Islamic world? There are two major reasons: first, he strongly supported all the oppressed of the world, especially Palestine. Second, he rendered invaluable services for the unity of the Islamic world. But it was not just that; behind this was a great chain of training and services that made him truly a man of action. A few days ago, his assets were revealed, showing that he owned nothing except a pickup truck. He didn't even have a bank account. Such a humble personality, despite receiving billions, lived a simple life. I remember that years ago, a picture of him meeting a head of state with a broken sandal became very famous. His parents' training played a major role in this simplicity. The martyred Khamenei himself said about his father: "My father was a famous and well-known religious scholar and very pious. He often preferred seclusion. Our life was very hard; sometimes we didn't have dinner at home! My mother would work very hard to arrange dinner for us, and that dinner would be bread and raisins." The house where I was born was only sixty or seventy square meters, located in a poor neighborhood of Mashhad. And we see that this simplicity continued until his last moments.</p>
 <p>Although it is not possible to write about his entire life here, the things that his old companion, Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani, shared about his personal life make hearts and eyes bow with reverence for Ayatollah Khamenei.</p>
@@ -3284,15 +3346,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>He always maintained trust in Allah and connection with Ahl al-Bayt (AS). Among the fourteen Infallibles, his greatest attention was towards Hazrat Fatima Zahra (SA), Imam Hussain (AS), and Imam Mahdi (AJ). He would make long prostrations and weep in solitude at the Jamkaran Mosque. He was a true lover of Imam Khomeini (RA).</p>
 <p>Pakistani officials have played an important role in recent negotiations and peace efforts, but the reaction of all Pakistani circles and sects to this great leader's martyrdom is not as strong as it should be. Ayatollah Khamenei (RA) also loved the Pakistani people and expressed this openly during his life. He also reacted strongly on the Kashmir issue. Once, when severe floods hit Pakistan, he wept and instructed officials to provide all possible aid to the flood victims. He had great reverence for Allama Iqbal and used to say: "I am a disciple of Iqbal." He had memorized 2000 verses of Allama Iqbal. Before the Islamic Revolution, he also wrote a book on Allama Iqbal. Although his political leadership was prominent, he was also an excellent poet. Every year during his visit to Mashhad, he would dedicate a day specifically to meeting prominent and veteran poets, spending two to three hours with them. He also invited many Pakistani poets to these gatherings.</p>
 <p>Ayatollah Khamenei (RA) visited Pakistan four decades ago when he was the President of Iran. It was a journey of spiritual light and a caravan of the heart. He received a magnificent welcome. People from the outskirts of Lahore, including elderly men and women, walked forty kilometers just for the hope of seeing Ayatollah Khamenei. The streets of Lahore, the city of Allama Iqbal, resonated with slogans of "Labbaik Khamenei." The same love and devotion were seen at his funeral, wherever it passed. Finally, his resting place was in Mashhad, in the shrine of his ancestor Imam Ali ibn Musa al-Raza (AS), whose custodian he had also been. May Allah grant this great martyred leader a place in His special mercy—the one whose entire life kept the enemy terrified, and now his martyrdom has shaken the palaces of the oppressors.</p>`
-},
-{
-  id: 'rahbar_moazzam_2',
-  title: 'The Rosary of Unity of the Martyred Ummah',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'The Rosary of Unity of the Martyred Ummah',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Rosary of Unity of the Martyred Ummah</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_2',
+    title: 'The Rosary of Unity of the Martyred Ummah',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'The Rosary of Unity of the Martyred Ummah',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Rosary of Unity of the Martyred Ummah</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The soil of the Indian subcontinent bears witness that its history is not merely the name of kings' conquests but a lasting tale of the confluence of different civilizations and ideas. In this tale, the role of Hussaini followers has been a fundamental link that gave a new direction to the region's religious, social, and political fabric. The arrival of Hussainis in the subcontinent is directly connected to Hussainiyat and the scorching desert of Karbala. After the tragedy of Karbala, when the noble Sayyids and lovers of Ahl al-Bayt (AS) chose migration to protect the true faith and headed towards this land.</p>
 <p>The fragrance of Hussaini thought later became the logical fruit of the Pakistan Movement, where all Muslims, transcending sects and communities, sought one destination. Although Sir Syed Ahmad Khan launched the 'Aligarh Movement' after the 1857 War of Independence, which was a great educational and intellectual movement, and Nawab Abdul Latif established the 'Muhammadan Literary Society' in Calcutta in 1863, which was an excellent scholarly forum; however, the first person to awaken political consciousness among the Muslims of the subcontinent and practically organize them as a separate 'political nation' was the pride of the Sadat of Mashhad, Justice Syed Ameer Ali. He established the 'Central National Muhammadan Association' in 1877, laying the foundation of the first formal Muslim political party in the subcontinent, a credit that history will forever record in his name. It was the compassionate heart of the Muslims, Hakim al-Ummah Allama Muhammad Iqbal Lahori, who colored this revolutionary spirit. And when the time came to give this long struggle the form of a state, the principled and fearless political vision of the founder of Pakistan, Quaid-e-Azam Muhammad Ali Jinnah, united this scattered nation under one flag. The financial backbone of the Pakistan Movement was loyal nobles like Raja Amir Ahmad Khan of Mahmudabad, who dedicated his millions of inherited estate at the feet of the newborn state, and in the fields of economy and diplomacy, Mirza Abul Hasan Isfahani became the Quaid's special confidant. Mother of the Nation, Fatima Jinnah, and Begum Rana Liaquat Ali Khan proved that Hussaini determination and the universal message of Karbala flow like a spirit in the roots of this land. This was the essence of this soil where everyone, transcending sectarian differences, had pledged to live under the shade of a monotheistic system, and in 1947, Pakistan emerged on the world map as an independent nation.</p>
@@ -3303,15 +3365,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>The scene at Minar-e-Pakistan was just the same—scattered pearls strung together on one thread. It became clear that martyrdom does not mean death; the martyr lives eternally. The martyrdom of the Martyred Ummah, Seyyed Ali Hussaini Khamenei, his pure blood, and his high spirit—which are the collective asset of the entire Ummah—have shattered all idols of division and hatred. His sacrifice has made the Shia and Sunni "one soul in two bodies," stringing them together on one rosary. This is the "rosary of the martyred leader." If we continue to be this rosary, not letting its beads scatter, and hold this strong bond of unity, then the coming time will be a prelude to a new revolution of unity on the world map.</p>
 <p>At Minar-e-Pakistan, Hussainis of all sects, with one voice, raised the slogan "Labbaik Ya Hussain" to prove that the personality of Imam Hussain (AS) and the Hussaini path are such a beacon for us that we can reject Yazidi ideology and unitedly move towards the Hussaini goal. The nation of Pakistan proved that it is a proud nation. By the grace of God, through the blood of the martyr, that work has been accomplished in hearts which would have taken centuries of waiting. Now there is only one solution to our problems: all Muslims believe that Imam Mahdi (AS) will come and fill the world with justice and equity just as it has been filled with oppression.</p>
 <p>One of the most satisfying and comforting aspects of this conference was seeing prominent and eminent scholars and personalities sitting together. I congratulate all these respectable scholars from the bottom of my heart for sitting together, putting aside their personal differences. For a long time, the nation had been dreaming of this, which appeared in a beautiful interpretation at this conference, shattering the dreams of the enemies. Hopefully, this series will continue because the conference has scattered the plans and despicable desires of Pakistan's and Islam's ill-intentioned enemies. Insha'Allah! As long as the fragrance of Hussainiyat and this spirit of unity exist in this soil, Pakistan's green crescent flag will remain high and everlasting against every tyrannical system.</p>`
-},
-{
-  id: 'rahbar_moazzam_3',
-  title: 'Martyr Khamenei (RA): A Practical Model of Unity',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'Martyr Khamenei (RA): A Practical Model of Unity',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Martyr Khamenei (RA): A Practical Model of Unity</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_3',
+    title: 'Martyr Khamenei (RA): A Practical Model of Unity',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'Martyr Khamenei (RA): A Practical Model of Unity',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Martyr Khamenei (RA): A Practical Model of Unity</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p><em>"Indeed this Ummah of yours is one Ummah, and I am your Lord, so worship Me."</em> (Surah Al-Anbiya, 21:92). This verse was frequently recited by the martyred Ayatollah al-Uzma, Supreme Leader Seyyed Ali Khamenei in his speeches. We always understood that this great martyr spent his entire life striving for the unity of Muslims. There is no doubt that the services he rendered for Muslim unity during his life are unparalleled and unforgettable. But today we see that his martyrdom has strung together the scattered Ummah like beads on a rosary. After his martyrdom, a practical demonstration of unity is being witnessed. Everyone is praising this martyr.</p>
 <p>Who was Khamenei? Why was the enemy so afraid of him? Because he would thwart all the enemy's plans and hinder every action through which the enemy wanted to weaken Muslims by making them fight each other. Initially, the enemy was somewhat successful in this, but the leader's leadership soon exposed these conspiracies before all Muslims and shattered the enemy's dreams. When different sects and schools of thought in the Islamic world were at odds, becoming victims of the enemy's conspiracies, in 2010, Khamenei issued such a historic fatwa for the Islamic world that ended tensions and conflicts among Muslims and united them as one Ummah. This historic fatwa was about the sanctities of Ahl al-Sunnah. He issued a fatwa that insulting the sanctities of Ahl al-Sunnah is haram. This was such a historic fatwa that was greatly welcomed in the Islamic world. I myself witnessed the practical and global effects of this fatwa, because in this regard, the Khana-e-Farhang Iran Lahore published a book that I had the honor of editing. Later, this book was republished by the Islamic Cultural Consulate in Islamabad. This eliminated tensions among Muslims, and they came very close to each other. They also understood the conspiracy of being made to fight each other. This fatwa was the most important turning point in his life that played a key role in extinguishing the fire of sectarianism.</p>
@@ -3319,15 +3381,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>The establishment of the 'Majma' Taqrib Mazaheb Islami' (World Assembly for Islamic Unity) is also a practical step in his efforts for Islamic unity. This assembly is not just an institution, but the practical manifestation of the martyred Seyyed Ali Khamenei's global vision, aiming to unite the Ummah on one platform. This was his first step towards unity after becoming the leader, when he founded this global institution in 1990. Its purpose is to bring scholars closer and find commonalities between Islamic schools of jurisprudence. Every year on 'Unity Week,' a grand 'International Islamic Unity Conference' is held in Tehran, attended by hundreds of muftis, scholars, and intellectuals from around the world. This conference proves that whether it is the Caliphate or the Imamate, all Muslims are united on the 'Kalimah of Tawhid.'</p>
 <p>For the leader, the issue of Palestine is also the greatest manifestation of unity. He invited Muslims to transcend sectarian differences and support Hamas and Islamic Jihad. His stance proves that Iran's support is based not on 'sect' but on 'oppression and Islam.' The issue of Palestine, in the view of the martyred Seyyed Ali Khamenei, was the greatest test of 'Islamic honor' and 'practical unity.' He proved that when it comes to the first Qiblah of Islam, the difference between Shia and Sunni disappears. The last Friday of Ramadan, Al-Quds Day, is the global day of Muslim unity, nurtured by the blood of the martyred Khamenei.</p>
 <p>In my view, the leader's entire life remained a practical model of unity, but his martyrdom has given it a new and powerful turn. On his martyrdom, the entire Islamic world was not only seen in grief and anger but also a practical demonstration of true unity. In the present era, the way this single lion of Islam challenged and crushed the enemy is unparalleled, and all Muslims, regardless of sect, became admirers of the leader. The incident of martyrdom once again reminded Muslims of the bitter truth that Zionist and imperialist powers are not friends or enemies of any particular sect, but enemies of every voice that rises on the basis of "La ilaha illallah." Seyyed Ali Khamenei, through his martyrdom, watered this Kalimah. The selection of his son, Seyyed Mujtaba Khamenei, as the new leader is undoubtedly a historic step. In his initial statements and messages, he has emphasized the same 'unity' that was his father's hallmark. He has made it clear that the importance of Palestine and Islamic unity in Iran's foreign policy will continue as before. He will carry forward the approximative ideas of the third Khomeini, proving that Insha'Allah, the enemy will never be able to sleep in peace.</p>`
-},
-{
-  id: 'rahbar_moazzam_4',
-  title: 'Islam\'s Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'Islam\'s Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Islam's Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_4',
+    title: 'Islam\'s Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'Islam\'s Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Islam's Great Leader, Ayatollah al-Uzma Ali Khamenei (RA) – Martyr</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p><em>"And never think of those who have been killed in the cause of Allah as dead. Rather, they are alive with their Lord, receiving provision."</em> (Surah Al-Imran, 3:169). Allah has placed great blessings in Islam and in the blood of the martyr. The sacred blood of the martyr is never wasted but irrigates the garden of Islam. Yazid, the accursed, martyred Imam Hussain (AS) thinking everything was over. But the lofty Imam gave his life to save Islam. Today, a large number of the world are Hussaini and express disassociation from Yazid. The greater the sacrifice given for the Islamic world, the more Islam is elevated. So if anyone foolishly thinks that by martyring a Hussaini they have achieved success, it is their mistake. In place of one, Allah creates many Hussainis.</p>
 <p>Ah! Today the hearts of the Islamic world are wounded. Every heart is sad. Ayatollah al-Uzma Seyyed Ali Khamenei (RA) was not the leader of any single country or sect. He was the popular leader of the Islamic world. From before the Islamic Revolution until now, his life has been spent in the service of the Islamic world. He spent his entire life as a true soldier. When Imam Khomeini (RA) passed away, the enemy was happy that now conquering Iran would be easy. But this dream of theirs did not come true, and in the form of Seyyed Ali Khamenei (RA), such a leader emerged who, on one hand, truly represented the Islamic world and, on the other, gave a tough time to the enemies. Most importantly, he established an atmosphere of unity in the Islamic world and highlighted the issue of Palestine, doing whatever was possible for its freedom. He always spoke for the rights of Muslims. He also took a blunt stance on Kashmir and warned India in strong words.</p>
@@ -3337,15 +3399,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>Ayatollah Khamenei is not only in Iran but the heartbeat of Muslims all over the world. Especially in recent times, after giving a crushing response to US and Israeli aggression and breaking their arrogance, every sect and school has been praising Ayatollah Khamenei. Due to his excellent strategy and Iran's successive victories, Ayatollah Khamenei has been seen as the most powerful leader of the Muslim world in all Muslim countries.</p>
 <p>Ayatollah Khamenei also loved the Pakistani people and expressed this openly. He had great reverence for Allama Iqbal, saying: "I am a disciple of Iqbal." He had memorized 2000 verses of Allama Iqbal. Before the Islamic Revolution, he also wrote a book on Allama Iqbal.</p>
 <p>Ayatollah Khamenei visited Pakistan four decades ago when he was the President of Iran. It was a journey of spiritual light and a caravan of the heart. At that time, the devotion of the Pakistani people for this leader of the Islamic world was openly visible. People from all over Pakistan—cities, towns, and villages—people of all colors and nations, from elderly mothers to youth, came to Lahore. From the outskirts of Lahore, many elderly men and women walked forty kilometers just for the hope of seeing Ayatollah Khamenei. The streets of Lahore, the city of Allama Iqbal, resonated with slogans of "Labbaik Khamenei." It was a flood of lovers. People tried to lift the Iranian president's car on their shoulders. The crowd stretched for fifteen kilometers. This visit was not just the arrival of a president but a manifestation of spirituality, unity, and awakening. Ayatollah Khamenei also always remembered this visit and the unprecedented welcome, and he held the Pakistani people in high regard. Today, the same people of Pakistan, along with the whole world, are drowned in grief over the martyrdom of this great leader. Their hearts and souls are wounded. Perhaps this pain and suffering will never diminish. The wound on the heart of the Islamic world will always remain fresh. The void left by Ayatollah Khamenei may never be filled. But Insha'Allah, Muslims will see the fruits of his sacrifice in the times to come. May Allah shower His mercy on the soul of this great martyr. Ameen.</p>`
-},
-{
-  id: 'rahbar_moazzam_5',
-  title: 'Ayatollah al-Uzma Seyyed Ali Khamenei\'s (RA) Devotion to Allama Iqbal',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'Ayatollah al-Uzma Seyyed Ali Khamenei\'s (RA) Devotion to Allama Iqbal',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Ayatollah al-Uzma Seyyed Ali Khamenei's (RA) Devotion to Allama Iqbal</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_5',
+    title: 'Ayatollah al-Uzma Seyyed Ali Khamenei\'s (RA) Devotion to Allama Iqbal',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'Ayatollah al-Uzma Seyyed Ali Khamenei\'s (RA) Devotion to Allama Iqbal',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Ayatollah al-Uzma Seyyed Ali Khamenei's (RA) Devotion to Allama Iqbal</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>You can read about Ayatollah Khamenei's (RA) devotion and respect for Allama Iqbal in this article. The speech of the Supreme Leader of the Muslim world, Ayatollah al-Uzma Seyyed Ali Khamenei (may Allah protect him), is not just an address but a comprehensive portrait of Allama Iqbal's personality, thoughts, feelings, and life, presenting all the evidence that proves Iqbal to be the "bright star of the East."</p>
 <p>He delivered this historic speech in 1986 at Tehran University on the occasion of the "Iqbal International Conference." See how beautifully he expressed his love and devotion for Allama Iqbal.</p>
@@ -3365,15 +3427,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>When Iqbal returned from Europe in 1908-1909, he saw that the educated Muslims of Indian society were infatuated with Western civilization and proud of British government jobs. Muslims were considered backward and humiliated compared to Hindus and Sikhs. Islamic sciences were being presented by orientalists like Sir Thomas Arnold, who wanted to remove the concept of jihad from Islam. Iqbal recognized well the political goals of thinkers like Edward Browne and Arnold.</p>
 <p>In this darkest night, Iqbal lit the torch of 'Khudi' (selfhood). He felt that Muslims first need to be directed towards their lost Islamic and human identity. Awakening a nation of millions that had been suffering under colonialism for centuries was a difficult task that only Iqbal could accomplish. Iqbal presented the philosophy of 'Khudi' as a social and revolutionary thought but gave it a philosophical garb to embed it in minds. For him, Khudi meant the feeling of personality, self-reflection, self-knowledge, and self-realization. He sees different quantities of selfhood in everything—droplets, rivers, deserts, the moon, the sun. For him, the life of a person and a nation depends on 'desire' and 'purpose.'</p>
 <p>Iqbal's poetry is full of love for the Prophet (PBUH), and whenever the Prophet's name was mentioned, tears would involuntarily flow from his eyes. His message of Islamic society and the responsibility of the monotheistic Ummah is clear. He urges Muslims to break the idols of race, nation, and color created by modern imperialism. Iqbal's message is still a beacon for us, and it is our responsibility to recognize our Islamic identity and free ourselves from these modern idols.</p>`
-},
-{
-  id: 'rahbar_moazzam_6',
-  title: 'The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_6',
+    title: 'The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>The Thought of the Islamic Revolution of Ayatollah al-Uzma Seyyed Ali Khamenei (RA)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The imperialist powers used every possible and impure conspiracy to fail the Islamic Revolution of Iran, but they always had to kneel before the insightful and wise strategy of Imam Khomeini (RA). When no way was left, these imperialist powers pinned all their hopes on Imam Khomeini's demise. On June 4, 1989, when the architect of the Islamic Revolution passed away, the enemies of Islam were rejoicing, thinking that with Imam's departure, the revolution would also end. But this revolution was not an ordinary movement; it was nurtured under the shadow of Imam's blessed breath. Imam knew well how to protect this divine system. So, with his far-sightedness, he revived the concept of 'Wilayat al-Faqih' and made it part of the constitution, crushing the enemy's dreams. This system has not let the revolution's flag fall to this day, and Insha'Allah, it will never fall. Within hours of Imam's demise, the Assembly of Experts introduced Ayatollah al-Uzma Seyyed Ali Khamenei as the Supreme Leader of the revolution, thwarting all the enemy's conspiracies.</p>
 <p><strong>The Experienced Captain of the Ship of Revolution</strong></p>
@@ -3385,15 +3447,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>The Supreme Leader's life is even simpler than an ordinary person's. His asceticism makes even the opponents of the revolution admit that there is not a single black spot on Ayatollah Khamenei's financial record. Piety and God-consciousness have given him such boldness that he fears no power in the world. The late Seyyed Ahmad Khomeini said that when he visited the Supreme Leader's house, the carpet was so old and rough that he had to sit on a cheap rug lying nearby. Dr. Gholam Ali Haddad Adel (former head of parliament) said that when the Supreme Leader asked for his daughter's hand for his son, he made it clear that he had only two rooms in his house and could not provide a separate house for his son. Once, a picture of his broken sandals went viral on social media during an Assembly of Experts meeting. Al-Khabar Press gave the headline: "Seyyed Ali Khamenei's sandals are more valuable than Gulf rulers; if Saudi Arabia gave all its wealth, we would reject it compared to these sandals."</p>
 <p><strong>Leadership in Global Politics and Scientific Development</strong></p>
 <p>The Supreme Leader is the only brave leader in the world who speaks looking straight into the eyes of major powers. When Russian President Vladimir Putin visited Iran and met with the Supreme Leader, he spontaneously said: "There is a wise person sitting in Iran. He is a philosopher and a knowledgeable person. With his intelligence and wisdom, Iran faces no danger." The American Carnegie Foundation also acknowledged that there is no other leader like Khamenei in the world who understands global issues so deeply. He has also led Iran's 'software movement' and 'scientific movement' for many years, making Iran a global power in science and technology.</p>`
-},
-{
-  id: 'rahbar_moazzam_7',
-  title: 'Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani (Head of the Supreme Leader\'s Office)',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani (Head of the Supreme Leader's Office)</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_7',
+    title: 'Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani (Head of the Supreme Leader\'s Office)',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Translation of the Interview of Hujjat al-Islam wal-Muslimin Mohammadi Golpaygani (Head of the Supreme Leader's Office)</strong></p>
 <p><strong>Research and Translation: Shabbir Ahmed Shigri</strong></p>
 <p><strong>Introduction and Early Period</strong></p>
 <p>Regarding my acquaintance with him, it was approximately the year 1978 (Shamsi), right after the revolution's victory. I was Imam's representative at the 8th Fighter Air Base in Isfahan, and he was in Tehran. The atmosphere was very toxic; the hypocrites were openly declaring their presence. After a year, I was transferred to Tehran and took charge of the ideological and political department of the Air Force. At that time, Agha (Khamenei) was running the office of the representative of Wilayat al-Faqih in the military, called the "Office of Imam's Consultation." He handed over a branch of this office to me in the Air Force, and I moved from the ideological department to this consultation office.</p>
@@ -3410,15 +3472,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>His grandchildren's faces were luminous. His four sons are religious scholars, and he had two daughters. He had great affection for his granddaughter Zahra. Once, when martyrdom was mentioned, he wept and said: "Insha'Allah, we will all be martyred together."</p>
 <p><strong>Faith and Connection with Ahl al-Bayt</strong></p>
 <p>Two things kept him firm: trust in Allah and connection with Ahl al-Bayt (AS). Among the fourteen Infallibles, his greatest attention was towards Hazrat Fatima Zahra (SA), Imam Hussain (AS), and Imam Mahdi (AJ). He would hold gatherings for Hazrat Zahra for five days. He would make long prostrations and weep at the Jamkaran Mosque. He was a true lover of Imam Khomeini (RA). He continued and completed the work of Imam Khomeini (RA) step by step.</p>`
-},
-{
-  id: 'rahbar_moazzam_8',
-  title: 'An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei',
-  date: '2016',
-  category: ['rahbar_moazzam'],
-  excerpt: 'An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei</strong></p>
+  },
+  {
+    id: 'rahbar_moazzam_8',
+    title: 'An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei',
+    date: '2016',
+    category: ['rahbar_moazzam'],
+    excerpt: 'An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>An Open Letter from a Pakistani Student in Holland to Ayatollah Khamenei</strong></p>
 <p><strong>Research and Translation: Shabbir Ahmed Shigri</strong></p>
 <p><em>To the esteemed leader of Iran, on the occasion of the anniversary of your selection as leader, I write this letter.</em></p>
 <p>I have studied history, and despite being young, I have seen much of the world. I have studied the history of Iran—from the Medes, Persians, and Parthians. Beyond world history, I have studied the history of Iranian kings—from Cyrus, Darius, Nushirvan, and Khosrow Parviz to Nader Shah, Shah Abbas, and Karim Khan Zand! I have studied the last two hundred years of Iran's monarchy... I have studied the past of Iran in the era of Reza Khan and his son. In various books in different languages...</p>
@@ -3428,7 +3490,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>In the 2500-year-old civilization of Iran, this governance has been established. Among all the kings of this land, you are the only one who does not believe in the class system; you have no palaces, buildings, or special entertainment centers. You are the only one who, instead of cutting off heads and tongues (which was the practice of Iranian kings' punishments), annually and repeatedly includes general amnesties for those who harm the dignity and reputation of the country's culture, economy, and politics.</p>
 <p>You are the only one who has not waged aggressive wars against neighboring lands. You are the only one who is interested in, loyal to, and devoted to different neighboring countries and other lands... Among all Iranian kings, you are the only one who is the leader of many scholars and scientists in various fields of knowledge. You are the only one who has read so many books that their count has been exhausted. You are the only one who endured torture and imprisonment. And never frowned. And wherever you went, you became a source of good for Iran and Iranians. You are the only one who was not and is not vengeful. You are the only one who spent yourself on Iran, not Iran on yourself. You are the only one who never disappointed us. You are the one who proved the meaning of word and deed for us. You are the only one who supported the Persian language with heart and soul. You are concerned and you wish that one day, through the efforts of Iranian youth, the language of knowledge in the world will be Persian.</p>
 <p><em>— A Pakistani student residing in Holland and France</em></p>`
-},
+  },
 
 
 
@@ -3439,14 +3501,14 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 
 
-{
-  id: 'imam_khomeini_1',
-  title: 'Imam Khomeini\'s Mystical Personality',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Imam Khomeini\'s Mystical Personality',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Imam Khomeini's Mystical Personality</strong></p>
+  {
+    id: 'imam_khomeini_1',
+    title: 'Imam Khomeini\'s Mystical Personality',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Imam Khomeini\'s Mystical Personality',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Imam Khomeini's Mystical Personality</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The founder of the Islamic Revolution, Imam Khomeini, was undoubtedly the most influential and religious figure of contemporary history. He created such an Islamic revolution that destroyed the palaces of the tyrannical regime and the satanic powers that supported it. After four decades, these palaces still tremble and could fall at any moment.</p>
 <p>Imam Khomeini's role in leading the revolutionary movement of the Iranian people and forming an Islamic government can never be forgotten. The founder of the Islamic Revolution, Imam Khomeini, was a clear example of the command of Imam Ja'far al-Sadiq (AS), who said: "Invite people not only with your tongue but with your actions." And indeed, Imam Khomeini, through his determined actions, eradicated tyranny and, through his character, not only gave a perfect example but has ruled over people's hearts to this day.</p>
@@ -3461,15 +3523,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>Imam Khomeini was a great thinker and possessed brilliant ideas who introduced the world to a new thought. Those who truly want to understand his thought and ideas must be people of high personality and qualities in terms of ideological and practical aspects, otherwise ordinary people cannot reach the ideas and thoughts of this great personality. Imam Khomeini's mysticism is a light of Hussaini mysticism that illuminates darkness through the window of mysticism, connected to the Prophet's (PBUH) being and the guided light of the Holy Quran. A light that blinds the eyes of the dark prisons of oppression. This mysticism is like Noah's ark that survives storms and anchors on high. It is the path of salvation. It is the path of guidance for Hussaini mysticism, as the Prophet (PBUH) said: "Indeed, Hussain is the lamp of guidance and the ark of salvation." Imam Khomeini's fervor is the heat of Hussaini mysticism that still warms the blood of his companions, followers, and those who walk in his footsteps. A heat that will never cool until the Day of Judgment. And this Hussaini revolutionary light will continue to illuminate the path of the faithful.</p>
 <p>Imam Khomeini's mysticism is visible until the last moments of his life; even in his final hours, he performed the true prayer through the gesture of his eyebrows. Kings and rulers live in great palaces and mansions, but the founder of the revolution that shook the world lived in a small house until his final breath. A house that was not even in his name but in his wife's name. That small house, where Imam Khomeini resided until the end, remains the center of true love for people today. This great man endured exile to lay the foundation of the revolution, and when he returned to Iran, six million Iranians welcomed him. But when his great funeral was carried from that small house, the number of participants was nine million.</p>
 <p>This great man, at the peak of mysticism, advised his son: "Son, these carpets were not given to me by people calling me your father, but by calling me a religious scholar. So after my death, give these carpets to a mosque. Similarly, the books in the library were not given to me by people calling me your father, but as a religious scholar. So after me, give them to a library." Undoubtedly, through such elevated deeds, he must have achieved the ascension of Hussaini mysticism. Imam Khomeini may have left us in appearance, but the light of his character and knowledge will continue to illuminate the Muslim world.</p>`
-},
-{
-  id: 'imam_khomeini_2',
-  title: 'Imam Khomeini\'s Spiritual and Worshipful States in Ramadan',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Imam Khomeini\'s Spiritual and Worshipful States in Ramadan',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Imam Khomeini's Spiritual and Worshipful States in Ramadan</strong></p>
+  },
+  {
+    id: 'imam_khomeini_2',
+    title: 'Imam Khomeini\'s Spiritual and Worshipful States in Ramadan',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Imam Khomeini\'s Spiritual and Worshipful States in Ramadan',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Imam Khomeini's Spiritual and Worshipful States in Ramadan</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The founder of the Islamic Revolution, Imam Khomeini (RA), always emphasized that the Quran is a book of human development, and one should not merely recite it but reflect upon it. The Quran is full of life-giving truths and keeps humanity from rebellion and arrogance. He said: "Allah has mentioned the stories of the prophets in the Quran not just to tell tales, but to illustrate the course of action of the prophets against tyrants and arrogant people. That is, we who are followers of the Quran should also strive to destroy tyranny."</p>
 <p>Imam Muhammad Baqir (AS) said: "Everything has a spring, and the spring of the Quran is the month of Ramadan." In this month, the Quran was revealed to the heart of the Prophet (PBUH), and believers refresh their hearts and souls through its recitation. A major secret of the success of the personality who brought revolution in the Islamic world (Imam Khomeini) was his adherence to the Holy Quran, because he had immense love for it. His soul, thought, and vision were governed by Quranic ideas, and his individual and social life was a practical example of Quranic teachings.</p>
@@ -3486,15 +3548,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>With time, the conspiracies of imperialist powers have been exposed, and today from East to West, even in America and Britain, Quds Day is observed with full fervor. The vested interests tried to reduce the Palestinian issue to a geographical problem, but the platform given by Imam Khomeini has strung the Muslim Ummah together. Today, under the leadership of Ayatollah Seyyed Ali Khamenei, Quds Day is celebrated with full grandeur and the Zionist regime is challenged.</p>
 <p>It was Imam Khomeini's strategy of uprising against oppressors that today the peoples of the Middle East are passing through an awakening. Faiz Ahmed Faiz expressed this philosophy of supporting the oppressed and rising against the oppressor in his famous poem:</p>
 <p><em>When one day all those who go to the court of the homeland will go, Some will receive their punishment, some will take their reward. O dwellers of the earth, rise up, the time has come, When thrones will be overturned, when crowns will be tossed. Now chains will break, prisons will not survive, The rivers that have risen cannot be stopped by straws. Cut and advance, there are many arms and many heads, Advance, for now camps will be set up at the destination. O victims of oppression, open your lips, how long will you remain silent? Some reckoning will be made, some voices will be heard.</em></p>`
-},
-{
-  id: 'imam_khomeini_3',
-  title: 'Life of Seyyed Ruhollah al-Musawi Khomeini (RA)',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Life of Seyyed Ruhollah al-Musawi Khomeini (RA)',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Life of Seyyed Ruhollah al-Musawi Khomeini (RA)</strong></p>
+  },
+  {
+    id: 'imam_khomeini_3',
+    title: 'Life of Seyyed Ruhollah al-Musawi Khomeini (RA)',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Life of Seyyed Ruhollah al-Musawi Khomeini (RA)',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Life of Seyyed Ruhollah al-Musawi Khomeini (RA)</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>When we think of Imam Khomeini (RA), the image of a political and revolutionary personality comes to mind, whose entire being was a manifestation of Muhammadan majesty and Alawi glory. He never bowed before any tyrannical power, nor did he ever compromise on any deviation from the divine path of Islam and the Quran. His revolutionary speeches and fiery sermons turned the heaps of oppression and tyranny to ashes and destroyed the Pharaonic palaces of coercion and exploitation. His slogans of freedom and awakening gave the oppressed and deprived nations of the world the spirit and courage to fight against imperialist powers. He instilled in dead hearts and minds the longing and courage for freedom and independence.</p>
 <p>He was the man of truth who, trusting in God, believing in the teachings of the Prophet of Mercy, and relying on the messages of the Ahl al-Bayt of Purity and Infallibility, sounded the death knell for all the dictators of history. Was he a religious authority of the time, the most knowledgeable of the era, a jurist, a fighter, a philosopher, a statesman, a mystic, a lover, a poet, a orator, or a speaker? Yes, all these perfections were gathered in Imam Khomeini. He was everything, but he never allowed himself to be enslaved by any title or epithet. He never stopped at any station on this luminous journey and never hesitated; he proved to be the champion of every field.</p>
@@ -3513,15 +3575,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>On the night of June 3, 1989, at 10:20 PM, the moment of meeting the Beloved arrived. The heart that had enlivened millions of hearts with the light of God and spirituality stopped beating. His lips were continuously engaged in the remembrance of God. In his final nights, even after several operations and at the age of 87, with glucose bottles attached to his hands, he still performed the night prayer and recited the Quran. In his final moments, his face radiated extraordinary spiritual and divine serenity and tranquility. When the painful news of his demise spread, people lost their composure, and all those who loved Imam Khomeini wept. The immense flood of mourners bidding farewell to their leader and beloved was a sight history had never witnessed.</p>
 <p>On June 5 and 6, 1989, a sea of millions of mourners from Tehran and other cities of Iran gathered at the Grand Musalla (Eidgah). They had come to bid farewell to the great man who, through his movement and revolution, had straightened the bent back of human dignity and values in the dark era of oppression and had initiated the movement towards God-consciousness and human nature. His body, in a green coffin, was carried on the hands of millions of mourners. Black flags were hung everywhere, and only the sound of Quranic recitation could be heard. At night, thousands of candles were lit in memory of the torch that Imam Khomeini had ignited. On the morning of June 6, 1989, millions of mourners, with tearful eyes, performed the funeral prayer over the pure body of Imam Khomeini, led by Ayatollah al-Uzma Golpaygani.</p>
 <p>The triumphant return of Imam Khomeini on February 1, 1979, with 6 million people welcoming him, and the even larger gathering at his funeral—with 9 million mourners—are among the most astonishing events in history. Thus, Imam Khomeini's demise, like his blessed life, became another source of awakening and movement, and his memory, teachings, ideas, and mission became eternal—because he was a truth, and truth is always alive and immortal.</p>`
-},
-{
-  id: 'imam_khomeini_4',
-  title: 'Imam Khomeini\'s Works and Writings',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Imam Khomeini\'s Works and Writings',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Imam Khomeini's Works and Writings</strong></p>
+  },
+  {
+    id: 'imam_khomeini_4',
+    title: 'Imam Khomeini\'s Works and Writings',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Imam Khomeini\'s Works and Writings',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Imam Khomeini's Works and Writings</strong></p>
 <p><strong>Research: Shabbir Ahmed Shigri</strong></p>
 <p>Imam Khomeini (RA) left behind many valuable works in hadith, jurisprudence, mysticism, principles, ethics, and theology. Similarly, during his years of teaching philosophy, jurisprudence, and principles, his students recorded his lectures. He also wrote booklets on various subjects, especially ethical, mystical, and jurisprudential topics. He also wrote commentaries on important Islamic books. Unfortunately, many of these works were lost due to frequent moving and attacks by SAVAK agents on his house and library. Nevertheless, many remain.</p>
 <p>On the other hand, after the Islamic Revolution, his meetings with the people and officials produced speeches, letters, and messages that have been compiled and published. Some books were written in expert language for scholars and special students, while others were written in simple language for the general public.</p>
@@ -3571,15 +3633,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p><strong>43. Taqrirat Dars Usul:</strong> A record of Ayatollah Burujirdi's lectures on principles, written by Imam.</p>
 <p><strong>44. Manasik Hajj:</strong> A compilation of Imam's rulings on Hajj rituals.</p>
 <p><strong>45. Political-Divine Will:</strong> Imam's most important testament, containing his core beliefs and guidance for present and future generations, published in multiple languages.</p>`
-},
-{
-  id: 'imam_khomeini_5',
-  title: 'Imam Khomeini\'s Life Full of Struggle',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Imam Khomeini\'s Life Full of Struggle',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Imam Khomeini's Life Full of Struggle</strong></p>
+  },
+  {
+    id: 'imam_khomeini_5',
+    title: 'Imam Khomeini\'s Life Full of Struggle',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Imam Khomeini\'s Life Full of Struggle',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Imam Khomeini's Life Full of Struggle</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>When we think of Imam Khomeini (RA), the image of a political and revolutionary personality comes to mind. His entire being was a manifestation of Muhammadan majesty and Alawi glory. He never bowed before any tyrannical power, nor did he compromise on any deviation from Islam and the Quran. His fiery speeches turned the heaps of oppression to ashes and destroyed the Pharaonic palaces of coercion and exploitation. He awakened the oppressed nations and gave them the courage to fight against imperialism.</p>
 <p>He was the man of truth who, trusting in God and following the teachings of the Prophet (PBUH) and Ahl al-Bayt (AS), sounded the death knell for all dictators. Was he a religious authority, a jurist, a fighter, a philosopher, a statesman, a mystic, a poet, or an orator? Yes, all these qualities were gathered in Imam Khomeini. He was everything, but never allowed himself to be enslaved by titles. He never stopped at any station and proved to be the champion of every field.</p>
@@ -3589,15 +3651,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>On June 5, 1963 (15 Khordad), revolutionary students held a grand protest at Fayziyah Madrasa. Slogans of "Long Live Khomeini" and "Death to Pahlavi" resounded. After years of struggle, Imam Khomeini returned triumphantly to Iran on February 1, 1979, after 14 years of exile. Millions welcomed him. On February 11, 1979, the revolution triumphed, and the 2500-year-old monarchy ended. The Islamic Republic was established after a referendum on April 1, 1979, with over 98% votes in favor.</p>
 <p>In 1980, Saddam Hussein attacked Iran, starting an eight-year war. Despite all difficulties, Imam Khomeini and the Iranian nation remained steadfast. They defended the revolution and emerged victorious. Imam Khomeini's final years were spent consolidating the Islamic system. He wrote his political-divine will, conveying all his teachings and guidance.</p>
 <p>On June 4, 1989, at 10:20 PM, Imam Khomeini passed away. His funeral saw a sea of millions of mourners—estimated at 9 million—a gathering unparalleled in history. His life and struggle became a beacon for the Muslim world. His teachings and his mission remain eternal.</p>`
-},
-{
-  id: 'imam_khomeini_6',
-  title: 'Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality</strong></p>
+  },
+  {
+    id: 'imam_khomeini_6',
+    title: 'Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>Seyyed Ruhollah al-Musawi Khomeini (RA): A History-Making Personality</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>When we think of Imam Khomeini (RA), we see a political and revolutionary figure whose entire existence embodied Muhammadan grandeur and Alawi majesty. He never lowered his head before any tyrant and never compromised on the divine path of Islam. His revolutionary speeches and fiery sermons turned the palaces of oppression and tyranny to ashes. He gave the oppressed and deprived nations of the world the spirit and courage to fight against imperialism.</p>
 <p>He was a religious authority, the most learned of his time, a jurist, a fighter, a philosopher, a statesman, a mystic, a lover, a poet, an orator—all these perfections were gathered in Imam Khomeini. He was everything but never allowed himself to be trapped by titles. He passed through every station without hesitation and proved to be a champion in every field.</p>
@@ -3607,15 +3669,15 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>Another great and exemplary step taken by Imam Khomeini in Ramadan was his support for the oppressed. He was not only the leader of Iran but also the leader of the entire Muslim Ummah. He gave practical proposals and took steps that remain a beacon of hope for the Ummah. One of his historic and everlasting achievements was the declaration of 'International Quds Day.' Imam Khomeini declared the last Friday of Ramadan as Quds Day to support the Palestinian brothers and to practically stand against imperialist powers. In Ramadan, all Muslims undergo the process of jihad al-nafs, and promoting jihad al-'amal (practical struggle) and practicing it made Imam Khomeini a global leader whose heart beats for the Ummah and who is always striving for its lasting peace and security.</p>
 <p>On June 4, 1989, he was preparing to meet the Beloved for whose pleasure he had spent his whole life. He never bowed to any power except the Almighty, and his eyes shed tears only for that Beloved. In his will, he said: "With a peaceful heart, a contented soul, a joyful spirit, and a hopeful conscience, I take leave from the service of my brothers and sisters with God's grace and mercy, and travel towards the eternal abode. I am in need of your continued prayers, and I pray to God that if any shortcoming remains in my service, He may forgive me, and I also hope that the nation will forgive any failure and move forward with full strength and determination."</p>
 <p>In his final hours, his lips were continuously engaged in the remembrance of God. Even after several operations and at the age of 87, with glucose bottles attached, he still performed the night prayer and recited the Quran. At the moment of his demise, his face radiated extraordinary spiritual and divine serenity. The news of his death spread, and people wept. The immense flood of mourners at his funeral was a sight history had never seen. On June 5 and 6, 1989, a sea of millions gathered at the Grand Musalla in Tehran. The number of mourners was estimated at 9 million—a gathering unparalleled in history. Thus, Imam Khomeini's demise, like his blessed life, became another source of awakening and movement, and his memory, teachings, and mission became eternal—because he was a truth, and truth is always alive and immortal.</p>`
-},
-{
-  id: 'imam_khomeini_7',
-  title: 'From a Small House to Ruling Hearts',
-  date: '2016',
-  category: ['imam_khomeini'],
-  excerpt: 'From a Small House to Ruling Hearts',
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-  content: `<p><strong>From a Small House to Ruling Hearts</strong></p>
+  },
+  {
+    id: 'imam_khomeini_7',
+    title: 'From a Small House to Ruling Hearts',
+    date: '2016',
+    category: ['imam_khomeini'],
+    excerpt: 'From a Small House to Ruling Hearts',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    content: `<p><strong>From a Small House to Ruling Hearts</strong></p>
 <p><strong>By: Shabbir Ahmed Shigri</strong></p>
 <p>The 35th anniversary of Imam Khomeini (RA), the founder of the Islamic Revolution of Iran, is being observed. I and our group of Pakistani pilgrims had the opportunity to visit Imam Khomeini's house in Qom a few days ago. The information about this house was astonishing for our companions.</p>
 <p>After getting married in Tehran and moving to Qom, Imam Khomeini lived as a tenant for about 16 years in various houses. The house in Qom, where he lived as a tenant, he later purchased. This house is located in the Yakhchal Qazi neighborhood of Qom and has now been converted into a museum. Its visiting hours are from 7:30 AM to 3:30 PM. When we arrived, the time was over, but the staff showed special kindness and allowed us to visit, and a guide gave us a detailed account of the house. To enter the exhibition, we descended the basement stairs. In that basement, a small world was set up as an exhibition, whose inhabitant had conquered the hearts of people all over the world.</p>
@@ -3625,7 +3687,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 <p>In one room, the guide told us to stand on a certain carpet. When we gathered there, he said: "The carpet you are standing on is the only thing here that was used by Imam himself." Besides that, his kitchen, cooking area, dishwashing area, meeting area, and study area have all been preserved as memorabilia. On the walls of the rooms, beautiful framed pictures of Imam's engagements are installed. In the center of the courtyard is a beautiful turquoise pool, and on the walls hang pictures from the time of the revolution.</p>
 <p>Imam's house became the center of his political activities when his struggle against the oppressive Pahlavi regime began. It was here that he delivered his famous speech against the provincial and state assemblies bill. Also, his last speech in this house, regarding the approval of the capitulation law, began with "Inna lillahi wa inna ilayhi raji'un" and included words like: "...There is no celebration in Iran now... they have sold us... Iran's dignity is gone." After that speech, the Pahlavi regime arrested Imam and immediately exiled him to Turkey and then to other places.</p>
 <p>After the revolution, Imam's house has always remained a safe haven for those seeking God and revolutionaries. It is also a center for lovers of Imam and the revolution. The building has now been registered as a national heritage site by the Cultural Heritage Organization. Many disciples and associates of Imam also recount many interesting memories and events that took place in this house.</p>`
-},
+  },
 
 
 
@@ -3698,9 +3760,9 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 
 
-  
 
-{
+
+  {
     "id": "pak_iran_trade_1",
     "title": "Pak-Iran Trade Exhibition: A Step Towards Economic Cooperation",
     "date": "2016",
@@ -3719,9 +3781,9 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p>Political, defense and security relations between the two brotherly countries are good. With new border crossings, economic relations are also being emphasized through the construction and implementation of border markets. Given the long border and various products between Iran and Pakistan, the establishment of border markets can play a fundamental role in promoting economic and trade relations between the two countries. With the establishment of joint border markets, the dream of five billion dollars in annual trade between Iran and Pakistan seems to be coming true. The establishment of these border markets will not only increase trade but also curb illegal smuggling.</p>
       <p>In addition, offers to increase trade in the transport sector between the two countries, increase barter trade, and reduce tariffs have also been made. It is hoped that both neighboring brotherly countries will develop full-fledged relations in political, economic, trade, tourism, cultural and educational fields. Both countries can become an important cause of change not only for themselves but for the entire region. For this, it is necessary that practical steps are taken beyond intentions.</p>
     `
-},
+  },
 
-{
+  {
     "id": "pak_iran_trade_2",
     "title": "Pakistan and Iran Active in Promoting Relations",
     "date": "2016",
@@ -3741,8 +3803,8 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p>Pakistan and Iran are two brotherly countries that not only share a long border but also the hearts of the people of both countries beat for each other. But the question arises as to what is the reason that there is not the closeness in the relations between the two brotherly countries that should be. In fact, there is no problem between Pakistan and Iran, but whenever relations between the two countries start to stabilize, some conspiracy is hatched and such an environment is created that these countries are portrayed as opponents of each other, and these actions can only be done by anti-Islam enemies who will never want Pakistan and Iran and other Islamic countries to come together. If this happens, how will their plan succeed? But we need to think seriously about this. We need to take bold steps to solve our problems for the sake of our country.</p>
       <p>Offers to increase trade in the transport sector between the two countries, increase barter trade, reduce tariffs along with the construction of joint border markets have been made. Both countries have already planned and signed agreements on strategic cooperation, but only the implementation is lacking. The Iranian officials who visited have also said that various political, federal and security relations between the two countries are satisfactory.</p>
     `
-},
-{
+  },
+  {
     "id": "pak_iran_trade_3",
     "title": "China's Investment in Iran: A Cause of Change for Pakistan and the Region",
     "date": "2016",
@@ -3759,8 +3821,8 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p>Similarly, all obstacles in the way of relations between Pakistan and Iran need to be removed. In fact, Pakistan and Iran have an ideal friendship and both countries have always helped each other. Iran is the first country to recognize Pakistan. For a long time, enemies have been concerned that friendship between these brotherly countries should not become stable. For this, they keep using new tactics, due to which there have been fluctuations at the government level between the two countries, but now these conspiracies of the enemy will be buried forever because this new bloc is going to become such that these countries will remain inextricably linked and will become each other's strength. China will also make efforts to pay good attention to infrastructure projects in both Pakistan and Iran. In this way, China will also play a more prominent role in supporting Pakistan-Iran relations, which will inevitably lead to further stability in Pakistan-Iran relations, because China will also wish for such a large investment place to remain safe and stable.</p>
       <p>Our government is also now seriously taking steps on mutual matters, because on one side is friendly country China and on the other side is brotherly country Iran. Pakistan also needs to further strengthen itself in collaboration with both these neighboring countries. In this regard, Prime Minister Imran Khan has taken important steps in the region. Why do we need to abandon our best mutual interests and embrace others? We need to recognize our enemies. This has now become as clear as daylight. Whether they are Islamic countries that betray us at crucial times like Kashmir and align with infidels, they can never be our well-wishers. Now there is a need that while being at the center of these two countries, Pakistan plays a central role in increasing China-Iran relations while moving forward with caution, because this is also an important opportunity for Pakistan to play a more important and positive role in the region. Because this new project will certainly change the situation in the region.</p>
     `
-},
-{
+  },
+  {
     "id": "pak_iran_trade_4",
     "title": "Special Interview for Roznama Betab: Pakistan-Iran Border Markets - A New Path to Pakistan's Development",
     "date": "2016",
@@ -3781,7 +3843,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p>The question arises as to what is the reason that there is not the closeness in the relations between the two brotherly countries that should be. In fact, there is no problem between Pakistan and Iran, but whenever relations between the two countries start to stabilize, some conspiracy is hatched and such an environment is created that these countries are portrayed as opponents of each other. And these actions can only be done by anti-Islam enemies who will never want Pakistan and Iran or other Islamic countries to come together. If this happens, how will their plan succeed?</p>
       <p>But we need to think seriously about this. We need to take bold steps to solve our problems for the sake of our country. Offers to increase trade in the transport sector between the two countries, increase barter trade, reduce tariffs along with the construction of joint border markets have been made. Both countries have already planned and signed agreements on strategic cooperation, but only the implementation is lacking. The Iranian officials who visited have also said that various political, federal and security relations between the two countries are satisfactory.</p>
     `
-},
+  },
 
 
 
@@ -4366,7 +4428,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 
 
-    {
+  {
     id: 'palestine_18',
     title: 'The Occupied Land of Palestine, the Land of the Prophets',
     date: '2026',
@@ -4680,7 +4742,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
     `
   },
 
-    {
+  {
     id: 'palestine_4',
     title: 'The Importance of Quds Day (Part Two)',
     date: '2026',
@@ -5118,7 +5180,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p>This man of steel of Iran endured internal and external resistances with great fortitude, and no power could alter his ideologies. Whether it was internal politics, the hostage crisis at the American embassy, resistance to American pressure, or the eight-year imposed war with Iraq—Imam Khomeini (RA) remained firmly steadfast on his principles. After the demise of Imam Khomeini (RA), his true successor, Ayatollah Sayyid Ali Khamenei (May Allah protect him), was elected as the Supreme Leader, who continues to fulfill the duties of leading the Islamic Republic of Iran with excellence to this day.</p>
     `
   },
-    {
+  {
     id: 'islamic_revolution_3',
     title: 'The Islamic Revolution of Iran: A Ray of Hope for the Islamic World',
     date: '2026',
@@ -5950,7 +6012,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
 
 
 
-    {
+  {
     id: 'aimah_ahle_bait_27',
     title: 'Lady Khadijah (SA)',
     date: '01-01-2015',
@@ -6001,7 +6063,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
       <p><strong>By: Shabbir Ahmed Shigri</strong></p>
       <p>Name: The Prophet of Islam (PBUH) named him Ali, after the name of Allah. Abu Talib (AS) and Fatimah bint Asad said to the Prophet of Islam (PBUH) that they had heard this same name from the unseen caller. Titles: His famous titles are Amir al-Mu'minin, Murtaza, Asad Allah, Nafs Allah, Haidar, Karrar, Nafs al-Rasul, and Saqi al-Kawthar. Kuniyah: His famous teknonyms are Abu al-Hasan and Abu Turab. Parents: Ali (AS) is the first child of the Hashimite family whose both parents were Hashimites. His father is Abu Talib ibn Abd al-Muttalib ibn Hashim, and his mother is Fatimah bint Asad ibn Hashim. The Hashimite family was famous and well-known in the tribe of Quraysh, and Quraysh among all Arabs, for their moral virtues. Chivalry, bravery, courage, and many other virtues were particular to Banu Hashim, and all these virtues were present in the blessed personality of Ali (AS) to the utmost degree. Birth: When the time of Ali's (AS) birth approached, Fatimah bint Asad came to the Kaaba, touched her body to its wall, and supplicated: "O Lord! I firmly believe in You, in Your Prophets, in the books revealed by You, and in the words of my forefather Abraham. O Lord! By the respect of that Being Who built this sacred place, and by the right of this child in my womb, make his birth easy for me." Not a moment had passed that the south-eastern wall of the Kaaba split open in front of the eyes of Abbas ibn Abd al-Muttalib and Yazid ibn Ta'f. Fatimah bint Asad entered the Kaaba, and the wall closed again. She remained a guest of Allah in the most sacred place on earth for three days, and on the 13th of Rajab, 30 years after the Year of the Elephant, the child was born. After the birth, when Fatimah bint Asad wanted to come out of the Kaaba, the wall split again, she came out and said: "I heard a message from the unseen that this child's name should be Ali (AS)." Childhood and upbringing: Ali (AS) remained with his parents until the age of three, and then came to the Prophet of Islam (PBUH). Because when he was three, a severe famine struck Mecca. Due to this, the Prophet of God (PBUH) (whose uncle Abu Talib faced extreme economic hardship) consulted with his other uncle Abbas, and they decided that each of them would take responsibility for one of Abu Talib's children. Thus, Abbas took charge of Ja'far, and the Prophet (PBUH) took charge of Ali (AS). Ali (AS) came completely under the care of the Prophet (PBUH), and his upbringing directly came under the supervision of Muhammad Mustafa (PBUH). He devoted himself with great love and attention to the scholarly and moral training of this younger brother. On one hand, it was Ali's (AS) own innate qualities, and on the other, the Prophet himself was the educator. During this period, Ali (AS) was ten years old and had received enough training that when the Prophet of Islam (PBUH) claimed prophethood, Ali confirmed him. He always remained with the Prophet (PBUH), even when the Prophet went outside the city to the mountains and deserts, he took Ali with him. The Prophethood of the Prophet (PBUH) and Ali (AS): Once, the Prophet (PBUH) announced: "O my family! Know that my brother and my executor and successor among you after me is Ali (AS)." Among the virtues of Ali (AS) is that he was the first person to believe in the Prophet (PBUH). In this regard, Ibn Abi al-Hadid writes: "The great scholars and the theologians of the Mu'tazilah school, who were assigned this responsibility, call it a discussion." After the revelation of divine inspiration and the selection for prophethood, after three years of secret invitation, finally revelation came from God, and the Prophet (PBUH) was commanded to publicly invite to Islam. During this period, the only one implementing the plans of the Prophet's divine invitation was Ali (AS). He confirmed the message and affirmed faith among the Prophet's own relatives. The second person was Lady Khadijah al-Kubra, who attained the honor of precedence in Islam after the Prophet (PBUH). When the Prophet claimed prophethood, every man in Mecca appeared as his enemy. The same people who until yesterday were praising his truthfulness and honesty now began calling him mad, a magician, and God knows what else. Thorns were laid in the path of the Prophet of God, he was stoned, and garbage was thrown on his head. In these times of trial, the only companion of the Prophet was Ali (AS), who never faltered in supporting his brother. He always remained very loyal and stood by the Prophet on every occasion. Even the time came when the opposing group decided with extreme severity to boycott the Prophet and all his family members. Conditions were so bad that lives were at stake. Abu Talib (AS) confined all his companions, including Muhammad Mustafa, in a fortified stronghold at the foot of a mountain. There, they had to live a life of imprisonment for nearly three years. Because during this time, every night there was the danger that the enemy might launch a night attack. Therefore, Abu Talib (AS) adopted the method that he would not let the Prophet sleep on one bed all night. Sometimes he would put Ja'far on the Prophet's bed and the Prophet on Ja'far's bed; sometimes the Prophet on Aqil's bed and Aqil on the Prophet's bed; and sometimes he would put the Prophet on Ali's bed and Ali on the Prophet's bed. The idea was that if the enemy found out the Prophet's bed and attacked, one of his sons would be killed, but not a hair of the Prophet would be harmed. In this way, Ali (AS) kept repeating the lesson of sacrifice and self-devotion practically from childhood.</p>
     `
-  }, 
+  },
 
   {
     id: 'aimah_ahle_bait_24',
@@ -6387,7 +6449,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
     `
   },
 
-    {
+  {
     id: 'aimah_ahle_bait_9',
     title: 'Imam Mahdi (AS)',
     date: '01-01-2015',
@@ -6549,7 +6611,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_18',
     title: 'The Rope of Allah',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Rope of Allah',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6567,7 +6629,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_17',
     title: 'Unity Week is a Cause of Mercy',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Unity Week is a Cause of Mercy',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6592,7 +6654,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_16',
     title: 'The Conquest of Mecca, When the Idols of the Kaaba Were Broken',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Conquest of Mecca, When the Idols of the Kaaba Were Broken',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6618,7 +6680,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_15',
     title: 'Kalimatullah and Prophet Jesus',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Kalimatullah and Prophet Jesus',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6640,7 +6702,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_14',
     title: 'The Event of Mubahala: A Guarantee of the Purity of the Prophet\'s Family',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Event of Mubahala: A Guarantee of the Purity of the Prophet\'s Family',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6661,7 +6723,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_13',
     title: 'The Blessings of Ramadan and the Quran & Ahlulbayt of the Prophet',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Blessings of Ramadan and the Quran & Ahlulbayt of the Prophet',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6697,7 +6759,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_12',
     title: 'Who Are the Aged Servants and Attendants of Hussain (AS)?',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Who Are the Aged Servants and Attendants of Hussain (AS)?',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6722,7 +6784,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_11',
     title: 'The Sanctity of a Believer is Greater than the Kaaba',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Sanctity of a Believer is Greater than the Kaaba',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6749,7 +6811,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_10',
     title: 'The Thought of Karbala and the Services of the Center of the Companions of the Cloak (AS)',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Thought of Karbala and the Services of the Center of the Companions of the Cloak (AS)',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6768,7 +6830,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_9',
     title: 'The World\'s Greatest Dining Spread',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The World\'s Greatest Dining Spread',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6792,7 +6854,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_8',
     title: 'The World\'s Largest Taziyah',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The World\'s Largest Taziyah',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6830,7 +6892,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_7',
     title: 'A Gift of a Historical Manuscript of the Holy Quran to the Supreme Leader',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'A Gift of a Historical Manuscript of the Holy Quran to the Supreme Leader',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6853,7 +6915,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_6',
     title: 'Are We Ourselves Not Also Blasphemous?',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Are We Ourselves Not Also Blasphemous?',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6873,7 +6935,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_5',
     title: 'A Muslim Can Never Be a Terrorist.',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'A Muslim Can Never Be a Terrorist.',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6901,7 +6963,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_4',
     title: 'The Extremes of Oppression in Burma and the Islamic World',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Extremes of Oppression in Burma and the Islamic World',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6914,7 +6976,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_3',
     title: 'Muhammad bin Salman\'s Visit to Pakistan',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Muhammad bin Salman\'s Visit to Pakistan',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6927,7 +6989,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_2',
     title: 'The Chair or the Position',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'The Chair or the Position',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6940,7 +7002,7 @@ The verse of "La tad'u ma'a Allahi ilahan akhar".</em></p>
   {
     id: 'old_islamic_writings_1',
     title: 'Who is the Cursed Salman Rushdie?',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'Who is the Cursed Salman Rushdie?',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',

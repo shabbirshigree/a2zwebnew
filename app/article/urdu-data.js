@@ -1,15 +1,63 @@
 export const urduData = [
 
 
-{
-  id: "227-U",
-  category: "column",
-  title: "برصغیر پر حسینیت کے انمٹ نقوش",
-  date: "08-19-2026",
-  // ہیڈر امیج (مشرق والی تصویر)
-  image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
-  excerpt: "برصغیر پاک و ہند کی سرزمین پر مکتبِ تشیع کے اثرات کی جڑیں اسلام کی پہلی صدی ہجری سے ہی جڑی ہوئی ہیں۔",
-  content: `
+  {
+    id: "228-U",
+    category: "column",
+    title: "نبی کریم ﷺ کی ذاتِ گرامی: امت مسلمہ کی وحدت کا مرکز",
+    date: "08-28-2026",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787914211/67a80788-7814-45d7-bd30-94ac51f7d255.png',
+    excerpt: "ھفتہ وھدت",
+    content: `
+    <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.2em; line-height: 2; text-align: justify; direction: rtl;">
+            
+      <h2 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">نبی کریم ﷺ کی ذاتِ گرامی: امت مسلمہ کی وحدت کا مرکز</h2>
+      <p style="text-align: center; color: #555;"><strong>تحقیق و تحریر: شبیر احمد شگری</strong></p>
+      <hr style="margin: 20px 0;">
+
+      <p>اللہ رب العزت نے اپنے حبیب حضرت محمد مصطفیٰ ﷺ کو تمام جہانوں کے لیے سراپا رحمت بنا کر بھیجا۔ یہ رحمت صرف انسانوں تک محدود نہیں، بلکہ کل کائنات، جملہ مخلوقات اور تمام عالمین کے لیے حضور اکرم ﷺ کی ذاتِ اقدس رحمتِ بے کراں ہے۔ ہم اہلِ ایمان اس عظیم سعادت پر نازاں ہیں کہ ہمیں اُس ہستی کی اُمت میں شامل کیا گیا، جس کے وجودِ مسعود کے بغیر کائنات کی تکمیل ممکن نہ تھی۔
+ان پُرنور ایام میں جہاں ہم ولادتِ رسولِ اکرم ﷺ کی خوشیاں مناتے ہیں، وہیں امام جعفر صادق علیہ السلام کی ولادتِ باسعادت بھی اسی ہفتے میں ہے۔ یہ مبارک ایام اس حقیقت کو مزید نمایاں کرتے ہیں کہ میلادِ رسول ﷺ کا پیغام دراصل محبت، اخوت اور وحدتِ امت کا پیغام ہے۔ اگر ہم حضور اکرم ﷺ اور اہلِ بیت اطہارؑ کی پاکیزہ سیرت کو حقیقی معنوں میں اپنے عمل کا حصہ بنا لیں، تو ہماری دنیا و آخرت دونوں سنور سکتی ہیں۔
+مگر صد افسوس! آج اُمتِ مسلمہ کی سب سے بڑی کمزوری یہ ہے کہ ہم نے قرآن مجید کو غلافوں میں لپیٹ کر محض تبرک سمجھ کر اونچے طاقوں میں رکھ دیا اس کو سمجھ کر اس پر عمل نہیں کیا اور نبی کریم ﷺ کی سیرت کو صرف جذباتی وابستگی تک محدود کر دیا۔ حالانکہ اصل محبت یہ ہے کہ قرآن کو پڑھا جائے، سمجھا جائے اور اسے طرزِ حیات بنایا جائے۔ نبی پاک ﷺ سے سچے تعلق کا تقاضا ہے کہ ان کے فرامین کو زندگی کے ہر گوشے میں نافذ کیا جائے۔ جھوٹ، ناانصافی، ترکِ نماز، دھوکہ دہی اور ظلم—یہ تمام برائیاں حضور ﷺ کی تعلیمات سے صریح انحراف ہیں اور یہی ہماری زبوں حالی اور اللہ کی خوشنودی سے محرومی کا سبب بنتی ہیں۔
+ان مبارک دنوں میں جب ہم درود و سلام کی محافل اور نعتیہ اجتماعات دیکھتے ہیں، تو دل مسرت سے لبریز ہو جاتا ہے۔ مسلمانوں کا ایک دوسرے کو مبارکباد دینا اور اخوت کا یہ منظر روح پرور ہوتا ہے۔ اگرچہ رسول اکرم ﷺ کی تاریخِ ولادت کے تعین میں اُمت کے درمیان جزوی اختلاف موجود ہے۔ کچھ برادران 12 ربیع الاول اور کچھ 17 ربیع الاول کے قائل ہیں— لیکن بانیِ انقلابِ اسلامی امام خمینیؒ نے اس علمی اختلاف کواتحاد میں بدلنے کا بے مثال کارنامہ انجام دیا۔ آپ نے تجویز دی کہ مسلمان اس بحث میں الجھنے کے بجائے 12 سے 17 ربیع الاول تک کے پورے ہفتے کو "ہفتۂ وحدت" کے طور پر منائیں۔ یہ شاندار اور عملی تجویز آج عالمِ اسلام کے لیے وہ نسخہ کیمیا ہے جو مسلمانوں کو اخوت کی ایک لڑی میں پرو سکتا ہے۔
+اُمتِ مسلمہ کو یاد رکھنا چاہیے کہ قرآنِ کریم کا فرمان واضح ہے:
+﴿وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا﴾ اور اللہ کی رسی کو سب مل کر مضبوطی سے تھامے رکھو اور تفرقہ مت ڈالو)۔
+اس الٰہی حکم کی روح یہی ہے کہ مسلمان انفرادیت کے ساتھ ساتھ اجتماعی طور پر بھی اللہ کی رسی کو تھامیں۔ یہی اجتماعی قوت اُمت کا اصل اور ناقابلِ تسخیر سرمایہ ہے۔
+اگر مسلمان واقعی قرآن، سیرتِ نبوی ﷺ اور شریعتِ اسلامی کو اپنا محور و مرکز بنا لیں، تو دنیا کی کوئی باطل طاقت انہیں زیر نہیں کر سکتی۔ آج دنیا بھر میں، بالخصوص اسلامی ممالک پر جو مظالم ڈھائے جا رہے ہیں، وہ دراصل ہماری ایمانی کمزوری اور باہمی انتشار ہی کا نتیجہ ہیں۔ دشمن نے ہمیں فرقوں، قومیتوں اور لسانی تعصبات کی قینچی سے کاٹ کر کمزور کر دیا ہے۔ کہیں جنگیں مسلط ہیں تو کہیں سازشوں کے جال بچھے ہیں۔ اس بکھری ہوئی اور دگرگوں حالت سے نکلنے کا واحد راستہ یہی ہے کہ ہم اللہ کی رسی کو مضبوطی سے تھام لیں اور اُمتِ مسلمہ کو وحدت کی لڑی میں پرو دیں۔
+اللہ رب العزت نے قرآن مجید میں حتمی وعدہ فرمایا ہے:
+﴿وَلَيَنصُرَنَّ اللَّهُ مَنْ يَنْصُرُهُ﴾ (اللہ ضرور اُس کی مدد کرتا ہے جو اللہ کے دین کی مدد کرتا ہے)۔
+اگر آج ہم مادی وسائل کے باوجود کمزور اور بے بس ہیں، تو یہ ہماری اپنی کوتاہیوں اور غفلتوں کا ثمر ہے۔ ورنہ اللہ تعالیٰ کی کریم ذات نے مسلمانوں کو نعمتوں سے مالامال کررکھا ہے۔ کامیابی اسی وقت قدم چومے گی جب ہم خلوصِ نیت سے اللہ اور اس کے رسول ﷺ کی تعلیمات پر عمل پیرا ہوں گے اور توکل و تقویٰ کو اپنا زادِ راہ بنائیں گے۔
+موجودہ عالمی حالات میں "وحدتِ اسلامی" کی اہمیت کئی گنا بڑھ چکی ہے۔ اسلام دشمن قوتیں اپنے تمام تر وسائل کے ساتھ اسلام کے خلاف برسرِ پیکار ہیں اور کھلے عام یہ اعلان کر رہی ہیں کہ 'اکیسویں صدی میں عالمِ اسلام امریکی خارجہ پالیسی کی اہم ترین آماجگاہ ہے' اور 'آئندہ کی اصل کشمکش اسلامی و مغربی ثقافتوں کا ٹکراؤ ہے'۔ دشمن کی نگاہ میں شیعہ یا سنی کی کوئی تفریق نہیں، ان کا ہدف صرف اور صرف "مسلمان" ہے۔ تو پھر کیوں نہ ہم خود بھی متحد ہو کر اپنے سچے مسلمان ہونے کا ثبوت دیں؟
+مسلمانوں کی صفوں میں تفرقہ انگیز مسائل کو ہوا دینا خود کو شعوری طور پر کمزور کرنے کے مترادف ہے۔ شیعہ و سنی اتحاد کا مطلب ہرگز یہ نہیں کہ کوئی اپنے بنیادی عقائد یا مسلمہ اصولوں سے دستبردار ہو جائے، بلکہ اس کا حقیقی مفہوم یہ ہے کہ فروعی اختلافات کے باوجود اپنے مفادات کے لئےعالمی اور اُمت کے مشترکہ مسائل میں باہمی تعاون اور یکساں رویہ اختیار کیا جائے۔ اختلافات میں الجھنے کا نتیجہ صرف وسائل کے ضیاع اور دشمن کو فائدہ پہنچانے کی صورت میں نکلتا ہے۔
+سورۃ الانبیاء میں ارشادِ باری تعالیٰ ہے:
+﴿إِنَّ هَذِهِ أُمَّتُكُمْ أُمَّةً وَاحِدَةً وَأَنَا رَبُّكُمْ فَاعْبُدُونِ﴾ بلاشبہ تمہاری یہ امت ایک ہی امت ہے، اور میں تمہارا رب ہوں، پس میری عبادت کرو)۔
+اسی طرح امام جعفر صادق علیہ السلام کا فرمان ہے: "مسلمان، مسلمان کا بھائی ہے"۔ دینِ اسلام تو ہمیں دیگر الہامی مذاہب کے پیروکاروں کے ساتھ بھی عدل، رواداری اور مشترکات پر جمع ہونے کا درس دیتا ہے:
+﴿قُلْ يَا أَهْلَ الْكِتَابِ تَعَالَوْا إِلَىٰ كَلِمَةٍ سَوَاءٍ بَيْنَنَا وَبَيْنَكُمْ...﴾ (کہو اے اہل کتاب! آؤ ایک ایسی بات کی طرف جو ہمارے اور تمہارے درمیان یکساں ہے کہ اللہ کے سوا کسی کی عبادت نہ کریں اور اس کے ساتھ کسی کو شریک نہ کریں...)۔
+آئیے! اس میلاد النبی ﷺ کے پرمسرت موقع پر یہ عہد کریں کہ ہم قرآن و سیرت کو اپنی اصل طاقت بنائیں گے اور وحدت کی رسی کو مضبوطی سے تھامیں گے، کیونکہ ہماری نجات کا واحد راستہ یہی ہے۔
+دعا ہے کہ اللہ تعالیٰ ہمیں اس ماہِ مبارک کے طفیل قرآن و سنت پر عمل پیرا ہونے، حضور نبی کریم ﷺ سے حقیقی اور عملی محبت اختیار کرنے اور اُمتِ مسلمہ کو وحدت کی ڈور میں باندھنے کی توفیق عطا فرمائے۔ آمین یا رب العالمین۔ 
+
+      </p>
+<br>
+
+            <div style="text-align:center; margin-bottom:30px; background:#f9f9f9; padding:15px; border-radius:10px; border:1px solid #ddd;">
+                
+                <img src="https://res.cloudinary.com/dlafcjt6z/image/upload/v1787914322/Daily_Mashriq_2026-08-28_at_1.21.25_AM_uzjdxi.jpg" 
+                     style="width: 250px !important; max-width: 100%; height: auto; display: block; margin: 0 auto 15px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border:1px solid #ccc;" 
+                     alt="Column Page 1">
+                
+                <br>
+    </div>
+  `
+  },
+  {
+    id: "227-U",
+    category: "column",
+    title: "برصغیر پر حسینیت کے انمٹ نقوش",
+    date: "08-19-2026",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1787377122/zamana_news_2026-08-20_at_9.52.13_AM_l6lj6d.jpg',
+    excerpt: "برصغیر پاک و ہند کی سرزمین پر مکتبِ تشیع کے اثرات کی جڑیں اسلام کی پہلی صدی ہجری سے ہی جڑی ہوئی ہیں۔",
+    content: `
     <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.2em; line-height: 2; text-align: justify; direction: rtl;">
             
       <h2 style="text-align: center; color: #2c3e50; margin-bottom: 5px;">برصغیر پر حسینیت کے انمٹ نقوش</h2>
@@ -135,18 +183,18 @@ export const urduData = [
                 <br>
     </div>
   `
-},
+  },
 
- {
-        id: "226-U",
-        category: ["other_personalities", "column"],
-        title: " نصرت فاطمہ نقوی خدمتِ خلق میں جہد مسلسل اوردرد دل رکھنے والی عظیم خاتون",
-        date: "08-10-2026",
+  {
+    id: "226-U",
+    category: ["other_personalities", "column"],
+    title: " نصرت فاطمہ نقوی خدمتِ خلق میں جہد مسلسل اوردرد دل رکھنے والی عظیم خاتون",
+    date: "08-10-2026",
 
-        // ہیڈر امیج (مشرق والی تصویر)
-image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
-        excerpt: " نصرت فاطمہ نقوی خدمتِ خلق میں جہد مسلسل اوردرد دل رکھنے والی عظیم خاتون",
-        content: `
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
+    excerpt: " نصرت فاطمہ نقوی خدمتِ خلق میں جہد مسلسل اوردرد دل رکھنے والی عظیم خاتون",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
 <p><strong> نصرت فاطمہ نقوی خدمتِ خلق میں جہد مسلسل اوردرد دل رکھنے والی عظیم خاتون</strong></p>
@@ -183,13 +231,13 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fp
                 </ul>
             </div>
     `
-    },
+  },
 
 
-{
+  {
     id: 'pakistan_columns_1',
     title: 'پاکستان: دنیا کا ایک اہم اور طاقتور ملک       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'پاکستان: دنیا کا ایک اہم اور طاقتور ملک       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -236,13 +284,13 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fp
   },
 
 
-{
+  {
     id: 'pakistan_columns_2',
     title: 'حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       ',
-    date: '02 sep 2022', 
+    date: '02 sep 2022',
     category: ['pakistan_columns'],
     excerpt: 'حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       ',
-image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1_%D9%85%DB%8C%DA%BA_%DA%A9%D8%B1%D9%BE%D8%B4%D9%86_%D9%85%D8%B4%D8%B1%D9%82_ttl5sp.jpg',    content: `
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1_%D9%85%DB%8C%DA%BA_%DA%A9%D8%B1%D9%BE%D8%B4%D9%86_%D9%85%D8%B4%D8%B1%D9%82_ttl5sp.jpg', content: `
       <p><strong>حضرت رقیہ بنت علی علیہ السلام کے مزار کی تعمیران کے شایان شان ہونی چاہئے۔       <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
 حضرت رقیہ بنت علی علیہ السلام کا مزار اور وہ بھی لاہور میں یہ سن کردل خوشی سے دھڑک اٹھتا ہے اور نظریں احترا ماً جھک جاتی ہیں۔اس میں کوئی شک نہیں کہ لاکھوں کی تعداد میں سنی شیعہ افراد اس مقدس دربار پر حاضری دیتے ہیں یہاں کی نسبت سے مرادیں مانگتے ہیں اور جھولیاں بھر بھر کر لے جاتے ہیں۔
@@ -284,13 +332,13 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
  `
   },
 
-{
+  {
     id: 'pakistan_columns_3',
     title: 'گلگت بلتستان کا انتخابی معرکہ       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'گلگت بلتستان کا انتخابی معرکہ       ',
-        image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785224831/54a233c8-6736-479f-a715-6ab4e8d401b0.png',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785224831/54a233c8-6736-479f-a715-6ab4e8d401b0.png',
     content: `
       <p><strong>گلگت بلتستان کا انتخابی معرکہ       <strong><p>
 <p><strong>فرسودہ روایات کا خاتمہ اور نئی قیادت کا ابھرتا سورج       <strong><p>
@@ -319,10 +367,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'pakistan_columns_4',
     title: 'برالدو الیکشن۔وادی کے ٹو  کے باسیوں کو جاگنا ہوگا۔       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'برالدو الیکشن۔وادی کے ٹو  کے باسیوں کو جاگنا ہوگا۔       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -334,10 +382,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
   },
 
 
-{
+  {
     id: 'pakistan_columns_5',
     title: 'برالدو کے مسائل       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'برالدو کے مسائل       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -359,10 +407,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
   },
 
 
-{
+  {
     id: 'pakistan_columns_6',
     title: 'دربار بی بی پاک دامن میں اربعین کے انتظامات نہ ہونے پرزائرین کو مشکلات ۔       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'دربار بی بی پاک دامن میں اربعین کے انتظامات نہ ہونے پرزائرین کو مشکلات ۔       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225079/daily_mashriq_column_13_aug_2022_3_1_efsh65.jpg',
@@ -384,10 +432,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'pakistan_columns_7',
     title: 'جنتِ ارضی اسکردو و بلتستان       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'جنتِ ارضی اسکردو و بلتستان       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225787/22866603-c55c-476c-8287-b34844455bf1.png',
@@ -421,13 +469,13 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
   },
 
 
-{
+  {
     id: 'pakistan_columns_8',
     title: 'علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       ',
-        image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225445/5fef5b10-831a-4d6f-a1db-0bda610c76d5.png',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785225445/5fef5b10-831a-4d6f-a1db-0bda610c76d5.png',
 
     content: `
       <p><strong>علاقہ برالدو جہاں بنیادی سہولیات ہی موجود نہیں       <strong><p>
@@ -445,10 +493,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'pakistan_columns_9',
     title: 'علاقہ برالدو کے مسائل       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'علاقہ برالدو کے مسائل       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -471,10 +519,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'pakistan_columns_10',
     title: 'کے ٹو کی وادی، سیاحت اور بقا کی جنگ       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'کے ٹو کی وادی، سیاحت اور بقا کی جنگ       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -505,11 +553,11 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
  `
   },
 
-	
-{
+
+  {
     id: 'pakistan_columns_11',
     title: 'مشکلات سے دوچار سیاحت کا اہم خطہ       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'مشکلات سے دوچار سیاحت کا اہم خطہ       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -524,10 +572,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
   },
 
 
-{
+  {
     id: 'pakistan_columns_12',
     title: 'وادی کے ٹو: فطرت کے شاہکار . غفلت کا شکار؟       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'وادی کے ٹو: فطرت کے شاہکار . غفلت کا شکار؟       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -555,10 +603,10 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'pakistan_columns_13',
     title: 'کیا آپ جانتے ہیں؟       ',
-    date: '2016', 
+    date: '2016',
     category: ['pakistan_columns'],
     excerpt: 'کیا آپ جانتے ہیں؟       ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -603,13 +651,13 @@ image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785223049/%D8%AA%D8%
 
 
 
-{
+  {
     id: 'culture_columns_1',
     title: 'چایخانہ رضوی، حرمِ امام رضا علیہ السلام    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'چایخانہ رضوی، حرمِ امام رضا علیہ السلام    ',
-image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%86%D9%82%D8%B4%D9%87-%D8%AD%D8%B1%D9%85-%D8%A7%D9%85%D8%A7%D9%85-%D8%B1%D8%B6%D8%A7-%D9%88-%D8%B5%D8%AD%D9%86-%D9%87%D8%A7-1632899068_fhm8rv.jpg",    content: `
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%86%D9%82%D8%B4%D9%87-%D8%AD%D8%B1%D9%85-%D8%A7%D9%85%D8%A7%D9%85-%D8%B1%D8%B6%D8%A7-%D9%88-%D8%B5%D8%AD%D9%86-%D9%87%D8%A7-1632899068_fhm8rv.jpg", content: `
       <p><strong>چایخانہ رضوی، حرمِ امام رضا علیہ السلام    <strong><p>
 <p><strong>چایخانہ رضوی، حرمِ امام رضا (ع) میں عقیدت، شفا اور محبت کی ایک منفرد ضیافت     <strong><p>
  <p><strong>تحریر: شبیر احمد شکری<strong><p>
@@ -639,13 +687,13 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 یہ اشعار اس حقیقت کے غماز ہیں کہ اس دنیا میں ہمارے پاس امام رضا علیہ السلام کی محبت اور لطف و کرم کے سوا کچھ نہیں، اور آخرت کے کٹھن مراحل میں بھی ہمیں انہی کی شفاعت اور دستگیری کی آس ہے۔
   `
   },
-{
+  {
     id: 'culture_columns_2',
     title: 'انقلاب اسلامی ایران کے بعد کاایرانی سینما     ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'انقلاب اسلامی ایران کے بعد کاایرانی سینما     ',
-            image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226941/4572d8b7-9fae-4296-b94c-9e936963aa6f.png',
+    image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226941/4572d8b7-9fae-4296-b94c-9e936963aa6f.png',
 
     content: `
       <p><strong>انقلاب اسلامی ایران کے بعد کاایرانی سینما     <strong><p>
@@ -676,10 +724,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_3',
     title: 'ایرانی فلمیں ہالی وڈ کی منڈی میں    ',
-    date: '2011', 
+    date: '2011',
     category: ['culture_columns'],
     excerpt: 'ایرانی فلمیں ہالی وڈ کی منڈی میں    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -712,10 +760,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_4',
     title: 'ایرانی سینما کی کامیابی کی کہانی    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'ایرانی سینما کی کامیابی کی کہانی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -756,10 +804,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'culture_columns_5',
     title: 'نوروز عالم افروز     ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'نوروز عالم افروز     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -783,10 +831,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_6',
     title: 'اساتذہ کی عزت نہ کرنے سے پاکستانی معاشرہ روبہ زوال ہے    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'اساتذہ کی عزت نہ کرنے سے پاکستانی معاشرہ روبہ زوال ہے    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -813,10 +861,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'culture_columns_7',
     title: 'ایران کے تاریخی و ثقافتی عجائب گھر      ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: '  ایران کے تاریخی و ثقافتی عجائب گھر    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -848,10 +896,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_8',
     title: 'ایران کے میوزیم(حصہ اول)    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'ایران کے میوزیم(حصہ اول)    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -880,10 +928,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'culture_columns_9',
     title: 'ایران کے میوزیم(حصہ دوم)    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'ایران کے میوزیم(حصہ دوم)    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -902,10 +950,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_10',
     title: 'ایران کے میوزیم (تیسری قسط)    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'ایران کے میوزیم (تیسری قسط)    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -922,10 +970,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'culture_columns_11',
     title: 'دنیا بھر میں ایرانی فلموں کے شائقین کی تعداد میں اضافہ    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'دنیا بھر میں ایرانی فلموں کے شائقین کی تعداد میں اضافہ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -950,10 +998,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'culture_columns_12',
     title: 'فیفا صدر کے بیان کی دھوم     ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'فیفا صدر کے بیان کی دھوم     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -969,10 +1017,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_13',
     title: 'قدیمی تہوار نوروز    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'قدیمی تہوار نوروز    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1001,10 +1049,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'culture_columns_14',
     title: 'ڈیجیٹل استعمار، آزادیِ اظہار کا سراب اور سوشل میڈیا کی منافقت    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'ڈیجیٹل استعمار، آزادیِ اظہار کا سراب اور سوشل میڈیا کی منافقت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1033,10 +1081,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'culture_columns_15',
     title: 'سال نو    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'سال نو    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1061,10 +1109,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'culture_columns_16',
     title: 'خانہ فرہنگ جمہوری اسلامی ایران، لاہور    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'خانہ فرہنگ جمہوری اسلامی ایران، لاہور    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1081,10 +1129,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'culture_columns_17',
     title: 'فارسی زبان اور شہر لاہور    ',
-    date: '2016', 
+    date: '2016',
     category: ['culture_columns'],
     excerpt: 'فارسی زبان اور شہر لاہور    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1125,11 +1173,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- 
-{
+
+  {
     id: 'other_personalities_1',
     title: 'لسان الغیب حافظ شمس الدین شیرازی    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'لسان الغیب حافظ شمس الدین شیرازی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1164,10 +1212,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_2',
     title: ' شیخ سعدی شیرازیؒ    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: ' شیخ سعدی شیرازیؒ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1190,10 +1238,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_3',
     title: 'میر سید علی ہمدانیؒ کانفرنس    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'میر سید علی ہمدانیؒ کانفرنس    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1228,10 +1276,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_4',
     title: 'شیراز کی مٹی کا فیض اور سعدی ؒ     ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'شیراز کی مٹی کا فیض اور سعدی ؒ     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1256,10 +1304,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_5',
     title: 'ڈاکٹر علی لاریجانی شہید    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'ڈاکٹر علی لاریجانی شہید    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1288,10 +1336,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_6',
     title: 'سردار قاسم سلیمانی شہید، ایک عہد ساز کمانڈر    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'سردار قاسم سلیمانی شہید، ایک عہد ساز کمانڈر    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1333,10 +1381,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_7',
     title: 'سید ابراھیم رئیسی کی زندگی    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'سید ابراھیم رئیسی کی زندگی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1373,10 +1421,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_8',
     title: 'عاشق امام حسینؑ محمود فرشچیان    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'عاشق امام حسینؑ محمود فرشچیان    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1415,10 +1463,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_9',
     title: 'قدس کمانڈرسردار قاسم سلیمانی شہید     ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'قدس کمانڈرسردار قاسم سلیمانی شہید     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1439,10 +1487,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_10',
     title: 'آغا سید علی الحسینی سبزواریؒ    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'آغا سید علی الحسینی سبزواریؒ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1467,10 +1515,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_11',
     title: 'آغاسید علی الموسوی مرحوم  ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'آغاسید علی الموسوی مرحوم  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1495,7 +1543,6 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 ہماری دعا ہے کہ جس طرح انھوں نے مذہب و ملت کے لئے اپنی عظیم خدمات پیش کیں رب کریم اسکے عوض انھیں اگلی دنیا میں بھی عظیم مقام و مرتبہ عنایت فرمائے۔ آمین۔ ان کی وفات کے بعد مسجد کشمیریاں کی امامت و خطابت کے فرائض ان کے بیٹے آغاحیدرعلی موسوی بہ احسن خوبی انجام دیتے رہے۔ اور ان کے بعد ان کے بیٹے سید جواد موسوی یہ فرائض انجام دے رہے ہیں۔ اس سلسلے میں موسوی خاندان نے اہالیان موچی دروازہ لاہور کو مایوس نہیں کیا ہے۔مرحوم آغا سید علی موسوی نے ساری زندگی نہ صرف خود دین کی خدمت کی بلکہ اپنے بیٹوں اور اولاد میں  بھی علما چھوڑے ہیں۔ جن میں آغا سیدمظاہرموسوی، مرحوم آغا سید حیدرموسوی، آغا سید رضی موسوی، آغا سید رضا موسوی،آغا سیدعباس موسوی اور آغا حیدر موسوی کے بیٹے آغا جواد موسوی اپنے بزرگوں کے نقش قدم پر چلتے ہوئے مذہب و ملت کی خدمات انجام دے رہے ہیں۔
   `
   },
- 
 
 
 
@@ -1503,10 +1550,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+
+  {
     id: 'other_personalities_12',
     title: 'آغا سید حیدر موسوی مرحوم    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'آغا سید حیدر موسوی مرحوم    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1529,10 +1577,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'other_personalities_13',
     title: 'جی ایم سکندرمرحوم    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'جی ایم سکندرمرحوم    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1567,10 +1615,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_14',
     title: 'جرمِ سیاست کا عہد تمام ہوا    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'جرمِ سیاست کا عہد تمام ہوا    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1607,10 +1655,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_15',
     title: 'محسن شمال۔آغا سید احمد علی شاہ    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'محسن شمال۔آغا سید احمد علی شاہ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1628,10 +1676,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'other_personalities_16',
     title: 'غلام حسین سلیم مرحوم     ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'غلام حسین سلیم مرحوم     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1660,10 +1708,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_17',
     title: 'آغا محمد آصف قزلباش مرحوم    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'آغا محمد آصف قزلباش مرحوم    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1709,10 +1757,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_18',
     title: 'داعی وحدت اسلامی ظہیر الدین بابرکو خراج عقیدت    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'داعی وحدت اسلامی ظہیر الدین بابرکو خراج عقیدت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1788,10 +1836,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_19',
     title: 'سہیل مجتبی کی جدائی کا زخم، جو کبھی نہیں بھرے گا    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'سہیل مجتبی کی جدائی کا زخم، جو کبھی نہیں بھرے گا    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1856,10 +1904,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'other_personalities_20',
     title: 'غازی علم الدین شہید    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'غازی علم الدین شہید    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1883,10 +1931,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'other_personalities_21',
     title: ' آغا سید علی الموسوی مرحوم    ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: ' آغا سید علی الموسوی مرحوم    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1916,10 +1964,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'other_personalities_22',
     title: 'ڈاکٹر امجدحسین چشتی مرحوم     ',
-    date: '2016', 
+    date: '2016',
     category: ['other_personalities'],
     excerpt: 'ڈاکٹر امجدحسین چشتی مرحوم     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1943,13 +1991,13 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 اللہ تعالیٰ ان کی تمام دینی خدمات کو شرفِ قبولیت عطا فرمائے، ان کی لغزشوں کو معاف کرے، انہیں جنت الفردوس میں اعلیٰ مقام اور شفاعتِ کبریٰ نصیب فرمائے، اور پسماندگان کو صبرِ جمیل عطا فرمائے۔ آمین یا رب العالمین!
   `
   },
-  
 
 
-{
+
+  {
     id: 'rahbar_moazzam_1',
     title: 'الوداع اے رہبر اسلام    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'الوداع اے رہبر اسلام    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1970,10 +2018,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'rahbar_moazzam_2',
     title: 'شہیدِ امت کی تسبیحِ وحدت    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'شہیدِ امت کی تسبیحِ وحدت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -1992,10 +2040,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
  `
   },
 
-{
+  {
     id: 'rahbar_moazzam_3',
     title: 'شہید خامنہ ایؒ مرکز وحدت کا عملی نمونہ    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'شہید خامنہ ایؒ مرکز وحدت کا عملی نمونہ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2013,10 +2061,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'rahbar_moazzam_4',
     title: 'اسلام کا عظیم لیڈر، آیت اللہ العظمی علی خامنہ ایؒ شہید    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'اسلام کا عظیم لیڈر، آیت اللہ العظمی علی خامنہ ایؒ شہید    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2036,10 +2084,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'rahbar_moazzam_5',
     title: 'آیت اللہ العظمیٰ سید علی خامنہ ای ؒکی حضرت اقبالؒ سے عقیدت    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'آیت اللہ العظمیٰ سید علی خامنہ ای ؒکی حضرت اقبالؒ سے عقیدت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2106,10 +2154,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
  `
   },
 
-{
+  {
     id: 'rahbar_moazzam_6',
     title: 'فکرانقلابِ اسلامی آیت اللہ العظمیٰ سید علی خامنہ ایؒ    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'فکرانقلابِ اسلامی آیت اللہ العظمیٰ سید علی خامنہ ایؒ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2141,10 +2189,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'rahbar_moazzam_7',
     title: 'شہید رہبر ؒ کے بارے میں ان کے رئیس دفتر حجت السلام والمسلمین محمدی  گلپایگانی کے انٹرویو کا ترجمہ    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'شہید رہبر ؒ کے بارے میں ان کے رئیس دفتر حجت السلام والمسلمین محمدی  گلپایگانی کے انٹرویو کا ترجمہ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2178,10 +2226,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'rahbar_moazzam_8',
     title: 'ہالینڈ میں مقم ایک طالب علم کا حضرت خامنہ ای کے نام کھلا خط    ',
-    date: '2016', 
+    date: '2016',
     category: ['rahbar_moazzam'],
     excerpt: 'ہالینڈ میں مقم ایک طالب علم کا حضرت خامنہ ای کے نام کھلا خط    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2237,10 +2285,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'imam_khomeini_1',
     title: 'امام خمینی ؒ کی عرفانی شخصیت    ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'امام خمینی ؒ کی عرفانی شخصیت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2274,10 +2322,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'imam_khomeini_2',
     title: 'رمضان المبارک میں امام خمینی ؒ کے معنوی، عبادی حالات    ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'رمضان المبارک میں امام خمینی ؒ کے معنوی، عبادی حالات    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2321,10 +2369,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'imam_khomeini_3',
     title: 'سید روح اللہ الموسوی خمینی رحمۃ اللہ علیہ کے حالات زندگی    ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'سید روح اللہ الموسوی خمینی رحمۃ اللہ علیہ کے حالات زندگی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2395,10 +2443,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'imam_khomeini_4',
     title: 'امام خمینی(رہ)کےآثار اورتصانیف     ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'امام خمینی(رہ)کےآثار اورتصانیف     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2570,10 +2618,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'imam_khomeini_5',
     title: 'امام خمینی ؒ کی جدوجہد سے بھرپور زندگی    ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'امام خمینی ؒ کی جدوجہد سے بھرپور زندگی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2616,10 +2664,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'imam_khomeini_6',
     title: 'سید روح اللہ الموسوی خمینیؒ ایک تاریخ ساز شخصیت    ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'سید روح اللہ الموسوی خمینیؒ ایک تاریخ ساز شخصیت    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2646,10 +2694,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'imam_khomeini_7',
     title: 'چھوٹے سے گھر سے دلوں پر حکومت تک   ',
-    date: '2016', 
+    date: '2016',
     category: ['imam_khomeini'],
     excerpt: 'چھوٹے سے گھر سے دلوں پر حکومت تک    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2677,10 +2725,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_1ٍ',
     title: 'اسلامی ایران کی خطے میں اہمیت اور بیداریِ امت کا سفر     ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'اسلامی ایران کی خطے میں اہمیت اور بیداریِ امت کا سفر     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2715,10 +2763,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_2ٍ',
     title: 'ایران پر عائد پابندیوں کا خاتمہ    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'ایران پر عائد پابندیوں کا خاتمہ    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2736,10 +2784,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'iran_others_3ٍ',
     title: '8 شوال یوم انہدام جنت البقیع     ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: '8 شوال یوم انہدام جنت البقیع',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2762,10 +2810,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_4ٍ',
     title: 'مسجد شیعہ یا سنی کی نہیں اللہ کا گھر ہوتی ہے۔     ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'مسجد شیعہ یا سنی کی نہیں اللہ کا گھر ہوتی ہے۔     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2804,10 +2852,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_5ٍ',
     title: 'اسلامی جمہوریہ ایران میں عزاداری ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'اسلامی جمہوریہ ایران میں عزاداری     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2849,10 +2897,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_6ٍ',
     title: 'ایران میں کرونا کی مشکلات اور انسانی حقوق     ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'ایران میں کرونا کی مشکلات اور انسانی حقوق     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2883,10 +2931,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_others_7ٍ',
     title: 'کرونا وائرس اور ایران کی حکمت عملی    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_others'],
     excerpt: 'کرونا وائرس اور ایران کی حکمت عملی    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2919,10 +2967,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_war_conditions_1ٍ',
     title: 'حسینیت کی فتح    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'حسینیت کی فتح    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2942,10 +2990,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_war_conditions_2ٍ',
     title: 'ایران کی فتح، امت مسلمہ کی وحدت کا آغاز    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'ایران کی فتح، امت مسلمہ کی وحدت کا آغاز    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -2976,10 +3024,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'iran_war_conditions_3ٍ',
     title: 'ایرانی جنگ کے شطرنجی مہرے    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'ایرانی جنگ کے شطرنجی مہرے    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3017,10 +3065,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_war_conditions_4ٍ',
     title: 'گریٹر اسرائیل یا گریٹر ایران؟    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'گریٹر اسرائیل یا گریٹر ایران؟    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3047,10 +3095,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_war_conditions_5ٍ',
     title: 'نگینہِ ہرمز    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'نگینہِ ہرمز    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3073,10 +3121,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'iran_war_conditions_6ٍ',
     title: 'ثقافتی ورثے بھی جرائم کی زد میں    ',
-    date: '2016', 
+    date: '2016',
     category: ['iran_war_conditions'],
     excerpt: 'ثقافتی ورثے بھی جرائم کی زد میں    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3101,10 +3149,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_trade_1ٍ',
     title: 'پاک ایران تجارتی نمائش    ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_trade'],
     excerpt: 'پاک ایران تجارتی نمائش    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3125,7 +3173,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'pak_iran_trade_2ٍ',
     title: 'پاکستان اور ایران تعلقات میں فروغ کے لئے سرگرم عمل۔    ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_trade'],
     excerpt: 'پاکستان اور ایران تعلقات میں فروغ کے لئے سرگرم عمل۔    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3148,10 +3196,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_trade_3ٍ',
     title: 'چین کی ایران میں سرمایہ کاری پاکستان اور خطے میں تبدیلی کا سبب :    ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_trade'],
     excerpt: 'چین کی ایران میں سرمایہ کاری پاکستان اور خطے میں تبدیلی کا سبب :    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3168,10 +3216,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'pak_iran_trade_4ٍ',
     title: 'روزنامہ بیتاب کے لئے خصوصی انٹرویو    ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_trade'],
     excerpt: 'روزنامہ بیتاب کے لئے خصوصی انٹرویو    ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3197,11 +3245,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-  
+
   {
     id: 'pak_iran_general_1ٍ',
     title: 'قائدِ اعظم ؒ اور ایران: تاریخی روابط کا ایک تجدیدی جائزہ ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'قائدِ اعظم ؒ اور ایران: تاریخی روابط کا ایک تجدیدی جائزہ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3216,13 +3264,13 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 مستقبل کا لائحہ عمل آج جب ہم پچیس دسمبر کو یومِ قائد ؒ مناتے ہیں، تو ہمیں یہ غور کرنا ہوگا کہ بانیِ پاکستان کا یہ خواب کس طرح تعبیر پا سکتا ہے۔ آج پاکستان اور ایران جس اہم تاریخی موڑ پر کھڑے ہیں، وہاں قائدِ اعظم ؒ کے فرمودات ہمارے لیے مشعلِ راہ ہیں۔ دونوں ممالک کے درمیان تاریخی، تہذیبی اور ثقافتی روابط اس ملک کے قیام سے بھی بہت پہلے سے موجود ہیں۔ قائدِ اعظم ؒ نے جس گرمجوشی اور خلوص کے ساتھ ایران کے ساتھ سفارتی تعلقات کا آغاز کیا تھا، آج اسی جذبے کے ساتھ ان رشتوں کو مضبوط کرنے کی ضرورت ہے۔
 قائدِ اعظم ؒ کا یہ وژن آج بھی ہمارے لیے ایک بہترین خراجِ تحسین پیش کرنے کا موقع ہے۔ ایرانی صحافتی وفد کے ساتھ ملاقات ہو یا قائدِ اعظم ؒ کا وہ تاریخی پیغام، یہ سب ایسے سنگِ میل ہیں جو بتاتے ہیں کہ پاکستان اور ایران کی دوستی ایک دائمی حقیقت ہے۔ ہمیں چاہیے کہ قائدِ اعظم ؒ کی ان خواہشات کا احترام کرتے ہوئے، دونوں برادر ممالک کے باہمی تعلقات میں مزید استحکام لانے کے لیے عملی اقدامات کو تیز تر کریں۔
   `
-  },  
+  },
 
 
-{
+  {
     id: 'pak_iran_general_2ٍ',
     title: 'پاکستان و ایران کے تاریخی روابط ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'پاکستان و ایران کے تاریخی روابط ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3238,10 +3286,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_3ٍ',
     title: 'توانائی کے بحران کا فوری حل برادر ملک ایران سے ممکن ہے۔ ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'توانائی کے بحران کا فوری حل برادر ملک ایران سے ممکن ہے۔ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3275,10 +3323,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_4ٍ',
     title: 'پاک ایران گیس معاہدے  پر  اہم پیشرفت ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'پاک ایران گیس معاہدے  پر  اہم پیشرفت ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3304,11 +3352,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-  
-{
+
+  {
     id: 'pak_iran_general_5ٍ',
     title: 'ایران میں سیلاب کی تباہ کاریاں اور بحیثیت مسلمان ہمارے فرائض ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'ایران میں سیلاب کی تباہ کاریاں اور بحیثیت مسلمان ہمارے فرائض ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3337,10 +3385,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'pak_iran_general_6ٍ',
     title: 'ایرانی معاملات اور  فرھنگی امور کے بارے میں خصوصی انٹرویو ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'ایرانی معاملات اور  فرھنگی امور کے بارے میں خصوصی انٹرویو ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3391,10 +3439,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_7ٍ',
     title: 'پاک ایران تعلقات کے حوالے سے اخبار کے لئے انٹرویو ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'پاک ایران تعلقات کے حوالے سے اخبار کے لئے انٹرویو ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3428,10 +3476,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_8ٍ',
     title: 'دنیا کی نظروں میں کھٹکتا ہوا پاک ایران  گیس منصوبہ ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'دنیا کی نظروں میں کھٹکتا ہوا پاک ایران  گیس منصوبہ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3462,10 +3510,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'pak_iran_general_9ٍ',
     title: 'پاکستان اور ایران تعلقات کے اہم موڑ پر  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'پاکستان اور ایران تعلقات کے اہم موڑ پر  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3496,10 +3544,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_10ٍ',
     title: 'پاکستان اور ایران کے باہمی تعلقات     ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'پاکستان اور ایران کے باہمی تعلقات     ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3515,10 +3563,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_11ٍ',
     title: 'توانائی بحران کا فوری حل ایران ہے  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'توانائی بحران کا فوری حل ایران ہے  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3548,10 +3596,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_general_12ٍ',
     title: 'ایران کے صدر ڈاکٹر حسن روحانی کا دورہ پاکستان  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'ایران کے صدر ڈاکٹر حسن روحانی کا دورہ پاکستان  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3570,10 +3618,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   `
   },
 
-{
+  {
     id: 'pak_iran_general_13ٍ',
     title: 'کبھی علاقائی کبھی مذہبی فرقہ بندی کی آڑ میں دہشت گردی  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_general'],
     excerpt: 'کبھی علاقائی کبھی مذہبی فرقہ بندی کی آڑ میں دہشت گردی  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3596,10 +3644,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_1ٍ',
     title: 'پاک ایران دوستی',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاک ایران دوستی',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3622,10 +3670,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_2ٍ',
     title: 'پاک ایران دوستی اور روابط میں پیشرفت',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاک ایران دوستی اور روابط میں پیشرفت',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3648,11 +3696,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
      `
   },
 
-  
-{
+
+  {
     id: 'pak_iran_friendship_3ٍ',
     title: 'ایران اور پاکستان کی لازوال دوستی  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'ایران اور پاکستان کی لازوال دوستی  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3679,10 +3727,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_4ٍ',
     title: 'پاکستان اور ایران: دوستی کا لازوال رشتہ ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاکستان اور ایران: دوستی کا لازوال رشتہ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3704,10 +3752,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_5ٍ',
     title: 'پاک ایران دوستی کے گہرے رشتے',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاک ایران دوستی کے گہرے رشتے',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3731,10 +3779,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_6ٍ',
     title: 'ایران پاکستان کی مدد کے لئے پرعزم',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'ایران پاکستان کی مدد کے لئے پرعزم',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3752,10 +3800,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_7ٍ',
     title: 'پاکستان اور ایران  تہذیبی، تاریخی اور لازوال رشتوں کے ہمسفر  ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاکستان اور ایران  تہذیبی، تاریخی اور لازوال رشتوں کے ہمسفر  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3790,10 +3838,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'pak_iran_friendship_8ٍ',
     title: 'پاکستان ایران کے مضبوط ثقافتی رشتے ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'پاکستان ایران کے مضبوط ثقافتی رشتے ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3854,10 +3902,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'pak_iran_friendship_9ٍ',
     title: 'مظبوط ثقافتی رشتوں میں جڑےپاکستان و ایران',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'مظبوط ثقافتی رشتوں میں جڑےپاکستان و ایران',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3875,10 +3923,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'pak_iran_friendship_10ٍ',
     title: 'فارسی زبان کے اردو پر اثرات اور فارسی کی تاریخ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'فارسی زبان کے اردو پر اثرات اور فارسی کی تاریخ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3910,10 +3958,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'pak_iran_friendship_11ٍ',
     title: 'حضرت اقبال ؒ اور فارسی زبان',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'حضرت اقبال ؒ اور فارسی زبان',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3945,10 +3993,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'pak_iran_friendship_12ٍ',
     title: 'مسئلہ کشمیر: خمینیؒ سے خامنہ ایؒ تک ',
-    date: '2016', 
+    date: '2016',
     category: ['pak_iran_friendship'],
     excerpt: 'مسئلہ کشمیر: خمینیؒ سے خامنہ ایؒ تک ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -3985,10 +4033,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-    {
+  {
     id: 'palestine_18ٍ',
     title: 'انبیا کی سرزمین مقبوضہ فلسطین',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'انبیا کی سرزمین مقبوضہ فلسطین',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4015,10 +4063,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'palestine_17ٍ',
     title: 'مسئلہ فلسطین دراصل ہے کیا ؟',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'مسئلہ فلسطین دراصل ہے کیا ؟',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4050,10 +4098,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'palestine_1ٍ6',
     title: 'مسئلہ فلسطین: امتِ مسلمہ کا اولین مسئلہ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'مسئلہ فلسطین: امتِ مسلمہ کا اولین مسئلہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4084,10 +4132,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'palestine_15ٍ',
     title: 'فلسطین: عالمِ اسلام کا اہم ترین مسئلہ  ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'فلسطین: عالمِ اسلام کا اہم ترین مسئلہ  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4107,10 +4155,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 ہم فلسطینی ہیں، فلسطینی ہی رہیں گے؛ ہم بیت المقدس کو غاصب صہیونیوں سے نجات دلائیں گے اور خون میں نہا کر مسلمانوں کے قبلہِ اول کی حفاظت کریں گے۔ بس ہمیں مسلمانوں کی حمایت کی ضرورت ہے، تاکہ ہم قدس کو غاصبوں کے وجود سے پاک کر سکیں۔
     `
   },
-{
+  {
     id: 'palestine_1ٍ4',
     title: 'مسئلہ فلسطین اور عالم اسلام کی بے حسی ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'مسئلہ فلسطین اور عالم اسلام کی بے حسی ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4144,10 +4192,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'palestine_13ٍ',
     title: 'مسئلہ فلسطین اور عالم اسلام کی  خاموشی ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'مسئلہ فلسطین اور عالم اسلام کی  خاموشی ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4181,10 +4229,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'palestine_12ٍ',
     title: 'فلسطین لہولہو ہے  ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'فلسطین لہولہو ہے  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4208,10 +4256,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'palestine_1ٍ1',
     title: 'فلسطین اور کشمیر: مسلم دنیا کی اجتماعی ناکامی اور عمران خان کا سفارتی بیانیہ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'فلسطین اور کشمیر: مسلم دنیا کی اجتماعی ناکامی اور عمران خان کا سفارتی بیانیہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4233,10 +4281,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'palestine_10ٍ',
     title: 'غزہ کے بچوں کی چیخ  و پکاراور گونگی بہری دنیا',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'غزہ کے بچوں کی چیخ  و پکاراور گونگی بہری دنیا',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4265,12 +4313,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
  ایک 17سالہ فلسطینی لڑکی دانیا  گھر جا رہی تھی وہ باحجاب تھی اور بڑے باوقار انداز میں چلتی جا رہی تھی لیکن راستے میں اسرائیلی فوجیوں نے اسے بلا وجہ روک لیا انہیں دانیا کا باوقار اور معزز انداز ایک آنکھ نبھایا وہ اس سے پوچھ تاچھ کرنے لگے لیکن فلسطینی بیٹی نےبہادری اور جرات مندی کے ساتھ ان کے ہر سوال کا جواب دیا اسرائیلی مزید غصے میں آگئے اور کی لڑکی کو سر میں گولیاں مار کر شہید کر دیا لہو سے فلسطینی سرزمین سرخ ہو گئی وہ ہائی سکول کی طالبہ تھی دانیہ کے گھر والوں نے صبر کے ساتھ اس کی تدفین کی لیکن اس کی شہادت کی ویڈیو سوشل میڈیا پر وائرل ہو گئی ایک 20 سالہ فلسطینی لڑکے رائس نے سوشل میڈیا پر دانیا کی تصویر پر رلا دینے والا کمنٹ کیا "اگر یہ آپ کی اپنی بیٹی یا بہن کا جنازہ ہوتا تو اپ کیا محسوس کرتے"اس سوال نے مسلمانوں کے دلوں کو جھنجوڑ کررکھ دیا اور ہر آنکھ اشکبار ہو گئی۔ لیکن رائز نے بس کمنٹ پر ہی اکتفا نہ کیا بلکہ اس قاتل اسرائیلی فوجی کو ڈھونڈ نکالا اورچاقو کے وار کر کے اسے زخمی کر دیا اسرائیلی فوجیوں نے رائس کو موقع پر ہی گولیاں مار کر شہید کر دیا اور اس کے خون سے بھی ارض مقدس سرخ ہو گئی تدفین کے بعد جب اس کے والد گھر میں تھے اور لوگ تعزیت کرنے آ رہے تھے اتنے میں انہیں دانیہ کے والد بھی تعزیت کے لیے آتے دکھائی دیے وہ اپنی جگہ سے اٹھے اور اگے بڑھ کر دانیا کے والد کو اپنے گلے لگا لیا ان کا ماتھا چوم لیا اور ان سے کہا میں اللہ اور اس کے رسول کو گواہ بنا کر اپنے بیٹے کا نکاح آپ کی بیٹی دانیا سے کرنا چاہتا ہوں کیا آپ یہ رشتہ قبول کرتے ہیں شہید لڑکی کے والد نے شہید لڑکے کے والد سے کہا اللہ کے حکم اور رسول اللہ صلی اللہ علیہ والہ وسلم کی تعلیمات کے روشنی میں میں اپنی شہید بیٹی دانیا کا نکاح اپ کے شہید پہ بیٹے سے کرتا ہوں اللہ جنت میں ان کا نکاح منعقد کرے اور ان دونوں پر برکت نازل فرمائے۔ میں نے جب یہ واقعہ سنا تو اس نے مجھے اندر سے جھنجوڑ کررکھ دیا۔ جو ہم بچپن سے سنتے آئے تھے کہ رشتے آسمانوں پر ہوتے ہیں وہ جملہ میرے خیال میں گھوم گیا۔اس کی تعبیر ایسے حالات میں دیکھی اورایسا رشتہ ہوتا پہلی باردیکھا لیکن  جب اللہ نے یہ کہا ہے کہ شہید زندہ ہوتے ہیں تو ایسا بھی ممکن ہے۔اس لئے غزہ کے لوگوں کا تصور آخرت تصور جنت اور شہادت ہماری سوچ سے بالکل مختلف ہے فلسطینی کہتے ہیں کہ جب اللہ نے خود شہیدوں کو زندہ کہا ہے تو ہم انہیں مردہ کیوں سمجھیں اس پہلو سے زندگی کو دیکھنا اور سمجھنا بہت ہی اہم ہے سوچ کا یہی انداز تو اخرت کا صحیح تصور ہے اگر ہم غزہ کے موجودہ حالات و واقعات کو اخرت کا کی نظرسے دیکھیں قرانی اور روحانی تعلق سے سمجھنے کی کوشش کریں تو ہم فلسطینی بھائیوں کو سمجھنے میں ناانصافی نہیں کریں گےکیونکہ یہ تو ان کا جزبہ ایمانی ہے۔ لیکن باقی دنیا کے مسلمانوں کو کیا ہوگیا ہے ان کی ٖغیرت کیوں نہیں جاگ رہی۔ مسلمان قوم اس معاملے میں کیوں اندھی، گونگی اور بہری ہوچکی ہے انھیں غزہ میں ہونے والے گولہ بارود اور ٹینکوں کی گھن گرج کیوں سنائی نہں دے رہی غزہ کے بچوں کی چیخ  و پکار اور فریاد کیوں سنائی نہیں دے رہی۔
     `
   },
-   
 
-{
+
+  {
     id: 'palestine_9ٍ',
     title: 'لہولہان غزہ اورمیڈیا کا کردار',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'لہولہان غزہ اورمیڈیا کا کردار',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4286,10 +4334,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'palestine_8ٍ',
     title: 'اسرائیل کی بدمعاشی اور امریکہ کی پشت پناہی',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'اسرائیل کی بدمعاشی اور امریکہ کی پشت پناہی',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4314,10 +4362,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'palestine_7ٍ',
     title: 'عرب کا اونٹ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'عرب کا اونٹ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4339,10 +4387,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'palestine_6ٍ',
     title: 'عرب کا اونٹ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'عرب کا اونٹ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4366,10 +4414,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'palestine_5ٍ',
     title: 'یومِ القدس کی اہمیت(حصہ اول) ',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'یومِ القدس کی اہمیت(حصہ اول) ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4388,12 +4436,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 امام خمینیؒ کے یومِ القدس کے اعلان کے اثرات یہ ہیں کہ فلسطین کی اسلامی جہاد کی تنظیم نے اعلان کر دیا کہ فلسطین ایک اسلامی مسئلہ ہے اور صرف عربوں اور فلسطینیوں کا مسئلہ نہیں ہے، بلکہ یہ عالمِ اسلام کا مسئلہ ہے۔ یومِ القدس کو عالمی دن قرار دینے کے نتیجے میں فلسطینی گروہوں، حقیقی اسلامی تعلیمات کی مدد سے عوامی جہالت نے جس میں روز بروز اضافہ ہو رہا ہے اور ان کو دہشت گردی کے قابلین اور تجاوز کرنے والوں کو دہشت زدہ کر دیا۔ اور اس کے نتیجے میں اسرائیلی جنائیکار جب موقع پاتے ہیں تو مسلمانوں پر وحشیانہ حملے کرتے ہیں اور ان کو خاک و خون میں نہلا دیتے ہیں۔ اس صیہونی رویے نے مقابلہ کرنے والی اسلامی طاقتوں کے ہاتھوں جوڑ دیا کہ ہمیں اس کے بدلے میں عورتوں، بچوں اور شیر خوار بچوں کا قتل عام کیا ہے۔ غزہ کے مظلوم عوام چاہے حالت جنگ میں ہوں یا جنگ بندی، محاصرہ میں ہونے کی وجہ سے بدترین حالت میں ہیں۔ وہ ہمیشہ اسلامی بیداری کی پشت پناہی کرتے رہے ہیں اور کرتے رہے ہیں اور ان کا یومِ القدس کی آزادی کے عزم میں کوئی خلل نہیں ڈال سکا۔ اسرائیلی، عورتوں اور بچوں کا قتلِ عام کرتے ہیں، ان کی بربریت کی انتہا ہے کہ حتیٰ ایک ہی خاندان کے تمام افراد کا قتلِ کوئی نئی بات نہیں ہے۔ اسلامی جمہوریہ ایران کے صدر مملکت نے ایک بیان میں کہا کہ سب سے اہم تعجب کی بات یہ ہے کہ اتنے بڑے انسانی سانحہ پر عالمی حکومتیں خاموش اور وہ ممالک جو تہذیب یافتہ ہونے کا دعویٰ کرتے ہیں اس حکومتی دہشت گردی کے مقابلے میں خاموشی اختیار کیے ہوئے ہیں۔ یہ کیسے ہو سکتا ہے کہ عالمی سربراہ مملکت اور انسانی حقوق کے محافظ فلسطین کی ان گلی کوچوں کو دیکھ رہی ہیں اور پھر بھی خاموش ہیں۔ کیا وہ انسان نہیں ہیں؟ ایک طرف دانشِ اسلام کے خیالات کے حکام کے تیل کے ڈاروں کی مدد مسلمانوں کی تکفیر اور اپنے مخالفین کے مرنے سے جدا کر رہے ہیں۔ اور دوسری جانب غاصب اسرائیل خاموشیوں کے سائے میں فلسطینی بچوں کو نیکیوں کے نیچے کچل رہے ہیں۔ ہمیں کب تک یہ سب کچھ دیکھنا ہے۔
      `
   },
- 
 
-{
+
+  {
     id: 'palestine_4ٍ',
     title: 'یومِ القدس کی اہمیت  (حصہ دوم)',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'یومِ القدس کی اہمیت  (حصہ دوم)',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4419,10 +4467,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'palestine_3',
     title: 'یوم القدس کی اہمیت اور آج کا مسلمان(حصہ اول)',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'یوم القدس کی اہمیت اور آج کا مسلمان(حصہ اول)',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4469,7 +4517,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'palestine_2',
     title: 'یومِ القدس کی اہمیت اور آج کا مسلمان (حصہ دوم) قبلہِ اول کا تقدس اور ہماری ذمہ داری',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'یومِ القدس کی اہمیت اور آج کا مسلمان (حصہ دوم) قبلہِ اول کا تقدس اور ہماری ذمہ داری',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4510,12 +4558,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 فلسطین، فلسطینیوں کا وطن ہے اور کسی بھی قسم کے ایسے فیصلے یا سازش کو عملی جامہ نہیں پہنانے دیا جائے گا کہ جس میں فلسطین میں دو ریاستی حل یا فلسطینیوں کے حقوق پامال ہوں۔ مسلمانوں کی جدوجہد یہودیوں کے خلاف نہیں بلکہ ہم صیہونزم کے خلاف ہیں کہ جو نہ صرف فلسطین بلکہ پوری دنیا کے لئے خطرہ بن چکی ہے۔ آج صیہونزم کے شواہد عراق میں دیکھے جا رہے ہیں کہ کس طرح صیہونزم کے لئے کام کرنے والے گروہ عراق کو تقسیم کرنے کے درپے ہیں، ٹھیک اسی طرح کا مسئلہ پاکستان کے اندر بھی دیکھا گیا ہے کہ جہاں صیہونیوں کے مقامی ایجنٹ فرقہ واریت اور لسانیت کے نام پر عوام کا قتلِ عام کرتے ہیں۔
 آج ضرورت اس امر کی ہے کہ مسئلہ فلسطین کے بارے میں اقوام کو آگاہ کریں اور بتائیں کہ فلسطین کے مسئلہ کو مرکزیت حاصل ہے اور تمام تر مسائل کی جڑ غاصب صیہونی ریاست اسرائیل ہے۔ امریکہ مسلمانوں کو تقسیم کرنا چاہتا ہے، تاہم مسلمان متحد رہیں اور امریکی اور اسرائیلی سازشوں کا مقابلہ کریں اور مسئلہ فلسطین کو فراموش نہ ہونے دیں۔ امریکہ اور اسرائیل کی کوشش ہے کہ فلسطین کی آزادی اور جدوجہد کے لئے اٹھنے والی تمام آوازوں کو دبا دیا جائے اور مسلمانوں کو باہم دست و گریباں کیا جائے، تاہم ہمیں ہر صورت مسئلہ فلسطین کے لئے اپنی جدوجہد کو اولین ترجیح میں جاری رکھنا ہوگا اور امت کو عالمی استعماری قوتوں کے ناپاک عزائم کے بارے میں آگاہ کرنا ہوگا۔ یہ بات بھی یاد رکھنی چاہیے کہ فلسطین کا مسئلہ کسی ایک قوم، قبیلہ، رنگ و نسل یا مذہب و مسلک کا مسئلہ نہیں بلکہ یہ ایک عالمگیر انسانی مسئلہ ہے، اور اسلام انسانیت کو نجات بخشنے والا مذہب ہے۔ اسلام کا پیروکار ہونے کے ناطے ہمیں تمام تر مسائل اور اختلافات کو بالائے طاق رکھتے ہوئے فلسطین کے مسئلے کو انسانی بنیادوں پر حل کرنے کے لئے جدوجہد جاری رکھنا ہوگی۔
     `
-},
-    
-{
+  },
+
+  {
     id: 'palestine_1ٍ',
     title: 'یوم القدس: عالمِ اسلام میں جوش و ولولے کی تجدید کا دن',
-    date: '2026', 
+    date: '2026',
     category: ['palestine'],
     excerpt: 'یوم القدس: عالمِ اسلام میں جوش و ولولے کی تجدید کا دن',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4552,10 +4600,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'islamic_revolution_11',
     title: 'انقلاب کیسےآتا ہے؟',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلاب کیسےآتا ہے؟',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4577,10 +4625,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'islamic_revolution_10',
     title: 'مسجد شیعہ یا سنی کی نہیں، اللہ کا گھر ہوتی ہے۔ ',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'مسجد شیعہ یا سنی کی نہیں، اللہ کا گھر ہوتی ہے۔ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4622,10 +4670,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'islamic_revolution_9',
     title: 'انقلاب اسلامی ایران اور جہاں اسلام کا استحکام',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلاب اسلامی ایران اور جہاں اسلام کا استحکام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4669,12 +4717,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 مذہبی اجتماعات پر ایران کی خفیہ پولیس (ساواک) کی خاص نظر تھی، جب کہ اس کے برعکس شاہی حکومت نے سامراج کے عالمی لٹیروں کو خصوصی مراعات فراہم کر رکھی تھیں جس کے تحت ان کی بڑی سے بڑی غلطی پر ان پر مقدمہ ایران میں قائم نہیں ہوتا تھا۔ جب انقلابِ کربلا کی تاسی کرنے والے قائد انقلاب امام خمینیؒ نے حکومت کے خلاف صدائے احتجاج بلند کر دی اور ایرانی عوام کی غیرت کو للکارا۔ انہوں نے اپنی شعلہ بیان تقریروں اور خطبات کے ذریعہ شاہی حکومت کی خرابیوں کی نشاندہی کی اور حسینی عوام میں انقلاب کی روح پھونک دی۔ جس کے نتیجہ میں لاکھوں ایرانی عوام مسلح شاہی فوج کی پروا نہ کرتے ہوئے "رہبر ما خمینی است۔ نہضت ما حسینی است" جیسے فلک شگاف نعرے لگاتے ہوئے سڑکوں پر اتر آئے۔
 انقلاب کی تاریخ میں ۱۵ خرداد کے خونی واقعہ کو فراموش نہیں کیا جا سکتا۔
     `
- },
+  },
 
- {
+  {
     id: 'islamic_revolution_8',
     title: 'حکیم الامت حضرت علامہ اقبال ؒ کا خواب، انقلابِ اسلامی ایران',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'حکیم الامت حضرت علامہ اقبال ؒ کا خواب، انقلابِ اسلامی ایران',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4731,10 +4779,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'islamic_revolution_7',
     title: 'انقلاب اسلامی ایران کی 33ویں سالگرہ ',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلاب اسلامی ایران کی 33ویں سالگرہ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4752,10 +4800,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'islamic_revolution_6',
     title: 'انقلاب اسلامی ایران کےعالم اسلام پر اثرات',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلاب اسلامی ایران کےعالم اسلام پر اثرات',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4783,10 +4831,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'islamic_revolution_5',
     title: 'انقلابِ اسلامی ایران کے اثرات',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلابِ اسلامی ایران کے اثرات',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4806,10 +4854,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'islamic_revolution_4',
     title: 'انقلابِ اسلامی ایران کی کہانی',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'کربلا کی ڈائری',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4847,10 +4895,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'islamic_revolution_3',
     title: 'انقلابِ اسلامی ایران، عالمِ اسلام کے لیے امید کی ایک کرن ',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'انقلابِ اسلامی ایران، عالمِ اسلام کے لیے امید کی ایک کرن ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4879,10 +4927,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-   {
+  {
     id: 'islamic_revolution_2',
     title: 'قدیم و جدید سائنس و ٹیکنالوجی کا محور، آج کا ایران',
-    date: '2026', 
+    date: '2026',
     category: ['islamic_revolution'],
     excerpt: 'قدیم و جدید سائنس و ٹیکنالوجی کا محور، آج کا ایران',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4892,11 +4940,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 آج جدید ترین ٹیکنالوجی کے میدان میں ایران کی بے مثال ترقی نے پوری دنیا کو حیران کر دیا ہے۔ دنیا کے ترقی یافتہ ممالک کی جدید ترین ایجادات کو اپنے قابو میں کر کے ایران نے یہ ثابت کر دیا ہے کہ عالمی پابندیوں کی وجہ سے کسی بھی طرح ایرانی قوم، اداروں اور حکومت کے قدم ڈگمگانے کے بجائے، انہوں نے پے در پے کامیابیاں حاصل کی ہیں۔ ایرانی قوم نے ان پابندیوں کے سامنے گھٹنے ٹیکنے اور ان پر انحصار کرنے کے بجائے مزید ہمت اور خود اعتمادی حاصل کی ہے۔رہبر انقلاب اسلامی حضرت آیت اللہ العظمیٰ سید علی خامنہ ای نے ملک کی غیر معمولی صلاحیتوں کا حوالہ دیتے ہوئے فرمایا تھا:"سائنس و ٹیکنالوجی کے میدان میں ترقی کا راستہ ہموار ہے۔ ہم نے بہت ترقی کی ہے، البتہ ہمیں بس اسی پر قانع نہیں ہو جانا چاہیے کیوں کہ ابھی اپنے مطلوبہ ہدف تک پہنچنے کے لیے کافی محنت و کوشش درکار ہے۔"رہبرِ معظم کے اس فرمان کی روشنی میں اداروں کی مخلصانہ کاوشیں ثمر آور ثابت ہوئیں، اور ایران آج سائنس اور ٹیکنالوجی کی دوڑ میں بہت آگے نکل گیا ہے۔ ایران کی اس سائنسی اور تکنیکی پیشرفت میں طاقتور ہونے کی سب سے بڑی وجہ اس کی ٹیکنالوجی کا "مقامی" (Indigenous) ہونا ہے۔ یہی وجہ ہے کہ ایران روز بروز قابلِ فخر کارناموں کے ساتھ آگے کی سمت بڑھ رہا ہے اور شکست خوردہ دشمنوں کے زخموں پر تسلی کے ساتھ نمک چھڑک رہا ہے۔پابندیوں کے سائے میں دفاعی اور عسکری فتوحاتحال ہی میں دنیا نے مشاہدہ کیا کہ جب کوئی جدید ترین امریکی ڈرون جاسوسی کی غرض سے ایران کی فضا میں داخل ہوا، تو ایران نے نہ صرف اس کی ٹیکنالوجی کو جام (Fail) کر کے اپنے قابو میں کر لیا، بلکہ اسے بحفاظت زمین پر اتارنے میں بھی کامیابی حاصل کی۔اسی طرح، دنیا کے جدید ترین سیکیورٹی اور ڈیفنس سسٹم رکھنے والے امریکی فوجی اڈے (عین الاسد، عراق) پر ایسے شاندار اور اسمارٹ میزائل داغے گئے کہ ان کے ریڈار بھی انہیں ٹریس نہ کر سکے۔ ان حملوں میں فاتح 313 (500 کلومیٹر رینج) اور قیام (800 کلومیٹر رینج) نامی میزائل استعمال کیے گئے۔ مسلح افواج کے چیف آف اسٹاف بریگیڈیئر جنرل محمد حسن باقری کے مطابق، ایران کی میزائل ٹیکنالوجی میں غلطی (Margin of error) کا امکان دس میٹر سے بھی کم ہے۔بظاہر امریکہ اور مغربی ممالک ایران پر سخت ترین پابندیوں کا دعویٰ کرتے ہیں، لیکن ان تمام تر مشکلات کے باوجود ایران کی آزاد سائنس و ٹیکنالوجی کا سفر منجمد نہیں ہوا۔ الٰہی برکتوں اور کامیاب اسلامی انقلاب نے ایران کو مضبوط، مستحکم اور ناقابلِ تسخیر صلاحیتوں والا ملک بنا دیا ہے۔ اس وقت مختلف قسم کی جدید ترین ٹیکنالوجی، بشمول ٹینک (جیسے ذوالفقار)، ہیلی کاپٹرز (کوبرا اور چنوک)، اور بغیر پائلٹ کے ڈرونز (UAVs)، ملتِ ایران کے جوانوں کی اپنی بنائی ہوئی ہے۔قدیم ایران: سائنس اور ٹیکنالوجی کی تاریخی میراثایران کی موجودہ حیرت ناک صلاحیتوں کا جائزہ لیتے وقت اگر ہم تاریخ پر نظر دوڑائیں تو یہ جاننے کے بعد شاید زیادہ حیرت نہ ہو، کیونکہ ایران کی سائنس اور ٹیکنالوجی کے میدان میں برتری صدیوں پرانی تاریخ پر مبنی ہے۔ قدیم زمانے سے ایران (فارس) سائنسی کارناموں کا مرکز رہا ہے اور مشرق میں چین و ہند سے لے کر مغرب میں یونان و روم تک علم کی رسد کا ذریعہ تھا۔قدیم ایران کی چند اہم ترین سائنسی ایجادات اور شخصیات کا مختصر جائزہ درج ذیل ہے:قنات (Qanat): آبپاشی کے لیے استعمال ہونے والے پانی کے اس زیرِ زمین نظام کی ابتدا ایران سے ہوئی۔ دنیا کی سب سے قدیم اور مشہور قنات ایرانی شہر "گونا باد" میں ہے، جو صدیاں گزرنے کے بعد آج بھی 40,000 افراد کو پینے اور زراعت کے لیے پانی مہیا کرتی ہے۔ونڈ مل (Windmills): 1700 قبل مسیح (ساتویں صدی) میں گریٹر ایران کے انجینئروں نے پانی پمپ کرنے کے لیے ایک جدید ونڈ پاور مشین تیار کی۔ابتدائی بیٹریاں: دنیا کی سب سے پہلی بیٹریاں بھی ایرانی فلسفیوں اور موجدوں نے ساسانیوں کے دور میں بنائیں۔محمد بن موسیٰ الخوارزمی: عظیم ریاضی دان جنہوں نے لاگرتھم ٹیبل اور الجبرا تیار کیا۔ ان کے کاموں نے قرونِ وسطیٰ کے مغرب میں ریاضی کی نشوونما پر گہرا اثر ڈالا۔ عمر خیام نے پاسکل کی مثلث پر کام کیا۔طبی اکیڈمی (Gundeshapur): سلطنتِ فارس میں واقع یہ دنیا کا پہلا تدریسی اسپتال تھا جہاں میڈیکل کے طلباء ماہر معالجین کی نگرانی میں مریضوں کا علاج کرتے تھے۔ابو بکر محمد بن زکریا رازی: دسویں صدی کے عظیم سائنسدان جنہیں عملی طبیعیات کا بانی اور مادے کے مخصوص وزن کا موجد سمجھا جاتا ہے۔ قرونِ وسطیٰ کے فارس میں سر درد کی مختلف اقسام اور ان کے علاج پر مفصل دستاویزات مرتب کی گئیں۔علمِ فلکیات: دسویں صدی میں عبدالرحمٰن الصوفی پہلا شخص تھا جس نے نظامِ شمسی سے باہر کہکشاں کو ریکارڈ کیا اور اسے "چھوٹا سا بادل" قرار دیا۔ ابو ریحان البیرونی نے ایک فلکیاتی انسائیکلوپیڈیا لکھا جس میں پہلی بار زمین کے سورج کے گرد گھومنے کے امکان پر بحث کی گئی، اور وہ پہلا سائنسدان تھا جس نے تجویز کیا کہ روشنی کی رفتار محدود ہے۔نصیر الدین طوسی: انہوں نے نظریہ پیش کیا کہ مادے کا جسم تبدیل ہو سکتا ہے لیکن وہ مکمل طور پر غائب (ختم) نہیں ہو سکتا۔ انہوں نے حیاتیاتی ارتقاء کے حوالے سے بھی دلائل پیش کیے جو آج بھی 'جدید' سمجھے جاتے ہیں۔جابر بن حیان: کیمسٹری کے بانی، جن کی دریافتیں 18ویں صدی کے یورپی کیمیادانوں کے لیے انجیل کا درجہ رکھتی تھیں۔ آج بھی کیمسٹری میں استعمال ہونے والے بہت سے بنیادی آلات انہی کی ایجاد ہیں۔کمال الدین الفارسی: قوسِ قزح (Rainbow) کی پہلی تسلی بخش وضاحت اور رنگوں کی نوعیت بیان کرنے کے لیے جانے جاتے ہیں۔انقلابِ اسلامی کے بعد سائنسی نشاۃ الثانیہ اور عالمی درجاتایرانی انقلاب کے بعد، ملکی پالیسیوں کے تحت تمام سائنسی میدانوں میں خود کفالت کا قومی ہدف مقرر کیا گیا۔ آج ایران میں اعلیٰ تعلیم کے حصول میں مشغول طلباء کی تعداد 24 لاکھ سے بڑھ کر 48 لاکھ ہو گئی ہے۔ اس علمی پیشرفت نے ایران کو انجینئروں کی تعداد کے اعتبار سے دنیا میں پانچویں نمبر پر پہنچا دیا ہے۔ 2020 میں اسکوپس میں انڈیکس کردہ ایرانی مضامین کی تعداد 72,839 تک پہنچ گئی۔ ایرانی محققین کے اعلیٰ معیار کی بدولت عالمی سطح پر ان کے حوالوں (Citations) کی شرح میں 25 فیصد تک اضافہ ہوا ہے۔خلائی ٹیکنالوجی اور سیٹلائٹ پروگرامایران سوویت یونین کے بعد خلا میں مصنوعی سیارہ بھیجنے والا دنیا کا نواں ملک ہے۔ ایران ان مٹھی بھر ممالک میں سے ایک ہے جو سیٹلائٹ نیویگیشن سسٹم تیار کرنے کی مکمل صلاحیت رکھتا ہے۔سفیر اور عماد: اگست 2008 میں ایرانی خلائی ایجنسی نے "سفیر ایس ایل وی" کا کامیاب تجربہ کیا اور فروری 2009 میں "عماد" سیٹلائٹ کو کامیابی کے ساتھ مدار میں لانچ کیا۔خلا میں جانور: ایران خلا میں جانور بھیجنے والا دنیا کا چھٹا ملک ہے اور 2019 میں پہلے ایرانی خلانورد کو شٹل میں سوار کرنے کا دعویٰ بھی پیش کیا گیا۔ذوالجناح خلائی راکٹ: حالیہ دنوں میں انقلابِ اسلامی کی سالگرہ کے عشرے میں ایرانی دانشوروں نے حضرت امام حسین علیہ السلام کی سواری سے منسوب "ذوالجناح" راکٹ کو خلا میں بھیجنے کا کامیاب تجربہ کیا۔ یہ راکٹ ٹھوس ایندھن (Solid fuel) کے طاقتور انجن سے لیس ہے جو 220 کلو گرام وزنی سیٹلائٹ کو 500 کلومیٹر کے مدار تک لے جانے کی صلاحیت رکھتا ہے۔دوربین "تارا": فلکیات میں مقابلہ کرنے کے لیے ایران نے اپنی سب سے بڑی خود ساختہ دوربین "تارا" متعارف کروائی ہے، جو مدار میں موجود قدرتی اور انسان ساختہ اشیاء کی پیش گوئی کے لیے استعمال ہوگی۔توانائی، لیزر اور ماحولیاتی ٹیکنالوجیتوانائی اور ایٹمی ایندھن:ایران دنیا کے ان چار ممالک میں شامل ہے جو جدید ترین V94.2 گیس ٹربائن تیار کرنے کے اہل ہیں اور "گیس ٹو مائع" (GTL) ٹیکنالوجی رکھنے والا دنیا کا تیسرا ملک ہے۔ ایٹمی ایندھن کی مکمل ری سائیکلنگ تک رسائی اور دنیا کے پانچ برتر ملکوں میں شامل ہونا ایران کا بہت بڑا کارنامہ ہے۔ دیسی ساختہ دارخوین نیوکلیئر پاور پلانٹ بھی ملک کی توانائی ضروریات پوری کر رہا ہے۔ہائی پاور لیزر ٹیکنالوجی:ایٹمی توانائی کی تنظیم کے مطابق، 10 کلو واٹ ہائی پاور لیزر ٹیسٹ کے کامیاب نفاذ کے ساتھ ایران دنیا میں اعلیٰ طاقت والے لیزر بنانے والے پانچ ممالک کی فہرست میں شامل ہو گیا ہے۔ یہ لیزر مبارکہ اسٹیل کمپنی میں یورپی گیس لیزر کی جگہ لے گا۔ماحولیات اور ریسائیکلنگ:ایران کاربن ڈائی آکسائیڈ گیس کی ریسائیکلنگ کا سسٹم تیار کرنے والا دنیا کا چوتھا ملک بن گیا ہے۔ شہرِ کرد میں نصب یہ سسٹم ریفائنریوں اور پیٹرو کیمیکل کمپلیکس کی چمنیوں سے نکلنے والی لاکھوں ٹن گیس کو ماحولیات میں پھیلنے سے روکتا ہے۔ اس سے قبل یہ ٹیکنالوجی صرف امریکہ اور جاپان کے پاس تھی۔میڈیکل سائنس اور وینٹی لیٹرز میں خود کفالتایران کے پاس 400 سے زیادہ طبی تحقیقی سہولیات موجود ہیں اور وہ دنیا کے 10 ممالک کو بایولوجیکل دوائیں برآمد کر رہا ہے۔ نیوکلیئر میڈیسن کے میدان میں ہندوستان، پاکستان، مصر اور لبنان کو ادویات برآمد کی جا رہی ہیں۔کووڈ-19 کی عالمی وبا کے دوران جب دنیا طبی آلات کی قلت کا شکار تھی، مشہد مقدس کی ایک مقامی کمپنی "احیا درمان" نے ایک جدید ترین وینٹی لیٹر کی پروڈکشن لائن کا افتتاح کیا۔ یہ ڈیوائس بغیر کسی کمپریسر کے کام کرتی ہے اور بیماریوں کی پیچیدگی کے شکار مریضوں کے لیے انتہائی کارآمد ہے۔ اس کمپنی نے اپنی پیداوار 5 گنا بڑھا کر چار مہینوں میں 2000 یونٹ اسپتالوں کو فراہم کیے، جس سے ملک کو 60 ملین یورو کا زرِمبادلہ بچانے میں مدد ملی۔خلاصہِ کلامآج کے ایران کو دیکھتے ہوئے یہ واضح ہوتا ہے کہ یہ ایک تعلیم یافتہ، باصلاحیت اور توانائی سے بھرپور نوجوان آبادی کا ملک ہے۔ روسی وزیر اعظم (موجودہ صدر) ولادیمیر پیوٹن سمیت کئی عالمی رہنما ایران کی دانش اور حکمتِ عملی کے معترف ہیں۔ایران کی سائنسی ترقی کی تفصیل اتنی طویل اور شاندار ہے کہ اسے چند صفحات میں سمیٹنا ناممکن ہے۔ زمانہِ قدیم کے عظیم سائنسدانوں سے لے کر آج کے جدید ترین نینو، خلائی اور دفاعی ٹیکنالوجی کے ماہرین تک، ایران کا سائنسی سفر تسلسل اور عزم کی ایک شاندار داستان ہے۔ آج ایران کے ناقابلِ تسخیر ہونے پر دنیا کو حیرت نہیں ہونی چاہیے، کیونکہ اتنی شاندار تاریخی میراث اور مسلسل محنت کی عادی اس قوم نے عالمی پابندیوں کے طوفان کو اپنی کامیابیوں کا زینہ بنا لیا ہے۔
     `
-  },  
- {
+  },
+  {
     id: 'islamic_revolution_1',
     title: 'اسلامی انقلاب اور ایرانی خواتین: ایک تاریخ ساز کردار ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_revolution'],
     excerpt: 'اسلامی انقلاب اور ایرانی خواتین: ایک تاریخ ساز کردار ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4925,10 +4973,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_32',
     title: 'کربلا کی ڈائری',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'کربلا کی ڈائری',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4955,12 +5003,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>
     `
   },
-  
 
- {
+
+  {
     id: 'munasibat_31',
     title: 'ورودِ کربلا اور ذکرِ سقاءِ سکینہؑ۔',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'ورودِ کربلا اور ذکرِ سقاءِ سکینہؑ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -4990,12 +5038,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- 
 
- {
+
+  {
     id: 'munasibat_30',
     title: 'مقتل گاہ',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'مقتل گاہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5024,16 +5072,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- 
 
 
 
 
 
- {
+
+  {
     id: 'munasibat_29',
     title: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5063,11 +5111,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- 
- {
+
+  {
     id: 'munasibat_28',
     title: 'بوڑھے حبیب ابن مظاہر ؒکی جوانمردی',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'بوڑھے حبیب ابن مظاہر ؒکی جوانمردی',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5095,17 +5143,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- 
 
 
 
 
 
 
- {
+
+  {
     id: 'munasibat_27',
     title: 'حضرت قاسم بن حسن  علیہ السلام',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'حضرت قاسم بن حسن  علیہ السلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5132,15 +5180,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 پروردگار! بحقِ مسافرانِ کربلا و بحقِ شہدائے تشنہ لب، ہماری اس ادنیٰ عزا اور حاضری کو قبول فرما۔ مولا! ہماری دنیا و آخرت سنوار دے، رزق میں برکت اور ایمان میں پختگی عطا فرما، اور ہمیں بار بار ان پاک مقامات کی زیارت کا شرف عطا فرما۔ آمین۔
 </p>
     `
-  },  
+  },
 
 
 
 
- {
+  {
     id: 'munasibat_26',
     title: 'حضرت قاسم بن حسن  علیہ السلام',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'حضرت قاسم بن حسن  علیہ السلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5176,10 +5224,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_25',
     title: 'نورِ کربلا اور روحانی سفر۔8محرم الحرام',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'نورِ کربلا اور روحانی سفر۔8محرم الحرام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5215,10 +5263,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_24',
     title: 'نورِ کربلا اور روحانی سفر۔9محرم الحرام',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'نورِ کربلا اور روحانی سفر۔9محرم الحرام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5250,10 +5298,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_23',
     title: 'نورِ کربلا اور روحانی سفر۔10محرم الحرام',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'نورِ کربلا اور روحانی سفر۔10محرم الحرام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5288,10 +5336,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_22',
     title: 'نور کربلا۔ روزِ عاشورہ ',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'نور کربلا۔ روزِ عاشورہ ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5318,10 +5366,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'munasibat_21',
     title: 'درسِ کربلا ۔ حصہ اول',
-    date: '2026', 
+    date: '2026',
     category: ['munasibat'],
     excerpt: 'درسِ کربلا ۔ حصہ اول',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5339,10 +5387,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'munasibat_20',
     title: 'کربلاکاپہلا زائر ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'کربلاکاپہلا زائر ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5371,10 +5419,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_19',
     title: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5395,10 +5443,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_18',
     title: 'چہلم امام حسین علیہ السلام کی تاریخی حیثیت ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'چہلم امام حسین علیہ السلام کی تاریخی حیثیت ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5432,10 +5480,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_17',
     title: 'کربلا خاندانی تعلقات کا خوبصورت نمونہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'کربلا خاندانی تعلقات کا خوبصورت نمونہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5453,10 +5501,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_16',
     title: '8 شوال یوم انہدام جنت البقیع کا دن',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: '8 شوال یوم انہدام جنت البقیع کا دن',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5497,10 +5545,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_15',
     title: 'یکم محرم حرم امام رضا علیہ السلام میں پرچم تبدیلی۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'یکم محرم حرم امام رضا علیہ السلام میں پرچم تبدیلی۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5529,10 +5577,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_14',
     title: '8 شوال یوم انہدام جنت البقیع کے موقع پر خصوصی تحریر',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: '8 شوال یوم انہدام جنت البقیع کے موقع پر خصوصی تحریر',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5556,10 +5604,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-    {
+  {
     id: 'munasibat_13',
     title: 'عظیم اسلامی تہوار عید الفطر',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'عظیم اسلامی تہوار عید الفطر',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5595,10 +5643,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_12',
     title: 'حج ایک بہترین تربیت ہے۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'حج ایک بہترین تربیت ہے۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5629,10 +5677,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_11',
     title: 'شہادت حضرت مولا علی علیہ السلام',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'شہادت حضرت مولا علی علیہ السلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5660,10 +5708,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_10',
     title: '13 رجب، مولودِ کعبہ حضرت علی علیہ السلام',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: '13 رجب، مولودِ کعبہ حضرت علی علیہ السلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5689,10 +5737,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_9',
     title: 'جبل نور۔ جہاں رسول پاک پرپہلی وحی اتری',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'جبل نور۔ جہاں رسول پاک پرپہلی وحی اتری',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5733,10 +5781,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_8',
     title: 'سب سے بڑی قربانی',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'سب سے بڑی قربانی',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5761,10 +5809,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_7',
     title: 'غدیر، امامت اور رسالت کے تناظر میں ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'غدیر، امامت اور رسالت کے تناظر میں ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5801,10 +5849,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_6',
     title: 'واقعہ غدیر، جب دین مکمل ہوا',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'واقعہ غدیر، جب دین مکمل ہوا',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5823,12 +5871,12 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>
     `
   },
- 
 
- {
+
+  {
     id: 'munasibat_5',
     title: 'ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5852,10 +5900,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'munasibat_4',
     title: 'عصرِ حاضر کا تقاضا :ہفتہِ وحدت ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'عصرِ حاضر کا تقاضا :ہفتہِ وحدت ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5873,10 +5921,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'munasibat_3',
     title: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'محرم الحرام معیشت میں ترقی کا اہم سبب',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5894,10 +5942,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'munasibat_2',
     title: 'جشن میلاد النبی اور ھفتہ وحدت کی خوبصورتیاں',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'جشن میلاد النبی اور ھفتہ وحدت کی خوبصورتیاں',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5915,10 +5963,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'munasibat_1',
     title: 'نعرہِ حیدری سے اسوۂ حیدری تک',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['munasibat'],
     excerpt: 'نعرہِ حیدری سے اسوۂ حیدری تک',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5961,11 +6009,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-    
-{
+
+  {
     id: 'aimah_ahle_bait 27',
     title: 'حضرت خدیجہ سلام اللہ علیہا',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت خدیجہ سلام اللہ علیہا',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -5979,10 +6027,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 26',
     title: 'حضرت فاطمہ بنتِ اسد کی عظمت',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت فاطمہ بنتِ اسد کی عظمت',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6003,10 +6051,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 26-B',
     title: 'حضرت علی علیہ السلام کے فضائل',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت علی علیہ السلام کے فضائل',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6018,10 +6066,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 25',
     title: 'حضرت علی علیہ السلام (حصہ اول )۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت علی علیہ السلام (حصہ اول )۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6033,11 +6081,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>   `
   },
 
-    
-{
+
+  {
     id: 'aimah_ahle_bait 24',
     title: ' حضرت علی علیہ السلام (حصہ دوم )',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: ' حضرت علی علیہ السلام (حصہ دوم ) ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6049,10 +6097,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>   `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 23',
     title: ' حضرت علی علیہ السلام (تیسرا اور آخری حصہ) ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: ' حضرت علی علیہ السلام (تیسرا اور آخری حصہ) ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6066,10 +6114,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'aimah_ahle_bait 22B',
     title: 'جشن مولود کعبہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'جشن مولود کعبہ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6081,10 +6129,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 22A',
     title: 'شہادت حضرت علی علیہ السلام',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'شہادت حضرت علی علیہ السلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6097,10 +6145,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-    {
+  {
     id: 'aimah_ahle_bait 21',
     title: 'علی علیہ السلام کی وصیت ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'علی علیہ السلام کی وصیت ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6112,10 +6160,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>   `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 20',
     title: ' شہادتِ امام علی علیہ السلام ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: ' شہادتِ امام علی علیہ السلام ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6128,10 +6176,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 19',
     title: 'فزت و رب الکعبہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'فزت و رب الکعبہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6144,10 +6192,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 18',
     title: 'شان حضرت زہرا سلام اللہ علیہا علامہ اقبال کی نظر میں۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'شان حضرت زہرا سلام اللہ علیہا علامہ اقبال کی نظر میں۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6161,10 +6209,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>   `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 17B',
     title: 'نواسۂ رسولؐ، حضرت امام حسنِ مجتبیٰ علیہ السلام۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'نواسۂ رسولؐ، حضرت امام حسنِ مجتبیٰ علیہ السلام۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6177,10 +6225,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
+  {
     id: 'aimah_ahle_bait 17',
     title: 'باغِ امام حسن علیہ السلام ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'باغِ امام حسن علیہ السلام ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6193,10 +6241,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'aimah_ahle_bait 16',
     title: 'حضرت فاطمۃ الزہراء سلام اللہ علیہا کی ذاتِ اسوہِ کاملہ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت فاطمۃ الزہراء سلام اللہ علیہا کی ذاتِ اسوہِ کاملہ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6209,10 +6257,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>
     `
   },
-{
+  {
     id: 'aimah_ahle_bait 15',
     title: 'حسینؑ سب کا (حصہ اول)۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حسینؑ سب کا (حصہ اول)۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6252,10 +6300,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 13',
     title: '  کربلا کا تاریخی پس منظر اور عزاداریِ سید الشہداء کی عظمت ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: '  کربلا کا تاریخی پس منظر اور عزاداریِ سید الشہداء کی عظمت ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6283,10 +6331,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 12',
     title: 'امام علی ابن موسیٰ الرضا علیہ السلام کی مبارک شخصیت۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام علی ابن موسیٰ الرضا علیہ السلام کی مبارک شخصیت۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6303,7 +6351,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'aimah_ahle_bait 11',
     title: 'امام رضا علیہ السلام کی شہادت  (حصہ اول) ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام رضا علیہ السلام کی شہادت  (حصہ اول)۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6317,10 +6365,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 10',
     title: 'امام رضا علیہ السلام کی شہادت  (حصہ دوم) ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام رضا علیہ السلام کی شہادت  (حصہ دوم) ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6335,10 +6383,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'aimah_ahle_bait 9',
     title: 'حضرت امام مہدی علیہ السلام ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت امام مہدی علیہ السلام ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6350,10 +6398,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
- {
+  {
     id: 'aimah_ahle_bait 8',
     title: 'امام رضا علیہ السلام کی حیاتِ مبارکہ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام رضا علیہ السلام کی حیاتِ مبارکہ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6366,10 +6414,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
- {
+  {
     id: 'aimah_ahle_bait 7',
     title: 'حضرت امام رضا علیہ السلام کی حیات و کمالات ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت امام رضا علیہ السلام کی حیات و کمالات ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6382,10 +6430,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 6',
     title: 'حضرت امام رضا علیہ السلام کی حیات و کمالات ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حضرت امام رضا علیہ السلام کی حیات و کمالات ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6399,10 +6447,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 5',
     title: 'امام مہدی علیہ السلام کی حیات مبارکہ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام مہدی علیہ السلام کی حیات مبارکہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6417,10 +6465,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'aimah_ahle_bait 4',
     title: 'تمام ادیان و مذاہب کے نجات دہندہ امام مہدی علیہ السلام ہی ہیں۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'تمام ادیان و مذاہب کے نجات دہندہ امام مہدی علیہ السلام ہی ہیں۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6432,11 +6480,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-    
-{
+
+  {
     id: 'aimah_ahle_bait 3',
     title: 'امام جعفر صادق ؑ مرکز و محور وحدت امت۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'امام جعفر صادق ؑ مرکز و محور وحدت امت',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6460,10 +6508,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
     `
   },
 
-{
+  {
     id: 'aimah_ahle_bait 2',
     title: 'عصمت و طہارت کی مثالی خاتون حضرت معصومہ قم سلام اللہ علیہا۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'عصمت و طہارت کی مثالی خاتون حضرت معصومہ قم سلام اللہ علیہا۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6476,11 +6524,11 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   },
 
 
-{
+  {
     id: 'aimah_ahle_bait 1',
 
     title: 'حسینؑ ہدایت کا چراغ اور نجات کی کشتی ہیں',
-        date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['aimah_ahle_bait'],
     excerpt: 'حسینؑ ہدایت کا چراغ اور نجات کی کشتی ہیں۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6498,10 +6546,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-   {
+  {
     id: 'old_islamic_writings_18',
     title: 'اللہ کی رسی',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'اللہ کی رسی',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6524,7 +6572,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_17',
     title: 'ہفتہ وحدت باعث رحمت ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'ہفتہ وحدت باعث رحمت ۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6555,7 +6603,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_16',
     title: 'فتح مکہ، جب کعبے کے بتوں کو توڑ دیا گیا',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'فتح مکہ، جب کعبے کے بتوں کو توڑ دیا گیا',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6590,7 +6638,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_15',
     title: 'کلمۃ اللہ اور حضرت عیسیٰ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'کلمۃ اللہ اور حضرت عیسیٰ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6619,7 +6667,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 </p>
     `
   },
- 
+
 
 
 
@@ -6629,7 +6677,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_14',
     title: 'مباہلہ کا واقعہ خاندان رسولﷺ کی پاکی کی ضمانت',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'مباہلہ کا واقعہ خاندان رسولﷺ کی پاکی کی ضمانت',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6657,7 +6705,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_13',
     title: 'برکات رمضان اور قرآن و اہلبیتِ پیغمبرؐ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'برکات رمضان اور قرآن و اہلبیتِ پیغمبرؐ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6705,10 +6753,10 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-{
+  {
     id: 'old_islamic_writings_12',
     title: 'پیر غلامان و خادمان حسینیؑ کون ہیں؟',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'پیر غلامان و خادمان حسینیؑ کون ہیں؟',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6743,7 +6791,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_11',
     title: ' مومن کی حرمت کعبہ سے  زیادہ ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'مومن کی حرمت کعبہ سے  زیادہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6821,13 +6869,13 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
  </p>
     `
   },
-  
+
 
 
   {
     id: 'old_islamic_writings_10',
     title: 'فکرِ کربلا اور مرکز اصحاب الکساء علیہم السلام کی خدمات',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'فکرِ کربلا اور مرکز اصحاب الکساء علیہم السلام کی خدمات',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6858,7 +6906,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_9',
     title: 'دنیا کا عظیم ترین دسترخوان ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'دنیا کا عظیم ترین دسترخوان ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6894,7 +6942,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_8',
     title: 'دنیا کا سب سے بڑا تعذیہ  ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'دنیا کا سب سے بڑا تعذیہ  ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6942,7 +6990,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_7',
     title: 'رہبرِ معظم کو قرآنِ مجید کے تاریخی نسخے کا تحفہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'رہبرِ معظم کو قرآنِ مجید کے تاریخی نسخے کا تحفہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -6980,7 +7028,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_6',
     title: 'کیا ہم خود بھی گستاخ تو نہیں؟',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'کیا ہم خود بھی گستاخ تو نہیں؟',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7012,7 +7060,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_5',
     title: 'مسلمان دہشت گرد ہرگز نہیں ہوسکتا۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'مسلمان دہشت گرد ہرگز نہیں ہوسکتا۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7054,7 +7102,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_4',
     title: 'برما میں ظلم کی انتہا اور عالم اسلام',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'برما میں ظلم کی انتہا اور عالم اسلام',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7073,7 +7121,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_3',
     title: 'محمد بن سلمان کا دورہ پاکستان',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'محمد بن سلمان کا دورہ پاکستان',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7093,7 +7141,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_2',
     title: 'کرسی یا عہدہ',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'کرسی یا عہدہ',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7110,7 +7158,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
   {
     id: 'old_islamic_writings_1',
     title: 'سلمان رشدی ملعون کون ہے؟ ۔',
-    date: '01-01-2015', 
+    date: '01-01-2015',
     category: ['islamic_writings'],
     excerpt: 'سلمان رشدی ملعون کون ہے؟۔',
     image: 'https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png',
@@ -7127,18 +7175,18 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
- {
-        id: 225,
-        category: "column",
-        title: "ایوانِ اقتدار کا انکسار المزاج درویش، جی ایم سکندرشگری مرحوم",
-        date: "06-08-2026",
-        paper: "روزنامہ مشرق / بادشمال / زمانہ نیوز/CN5 ",
+  {
+    id: 225,
+    category: "column",
+    title: "ایوانِ اقتدار کا انکسار المزاج درویش، جی ایم سکندرشگری مرحوم",
+    date: "06-08-2026",
+    paper: "روزنامہ مشرق / بادشمال / زمانہ نیوز/CN5 ",
 
-        // ہیڈر امیج (مشرق والی تصویر)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1786087167/Gm_sikandar_mashriq_2026-08-07_gwq8oj.jpg",
 
-        excerpt: "ایوانِ اقتدار کا انکسار المزاج درویش، جی ایم سکندرشگری مرحوم",
-        content: `
+    excerpt: "ایوانِ اقتدار کا انکسار المزاج درویش، جی ایم سکندرشگری مرحوم",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
 <p><strong>ایوانِ اقتدار کا انکسار المزاج درویش، جی ایم سکندرشگری مرحوم</strong></p>
@@ -7232,15 +7280,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
-    {
-        "id": "224",
-        "category": ["column"],
-        "title": "الوداع اے رہبر اسلام ",
-        "date": "09-07-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "224",
+    "category": ["column"],
+    "title": "الوداع اے رہبر اسلام ",
+    "date": "09-07-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783931843/Alwida_a_Rehbar_e_Islam_Daily_Mashriq_2026-07-10_l3tmmc.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>الوداع اے رہبر اسلام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7299,15 +7347,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "214",
-        "category": ["column"],
-        "title": "کربلا کی ڈائری-یکم محرم الحرام ",
-        "date": "17-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "214",
+    "category": ["column"],
+    "title": "کربلا کی ڈائری-یکم محرم الحرام ",
+    "date": "17-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937445/1st_Moharram_Zamana_news_2026-06-18_pbtcvp.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>کربلا کی ڈائری-یکم محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7327,15 +7375,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "215",
-        "category": ["column"],
-        "title": "2محرم الحرام ",
-        "date": "20-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "215",
+    "category": ["column"],
+    "title": "2محرم الحرام ",
+    "date": "20-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783937664/2nd_Moharram_Zamana_news_2026-06-18_brjdhc.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>2محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7354,15 +7402,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "216",
-        "category": ["column"],
-        "title": "3محرم الحرام ",
-        "date": "21-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "216",
+    "category": ["column"],
+    "title": "3محرم الحرام ",
+    "date": "21-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>3محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7374,15 +7422,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <p>الحمد للہ، پروردگار نے ہمیں امامِ مظلومؑ اور شہدائے کربلاکی زیارت کا شرف عطا فرمایا۔ یہاں ہم سب زائرین کے لیے ایک اہم ترین اخلاقی اور شرعی نکتہ یاد رکھنا ضروری ہے کہ جب بھی کسی معصوم یا باوفا شہید کی ضریح اور قبرِ مطہر پر جائیں، تو باہر ہی کھڑے ہو کر "اذنِ دخول" (داخل ہونے کی اجازت) ضرور پڑھیں۔ یہ آدابِ فرزندی اور عقیدت کا تقاضا ہے کہ ہم اجازت لے کر اس پاک مٹی پر قدم رکھیں۔ اس کے بعد ہم نے جنابِ حبیب ابنِ مظاہر کی ضریح پر حاضری دی، ان کے بلندیِ درجات کے لیے سلام پڑھا اور دو رکعت نمازِ ہدیہِ زیارت ادا کی۔ کربلا کی اس پاک سرزمیں پر زائرین کو چاہیے کہ معصوم شہزادوں، خصوصاً جنابِ علی اکبرؑ اور علی اصغرؑ کے مصائب اور ان کا نوحہ ضرور پڑھیں، کیونکہ یہی وہ تڑپ ہے جو انسان کو حقیقی حسینی فلاح اور معرفتِ حق کی طرف لے کر جاتی ہے۔ پروردگار ہم سب کی اس حاضری کو قبول فرمائے۔ آمین۔ جاری ہے۔۔</p>
         </div>
         `
-    },
-    {
-        "id": "217",
-        "category": ["column"],
-        "title": "4محرم الحرام ",
-        "date": "22-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "217",
+    "category": ["column"],
+    "title": "4محرم الحرام ",
+    "date": "22-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>4محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7392,15 +7440,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <p>۴ محرم الحرام کے دن ہی، قیس ابنِ مسہر صیداوی کی شہادت کی خبر بھی خیمہ گاہ میں پہنچی، جنہیں امامؑ نے کوفہ والوں کے نام خط دے کر روانہ کیا تھا اور وہ راستے میں مظلومیت سے شہید کر دیے گئے تھے۔ آج ۴ محرم کا دن ہے، اور آج ہم نے اس ماں کو پرسہ دینا ہے جو اپنے معصوم بچوں کو جنگ کے لیے خود تیار کر رہی تھی، ان کے سروں پر عمامے باندھ رہی تھی۔ بی بی زینبؑ اپنے دونوں لال عون و محمد کو تیار کرتے ہوئے فرما رہی تھیں: "میرے بچو! تم جعفرِ طیارؑ کے پوتے ہو، میدان میں جعفرِ طیار کی شجاعت کا مظاہرہ کرنا۔ تم حیدرِ کرارؑ کے نواسے ہو، عمر میں چھوٹے ہو تو کیا ہوا، کل میدان میں کسی سے پیچھے نہیں رہنا۔" روایت کہتی ہے کہ یہ بچے اتنے چھوٹے تھے کہ لوہے کی زرہیں بھی ان کے جسموں پر پوری نہیں آ رہی تھیں، مگر جذبہِ شہادت جوان تھا۔ دونوں بھائیوں نے میدان میں شہادت پائی۔ جب عون و محمد کے لاشے خیمہ گاہ لائے گئے، تو زینبؑ کہیں نظر نہ آئیں۔ لوگوں نے پوچھا: "ان بچوں کی دکھی ماں کہاں ہے؟" جب خیمے کے پیچھے ڈھونڈا گیا، تو بی بی پاک خاک پر سر سجدے میں رکھے رو رہی تھیں اور فرما رہی تھیں: "بارِ الٰہی! میری اس چھوٹی سی قربانی کو اپنی بارگاہ میں قبول و منظور فرما۔" پھر ان پھول جیسے بچوں کو لٹایا گیا، ایک طرف عونؑ تھے، دوسری طرف محمدؑ، اور درمیان میں لاچار ماں کبھی عون کے چہرے کو دیکھتی تو کبھی محمد کے زخموں کو ۔ پروردگار! بحقِ مسافرانِ کربلا و بحقِ دلِ غریبِ زینبؑ، تمام حاضرین و زائرین کی اس حاضری کو قبول فرما، ہماری دنیا و آخرت سنوار دے اور ہمیں بار بار بارگاہِ حسینیؑ کی حاضری کا شرف عطا فرما۔ آمین۔ جاری ہے۔۔۔۔۔</p>
         </div>
         `
-    },
-    {
-        "id": "218",
-        "category": ["column"],
-        "title": "5محرم الحرام ",
-        "date": "22-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "218",
+    "category": ["column"],
+    "title": "5محرم الحرام ",
+    "date": "22-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783936455/6th_Moharram_Zamana_news_2026-06-22_ew4r5k.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>5محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7419,15 +7467,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "219",
-        "category": ["column"],
-        "title": "6محرم الحرام ",
-        "date": "22-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "219",
+    "category": ["column"],
+    "title": "6محرم الحرام ",
+    "date": "22-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>6محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7447,15 +7495,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "220",
-        "category": ["column"],
-        "title": "7محرم الحرام ",
-        "date": "23-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "220",
+    "category": ["column"],
+    "title": "7محرم الحرام ",
+    "date": "23-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783933058/8th_Moharram_Zamana_news_2026-06-24_mfctyv.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>7محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7467,15 +7515,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <p>جب امام حسین علیہ السلام پکار سن کر مقتل میں پہنچے اور اپنے پامال بھتیجے کو اپنے سینے سے لگایا، تو وہ منظر قیامت کا تھا۔ یزیدی لشکریوں نے شہزادے کے گرتے ہی ان کے نازک لاشے پر اس بے دردی سے گھوڑے دوڑا دیے تھے کہ پامالی کی وجہ سے لاشے کے ٹکڑے ٹکڑے ہو چکے تھے اور جب امامؑ لاشہ اٹھا رہے تھے، تو شہزادے کے دونوں پاؤں زمینِ کربلا پر رگڑ کھا کر خط کھینچ رہے تھے۔ مظلوم حسینؑ اس پامال لاشے کو خیمہ گاہ لے کر آئے۔ ایک طرف جوان بیٹے علی اکبرؑ کا لاشہ لٹایا، دوسری طرف بھتیجے قاسمؑ کے ٹکڑے لٹائے، اور ان دونوں جوانوں کے درمیان میں مظلوم حسینؑ تنہا بیٹھے کبھی اکبرؑ کو تو کبھی قاسمؑ کو دیکھ کر ان کی شجاعت پر شاباشی دے رہے تھے اور رو رہے تھے۔۔۔ پروردگار! بحقِ مسافرانِ کربلا و بحقِ شہدائے تشنہ لب، ہماری اس ادنیٰ عزا اور حاضری کو قبول فرما۔ مولا! ہماری دنیا و آخرت سنوار دے، رزق میں برکت اور ایمان میں پختگی عطا فرما، اور ہمیں بار بار ان پاک مقامات کی زیارت کا شرف عطا فرما۔ آمین۔ جاری ہے۔۔۔۔۔</p>
         </div>
         `
-    },
-    {
-        "id": "221",
-        "category": ["column"],
-        "title": "8محرم الحرام ",
-        "date": "24-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "221",
+    "category": ["column"],
+    "title": "8محرم الحرام ",
+    "date": "24-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>8محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7495,15 +7543,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <br>
         </div>
         `
-    },
-    {
-        "id": "223",
-        "category": ["column"],
-        "title": "روزِ عاشورہ ",
-        "date": "26-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "223",
+    "category": ["column"],
+    "title": "روزِ عاشورہ ",
+    "date": "26-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>روزِ عاشورہ </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7524,15 +7572,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
-    {
-        "id": "222",
-        "category": ["column"],
-        "title": "نورِ کربلا اور روحانی سفر۔9محرم الحرام ",
-        "date": "25-06-2026",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "222",
+    "category": ["column"],
+    "title": "نورِ کربلا اور روحانی سفر۔9محرم الحرام ",
+    "date": "25-06-2026",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783929558/columns_fpkl28.png",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>نورِ کربلا اور روحانی سفر۔9محرم الحرام </strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7543,16 +7591,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             <p>ادھر خیمہ گاہ میں، چار سالہ معصوم بی بی سکینہؑ نے جب دور افق پر غازی چچا کے علم کو جھکتے اور لہراتے ہوئے دیکھا، تو معصوم کا دل دہل گیا؛ وہ تڑپ کر رو پڑیں اور مقتل کی طرف منہ کر کے پکارا: "چچا جان! خدا کے لیے واپس آ جائیں، مجھے اب پانی نہیں چاہیے، میں اب کبھی آپ سے پانی نہیں مانگوں گی، بس میرے چچا واپس آ جائیں..."یزیدیوں نے جب دیکھا کہ عباسؑ کے بازو نہیں رہے، تو انہوں نے تیروں کی برسات کر دی۔ ایک ظالم تیر غازی عباسؑ کی پیشانی پر لگا، ایک زہر آلود تیر آپ کی پاک آنکھ میں پیوست ہوا، اور ایک اور تیر مشکیزے کو چیرتا ہوا آپ کے سینہ مبارک پر لگا۔ بازو نہ ہونے کی وجہ سے مولا عباسؑ اپنی آنکھ اور سینے سے وہ تیر نہ نکال سکے۔ اسی بے بسی کے عالم میں، ایک شقی ملعون آگے بڑھا اور اس نے لوہے کا بھاری گرز غازیؑ کے سرِ انور پر مارا، جس سے سرِ مبارک شگافتہ ہو گیا۔ بازو نہ ہونے کے سبب غازیؑ جب گھوڑے کی زین سے تپتی ہوئی ریت پر آ رہے، تو انہوں نے تڑپ کر اپنے آقا کو پکارا: "مولا! میرا آخری سلام قبول کرو..." جب امام حسینؑ پہنچے، تو بھائی کا لاشہ اٹھانا ممکن نہ تھا، عباسؑ کا لاشہ وہیں نہر کے کنارے رہ گیا اور حسینؑ کمر پر ہاتھ رکھے خیموں کی طرف اکیلے لوٹے۔۔۔ ۹ محرم الحرام کی اس پُردرد یاد اور غازی عباسؑ کے علمداری کے سائے تلے، تمام حاضرین، زائرین اور مومنین کے حق میں خصوصی دعائیں مانگی گئیں۔ جاری ہے۔۔۔۔۔</p>
         </div>
         `
-    },
-    {
-        "id": "212",
-        "category": ["column"],
-        "title": "مرکزِ اصحابِ کساء",
-        "date": "16-06-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": "212",
+    "category": ["column"],
+    "title": "مرکزِ اصحابِ کساء",
+    "date": "16-06-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1783921431/Markaz_e_Ashab_e_Kisa_Zamana_news_amyipu.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>مرکزِ اصحابِ کساء</strong></p>
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7592,18 +7640,18 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    
-},
-    
-    {
-        "id": 211,
-        "category": ["column"],
-        "title": "شہیدِ امت کی تسبیحِ وحدت",
-        "date": "14-06-2026",
-        "paper": "روزنامہ زمانہ نیوز اور اسلام ٹائمز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1781519972/shaheed_e_umat_ki_tasbih_zamana_news_2026-06-15_bsdcue.jpg",
-        "excerpt": "برصغیر پاک و ہند کی مٹی گواہ ہے کہ یہاں کی تاریخ محض بادشاہوں کی فتوحات کا نام نہیں، بلکہ یہ مختلف تہذیبوں اور افکار کے ملاپ کی ایک لازوال داستان ہے جہاں حسینی پیروکاروں کا کردار ایک بنیادی کڑی ہے...",
-        "content": `
+
+  },
+
+  {
+    "id": 211,
+    "category": ["column"],
+    "title": "شہیدِ امت کی تسبیحِ وحدت",
+    "date": "14-06-2026",
+    "paper": "روزنامہ زمانہ نیوز اور اسلام ٹائمز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1781519972/shaheed_e_umat_ki_tasbih_zamana_news_2026-06-15_bsdcue.jpg",
+    "excerpt": "برصغیر پاک و ہند کی مٹی گواہ ہے کہ یہاں کی تاریخ محض بادشاہوں کی فتوحات کا نام نہیں، بلکہ یہ مختلف تہذیبوں اور افکار کے ملاپ کی ایک لازوال داستان ہے جہاں حسینی پیروکاروں کا کردار ایک بنیادی کڑی ہے...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>شہیدِ امت کی تسبیحِ وحدت</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7662,17 +7710,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 210,
-        "category": ["column"],
-        "title": "گلگت بلتستان کا انتخابی معرکہ 2026: فرسودہ روایات کا خاتمہ اور نئی قیادت کا ابھرتا سورج",
-        "date": "03-06-2026",
-        "paper": "روزنامہ مشرق نیوزوروزنامہ یوم تکبیر",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": 210,
+    "category": ["column"],
+    "title": "گلگت بلتستان کا انتخابی معرکہ 2026: فرسودہ روایات کا خاتمہ اور نئی قیادت کا ابھرتا سورج",
+    "date": "03-06-2026",
+    "paper": "روزنامہ مشرق نیوزوروزنامہ یوم تکبیر",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1780464290/GB_Election_zamana_news_2026-06-03_brhvth.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>گلگت بلتستان کا انتخابی معرکہ 2026: فرسودہ روایات کا خاتمہ اور نئی قیادت کا ابھرتا سورج</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7747,17 +7795,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 209,
-        "category": ["column"],
-        "title": "سب سے بڑی قربانی",
-        "date": "27-05-2026",
-        "paper": "روزنامہ مشرق نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": 209,
+    "category": ["column"],
+    "title": "سب سے بڑی قربانی",
+    "date": "27-05-2026",
+    "paper": "روزنامہ مشرق نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779859934/sabse_barhi_qurbani_daily_mashriq_news_2026-05-27_lyzzie.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>سب سے بڑی قربانی</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7775,17 +7823,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 208,
-        "category": ["column"],
-        "title": "حج کا بڑا سبق انا کی قربانی", // <-- یہاں کوما (,) لگا دیا گیا ہے
-        "date": "26-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": 208,
+    "category": ["column"],
+    "title": "حج کا بڑا سبق انا کی قربانی", // <-- یہاں کوما (,) لگا دیا گیا ہے
+    "date": "26-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>ابیار علیؑ</strong></p>
 <p><strong>تحریر:حاجی شبیر احمد شگری</strong></p>
@@ -7807,17 +7855,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 207,
-        "category": ["column"],
-        "title": "ابیار علیؑ",
-        "date": "25-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": 207,
+    "category": ["column"],
+    "title": "ابیار علیؑ",
+    "date": "25-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779688711/6.Abyaar_e_Ali_a.s_-_Zamana_news_2026-05-22_iwlwbg.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>ابیار علیؑ</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7842,17 +7890,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 206,
-        "category": ["column"],
-        "title": "مدینے کے چند اہم مقامات",
-        "date": "23-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779514919/5.Madiney_k_ahahm_maqamat-_Zamana_news_2026-05-22_w4vpy8.jpg",
-        "excerpt": "...",
-        "content": `
+  {
+    "id": 206,
+    "category": ["column"],
+    "title": "مدینے کے چند اہم مقامات",
+    "date": "23-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779514919/5.Madiney_k_ahahm_maqamat-_Zamana_news_2026-05-22_w4vpy8.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>مدینے کے چند اہم مقامات</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7881,16 +7929,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
-    {
-        "id": 205,
-        "category": ["column"],
-        "title": "جنت البقیع",
-        "date": "21-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779425001/4.Janat_ul_Baqee_Zamana_news_2026-05-22_nbdrcj.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": 205,
+    "category": ["column"],
+    "title": "جنت البقیع",
+    "date": "21-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779425001/4.Janat_ul_Baqee_Zamana_news_2026-05-22_nbdrcj.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>جنت البقیع</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7914,16 +7962,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
-    {
-        "id": 204,
-        "category": ["column"],
-        "title": "مدینے کئ مساجد",
-        "date": "22-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg",
-        "excerpt": "...",
-        "content": `
+  },
+  {
+    "id": 204,
+    "category": ["column"],
+    "title": "مدینے کئ مساجد",
+    "date": "22-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779338919/3.Zamana_news_2026-05-21_rfnrwd.jpg",
+    "excerpt": "...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>مدینے کئ مساجد</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7952,16 +8000,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
-    {
-        "id": 203,
-        "category": ["column"],
-        "title": "مسجد نبویﷺ",
-        "date": "20-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779250638/2.Madiney_ki_Masajid_Zamana_news_2026-05-20_lefxc1.jpg",
-        "excerpt": "بیت اللہ کی حاضری کے لیے ہماری روانگی کا دن ہماری زندگی کا ایک یادگار دن تھا۔ لاہور ایئرپورٹ کے لیے ہم شدید بارش میں روانہ ہوئے...",
-        "content": `
+  },
+  {
+    "id": 203,
+    "category": ["column"],
+    "title": "مسجد نبویﷺ",
+    "date": "20-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779250638/2.Madiney_ki_Masajid_Zamana_news_2026-05-20_lefxc1.jpg",
+    "excerpt": "بیت اللہ کی حاضری کے لیے ہماری روانگی کا دن ہماری زندگی کا ایک یادگار دن تھا۔ لاہور ایئرپورٹ کے لیے ہم شدید بارش میں روانہ ہوئے...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
              <p><strong>مسجد نبویﷺ</strong></p>
 <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -7981,17 +8029,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
+  },
 
-    {
-        "id": 202,
-        "category": ["column"],
-        "title": "حج ڈائری۔ حاجی شبیر احمد شگری کی کتاب 'مدینتہ اہل بیت (ع)' سے انتخاب",
-        "date": "19-05-2026",
-        "paper": "روزنامہ زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779175200/Zamana_news_2026-05-19_ywf3l4.jpg",
-        "excerpt": "بیت اللہ کی حاضری کے لیے ہماری روانگی کا دن ہماری زندگی کا ایک یادگار دن تھا۔ لاہور ایئرپورٹ کے لیے ہم شدید بارش میں روانہ ہوئے...",
-        "content": `
+  {
+    "id": 202,
+    "category": ["column"],
+    "title": "حج ڈائری۔ حاجی شبیر احمد شگری کی کتاب 'مدینتہ اہل بیت (ع)' سے انتخاب",
+    "date": "19-05-2026",
+    "paper": "روزنامہ زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1779175200/Zamana_news_2026-05-19_ywf3l4.jpg",
+    "excerpt": "بیت اللہ کی حاضری کے لیے ہماری روانگی کا دن ہماری زندگی کا ایک یادگار دن تھا۔ لاہور ایئرپورٹ کے لیے ہم شدید بارش میں روانہ ہوئے...",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
 
@@ -8008,16 +8056,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
         `
-    },
-    {
-        "id": 123,
-        "category": "column",
-        "title": "حسینیت کی فتح",
-        "date": "08 اپریل 2026",
-        "paper": "روزنامہ مشرق، زمانہ نیوز، اسلام ٹائمز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152729/images_lwhvar.jpg",
-        "excerpt": " بڑے بڑے دعوے کیے گئے، کہ یہاں کا دفاعی نظام چند لمحوں کی مار ہے اور یہ کہ اس قوم کو 'پتھر کے دور' میں واپس دھکیل کر تاریخ کا دھارا بدل دیا جائے گا۔ لیکن اس کے بالکل برعکس  خود دشمن کو خطے سے بے دخل ہونا پڑرہا ہے خطے میں اپنے اہم ٹھکانوں سے ہاتھ دھونا پڑا۔ ",
-        "content": `
+  },
+  {
+    "id": 123,
+    "category": "column",
+    "title": "حسینیت کی فتح",
+    "date": "08 اپریل 2026",
+    "paper": "روزنامہ مشرق، زمانہ نیوز، اسلام ٹائمز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1776152729/images_lwhvar.jpg",
+    "excerpt": " بڑے بڑے دعوے کیے گئے، کہ یہاں کا دفاعی نظام چند لمحوں کی مار ہے اور یہ کہ اس قوم کو 'پتھر کے دور' میں واپس دھکیل کر تاریخ کا دھارا بدل دیا جائے گا۔ لیکن اس کے بالکل برعکس  خود دشمن کو خطے سے بے دخل ہونا پڑرہا ہے خطے میں اپنے اہم ٹھکانوں سے ہاتھ دھونا پڑا۔ ",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
 
@@ -8081,18 +8129,18 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
+  },
 
 
-    {
-        "id": 122,
-        "category": "column",
-        "title": "ایرانی جنگ کے شطرنجی مہرے",
-        "date": "04 اپریل 2026",
-        "paper": "فیس بک",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1775227089/198abd81-25e2-4119-ac16-84096c7f7e1d.png",
-        "excerpt": " شطرنج کی بساط پر جیسے 'ہاتھی' کو بچانے کے لیے 'گھوڑے' کی ٹیڑھی چال چلنا پڑتی ہے، ایرانی تاریخ اسی حکمتِ عملی کی آئینہ دار ہے۔ چاہے وہ جنگِ قادسیہ کے بعد کا دور ہو یا جدید دور کی پراکسیز، ان کا جنگی فلسفہ یہی رہا ہے کہ دشمن کی ہر حرکت پر نظر رکھو ",
-        "content": `
+  {
+    "id": 122,
+    "category": "column",
+    "title": "ایرانی جنگ کے شطرنجی مہرے",
+    "date": "04 اپریل 2026",
+    "paper": "فیس بک",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/q_auto/f_auto/v1775227089/198abd81-25e2-4119-ac16-84096c7f7e1d.png",
+    "excerpt": " شطرنج کی بساط پر جیسے 'ہاتھی' کو بچانے کے لیے 'گھوڑے' کی ٹیڑھی چال چلنا پڑتی ہے، ایرانی تاریخ اسی حکمتِ عملی کی آئینہ دار ہے۔ چاہے وہ جنگِ قادسیہ کے بعد کا دور ہو یا جدید دور کی پراکسیز، ان کا جنگی فلسفہ یہی رہا ہے کہ دشمن کی ہر حرکت پر نظر رکھو ",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
 
@@ -8136,16 +8184,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
-    {
-        "id": 121,
-        "category": "column",
-        "title": "نگینہِ ہرمز",
-        "date": "20 مارچ 2026",
-        "paper": "فیس بک",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1774065962/90de3d81-f037-43ed-a3ca-38bc6adf170c.png",
-        "excerpt": " یورپ کی ایک مشہورتاریخی کہاوت تھی 'اگر پوری دنیا ایک انگوٹھی ہے، تو ہرمز اس کا نگینہ ہے'۔ ہرمز ایک قدیم مملکت تھی جو اپنی بے پناہ دولت اور خوبصورت بازاروں کی وجہ سے مشہور تھی۔ یہاں دنیا بھر سے ریشم، مصالحے، جواہرات اور گھوڑوں کی تجارت ہوتی تھی۔ ",
-        "content": `
+  },
+  {
+    "id": 121,
+    "category": "column",
+    "title": "نگینہِ ہرمز",
+    "date": "20 مارچ 2026",
+    "paper": "فیس بک",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1774065962/90de3d81-f037-43ed-a3ca-38bc6adf170c.png",
+    "excerpt": " یورپ کی ایک مشہورتاریخی کہاوت تھی 'اگر پوری دنیا ایک انگوٹھی ہے، تو ہرمز اس کا نگینہ ہے'۔ ہرمز ایک قدیم مملکت تھی جو اپنی بے پناہ دولت اور خوبصورت بازاروں کی وجہ سے مشہور تھی۔ یہاں دنیا بھر سے ریشم، مصالحے، جواہرات اور گھوڑوں کی تجارت ہوتی تھی۔ ",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">    
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
 
@@ -8191,16 +8239,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
-    {
-        "id": 117,
-        "category": ["column",],
-        "title": "ڈاکٹر علی لاریجانی شہید: سفیرِ کشمیر و فلسطین",
-        "date": "18 مارچ 2026",
-        "paper": "فیس بک",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773854140/a8255b29-fdba-4630-8ba7-8ccc43341a94.png",
-        "excerpt": " شہید علی لاریجانی نےحضرت امام حسین علیہ السلام کا یہ قول ٹویٹ کیا :میں موت کو سعادت اور ظالموں کے ساتھ زندگی کو ذلت سمجھتا ہوں۔  ",
-        "content": `
+  },
+  {
+    "id": 117,
+    "category": ["column",],
+    "title": "ڈاکٹر علی لاریجانی شہید: سفیرِ کشمیر و فلسطین",
+    "date": "18 مارچ 2026",
+    "paper": "فیس بک",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773854140/a8255b29-fdba-4630-8ba7-8ccc43341a94.png",
+    "excerpt": " شہید علی لاریجانی نےحضرت امام حسین علیہ السلام کا یہ قول ٹویٹ کیا :میں موت کو سعادت اور ظالموں کے ساتھ زندگی کو ذلت سمجھتا ہوں۔  ",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8255,17 +8303,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
+  },
 
-    {
-        "id": 116,
-        "category": ["column",],
-        "title": "شہید خامنہ ای مرکز وحدت امت",
-        "date": "14 مارچ 2026",
-        "paper": "زمانہ نیوز،اسلام تائمز،پبلک پاور",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773492523/islamtimes_2026-03-14_wgvd72.png",
-        "excerpt": "بے شک تمہاری یہ امت ایک ہی امت ہے اور میں تمہارا رب ہوں، پس میری ہی عبادت کرو۔\" یہ سورہ انبیاء",
-        "content": `
+  {
+    "id": 116,
+    "category": ["column",],
+    "title": "شہید خامنہ ای مرکز وحدت امت",
+    "date": "14 مارچ 2026",
+    "paper": "زمانہ نیوز،اسلام تائمز،پبلک پاور",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773492523/islamtimes_2026-03-14_wgvd72.png",
+    "excerpt": "بے شک تمہاری یہ امت ایک ہی امت ہے اور میں تمہارا رب ہوں، پس میری ہی عبادت کرو۔\" یہ سورہ انبیاء",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8318,17 +8366,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
+  },
 
-    {
-        "id": 115,
-        "category": "column",
-        "title": "نعرہِ حیدری سے اسوہِ حیدری تک",
-        "date": "[12 مارچ 2026]",
-        "paper": "زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773492344/zamana_news_2026-03-12_rn1lr9.jpg",
-        "excerpt": "آج تک کسی کو یہ سعادت حاصل نہیں ہوسکی کہ کعبے میں ولادت پائی ہو اور مسجد میں شہادت پائی ہو۔ انسانی تاریخ میں امیر المومنین حضرت علی ابن ابی طالب علیہ السلام کی ذاتِ گرامی وہ واحد اور بے مثال ہستی ہے جس کا آغاز اور انجام دونوں ہی معجزہ  ہیں۔",
-        "content": `
+  {
+    "id": 115,
+    "category": "column",
+    "title": "نعرہِ حیدری سے اسوہِ حیدری تک",
+    "date": "[12 مارچ 2026]",
+    "paper": "زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1773492344/zamana_news_2026-03-12_rn1lr9.jpg",
+    "excerpt": "آج تک کسی کو یہ سعادت حاصل نہیں ہوسکی کہ کعبے میں ولادت پائی ہو اور مسجد میں شہادت پائی ہو۔ انسانی تاریخ میں امیر المومنین حضرت علی ابن ابی طالب علیہ السلام کی ذاتِ گرامی وہ واحد اور بے مثال ہستی ہے جس کا آغاز اور انجام دونوں ہی معجزہ  ہیں۔",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8361,16 +8409,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
-    {
-        "id": 113,
-        "category": "column",
-        "title": "ثقافتی ورثے بھی جرائم کی زد میں",
-        "date": "[تاریخ لکھیں، مثلاً 4 مارچ 2026]",
-        "paper": "زمانہ نیوز",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772979980/saqafati_wirsa_2026-03-04_cvgmij.jpg",
-        "excerpt": "تہران میں موجود  گلستان محل، جو کہ یونیسکو کے عالمی ثقافتی ورثے میں شامل ہے، پر بھی  فضائی حملہ کیا گیاجس سے محل کو  نقصان پہنچا۔",
-        "content": `
+  },
+  {
+    "id": 113,
+    "category": "column",
+    "title": "ثقافتی ورثے بھی جرائم کی زد میں",
+    "date": "[تاریخ لکھیں، مثلاً 4 مارچ 2026]",
+    "paper": "زمانہ نیوز",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772979980/saqafati_wirsa_2026-03-04_cvgmij.jpg",
+    "excerpt": "تہران میں موجود  گلستان محل، جو کہ یونیسکو کے عالمی ثقافتی ورثے میں شامل ہے، پر بھی  فضائی حملہ کیا گیاجس سے محل کو  نقصان پہنچا۔",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8398,16 +8446,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
-    {
-        "id": 111,
-        "category": "column",
-        "title": "اسلام کا عظیم لیڈر، آیت اللہ العظمی علی خامنہ ایؒ شہید",
-        "date": " 4 مارچ 2026",
-        "paper": "مشرق،زمانہ،اسلام ٹائمز،پبلک پاور، صدائے وطن،آج کی بات",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772978551/0a37ac93-3f7e-4635-9f80-b19b0daabfae.png",
-        "excerpt": "آیت اللہ العظمٰی سید علی خامنہ ایؒ کسی ایک ملک یا  مسلک کا لیڈر نہیں تھے۔وہ عالم اسلام کے مقبول  لیڈر تھے۔ انقلاب اسلامی ایران سے پہلے سے  اب تک  ان کی زندگی عالم اسلام کی خدمت میں گزری۔ انھوں نے اپنی تمام زندگی ایک سچا سپاہی بن کر گزاری۔ ",
-        "content": `
+  },
+  {
+    "id": 111,
+    "category": "column",
+    "title": "اسلام کا عظیم لیڈر، آیت اللہ العظمی علی خامنہ ایؒ شہید",
+    "date": " 4 مارچ 2026",
+    "paper": "مشرق،زمانہ،اسلام ٹائمز،پبلک پاور، صدائے وطن،آج کی بات",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772978551/0a37ac93-3f7e-4635-9f80-b19b0daabfae.png",
+    "excerpt": "آیت اللہ العظمٰی سید علی خامنہ ایؒ کسی ایک ملک یا  مسلک کا لیڈر نہیں تھے۔وہ عالم اسلام کے مقبول  لیڈر تھے۔ انقلاب اسلامی ایران سے پہلے سے  اب تک  ان کی زندگی عالم اسلام کی خدمت میں گزری۔ انھوں نے اپنی تمام زندگی ایک سچا سپاہی بن کر گزاری۔ ",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8483,16 +8531,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
-    {
-        "id": 110,
-        "category": "column",
-        "title": "آغا علی موسوی کی زندگی",
-        "date": " 8 فروری 2026",
-        "paper": "زمانہ نیوز/اسلام ٹائمز/5 سی این",
-        "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772971392/09640d8a-468b-4c7c-83d6-9f2055565600.png",
-        "excerpt": "مرحوم آغا سید علی موسوی نے ساری زندگی نہ صرف خود دین کی خدمت کی بلکہ اپنے بیٹوں اور اولاد میں  بھی علما چھوڑے ہیں۔ جن میں آغا سیدمظاہرموسوی، مرحوم آغا سید حیدرموسوی، آغا سید رضی موسوی، آغا سید رضا موسوی،آغا سیدعباس موسوی اور آغا حیدر موسوی کے بیٹے آغا جواد موسوی اپنے بزرگوں کے نقش قدم پر چلتے ہوئے مذہب و ملت کی خدمات انجام دے رہے ہیں۔",
-        "content": `
+  },
+  {
+    "id": 110,
+    "category": "column",
+    "title": "آغا علی موسوی کی زندگی",
+    "date": " 8 فروری 2026",
+    "paper": "زمانہ نیوز/اسلام ٹائمز/5 سی این",
+    "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1772971392/09640d8a-468b-4c7c-83d6-9f2055565600.png",
+    "excerpt": "مرحوم آغا سید علی موسوی نے ساری زندگی نہ صرف خود دین کی خدمت کی بلکہ اپنے بیٹوں اور اولاد میں  بھی علما چھوڑے ہیں۔ جن میں آغا سیدمظاہرموسوی، مرحوم آغا سید حیدرموسوی، آغا سید رضی موسوی، آغا سید رضا موسوی،آغا سیدعباس موسوی اور آغا حیدر موسوی کے بیٹے آغا جواد موسوی اپنے بزرگوں کے نقش قدم پر چلتے ہوئے مذہب و ملت کی خدمات انجام دے رہے ہیں۔",
+    "content": `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify; direction: rtl;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8552,7 +8600,7 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </div>
         </div>
     `
-    },
+  },
 
 
 
@@ -8566,15 +8614,15 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
 
 
-    {
-        id: 79,
-        category: "column",
-        title: "محسنِ شمال: آغا سید احمد علی شاہ (تحریری کالم + گوگل تجزیہ)",
-        date: "26 جنوری 2026",
-        paper: "روزنامہ زمانہ / یوم تکبیر",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226069/25_jan_2026_zamana_news_ozicb1.jpg",
-        excerpt: "گلگت بلتستان کے عظیم محسن آغا سید احمد علی شاہ کی خدمات پر ایک مکمل ڈیجیٹل پیکج۔ اس میں شامل ہے: اخباری کالم، دستاویزی فلم، اور گوگل (Google) کا حیران کن تجزیاتی مباحثہ...",
-        content: `
+  {
+    id: 79,
+    category: "column",
+    title: "محسنِ شمال: آغا سید احمد علی شاہ (تحریری کالم + گوگل تجزیہ)",
+    date: "26 جنوری 2026",
+    paper: "روزنامہ زمانہ / یوم تکبیر",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226069/25_jan_2026_zamana_news_ozicb1.jpg",
+    excerpt: "گلگت بلتستان کے عظیم محسن آغا سید احمد علی شاہ کی خدمات پر ایک مکمل ڈیجیٹل پیکج۔ اس میں شامل ہے: اخباری کالم، دستاویزی فلم، اور گوگل (Google) کا حیران کن تجزیاتی مباحثہ...",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: حاجی شبیر احمد شگری</strong></p>
@@ -8705,21 +8753,21 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
             </ul>
         </div>
     `
-    },
+  },
 
-    {
-        id: 82,
-        category: "column",
-        title: "عظیم روحانی پیشوا: حضرت آغا سید علی الحسینی سبزواریؒ (شگری کی ڈائری)",
-        date: "25 دسمبر 2025",
-        paper: "روزنامہ بادِشمال",
+  {
+    id: 82,
+    category: "column",
+    title: "عظیم روحانی پیشوا: حضرت آغا سید علی الحسینی سبزواریؒ (شگری کی ڈائری)",
+    date: "25 دسمبر 2025",
+    paper: "روزنامہ بادِشمال",
 
-        // نوٹ: اگر آپ کے پاس آغا صاحب کی کوئی صاف تصویر ہو تو اس لنک کی جگہ وہ لگا دیں
-        // فی الحال میں نے اخبار کا تراشہ ہی ہیڈر میں لگایا ہے
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770063584/603046877_909452298096722_1432178706426065103_n.jpg_zzbkv7.jpg",
+    // نوٹ: اگر آپ کے پاس آغا صاحب کی کوئی صاف تصویر ہو تو اس لنک کی جگہ وہ لگا دیں
+    // فی الحال میں نے اخبار کا تراشہ ہی ہیڈر میں لگایا ہے
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770063584/603046877_909452298096722_1432178706426065103_n.jpg_zzbkv7.jpg",
 
-        excerpt: "گلگت بلتستان کی عظیم روحانی شخصیت حضرت آغا سید علی الحسینی سبزواریؒ کی خدمات اور ان کی حیاتِ مبارکہ پر ایک خصوصی تحریر۔ پڑھیے 'شگری کی ڈائری' میں...",
-        content: `
+    excerpt: "گلگت بلتستان کی عظیم روحانی شخصیت حضرت آغا سید علی الحسینی سبزواریؒ کی خدمات اور ان کی حیاتِ مبارکہ پر ایک خصوصی تحریر۔ پڑھیے 'شگری کی ڈائری' میں...",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8763,19 +8811,19 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
-    {
-        id: 83,
-        category: "column",
-        title: "جرمِ سیاست کا عہد تمام ہوا: میاں منظور احمد وٹو مرحوم کی یاد میں",
-        date: "16 دسمبر 2025",
-        paper: "روزنامہ زمانہ / یوم تکبیر / سیاسیات / 5CN",
+  },
+  {
+    id: 83,
+    category: "column",
+    title: "جرمِ سیاست کا عہد تمام ہوا: میاں منظور احمد وٹو مرحوم کی یاد میں",
+    date: "16 دسمبر 2025",
+    paper: "روزنامہ زمانہ / یوم تکبیر / سیاسیات / 5CN",
 
-        // ہیڈر امیج (جو آپ نے پہلی بھیجی)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770064487/600336158_903019572073328_8946076102017223172_n.jpg_dkgpxw.jpg",
+    // ہیڈر امیج (جو آپ نے پہلی بھیجی)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770064487/600336158_903019572073328_8946076102017223172_n.jpg_dkgpxw.jpg",
 
-        excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرینہ دوست میاں منظور احمد وٹو مرحوم کی وفات پر ایک پردرد خراج تحسین۔ یہ کالم روزنامہ زمانہ، یوم تکبیر، سیاسیات اور دیگر اخبارات میں شائع ہوا۔",
-        content: `
+    excerpt: "پنجاب کے سابق وزیراعلیٰ اور میرے دیرینہ دوست میاں منظور احمد وٹو مرحوم کی وفات پر ایک پردرد خراج تحسین۔ یہ کالم روزنامہ زمانہ، یوم تکبیر، سیاسیات اور دیگر اخبارات میں شائع ہوا۔",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8834,17 +8882,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
+  },
 
-    {
-        id: 84,
-        category: "column",
-        title: "سہیل مجتبیٰ کی جدائی کا زخم، جو کبھی نہیں بھرے گا",
-        date: "06 دسمبر 2025",
-        paper: "سوشل میڈیا / شگری کی ڈائری",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770100668/594417754_895546226153996_8245514203811113249_n.jpg_f24euv.jpg",
-        excerpt: "جوانی کی موت ہمیشہ دلوں پر ایسے زخم چھوڑ جاتی ہے جو کبھی نہیں بھرتے۔ کڑیل جوان کی رحلت صرف ایک فرد کا بچھڑ جانا نہیں ہوتی بلکہ امیدوں، خوابوں اور مستقبل کے چمکتے سورج کا غروب ہو جانا ہوتی ہے۔",
-        content: `
+  {
+    id: 84,
+    category: "column",
+    title: "سہیل مجتبیٰ کی جدائی کا زخم، جو کبھی نہیں بھرے گا",
+    date: "06 دسمبر 2025",
+    paper: "سوشل میڈیا / شگری کی ڈائری",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770100668/594417754_895546226153996_8245514203811113249_n.jpg_f24euv.jpg",
+    excerpt: "جوانی کی موت ہمیشہ دلوں پر ایسے زخم چھوڑ جاتی ہے جو کبھی نہیں بھرتے۔ کڑیل جوان کی رحلت صرف ایک فرد کا بچھڑ جانا نہیں ہوتی بلکہ امیدوں، خوابوں اور مستقبل کے چمکتے سورج کا غروب ہو جانا ہوتی ہے۔",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -8928,20 +8976,20 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
+  },
 
-    {
-        id: 85,
-        category: "column",
-        title: "سوشل میڈیا: رحمت ہے یا زحمت؟ (رہبر معظم اور قرآنی تعلیمات کی روشنی میں)",
-        date: "12 اکتوبر 2025",
-        paper: "روزنامہ مشرق / سیاسیات / اسلام ٹائمز",
+  {
+    id: 85,
+    category: "column",
+    title: "سوشل میڈیا: رحمت ہے یا زحمت؟ (رہبر معظم اور قرآنی تعلیمات کی روشنی میں)",
+    date: "12 اکتوبر 2025",
+    paper: "روزنامہ مشرق / سیاسیات / اسلام ٹائمز",
 
-        // ہیڈر امیج (پہلی تصویر)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770102485/579204379_877016388006980_7602138232531638663_n.jpg_gpmm21.jpg",
+    // ہیڈر امیج (پہلی تصویر)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770102485/579204379_877016388006980_7602138232531638663_n.jpg_gpmm21.jpg",
 
-        excerpt: "سوشل میڈیا آج کے دور کا سب سے بڑا ہتھیار ہے۔ کیا ہم اسے اسلام اور اخلاقیات کے دائرے میں استعمال کر رہے ہیں یا یہ ہمیں تباہی کی طرف لے جا رہا ہے؟ رہبر معظم کے فرمان اور قرآنی تعلیمات کی روشنی میں ایک فکر انگیز تحریر۔",
-        content: `
+    excerpt: "سوشل میڈیا آج کے دور کا سب سے بڑا ہتھیار ہے۔ کیا ہم اسے اسلام اور اخلاقیات کے دائرے میں استعمال کر رہے ہیں یا یہ ہمیں تباہی کی طرف لے جا رہا ہے؟ رہبر معظم کے فرمان اور قرآنی تعلیمات کی روشنی میں ایک فکر انگیز تحریر۔",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -9015,20 +9063,20 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
+  },
 
-    {
-        id: 86,
-        category: ["column",],
-        title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ",
-        date: "10 ستمبر 2025",
-        paper: "ملکی و غیر ملکی اخبارات",
+  {
+    id: 86,
+    category: ["column",],
+    title: "ہفتہ وحدت: اُمت مسلمہ کے اتحاد کا عملی نسخہ",
+    date: "10 ستمبر 2025",
+    paper: "ملکی و غیر ملکی اخبارات",
 
-        // ہیڈر امیج (پہلی تصویر)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770103349/546884771_824969799878306_135211653109535469_n.jpg_u6akk7.jpg",
+    // ہیڈر امیج (پہلی تصویر)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770103349/546884771_824969799878306_135211653109535469_n.jpg_u6akk7.jpg",
 
-        excerpt: "ماہ ربیع الاول اور ہفتہ وحدت کے موقع پر لکھی گئی یہ خصوصی تحریر امت مسلمہ کے درمیان اتحاد اور یگانگت کا درس دیتی ہے۔ یہ کالم ملکی اور غیر ملکی میڈیا میں نمایاں طور پر شائع ہوا۔",
-        content: `
+    excerpt: "ماہ ربیع الاول اور ہفتہ وحدت کے موقع پر لکھی گئی یہ خصوصی تحریر امت مسلمہ کے درمیان اتحاد اور یگانگت کا درس دیتی ہے۔ یہ کالم ملکی اور غیر ملکی میڈیا میں نمایاں طور پر شائع ہوا۔",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -9089,19 +9137,19 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
-    {
-        id: 81,
-        category: "column",
-        title: "مثالی سول سرونٹ کو خراج تحسین: جی ایم سکندر مرحوم کی یاد میں",
-        date: "13 اگست 2025",
-        paper: "روزنامہ مشرق / اسلام ٹائمز / سیاسیات",
+  },
+  {
+    id: 81,
+    category: "column",
+    title: "مثالی سول سرونٹ کو خراج تحسین: جی ایم سکندر مرحوم کی یاد میں",
+    date: "13 اگست 2025",
+    paper: "روزنامہ مشرق / اسلام ٹائمز / سیاسیات",
 
-        // ہیڈر امیج (مشرق والی تصویر)
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770061326/531871788_802970745411545_4860924480770808624_n.jpg_f1rtbj.jpg",
+    // ہیڈر امیج (مشرق والی تصویر)
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1770061326/531871788_802970745411545_4860924480770808624_n.jpg_f1rtbj.jpg",
 
-        excerpt: "پاکستان کے نامور بیوروکریٹ اور مثالی سول سرونٹ جی ایم سکندر مرحوم کی گراں قدر خدمات پر ایک شاندار خراج تحسین۔ روزنامہ مشرق اور دیگر اخبارات کی زینت...",
-        content: `
+    excerpt: "پاکستان کے نامور بیوروکریٹ اور مثالی سول سرونٹ جی ایم سکندر مرحوم کی گراں قدر خدمات پر ایک شاندار خراج تحسین۔ روزنامہ مشرق اور دیگر اخبارات کی زینت...",
+    content: `
         <div style="font-family: 'Jameel Noori Nastaleeq', serif; font-size: 1.1em; line-height: 1.8; text-align: justify;">
             
             <p><strong>تحریر: شبیر احمد شگری</strong></p>
@@ -9232,16 +9280,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                 </ul>
             </div>
     `
-    },
-    {
-        id: 20,
-        category: ["column", "islamic_unity"],   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
-        title: " جڑانوالہ واقعہ ہماری زندگی کا ایک سیاہ دن",
-        date: "16 ستمبر 2023",
-        paper: "نوائے وقت۔ فیملی میگزین",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1769748549/481109547_674631078245513_7373262913297564448_n.jpg_iupdqb.jpg",
-        excerpt: "جڑانوالہ کے افسوسناک واقعے کے پس منظر میں لکھی گئی میری تحریر...",
-        content: `
+  },
+  {
+    id: 20,
+    category: ["column", "islamic_unity"],   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
+    title: " جڑانوالہ واقعہ ہماری زندگی کا ایک سیاہ دن",
+    date: "16 ستمبر 2023",
+    paper: "نوائے وقت۔ فیملی میگزین",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1769748549/481109547_674631078245513_7373262913297564448_n.jpg_iupdqb.jpg",
+    excerpt: "جڑانوالہ کے افسوسناک واقعے کے پس منظر میں لکھی گئی میری تحریر...",
+    content: `
                 <p>جڑانوالہ کا سانحہ ہماری تاریخ کا ایک افسوسناک باب ہے۔ (یہاں آپ مزید اردو متن لکھ سکتے ہیں)...</p>
                 
                 <div style="margin-top:20px; background:#f4f4f4; padding:10px; border-radius:5px;">
@@ -9251,16 +9299,16 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
                     </a>
                 </div>
             `
-    },
-    {
-        id: 200,
-        category: ["column", "islamic_unity"],   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
-        title: " پاک ایران تجارتی اقتصادی لازوال دوستی",
-        date: "17 Dec 2014",
-        paper: "روزنامہ ابتک",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1777538085/3586654a-a10f-47eb-ac66-2d2c38cbcd67.png",
-        excerpt: "پاک ایران تجارتی،و اقتصادی اور دوستی کے حولے سے لکھا گیا کالم...",
-        content: `
+  },
+  {
+    id: 200,
+    category: ["column", "islamic_unity"],   // میں نے اسے 'column' کر دیا ہے تاکہ کالمز میں نظر آئے
+    title: " پاک ایران تجارتی اقتصادی لازوال دوستی",
+    date: "17 Dec 2014",
+    paper: "روزنامہ ابتک",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1777538085/3586654a-a10f-47eb-ac66-2d2c38cbcd67.png",
+    excerpt: "پاک ایران تجارتی،و اقتصادی اور دوستی کے حولے سے لکھا گیا کالم...",
+    content: `
 <p>تحریر:شبیر احمد شگری</p>
                 <p>حال ہی میں ایرانی پارلیمنٹ (مجلسِ شوریٰ اسلامی) کے اسپیکر ڈاکٹر علی لاریجانی اور اسلامی جمہوریہ ایران کے وزیرِ خزانہ علی طیب نیا نے پاکستان کا دورہ کیا۔ اپنے اس دورے میں انہوں نے ایران اور پاکستان کے درمیان سیاسی، تجارتی اور اقتصادی تعلقات کو وسعت دینے اور فروغ دینے پر زور دیا۔
 ڈاکٹر علی لاریجانی اور علی طیب نیا نے وفاقی دارالحکومت اسلام آباد میں صدرِ پاکستان ممنون حسین، وزیراعظم میاں محمد نواز شریف، وزیرِ خزانہ اسحاق ڈار، وزیرِ پٹرولیم و قدرتی وسائل شاہد خاقان عباسی، اسپیکر قومی اسمبلی سردار ایاز صادق، چیئرمین سینیٹ نیئر حسین بخاری اور دیگر اعلیٰ حکومتی رہنماؤں سے ملاقاتیں کیں۔ ان ملاقاتوں میں دوطرفہ تجارتی، اقتصادی اور سیاسی امور پر تبادلہ خیال کیا گیا اور تعلقات کو مزید فروغ دینے پر زور دیا گیا۔ صدرِ پاکستان ممنون حسین نے پاک ایران تعلقات کی وسعت پر زور دیتے ہوئے پاک ایران سرحدی علاقوں میں بعض شرپسند عناصر کی جانب سے بدامنی اور ناخوشگوار کارروائیوں پر افسوس کا اظہار کیا اور کہا کہ ایران اور پاکستان کو ہرگز یہ اجازت نہیں دینی چاہیے کہ کوئی دونوں ممالک کے تعلقات میں دراڑیں ڈال سکے۔
@@ -9277,17 +9325,17 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 
                 </div>
             `
-    },
+  },
 
-    {
-        id: 201,
-        category: ["column",],
-        title: " حضرت امام رضا علیہ السلام کی حیات و کمالات ",
-        date: "01 May 2026",
-        paper: "روزنامہ زمانہ نیوز",
-        image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1777619782/e0c70689-9e77-4a75-8fab-ab9d9bf7f78b.png ",
-        excerpt: "روزولادت امام علی ابن موسیٰ الرضا علیہ السلام...",
-        content: `
+  {
+    id: 201,
+    category: ["column",],
+    title: " حضرت امام رضا علیہ السلام کی حیات و کمالات ",
+    date: "01 May 2026",
+    paper: "روزنامہ زمانہ نیوز",
+    image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1777619782/e0c70689-9e77-4a75-8fab-ab9d9bf7f78b.png ",
+    excerpt: "روزولادت امام علی ابن موسیٰ الرضا علیہ السلام...",
+    content: `
 <p>تحریر:شبیر احمد شگری</p>
                 <p>امام وہ ہستی ہے جسے اللہ تعالیٰ نے پیغمبرِ اکرم (ص) کے بعد نوعِ انسانی کی ہدایت کے لیے منتخب کیا ہو۔ ضروری ہے کہ وہ ہر گناہ اور برائی سے پاک اور معصوم ہو، اور بحکمِ خدا، علمِ غیب سے آراستہ ہو۔ آل رسول ﷺ کی پاکیزہ ہستیوں میں آٹھواں درخشاں ستارہ حضرت امام رضا علیہ السلام کی ذاتِ گرامی ہے۔ امام رضا علیہ السلام کا حسنِ اخلاق اور سیرت ہم سب کو جینے کا سلیقہ سکھاتی ہے۔آپ نے کبھی اپنی گفتگو سے کسی کو خفا نہیں کیا۔کسی کی بات کو درمیان سے نہیں کاٹا۔ضرورت مندوں کی دل کھول کر مدد فرمائی۔اپنے خادموں کے ساتھ ایک ہی دسترخوان پر بیٹھ کر کھانا تناول فرمایا۔آپ کے چہرے پر ہمیشہ مسکراہٹ ہوتی، لیکن کبھی بلند آواز سے قہقہہ نہیں لگایا۔دوسروں کی موجودگی میں کبھی پاؤں پھیلا کر نہیں بیٹھے اور نہ ہی دیوار سے ٹیک لگائی۔مہمانوں کی ضیافت خود اپنے ہاتھوں سے کرتے۔لباس، بالوں اور جسم کی صفائی و پاکیزگی کا بے حد خیال رکھتے۔
 حضرت امام علی ابن موسٰی الرضا علیہ السلام ایک طرف معاشرے کے دکھ درد بانٹتے، تو دوسری طرف خالقِ کائنات کے حضور آپ کی بندگی بے مثال تھی ۔ آپ راتوں کو کم سوتے اور زیادہ تر وقت عبادت میں گزارتے۔کثرت سے روزے رکھتے اور آپ کے سجدے بہت طویل ہوتے۔قرآنِ مجید کی تلاوت فرماتے اور نمازِ اول وقت کے سختی سے پابند تھے۔
@@ -9299,5 +9347,5 @@ image: "https://res.cloudinary.com/dlafcjt6z/image/upload/v1785226737/nody-%D9%8
 معبد بن جنید شامی بیان کرتے ہیں کہ میں نے امام رضا علیہ السلام کی خدمت میں حاضر ہو کر عرض کی: "لوگ آپ کی غیر معمولی کرامات کے بہت چرچے کرتے ہیں۔ مجھے کوئی ایسا معجزہ دکھائیں جسے میں خود دیکھ سکوں۔" امامؑ نے پوچھا: "کیا چاہتے ہو؟" میں نے کہا: "میرے والدین انتقال کر چکے ہیں، انہیں زندہ کر دیجیے۔" امامؑ نے فوراً فرمایا: "جاؤ، اپنے گھر جاؤ، میں نے انہیں زندہ کر دیا ہے۔" معبد کہتا ہے کہ خدا کی قسم! جب میں گھر پہنچا تو میرے ماں باپ زندہ بیٹھے تھے۔ وہ دس دن تک زندہ رہے اور پھر اللہ نے انہیں دوبارہ وفات دے دی۔
 مامون کی ولی عہدی کے دور میں خراسان میں شدید قحط پڑ گیا اور طویل عرصے تک بارش نہ ہوئی۔ مامون نے امام رضا علیہ السلام سے التجا کی کہ وہ نمازِ استسقاء (بارش کی نماز) پڑھیں۔ امامؑ نے شرط رکھی کہ لوگ تین دن روزے رکھیں۔ پیر کے دن، ایک بہت بڑا ہجوم لے کر آپؑ صحرا کی طرف نکلے۔ امامؑ نے آسمان کی طرف ہاتھ اٹھا کر دعا کی: "اے پروردگار! تو نے ہم اہلِ بیتؑ کا حق لوگوں پر واجب کیا ہے، اور یہ تیرے حکم پر ہم سے متوسل ہوئے ہیں۔ ان پر اپنی رحمت کی بارش نازل فرما، لیکن انہیں اتنا وقت دے کہ یہ خیریت سے اپنے گھروں کو پہنچ جائیں۔" کچھ ہی دیر بعد آسمان پر بادل چھا گئے، بجلیاں چمکیں اور ایسی موسلادھار بارش ہوئی کہ سارا علاقہ سیراب ہو گیا۔سبحان اللہ</p>
             `
-    },
+  },
 ]
