@@ -290,17 +290,22 @@ function ArticlesContent() {
           </section>
 
           <section className="container mx-auto px-4 py-8 relative z-50">
-            <div className="flex flex-col md:flex-row gap-6 items-center justify-between mb-12">
-              <div className="relative w-full md:w-1/3 group">
-                <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#0b314d] transition-colors" />
+            {/* Prominent Global Search Bar */}
+            <div className="flex flex-col items-center justify-center mb-10 w-full max-w-4xl mx-auto">
+              <div className="relative w-full group">
+                <FaSearch className={`absolute ${locale === 'en' ? 'left-6' : 'right-6'} top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#0b314d] text-2xl transition-colors`} />
                 <input
                   type="text"
-                  placeholder={locale === 'en' ? 'Search topics...' : locale === 'fa' ? 'جستجوی موضوعات...' : 'موضوع تلاش کریں...'}
-                  className={`w-full bg-white border-2 border-gray-100 rounded-2xl py-4 px-12 ${locale === 'en' ? 'text-left' : 'text-right'} focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/5 transition-all shadow-sm ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
+                  placeholder={locale === 'en' ? 'Search columns by title or topic... (e.g. Naad-e-Ali)' : locale === 'fa' ? 'جستجوی مقالات با عنوان یا موضوع...' : 'کوئی بھی کالم یا موضوع تلاش کریں... (مثلاً: نادِ علی)'}
+                  className={`w-full bg-white border-2 border-gray-200 rounded-full py-5 ${locale === 'en' ? 'pl-16 pr-8 text-left' : 'pr-16 pl-8 text-right'} text-lg focus:outline-none focus:border-[#0b314d] focus:ring-4 focus:ring-[#0b314d]/10 transition-all shadow-md hover:shadow-lg ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  dir={locale === 'en' ? 'ltr' : 'rtl'}
                 />
               </div>
+            </div>
+
+            <div className="flex flex-col gap-6 items-center justify-center mb-12">
 
               {/* ڈراپ ڈاؤن مینو کے لیے hover:z-50 اور focus-within:z-50 کا اضافہ کیا گیا ہے */}
               <div className="flex flex-wrap justify-center gap-3" dir={locale === 'en' ? 'ltr' : 'rtl'}>
