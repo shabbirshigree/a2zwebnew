@@ -29,7 +29,10 @@ export default function FloatingButtons() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      const nextShowScrollTop = window.scrollY > 300;
+      setShowScrollTop((currentShowScrollTop) =>
+        currentShowScrollTop === nextShowScrollTop ? currentShowScrollTop : nextShowScrollTop
+      );
     };
 
     window.addEventListener("scroll", handleScroll);

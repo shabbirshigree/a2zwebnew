@@ -9,7 +9,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
-import { urduArticles } from './index.js';
+import { urduArticles, allArticles } from './index.js';
 import CldImage from '../components/CldImage';
 
 function ArticlesContent() {
@@ -50,7 +50,7 @@ function ArticlesContent() {
       setSelectedArticle(null);
       return;
     }
-    const matched = (urduArticles || []).find((item) => String(item.id) === String(readId));
+    const matched = (allArticles || []).find((item) => String(item.id) === String(readId));
     if (!matched) return;
 
     const key = getArticleKey(matched);
@@ -391,15 +391,68 @@ function ArticlesContent() {
 
       {selectedArticle && (
         <section className="container mx-auto px-4 py-12 md:py-20 animate-fadeIn" dir={locale === 'en' ? 'ltr' : 'rtl'}>
-          <button
-            onClick={() => {
-              setSelectedArticle(null);
-              router.push(window.location.pathname, { scroll: false });
-            }}
-            className={`flex items-center gap-3 text-[#0b314d] font-bold mb-10 hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
-          >
-            {locale === 'en' ? <FaArrowLeft /> : <FaArrowLeft className="rotate-180" />} {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
-          </button>
+          <div className="flex flex-wrap items-center justify-between mb-10 gap-4">
+            <button
+              onClick={() => {
+                setSelectedArticle(null);
+                router.push(window.location.pathname, { scroll: false });
+              }}
+              className={`flex items-center gap-3 text-[#0b314d] font-bold hover:gap-5 transition-all bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100 ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}
+            >
+              {locale === 'en' ? <FaArrowLeft /> : <FaArrowLeft className="rotate-180" />} {locale === 'en' ? 'Back to all articles' : locale === 'fa' ? 'بازگشت به همه مقالات' : 'تمام مضامین پر واپس جائیں'}
+            </button>
+
+            <div className="flex items-center gap-2">
+              <span className={`text-sm font-bold text-gray-500 mr-2 ${locale === 'ur' || locale === 'fa' ? 'urdu-text' : ''}`}>
+                {locale === 'en' ? 'Read in:' : locale === 'fa' ? 'بخوانید در:' : 'اس کالم کو پڑھیں:'}
+              </span>
+
+              {allArticles.some(a => a.id === selectedArticle.id.split('-')[0] + '-U') && !selectedArticle.id.endsWith('-U') && (
+                <button 
+                  onClick={() => {
+                    const urArticle = allArticles.find(a => a.id === selectedArticle.id.split('-')[0] + '-U');
+                    if (urArticle) {
+                      setSelectedArticle(urArticle);
+                      router.push(`${window.location.pathname}?read=${urArticle.id}`, { scroll: false });
+                    }
+                  }}
+                  className="px-4 py-2 rounded-xl border border-[#0b314d] text-[#0b314d] hover:bg-[#0b314d] hover:text-white transition-all font-bold urdu-text"
+                >
+                  اردو
+                </button>
+              )}
+
+              {allArticles.some(a => a.id === selectedArticle.id.split('-')[0] + '-F') && !selectedArticle.id.endsWith('-F') && (
+                <button 
+                  onClick={() => {
+                    const faArticle = allArticles.find(a => a.id === selectedArticle.id.split('-')[0] + '-F');
+                    if (faArticle) {
+                      setSelectedArticle(faArticle);
+                      router.push(`${window.location.pathname}?read=${faArticle.id}`, { scroll: false });
+                    }
+                  }}
+                  className="px-4 py-2 rounded-xl border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white transition-all font-bold urdu-text"
+                >
+                  فارسی
+                </button>
+              )}
+
+              {allArticles.some(a => a.id === selectedArticle.id.split('-')[0] + '-E') && !selectedArticle.id.endsWith('-E') && (
+                <button 
+                  onClick={() => {
+                    const enArticle = allArticles.find(a => a.id === selectedArticle.id.split('-')[0] + '-E');
+                    if (enArticle) {
+                      setSelectedArticle(enArticle);
+                      router.push(`${window.location.pathname}?read=${enArticle.id}`, { scroll: false });
+                    }
+                  }}
+                  className="px-4 py-2 rounded-xl border border-[#0b314d] text-[#0b314d] hover:bg-[#0b314d] hover:text-white transition-all font-bold"
+                >
+                  English
+                </button>
+              )}
+            </div>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100">
