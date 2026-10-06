@@ -1,7 +1,7 @@
 export const urduData = [
   {
     "id": "231-U",
-    "category": "column",
+    "category": "other_personalities",
     "title": "ایک شاندار تقریر سے پی ایچ ڈی تک کے سفر کا آنکھوں دیکھا حال",
     "date": "09-16-2026",
     "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1791284038/zamana_news_2026-09-16_at_8.16.01_AM_ymcbqh.jpg",
@@ -19,7 +19,7 @@ export const urduData = [
   },
   {
     "id": "229-U",
-    "category": "column",
+    "category": "munasibat",
     "title": "نادِ علی کا آج کا تازہ اورحیرت انگیز معجزہ: 20 دن سے گمشدہ بچے کی چند گھنٹوں میں بحفاظت واپسی",
     "date": "08-25-2026",
     "image": "https://res.cloudinary.com/dlafcjt6z/image/upload/v1791283576/Naad-e-Ali_Zamana_news_2026-08-25_gg00rp.jpg",
