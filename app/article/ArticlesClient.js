@@ -9,7 +9,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { Navbar, HeroSlider } from '../components/Header';
 import Footer from '../components/Footer';
 import { useLocale } from '../components/LocaleProvider';
-import { urduArticles, allArticles } from './index.js';
+import { urduArticles, englishArticles, farsiArticles, allArticles } from './index.js';
 import CldImage from '../components/CldImage';
 
 function ArticlesContent() {
@@ -76,7 +76,13 @@ function ArticlesContent() {
     return new Date(0);
   };
 
-  const filteredArticles = (urduArticles || [])
+  const currentArticles = locale === 'en' 
+    ? (englishArticles || []) 
+    : locale === 'fa' 
+      ? (farsiArticles || []) 
+      : (urduArticles || []);
+
+  const filteredArticles = (currentArticles || [])
     .filter(article => {
       const title = article.title ? article.title.toLowerCase() : '';
       const matchesSearch = title.includes(searchTerm.toLowerCase());
