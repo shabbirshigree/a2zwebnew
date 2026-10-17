@@ -86,9 +86,84 @@ intro: {
 
   // 5. قرآنی قصص
   stories: [
-    { id: 'WZsQIRCFYPE', title: 'چشمہ حیات (حضرت خضرؑ)' }, { id: 'hAY5a3diWD4', title: 'حضرت سلیمانؑ اور ملکہ سبا' },
-{ id: 'XcVR7Jix3BI', title: 'حضرت یوسفؑ کا قصہ ' }, { id: 'ZgOxnRGzDLs', title: 'ابلیس نے سجدہ کیوں نہ کیا' },
-    { id: 'UaQIT_z9rYU', title: 'حضرت عزیرؑ کا قصہ' }, { id: 'y9O9BTPEBcw', title: 'The Fountain of Life (Eng)' }
+    { 
+      id: 'WZsQIRCFYPE', 
+      title: 'چشمہ حیات (حضرت خضرؑ)',
+      titleEn: 'The Fountain of Life (Prophet Khidr AS)',
+      titleFa: 'چشمه حیات (حضرت خضرؑ)'
+    }, 
+    { 
+      id: 'hAY5a3diWD4', 
+      title: 'حضرت سلیمانؑ اور ملکہ سبا',
+      titleEn: 'Prophet Solomon (AS) & the Queen of Sheba',
+      titleFa: 'حضرت سلیمانؑ و ملکه سبا'
+    },
+    { 
+      id: 'XcVR7Jix3BI', 
+      title: 'حضرت یوسفؑ کا قصہ',
+      titleEn: 'The Story of Prophet Joseph (AS)',
+      titleFa: 'داستان حضرت یوسفؑ'
+    }, 
+    { 
+      id: 'ZgOxnRGzDLs', 
+      title: 'ابلیس نے سجدہ کیوں نہ کیا',
+      titleEn: 'Why Iblis Refused to Prostrate',
+      titleFa: 'چرا ابلیس سجده نکرد'
+    },
+    { 
+      id: 'UaQIT_z9rYU', 
+      title: 'حضرت عزیرؑ کا قصہ',
+      titleEn: 'The Story of Prophet Uzair (AS)',
+      titleFa: 'داستان حضرت عزیرؑ'
+    }, 
+    { 
+      id: 'y9O9BTPEBcw', 
+      title: 'The Fountain of Life (Eng)',
+      titleEn: 'The Fountain of Life (English)',
+      titleFa: 'The Fountain of Life (انگلیسی)'
+    },
+    { 
+      id: 'ZTECfMhQrd8', 
+      title: 'جب سمندر فرعون کی قبر بن گیا! | حضرت موسیٰؑ سے مقابلہ اور عبرتناک انجام',
+      titleEn: "When the Sea Became Pharaoh's Grave! | Clash with Prophet Moses (AS) & Tragic End",
+      titleFa: 'وقتی دریا گور فرعون شد! | رویارویی با حضرت موسی (ع) و سرانجام عبرت‌آموز'
+    },
+    { 
+      id: 'jFDtNz4H3zk', 
+      title: 'قرآن اور حیوان (Quran or Hewan)',
+      titleEn: 'The Quran and Animals (Quran or Hewan)',
+      titleFa: 'قرآن و حیوانات (Quran or Hewan)'
+    },
+    { 
+      id: 'cWnfdYcxgh4', 
+      title: 'جنت کیسی ہے؟ (Janat kesi ha?)',
+      titleEn: 'What is Paradise Like? (Janat kesi ha?)',
+      titleFa: 'بهشت چگونه است؟ (Janat kesi ha?)'
+    },
+    { 
+      id: 'IQ4rJu0CCaY', 
+      title: 'اللہ کے احسانات (Allah k ahsanaat)',
+      titleEn: 'The Blessings of Allah (Allah k ahsanaat)',
+      titleFa: 'احسان‌ها و نعمت‌های الهی (Allah k ahsanaat)'
+    },
+    { 
+      id: 'iLNRtyP0MN8', 
+      title: 'کیا واقعی ہاروت و ماروت سزا یافتہ فرشتے ہیں؟',
+      titleEn: 'Were Harut and Marut Really Punished Angels?',
+      titleFa: 'آیا واقعاً هاروت و ماروت فرشتگان مجازات شده‌اند؟'
+    },
+    { 
+      id: 'dH33rfBeqSs', 
+      title: 'اسلامی تاریخ میں "اسرائیلیات" کی دراندازی',
+      titleEn: 'The Infiltration of "Isra\'iliyyat" into Islamic History',
+      titleFa: 'نفوذ و ورود «اسرائیلیات» در تاریخ اسلام'
+    },
+    { 
+      id: 'c2G5pTVn0UQ', 
+      title: 'قرآن طاقچوں کی زینت یا زندگی کا دستور؟',
+      titleEn: 'The Quran: Shelf Decoration or the Constitution of Life?',
+      titleFa: 'قرآن؛ زینت طاقچه‌ها یا دستور زندگی؟'
+    }
   ],
 
   // 6. تلاوت اور حمد و نعت

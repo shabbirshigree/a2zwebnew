@@ -27,7 +27,7 @@ export default function ProjectPageClient() {
     arabic: 8,
     urdu: 8,
     surahs: 8,
-    stories: 8,
+    stories: 16,
     tilawat: 8
   });
 

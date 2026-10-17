@@ -33,7 +33,7 @@ export default function FarsiProjectPageClient() {
     arabic: 8,
     urdu: 8,
     surahs: 8,
-    stories: 8,
+    stories: 16,
     tilawat: 8,
   });
 
@@ -173,7 +173,7 @@ export default function FarsiProjectPageClient() {
   const VideoCard = ({ video }) => (
     <div className="bg-[#0a0a0a] rounded-lg overflow-hidden shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 cursor-pointer group border border-[#D4AF37]/50 flex flex-col h-full relative">
       <div onClick={() => handleOpenYoutubeVideo(video)} className="relative aspect-video bg-black overflow-hidden">
-        <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" />
+        <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={video.titleFa || video.title} className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500" />
         <div className="absolute inset-0 flex items-end justify-start p-2.5 bg-black/10 group-hover:bg-transparent transition-all">
           <div className="bg-[#D4AF37]/90 w-8 h-8 rounded-full border-2 border-white shadow-[0_0_10px_rgba(212,175,55,0.4)] flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
             <FaPlay className="text-black text-[10px] ml-0.5" />
@@ -190,7 +190,7 @@ export default function FarsiProjectPageClient() {
 
       <div onClick={() => handleOpenYoutubeVideo(video)} className="p-3 flex-grow flex flex-col justify-center border-t border-[#D4AF37]/30">
         <h4 className="text-[#D4AF37] font-semibold text-center font-persian text-sm md:text-base leading-snug group-hover:text-white transition-colors" dir="rtl">
-          {video.title}
+          {video.titleFa || video.title}
         </h4>
       </div>
     </div>
