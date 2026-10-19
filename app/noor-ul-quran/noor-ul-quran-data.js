@@ -87,6 +87,12 @@ intro: {
   // 5. قرآنی قصص
   stories: [
     { 
+      id: 'CRfnCl92FP4', 
+      title: 'حضرت موسیٰؑ و حضرت خضرؑ کا حکمت سے بھرپور واقعہ',
+      titleEn: 'Prophet Moses (AS) & Prophet Khidr (AS) - A Wisdom-Filled Event',
+      titleFa: 'ماجرای پر از حکمت حضرت موسی (ع) و حضرت خضر (ع)'
+    },
+    { 
       id: 'WZsQIRCFYPE', 
       title: 'چشمہ حیات (حضرت خضرؑ)',
       titleEn: 'The Fountain of Life (Prophet Khidr AS)',
